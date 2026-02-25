@@ -152,6 +152,8 @@ class RoleManager:
                     info["display_name"] = line.split(":**")[1].strip()
                 elif "**Emoji:**" in line:
                     info["emoji"] = line.split(":**")[1].strip()
+                elif "**Knowledge Language:**" in line:
+                    info["knowledge_lang"] = line.split(":**")[1].strip()
 
         return info
 
@@ -209,9 +211,11 @@ class RoleManager:
             # 没有可用的 API Key
             return None
 
-        # 创建管理器
+        # 创建管理器（传入知识库语言，用于跨语言 BM25 搜索）
         db_path = self.get_knowledge_db_path(role_name)
-        manager = MemoryManager(db_path, embedding)
+        role_info = self.get_role_info(role_name)
+        knowledge_lang = role_info.get("knowledge_lang", "English")
+        manager = MemoryManager(db_path, embedding, knowledge_lang=knowledge_lang)
 
         # 自动索引（支持 .md 和 .txt 文件）
         if auto_index:

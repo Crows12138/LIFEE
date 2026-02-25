@@ -39,6 +39,7 @@ class MemoryManager:
         self,
         db_path: str | Path,
         embedding_provider: EmbeddingProvider,
+        knowledge_lang: str = "English",
     ):
         """
         初始化管理器
@@ -49,6 +50,7 @@ class MemoryManager:
         """
         self.db_path = Path(db_path)
         self.embedding = embedding_provider
+        self.knowledge_lang = knowledge_lang
 
         # 确保目录存在
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
@@ -247,10 +249,10 @@ class MemoryManager:
         # 生成查询向量（用原始 query，跨语言 embedding 效果最好）
         query_embedding = await self.embedding.embed(query)
 
-        # 跨语言 BM25：非英文 query 翻译成英文给关键词搜索
+        # 跨语言 BM25：翻译 query 为知识库语言的关键词
         keyword_query = None
-        if _contains_non_english(query) and isinstance(self.embedding, GeminiEmbedding):
-            keyword_query = await self.embedding.translate_to_english_keywords(query)
+        if isinstance(self.embedding, GeminiEmbedding):
+            keyword_query = await self.embedding.translate_to_keywords(query, self.knowledge_lang)
 
         # 执行混合搜索
         return hybrid_search(

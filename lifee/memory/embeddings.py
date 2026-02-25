@@ -100,24 +100,20 @@ class GeminiEmbedding(EmbeddingProvider):
             results.append(embedding)
         return results
 
-    async def translate_to_english_keywords(self, text: str) -> str:
-        """将文本翻译为英文关键词，用于跨语言 BM25 搜索"""
+    async def translate_to_keywords(self, text: str, target_lang: str = "English") -> str:
+        """将文本翻译为目标语言的搜索关键词，用于跨语言 BM25 搜索"""
         try:
             response = await self._client.aio.models.generate_content(
                 model="gemini-2.0-flash",
                 contents=(
-                    "Translate the following text into English search keywords. "
-                    "Rules: output ONLY English words, separated by spaces. "
-                    "No articles (a/an/the), no prepositions, no punctuation. "
+                    f"Translate the following text into {target_lang} search keywords. "
+                    f"Rules: output ONLY {target_lang} words, separated by spaces. "
+                    "No articles, no prepositions, no punctuation. "
                     "Include synonyms for key concepts.\n"
                     f"Input: {text}"
                 ),
             )
-            result = response.text.strip()
-            # 如果返回结果仍包含非英文字符，说明翻译失败
-            if _contains_non_english(result):
-                return text
-            return result
+            return response.text.strip()
         except Exception:
             return text  # 翻译失败时回退到原文
 
