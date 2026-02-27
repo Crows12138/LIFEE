@@ -5,6 +5,7 @@
 参考 clawdbot embeddings-gemini.js / embeddings-openai.js
 """
 
+import asyncio
 import re
 from abc import ABC, abstractmethod
 from typing import Optional
@@ -61,7 +62,7 @@ class GeminiEmbedding(EmbeddingProvider):
     """
 
     DEFAULT_MODEL = "gemini-embedding-001"
-    DIMENSIONS = 768
+    DIMENSIONS = 3072
 
     def __init__(self, api_key: str, model: str = None):
         self._api_key = api_key
@@ -82,23 +83,28 @@ class GeminiEmbedding(EmbeddingProvider):
 
     async def embed(self, text: str) -> list[float]:
         """生成文本嵌入"""
-        # Gemini embedding API 使用 embed_content 方法
-        # task_type: RETRIEVAL_QUERY (查询) / RETRIEVAL_DOCUMENT (文档)
         result = await self._client.aio.models.embed_content(
             model=self._model,
             contents=text,
         )
-        # 返回第一个嵌入向量
         return list(result.embeddings[0].values)
 
     async def embed_batch(self, texts: list[str]) -> list[list[float]]:
-        """批量生成嵌入"""
-        # Gemini 支持批量嵌入
-        results = []
-        for text in texts:
-            embedding = await self.embed(text)
-            results.append(embedding)
-        return results
+        """批量生成嵌入（使用 Gemini 原生批量 API）"""
+        if not texts:
+            return []
+        batch_size = 100  # Gemini 单次请求最多约 100 个文本
+        all_embeddings: list[list[float]] = []
+        for start in range(0, len(texts), batch_size):
+            batch = texts[start : start + batch_size]
+            result = await self._client.aio.models.embed_content(
+                model=self._model,
+                contents=batch,
+            )
+            all_embeddings.extend(list(e.values) for e in result.embeddings)
+            if start + batch_size < len(texts):
+                await asyncio.sleep(0.5)  # 批次间暂停避免限流
+        return all_embeddings
 
     async def translate_to_keywords(self, text: str, target_lang: str = "English") -> str:
         """将文本翻译为目标语言的搜索关键词，用于跨语言 BM25 搜索"""

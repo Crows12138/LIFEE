@@ -236,11 +236,19 @@ class RoleManager:
                     total = len(files)
                     print(f"  索引知识库: 0/{total}", end="", flush=True)
                     indexed = 0
+                    failed = 0
                     for f in files:
-                        await manager.index_file(f)
+                        try:
+                            await manager.index_file(f)
+                        except Exception as e:
+                            failed += 1
+                            print(f"\n  Warning: {f.name}: {e}", end="", flush=True)
                         indexed += 1
                         print(f"\r  索引知识库: {indexed}/{total}", end="", flush=True)
-                    print()  # 换行
+                    if failed:
+                        print(f"  ({failed} failed)")
+                    else:
+                        print()  # 换行
 
         return manager
 
