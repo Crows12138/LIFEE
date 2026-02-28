@@ -1,99 +1,99 @@
 ---
 name: valuation-math
-description: 芒格的估值与决策数学
-trigger: [估值, DCF, 折现, 市盈率, PE, PB, 市净率, 回报率, 复利, 72法则, 安全边际, 内在价值, 贵不贵, 值不值, 便宜, 价格, 倍数]
+description: Munger's valuation and decision math
+trigger: [valuation, DCF, discount, earnings ratio, PE, PB, return, compound, rule of 72, margin of safety, intrinsic value, expensive, cheap, price, multiple]
 ---
 
-## 芒格的估值与决策数学
+## Munger's Valuation and Decision Math
 
-精确的错误不如模糊的正确。估值不是为了算出一个精确数字——那是自欺欺人。估值是为了判断：这个价格大致合不合理。
+Precise nonsense is worse than rough correctness. Valuation is not about calculating an exact number — that's self-deception. Valuation is about judging: is this price roughly reasonable.
 
-### DCF：折现现金流（直觉版）
+### DCF: Discounted Cash Flow (the Intuitive Version)
 
-核心逻辑：一块钱今天值一块钱，一年后的一块钱只值九毛多——因为你可以拿今天的一块钱去赚利息。
-
-```
-内在价值 = 未来所有年份自由现金流的折现总和
-```
-
-不需要精确计算。你只需要回答三个问题：
-1. 这门生意未来能产生多少现金？（越可预测越好）
-2. 这些现金流能持续多久？（护城河决定了这个）
-3. 用什么折现率？（通常用10%——你的最低期望回报）
-
-如果你需要用Excel算到小数点后两位才能证明它便宜，那它就不够便宜。真正的好机会，心算就能看出来。
-
-### 回报率倒推法
-
-不要问"这个股票值多少钱"，反过来问"按这个价格买入，市场在假设什么"。
+Core logic: A dollar today is worth a dollar. A dollar one year from now is worth only about ninety cents — because you could take today's dollar and earn interest on it.
 
 ```
-隐含增长率 ≈ 1/PE × 100% + 增长率
+Intrinsic value = Sum of all future years' free cash flow, discounted to today
 ```
 
-举例：PE = 50 的公司
-- 如果零增长，年回报率 = 1/50 = 2%（还不如存银行）
-- 要达到10%的年回报，需要每年增长8%
-- 连续增长8%十年 → 利润翻2.16倍。这家公司做得到吗？
+You don't need exact calculations. You just need to answer three questions:
+1. How much cash can this business generate in the future? (The more predictable, the better)
+2. How long can these cash flows last? (The moat determines this)
+3. What discount rate? (Usually 10% — your minimum expected return)
 
-大部分高PE股票隐含了不切实际的增长假设。一旦增速放缓，估值和利润双杀。
+If you need an Excel spreadsheet calculated to two decimal places to prove something is cheap, it's not cheap enough. Truly great opportunities are obvious from mental math alone.
 
-### 安全边际：买保险
+### Reverse-Engineering Returns
 
-安全边际 = 内在价值 - 买入价格
-
-```
-安全边际比例 = (内在价值 - 价格) / 内在价值
-```
-
-- 安全边际 ≥ 30%：可以考虑
-- 安全边际 ≥ 50%：好机会
-- 没有安全边际：不管多好的公司，价格不对就不买
-
-为什么需要安全边际？因为：
-1. 你的估值可能是错的
-2. 未来可能出现意外
-3. 人类天生过度自信
-
-### 概率加权期望值
-
-每个决策都是一次下注。聪明的下注者不问"会不会赢"，而是问"赔率值不值"。
+Don't ask "what is this stock worth" — flip it and ask "at this price, what is the market assuming?"
 
 ```
-期望值 = 好结果 × 好结果概率 - 坏结果 × 坏结果概率
+Implied growth rate ≈ 1/PE × 100% + growth rate
 ```
 
-举例：一笔投资
-- 60%概率赚50% → 贡献 +30%
-- 40%概率亏30% → 贡献 -12%
-- 期望值 = +18% → 值得做
+Example: A company trading at PE = 50
+- At zero growth, annual return = 1/50 = 2% (worse than a savings account)
+- To achieve a 10% annual return, you need 8% annual growth
+- Growing at 8% for ten consecutive years → earnings multiply by 2.16×. Can this company do that?
 
-但还要考虑：
-- 坏结果你能不能承受？（永远不要下你输不起的注）
-- 你的概率估计可靠吗？（通常没你想的那么可靠）
+Most high-PE stocks embed unrealistic growth assumptions. The moment growth slows, valuation and earnings get hammered simultaneously.
 
-### 72法则
+### Margin of Safety: Buying Insurance
 
-快速心算复利翻倍时间：
+Margin of safety = Intrinsic value − Purchase price
 
 ```
-翻倍年数 ≈ 72 ÷ 年化收益率
+Margin of safety % = (Intrinsic value − Price) / Intrinsic value
 ```
 
-- 年化8% → 72/8 = 9年翻倍
-- 年化12% → 72/12 = 6年翻倍
-- 年化24% → 72/24 = 3年翻倍
+- Margin of safety ≥ 30%: Worth considering
+- Margin of safety ≥ 50%: A good opportunity
+- No margin of safety: No matter how great the company, if the price isn't right, don't buy
 
-反过来也有用：
-- 某人说10年10倍 → 年化约26%（巴菲特长期才20%出头，你信吗？）
-- 某人说3年翻倍 → 年化约26%（同上）
+Why do you need a margin of safety? Because:
+1. Your valuation might be wrong
+2. The unexpected can happen
+3. Humans are inherently overconfident
 
-看到"高回报"承诺，先用72法则算算——大部分不靠谱的承诺一算就露馅。
+### Probability-Weighted Expected Value
 
-### 估值常识检查
+Every decision is a bet. Smart bettors don't ask "will I win?" — they ask "are the odds worth it?"
 
-不管用什么方法算出的估值，最后都要做常识检查：
-- 这个估值意味着几年后公司利润要到多少？现实吗？
-- 同行业历史上有公司做到过吗？
-- 如果这个假设不成立，我会亏多少？
-- 我是不是因为喜欢这个故事才觉得估值合理？
+```
+Expected value = (good outcome × probability) − (bad outcome × probability)
+```
+
+Example: An investment
+- 60% chance of gaining 50% → contributes +30%
+- 40% chance of losing 30% → contributes −12%
+- Expected value = +18% → worth doing
+
+But also consider:
+- Can you survive the bad outcome? (Never bet what you can't afford to lose)
+- How reliable is your probability estimate? (Usually less reliable than you think)
+
+### Rule of 72
+
+Quick mental math for how long it takes to double your money:
+
+```
+Years to double ≈ 72 ÷ Annual return rate
+```
+
+- 8% annual return → 72/8 = 9 years to double
+- 12% annual return → 72/12 = 6 years to double
+- 24% annual return → 72/24 = 3 years to double
+
+Works in reverse too:
+- Someone promises 10× in 10 years → ~26% annualized (Buffett's long-term rate is barely over 20% — do you believe them?)
+- Someone promises doubling in 3 years → ~26% annualized (same question)
+
+When you see "high return" promises, run the Rule of 72 first — most unrealistic promises fall apart under this simple test.
+
+### Valuation Sanity Check
+
+No matter what method you used, always finish with a sanity check:
+- What does this valuation imply about the company's profits in a few years? Is that realistic?
+- Has any company in the same industry ever achieved this historically?
+- If this assumption doesn't hold, how much do I lose?
+- Am I concluding the valuation is reasonable because I like the story?

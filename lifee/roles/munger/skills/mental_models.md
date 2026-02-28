@@ -1,42 +1,42 @@
 ---
 name: mental-models
-description: 芒格的多元思维模型工具箱
-trigger: [决策, 选择, 怎么办, 该不该, 判断, 分析, 思考, 权衡, 取舍, 纠结, 犹豫, 偏见, 认知, 心理]
+description: Munger's multidisciplinary mental model toolkit
+trigger: [decision, choose, should I, judgment, analyze, think, weigh, trade-off, hesitate, bias, cognitive, psychology]
 ---
 
-## 芒格的多元思维模型
+## Munger's Mental Models
 
-### 反向思维（Inversion）
-不要问"怎样成功"，先问"怎样一定会失败"，然后避开。
-- 想要好婚姻？列出毁掉婚姻的行为，不做。
-- 想要好身体？搞清什么会摧毁健康，远离。
-- 想要好投资？列出亏钱的方式，一条条排除。
+### Inversion
+Don't ask "how do I succeed" — first ask "how do I guarantee failure," then avoid those things.
+- Want a good marriage? List the behaviors that destroy marriages. Don't do them.
+- Want good health? Figure out what ruins health. Stay away.
+- Want good investments? List the ways to lose money. Eliminate them one by one.
 
-### 激励机制（Incentives）
-"给我看激励机制，我就能预测结果。"
-- 给你建议的人，利益和你一致吗？
-- 销售员推荐最贵的产品——因为佣金最高。
-- 永远问：谁在从中获益？
+### Incentives
+"Show me the incentive and I will show you the outcome."
+- Does the person giving you advice have their interests aligned with yours?
+- The salesman recommends the most expensive product — because his commission is highest.
+- Always ask: who benefits?
 
-### 误判心理学（Psychology of Misjudgment）
-25种人类常见的认知偏误：
-- **社会认同**：别人都在做，所以一定对的——不一定
-- **锚定效应**：第一个数字会影响你对所有后续数字的判断
-- **损失厌恶**：亏100块的痛苦是赚100块快乐的两倍
-- **过度自信**：你以为你知道的比你实际知道的多
-- **沉没成本**：已经花的钱不该影响未来决策，但你的大脑不这么想
+### Psychology of Misjudgment
+Twenty-five common cognitive biases in humans:
+- **Social proof**: Everyone's doing it, so it must be right — not necessarily
+- **Anchoring**: The first number you see distorts your judgment of every number after it
+- **Loss aversion**: The pain of losing $100 is twice the pleasure of gaining $100
+- **Overconfidence**: You think you know more than you actually do
+- **Sunk cost fallacy**: Money already spent shouldn't influence future decisions, but your brain doesn't work that way
 
-### Lollapalooza 效应
-多个力量同方向叠加 → 效果是乘法不是加法。
-- 多个认知偏误同时作用时，极端结果就会出现
-- 泡沫就是这样形成的：社会认同 × 贪婪 × 过度自信 × 锚定
+### Lollapalooza Effect
+Multiple forces pushing in the same direction → the effect is multiplicative, not additive.
+- When several cognitive biases act simultaneously, extreme outcomes emerge
+- This is how bubbles form: social proof × greed × overconfidence × anchoring
 
-### 能力圈（Circle of Competence）
-- 知道边界在哪比扩大边界更重要
-- 在圈内你有优势，在圈外你是韭菜
-- 诚实地画出你的圈，然后严格待在里面
+### Circle of Competence
+- Knowing where the boundary is matters more than expanding it
+- Inside your circle you have an edge; outside it you're the sucker
+- Draw your circle honestly, then stay strictly inside it
 
-### 第一性原理（First Principles）
-- 不要类比推理："因为别人这么做"不是理由
-- 回到最基本的事实和逻辑，从那里重新推导
-- 物理学家这样思考，你也应该这样
+### First Principles
+- Don't reason by analogy — "because everyone else does it" is not a reason
+- Go back to the most fundamental facts and logic, and reason up from there
+- Physicists think this way. So should you.

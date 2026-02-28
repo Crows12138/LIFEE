@@ -232,6 +232,7 @@ class MemoryManager:
         min_score: float = 0.35,
         vector_weight: float = 0.7,
         text_weight: float = 0.3,
+        keyword_query_override: Optional[str] = None,
     ) -> list[SearchResult]:
         """
         搜索知识库
@@ -242,6 +243,7 @@ class MemoryManager:
             min_score: 最小分数阈值
             vector_weight: 向量搜索权重
             text_weight: 关键词搜索权重
+            keyword_query_override: 预翻译的关键词（避免重复翻译）
 
         Returns:
             搜索结果列表
@@ -249,9 +251,9 @@ class MemoryManager:
         # 生成查询向量（用原始 query，跨语言 embedding 效果最好）
         query_embedding = await self.embedding.embed(query)
 
-        # 跨语言 BM25：翻译 query 为知识库语言的关键词
-        keyword_query = None
-        if isinstance(self.embedding, GeminiEmbedding):
+        # 跨语言 BM25：使用预翻译的关键词，或现场翻译
+        keyword_query = keyword_query_override
+        if keyword_query is None and isinstance(self.embedding, GeminiEmbedding):
             keyword_query = await self.embedding.translate_to_keywords(query, self.knowledge_lang)
 
         # 执行混合搜索

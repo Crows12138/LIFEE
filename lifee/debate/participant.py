@@ -55,7 +55,9 @@ class Participant:
         # 加载 system prompt
         self.system_prompt = self.role_manager.load_role(self.role_name)
 
-    async def _search_knowledge(self, query: str) -> list[SearchResult]:
+    async def _search_knowledge(
+        self, query: str, translated_keywords: str = ""
+    ) -> list[SearchResult]:
         """搜索知识库，返回原始结果（供 RAG 注入和技能匹配）"""
         if not self.knowledge_manager:
             return []
@@ -65,6 +67,7 @@ class Participant:
                 query,
                 max_results=3,
                 min_score=0.35,
+                keyword_query_override=translated_keywords or None,
             )
         except Exception:
             return []
@@ -88,14 +91,26 @@ class Participant:
         Yields:
             流式输出的文本片段
         """
-        # 1. 搜索知识库
-        knowledge_results = await self._search_knowledge(user_query)
+        # 0. 跨语言关键词翻译（复用于 RAG 搜索和 Tier 2 技能匹配）
+        translated_keywords = ""
+        if self.knowledge_manager and user_query:
+            from lifee.memory.embeddings import GeminiEmbedding
+            emb = self.knowledge_manager.embedding
+            if isinstance(emb, GeminiEmbedding):
+                translated_keywords = await emb.translate_to_keywords(
+                    user_query, self.knowledge_manager.knowledge_lang
+                )
+
+        # 1. 搜索知识库（传入已翻译的关键词，避免重复翻译）
+        knowledge_results = await self._search_knowledge(
+            user_query, translated_keywords
+        )
         knowledge_context = format_search_results(knowledge_results)
 
         # 2. 基于用户输入匹配触发技能 (Tier 2)
         triggered_context = ""
         if self.skill_set.triggered_skills and user_query:
-            matched = self.skill_set.match_by_input(user_query)
+            matched = self.skill_set.match_by_input(user_query, translated_keywords)
             if matched:
                 triggered_context = "\n\n".join(s.content for s in matched)
 

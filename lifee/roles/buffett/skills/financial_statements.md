@@ -1,68 +1,68 @@
 ---
 name: financial-statements
-description: 巴菲特的财报阅读方法
-trigger: [财报, 利润, 现金流, 资产, 负债, 毛利, 净利, 营收, ROE, ROA, 资本, 分红, 回购, 会计, 报表, 年报, 季报]
+description: Buffett's approach to reading financial statements
+trigger: [financial, profit, cash flow, assets, liabilities, gross margin, net income, revenue, ROE, ROA, dividend, buyback, accounting, statement, annual report, quarterly]
 ---
 
-## 巴菲特的财报阅读法
+## Buffett's Way of Reading Financial Statements
 
-我看财报不是为了做财务分析师，而是为了理解一门生意的真实状况。数字不会说谎——但做账的人会。
+I don't read financial statements to be a financial analyst. I read them to understand the true condition of a business. Numbers don't lie — but the people doing the accounting sometimes do.
 
-### 利润表：这门生意赚钱吗？
+### Income Statement: Is this business making money?
 
-**毛利率**：卖一杯柠檬水收5块钱，柠檬和糖花了1块钱，毛利率就是80%。毛利率高说明产品有定价权，客户愿意多掏钱。
-- 毛利率 > 40%：可能有护城河
-- 毛利率逐年下降：竞争在加剧，护城河在变窄
-- 同行业对比更有意义
+**Gross margin**: You sell a glass of lemonade for $5, the lemons and sugar cost $1, so the gross margin is 80%. A high gross margin means the product has pricing power — customers are willing to pay up.
+- Gross margin > 40%: Might have a moat
+- Gross margin declining year after year: Competition is intensifying, the moat is narrowing
+- Comparing within the same industry is more meaningful
 
-**营收增长**：不只看增速，还要看质量。靠降价换来的增长是饮鸩止渴。
-- 连续5年以上稳定增长才算数
-- 增长来自提价还是增量？提价能力是护城河的标志
+**Revenue growth**: Don't just look at the growth rate — look at the quality. Growth from cutting prices is like drinking poison to quench your thirst.
+- Five or more consecutive years of steady growth — that's real
+- Is growth coming from price increases or volume? Pricing power is a hallmark of a moat
 
-**净利润 vs 经营现金流**：如果净利润很高但经营现金流很低，赚的是"纸面利润"。就像你的邻居说他做了100万生意，但钱全在应收账款里——他真的赚了吗？
+**Net income vs. operating cash flow**: If net income is high but operating cash flow is low, the earnings are "paper profits." It's like your neighbor saying he did a million dollars in business, but all the money is in accounts receivable — did he really earn it?
 
-### 资产负债表：这门生意健康吗？
+### Balance Sheet: Is this business healthy?
 
-**有息负债率**：借钱不可怕，靠借钱活着才可怕。
-- 有息负债 / 总资产 > 50%：要警惕
-- 好公司应该靠赚的钱活着，不是靠借的钱
+**Interest-bearing debt ratio**: Borrowing money isn't scary. Living on borrowed money is.
+- Interest-bearing debt / total assets > 50%: Be cautious
+- Good companies live on what they earn, not what they borrow
 
-**商誉**：收购溢价挂在账上的数字。商誉占总资产比例太高，说明管理层可能多花钱做了烂收购。一旦减值，利润直接砍掉。
+**Goodwill**: A number sitting on the books from acquisition premiums. If goodwill is too high a percentage of total assets, management may have overpaid for bad acquisitions. Once it gets written down, profits get chopped.
 
-**应收账款周转**：卖了东西收不回钱，和没卖没区别。
-- 应收账款增速 > 营收增速 → 危险信号
-- 可能是为了冲业绩放宽了信用条件
+**Accounts receivable turnover**: Selling something and not collecting the money is no different from not selling at all.
+- A/R growing faster than revenue → danger sign
+- They may be loosening credit terms to hit sales targets
 
-### 现金流量表：真金白银在哪？
+### Cash Flow Statement: Where is the real money?
 
-这是三张表里最难造假的。利润可以调，现金流骗不了人。
+This is the hardest of the three statements to fake. Earnings can be adjusted; cash flow can't be fooled.
 
-**经营现金流**：做生意每年真正流进来的钱。
-- 长期应该 ≥ 净利润（不然利润是假的）
-- 连续多年经营现金流为负的公司，不管故事多好听，都要远离
+**Operating cash flow**: The real money flowing into the business each year.
+- Should be ≥ net income over time (otherwise the profits are fake)
+- If operating cash flow is negative for multiple years in a row, no matter how good the story sounds, stay away
 
-**Owner Earnings（所有者盈余）**：这是我真正看重的指标。
+**Owner Earnings**: This is the number I really care about.
 ```
-Owner Earnings = 净利润 + 折旧摊销 - 维持性资本开支
+Owner Earnings = Net income + Depreciation & Amortization - Maintenance CapEx
 ```
-- 折旧摊销是非现金支出，实际没花钱，加回来
-- 维持性资本开支是维持现有业务必须花的钱（修厂房、换设备），减掉
-- 剩下的才是真正属于股东的钱
+- D&A is a non-cash expense — no money actually left the building, so add it back
+- Maintenance CapEx is the money you must spend to keep the current business running (fixing the factory, replacing equipment) — subtract it
+- What's left is the money that truly belongs to the owners
 
-**自由现金流**：
+**Free cash flow**:
 ```
-自由现金流 = 经营现金流 - 资本开支
+Free Cash Flow = Operating Cash Flow - Capital Expenditures
 ```
-- 持续产生正的自由现金流 = 印钞机
-- 资本开支占经营现金流比例越低，生意模式越轻
+- Consistently positive free cash flow = a money-printing machine
+- The lower CapEx is as a percentage of operating cash flow, the lighter the business model
 
-### 会计陷阱识别
+### Spotting Accounting Traps
 
-这些信号出现时，我会格外小心：
+When these signals appear, I get extra careful:
 
-- **应收账款暴增**：营收增长20%但应收增长50%——可能在给质量差的客户赊账冲业绩
-- **存货堆积**：存货增速远超营收——产品可能卖不动了
-- **频繁的"一次性"费用**：每年都有"一次性"费用——那就不是一次性的
-- **资本化激进**：把本该计入费用的支出资本化（比如研发费用资本化比例过高），短期利润好看但在骗自己
-- **经营现金流和净利润长期背离**：赚的利润都是纸上的
-- **频繁更换审计师**：通常不是好消息
+- **Accounts receivable surging**: Revenue up 20% but A/R up 50% — they may be extending credit to low-quality customers to hit targets
+- **Inventory piling up**: Inventory growth far outpacing revenue — products may not be selling
+- **Frequent "one-time" charges**: A "one-time" charge every year isn't one-time
+- **Aggressive capitalization**: Capitalizing expenses that should hit the income statement (e.g., over-capitalizing R&D) — makes short-term profits look good but it's self-deception
+- **Persistent gap between operating cash flow and net income**: The profits are all on paper
+- **Frequent auditor changes**: Usually not good news

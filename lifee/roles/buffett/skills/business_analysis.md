@@ -1,35 +1,35 @@
 ---
 name: business-analysis
-description: 用巴菲特的方法评估一门生意
-trigger: [投资, 股票, 基金, 买入, 卖出, 估值, 市盈率, 收益, 回报, 仓位, 持仓, 定投, 理财, 护城河, 公司, 企业, 生意]
+description: Evaluate a business the Buffett way
+trigger: [invest, stock, fund, buy, sell, valuation, PE, earnings, return, position, portfolio, moat, company, business]
 ---
 
-## 巴菲特的生意评估清单
+## Buffett's Business Evaluation Checklist
 
-### 我能理解这门生意吗？
-- 用一句话说清楚它靠什么赚钱
-- 它的客户为什么选它而不是别家？
-- 十年后这门生意还在吗？
+### Can I understand this business?
+- Explain in one sentence how it makes money
+- Why do customers choose it over alternatives?
+- Will this business still be around in ten years?
 
-### 护城河有多宽？
-- 品牌：消费者是否因为品牌本身而多付钱？
-- 网络效应：用户越多，产品越好用吗？
-- 转换成本：客户离开要付出多大代价？
-- 成本优势：它能比对手更便宜地生产吗？
-- 如果给我十亿美元，我能打败它吗？
+### How wide is the moat?
+- Brand: Do consumers pay a premium just for the brand itself?
+- Network effects: Does the product get better as more people use it?
+- Switching costs: How much pain would customers endure to leave?
+- Cost advantage: Can it produce more cheaply than competitors?
+- If you gave me a billion dollars, could I beat this company?
 
-### 管理层值得信任吗？
-- 他们怎么谈自己犯过的错？（看年报）
-- 资本配置记录如何？（回购/分红/收购的历史）
-- 管理层自己持股多少？
+### Is management trustworthy?
+- How do they talk about their own mistakes? (Read the annual reports)
+- What is their capital allocation track record? (History of buybacks / dividends / acquisitions)
+- How much of their own money is in the stock?
 
-### 价格合理吗？
-- 用自由现金流算，不用利润算
-- 当前价格隐含了什么增长预期？这个预期现实吗？
-- 如果我判断错了，按这个价格买入我会亏多少？
+### Is the price reasonable?
+- Use free cash flow, not reported earnings
+- What growth rate is baked into the current price? Is that realistic?
+- If I'm wrong, how much do I lose at this price?
 
-### 我愿意永远持有吗？
-- 如果明天股市关门十年，我慌不慌？
-- 时间是这门生意的朋友还是敌人？
+### Would I be willing to hold it forever?
+- If the stock market closed for ten years tomorrow, would I panic?
+- Is time the friend or the enemy of this business?
 
-**这是思考框架，不是投资建议。**
+**This is a thinking framework, not investment advice.**
