@@ -15,6 +15,9 @@ from lifee.providers import (
     QwenProvider,
     OllamaProvider,
     OpenCodeZenProvider,
+    DeepSeekProvider,
+    OpenRouterProvider,
+    GroqProvider,
     GeminiProvider,
     FallbackProvider,
     read_clawdbot_synthetic_credentials,
@@ -62,6 +65,30 @@ PROVIDER_REGISTRY = {
         "prompt_name": "OpenCode Zen (GLM-4.7 免费)",
         "env_key": "OPENCODE_API_KEY",
         "get_url": "https://opencode.ai/",
+    },
+    "deepseek": {
+        "class": DeepSeekProvider,
+        "key_attr": "deepseek_api_key",
+        "model_attr": "deepseek_model",
+        "prompt_name": "DeepSeek",
+        "env_key": "DEEPSEEK_API_KEY",
+        "get_url": "https://platform.deepseek.com/api_keys",
+    },
+    "openrouter": {
+        "class": OpenRouterProvider,
+        "key_attr": "openrouter_api_key",
+        "model_attr": "openrouter_model",
+        "prompt_name": "OpenRouter",
+        "env_key": "OPENROUTER_API_KEY",
+        "get_url": "https://openrouter.ai/keys",
+    },
+    "groq": {
+        "class": GroqProvider,
+        "key_attr": "groq_api_key",
+        "model_attr": "groq_model",
+        "prompt_name": "Groq",
+        "env_key": "GROQ_API_KEY",
+        "get_url": "https://console.groq.com/keys",
     },
 }
 
@@ -151,7 +178,7 @@ def create_provider(provider_name: str = None) -> LLMProvider:
 
     else:
         print(t("error_unknown_provider").format(name=provider_name))
-        print("Supported: claude, synthetic, qwen, gemini, ollama, opencode")
+        print("Supported: claude, gemini, deepseek, qwen, openrouter, groq, ollama, opencode, synthetic")
         sys.exit(1)
 
 
@@ -168,7 +195,10 @@ def get_available_providers() -> list[str]:
     checks = [
         ("claude", current_settings.get_anthropic_api_key()),
         ("gemini", current_settings.google_api_key),
+        ("deepseek", current_settings.deepseek_api_key),
         ("qwen", current_settings.qwen_api_key),
+        ("openrouter", current_settings.openrouter_api_key),
+        ("groq", current_settings.groq_api_key),
         ("opencode", current_settings.opencode_api_key),
         ("synthetic", current_settings.synthetic_api_key),
         # ollama 不需要 API Key，暂不自动加入

@@ -4,14 +4,16 @@
 import asyncio
 import random
 import re
+import sys
 from typing import AsyncIterator, Optional, Tuple
 
-from lifee.providers.base import Message
+from lifee.providers.base import Message, RateLimitError
 from lifee.sessions import Session
 
 # 重试配置
 MAX_RETRIES = 3  # 最大重试次数
 RETRY_DELAY = 2.0  # 重试延迟（秒）
+RATE_LIMIT_DELAY = 15.0  # 速率限制重试延迟（秒）
 SPEAKER_DELAY = 5.0  # 角色之间的延迟（秒），OAuth token 需要足够长间隔避免速率限制
 DEBUG_RESPONSE = False  # 调试响应生成（设为 True 可查看详细日志）
 
@@ -173,6 +175,8 @@ class Moderator:
             # 带重试的响应生成
             final_response = ""
             yielded_anything = False  # 追踪是否 yield 过任何内容
+            hit_rate_limit = False  # 是否触发了速率限制
+            last_error = None  # 记录最后一次错误
 
             for retry in range(MAX_RETRIES + 1):
                 full_response = ""
@@ -182,7 +186,7 @@ class Moderator:
                 try:
                     async for chunk in participant.respond(
                         messages=messages,
-                        user_query=user_input if turn == 1 else "",
+                        user_query=user_input,
                         debate_context=debate_context,
                         user_memory_context=self.user_memory_context,
                     ):
@@ -196,10 +200,16 @@ class Moderator:
                             yielded_anything = True
                         elif filtered:
                             yield (participant, filtered, False)
+                    last_error = None  # 流成功完成
+                except RateLimitError as e:
+                    hit_rate_limit = True
+                    last_error = e
+                    if DEBUG_RESPONSE:
+                        print(f"\n[{participant.info.display_name} 速率限制: {e}]")
                 except Exception as e:
+                    last_error = e
                     if DEBUG_RESPONSE:
                         print(f"\n[{participant.info.display_name} 响应错误: {e}]")
-                    # 继续重试
 
                 # 刷新过滤器缓冲区
                 remaining = stream_filter.flush()
@@ -212,7 +222,7 @@ class Moderator:
 
                 # 检查是否成功获取响应（必须有实际内容，不只是空白）
                 if DEBUG_RESPONSE:
-                    print(f"\n[DEBUG {participant.info.display_name}] turn={turn}, retry={retry}, chunks={chunk_count}, len={len(full_response)}, stripped_len={len(full_response.strip())}")
+                    print(f"\n[DEBUG {participant.info.display_name}] turn={turn}, retry={retry}, chunks={chunk_count}, len={len(full_response)}, stripped_len={len(full_response.strip())}, error={last_error}")
 
                 if chunk_count > 0 and full_response.strip():
                     final_response = full_response
@@ -220,11 +230,27 @@ class Moderator:
 
                 # 空响应或只有空白，尝试重试
                 if retry < MAX_RETRIES:
+                    delay = RATE_LIMIT_DELAY if hit_rate_limit else RETRY_DELAY
+                    # 临时提示（用 \r 覆盖，不污染输出）
+                    sys.stdout.write(f"\r  ⏳ 等待重试 {retry + 1}/{MAX_RETRIES}...")
+                    sys.stdout.flush()
                     if DEBUG_RESPONSE:
-                        print(f"\n[{participant.info.display_name} 空响应，重试 {retry + 1}/{MAX_RETRIES}]")
-                    await asyncio.sleep(RETRY_DELAY)
+                        reason = "速率限制" if hit_rate_limit else "空响应"
+                        print(f"\n[{participant.info.display_name} {reason}，重试 {retry + 1}/{MAX_RETRIES}，等待 {delay}s]")
+                    await asyncio.sleep(delay)
+                    # 清除临时提示
+                    sys.stdout.write("\r\033[K")
+                    sys.stdout.flush()
                     yielded_anything = False  # 重置，允许下次重试时重新 yield
+                    hit_rate_limit = False  # 重置
                 else:
+                    # 所有重试都失败，打印错误原因（始终可见）
+                    if last_error:
+                        err_msg = f"\n  ⚠ {participant.info.display_name} 响应失败: {type(last_error).__name__}: {last_error}\n"
+                    else:
+                        err_msg = f"\n  ⚠ {participant.info.display_name} 返回空响应\n"
+                    sys.stdout.write(err_msg)
+                    sys.stdout.flush()
                     final_response = ""
 
             # 确保至少 yield 一次（如果所有重试都失败）

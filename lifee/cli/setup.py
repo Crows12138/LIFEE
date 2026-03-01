@@ -1,12 +1,18 @@
 """Provider/Model/Role 选择 UI"""
 import ctypes
+import json
 import msvcrt
 import sys
+import time
 from pathlib import Path
 
 import httpx
 
 from .i18n import t
+
+# 模型缓存文件路径和刷新间隔
+_MODELS_CACHE_PATH = Path.home() / ".lifee" / "models_cache.json"
+_CACHE_REFRESH_INTERVAL = 86400  # 24 小时
 
 
 def select_menu_interactive(
@@ -136,8 +142,120 @@ def get_ollama_models() -> list:
     return []
 
 
+# 动态获取模型列表的 Provider 配置：provider_id → (base_url, key_env_var)
+_DYNAMIC_MODEL_PROVIDERS = {
+    "deepseek": ("https://api.deepseek.com/v1", "DEEPSEEK_API_KEY"),
+    "openrouter": ("https://openrouter.ai/api/v1", "OPENROUTER_API_KEY"),
+    "groq": ("https://api.groq.com/openai/v1", "GROQ_API_KEY"),
+    "qwen": ("https://dashscope.aliyuncs.com/compatible-mode/v1", "QWEN_API_KEY"),
+    "opencode": ("https://opencode.ai/zen/v1", "OPENCODE_API_KEY"),
+}
+
+
+def _load_models_cache() -> dict:
+    """读取本地模型缓存"""
+    try:
+        if _MODELS_CACHE_PATH.exists():
+            return json.loads(_MODELS_CACHE_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    return {}
+
+
+def _save_models_cache(cache: dict) -> None:
+    """保存模型缓存到本地"""
+    try:
+        _MODELS_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        _MODELS_CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    except Exception:
+        pass
+
+
+def _fetch_models_from_api(provider_id: str) -> list[str] | None:
+    """从 Provider API 获取模型列表，失败返回 None"""
+    if provider_id not in _DYNAMIC_MODEL_PROVIDERS:
+        return None
+
+    base_url, key_env_var = _DYNAMIC_MODEL_PROVIDERS[provider_id]
+
+    # 从 .env 读取 API Key
+    env_path = Path(".env")
+    api_key = ""
+    if env_path.exists():
+        for line in env_path.read_text(encoding="utf-8").split("\n"):
+            if line.startswith(f"{key_env_var}="):
+                api_key = line.split("=", 1)[1].strip()
+                break
+    if not api_key:
+        return None
+
+    try:
+        response = httpx.get(
+            f"{base_url}/models",
+            headers={"Authorization": f"Bearer {api_key}"},
+            timeout=8,
+        )
+        if response.status_code != 200:
+            return None
+
+        data = response.json()
+        models = data.get("data", [])
+        return [m["id"] for m in models if m.get("id")]
+    except Exception:
+        return None
+
+
+def fetch_provider_models(provider_id: str) -> list[str]:
+    """获取 Provider 可用模型列表
+
+    策略：联网获取 → 更新本地缓存 → 离线时用缓存 → 都没有返回空列表
+    每 24 小时自动刷新一次。
+    """
+    cache = _load_models_cache()
+    entry = cache.get(provider_id, {})
+    cached_models = entry.get("models", [])
+    last_update = entry.get("updated_at", 0)
+
+    # 缓存未过期，直接返回
+    if cached_models and (time.time() - last_update) < _CACHE_REFRESH_INTERVAL:
+        return cached_models
+
+    # 尝试联网刷新
+    fresh = _fetch_models_from_api(provider_id)
+    if fresh:
+        cache[provider_id] = {"models": fresh, "updated_at": time.time()}
+        _save_models_cache(cache)
+        return fresh
+
+    # 联网失败，返回旧缓存（即使过期也比没有好）
+    return cached_models
+
+
 # 各供应商的模型列表
 PROVIDER_MODELS = {
+    "gemini": {
+        "env_key": "GEMINI_MODEL",
+        "models": [
+            ("gemini-2.5-flash", "2.5 快速（推荐）"),
+            ("gemini-2.5-pro", "2.5 最强"),
+            ("gemini-2.0-flash", "2.0 快速"),
+        ],
+    },
+    "deepseek": {
+        "env_key": "DEEPSEEK_MODEL",
+        "models": [
+            ("deepseek-chat", "DeepSeek V3 通用对话"),
+            ("deepseek-reasoner", "DeepSeek R1 推理"),
+        ],
+    },
+    "claude": {
+        "env_key": "CLAUDE_MODEL",
+        "models": [
+            ("claude-sonnet-4-6", "平衡能力和速度"),
+            ("claude-opus-4-6", "最强模型"),
+            ("claude-haiku-4-5", "快速响应"),
+        ],
+    },
     "qwen": {
         "env_key": "QWEN_MODEL",
         "models": [
@@ -147,30 +265,29 @@ PROVIDER_MODELS = {
             ("qwen-long", "超长上下文"),
         ],
     },
-    "gemini": {
-        "env_key": "GEMINI_MODEL",
+    "openrouter": {
+        "env_key": "OPENROUTER_MODEL",
         "models": [
-            ("gemini-3-flash-preview", "Gemini 3 快速"),
-            ("gemini-3-pro-preview", "Gemini 3 最强"),
-            ("gemini-2.5-pro", "2.5 最强"),
-            ("gemini-2.5-flash", "2.5 快速"),
-            ("gemini-2.5-flash-lite", "2.5 轻量"),
-            ("gemini-2.0-flash", "2.0 推荐"),
-            ("gemini-2.0-flash-lite", "2.0 轻量"),
+            ("google/gemini-2.5-flash", "Gemini 2.5 Flash"),
+            ("google/gemini-2.5-pro", "Gemini 2.5 Pro"),
+            ("anthropic/claude-sonnet-4", "Claude Sonnet 4"),
+            ("deepseek/deepseek-chat-v3-0324", "DeepSeek V3"),
+            ("meta-llama/llama-4-maverick", "Llama 4 Maverick"),
+        ],
+    },
+    "groq": {
+        "env_key": "GROQ_MODEL",
+        "models": [
+            ("llama-3.3-70b-versatile", "Llama 3.3 70B"),
+            ("llama-3.1-8b-instant", "Llama 3.1 8B 快速"),
+            ("gemma2-9b-it", "Gemma 2 9B"),
+            ("mixtral-8x7b-32768", "Mixtral 8x7B"),
         ],
     },
     "opencode": {
         "env_key": "OPENCODE_MODEL",
         "models": [
             ("big-pickle", "OpenCode 免费"),
-        ],
-    },
-    "claude": {
-        "env_key": "CLAUDE_MODEL",
-        "models": [
-            ("claude-opus-4-5", "最强模型"),
-            ("claude-sonnet-4", "平衡能力和速度"),
-            ("claude-3-5-haiku", "快速响应"),
         ],
     },
 }
@@ -187,7 +304,10 @@ OLLAMA_RECOMMENDED_MODELS = [
 
 
 def select_model_for_provider(provider_id: str, current_model: str) -> str:
-    """交互式选择供应商模型"""
+    """交互式选择供应商模型
+
+    优先从 API 动态获取模型列表，失败则用静态列表兜底。
+    """
     if provider_id == "ollama":
         return select_ollama_model()
 
@@ -196,19 +316,46 @@ def select_model_for_provider(provider_id: str, current_model: str) -> str:
         return ""
 
     config = PROVIDER_MODELS[provider_id]
-    models = config["models"]
+    static_models = config["models"]  # [(id, desc), ...]
     env_key = config["env_key"]
 
-    labels = []
-    for model_id, desc in models:
-        current = f" ({t('current_suffix')})" if model_id == current_model else ""
-        labels.append(f"{model_id}{current} - {desc}")
+    # 尝试动态获取模型列表
+    dynamic_ids = fetch_provider_models(provider_id)
 
-    choice = select_menu_interactive(t("select_model"), labels)
-    if choice is None:
-        return ""
+    if dynamic_ids:
+        # 用静态描述为动态模型添加注释
+        desc_map = {m[0]: m[1] for m in static_models}
+        # 静态推荐的排前面，其余按 API 返回顺序
+        static_ids = [m[0] for m in static_models]
+        recommended = [mid for mid in static_ids if mid in dynamic_ids]
+        others = [mid for mid in dynamic_ids if mid not in set(static_ids)]
+        ordered = recommended + others
 
-    selected = models[choice][0]
+        labels = []
+        for model_id in ordered:
+            current = f" ({t('current_suffix')})" if model_id == current_model else ""
+            desc = desc_map.get(model_id, "")
+            suffix = f" - {desc}" if desc else ""
+            labels.append(f"{model_id}{current}{suffix}")
+
+        choice = select_menu_interactive(t("select_model"), labels)
+        if choice is None:
+            return ""
+
+        selected = ordered[choice]
+    else:
+        # 静态兜底
+        labels = []
+        for model_id, desc in static_models:
+            current = f" ({t('current_suffix')})" if model_id == current_model else ""
+            labels.append(f"{model_id}{current} - {desc}")
+
+        choice = select_menu_interactive(t("select_model"), labels)
+        if choice is None:
+            return ""
+
+        selected = static_models[choice][0]
+
     save_api_key_to_env(env_key, selected)
     print(f"\n{t('selected').format(name=selected)}")
     return selected
@@ -306,33 +453,51 @@ def prompt_for_api_key(provider_name: str, key_name: str, get_url: str) -> str:
 # Provider 选项配置
 PROVIDER_OPTIONS = [
     {
-        "id": "qwen",
-        "name": "Qwen (通义千问)",
-        "desc": "免费 2000 请求/天 | 模型: qwen-plus, qwen-max, qwen-turbo",
-        "needs_key": True,
-    },
-    {
         "id": "gemini",
         "name": "Google Gemini",
-        "desc": "免费 | 模型: gemini-3-flash, gemini-2.5-pro, gemini-2.0-flash",
+        "desc": "免费 | gemini-2.5-flash/pro",
         "needs_key": True,
     },
     {
-        "id": "ollama",
-        "name": "Ollama (本地)",
-        "desc": "完全免费 | 推荐: qwen2.5, llama3.3, deepseek-r1",
-        "needs_key": False,
-    },
-    {
-        "id": "opencode",
-        "name": "OpenCode Zen",
-        "desc": "Big Pickle 免费 | 其他模型需订阅",
+        "id": "deepseek",
+        "name": "DeepSeek",
+        "desc": "超便宜 | deepseek-chat, deepseek-reasoner",
         "needs_key": True,
     },
     {
         "id": "claude",
         "name": "Claude",
-        "desc": "需要会员 | 模型: claude-opus-4-5, claude-sonnet-4",
+        "desc": "需 API Key | claude-sonnet-4-6, claude-opus-4-6",
+        "needs_key": True,
+    },
+    {
+        "id": "qwen",
+        "name": "Qwen (通义千问)",
+        "desc": "免费 2000 请求/天 | qwen-plus, qwen-max",
+        "needs_key": True,
+    },
+    {
+        "id": "openrouter",
+        "name": "OpenRouter",
+        "desc": "一个 key 多模型 | Gemini, Claude, Llama 等",
+        "needs_key": True,
+    },
+    {
+        "id": "groq",
+        "name": "Groq",
+        "desc": "超快推理 | 免费额度 | Llama, Gemma, Mixtral",
+        "needs_key": True,
+    },
+    {
+        "id": "ollama",
+        "name": "Ollama (本地)",
+        "desc": "完全免费 | qwen2.5, llama3.3, deepseek-r1",
+        "needs_key": False,
+    },
+    {
+        "id": "opencode",
+        "name": "OpenCode Zen",
+        "desc": "Big Pickle 免费",
         "needs_key": True,
     },
 ]
@@ -348,11 +513,14 @@ def get_provider_key_status(provider_id: str) -> str:
 
     # 各 Provider 对应的 KEY 名称
     key_mapping = {
-        "qwen": "QWEN_API_KEY",
         "gemini": "GOOGLE_API_KEY",
+        "deepseek": "DEEPSEEK_API_KEY",
+        "claude": "ANTHROPIC_API_KEY",
+        "qwen": "QWEN_API_KEY",
+        "openrouter": "OPENROUTER_API_KEY",
+        "groq": "GROQ_API_KEY",
         "opencode": "OPENCODE_API_KEY",
         "synthetic": "SYNTHETIC_API_KEY",
-        "claude": "ANTHROPIC_API_KEY",
     }
 
     # 不需要 Key 的 Provider
@@ -390,6 +558,13 @@ def select_provider_interactive(show_welcome: bool = True) -> str:
     provider_id = item["id"]
     save_api_key_to_env("LLM_PROVIDER", provider_id)
     print(f"\n{t('selected').format(name=item['name'])}")
+
+    # 立即弹出模型选择（如果该服务商有多个模型）
+    if provider_id in PROVIDER_MODELS:
+        models = PROVIDER_MODELS[provider_id]["models"]
+        if len(models) > 1:
+            select_model_for_provider(provider_id, "")
+
     return provider_id
 
 

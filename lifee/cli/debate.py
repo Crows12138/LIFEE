@@ -205,6 +205,25 @@ async def debate_loop(
     print(t("commands_hint"))
     print("=" * 50 + "\n")
 
+    # 如果是恢复的会话，显示历史对话记录
+    if session.history:
+        # 构建参与者 emoji 映射
+        emoji_map = {p.info.display_name: p.info.emoji for p in participants}
+        print(f"  ── 历史记录 ({len(session.history)} 条) ──\n")
+        for msg in session.history:
+            content = msg.content.strip()
+            if not content:
+                continue
+            # 全部显示，不截断
+            if msg.role.value == "user":
+                print(f"  👤 你: {content}")
+            else:
+                name = msg.name or "AI"
+                emoji = emoji_map.get(name, "🤖")
+                print(f"  {emoji} {name}: {content}")
+            print()
+        print(f"  ── 继续对话 ──\n")
+
     pending_suggestion = None  # 用于存储用户选择的建议
 
     while True:

@@ -114,18 +114,27 @@ class Participant:
             if matched:
                 triggered_context = "\n\n".join(s.content for s in matched)
 
-        # 3. 构建对话历史摘要（用于让分身互相"看见"）
+        # 3. 投资角色：只要提到公司名就获取实时数据（不依赖 Tier 2 触发）
+        stock_data_context = ""
+        if user_query and self.skill_set.triggered_skills:
+            inv_skills = {"business-analysis", "financial-statements", "valuation-math"}
+            role_skill_names = {s.name for s in self.skill_set.triggered_skills}
+            if inv_skills & role_skill_names:
+                from lifee.market import resolve_and_fetch
+                stock_data_context = await resolve_and_fetch(user_query, translated_keywords)
+
+        # 4. 构建对话历史摘要（用于让分身互相"看见"）
         dialogue_context = ""
         if debate_context:
             dialogue_context = self._format_recent_dialogue(messages)
 
-        # 4. 构建 system prompt（包含辩论上下文）
+        # 5. 构建 system prompt（包含辩论上下文）
         system = self._build_system_prompt(
             knowledge_context, debate_context, user_memory_context,
-            triggered_context, dialogue_context,
+            triggered_context, dialogue_context, stock_data_context,
         )
 
-        # 5. 调用 LLM
+        # 6. 调用 LLM
         async for chunk in self.provider.stream(
             messages=messages,
             system=system,
@@ -140,23 +149,34 @@ class Participant:
         user_memory_context: Optional[str] = None,
         triggered_skill_context: str = "",
         dialogue_context: Optional[str] = None,
+        stock_data_context: str = "",
     ) -> str:
         """
         构建包含知识库上下文和辩论上下文的 system prompt
 
-        注入顺序:
+        注入顺序：
         1. 角色定义 (SOUL + IDENTITY + core skills)
         2. 触发技能 (Tier 2, 基于用户输入)
-        3. 用户记忆
-        4. 辩论上下文
-        5. 最近对话记录
-        6. RAG 知识库
+        3. 实时市场数据（仅投资技能触发时）
+        4. 用户记忆
+        5. 辩论上下文
+        6. 最近对话记录
+        7. RAG 知识库
         """
         parts = [self.system_prompt]
 
         # 注入触发技能 (Tier 2)
         if triggered_skill_context:
             parts.append(triggered_skill_context)
+
+        # 注入实时市场数据
+        if stock_data_context:
+            parts.append(
+                "The following real-time market data has been retrieved by the system. "
+                "Use these specific numbers in your analysis. "
+                "Do NOT ask the user to look up this data themselves.\n\n"
+                + stock_data_context
+            )
 
         # 注入用户记忆上下文
         if user_memory_context:

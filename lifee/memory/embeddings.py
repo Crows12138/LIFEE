@@ -7,6 +7,7 @@
 
 import asyncio
 import re
+import time
 from abc import ABC, abstractmethod
 from typing import Optional
 
@@ -106,8 +107,19 @@ class GeminiEmbedding(EmbeddingProvider):
                 await asyncio.sleep(0.5)  # 批次间暂停避免限流
         return all_embeddings
 
+    # 翻译缓存：(text, target_lang) → (result, timestamp)，避免同一轮多个参与者重复翻译
+    _translate_cache: dict[tuple[str, str], tuple[str, float]] = {}
+    _TRANSLATE_CACHE_TTL = 60.0  # 缓存 60 秒
+
     async def translate_to_keywords(self, text: str, target_lang: str = "English") -> str:
         """将文本翻译为目标语言的搜索关键词，用于跨语言 BM25 搜索"""
+        cache_key = (text, target_lang)
+        cached = self._translate_cache.get(cache_key)
+        if cached:
+            result, ts = cached
+            if time.time() - ts < self._TRANSLATE_CACHE_TTL:
+                return result
+
         try:
             response = await self._client.aio.models.generate_content(
                 model="gemini-2.0-flash",
@@ -119,7 +131,9 @@ class GeminiEmbedding(EmbeddingProvider):
                     f"Input: {text}"
                 ),
             )
-            return response.text.strip()
+            result = response.text.strip()
+            self._translate_cache[cache_key] = (result, time.time())
+            return result
         except Exception:
             return text  # 翻译失败时回退到原文
 
