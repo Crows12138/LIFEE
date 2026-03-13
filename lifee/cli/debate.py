@@ -202,11 +202,31 @@ def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
         return sum(_char_width(c) for c in chars[cursor_pos:])
 
     def _redraw_line():
-        """重绘输入行，光标定位到 cursor_pos"""
-        sys.stdout.write(f"\r\033[K{prompt}{''.join(chars)}")
-        tw = _tail_width()
-        if tw > 0:
-            sys.stdout.write(f"\033[{tw}D")
+        """重绘输入行，光标定位到 cursor_pos（正确处理多行换行）"""
+        import shutil
+        term_width = shutil.get_terminal_size().columns
+        prompt_width = sum(_char_width(c) for c in prompt)
+        cursor_text_width = prompt_width + sum(_char_width(c) for c in chars[:cursor_pos])
+        total_width = prompt_width + sum(_char_width(c) for c in chars)
+
+        # 当前光标在第几个终端行（相对于输入起始行，0-based）
+        cur_row = cursor_text_width // term_width
+        # 上移到输入第一行
+        if cur_row > 0:
+            sys.stdout.write(f"\033[{cur_row}A")
+        # 从第一行行首清到屏幕底，重写全部内容
+        sys.stdout.write(f"\r\033[J{prompt}{''.join(chars)}")
+
+        # 写完后光标在文本末尾，计算末尾和目标的行列差，回移光标
+        end_row = total_width // term_width
+        target_row = cursor_text_width // term_width
+        target_col = cursor_text_width % term_width
+        rows_up = end_row - target_row
+        if rows_up > 0:
+            sys.stdout.write(f"\033[{rows_up}A")
+        sys.stdout.write("\r")
+        if target_col > 0:
+            sys.stdout.write(f"\033[{target_col}C")
         sys.stdout.flush()
 
     def _redraw():
