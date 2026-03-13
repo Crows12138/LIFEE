@@ -34,32 +34,23 @@ DEFAULT_USER_TEMPLATE = """# USER.md - 关于你
 *这个文件记录了你在讨论中透露的信息，帮助角色更好地理解你。*
 """
 
-# 提取用户信息的 Prompt
-EXTRACT_PROMPT = """分析以下对话，提取关于用户的信息。
+# 提取用户信息的 Prompt（重写整个文件，避免重复积累）
+EXTRACT_PROMPT = """You are updating a user profile file based on a recent conversation.
 
-对话内容：
+Current USER.md content:
+{current_content}
+
+Recent conversation:
 {conversation}
 
-请提取以下类型的信息（如果存在）：
-1. 用户的基本信息（名字、职业、年龄等）
-2. 用户的偏好（沟通风格、兴趣等）
-3. 用户提到的具体问题或困扰
-4. 用户的价值观或重要决定
+Task: Produce an updated USER.md that:
+1. Incorporates any NEW information revealed in the conversation (name, job, preferences, etc.)
+2. Deduplicates and merges similar items — do NOT add items that are already covered
+3. Keeps the file concise and well-organized
+4. Preserves the existing structure and language (Chinese)
+5. If nothing new was learned, return the original content unchanged
 
-返回 JSON 格式：
-{{
-  "profile": {{
-    "name": "名字（如果提到）",
-    "occupation": "职业（如果提到）",
-    "other": "其他基本信息"
-  }},
-  "preferences": ["偏好1", "偏好2"],
-  "topics": ["今天讨论的话题1", "话题2"],
-  "insights": ["重要的见解或决定"]
-}}
-
-如果没有发现新信息，返回空对象 {{}}
-只返回 JSON，不要有其他内容。"""
+Return ONLY the updated markdown content, no explanation."""
 
 
 class UserMemory:
@@ -179,14 +170,14 @@ class UserMemory:
     async def auto_extract(
         self, messages: List[Message], provider: LLMProvider
     ) -> bool:
-        """自动从对话中提取用户信息（后台运行）
+        """自动从对话中提取用户信息，重写整个 USER.md（后台运行）
 
         Args:
             messages: 对话历史
             provider: LLM 提供者
 
         Returns:
-            是否提取到新信息
+            是否更新了文件
         """
         if not messages:
             return False
@@ -194,55 +185,41 @@ class UserMemory:
         # 只分析最近的消息
         recent = messages[-6:]
 
-        # 构建对话文本
+        # 构建对话文本（只取用户消息 + AI 消息前100字）
         conversation_parts = []
         for msg in recent:
             if msg.role == MessageRole.USER:
-                conversation_parts.append(f"用户: {msg.content}")
+                conversation_parts.append(f"User: {msg.content}")
             else:
                 name = msg.name or "AI"
-                conversation_parts.append(f"{name}: {msg.content[:200]}")
+                conversation_parts.append(f"{name}: {msg.content[:100]}")
 
         conversation = "\n".join(conversation_parts)
 
+        # 读取当前 USER.md
+        current_content = self.user_file.read_text(encoding="utf-8") if self.user_file.exists() else ""
+
         try:
-            # 调用 LLM 提取信息
             response = await provider.chat(
                 messages=[
                     Message(
                         role=MessageRole.USER,
-                        content=EXTRACT_PROMPT.format(conversation=conversation),
+                        content=EXTRACT_PROMPT.format(
+                            current_content=current_content,
+                            conversation=conversation,
+                        ),
                     )
                 ],
-                max_tokens=500,
-                temperature=0.3,
+                max_tokens=1000,
+                temperature=0.2,
             )
 
-            # 解析 JSON
-            result = self._parse_json(response.content)
-            if not result:
+            updated = response.content.strip()
+            if not updated or updated == current_content.strip():
                 return False
 
-            # 更新用户档案
-            profile = result.get("profile", {})
-            if profile.get("name"):
-                self.update_user_profile("名字", profile["name"])
-            if profile.get("occupation"):
-                self.update_user_profile("职业", profile["occupation"])
-
-            # 添加偏好
-            for pref in result.get("preferences", []):
-                if pref:
-                    self.add_to_section("偏好", pref)
-
-            # 添加今日笔记
-            for topic in result.get("topics", []):
-                if topic:
-                    self.add_daily_note("讨论话题", topic)
-            for insight in result.get("insights", []):
-                if insight:
-                    self.add_daily_note("见解", insight)
-
+            # 直接覆写文件（替代追加逻辑）
+            self.user_file.write_text(updated, encoding="utf-8")
             return True
 
         except Exception:
