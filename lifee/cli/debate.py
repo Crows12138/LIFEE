@@ -21,6 +21,18 @@ from .setup import select_provider_interactive, select_model_for_provider, selec
 
 _IMAGE_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.gif', '.webp'}
 
+SLASH_COMMANDS = [
+    ("/help",     "显示帮助"),
+    ("/history",  "查看对话历史"),
+    ("/clear",    "清除对话历史"),
+    ("/sessions", "查看历史会话"),
+    ("/memory",   "知识库状态"),
+    ("/config",   "切换 Provider"),
+    ("/model",    "切换模型"),
+    ("/menu",     "返回主菜单"),
+    ("/quit",     "退出程序"),
+]
+
 
 def get_clipboard_image() -> Optional[MediaItem]:
     """从 Windows 剪贴板读取图片
@@ -159,16 +171,13 @@ def _char_width(c: str) -> int:
 
 
 def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
-    """带剪贴板粘贴的自定义输入函数
+    """带剪贴板粘贴 + slash 命令菜单的自定义输入函数
 
     功能:
         - Ctrl+V / Alt+V: 粘贴剪贴板图片
         - Backspace: 文本为空时删除最后一张图片
-        - 附件统一显示在一行，不会重复出现提示符
-
-    显示布局:
-        📎 clipboard.png, clipboard.png   ← 附件行（有图片时）
-        你: 输入文本█                       ← 输入行
+        - /: 触发 slash 命令菜单（方向键导航，继续输入过滤）
+        - ESC: 关闭 slash 菜单
 
     Returns:
         (输入文本, 剪贴板媒体列表)
@@ -178,25 +187,25 @@ def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
 
     chars = []
     media = []
-    has_attachment_line = False  # 输入行上方是否有附件行
+    has_attachment_line = False
+
+    # slash 菜单状态
+    in_slash_mode = False
+    slash_cursor = 0
+    slash_prev_count = 0  # 上次绘制的菜单行数
 
     def _redraw():
         """重绘附件行 + 输入行"""
         nonlocal has_attachment_line
-        # 回到起始位置
         if has_attachment_line:
-            sys.stdout.write("\033[1A")  # 上移到附件行
-        sys.stdout.write("\r\033[J")  # 清除到屏幕末尾
-
-        # 附件行
+            sys.stdout.write("\033[1A")
+        sys.stdout.write("\r\033[J")
         if media:
             names = ", ".join(m.filename for m in media)
             sys.stdout.write(f"  📎 {names}\n")
             has_attachment_line = True
         else:
             has_attachment_line = False
-
-        # 输入行
         sys.stdout.write(f"{prompt}{''.join(chars)}")
         sys.stdout.flush()
 
@@ -209,44 +218,153 @@ def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
             media.append(item)
         _redraw()
 
+    def _get_slash_filtered():
+        prefix = "".join(chars).lower()
+        return [(cmd, desc) for cmd, desc in SLASH_COMMANDS if cmd.startswith(prefix)]
+
+    def _draw_slash_menu():
+        """在输入行下方绘制/更新 slash 菜单。光标最终停在输入行末尾。"""
+        nonlocal slash_prev_count
+        filtered = _get_slash_filtered()
+        n = len(filtered)
+        # 绘制菜单行（每行以 \n\r 开头，保证从列 0 开始）
+        for i, (cmd, desc) in enumerate(filtered):
+            pointer = ">" if i == slash_cursor else " "
+            hi_start = "\033[7m" if i == slash_cursor else ""
+            hi_end   = "\033[0m" if i == slash_cursor else ""
+            sys.stdout.write(f"\n\r\033[2K  {hi_start}{pointer} {cmd:<12} {desc}{hi_end}")
+        # 清除上次多余的旧行
+        for _ in range(slash_prev_count - n):
+            sys.stdout.write("\n\r\033[2K")
+        total = max(n, slash_prev_count)
+        if total > 0:
+            # 回到输入行
+            sys.stdout.write(f"\033[{total}A\r{prompt}{''.join(chars)}")
+        sys.stdout.flush()
+        slash_prev_count = n
+
+    def _clear_slash_menu():
+        """清除菜单，光标保持在输入行末尾。"""
+        nonlocal slash_prev_count
+        if slash_prev_count > 0:
+            for _ in range(slash_prev_count):
+                sys.stdout.write("\n\r\033[2K")
+            sys.stdout.write(f"\033[{slash_prev_count}A\r{prompt}{''.join(chars)}")
+            sys.stdout.flush()
+        slash_prev_count = 0
+
     while True:
         char = msvcrt.getwch()
 
-        if char == '\r':  # Enter
-            sys.stdout.write('\n')
-            sys.stdout.flush()
-            break
-
-        elif char == '\x08':  # Backspace
-            if chars:
-                removed = chars.pop()
-                w = _char_width(removed)
-                sys.stdout.write('\b' * w + ' ' * w + '\b' * w)
+        if char == "\r":  # Enter
+            if in_slash_mode:
+                filtered = _get_slash_filtered()
+                # 清除菜单行
+                for _ in range(slash_prev_count):
+                    sys.stdout.write("\n\r\033[2K")
+                if slash_prev_count > 0:
+                    sys.stdout.write(f"\033[{slash_prev_count}A")
+                if filtered:
+                    idx = min(slash_cursor, len(filtered) - 1)
+                    selected = filtered[idx][0]
+                    sys.stdout.write(f"\r\033[K{prompt}{selected}\n")
+                    sys.stdout.flush()
+                    return selected, media
+                else:
+                    # 无匹配，直接提交当前输入
+                    sys.stdout.write(f"\r\033[K{prompt}{''.join(chars)}\n")
+                    sys.stdout.flush()
+                    return "".join(chars).strip(), media
+            else:
+                sys.stdout.write("\n")
                 sys.stdout.flush()
-            elif media:
-                media.pop()
-                _redraw()
+                break
 
-        elif char == '\x03':  # Ctrl+C
+        elif char == "\x1b":  # ESC — 关闭 slash 菜单
+            if in_slash_mode:
+                _clear_slash_menu()
+                in_slash_mode = False
+                slash_cursor = 0
+
+        elif char == "\x08":  # Backspace
+            if in_slash_mode:
+                if chars:
+                    removed = chars.pop()
+                    w = _char_width(removed)
+                    sys.stdout.write("\b" * w + " " * w + "\b" * w)
+                    sys.stdout.flush()
+                    if not chars:
+                        _clear_slash_menu()
+                        in_slash_mode = False
+                    else:
+                        slash_cursor = 0
+                        _draw_slash_menu()
+                else:
+                    _clear_slash_menu()
+                    in_slash_mode = False
+            else:
+                if chars:
+                    removed = chars.pop()
+                    w = _char_width(removed)
+                    sys.stdout.write("\b" * w + " " * w + "\b" * w)
+                    sys.stdout.flush()
+                elif media:
+                    media.pop()
+                    _redraw()
+
+        elif char == "\x03":  # Ctrl+C
+            if in_slash_mode:
+                _clear_slash_menu()
             raise KeyboardInterrupt
 
-        elif char == '\x16':  # Ctrl+V (Git Bash)
+        elif char == "\x16":  # Ctrl+V
+            if in_slash_mode:
+                _clear_slash_menu()
+                in_slash_mode = False
             _do_paste()
 
-        elif char == '\x00':  # Special key prefix (PowerShell/CMD: Alt+key)
+        elif char == "\x00":  # Special key prefix (Alt+key)
             scan = msvcrt.getwch()
             if ord(scan) == 0x2F:  # Alt+V
+                if in_slash_mode:
+                    _clear_slash_menu()
+                    in_slash_mode = False
                 _do_paste()
 
-        elif char == '\xe0':  # Extended key prefix (arrows, etc.)
-            msvcrt.getwch()
+        elif char == "\xe0":  # Extended key (方向键等)
+            arrow = msvcrt.getwch()
+            if in_slash_mode:
+                filtered = _get_slash_filtered()
+                n = max(1, len(filtered))
+                if arrow == "\x48":  # 上
+                    slash_cursor = (slash_cursor - 1) % n
+                    _draw_slash_menu()
+                elif arrow == "\x50":  # 下
+                    slash_cursor = (slash_cursor + 1) % n
+                    _draw_slash_menu()
+            # 非 slash 模式下忽略方向键（保持原行为）
 
         elif ord(char) >= 32:  # 可打印字符
             chars.append(char)
             sys.stdout.write(char)
             sys.stdout.flush()
 
-    return ''.join(chars).strip(), media
+            if char == "/" and len(chars) == 1:
+                # 进入 slash 菜单模式
+                in_slash_mode = True
+                slash_cursor = 0
+                _draw_slash_menu()
+            elif in_slash_mode:
+                # 继续输入 — 更新过滤
+                slash_cursor = 0
+                filtered = _get_slash_filtered()
+                if filtered:
+                    _draw_slash_menu()
+                else:
+                    _clear_slash_menu()
+                    in_slash_mode = False
+
+    return "".join(chars).strip(), media
 
 
 async def show_suggestion_menu(
