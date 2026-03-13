@@ -608,12 +608,14 @@ async def debate_loop(
                         participant_names = [p.info.display_name for p in participants]
                         session_store.save(session, participant_names)
                         print(f"[{t('session_saved')}]")
+                        await user_memory.auto_extract(session.history, provider)
                     return ("quit", "")
                 elif cmd == "/menu":
                     if session.history:
                         participant_names = [p.info.display_name for p in participants]
                         session_store.save(session, participant_names)
                         print(f"[{t('session_saved')}]")
+                        await user_memory.auto_extract(session.history, provider)
                     return ("menu", "")
                 elif cmd == "/help":
                     print(t("help_title"))
@@ -859,9 +861,6 @@ async def debate_loop(
             participant_names = [p.info.display_name for p in participants]
             session_store.save(session, participant_names)
 
-            # 后台提取用户记忆（不阻塞主流程）
-            asyncio.create_task(user_memory.auto_extract(session.history, provider))
-
             # 一轮结束，显示建议菜单
             print()  # 回答与建议菜单之间的空行
             choice_text, is_silence = await show_suggestion_menu(
@@ -881,6 +880,7 @@ async def debate_loop(
                 participant_names = [p.info.display_name for p in participants]
                 session_store.save(session, participant_names)
                 print(f"[{t('session_saved')}]")
+                await user_memory.auto_extract(session.history, provider)
             return ("quit", "")
         except Exception as e:
             print(f"\n{t('error_prefix').format(error=e)}\n")
