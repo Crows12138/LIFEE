@@ -608,14 +608,18 @@ async def debate_loop(
                         participant_names = [p.info.display_name for p in participants]
                         session_store.save(session, participant_names)
                         print(f"[{t('session_saved')}]")
-                        await user_memory.auto_extract(session.history, provider)
+                        print("[正在更新档案...]", end="", flush=True)
+                        updated = await user_memory.auto_extract(session.history, provider)
+                        print(f"\r[{'档案已更新' if updated else '档案无变化'}]   ")
                     return ("quit", "")
                 elif cmd == "/menu":
                     if session.history:
                         participant_names = [p.info.display_name for p in participants]
                         session_store.save(session, participant_names)
                         print(f"[{t('session_saved')}]")
-                        await user_memory.auto_extract(session.history, provider)
+                        print("[正在更新档案...]", end="", flush=True)
+                        updated = await user_memory.auto_extract(session.history, provider)
+                        print(f"\r[{'档案已更新' if updated else '档案无变化'}]   ")
                     return ("menu", "")
                 elif cmd == "/help":
                     print(t("help_title"))
@@ -880,7 +884,9 @@ async def debate_loop(
                 participant_names = [p.info.display_name for p in participants]
                 session_store.save(session, participant_names)
                 print(f"[{t('session_saved')}]")
-                await user_memory.auto_extract(session.history, provider)
+                print("[正在更新档案...]", end="", flush=True)
+                updated = await user_memory.auto_extract(session.history, provider)
+                print(f"\r[{'档案已更新' if updated else '档案无变化'}]   ")
             return ("quit", "")
         except Exception as e:
             print(f"\n{t('error_prefix').format(error=e)}\n")
