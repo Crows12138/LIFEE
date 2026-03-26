@@ -1,0 +1,260 @@
+FINITE APPROXIMATIONS TO LIE GROUPS
+
+BY A. M. TURING
+
+(Received April 28, 1937; revised September 29, 1937)
+
+pp. 105-111
+
+----
+
+A certain sense in which a finite group may be said to approximate the structure of a metrical group will be discussed. On account of Jordan's theorem on finite groups of linear transformations^1 it is clear that we cannot hope to approximate a general Lie group with finite subgroups. I shall show that we cannot approximate even with groups which are 'approximately subgroups': in fact the only approximable Lie groups are the compact Abelian groups. The key to the situation is again afforded by Jordan's theorem, but it is not immediately applicable. It is necessary to find representations of the approximating groups whose degree depends only on the group approximated.
+
+Approximability of metrical groups. Suppose G is a group with a metric D invariant under left transformations i.e. D(ax, ay) = D(x, y) for all x, y, a of G. Let H_epsilon be a finite subset of G in which is defined a second product with respect to which it forms a group (if a and b are in H_epsilon their product as elements of G will be written ab; the product of them as elements of H_epsilon will be written a_0 b, the inverse of a as an element of H_epsilon is written [a]^{-1} and the identities of G and H_epsilon are written e, e_epsilon), and suppose each element x of G is within distance epsilon of an element r(x) of H_epsilon, and for each a, b of H_epsilon D(a_0 b, ab) > epsilon. Then H_epsilon will be said to be an epsilon-approximation to G.
+
+A group is said to be approximable if it has an epsilon-approximation for each epsilon > 0.
+
+Immediately from the definition we see that an approximable group is totally bounded i.e. conditionally compact. It is therefore possible to find a metric which is both left and right invariant and equivalent to the given metric, in the sense that the class of open sets is the same for either metric. In future therefore we shall suppose that our metric is both ways invariant, and we shall denote the distance between x and y by D(x, y).
+
+It has been shown by J. v. Neumann^2 that with a conditionally compact
+
+----
+^1 This theorem states that a finite group of linear transformations has an Abelian self conjugate subgroup whose index does not exceed a certain bound depending only on the degree.
+^2 J. v. Neumann, Zum Haarschen Mass in topologischen Gruppen, Compositio Mathematica, vol. 1 (1934) pp. 106-114; or alternatively, J. v. Neumann, Almost periodic functions in a group, Transactions of the American Mathematical Society, vol. 36 (1934) pp. 445-492, (remember that every continuous function in a conditionally compact group is a.p.). If the reader prefers to restrict the group in some way and use some other mean he has only to verify the inequality (1).
+
+[p. 105]
+
+----
+
+group we can define a mean for each continuous (complex-valued) function in the group, in such a way that (denoting the mean of f(x) by integral_G f(x) dx)
+
+    integral_G (f(x) + g(x)) dx = integral_G f(x) dx + integral_G g(x) dx
+
+    integral_G f(ax) dx = integral_G f(xa) dx = integral_G f(x) dx
+
+and so that if epsilon > 0 (and f(x) is continuous), then there is a finite set of elements a_1, a_2, ..., a_N of G such that
+
+(1)        |1/N sum_{i=1}^{N} f(xa_i) - integral_G f(x) dx| < epsilon.
+
+Before proceeding to the proofs of our main theorems we shall establish some elementary inequalities following immediately from our definition. Suppose the function r(x) belongs to an epsilon-approximation H_epsilon to G, then
+
+(2)    D(r(x)_0 r(y), xy) <= D(r(x)_0 r(y), r(x)r(y)) + D(r(x)r(y), xr(y))
+                                                          + D(xr(y), xy) < 3epsilon
+
+and for any a, c of H_epsilon,
+
+(3)        D(c_0 a_0 [c]^{-1}, cac^{-1}) < 4epsilon
+
+for
+
+    D(c_0 a_0 [c]^{-1}, cac^{-1}) < D(ca[c]^{-1}, cac^{-1}) + 2epsilon
+                                   = D([c]^{-1}c, e) + 2epsilon
+                                   <= D([c]^{-1}c, [c]_0^{-1}c) + D(e_epsilon, e) + 2epsilon
+                                   <= D(e_epsilon, e) + 3epsilon
+                                   = D(e_epsilon^2, e_epsilon) + 3epsilon
+                                   <= D(e_epsilon e_epsilon, e_epsilon) + 4epsilon = 4epsilon.
+
+THEOREM 1. Let G be an approximable group with a true continuous representation by matrices of degree n. Then it may be approximated by finite groups with true representations of the same degree n.
+
+LEMMA. If H_eta is an eta-approximation (of order h_eta) to the group G and if f(x) is a continuous function in G such that
+
+    |f(x) - f(x')| < Delta  when  D(x, x') < eta
+
+then
+
+(4)        |1/h_eta sum_{a in H_eta} f(a) - integral_G f(x) dx| <= 2Delta.
+
+[p. 106]
+
+----
+
+We put
+
+    integral_G f(x) dx = A        1/h_eta sum_{a in H_eta} f(a) = B
+
+then given epsilon > 0 there are a_1, a_2, ..., a_N such that
+
+(5)        |1/N sum_{i=1}^{N} f(xa_i) - A| < epsilon
+
+for each element x of G. If in (5) we successively put x equal to each member of H_eta and combine the resulting inequalities we obtain
+
+    |1/(Nh_eta) sum_{i=1}^{N} sum_{c in H_eta} f(ca_i) - A| < epsilon,
+
+but D(ca_i, c_0 r(a_i)) < 2eta, so that |f(ca_i) - f(c_0 r(a_j))| < 2Delta and therefore
+
+(6)        |1/(Nh_eta) sum_{i=1}^{N} sum_{c in H_eta} f(c_0 r(a_j)) - A| < epsilon + 2Delta.
+
+However
+
+    1/h_eta sum_{c in H_eta} f(c_0 r(a_i)) = B
+
+so that (6) yields (4) since epsilon was arbitrary.
+
+PROOF OF THE THEOREM. Without loss of generality we may suppose that the given representation of G does not contain any irreducible component more than once. Let chi(x) be the character of the representation. This function will satisfy
+
+(7)        chi(x) = integral_G chi(xy) overline{chi(y)} dy
+
+(8)        chi(x) = chi(cxc^{-1})
+
+(9)        |chi(x)| <= n
+
+and since it is the character of a true representation,
+
+    chi(x) != chi(e) = n  if  x != e.
+
+Let epsilon > 0. Then for some alpha, 1 > alpha > 0, |chi(x) - n| > alpha when D(x, e) >= (1/4)epsilon.
+Now let eta be so chosen that epsilon/16 > eta > 0 and
+
+(10)    |chi(x) - chi(x')| < alpha/(50n^2)  when  D(x, x') < 4eta
+
+(11)    |chi(ay)overline{chi(y)} - chi(ay')overline{chi(y')}| < alpha/(50n) all a, when D(y, y') < 2eta
+
+and take a corresponding eta-approximation H_eta. If we put
+
+(12)        phi(a) = 1/h_eta sum_{c in H_eta} chi(c_0 a_0 [c]^{-1})
+
+[p. 107]
+
+----
+
+then
+
+(13)    |phi(a) - chi(a)| <= 1/h_eta sum_{c in H_eta} |chi(c_0 a_0 [c]^{-1}) - chi(cac^{-1})| < alpha/(50n^2)
+
+for D(c_0 a_0 [c]^{-1}, cac^{-1}) < 4eta by (3) and therefore each summand is less than alpha/(50n^2). We have
+
+(14)    |1/h_eta sum_{b in H_eta} phi(a_0 b)overline{phi(b)} - chi(a)| <= 1/h_eta |sum_{b in H_eta} (phi(a_0 b)overline{phi(b)} - chi(a_0 b)overline{chi(b)})|
+        + |1/h_eta sum_{b in H_eta} (chi(a_0 b) - chi(ab))overline{chi(b)}| + |1/h_eta sum_{b in H_eta} chi(ab)overline{chi(b)} - integral_G chi(ay)overline{chi(y)} dy|.
+
+Applying the lemma to chi(ay)overline{chi(y)} and making use of (11) we have
+
+(15)        |1/h_eta sum_{b in H_eta} chi(ab)overline{chi(b)} - integral_G chi(ay)overline{chi(y)} dy| < 2alpha/(50n)
+
+and from (9), (10) we obtain
+
+(16)        1/h_eta |sum_{b in H_eta} (chi(a_0 b) - chi(ab))overline{chi(b)}| < alpha/(50n^2).
+
+Finally
+
+    1/h_eta |sum_{b in H_eta} (phi(a_0 b)overline{phi(b)} - chi(a_0 b)overline{chi(b)})|
+
+(17)        <= 1/h_eta sum_{b in H_eta} |(phi(a_0 b) - chi(a_0 b))overline{phi(b)}| + 1/h_eta sum_{b in H_eta} |(phi(b) - overline{chi(b)})chi(a_0 b)|
+            < 2alpha/(50n)
+
+by (9) and (13). Combining (14), (15), (16), (17),
+
+(18)        |1/h_eta sum_{b in H_eta} phi(a_0 b)overline{phi(b)} - chi(a)| < alpha/(10n)
+
+(19)        |1/h_eta sum_{b in H_eta} phi(a_0 b)overline{phi(b)} - phi(a)| < alpha/(8n).
+
+Now phi(a) = phi(c_0 a_0 [c]^{-1}) for each a, c of H_eta. This function is therefore expressible as a sum of characters,
+
+    phi(a) = sum_{lambda=1}^{M} alpha_lambda chi^{(lambda)}(a),
+
+chi^{(1)}(a), ..., chi^{(M)}(a) being the characters of the different irreducible representations of H_eta. From the general theory of representations
+
+    1/h_eta sum_{b in H_eta} chi^{(lambda)}(a_0 b) overline{chi^{(mu)}(b)} = delta_{lambda mu} chi^{(lambda)}(a)
+
+[p. 108]
+
+----
+
+(19) therefore becomes
+
+    |sum_{lambda=1}^{M} alpha_lambda (overline{alpha}_lambda - 1) chi^{(lambda)}(a)| < alpha/(8n).
+
+Squaring each side of this inequality and summing over H_eta,
+
+    1/h_eta sum_{lambda=1}^{M} sum_{a in H_eta} |alpha_lambda|^2 |1 - alpha_lambda|^2 |chi^{(lambda)}(a)|^2 = sum_{lambda=1}^{M} |alpha_lambda|^2 |1 - alpha_lambda|^2 < alpha^2/(64n^2).
+
+If we define xi(a) by
+
+    xi(a) = sum_{|1 - alpha_lambda| > |alpha_lambda|} chi^{(lambda)}(a)
+
+it will satisfy
+
+(20)        1/h_eta sum_{a in H_eta} xi(a_0 b)overline{xi(b)} = xi(a)
+
+and
+
+(21)    1/h_eta sum_{a in H_eta} |xi(a) - phi(a)|^2 = sum_{lambda=1}^{M} Min(|alpha_lambda|^2, |1 - alpha_lambda|^2)
+                                                      <= 4 sum_{lambda=1}^{M} |alpha_lambda|^2 |1 - alpha_lambda|^2 < alpha^2/(16n^2).
+
+We now wish to infer from the inequality (21) that the functions phi(a) and xi(a) differ only slightly at each point of H_eta. This is possible on account of the relations (19), (20).
+
+    |1/h_eta sum_{b in H_eta} (xi(a_0 b)overline{xi(b)} - phi(a_0 b)overline{phi(b)})|
+
+    <= sum_{b in H_eta} 1/h_eta |(xi(a_0 b) - phi(a_0 b))overline{xi(b)}| + sum_{b in H_eta} 1/h_eta |(xi(b) - phi(b))overline{phi(a_0 b)}|
+
+(22)    <= {1/h_eta sum_{b in H_eta} |xi(b) - phi(b)|^2}^{1/2} ({1/h_eta sum_{b in H_eta} |xi(b)|^2}^{1/2} + {1/h_eta sum_{b in H_eta} |phi(b)|^2}^{1/2})
+        < alpha/(4n) (n + n) = (1/2)alpha,
+
+since |xi(b)| <= n and |phi(b)| <= n for each b of H_eta. Now combine (18), (20), (22), and we have
+
+    |xi(a) - chi(a)| < (1/2)alpha + alpha/(10n) < alpha.
+
+This implies that xi(e_eta) = chi(e) = n and that if D(a, e) >= (1/4)epsilon then xi(a) != chi(e) = xi(e_eta). xi(a) = xi(e_eta) only for elements of a certain self-conjugate subgroup N entirely contained within distance (1/4)epsilon of the identity of G. The factor group has a true representation of degree n, and I shall show that it can be taken as a
+
+[p. 109]
+
+----
+
+epsilon-approximation to G. We choose an element in each coset of N as a representative of that coset and define the function v(a) (a in H_eta) to be the representative of the coset in which a lies. The totality of elements v(a) we call K. Putting v(a) circled-times v(b) = v(a_0 b), K forms a group with respect to the product circled-times. For each a of H_eta there is an element m of N for which v(a) = a_0 m and therefore
+
+    D(a, v(a)) <= D(a, am) + D(am, a_0 m) < (1/4)epsilon + eta.
+
+Consequently if we put R(x) = v(r(x)) we have
+
+    D(R(x), x) <= D(v(r(x)), r(x)) + D(r(x), x) < ((1/4)epsilon + eta) + eta < epsilon
+
+and
+
+    D(v(a) circled-times v(b), v(a)v(b)) <= D(v(a_0 b), a_0 b) + D(a_0 b, ab) + D(ab, v(a)v(b))
+                                           < 3((1/4)epsilon + eta) + eta < epsilon,
+
+which shows that K is an epsilon-approximation to G.
+
+THEOREM 2. An approximable Lie group is compact and Abelian.
+
+LEMMA. A closed subgroup of a connected group cannot have a finite index greater than 1.
+
+Suppose H is a closed subgroup of G and has index i, 1 < i < infinity. Then G - H is not void and is closed, being the sum of a finite number of closed sets, the cosets of H. G is the sum of two closed disjoint sets neither of which is void, and therefore is not connected.
+
+If G is a compact Lie group it cannot have a closed subgroup of positive measure different from the whole group.
+
+PROOF OF THE THEOREM. An approximable Lie group is complete and conditionally compact, i.e. it is compact, and is therefore a group of linear transformations,^3 of degree n say. By theorem 1 we can approximate it by finite groups H_epsilon of linear transformations of degree n. But by Jordan's theorem^4 each finite group of linear transformations has an Abelian subgroup whose index does not exceed a certain bound Z(n) depending only on the degree. Let A_epsilon be this Abelian subgroup in H_epsilon. Then there is a finite number c_1, c_2, ... c_N (N <= Z(n)) of elements of H_epsilon such that every element of H_epsilon is of the form c_{i0} a where a is in A_epsilon. For any x of G we have
+
+    D(x, r(x)) < epsilon
+
+    r(x) = c_{i0} a, a in A_epsilon, i <= N
+
+    D(c_{i0} a, c_i a) < epsilon.
+
+----
+^3 J. v. Neumann, Die Einfuhrung analytischer Parameter in topologischen Gruppen, Annals of Mathematics, vol. 34 (1933), pp. 170-190.
+^4 A. Speiser, Theorie der Gruppen von endlicher Ordnung, (Berlin 1927) 2nd ed., p. 215.
+
+[p. 110]
+
+----
+
+Hence every element of G is of the form c_i ad where d is within distance 2epsilon of the identity of G and i <= N. The points ad must therefore form a set E_epsilon of measure 1/Z(n) at least. Now put x = ad, y = a'd':
+
+    D(xy, yx) = D(ada'd', a'd'ad)
+
+(23)        <= 2D(d, d') + D(a_0 a', a'_0 a) + D(aa', a_0 a') + D(a'_0 a, a'a)
+            < 6epsilon.
+
+In the product group G x G we have therefore a set E_epsilon x E_epsilon of pairs (x, y) of measure 1/(Z(n))^2 at least, in which D(xy, yx) < 6epsilon. Now take a sequence epsilon_i tending to 0, and put F_i = sum_{j>=i} E_{epsilon_j} x E_{epsilon_j}, E = product_{i} F_i. For each i <= N,
+
+    mF_i >= m(E_{epsilon_i} x E_{epsilon_i}) >= 1/(Z(n))^2.
+
+Then mE >= 1/(Z(n))^2 since the F_i are a decreasing sequence. If (x, y) in E then for each i, (x, y) in F_i, i.e. x in E_{epsilon_j}, y in E_{epsilon_j} for some j >= i. Then by (23), D(xy, yx) < 6epsilon_j <= 6epsilon_i; but i was arbitrary so that D(xy, yx) = 0, xy = yx.
+
+Now let N_x be the set of those y for which xy = yx, i.e. the normaliser of x. Then
+
+    integral_G mN_x dx >= mE >= 1/(Z(n))^2.
+
+Consequently mN_x > 0 in an x-set of positive measure. But if mN_x > 0 we have N_x = G by the lemma, for N_x is certainly closed. This shows that the centre of G is of positive measure, and again applying the lemma we see that G is Abelian.
+
+PRINCETON UNIVERSITY.

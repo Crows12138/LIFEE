@@ -1,0 +1,817 @@
+Certain Results in Coding Theory for Noisy Channels* 
+CL~vD~ E. S~ANNON 
+Massachusetts Institute of Technology, Cambridge, Massachusetts 
+In this paper we will develop certain extensions and refinements of 
+coding theory for noisy communication channels. First, a refinement 
+of the argument based on "random" coding will be used to obtain an 
+upper bound on the probability of error for an optimal code in the 
+memoryless finite discrete channel. Next, an equation is obtained for 
+the capacity of a finite state channel when the state can be calculated 
+at both transmitting and receiving terminals. An analysis is also made 
+of the more complex case where the state is calculable at the trans- 
+mitring point but not necessarily at the receiving point. 
+PROBABILITY OF ERROR BOUND FOR THE DISCRETE 
+FINITE MEMORYLESS CHANNEL 
+A discrete finite memoryless channel with finite input and output 
+alphabets is defined by a set of transition probabilities pi(j), 
+i= 
+1,2,...,a; 
+j = 1,2,.--,b, 
+with ~'~. pi(j) = 1 (i = 1, 2, ... , a) and all pi(j) >-_ O. Here pi(j) is the 
+probability, if input letter i is used, that output letter j will be received. 
+A code word of length n is a sequence of n input letters (that is, n integers 
+each chosen from 1, 2, -. • , a). A block code of length n with M words is a 
+mapping of the integers from 1 to M (messages) into a set of code words 
+each of length n. A decoding system for such a code is a mapping of all 
+sequences of output words of length n into the integers from 1 to M 
+(that is, a procedure for deciding on an original integer or message when 
+any particular output word is received). We will be considering situa- 
+• This work was carried out at the Research Laboratory of Electronics, Massa- 
+chusetts Institute of Technology, and was supported in part by the United States 
+Army (Signal Corps), the United States Air Force (Office of Scientific Research, 
+Air Research and Development Command), and the United States Navy (()ffice 
+of Naval Research); and in part by Bell Telephone Laboratories, Inc. 
+CODING THEORY FOR NOISY CHANNELS 
+tions in which all integers from 1 to M are used with the same prob- 
+ability 1/M. The probability of error Po for a code and decoding system 
+is the probability of an integer being transmitted and received as a word 
+which is mapped into a different integer (that is, decoded as another 
+message). 
+Thus: 
+E E 
+Pr(v 
+P~ 
+u 
+V ES u 
+where u ranges over all input integers 1, 2, .-. , M; v ranges over the 
+received words of length n; and S~ is the set of received words that are 
+not decoded as u. Pr (v I u) is of course the probability of receiving v if 
+the message is u. Thus if u is mapped into input word (il, is, .'- , i~) 
+and v is word (jl,j2, "" ,jn), then 
+Pr (v l u) = Ph(J0 P~2(J,) "'" pi,(jO. 
+While we assume all messages in a code to be used with equal prob- 
+abilities 1/M, it is useful, in studying a channel, to consider the assign- 
+ment of different probabilities to input words. Suppose, in fact, that in 
+a given channel we assign arbitrary probabilities to the different input 
+words u of length n, probability P(u) for word u. We then have prob- 
+abilities for all input-output word pairs of length n, 
+Pr(u, v) = P(u) Pr(v I u), 
+where u and v are input and output words of length n and Pr(v I u) is the 
+probability of output word v if input word u is used. (This is the product 
+of the transition probabilities for corresponding letters of u and v). 
+Given P(u) then, any numerical function of u and v becomes a random 
+variable. In particular, the mutual information (per letter), I(u, v) is a 
+random variable 
+Pr(u, v) 
+Pr(v l u) 
+I(u, v) = 
+log P(u)Pr(v) - n log ~ P(u)Pr(v I u) 
+u 
+The distribution function for this random variable will be denoted by 
+o(x). Thus 
+p(x) = Pr[I(u, v) <= x] 
+The function p(x) of course depends on the arbitrary assignment of 
+CLAUDE E. SItANI~ON 
+probabilities P(u). We will now prove a theorem bounding the prob- 
+ability of error for a possible code in terms of the function o(x). 
+THEOREM 1: Suppose some P(u) for input words u of length n gives rise 
+to a distribution of information per letter p(I). Then given any integer M 
+and any 0 > 0 there exists a bloelc code with M messages and a decoding 
+system such that if these messages are used with equal probability, the 
+probability of error P~ is bounded by 
+Po < o(R + o) + e -~° 
+where R - (1/n)log M. 
+PROOF: For a given M and 0 consider the pairs (u, v) of input and 
+output words and define the set T to consist of those pairs for which 
+log Pr(u, v)/P(u)Pr(v) > n(R + 0). When the u's are chosen with 
+probabilities P(u), then the probability that the (u, v) pair will belong 
+to the set T is, by definition of p, equal to 1 - p(R ÷ 0). 
+Now consider the ensemble of codes obtained in the following manner. 
+The integers 1, 2, 3, ... , M = e "R are associated independently with 
+the different possible input words ul, u2, --. , uB with probabilities 
+P(ul), P(u2), .. • P(uB). This produces an ensemble of codes each using 
+M (or less) input words. If there are B different input words u~, there 
+will be exactly B M different codes in this ensemble corresponding to 
+the B ~ different ways we can associate M integers with B input words. 
+These codes have different probabilities. Thus the (highly degenerate) 
+code in which all integers are mapped into input word u~ has probability 
+P(ul) ~. A code in which dk of the integers are mapped into uk has prob- 
+ability IIP(uk) dk. We will be concerned with the average probability 
+of error for this ensemble of codes. By this we mean the average prob- 
+ability of error when these codes are weighted according to the prob- 
+abilities we have lust defined. We imagine that in using any one of these 
+codes, each integer is used with probability 1/M. Note that, for some 
+particular selections, several integers may fall on the same input word. 
+This input word is then used with higher probability than the others. 
+In any particular code of the ensemble, our decoding procedure will 
+be defined as follows. Any received v is decoded as the integer with 
+greatest probability conditional on the received v. If several integers 
+have the same conditional probability we decode (conventionally) as the 
+smallest such integer. Since all integers have unconditional probability 
+1/M, this decoding procedure chooses one of those having the greatest 
+probability of causing the received v. 
+CODING THEORY 
+FOR NOISY CHANNELS 
+We now wish to compute the average probability of error or "ambi- 
+guity" Pa in this ensemble of codes where we pessimistically include 
+with the errors all cases where there are several equally probable causes 
+of the received v. 
+In any particular code of the ensemble an input word u or a pair 
+(u, v) will not, in general, occur with the probabilities P(u) or Pr(u, v). 
+In the ensemble average, however, each word u has probability P(u) 
+and each (u, v) pair probability Pr(u, v), since integers are mapped into 
+u with lust this probability. Indeed, a particular message, say the integer 
+1, will be mapped into u with probability P(u). A particular ease of 
+integer 1, say, mapped into u and resulting in received v will result in an 
+error or ambiguity if there are, in the code in question, one or more 
+integers mapped into the set S~(u) of input of words which have a 
+probability of causing v higher than are qual to that of u. Because of 
+the independence in placing the other integers, it is easy to calculate the 
+fraction of codes in which this occurs. In fact, let 
+Qv(u) = 
+~ 
+P(u') 
+u'eSv(u) 
+Thus Qv(u) is the probability associated with all words more probable 
+or as probable conditioned on the received word v as u is. The fraction 
+of codes in which integer 2 is not in S,o(u) is (because of the independence 
+of placing of the integers) equal to 1 - O~(u). The fraction of codes in 
+which S~(u) is free of all other integers is (1 - 
+Q~(u)) a-1. A similar 
+argument applies to any other integer as well as 1. Thus, in the ensemble, 
+the probability of error or ambiguity due to cases where the message is 
+mapped into input word u and received as v is given exactly by 
+Pr(u, v)[1 - 
+(1 - Q~(u))~-l]. 
+The average probability of error or ambiguity, then, is given by 
+Pa = ~_,~.~er(u, v)[i - 
+(1 - Q~(u))M-1]. 
+(1) 
+We now wish to place a bound on this in terms of the information 
+distribution p. First, break the sum into two parts, a sum over the 
+(u, v) set T defined above where log Pr(u, v)/P(u)Pr(v) > n(R -~ O) and 
+over the complementary set T. 
+Pa = ~_,~Pr(u, v)[1 -- (1 - Qv(u)) M-l] 
++ ~rPr(u, v)[1 - 
+(1 - Qv(u))M-~]. 
+Since [1 -- (1 -- Q~,(u))] M-1 is a probability, we may replace it by 1 in 
+CLAUDE E. SHANNON 
+the first sum, increasing the quantity. This term becomes, then, 
+~_,~Pr(u, v) which by definition is p(/~ + 0). In the second sum, note 
+first that (1 - 
+Qv(u)) ~-i -> 1 - 
+(M - 
+1)Q~(u) by a well-known in- 
+equality. Hence, the second sum is increased by replacing 
+[1 - 
+(i 
+- 
+Q~(u)) ~-1] 
+by (M - 
+1)Q~(u) and even more so by MQ~(u). 
+P~ <= Pa <= p(R q- O) q- M ~rPr(u, v)Q~(u). 
+We now show that for u, v in T, Q~(u) <= e -~('+°). In fact, with" u, v in T 
+Pr(v]u) 
+og P-7~(v) > n(R + o), 
+Pr(v ] u) > Pr(v)e "(E+°~. 
+If u' e &(u), 
+Pr(v ] u') >= Pr(v I u ) > Pr(v)e n(R+°) 
+Pr(u', v) > Pr(u')Pr(v)e n(a+°) 
+Pr(u' [ v) > Pr(u')e ~('+°) 
+Summing each side over u' e S~(u) gives 
+1 > 
+~ 
+P,(u'lv) > e ~('~+~) Q~(u) 
+u'eSv(u) 
+The left inequality holds because the sum of a set of disjoint probabilities 
+cannot exceed 1. We obtain 
+Q,(u) < e -'('+°) 
+(u, v) e T 
+Using this in our estimate of Pe we have 
+Pe < p(R q- O) -~ e~%-n('+e)~rPr(u, v) 
+<= p(g + o) + c -n° 
+using again the fact that the sum of a set of disjoint probabilities cannot 
+exceed one. Since the average P~ over the ensemble of codes satisfies 
+P~ <= p(R Jr O) + e -n°, there mus~ exist a particular code satisfying the 
+same inequality. This concludes the proof. 
+Theorem 1 is one of a number of results which show a close relation 
+between the probability of error in codes for noisy channels and the 
+CODING THEORY FOR NOISY CHANNELS 
+distribution of mutal information p(x). Theorem 1 shows that if, by 
+associating probabilities P(u) with input words, a certain p(x) can be 
+obtained, then codes can be constructed with a probability of error 
+bounded in terms of this p(x). We now develop a kind of converse rela- 
+tion: given a code, there will be a related p(x). It will be shown that the 
+probability of error for the code (with optimal decoding) is closely 
+related to this p(x). 
+TheOrEM 2: Suppose a particular code has M = e ~ messages and the 
+distribution function for the mutual information I (per letter) between 
+messages and received words is p(x) (the messages being used with equal 
+probability). Then the optimal detection system for this code gives a prob- 
+ability of error P~ satisfying the inequalities 
+(R--llog2)<P~<= 
+= p(R -11og2) 
+½P 
+n 
+It should be noted that p has a slightly different meaning here than in 
+Theorem 1. Here it relates to mutual information between messages and 
+received words--in Theorem 1, between input words and received words. 
+If, as would usually be the case, M1 messages of a code are mapped into 
+distinct input words, these reduce to the same quantity. 
+PROOF: We first prove the lower bound. By definition of the function 
+p, the probability is equal to p(R - (l/n) log 2), that 
+1 1 
+Pr(u, v) 
+n log Pr--~TPr(v) <-- R - n - log 2, 
+where u is a message and v a received word. Equivalently, 
+Pr(u [ v) <= Pr(u)eR~½ 
+or (using the fact that Pr(u) = e -~) 
+Pr(u J v) <-_ ½ 
+Now fix attention on these pairs (u, v) for which this inequality 
+Pr(u l v ) <= ½ 
+is true, and imagine the corresponding (u, v) lines to be marked in black 
+and all other (u, v) connecting lines marked in red. We divide the v 
+points into two classes: C1 consists of those v's which are decoded into 
+u's connected by a red line (and also any v's which are decoded into u's 
+not connected to the v's) : C2 consists of v's which are decoded into u's 
+CLAUDE E. SHANNON 
+connected by a black line. We have established that with proba- 
+bility p(R -- (l/n) log 2) the (u, v) pair will be connected by a black 
+line. The v's involved will fall into the two classes C1 and C2 with prob- 
+ability m, say and p2 = p(R - 
+(l/n) log 2) - pl • Whenever the v is 
+in C~ an error is produced since the actual u was one connected by a 
+black line and the decoding is to a u connected by a red line (or to a dis- 
+connected u). Thus these cases give rise to a probability p~ of error. 
+When the v in question is in class C2, we have Pr(u I v) < 5. This means 
+that with at least an equal probability these v's can be obtained through 
+other u's than the one in question. If we sum for these v's the prob- 
+abilities of all pairs Pr(u, v) except that corresponding to the decoding 
+system, then we will have a probability at least p2/2 and all of these 
+cases correspond to incorrect decoding. In total, then, we have a prob- 
+ability of error given by 
+p~ > pl + p2/2 > ½p(R -- (l/n) log 2) 
+We now prove the upper bound. Consider the decoding system defined 
+as follows. If for any received v there exists a u such that Pr(u I v) > 5, 
+then the v is decoded into that u. Obviously there cannot be more than 
+one such u for a given v, since, if there were, the sum of these would 
+imply a probability greater than one. If there is no such u for a given v, 
+the decoding is irrelevant to our argument. We may, for example, let 
+such u's all be decoded into the first message in the input code. The 
+probability of error, with this decoding, is then less than or equal to the 
+probability of all (u, v) pairs for which Pr(u Iv) -<__ ½. That is, 
+Po <-<_ ~ Pr(u, v) 
+(where S is the set of pairs (u, v) with Pr(u ] v) < 5). 
+The condition Pr(u]v) 
+<= ½ is equivalent to Pr(u, v)/Pr(v) 
+<= ½, or, 
+again, to Pr(u, v)/Pr(u) Pr(v) <= ½ P~(u) -1 = ½ O R. This is equivalent 
+to the condition 
+(l/n) log Pr(u, v)/Pr(u)Pr(v) <= R -- (l/n) log 2. 
+The sum ~ 
+Pr(u, v) where this is true is, by definition, the distribution 
+function of (l/n) log Pr(u, v)/Pr(u)P~(v) evaluated at R - (l/n) log 2, 
+that is, 
+Re <= ~ Pr(u, v) = p(R - (l/n) log 2). 
+s 
+CODING THEORY 
+FOR NOISY CHANNELS 
+PROBABILITY OF ERROR BOUND IN TERMS OF 
+MOMENT GENERATING FUNCTION 
+We will now develop from the bound of Theorem 1 another expression 
+that can be more easily evaluated in terms of the channel parameters. 
+Suppose first that the probabilities P(u) assigned to words in Theorem 1 
+are equal to the product of probabilities for letters making up the words. 
+Thus, suppose u consists of the sequence of letters il, i2, ,.. , i~ and 
+P(u) is then Pil"Pi~'Pi~ "" P~ • If v consists of letters jl, j~, "'" , j~ 
+then Pr(v) = Pr(jl). Pr(j2)... Pr(j,~) and Pr(u, v) = Pr(il, jl)" 
+Pr(i2, j2) ... Pr(i~, jn). Also 
+I(u, v) 
+l[log 
+Pr(i~j~) 
+Pr(i2j2) 
+= n 
+Pr(il)Pr(j2~ -F log 
+-F "'" 
+Pr(i2) Pr(j2) 
+- 
+[11+12+ 
+"" +I~] 
+n 
+where Ik is the mutual information between the kth letters of u and v. 
+The different I's are here independent random variables all with the 
+same distribution. We therefore have a central limit theorem type of 
+situation; nI(u, v) is the sum of n independent random variables with 
+identical distributions, p(x) can be bounded by any of the inequalities 
+which are known for the distribution of such a sum. In particular, we may 
+use an inequality due to Chernov on the "tail" of such a distribution 
+(Chernov, 1952). He has shown, by a simple argument using the gen- 
+eralized Chebycheff inequality, that the distribution of such sums can 
+be bounded in terms of the moment generating function for a single one 
+of the random variables, say ~(s). Thus let 
+~(s) = E[e ~I1 
+PdJ) 
+-] 
+= 
+P p (j) exp 
+log E PkPk(j)_l 
+~g 
+k 
+p (J) 
+k 
+It is convenient for our purposes to use the log of the moment generating 
+function ~(s) = log ~(s), (sometimes called the semi-invariant generat- 
+ing function). Chernov's result translated into our notation states that 
+p(,'(s)) <_ e ~(~)-~''(~)1~ 
+s < 0 
+Thus by choosing the parameter s at any negative value we obtain a 
+i~ 
+CLAUDE E. SHANNON 
+bound on the information distribution p of exponential form in n. It is 
+easily shown, also, that if the variance of the original distribution is 
+positive then ~'(s) is a strictly monotone increasing function of s and 
+so also is the coefficient of n in the exponent, ~(s) - stL'(s) (for negative 
+s). Indeed the derivatives of these quantities exist and are S(s) and 
+- 
+s~" (s), respectively. ,t (s) is readily shown to be positive by a Schwartz 
+inequality. 
+THEOREM 3: In a memoryless channel with finite input and output 
+alphabets, let ~(s) be the semi-invariant generating function for mutual 
+information with some assignment of input letter probabilities, P i for letter 
+i, and with channel transition probabilities p~(j), that is: 
+r 
+= log E.,. V,p,(5) L-E 
+J 
+Then there exists a code and decoding system of length n, rate R and prob- 
+ability of error Pe satisfying the inequalities 
+R 
+_>- ~(s) 
+- 
+(s - 
+1)~'(s) 
+P~ -__ 2e (~(~)-~'(~))~ 
+s < 0 
+If as s ---+ -- ~ , it(s) -- (s -- 1)it'(s)--+ R* > 0 then for R < R* 
+Pe ~ e (E*+R*-R)n 
+where E* = lira (~(s) - 
+st~'(s)) as s ~ 
+- 
+oo. 
+PROOF: We have, from Theorem 1, that 
+P~ "< p(R + O) + e -~° 
+<= e E~(~)-~'(')~" + 
+e -"° 
+s < 
+where s is chosen so that u'(s) = R q- 0. This will hold when 0 is such 
+that the resulting s is negative. We choose 0 (which is otherwise arbi- 
+trary) to make the coefficients of n in the exponents equal. (Since the 
+first term is monotone increasing in 0 and the second monotone de- 
+creasing, it is easily seen that this choice of 0 is quite good to minimize 
+the bound. In fact, the bound can never be less than half its value for 
+this particular 0.) This relation requires that 
+~(s) 
+- 
+s~'(s) 
+= 
+- 
+o 
+= 
+R 
+- 
+u'(s) 
+R = u(s) q- (1 -- s)u'(s) 
+CODING THEORY FOR NOISY CHANNELS 
+Since the exponents are now equal, the probability of error is bounded by 
+twice the first term: 
+Pe < 2e [~(~)-~#'(~)1 ~ 
+These relations are true for all negative s and give the first results of the 
+theorem. 
+However, in ome eases, as s -~ - ~ the rate R approaches a positive 
+limiting value. In fact, R --~ I~,~ -/- log Pr[[m~n] and the exponent in the 
+P~ bound approaches log Pr[Im~,]. For rates R lower than this limiting 
+value the exponents cannot be made equai by any choice of s. We may, 
+however, now choose 0 in such a way that R -9 0 is just smaller than 
+I~i., say I~i. - 
+e. Since o(I~i~ - 
+e) = 0 the probability of error is 
+now bounded by P~ N e -~e = e -'(r~'-R-°). This being true for any e 
+we can construct codes for which it is true with e = 0. That is 
+Pe ~ e -n(Imln--R) 
+for R < Irwin • Notice that as R approaches its limiting value in the 
+first bound, I~, + log Pr [Jrmi~], the exponents in both bounds approach 
+the same value, namely log Pr[I~i,]. The coefficient, however, improves 
+from 2 to 1. 
+These bounds can be written in another form that is perhaps more 
+revealing. Define a set of "tilted" probabilities Q,(I) for different values 
+of information I by tile following: 
+Pr(I) e ~I 
+Q (I) - E 
+rr( r)  
+I 
+In other words the original probability of a value I is increased or de- 
+creased by a factor e ~ and the resulting values normalized to sum to 
+unity. For large positive values of s, this tilted set of probabilities 
+Q~(I) tend to emphasize the probabilities Pr(I) for positive I and reduce 
+those for negative I. At s = 0 Qo(I) = Pr(I). At negative s the negative 
+I values have enhanced probabilities at the expense of positive I values. 
+As s --+ ~, Q~(I) ---> 0 except for I = Im~ the largest value of I with posi- 
+tive probability (since the set of u, v pairs is finite, Im~ exists), and 
+Q~(Im~x) --> 1. These tilted probabilities are convenient in evaluating 
+the "tails" of distribution that are sums of other distributions. In terms 
+CLAUDE E. SHANNON 
+of Q,(I) we may write 
+,(s) 
+= 
+/(s) 
+= 
+- 
+8/(8) 
+= 
+- 
+(8- 
+1)/(s) 
+= 
+log ~ Pr(I) e ~I 
+~_~v Q~(F) log ~--~ Pr(I)e ~ 
+~-d Pr(I)e~II/ ~, Pr(I) d~ 
+~,~ Q.(I)I 
+~_,~ Q.(I) log (Pr(I)/Q.(I)) 
+~,~ Q.(I)[I + log Pr(I)/Q.(I)] 
+The coefficients of n in these exponents are of some interest. They 
+relate to the rapidi£y of approach of Pe to zero as n increases. Plotted as 
+a function of R, the behavior is typically as shown in Fig. 1. Here we 
+have assumed the Pi for the letters to be the Pi which give channel 
+capacity. The coefficient E of n for the first bound in the theorem is a 
+curve tangent to the axis at C (here s = 0), convex downward and 
+ending (s = - oo ) at R = /m~n -J- log Pr[Imil~] and E = log Pr[I~i,]. The 
+second bound in the theorem gives an E curve which is a straight line 
+of slope -1 passing through this point and intersecting the axes at 
+Imi., 0 and O, Imln • In the neighborhood of R = C the curve behaves as 
+E 
+-" (C -- R) 2 
+2/'(0) 
+Here ~" (0) is the variance of I. These properties all follow directly from 
+the formulas for the curves. 
+The limiting exponent (as n-* oo) satisfies E = ~(s) - (s - 
+1)~'(s). 
+We have 
+d-R 
+ds / 
+ds 
+so the slope of the ER curve is monotone decreasing as s ranges from 0 
+to -- oo, the slope going from 0 to - 1. Since the second bound corresponds 
+to a straight line of slope -1 in the ER plot, the two bounds not only 
+join in value but have the same slope as shown in Fig. 1. 
+CODING THEORY FOR NOISY CHANNELS 
+The curve would be as indicated if the Pi are those which maximize 
+the rate at the channel capacity, for then 
+R(0) = ~(0) - 
+(0 - 1)~'(0) = it/(0) = C. 
+The bound, however, of the theorem applies for any set of P~ when the 
+corresponding ~(s) is used. To obtain the strongest result the bound 
+should be optimized for each value of R under variation of P~. The same 
+applies to the straight line portion where we maximize Imin. If this 
+were done a curve would be obtained which is the envelope of all possible 
+curves of this type with different values of P~. Since each individual 
+curve is convex downward the envelope is also convex downward. The 
+equations for this envelope may be found by the Lagrange method 
+maximizing R + hE + ~}-~P~. It must be remembered, of course, 
+that the P~ must be non-negative. The problem is similar to that in- 
+volved in calculating the channel capacity. The equations for the 
+envelope will be 
+E : 
+~(8) 
+- 
+~'(s) 
+R = .(s) -- (8 -- 1).'(s) 
+(i + x) 0r -- (1 + k)s 0.' 
+Or' 
+~p~ + ~F, + ~ =o 
+and subject to: 
+~P~ 
+= 
+for all i except a set for 
+which P~ = O" 
+Imln 
+OPE :-I 
+. 
+i 
+R 
+Imi n 
+Fie. i 
+CLAUDE ]~. SHANNON 
+The bound here should be maximized by choosing different subsets of 
+the Pi for the nonvanishing set. 
+The upper bound obtained in Theorem 3 is by no means the strongest 
+that can be found. As n -+ ~ even the coefficients of n in the exponent 
+can be, in genera], improved by more refined arguments. We hope in 
+another paper to develop these further results, and also to give cor- 
+responding lower bounds on the probability of error of the same exponen- 
+tial type. The upper bound in Theorem 3 is, however, both simple and 
+useful. It has a universality lacking in some of the stronger results 
+(which only assume simple form when n is large). 
+CAPACITY OF THE FINITE STATE CHANNEL WITH STATE 
+CALCULABLE AT BOTH TERMINALS 
+In certain channels with memory, the internal state of the channel 
+can be calculated from the initial state (assumed known) at the beginning 
+of transmission and the sequence of transmitted letters. It may also be 
+possible to determine the state at any time at the receiving terminal 
+from the initial state and the sequence of received letters. For such 
+channels we shall say the state is calculable at both terminals. 
+To satisfy the first requirement it is clearly necessary that for any 
+(attainable) internal state s, the next state t must be a function of s and 
+x, t = f(s, x), where x is the transmitted letter. 
+For the state to be calculable at the receiving point it is necessary 
+that, for all attainable states s, the next stage t must be a function of 8 
+and the received letter y, t = g(s, y). 
+For each possible 8, t pair we may find the subset A (s, t) of x's leading 
+from 8 to t and the subset B(s, t) of y's which correspond to a state 
+transition from s to t. For each input letter x in the set A (s, t) the out- 
+put letter y will necessarily be in the set B(s, t) and there will be a tran- 
+sition probability, the probability (in state 8), if x is transmitted, that 
+y will be received. For a particular s, t pair, the sets of letters A (s, t) 
+and B(s, t) and the corresponding transition probabilities can be thought 
+of as defining a memoryless discrete channel corresponding to the s, t 
+pair. Namely, we consider the memoryless channel with input alphabet 
+the letters from A(s, t), output letters from B(8, t) and the correspond- 
+ing transition probabilities. 
+This channel would be physically realized from the given channel as 
+follows. The given channel is first placed in state 8, one letter is trans- 
+mitted from set A (s, t) (resulting in state t), the channel is then returned 
+cOnING THEORY FOR NOISY CHANNELS 
+to state s and a second letter from set A (s, t) transmitted, etc. The ca- 
+pacity of such a discrete memoryless channel can be found by the stand- 
+ard methods. Let the capacity from state s to state t be C~t (in natural 
+units) and let N~t = e c~t. Thus Nat is the number of equivalent noiseless 
+letters for the s, t sub-channel. If the set A(s, t) is empty, we set N,t = 0. 
+The states of such a channel can be grouped into equivalence classes 
+as follows. States s and s ~ are in the same class if there is a sequence of 
+input letters which, starting with state s, ends in s', and conversely a 
+sequence leading from s' to s. The equivalence classes can be partially 
+ordered as follows. If there is a sequence leading from a member of one 
+class to a member of a second class, the first class is higher in the order- 
+ing than the second class. 
+Within an equivalence class one may consider various possible closed 
+sequences of states; various possible ways, starting with a state, to 
+choose a sequence of input letters which return to this state. The num- 
+ber of states around such a cycle will be called the cycle length. The 
+greatest common divisor of all cycle lengths in a particular equivalence 
+class will be called the basic period of that class. These structural prop- 
+erties are analogous to those of finite state markoff processes, in which 
+"transition with positive probability" takes the place of a "possible 
+transition for some input letter." 
+We shall consider only channels in which there is just one equivalence 
+class. That is, it is possible to go from any state s to any state t by some 
+sequence of input letters (i.e., any state is accessible from any other). 
+The more general case of several equivalence classes is more complex 
+without being significantly more difficult. 
+THEOREM 4: Let K be a finite state channel with finite alphabets, with 
+state calculable at both terminals, and any state accessible from any other 
+state. Let Nat be the number of equivalent letters for the sub-channel relating 
+to transitions from state s to state t. Let N be the (unique) positive real 
+eigenvalue of the matrix N~t , that is, the positive real root of 
+Then N is the equivalent number of letters for the given channel K; its ca- 
+pacity is C = log N. 
+PROOF: We will first show that there exist block codes which transmit 
+at any rate R < C and with probability of error arbitrarily small. Con- 
+sider the matrix Nat. If this is raised to the nth power we obtain a ma- 
+trix with elements, say, N~t ~). The element N~t (~ can be thought of as 
+CLAUDE E. SHANNON 
+a sum of products, each product corresponding to some path n steps 
+long from state s to state t, the product being the product of the original 
+matrix elements along this path, and the sum being the sum of such 
+products for all such possible paths. This follows immediately by mathe- 
+matical induction and the definition of matrix multiplication. 
+Furthermore, N~t (~) can be interpreted as the equivalent number of 
+letters for the memoryless channel defined as follows. Imagine starting 
+the original channel in state s and using as input "letters" sequences of 
+length n of the original letters allowing just those sequences which will 
+end in state t after the sequence of n. The output "letters" are sequences 
+of received letters of length n that could be produced under these con- 
+ditions. This channel can be thought of as a "sum" of channels (corre- 
+sponding to the different state sequences from s to t in n steps) each of 
+which is a "product" of channels (corresponding to simple transitions 
+from one state to another). (The sum of two channels is a channel in 
+which a letter from either of the two channels may be used; the product 
+is the channel in which a letter from both given channels is used, this 
+ordered pair being an input letter of the product channel). The equiva- 
+lent number of noise free letters for the sum of channels is additive, and 
+for the product, multiplicative. Consequently the channel we have just 
+described, corresponding to sequences from state s to state t in n steps, 
+has an equivalent number of letters equal to the matrix element Nst (~). 
+Tile original matrix Nat is a matrix with non-negative elements. Con- 
+sequently it has a positive real eigenvalue which is greater than or equal 
+to all other eigenvalues in absolute value. Furthermore, under our as- 
+sumption that it be possible to pass from any state to any other state by 
+some sequence of letters, there is only one positive real eigenvalue. If d 
+is the greatest common divisor of closed path lengths (through sequences 
+of states), then there will be d eigenvalues equal to the positive real root 
+multiplied by the different dth roots of unity. When the matrix N~ is 
+raised to the nth power, a term Nst (') is either zero (if it is impossible to 
+go from s to t in exactly n steps) or is asymptotic to a constant times 
+N (n). 
+In particular, for n congruent to zero, mod d, the diagonal terms 
+Nt~ (~) are asymptotic to a constant times N ~, while if this congruence is 
+not satisfied the terms are zero. These statements are aI1 well known re- 
+sults in the Frobenius theory of matrices with non-negative elements, 
+and will not be justified here (Frobenius, 1912). 
+If we take n a sufficiently large multiple of d we will have, then, 
+CODING THEORY FOR NOISY CHANNELS 
+~i 
+Nll (~) > k N ~ with k positive. By taking n sufficiently large, then, the 
+capacity of the channel whose input "letters" are from state i to state 1 
+in n steps can be made greater than (1/n)log/oN ~ = log N -4- (l/n) log/~. 
+Since the latter term can be made arbitrarily small we obtain a capacity 
+as close as we wish to log N. Since we may certainly use the original 
+channel in this restricted way (going from state 1 to state 1 in blocks of 
+n) the original channel has a capacity at least equal to log N. 
+To show that this capacity cannot be exceeded, consider the channel 
+K~ defined as follows for sequences of length n. At the beginning of a 
+block of length n the channel K~ can be put into an arbitrary state 
+chosen from a set of states corresponding to the states of K. This is 
+done by choice of a "state letter" at the transmitting point and this 
+"state letter" is transmitted noiselessly to the receiving point. For the 
+next n symbols the channel behaves as the given channel K with the 
+same constraints and probabilities. At the end of this block a new state 
+can be freely chosen at the transmitter for the next block. Considering a 
+block of length n (including its initial state information) as a single letter 
+and the corresponding y block including the received "state letter," as a 
+received letter we have a memoryless channel K~. 
+For any particular initial-final state pair s, t, the corresponding ca- 
+pacity is equM to log Nst (~). Since we have the "sum" of these channels 
+available, the capacity of K~ is equal to log Es,tNst (n). Each term in this 
+sum is bounded by a constant times N =, and since there are only a finite 
+number of terms (because there are only a finite number of states) we 
+may assume one constant for all the terms, that is N~t (~) < /~N ~ (all 
+n, s, t). By taking n sufficiently large we clearly have the capacity of K~ 
+per letter, bounded by log N d- ~ for any positive e. But now any code 
+that can be used in the original channel can also be used in the K~ chan- 
+nel for any n since the latter has identical constraints except at the ends 
+of n blocks at which point all constraints are eliminated. Consequently 
+the capacity of the original channel is less than or equal to that of K~ 
+for all n and therefore is less than or equal to log N. This completes the 
+proof of the theorem. 
+This result can be generMized in a number of directions. In the first 
+place, the finiteness of the alphabets is not essentiM to the argument. In 
+effect, the channel from state s to t can be a general memoryless channel 
+rather than a discrete finite alphabet channel. 
+A second slight generalization is that it is not necessary that the state 
+be calculable at the receiver after each received letter, provided it is 
+CLAUDE E. SHANNON 
+eventually possible at the receiver to determine all previous states. Thus, 
+in place of requiring that the next state be a function of the preceding 
+state and the received letter, we need only require that there should not 
+be two different sequences of states from any state s to any state t com- 
+patible with the same sequence of received letters. 
+THE CAPACITY OF A FINITE STATE CHANNEL WITH STATE 
+CALCULABLE AT TRANSMITTER BUT NOT 
+NECESSARILY AT RECEIVER 
+Consider now a channel with a finite input alphabet, a finite output 
+alphabet, and a finite number of internal states with the further prop- 
+erty that the state is known at the beginning and can be calculated at 
+the transmitter for each possible sequence of input letters. That is, the 
+next state is a function of the current state and the current input letter. 
+Such a channel is defined by this state transition function s~+l = 
+f(s~, x~), (the n + 1 state as a function of state s~ and nth input sym- 
+bol), and the conditional probabilities in state s, if letter x is trans- 
+mitted, that the output letter will be y, p~x(y). We do not assume that 
+the state is calculable at the receiving point. 
+As before, the states of such a channel can be grouped into a partially 
+ordered set of equivalence classes. We shall consider again only channels 
+in which there is iust one equivalence class. That is, it is possible to go 
+from any state s to any state t by some sequence of input letters. 
+We first define a capacity for a particular state s. Let the channel be 
+in state s and let X1 = (xl, x2, • • -, x~) be a sequence of n input letters 
+which cause the channel to end in the same state s. If the channel is in 
+state s and the sequence X~ is used, we can calculate the conditional 
+probabilities of the various possible output sequences Y of length n. 
+Thus, if the sequence X~ leads through states s, s2, s3, ---, s~, s the 
+conditional probability of ]71 = (yl, y2, "", y~) will be Pr(Y~/X~) = 
+Psx1(yl)Ps~x2(y~.) "'" Psnx~(y~). Consider the X's (leading from s to s in 
+n steps) as individual input letters in a memoryless channel with the y 
+sequences Y as output letters and the conditional probabilities as the 
+transition probabilities. Let C(n, s) be the capacity of this channel. Let 
+C(s) be the least upper bound of (1/n)C(n, s) when n varies over the 
+positive integers. We note the following properties: 
+1. C(kn, s) >= kC(n, s). This follows since in choosing probabilities 
+to assign the X letters of length kn to achieve channel capacity one 
+may at least do as well as the product probabilities for a sequence 
+of kX's each of length n. It folIows that if we approximate to C(s) 
+CODING THEORY FOR NOISY CHANNELS 
+within e at some particular n @.e. I C(s) - 
+C(n, s) I < e) we will ap- 
+proximate equally well along the infinite sequence 2n, 3n, 4n, .-.. 
+2. C(s) = C is independent of the state s. This is proved as fol- 
+lows. Select a sequence of input letters U leading from state s' to 
+state s and a second sequence V leading from s to s'. Neither of 
+these need contain more than m letters where m is the (finite) num- 
+ber of states in the channel. Select an nl for which C(n~, s) > 
+C(s) - 
+e/2 and with n~ large enough so that: 
+(C(s) 
+- 
+~/2) 
+nl 
+_> C(s) - 
+nl -~- 2m 
+This is possible since by the remark 1 above C(s) is approximated 
+as closely as desired with arbitrarily large nl 
+• A set of X sequences 
+for the s' state is constructed by using the sequences for the s state 
+and annexing the U sequence at the beginning and the V sequence 
+at the end. If each of these is given a probability equal to that used 
+for the X sequences in the s state to achieve C(n, s), then this gives 
+a rate for the s' sequences of exactly C(n, s) but with sequences of 
+length at most nl q- 2m rather than nl. It follows that C(s') >= 
+(C(s) - 
+s/2)(nl/nl "-k 2m) => C(s) - 
+~. Of course, interchanging s 
+and s' gives the reverse result C(s) >= C(s') -- E and consequently 
+C(s) = C(s'). (Note that, if there were several equivalence classes, 
+we would have a C for each class, not necessarily equal). 
+3. Let C(n, s, s') be the capacity calculated for sequences starting 
+at s andending at s' aftern steps. Let C(s, s') = ]im~,~(1/n)C(n, s, s'). 
+Then C(s, s') = C(s) = C. This is true since we can change se- 
+quences from s to s ~ into sequences from s to s by a sequence of 
+length at most m added at the end. By taking n sufficiently large 
+in the lira the effect of an added m can be made arbitrarily small, 
+(as in the above remark 2) so that C(s, s') >= C(s) - 
+~. Likewise, 
+the s to s sequences which approximate C(s) and can be made ar- 
+bitrarily long can be translated into s to s' sequences with at most 
+m added letters. This implies C(s) >= C(s, s') - 
+e. Hence C(s) = 
+C(s, s'). 
+We wish to show first that starting in state sl it is possible to sig- 
+nal with arbitrarily small probability of error at any rate R < C 
+where C is the quantity above in remark 3. More strongly, we will 
+prove the following. 
+I]I~EOREW 5" Given any R < C there exists E(R) > 0 such that for any 
+CLAUDE E. SHANNON 
+n = k d (an integer multiple of d, the basic cycle length) there are block 
+codes of length n having M words with (l/n) log M >= R and with proba- 
+bility of error Pe < e -E(R) ~. There does not exist a sequence of codes of in- 
+creasing block length with probability of error approaching zero and rate 
+greater than C. 
+PROOF: The affirmative part of the result is proved as follows. Let 
+R1 = (R + C)/2. Let st be the initial state of the channel and consider 
+sequences of letters which take the state from sl to sl in n~ steps. Choose 
+nl so that C(n~, s~) > (3C + R)/4. Use these sequences as input letters 
+and construct codes for the rate R1. By Theorem 2 the probability of 
+error will go down exponentially in the length of the code. The codes 
+here are of length nl, 2nl, 3ni, -.. in terms of the original letters, but 
+this merely changes the coefficient of n by a factor 1/n~. Thus, for mul- 
+tiples of n~ the affirmative part of the theorem is proved. To prove it for 
+all multiples of d, first note that it is true for all sufficiently large mul- 
+tiples of d, since by going out to a sufficiently large multiple of n~ the 
+effect of a suffix on the code words bringing the state back to s~ after 
+multiples of d, can be made small (so that the rate is not substantially 
+altered). But now for smaller multiples of d one may use any desired 
+code with a probability of error less than 1 (e.g., interpret any received 
+word as message 1, with Pe = 1 - 1/M < 1). We have then a finite set 
+of codes up to some multiple of d at which a uniform exponential bound 
+takes over. Thus, one may choose a coefficient E(R) such that P, < 
+e -E(R)" for n any integer multiple of d. 
+The negative part of our result, that the capacity C cannot be ex- 
+ceeded, is proved by an argument similar to that used for the case where 
+the state was calculable at the receiver. Namely, consider the channel 
+K~ defined as follows. The given channel K may be put at the beginning 
+into any state and the name of this state transmitted noiselessly to the 
+receiving point. Then n letters are transmitted with the constraints and 
+probabilities of the given channel K. The final state is then also trans- 
+mitted to the receiver point. This process is then repeated in blocks of n. 
+We have here a memoryless channel which for any n "includes" the 
+given channel. Any code for the given channel K could be used if desired 
+in K. with equally good probability of error. Hence the capacity of the 
+given channel K must be less than or equal to that of K. for every n. On 
+the other hand K~ is actually the "sum" of a set of channels correspond- 
+ing to sequences from state s to state t in n steps; channels with ca- 
+pacifies previously denoted by C(n, s, t). For all sufficiently large n, and 
+CODING THEORY FOR NOISY CHANNELS 
+for all s, t, we have (1/n)C(n, s, t) < C + 
+~ as we have seen above. 
+Hence for all n > no, say, the capacity of K~ is bounded by C + , + 
+(l/n) log m 2 where m is the number of states. It follows that the capacity 
+of K is not greater than C. 
+It is interesting to compare the results of this section where the state 
+is calculable at the transmitter only with those of the preceding section 
+where the state is calculable at both terminals. In the latter case, a 
+fairly explicit formula is given for the capacity, involving only the cal- 
+culation of capacities of memoryless channels and the solution of an 
+algebraic equation. In the former case, the solution is far less explicit, 
+involving as it does the evaluation of certain limits of a rather complex 
+type. 
+RECEIVED: April 22, 1957. 
+REFERENCES 
+CHERNOV, I-~., (1952). A Measure of Asymptotic Efficiency for Tests of a I-Iy- 
+pothesis Based on the Sum of Observations. Ann. Math. Stat. 23, 493-507. 
+ELIAs, P. (1956). In "Information Theory" (C. Cherry, ed.). Academic Press, 
+New York. 
+]~EINSTEIN, A. (1955). Error Bounds in Noisy Channels Without Memory. IRE 
+Trans. on Inform. Theory IT-l, 13-14 (Sept.). 
+Fno~E~s, G. (1912). tiber Niatrizen aus nichtnegativen Elementen. Akad. Wiss. 
+Sitzber. Berlin, pp. 456-477. 
+SHANNON, C. E. (1948). Mathematical Theory of Communication. Bell System 
+Tech. J. 27, 379-423. 
+SHANNON, C. E. (1956). The Zero Error Capacity of a Noisy Channel. IRE Trans. 
+on Inform. Theory IT-2, 8-19 (Sept.). 

@@ -1,0 +1,157 @@
+A THEOREM ON COLORING THE LINES OF A NETWORK
+By Claude E. Shannon
+
+Journal of Mathematics and Physics, Vol. 28, 1949, pp. 148-151
+
+Source: Internet Archive
+  https://archive.org/details/sim_studies-in-applied-mathematics_1949_28
+========================================================================
+
+[Page 148]
+
+A THEOREM ON COLORING THE LINES OF A NETWORK
+Bt Claude E. Shannon
+A topological coloring problem has been suggested in connection with the
+color coding of wires in electrical units such as relay panels. In these units there
+are a number of rela3rs, switches, and other devices A, B, • • • , £ to be inter¬
+connected. The connecting vrires are hrst formed in a cable with the wires to
+be connected to A coming out at one point, those to B at another, etc., and it is
+necessaiy, in order to distinguish the different wires, that all those coming out of
+the cable at the same point be differently colored. There may be any number
+of wires joining the same two points but no wire joins more than two points.
+Assuming that not more than m wires end at any one point, the question arises
+as to the least number of different color codings that is sufficient for any network.
+Theorem: The lines of any network can be colored so that no two lines with a
+common junction have the same color using at most [
+{m] colors, where m is the
+maximum number of lines touching one junction. This number of colors is
+necessary for some networks.
+Simple networks requiring [|m] colors can be ccmstructed as follows. For
+m 2n, let each pair cff the three junctions A, B, C be connected with n lines.
+Since all the lines must obviously be different, 3n = [ |m] colors are necessary.
+For m ^ 2n + I, connect AB with n lines, BC with n lines and AC with n + 1
+lines. Here again all lines must be different and there are 3n + 1 »= [ i(2n +
+1>| B [|m] lines. Another example for m » 3 is furnished by the cross c(Hmec-
+tion of two pentagCMis abode and ABODE by lines oA, hD, cB, dE, eC.
+For the sufficiency pnxrf let us first suppose m even. Now if AT is our given
+network it is well known that we may add lines and junc1i(m points to get a
+regular network N' of degree m, i.e., one in which exactly m lines end at each
+junction point. If we can color N' we can surely color N. A theorem due to
+Peterson states that any regular network of even degree m = 2n can be factored
+into n regular second degree graphs. In our case let the factors of AT' be ATi ,
+ATj , • • • , . hiach of these is merely a collectimi of polygons which do not
+touch each other, and each AT,- , therefore, can be colored with at most three
+colors. This gives a total of 3n = \m colors.*
+Peterson has conjectured* that any regular bridgeless network of odd degree
+2n -f- 1 can be factored into one first and n second degree graphs, and if this is
+true the theorem follows easily in the odd case. However this conjecture has
+never been proved for m > 3 and we will use a different attack.
+The theorem will be proved by induction, making the coloring of AT depend on
+coloring a network with one less junction point. Let us eliminate from N one
+junction F>oint P and the m = 2n A- I lines coming to it and assume the remain¬
+ing network to be satisfactorily colored with 3n + 1 colors. Let the junctions
+that were connected to B in the original network be numbered 1,2, * • • , s, and
+• This proof for m even was suggested by R. M. Foster.
+
+
+------------------------------------------------------------------------
+
+[Page 149]
+
+THEOREM ON COLORING THE LINES OF A NETWORK
+suppose there were jh parallel lines in the first group connecting P to junction
+1, etc. Now after coloring the reduced network we have left available at junc¬
+tion 1 at least [(3n -|- 1) — (2n -f- 1 — Pi)] =• n -f pi colors, at junction 2, at
+least (n -|- pj) colors, etc. By choosing pn^rly from these available colors and
+by suitable interchanges of certain colors in the part of the network already
+colored we will show that the lines from P can be satisfactorily colored.
+Let us arrange the data in a table as follows.
+Colors
+« lines
+(2n -b 1)!
+•
+Fig. 1
+In this array the 2n -|- 1 lines from P are listed vertically, the 3n -b 1 colors
+horisontally. If a certain color is available for a certain line a 1 is placed at the
+intersection of the corresponding row and column, otherwise a 0. In a row
+corresponding to a line in Gi there will be (n -b p<) I’s. By the use of three
+operatimis on this array we will arrange to obtain a series of I’s along the main
+diagonal and this will represent a coloring scheme for the network. These
+operations are:
+■ 1. Interchange of columns. This correspmids to merely renumbering the
+colors.
+2. Interchange cA rows. This correspiMids to renumbering the lines from P.
+3. Interchange of colors in a chain of two colors. Two junctions will be said
+to be chained together for two colors if we can go frimi one junction to the other
+al(Hig lines which alternate these colors. If we have a satisfactorily colored net-
+woik and interchange the two colors in a chain (A that network over its entire
+length (note that in a correctly colored network a chain cannot branch out) then
+it is clear that the networii will still be satisfactorily colored. We will also use
+the fact that if mily one of the two colmrs in question appears at each of three
+distinct junctiiMis then mily one pair oi the junctions (at most) can be chained
+together for these two colors, since a chain can only have two ends. Now con¬
+sider the array oi Fig. 1. Suppose that in the first row there is a 0 in one cdumn
+and a 1 in another. Interchanging these two colors in the chain starting from
+the junction that line one is connected to will be seen to be equivalent to inter¬
+changing these two columns for this row and all other rows that are chained to it.
+Let us suppose that we have arranged to get I’s on the main diagmial D down
+to a certain point. We will show that we can get another 1 on the diagimal.
+12 3 .
+(3n -f 1)
+1110 1 .
+2 10 10 .
+
+
+------------------------------------------------------------------------
+
+[Page 150]
+
+CLAUDE E. SHANNON
+(3n 4- 1) Colors
+■0 - 7 in Gk
+■0 - 0 in G,
+• • • 1 . X - a in Gi
+I
+\ S R T
+Fio. 2
+Referring to Fig. 2, if there are any I’s in the next line a, cm or to the right of T,
+one of these may he brought by an interchange of columns, to position X.
+Assuming this is not true there will be n 4- p< I’s to the left of column T in a
+(assuming a is in Gi). Hence there are n + p« rows above a having a 1 in Z) in
+the same column as a 1 in a. At least n 4- 1 of these rows are not in 0{ , since
+Gi has Pi members and we have accounted for one already, namely a. Let /9 be
+one of these, belcmging, say, toOf. If /9 has a 1 on or to the right of T, by an
+interchange first of columns, th^ ct a and /9 this may be moved to X without
+affecting the I’s along D. Assuming this is not true, there are n 4* P/ I’s (m /3
+to the left of T and hence n + P/ rows above a have a 1 in D in the samecolunm
+as a 1 in and of these at least n do not belcmg to (?/ (as it only has p/ members).
+Now there are not more ttuln 2n rows above a and therefore the n rows we have
+associated with /3 and the n 4- 1 we have associated with a must have at least
+one in commcxi, i.e., there exists a row not belonging to Gi or Of and having a 1
+in D in the same column that a and also have a 1. Call this row y, and suppose
+it belongs to O'* . If 7 has a 1 on or to the right oi T it may be moved to by
+first interchanging columns and then rows a and 7 as before. Assuming this is
+not true, there are O’s and I’s at the intersecticms of a, 7, and T, S, as shown
+in Fig. 2 and X is 0. Hence at least one of a, jS, 7 is not chained to either of the
+others by the two colors of T and 8. If it is a, interchange the chain starting at
+i and the 1 at the aS intersection moves to X without affecting D. If it is 0,
+(2n 4- 1)
+lines
+1 — 1-
+J
+
+
+------------------------------------------------------------------------
+
+[Page 151]
+
+THXOBEM ON COLOBINO THS LINES OF A NETWOBK
+interchange the chain starting at j and then rows a and This moves the 1 at
+the 0S intersection to X and its place is taken by the 1 at aS. If it is y, inter¬
+change the chain starting at k and then the rows a and y so that the 1 at yS moves
+to X and the 1 at oA takes its place.
+Bell Telephone Laboeatobies, Inc., New Yobe City.
+(Received September 14, IMS)
+
+
+------------------------------------------------------------------------

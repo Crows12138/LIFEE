@@ -1,0 +1,108 @@
+AMind-Reading (?)Machines
+Claude E. Shannon
+This machine is asomewhat simplified model ofamachine designed by D. W. Hagelbarger.
+It plays what is essentially the old game ofmatching pennies or"odds and evens." This game
+has been discussed from the game theoretic angle by von Neumann andMorgenstern, and from
+thepsychological point of view by Edgar Allen Poe in the "The Purloined Letter." Oddly
+enough, themachine is aimed more nearly at Poe's method ofplay than von Neumann's.
+To play against the machine, the player should guess out loud either "right" or"left."
+The center button ofthe machine is then pressed and the machine will light up either the right
+or left light. If the machine matches the player, the machine wins, otherwise theplayer wins.
+The player should then move the key switch in the direction corresponding to the choice he
+made. The machine will then register a win for the machine or the player, as the case may be,
+byshooting a ball into the proper glass tube. The overall score against allplayers since the
+machine was started is shown on the two counters visible through the front panel.
+TheStrategy ofOperation
+Basically, themachine looks for certain types of patterns in the behavior of its human
+opponent. Ifitcan find these patterns itremembers them and assumes that the player will
+follow the patterns the next time the same situation arises. The machine also contains arandom
+element. Until patterns have been found, or if an assumed pattern is not repeated at least twice
+by the player, themachine chooses its move at random.
+The types of patterns remembered involve the outcome of two successive plays (that is,
+whether or not the player won on those plays) and whether hechanged hischoice between them
+and after them. There are eight possible situations and, for each of these, two things the player
+can do. The eight situations are:
+1. The player wins, plays the same, and wins. He may then play the same or differently.
+2. The player wins, plays the same, and loses. He may then play the same or differently.
+3. The player wins, plays differently, and wins. He may then play the same or
+differently.
+4. The player wins, plays differently, and loses. He may then play the same or
+differently.
+5. The player loses, plays the same, and wins. He may then play the same or differently.
+6. The player loses, plays the same, and loses. He may then play the same or differently.
+7. The player loses, plays differently, and wins. He may then play the same or
+differently.
+8. The player loses, plays differently, and loses. He may then play the same or
+differently.
+*Bell Laboratories Memorandum, March 18, 1953.
+
+AMind-Reading (?)Machine 689
+Each ofthese corresponds to adifferent cell in the memory ofthemachine. Within the cell two
+things areregistered: (1)whether, the last time this situation arose, theplayer played the same
+ordifferently; (2)whether or not the behavior indicated in (1) was a repeat of the same behavior
+in the next preceding similar situation. Thus consider thesituation win, same, lose. Suppose
+that the last time this situation occurred in the game the player played "differently". Then
+"differently" isrecorded in the (1) part ofthis memory cell. If the preceding time this
+situation arose the player also played' 'differently", the (2) part ofthememory cell registers
+this as a repeat. The machine will assume, should this situation arise again, that this is a
+definite pattern in the player's behavior and will play correspondingly. If the player has not
+repeated, themachine plays from its random element. The memory cells arealways kept up to
+date. A particular memory cell, forexample, will change from one prediction to the opposite in
+two repetitions ofthecorresponding situation.
+Amathematical analysis ofthestrategy used in this machine shows that it can be beaten by
+the best possible play in the ratio 3: I. To do this it is necessary to keep track ofthecontents of
+all the memory cells in the machine. The player should repeat abehavior pattern twice, and
+then when the machine isprepared tofollow this pattern theplayer should alter it.It is
+extremely difficult tocarry out this program mentally because oftheamount ofmemory and
+calculation necessary.
+The ball counter used in this machine forscore keeping is an application oftheconservation
+ofmomentum principle. If a ball is struck against astationary row ofequal balls, the
+momentum ofthe first ball is transferred down the line and the last ball in the row moves off
+with the velocity oftheoriginal striking ball. In this counter themomentum istransferred
+through a row ofup to fifty balls!
+The random element in the machine isactually acommutator rotating atabout
+10revolutions persecond. Two brushes separated by1800bear on this commutator. Acopper
+segment ofthecommutator contacts thebrushes alternately. When thebutton ispressed and a
+random choice is to be made, the first brush contacted by the commutator determines whether
+thechoice be"right" or"left". Basically, therefore, therandomness of the device depends on
+theuncertainty oftheinterval between moves, thevariation ofwhich due to human variability
+istypically large compared to the tenth of a second period ofthecommutator.
+
+690C. E .Shannon
+MEMO RY fOR
+REPEATS+
+PLAYER
+WINSMACHINE
+WINSSCORE KEEPING CIRCUIT
+V'~-
+?-0-~
+~,~ -
+-'-00-~~ _ ~s v.':-:rNo-y--o ~.,. S'WI?0- +
+A""""'0 ' AN' MACHINE'S WI"<.--"""- _
+_"';"~PIt:., (HOICET-< Wl'~+
+"1' lIt' ~2~1
+,,' H'~ - 1'..-"""--- -
+AL.. '" ?§-+
+MEMORY PI P " H I~ wo' ...;: -1'M- _
+WRITE -IN ".-.-- ~o.......'!Z; Q
+CIRCUm 6 : .~:
+{~ ~f~ ,,<?0- >
++ - WI'~:
+MEMOR YREAD -OUT C1RCU IT~
++"O'~
+- +"~ -?-G-i-
+'tp+ - ~WI r'W'--
+I'll WI!'~i r::rMl ~+
+, wr'~'1 .~ .,.
+2' " MEMORY fORL.-_~ _----<> 0---<> ------. PREVI0US
+.,6" -BEHA VIOR
+~?EJ- T
+'~"'"'1A ~w"~.~_M'rXrH
+' .\ +\ 1 ..r*--"y' - A A\ ;'")?EJ- +>yl.. TL\IT.<, oW'- -] L ~~TIQ X;
+t=-o PI~ ~ __ CURRENT SITUATION RELAYS",,1s:rL( p;~
+'~
+'~~l$ ID
++ +
+SEQUENC ING RELAYS
+"MIND READING' MACHINE
+

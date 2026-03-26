@@ -1,0 +1,1461 @@
+TheSynthesis ofTwo-Terminal Switching Circuits
+ByCLAUDE. E.SHANNON
+PART I:GENERAL THEORY
+1.Introduction
+THEtheory ofswitching circuits maybedivided intotwomajor divi-
+sions, analysis andsynthesis. Theproblem ofanalysis, determining
+themanner ofoperation ofagiven switching circuit, iscomparatively
+simple. The inverse problem offinding acircuit satisfying certain given
+operating conditions, andinparticular thebestcircuit is,ingeneral, more
+difficult andmore important from thepractical standpoint. Abasic part
+ofthegeneral synthesis problem isthedesign ofatwo-terminal network
+withgiven operating characteristics, andweshall consider some aspects of
+thisproblem.
+Switching circuits canbestudied bymeans ofBoolean Algebra.1,2This
+isabranch ofmathematics thatwas firstinvestigated byGeorge Boole in
+connection with thestudy oflogic, andhassince been applied invarious
+other fields, such asanaxiomatic formulation ofBiology,3thestudy ofneural
+networks inthenervous system,4theanalysis ofinsurance policies,5prob-
+ability andsettheory, etc.
+Perhaps thesimplest interpretation ofBoolean Algebra andtheone
+closest totheapplication toswitching circuits isinterms ofpropositions.
+Aletter X,say, inthealgebra corresponds toalogical proposition. The
+sum oftwo lettersX-\-Yrepresents theproposition "XorY"andthe
+productXYrepresents theproposition "XandY".Thesymbol X'isused
+torepresent thenegation ofproposition X, i.e.theproposition "notX".
+Theconstants 1and represent truth and falsity respectively. Thus
+X+Y=1meansXorYistrue, whileX+YZ'=meansXor(Fand
+thecontradiction ofZ)isfalse.
+Theinterpretation ofBoolean Algebra interms ofswitching circuits6"'9
+•'"
+isvery similar. ThesymbolXinthealgebra isinterpreted tomean amake
+(front) contact onarelay orswitch. Thenegation ofX,written X',
+represents abreak (back) contact ontherelay orswitch. Theconstants
+and 1represent closed andopen circuits respectively andthecombining
+operations ofaddition andmultiplication correspond toseries andparallel
+connections oftheswitching elements involved. These conventions are
+shown inFig. 1.With thisidentification itispossible towriteanalgebraic
+
+
+60 BELLSYSTEM TECHNICAL JOURNAL
+NETWORK
+-CD-HINDRANCE FUNCTION
+(PERMANENTLY CLOSED CIRCUIT)
+1(PERMANENTLY OPEN CIRCUIT)
+X(MAKE CONTACT ONRELAY X)
+X'(BREAK CONTACT ONRELAY X)
+X+Y(SERIES CONNECTION)
+XY(PARALLEL CONNECTION)
+W[x+Y(2+X')j
+Fig. 1—Hindrance functions forsimple circuits.
+expression corresponding toatwo-terminal network. This expression will
+involve thevarious relays whose contacts appear inthenetwork andwillbe
+called thehindrance orhindrance function ofthenetwork. The lastnet-
+work inFig. 1isasimple example.
+Boolean expressions canbemanipulated inamanner very similar to
+ordinary algebraic expressions. Terms canberearranged, multiplied out,
+factored andcombined according toallthestandard rules ofnumerical
+algebra. Wehave, forexample, inBoolean Algebra thefollowing identities:
++X=X
+0-X=
+1-X=X
+X+Y=Y+X
+XY=YX
+X+(Y+Z)=(X+Y) +Z
+X(YZ) =(XY)Z
+X{Y+Z)=XY+XZ
+Theinterpretation ofsome ofthese interms ofswitching circuits isshown
+inFig. 2.
+There areanumber offurther rules inBoolean Algebra which allow
+
+
+SYNTHESIS OFSWITCHING CIRCUITS
+_^ ,x„ ._. nx„61
++X
+-o"o o'
+X+Y
++::>=•—o'o—o^o—•
+= Y+X
+^X
+oYc
+J..
+X(Y2) (XY)Z.V,
+z
+XY2
+X(Y+Z) = XY kXZ
+Fig.2—Interpretation ofsome algebraic identities.
+simplifications ofexpressions that arenotpossible inordinary algebra.
+Themore important ofthese are:
+X=X+X= X+X+X =etc.
+X=X-X =X-X-X =etc.
+X+1=1
+X+YZ=(X+Y)(X+Z)
+X+X'=1
+X-Z'=
+{X+F)'=X'Y'
+{XY)'=X'+Y'
+The circuit interpretation ofsome ofthese isshown inFig. 3.These rules
+make themanipulation ofBoolean expressions considerably simpler than
+ordinary algebra. There isnoneed, forexample, fornumerical coefficients
+orforexponents, sincenX=Xn=X.
+Bymeans ofBoolean Algebra itispossible tofindmany circuits equivalent
+inoperating characteristics toagiven circuit. Thehindrance ofthegiven
+circuit iswritten down andmanipulated according totherules. Each
+different resulting expression represents anewcircuit equivalent tothegiven
+one. Inparticular, expressions maybemanipulated toeliminate elements
+which areunnecessary, resulting insimple circuits.
+Any expression involving anumber ofvariables X\,X%,•••,Xnis
+
+
+62 BELLSYSTEM TECHNICAL JOURNAL
+called a.function ofthese variables andwritten inordinary function notation,
+f(Xx ,X2,•••,X„). Thuswemight havef(X,Y,Z)=X+Y'Z+XZ'.
+InBoolean Algebra there areanumber ofimportant general theorems which
+hold foranyfunction. Itispossible toexpand afunction about oneormore
+ofitsarguments asfollows:
+f(X, ,X2, ,Xn)=Xx/(1,X%,•••,Xn)+X'f(Q,Xa,-~,Xn)
+This isanexpansion aboutX\ .Theterm/(l, X2,•••,Xn)isthefunction
+xXX xx„ .x
+x = x+x = x+x+x
+(X+Y)(X+Z)
+<>-
+XX' =
+Fig.3—Interpretation ofsome special Boolean identities.
+f(X\,X2 ,•••,Xn)with 1substituted forX,and forX',andconversely
+fortheterm/(0,X2,•••
+,X„).Anexpansion aboutX\andX2is:
+f(XlfXs,•,Xn)=XiXifii, 1,X 3,- ••,Xn)+Z1Z2/(1,0,Z3,... ,Xn)
++X[X 2f(0, 1,X3, ,Xn)+X[X' 2f(l, 1,*, ,...,Xn)
+Thismaybecontinued togiveexpansions about anynumber ofvariables.
+When carried outforallnvariables,/ iswritten asasum of2"products
+each with acoefficient which does notdepend onany ofthevariables.
+Each coefficient istherefore aconstant, either or1.
+There isasimilar expansion whereby/ isexpanded asaproduct:
+f(X\ ,X2,•••,^2)
+=[X,+/(0,X2, ,Xn)][X[+/(l,X2,••
+,Zn)]
+=[X1+X 2+/(0,0,...^n^^ +X'.+fiO,!,•••,Xn)]
+[x[+x2+/(i, 0,•••
+,Xn)][xi+X'2+/(l, 1,..
+.,Xn)]
+=etc.
+
+
+SYNTHESIS OFSWITCHING CIRCUITS
+Thefollowing aresome further identities forgeneral functions:
+X+f(X,Y,Z,-'-) =X+f(0,Y,Z, -..)
+r+/(X, Y,Z, •••)=X'+/(l, F,Z, •••)
+X/(X, F,Z,•••)=Xf(l,YfZ,•••)
+X'/(X, F,Z,•••)=X'/(0, F,Z, •••)(.3
+z \«
+,X+f(X,Y,Z,W)
+f(X,Y,Z,W)Xh
+X+f(0,Y,Z,W)
+Xf(l,Y,Z,W) +X'f(0,Y,Z,W)
+-CCHjjY',, YpY'
+•—oo—oo—'
+oWo
+=XYf(l,l,Y,Z) +XY'f(l,0,Y, Z)+X'Yf(0,l,Y,Z) +X'Y'f(0,0,Y,Z)
+Fig.4—Examples ofsome functional identities.
+Thenetwork interpretations ofsome ofthese identities areshown inFig.
+4.Alittle thought willshow thatthey aretrue, ingeneral, forswitching
+circuits.
+Thehindrance function associated withatwo-terminal network describes
+thenetwork completely from theexternal point ofview.Wecandetermine
+from itwhether thecircuit willbeopen orclosed foranyparticular position
+oftherelays. This isdonebygiving thevariables corresponding tooperated
+relays thevalue (since themake contacts ofthese arethen closed andthe
+break contacts open) andunoperated relays thevalue 1.Forexample, with
+thefunction /=W[X+Y{Z+X')]suppose relaysXandFoperated and
+ZandWnotoperated. Then/=1[0+0(1+1)]=andinthiscondition
+thecircuit isclosed.
+
+
+64 BELLSYSTEM TECHNICAL JOURNAL
+Ahindrance function corresponds explicitly toaseries-parallel type of
+circuit, i.e.acircuit containing only series andparallel connections. This
+isbecause theexpression ismadeupofsumandproduct operations. There
+ishowever, ahindrance function representing theoperating characteristics
+(conditions foropen orclosed circuits between thetwoterminals) forany
+network, series-parallel ornot.Thehindrance fornon-series-parallel net-
+works canbefound byseveral methods ofwhich one isindicated inFig.5
+forasimple bridge circuit. Thehindrance iswritten astheproduct ofa
+setoffactors. Each factor istheseries hindrance ofapossible pathbetween
+thetwoterminals. Further details concerning theBoolean method for
+switching circuits maybefound inthereferences cited above.
+Thispaper isconcerned with theproblem ofsynthesizing atwo-terminal
+circuit which represents agiven hindrance function /(Xi ,•••,Xn)-Since
+anygiven function /canberealized inanunlimited number ofdifferent
+f=(w+x)fz+s)(w+Y+s)(z+Y+x)
+Fig.5—Hindrance ofabridge circuit.
+ways, theparticular design chosen mustdepend upon other considerations.
+Themostcommon ofthese determining criteria isthat ofeconomy ofele-
+ments, whichmaybeofseveral types, forexample:
+(1)Wemaywish torealize ourfunction with theleast totalnumber of
+switching elements, regardless ofwhich variables they represent.
+(2)Wemaywish tofindthecircuit using theleast totalnumber ofrelay
+springs. This requirement sometimes leads toasolution different
+from (1),since contiguous make andbreak elements maybecombined
+intotransfer elements sothat circuits which tend togroup make and
+break contacts onthesame relay into pairs willbeadvantageous
+for(2)butnotnecessarily for(1).
+(3)Wemaywish todistribute thespring loading onalltherelays oron
+some subset oftherelays asevenly aspossible. Thus,wemight try
+tofindthecircuit inwhich themost heavily loaded relay was as
+lightly loaded aspossible. More generally, wemight desire acircuit
+inwhich theloading ontherelays isofsome specified sort, orasnear
+aspossible tothisgiven distribution. Forexample, iftherelayXi
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 65
+must operate very quickly, whileX2andXshave noessential time
+limitations butareordinary U-type relays, andX« isamulticontact
+relayonwhichmany contacts areavailable, wewould probably try
+todesign acircuit for/(Xi ,X3,Xs,Xt)insuchaway as,firstofall,
+tominimize theloading onXi ,next toequalize theloading onX2
+andXtkeeping itatthesame time aslowaspossible, and finally
+nottoloadXianymore than necessary. Problems ofthissortmay
+becalled problems inspring-load distribution.
+Although allequivalent circuits representing agiven function /which
+contain only series andparallel connections canbefound with theaidof
+Boolean Algebra, themosteconomical circuit inanyoftheabove senses will
+often notbeofthistype. Theproblem ofsynthesizing non-series-parallel
+circuits isexceedingly difficult. Itisevenmore difficult toshow thata
+circuit found insomeway isthemosteconomical one torealize agiven
+function. The difficulty springs from thelargenumber ofessentially
+different networks available andmore particularly from thelack ofa
+simple mathematical idiom forrepresenting these circuits.
+Wewilldescribe anewdesign method whereby anyfunction f(Xi ,X2,•••
+,
+,Y„)mayberealized, andfrequently withaconsiderable saving ofelements
+overother methods, particularly when thenumber ofvariables nislarge.
+The circuits obtained bythismethod willnot, ingeneral, beoftheseries-
+parallel type, and, infact, they willusually noteven beplanar. This
+method isofinterest theoretically aswell asforpractical design purposes,
+foritallows ustosetnewupper limits forcertain numerical functions asso-
+ciated with relay circuits. Letusmake thefollowing definitions:
+X(n) isdefined astheleastnumber such thatanyfunction ofnvariables
+canberealized with notmore than X(«)elements.* Thus, anyfunction of
+nvariables canberealized with\{n)elements andatleastonefunction with
+noless.
+n(n) isdefined astheleastnumber such thatgiven anyfunction/ ofn
+variables, there isatwo-terminal network having thehindrance /and using
+notmore than n(n)elements onthemost heavily loaded relay.
+The firstpart ofthispaper deals with thegeneral design method andthe
+behaviour ofX(n). Thesecond part isconcerned with thepossibility of
+various types ofspring load distribution, andinthethird partwewillstudy
+certain classes offunctions thatareespecially easy tosynthesize, andgive
+some miscellaneous theorems onswitching networks andfunctions.
+2.Fundamental Design Theorem
+Themethod ofdesign referred toabove isbased onasimple theorem deal-
+ingwith theinterconnection oftwoswitching networks. Weshall first
+*Anelement means amake orbreak contact ononerelay. Atransfer element means
+am&ke-and-break withacommon spring, andcontains twoelements.
+
+
+66 BELLSYSTEM TECHNICAL JOURNAL
+stateandprove thistheorem. Suppose thatMandN(Fig. 6)aretwo
+(n+1)terminal networks,Mhaving thehindrance functions Uk(k=
+1,2,•••w)between terminals aand k,andNhaving thefunctions F*
+between band &.Further, letMbesuchthatU,k 10.*=*>2>""
+'»w)-
+Wewillsay, inthiscase, thatMisadisjunctive network. Under these con-
+ditions weshallprove thefollowing:
+Theorem 1:Ifthecorresponding terminals 1,2,• •,nofMandNare
+connected together, then
+uab=IL(u h+vk)
+*=1(1)
+whereUabisthehindrance from terminal atoterminal b.
+—• 1L
+,,
+122.*—
+—•3 3-
+M N
+—in ni
+Fig.6—Network forgeneral design theorem.
+Proof: Itisknown that thehindrance Uabmaybefound bytaking the
+product ofthehindrances ofallpossible paths from atobalong theelements
+ofthenetwork.6Wemaydivide these paths intothose which cross theline
+Lonce, those which cross itthree times, those which cross itfivetimes, etc.
+Lettheproduct ofthehindrances inthe first class beW\ ,inthesecond
+classWz ,etc.Thus
+Uab=Wi-WvWf- (2)
+Now clearly
+U\=IIWk+Vk)
+andalso
+Wz=W.= ••=1
+since eachterm inanyofthesemust contain asummand ofthetype Vju
+which wehaveassumed tobe1.Substituting in(2)wehave thedesired
+result.
+Themethod ofusing thistheorem tosynthesize networks mayberoughly
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 67
+described asfollows: Thefunction toberealized iswritten intheform ofa
+product ofthetype (1)insuchawaythatthefunctions Ukarethesame fora
+large class offunctions, theVkdetermining theparticular oneunder consider-
+ation. Abasic disjunctive networkMisconstructed having thefunctions
+Ukbetween terminals aand k.AnetworkNforobtaining thefunctions
+Vkisthenfound byinspection oraccording tocertain general rules.We
+willnowconsider justhow thiscanbedone invarious cases.
+3.Design ofNetworks forGeneral Functions—Behavior ofX(w)-
+a.Functions ofOne,TwoandThree Variables:
+Functions ofoneortwovariables maybedismissed easily since the
+number ofsuch functions issosmall. Thus, with onevariable X,the
+possible functions areonly:
+0,1,X,X'
+andobviously X(l)=1,y.{\)= 1.
+Withtwovariables XandYthere are16possible functions:
+OXYXY XY' X'Y X'Y' XY'+X'Y
+ll'F' X+YX+TX'+YX'+Y'XY+X'Y'
+sothatX(2)=4,m(2)=2.
+Wewillnextshow thatanyfunction ofthree variables f(X, Y,Z)canbe
+realized withnotmore than eight elements andwith notmore than four
+fromanyonerelay. Anyfunction ofthree variables canbeexpanded ina
+product asfollows:
+f(X, Y,Z)-[X+Y+/(0, 0,Z)\[X+T+/(0, 1,Z)\
+\X'+Y+/(l, 0,Z)\[X'+T+/(l, 1,Z)\.
+Intheterminology ofTheorem 1welet
+Ux-X+Y Vi=/(0, 0,Z)
+U2=X+Y' V2=/(0, 1,Z)
+U3=X'+Y V3=/(l, 0,Z)
+sothatUk=X'+r V<= /(l, 1,Z)
+u*=f(x,vtz)=flau Vk)
+Theabove Vkfunctions arerealized with thenetworkMofFig. 7and itis
+
+
+68 BELLSYSTEM TECHNICAL JOURNAL
+easily seenthatUjk-1(/»**= 1j2,3,4).Theproblem now istoconstruct
+asecond networkNhaving theVkfunctions Vi ,V2,V%,Vt.Each of
+these isafunction oftheonevariable Zandmust, therefore, beoneofthe
+fourpossible functions ofonevariable:
+0,1,Z,Z'.
+Consider thenetwork A7ofFig. 8.IfanyoftheV'sareequal to0,connect
+thecorresponding terminals ofMtotheterminal ofNmarked 0;ifanyare
+equal toZ,connect these terminals ofMtotheterminal ofNmarked Z,
+etc. Those which are 1are, ofcourse, notconnected toanything. Itis
+clearfromTheorem 1thatthenetwork thusobtained willrealize thefunction
+f(X,Y,Z). Inmany casessome oftheelements willbesuperfluous, e.g.,
+ifoneoftheViisequal to1,theelement ofMconnected toterminal ican
+Fig.7—Disjunctive treewithtwobays.
+beeliminated. AtworstMcontains sixelements andNcontains two.
+ThevariableXappears twice,Yfourtimes andZtwice. Ofcourse, itis
+completely arbitrary which variables wecallX,Y,andZ.Wehave thus
+proved somewhat more thanwestated above, namely,
+Theorem 2:Anyfunction ofthree variables may berealized using notmore
+than 2,2,and4elements from thethree variables inanydesired order. Thus
+X(3)<8,n(3)<4 -Further, sincemakeandbreak elements appear in
+adjacent pairswecanobtain thedistribution 1,1,2,interms oftransfer ele-
+ments.
+Thetheorem gives onlyupper limits forX(3)and u(3). Thequestion
+immediately arises astowhether bysome other design method these limits
+could belowered, i.e.,canthe<signs bereplaced by<signs. Itcanbe
+shown byastudy ofspecial cases thatX(3)=8,thefunction
+X®Y®Z= X(YZ+Y'Z')+X'(YZ'+Y'Z)
+requiring eight elements initsmost economical realization. n(3),however,
+isactually 3.
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 69
+Itseems probable that, ingeneral, thefunction
+a'ieXie•••©xn
+requires 4(«—1)elements, butnoproof hasbeen found. Proving thata
+certain function cannot berealized with asmall number ofelements is
+somewhat likeproving anumber transcendental; wewillshow later that
+almost all*functions require alargenumber ofelements, but itisdifficult
+toshow thataparticular onedoes.
+z
+2» oo
+L'-oo- -•b
+Fig.8—-Network giving allfunctions ofonevariable.
+Fig.9—Disjunctive treewith three bays.
+b.Functions ofFour Variables:
+Insynthesizing functions offour variables bythesame method, two
+courses areopen. First,wemayexpand thefunction asfollows:
+f(W,X,F,Z)=[W+X+F+Vi(Z)HW +X+F+Vt(Z)l
+[W+X'+Y+V,(Z)]-[W +X'+r+Vt(Z)].
+[w+x+y+v6(z)}-[w+x+r+v6(z)}.
+[W+X'+Y+F7(Z)]-[tF'+X'+r+F8(Z)].
+Bythisexpansion wewould letUx-W+X+F,V%=W+X+Y't•••,
+[/„=p^'+X'+F*andconstruct theMnetwork inFig. 9.Nwould
+*Weusetheexpression "almost all" inthearithmetic sense: e.g.,aproperty istrue
+ofalmost allfunctions ofnvariables ifthefraction ofallfunctions ofnvariables forwhich
+itisnottrue—*asn—>°°.
+
+
+70 BELLSYSTEM TECHNICAL JOURNAL
+again beasinFig. 8,andbythesame type ofreasoning itcanbeseenthat
+X(4)<16.
+Using aslightly more complicated method, however, itispossible to
+reduce this limit. Letthefunction beexpanded inthefollowing way:
+f(W,X,Y,Z)=[W+X+ Fi(F, Z)]-[W+X'+V2(Y,Z)\
+[W+X+V3(Y,Z))>[W'+X'+74(F,Z)\.
+Wemay useanetwork ofthetype ofFig. 7forM.TheVfunctions are
+nowfunctions oftwovariables YandZandmaybeanyofthe16functions:
+y'z+YZ'
+B'Y
+Y'
+Z
+Z'cYZ
+Y'Z
+YZ'
+Y'Z'I)Y+Z
+Y+Z'
+Y'+Z
+[Y'+Z'E
+YZ+Y'Z'
+Wehave divided thefunctions into fivegroups, A,B,C,DandEforlater
+reference. Wearegoing toshow thatanyfunction offour variables can
+Fig.10—Simplifying network.
+berealized with notmore than 14elements. Thismeans thatwemust
+construct anetworkNusing notmore than eight elements (since there are
+sixintheMnetwork) foranyselection offourfunctions from those listed
+above. Toprove this, anumber ofspecial casesmust beconsidered and
+dealt with separately:
+(1)Ifallfourfunctions arefrom thegroups, A,B,C,andD,Nwill
+certainly notcontain more than eight elements, since eight letters atmost
+canappear inthefourfunctions.
+(2)Weassume now that justone ofthefunctions isfrom group E;
+without lossofgenerality wemaytake ittobeYZ'+Y'Z, foritistheother,
+replacing YbyY'transforms itinto this. Ifoneormore oftheremaining
+functions arefromgroupsAorBthesituation issatisfactory, forthisfunc-
+tionneed require noelements. Obviously and 1require noelements and
+Y,Y',ZorZ'maybe"tapped off"from thecircuit forYZ'+Y'Zbywriting
+itas(V+Z)(I"+Z'). Forexample, Y'maybeobtained withthecircuit
+ofFig. 10.This leaves four elements, certainly asufficient number for
+anytwofunctions fromA,B,C, orD.
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 71
+(3)Now, stillassuming wehave onefunction, YZ'+Y'Z,from E,
+suppose atleasttwooftheremaining arefromD.Using asimilar "tapping
+off"process wecansaveanelement oneach ofthese. Forinstance, ifthe
+functions areY+ZandY'-\-Z'thecircuit would beasshown inFig. 11.
+(4)Under thesame assumption, then, ourworst case iswhen twoofthe
+functions arefromCandonefromD,orallthree from C.This latter case
+issatisfactory since, then, atleastone ofthethreemust beaterm of
+YZ'+Y'Zandcanbe"tapped off." Theformer case isbadonlywhen
+thetwofunctions fromCareYZandY'Z'. Itmaybeseenthat theonly
+-b
+z'<
+-oo-
+Z'
+Fig. 11—Simplifying network.
+Fig.12—Simplifying network.
+essentially different choices forthefunction fromDareY+ZandY'-\-Z.
+That thefourtypes offunctions/ resulting mayberealized with 14elements
+canbeshown bywriting outtypical functions andreducing byBoolean
+Algebra.
+(5)Wenowconsider thecases where twoofthefunctions arefrom E.
+Using thecircuit ofFig. 12,wecantapofffunctions orparts offunctions
+fromA,BorD,and itwillbeseen thattheonly difficult cases arethefol-
+lowing: (a)Two functions from C.Inthiscase either thefunction/ is
+symmetric inYandZorelseboth ofthetwofunctions maybeobtained
+from thecircuits fortheEfunctions ofFig. 12.Thesymmetric case is
+handled inalater section, (b)One isfrom C,theother fromD.There
+isonlyoneunsymmetric case.Weassume thefourfunctions areY®Z,
+Y©Z',YZandY-f-Z'.This gives risetofourtypes offunctions/,
+which can allbereduced byalgebraic methods. Thiscompletes theproof.
+
+
+72 BELLSYSTEM TECHNICAL JOURNAL
+Theorem 3:Anyfunction offour variables canberealized with notmore
+than14elements.
+c.Functions ofMoreThan Four Variables:
+Anyfunction offivevariables maybewritten
+f(xlf'•,x6)=[x6+mx 1}•••
+,xA)]-[xi+Mx lt•
+,x,)}
+and since, aswehave justshown, thetwofunctions offour variables can
+berealized with 14elements each,f(Xi,• •X5)canberealized with 30
+o»-
+X'.
+Y'«--oo-
+„Y'_
+X'Yi
+X+Y<
+X'+Y''
+x'y'»-OO-X'
+KY••1 X'
+'+y o'o—I
+XYV-
+XY'+X'Y<:>-£:>
+»"*'v--£[rr]--L£]vjJ
+Fig.13—Network giving allfunctions oftwovariables.
+Now consider afunction f(Xi ,Xt,• •,Xn)of«variables. For
+5<n<13wegetthebest limitbyexpanding about allbuttwovariables.
+f(X x,X%,•••,Xn)-[*i+Xt+••+Xn_2+F^X^!,X„)]
+[X{+^2+••"+X'n-2+VsiXn-i ,Vn)} (4)
+The V'sareallfunctions ofthevariables Xn_i,X„andmaybeobtained
+from thegeneralNnetwork ofFig. 13,inwhich every function oftwo
+variables appears. Thisnetwork contains 20elements which aregrouped
+into fivetransfer elements foronevariable and five fortheother.* The
+Mnetwork for(4),shown inFig. 14,requires ingeneral T~—2elements.
+Thuswehave:
+*Several other networks with thesame property asFig.13havebeen found, butthey
+allrequire 20elements.
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 73
+Theorem 4.X(n)<2"" 1+18
+d.Upper Limits forX(«)withLarge n.
+Ofcourse, itisnotoften necessary tosynthesize afunction ofmore than
+say10variables, but itisofconsiderable theoretical interest todetermine
+asclosely aspossible thebehavior of\(n) forlarge n.
+n~2
+Fig.14—Disjunctive treewith (n—2)bays.
+922'
+Fig.15—Network giving allfunctions of(/«+1)variables constructed fromonegiving
+allfunctions ofmvariables.
+Wewill firstprove atheorem placing limits onthenumber ofelements
+required inanetwork analogous toFig.13butgeneralized formvariables.
+Theorem 5.AnNnetwork realizing all2"functions ofmvariables can
+beconstructed using notmore than2-2"elements, i.e.,notmore thantwo ele-
+ments perfunction. Any network with thisproperty uses atleast (|—e)
+elements perfunction forany e>withnsufficiently large.
+The firstpart willbeproved byinduction. Wehave seen ittobetrue
+form=1,2. Suppose itistrue forsomemwith thenetwork NofFig. 15.
+Anyfunction ofm+1variables canbewritten
+g=\Xm+1+ftt][X'n+l+f h]
+
+
+74 BELLSYSTEM TECHNICAL JOURNAL
+where/
+aand/*, involve onlymvariables. Byconnecting from gtothecor-
+responding faandfbterminals ofthesmaller network, asshown typically
+forg3,weseefromTheorem 1that allthegfunctions canbeobtained.
+Among these willbethe22"'/functions andthese canbeobtained simply
+byconnecting across tothe/functions inquestion without anyadditional
+elements. Thus theentire network uses lessthan
+(22m+1-22"')2+ 2-22'"
+elements, since theNnetwork byassumption uses lessthan 2•22mandthe
+firstterm inthisexpression isthenumber ofadded elements.
+Thesecond statement ofTheorem 7canbeproved asfollows. Suppose
+wehaveanetwork, Fig. 16,with therequired property. Theterminals
+canbedivided intothree classes, those thathave oneorlesselements di-
+•f2
+•f,2m
+Fig.16—Network giving allfunctions ofmvariables.
+rectly connected, those with two,andthose with three ormore,
+setconsists ofthefunctions and 1andfunctions ofthetypeThe first
+(X+f) =X+/ x=o
+whereXissome variable orprimed variable. Thenumber ofsuchfunctions
+isnotgreater than2m-2 forthere are2mways ofselecting an"X"
+andthen 2 different functions fx~ooftheremaining m—1variables.
+Hence theterminals inthisclass asafraction ofthetotal—*asm—>°o.
+Functions ofthesecond classhave theform
+S=(*+/i)(F+/2)
+IncaseX?±Y'thismaybewritten
+XV+Xrg x=i.v-o+Z'Fg. Y=o.y=i+X'Y'g x=,Y=0
+andthere arenotmore than(2m)(2m—2)[22m
+Ysuch functions, again a
+vanishingly small fraction. IncaseX=Vwehave thesituation shown
+inFig. 17andtheXX' connection cannever carry ground toanother
+terminal since itisalways open asaseries combination. Theinner ends
+ofthese elements cantherefore beremoved andconnected toterminals
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 75
+corresponding tofunctions oflessthanmvariables according totheequation
+g=(X+fi)(X'+/,)=(X+/ix=o)(X' +/2X=1 )
+ifthey arenotalready soconnected. Thismeans that allterminals ofthe
+second class arethenconnected toavanishingly small fraction ofthetotal
+terminals. Wecanthen attribute twoelements each tothese terminals
+andatleastoneandone-half each totheterminals ofthethird group. As
+these twogroups exhaust theterminals except forafraction which—>
+asn—*<*> ,thetheorem follows.
+If,insynthesizing afunction ofnvariables, webreak offthetreeatthe
+(n—m)th bay, thetree willcontain 2n~m+1—2elements, andwecanfind
+aniVnetwork withnotmore than2"•2elements exhibiting every function
+oftheremaining mvariables. Hence
+X(»)<2'-2+2t<2T+222
+Fig. 17—Possible situation inFig. 16.
+forevery integer m.Wewish tofindtheintegerM=M(»)minimizing
+thisupper bound.
+Considering masacontinuous variable andnfixed, thefunction
+f(m)=2n~m+1+22m
+-2
+clearly hasjustoneminimum. Thisminimum must therefore liebetween
+w»iandmi+1,where
+Ami)=/(»«i+1)
++22
+2"=2'i.e.,
+or2"mi+1+22m'-2=2n~mi+22m,+ 1
+-2
+h,
+(28",+I-22m
+')
+Nowmicannot beaninteger since theright-hand side isapower oftwo
+andthesecond term islessthan halfthe first. Itfollows that tofindthe
+integerMmaking f(M) aminimum wemust take forMtheleast integer
+satisfying
+2"<2"+122"+1
+
+
+76 BELLSYSTEM TECHNICAL JOURNAL
+ThusMsatisfies:
+This gives:M+1+2M+>n>M+V
+n<11 M=2
+11<n<20 M= 3
+20<n<37 Jf=4
+37<n<70 M=5
+70<n<135 M=6
+etc.(5)
+Fig.18—Behaviour ofg(n).
+Ourupper bound forX(«)behaves something like--with asuperimposed
+saw-tooth oscillation asnvaries between powers oftwo,duetothefactthat
+mmust beaninteger. Ifwedefine g(n)by
+9n+l
+2n~u+1+22"2=g(n)t-
+,
+Mbeing determined tominimize thefunction (i.e.,Msatisfying (5)),then
+g{n)varies somewhat asshown inFig.18when plotted against log2n.The
+maxima occur justbeyond powers oftwo,and closer and closer tothem
+asn—°o .Also, thesaw-tooth shape becomes moreandmore exact. The
+sudden drops occur justafterwechange from onevalue ofMtothenext.
+These facts lead tothefollowing:
+Theorem 6. (a)For alln
+\(n)<—.n
+(b)Foralmost alln
+\{n)<—.H
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 77
+(c)There isaninfinite sequence ofntforwhich
+\(n t)<— (1+e) e>0.n
+These results canbeproved rigorously without much difficulty.
+e.ALower Limit forX(n)withLarge n.
+Uptonowmost ofourworkhasbeentoward thedetermination ofupper
+limits forX(n).Wehave seenthat foralln
+X(»)<B-.
+n
+2n
+Wenowaskwhether thisfunction B—isanywhere near thetruevaluen
+ofX(w), ormay X(«)beperhaps dominated byasmaller order ofinfinity,
+e.g.,np
+.Itwasthought foratime, infact, thatX(»)might belimited by
+nforalln,arguing from thefirstfewvalues: 1,4,8,14.Wewillshow that
+2"
+this isfarfrom thetruth, foractually—isthecorrect order ofmagni-
+tude ofX(n):
+r*n nil
+A-<X(n)<B-
+n n
+foralln.Aclosely associated question towhich apartial answer willbe
+given isthefollowing: Suppose wedefine the"complexity" ofagiven func-
+tion/ofnvariables astheratio ofthenumber ofelements inthemost
+economical realization of/ toX(«). Then anyfunction hasacomplexity
+lyingbetween and 1.Aremost functions simple orcomplex?
+Theorem 7:For allsufficiently large n,allfunctions ofnvariables excepting
+2"
+afraction 8require atleast (1—e)—elements, where eand 8arearbitrarily
+small positive numbers. Hence forlarge n
+X(n)>(1-•)-
+n
+andalmost allfunctions haveacomplexity >\(l—e).Foracertain sequence
+nialmost allfunctions haveacomplexity >f(l—e).
+Theproof ofthistheorem israther interesting, for itisapure existence
+proof. Wedonotshow thatanyparticular function orsetoffunctions
+2"
+requires (1—«)—elements, butrather that itisimpossible forallfunctionsn
+
+
+78 BELLSYSTEM TECHNICAL JOURNAL
+torequire less. This willbedonebyshowing that there arenotenough
+2n
+networks with lessthan (1—e)—branches togoaround, i.e.,torepresent
+n
+allthe22"functions ofnvariables, taking account, ofcourse, ofthedifferent
+assignments ofthevariables tothebranches ofeachnetwork. This isonly
+possible duetotheextremely rapid increase ofthefunction 22"
+.Werequire
+thefollowing:
+Lemma: Thenumber oftwo-terminal networks withKorlessbranches is
+lessthan(6K) .
+Anytwo-terminal network withKorlessbranches canbeconstructed
+asfollows: First lineuptheKbranches asbelow with thetwoterminals
+aand b.
+a. 1-1'
+2—2'
+3—3'
+4—4'
+b. K—K'
+Wefirstconnect theterminals a,b, 1,2, ,Ktogether inthedesired way.
+Thenumber ofdifferent wayswecandothis iscertainly limited bythenum-
+berofpartitions ofK+2which, inturn, islessthan
+2K+1
+forthis isthenumber ofwayswecanputoneormore division marks between
+thesymbols a,1, ,K,b.Now, assuming a,1,2,•
+,K,b,intercon-
+nected inthedesired manner, wecanconnect 1'either tooneofthese ter-
+minals ortoanadditional junction point, i.e.,1'hasachoice ofatmost
+K+3
+terminals,2'hasachoice ofatmostK-f4,etc.Hence thenumber of
+networks iscertainly lessthan
+2K+\K+3)(K4-4)(K+5)•••(2K+3)
+<(6K)* K>3
+andthetheorem isreadily verified forK=1,2.
+Wenowreturn totheproof ofTheorem 7.Thenumber offunctions ofn
+l\
+\ryn
+variables thatcanberealized with elements iscertainly lessthan
+n
+thenumber ofnetworks wecanconstruct with thismany branches multi-
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 79
+pliedbythenumber ofassignments ofthevariables tothebranches, i.e.,
+itislessthan
+II=(2»)(I-)(2"/w)Ul-e)!"]n-I(l-«)(2n/n)
+Hence
+log2H=(1-e)-log2n+(1-e)-log(1-e)- •6
+n n n
+=(1—e)2"+terms dominated bythisterm forlarge n.
+ignsolarg
+arrive attheinequalityBychoosing nsolarge that -2"dominates theother terms oflogHwe
+(l-«l)2n
+—>0asnlog2H<(1-ei)2»
+tf<2<1-<l)2n
+Butthere areS=2"functions of«variables and
+H 2(
+5~2*
+Hence almost allfunctions require more than (1—ei)2" elements.
+Now, since foralln>Nthere isatleastonefunction requiring more than
+12"
+(say)-—elements andsince \(n)>forn>0,wecansaythat foralln,
+Aft
+2n
+X(n)>A-
+»
+forsome constant A>0,forweneed onlychooseAtobetheminimum
+number inthefinite set:
+1 X(l) X(2) X(3) X(iV)
+2'
+' 22
+' 23
+'" ''2N
+1 2 3'N
+2"
+Thus X(«) isoftheorder ofmagnitude of—.Theother parts ofTheoremn
+8follow easily fromwhatwehave already shown.
+Thewriter isoftheopinion thatalmost allfunctions have acomplexity
+nearly 1,i.e.,>1—e.Thiscould beshown atleast foraninfinite sequence
+niiftheLemma could beimproved toshow thatthenumber ofnetworks is
+lessthan(6K)hl2forlarge A'.Although several methods have been used
+incounting thenetworks withKbranches they allgive theresult (6K)K
+.
+
+
+80 BELLSYSTEM TECHNICAL JOURNAL
+Itmaybeofinterest toshow that forlargeKthenumber ofnetworks is
+greater than
+(6K)K,i
+Thismaybedonebyaninversion oftheabove argument. Let/(A)bethe
+number ofnetworks withKbranches. Now, since there are22"functions of
+2*4-2
+nvariables andeachcanberealized with(1+ e)--elements (nsufficiently
+it
+large),
+/('(l+e)2_^V 2M)(1+ ')<2n+i/ ")>22"
+fornlarge. Butassuming f(K)<(6K)Klireverses theinequality, as
+isreadily verified. Also, foraninfinite sequence ofK,
+f(K)>(6K)Kn
+Since there isnoobvious reason whyf(K) should beconnected withpowers
+of2itseems likely that this istrueforalllargeK.
+Wemaysummarize whatwehave proved concerning thebehavior of
+2n+1
+X(n)forlargenasfollows. X(«)varies somewhat as—;ifwelet
+X(»)=Ann
+then, forlargen,A nliesbetween )-eand (2+e),while, foraninfinite
+sequence of»,\—e<An<1+ e-
+Wehave proved, incidentally, that thenewdesign method cannot, ina
+sense, beimproved verymuch. With series-parallel circuits thebestknown
+limit* forX(») is
+X(»)<3.2-1-f2
+2"
+andalmost allfunctions require (1-e),elements.7Wehave lowered
+log2n
+theorder ofinfinity, dividing byatleast andpossibly byn.The
+iog2n
+best thatcanbedonenow istodivide byaconstant factor<4,and for
+some n,<2.The possibility ofadesign method which does thisseems,
+however, quite unlikely. Ofcourse, theseremarks apply only toaperfectly
+general design method, i.e.,oneapplicable toanyfunction. Many special
+classes offunctions canberealized byspecial methods withagreat saving.
+*Mr.J.Riordan haspointed outanerror inmyreasoning in(6)leading tothestatement
+that thislimit isactually reached bythefunction Xj©X2©...©Xn,andhasshown that
+thisfunction and itsnegative canberealized withabout n*elements. Theerror occurs
+inPartIVafter equation 19and liesintheassumption thatthefactorization given is
+thebest.
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 81
+PART II:CONTACT LOAD DISTRIBUTION
+4.Fundamental Principles
+Wenowconsider thequestion ofdistributing thespring loadontherelays
+asevenly aspossible or,more generally, according tosome preassigned
+scheme. Itmight bethought thatanattempt todothiswould usually
+result inanincrease inthetotalnumber ofelements over themosteconomi-
+calcircuit. This isbynomeans true ;wewillshow that inmany cases (in
+fact, foralmost allfunctions) agreatmany load distributions maybeob-
+tained (including anearly uniform distribution) while keeping thetotal
+number ofelements atthesameminimum value. Incidentally thisresult
+hasabearing onthebehavior ofn{n), forwemaycombine thisresult with
+X'
+Fig.19—Disjunctive treewiththecontact distribution 1,3,3.
+2n+1
+preceding theorems toshow thatn{n) isoftheorder ofmagnitude of asn1
+n—>«oandalsotogetagood evaluation ofn(n) forsmall n.
+Theproblem israther interesting mathematically, for itinvolves additive
+number theory, asubject with few ifanyprevious applications. Letus
+firstconsider afewsimple cases. Suppose wearerealizing afunction with
+thetreeofFig. 9.Thethree variables appear asfollows:
+W7
+,X,Y appear
+2,4,8 times, respectively-
+or,interms oftransfer elements*
+1,2,4.
+Now,W,X,andYmaybeinterchanged inanywaywithout altering the
+operation ofthetree. Alsowecaninterchange XandYinthelower branch
+ofthetreeonlywithout altering, itsoperation. Thiswould give thedis-
+tribution (Fig. 19)
+1,3,3
+*Inthissection weshallalways speak interms oftransfer elements.
+
+
+82 BELLSYSTEM TECHNICAL JOURNAL
+Atreewith fourbays canbeconstructed withanyofthefollowing dis-
+tributions
+WXYZ
+1, 2,4,8=1,2,4,+1,2,4
+1, 2, 5,7=1,2,4+1,3,3
+1, 2, 6,6=1,2,4+ 1,4,2
+1, 3, 3,8=1,2,4+2,1,4
+1, 3,4,7=1,3,3+2,1,4
+1, 3, 5,6=1,4,2+2,1,4
+1, 4, 4,6=1,3,3+3,1,3
+1, 4, 5,5=1,4,2+3,1,3
+andthevariables maybeinterchanged inanymanner. The"sums" onthe
+rightshowhow these distributions areobtained. The first setofnumbers
+represents theupper halfofthetreeandthesecond setthelower half. They
+areallreduced tothesumofsets 1,2,4or1,3,3insome order, andthese
+setsareobtainable fortreeswith 3bays aswealready noted. Ingeneral itis
+clear that ifwecanobtain thedistributions
+oi ,o-i ,fl3,••,an
+bi ,hi ,b3,•••,b„
+foratreewithnbaysthenwecanobtain thedistribution
+1,fli+bi ,ao+b2 ,•,an+bn
+foratreewithn+1bays.
+Now note that allthedistributions shown have thefollowing property:
+anyonemaybeobtained from the first, 1,2,4,8,bymoving oneormore
+unitsfrom alarger number toasmaller number, orbyasuccession ofsuch
+operations, without moving anyunits tothenumber 1.Thus 1,3,3,8is
+obtained bymoving aunitfrom4to2.The set 1,4,5,5isobtained by
+firstmoving twounitsfrom the8tothe2,thenoneunit tothe4.Further-
+more, every setthatmaybeobtained from theset1,2,4,8bythisprocess
+appears asapossible distribution. Thisoperation issomewhat analogous
+toheat flow—heatcanonly flowfrom ahotter body toacooler onejustas
+unitscanonlybetransferred fromhigher numbers tolower ones intheabove.
+These considerations suggest thatadisjunctive treewithnbayscanbe
+constructed withanyload distribution obtained bysuch aflowfrom the
+initial distribution
+1,2,4,8,•••,2"-'
+Wewillnowshow that this isactually thecase.
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 83
+First letusmake thefollowing definition: Thesymbol(fli t<h,•••
+,an)
+represents any setofnumbers bi ,b2,••,b„thatmay beobtained from
+thesetai ,a2,••
+,anbythefollowing operations:
+1.Interchange ofletters.
+2.Aflowfrom alarger number toasmaller one,noflow,however, being
+allowed tothenumber 1.Thuswewould write
+1,2,4,8=(1,2,4,8)
+4,4,1,6-(1,2,4,8)
+1,3,10,3,10-(1,2,4,8,12)
+but2,2 7^(1,3). Itispossible toputtheconditions that
+61,hi,•••,b»—(fli ,a2,••,an) (6)
+intoamoremathematical form. Letthe a,-andthebibearranged asnon-
+decreasing sequences. Then anecessary and sufficient condition forthe
+relation (6)isthat
+(1) j><>2>< 5=1,2,••-,«,
+n n
+(2) zlbi=2^0; ,and
+1 1
+(3)There arethesamenumber ofl'samong theCjasamong thebi.
+Thenecessity of(2)and (3) isobvious. (1)follows from thefactthat if
+a,-isnon-decreasing, flowcanonly occur toward the left inthesequence
+andthesum22a<canon'yincrease. Also itiseasy toseethesufficiency of
+thecondition, for ifbi ,6j,•••,bnsatisfies (1), (2),and (3)wecangetthe
+bibyfirstbringing a\uptobibyaflowfrom the o,-asclose aspossible to
+Ji(keeping the"entropy" lowbyaflowbetween elements ofnearly the
+same value), then bringing aiuptob2(ifnecessary) etc.The details
+arefairly obvious.
+Additive number theory, ortheproblem ofdecomposing anumber intothe
+sumofnumbers satisfying certain conditions, (inourcase thisdefinition is
+generalized to"sets ofnumbers") enters through thefollowing Lemma:
+Lemma: If01 ,02 ,•••,an=(2,4,8,•••,2")
+thenwecandecompose thea,intothesum oftwosets
+a.=bi+d
+such that
+h,bs,•••,bn-(1,2,4,•••
+,2-1
+)
+
+
+84 BELLSYSTEM TECHNICAL JOURNAL
+and
+cXict,•••,«.- (1,2,4,•••,2-*)
+Wemayassume the a,-arranged inanon-decreasing sequence, a\<cs<
+,{3< ••<an.Incase ax=2theproof iseasy.Wehave
+1,2,4,••,2-1 B
+1,2,4,•••,2-1 C
+2,4,8,•••,2- A
+andaflowhasoccurred intheset
+4,8,16,•••,2"
+togive a%,a*,.•••, a„ .Nowanypermissible flow inCcorresponds toa
+permissible flow ineitherAorBsince if
+Cj=a,-+bj>Ci=at+ &,•
+then either a>>a,- or &,•>6,
+Thus ateach flow inthesumwecanmake acorresponding flow inoneorthe
+other ofthesummands tokeep theaddition true.
+Nowsuppose fli>2.Since the a,-arenon-decreasing
+(n-1)a2<(2"+1-2)-fll<2n+1-2-3
+Hence
+a,-1< r^-1<2"" 1
+n—1
+thelastinequality being obvious forn>5andreadily verified forn<5.
+Thisshows that (oi—1)and(c2—1)liebetween somepowers oftwointhe
+set
+1,2,4,•••,2-1
+Suppose
+2*- 1<(fll-1)<2"
+2"- 1<(cj-1)<a" q<p<(n- 1)-
+Allow aflowbetween 2«and29-1until oneofthem reaches (ax—1),the
+other (say)R;similarly for(c2-1)theother reaching S.Asthestart
+toward ourdecomposition, then,wehave thesets (after interchanges)
+L
+(<h-
+1-1) 1
+02~-12,4-
+2,4- •2fl-2R
+2,-i2«+i
+.
+29••2P_12P
+•2P_252P+1
+•
+2p+i..2n-l
+•2n_1
+<Zl (U 4,8••2-12P+2-•2"
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 85
+Wemustnow adjust thevalues totheright ofL—Ltothevalues
+fls,&4 ,•••
+,an.Letusdenote thesequence
+4,8,•••
+,2«-», (2*"1+R),3-2', 3-2«+J
+,••(2"4-S),2*±\ ••
+,2»
+by/*i ,Ms ,•••
+,p-n-i .Now since alltherows intheabove addition are
+non-decreasing totheright ofL—L,andnol'sappear, wewillhaveproved
+thelemma ifwecanshow that
+» i+3
+Z/«<£<*. i=1,2,•••,(«- 2)
+sincewehaveshown thistobeasufficient condition that
+at,a4,•
+,a„=(m,nn,••
+,/in_2)
+and thedecomposition proof weused forthe firstpart willwork. For
+i<g—2,i.e.,before theterm (29-1+R)
+£ m."=4(2'-1)
+and
+since
+Hence»-+sZdi>ia2>i2v~l>i29~1
+q<P
+ZM.<2o,- »<o—2
+1 s
+Next, for(g—1)<i<(p—3),i.e.,before theterm (2*+S)
+iZM.=4(2«-1-1)+R+3-2,(2*'"' +1-1)
+<3-2,+1-4<3-2,+I-5
+since
+R<2"
+alsoagain
+.+3E<H>i2P~l
+sothat inthisinterval wealsohave thedesired inequality. Finally forthe
+lastinterval,
+
+
+86 BELLSYSTEM TECHNICAL JOURNAL
+T.Ml-=2*_1-a}-a2<2i+3-fli-<h-2
+and
+sincet+3 «+»
+y*.at=zlQi—ax—a-2>2l—ax—a2—2
+ai ,«2 ,•••,a„=(2,4,8,•••,2n
+)
+This proves thelemma.
+5.TheDisjunctive Tree
+Itisnoweasy toprove thefollowing:
+Theorem 8:Adisjunctive treeofnbayscanbeconstructed withany dis-
+tribution
+ax,a*,•••,a.=(1,2,4,•••,2"" 1
+).
+Wemayprove thisjbyinduction. Wehave seen ittobetrue forn=
+2,3,4.Assuming itforn,itmustbetrue forn+1since theLemma shows
+thatany
+ax,at ,•••,fln=(2,4,8,••,2-)
+canbedecomposed intoasumwhich, byassumption, canberealized forthe
+twobranches ofthetree.
+Itisclear thatamong thepossible distributions
+(1,2,4,•••,2"" 1
+)
+forthetree,an"almost uniform" onecanbefound forallthevariables but
+one. That is,wecandistribute theloadon(n—1)ofthem uniformly
+except atworst foroneelement. Weget, infact, for
+n=1 1
+n=2 1,2
+n=3 1,3,3
+n=4 1,4,5,5,
+n=5 1,7,7,8,8,
+n=6 1,12,12,12,13,13
+n=71,21,21,21,21,21,21
+etc.
+asnearly uniform distributions.
+6.Other Distribution Problems
+Now letusconsider theproblem ofload distribution inseries-parallel
+circuits. Weshall prove thefollowing:
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 87
+Theorem 9:Anyfunction f{X\ ,Xi ,•,X„)may berealized with a
+series-parallel circuit with thefollowing distribution:
+(1,2,4,•••
+,2»- 2
+),2'- 2
+interms oftransfer elements.
+Thisweprove byinduction. Itistrue for //=3,sinceanyfunction of
+three variables canberealized asfollows:
+f(X, Y,Z)=[X+/,(Y,Z))[X>+U(Y,Z)]
+and/i(F, Z)and/ 2(F,Z)caneachberealized withonetransfer onYand
+oneonZ.Thus/(X, Y,Z)canberealized with thedistribution 1,2,2.
+Nowassuming thetheorem true for(n—1)wehave
+f(Xl ,Z2,••,Xn)=[Xn+/x(Xx ,X2 , ,*_)]
+[Xn-\-fc\X\ ,X2,•'',^n-l)]
+and
+2,4,8,•••,2'- 3
+2,4,8,••
+,2«- 3
+4,8,16,•••,2«"'
+Asimple application oftheLemma thus gives thedesired result. Many
+distributions beside those given byTheorem 9arepossible butnosimple
+criterion hasyetbeen found fordescribing them.Wecannot sayany
+distribution
+(1,2,4,8,•••,2-^2-*)
+(atleast from ouranalysis) since forexample
+3,6,6,7=(2,4,8,8)
+cannot bedecomposed intotwosets
+ci ,o2,a3,at=(1,2,4,4)
+and
+bi,b2,bi,bi=(1,2,4,4)
+Itappears, however, thatthealmost uniform case isadmissible.
+Asafinalexample inload distribution wewillconsider thecase ofanet-
+work inwhich anumber oftrees inthesame variables aretoberealized.
+Alargenumber ofsuch cases willbefound later. Thefollowing isfairly
+obvious fromwhatwehave already proved.
+
+
+88 BELLSYSTEM TECHNICAL JOURNAL
+Theorem 10:Itispossible toconstruct mdifferent trees inthesamenvariables
+with thefollowing distribution:
+aifa2,-'-,an= (tn,2m,4w,•••,2n~1m)
+Itisinteresting tonotethatunder these conditions thebothersome 1disap-
+pears form>1.Wecanequalize theloadonallnofthevariables, notjust
+n—1ofthem, towithin, atworst, onetransfer element.
+7.TheFunction \i{ri)
+Wearenow inaposition tostudy thebehavior ofthefunction \i{n).
+This willbedone inconjunction with atreatment oftheload distributions
+possible forthegeneral function ofnvariables. Wehave already shown
+thatanyfunction ofthree variables canberealized with thedistribution
+1,1,2
+interms oftransfer elements, and,consequently n(3)<4.
+Any function offour variables canberealized with thedistribution
+1,1,(2,4)
+Hence /x(4)<6.Forfivevariables wecangetthedistribution
+1,1,(2,4,8)
+oralternatively
+1,5,5,(2,4)
+sothatm(5)<10.With sixvariables wecanget
+1,5,5,(2,4,8)andm(6)<10
+forseven,
+1,5,5,(2,4,8,16)andn(7)<16
+etc. Also, sincewecandistribute uniformly onallthevariables inatree
+except one, itispossible togiveatheorem analogous toTheorem 7forthe
+function m(«):
+Theorem 11:For alln
+Foralmost alln
+-.n+22'
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 89
+['oraninfinite number ofni,
+m(»)<(1+•)—
+n"
+Theproof isdirect and willbeomitted.
+PART III:SPECIAL FUNCTIONS
+8.Functional Relations
+Wehave seenthatalmost allfunctions require theorder of
+2»+i
+«*~
+elements perrelay fortheir realization. Yetalittle experience with the
+circuits encountered inpractice shows that this figure ismuch toolarge.
+Inasender, forexample, wheremany functions arerealized, some ofthem
+involving alargenumber ofvariables, therelays carry anaverage ofperhaps
+7or8contacts. Infact,almost allrelays encountered inpractice have less
+than20elements. What isthereason forthisparadox? Theanswer, of
+course, isthat thefunctions encountered inpractice arefarfrom being a
+random selection. Again wehaveananalogue withtranscendental numbers—although almost allnumbers aretranscendental, thechance offirsten-
+countering atranscendental number onopening amathematics book at
+random iscertainly much lessthan 1.Thefunctions actually encountered
+aresimpler than thegeneral runofBoolean functions foratleasttwomajor
+reasons:
+(1)Acircuit designer hasconsiderable freedom inthechoice offunctions
+toberealized inagiven design problem, andcanoften choose fairly simple
+ones. Forexample, indesigning translation circuits fortelephone work itis
+common touseadditive codes andalsocodes inwhich thesamenumber of
+relays areoperated foreach possible digit. Thefundamental logical simplic-
+ityofthese codes reflects inasimplicity ofthecircuits necessary tohandle
+them.
+(2)Most ofthethings required ofrelay circuits areofalogically simple
+nature. Themost important aspect ofthissimplicity isthatmost circuits
+canbebroken down into alargenumber ofsmall circuits. Inplace of
+realizing afunction ofalargenumber ofvariables, werealize many functions,
+each ofasmallnumber ofvariables, andthenperhaps some function ofthese
+functions. Togetanidea oftheeffectiveness ofthisconsider thefollowing
+example: Suppose wearetorealize afunction
+f(Xi ,Xi ,•••,AT2n)
+
+
+90 BELLSYSTEM TECHNICAL JOURNAL
+ofInvariables. Thebest limitwecanputonthetotalnumber ofelements
+-,2n+l2""
+necessary isabout—— .However, ifweknow that/isafunction oftwo
+Zll
+functions /iand/2,each involving onlynofthevariables, i.e. if
+/=g(h,h)
+/,-fx(Xx,Xi ,•••,Xn)
+fl=f2(X n+i,Xn+2,•••,Xzn)
+thenwecanrealize /withabout
+rtn+l
+4•—
+n
+22n+l
+elements, amuch lower order ofinfinity than—— .Ifgisoneofthesimpler
+t*'tv
+functions oftwovariables; forexample ifg(J x,/2)=/i+ft ,orinanycase
+atthecost oftwoadditional relays, wecandostillbetter andrealize/ with
+2"+i
+,., .
+aD0U t2 elements. Ingeneral, themorewecandecompose asynthesis
+n
+problem intoacombination ofsimple problems, thesimpler thefinal circuits.
+The significant point here isthat,duetothefactthat/satisfies acertain
+functional relation
+f=g(h,h),
+wecanfindasimple circuit for itcompared totheaverage function ofthe
+samenumber ofvariables.
+Thistype offunctional relation maybecalled functional separability. It
+isoften easily detected inthecircuit requirements andcanalways beused
+toreduce thelimits onthenumber ofelements required. Wewillnowshow
+thatmost functions arenotfunctionally separable.
+Theorem 12:Thefraction ofallfunctions ofnvariables thatcanbewritten
+intheform
+f=g{h{X x X.),Xs+1 ,•••,Xn)
+where 1<s<n—1approaches zeroasnapproaches °o.
+Wecanselect thesvariables toappear inhin(
+Jways; thefunction h
+thenhas22'possibilities andghas22"""possibilities, since ithasn-s+1
+arguments. The totalnumber offunctionally separable functions isthere-
+foredominated by
+
+
+SYNTHESIS OFSWITCHING CIRCUITS
+n-291
+5vW\~2«-2»-»+»
+W„22r,2""l<(«-3)^2^2
+andtheratio ofthisto2—>asn—>oo.
+Fig.20—Useofseparability toreduce number ofelements.
+Fig.21—Useofseparability oftwosetsofvariables.
+Incasesuch afunctional separability occurs, thegeneral design method
+described above canbeused toadvantage inmany cases. This istypified
+bythecircuit ofFig.20. Iftheseparability ismore extensive, e.g.
+/=g(/'i(X 1Xs),J,2(XS+1Xt),Xl+l , ,Xn)
+thecircuit ofFig.21canbeused, using for"A2"either hior //2,whichever
+requires theleastnumber ofelements forrealization together with its
+negative.
+Wewillnowconsider asecond type offunctional relation which often
+occurs inpractice andaids ineconomical realization. Thistype ofrelation
+maybecalled group invariance andaspecial case ofit,functions symmetric
+
+
+92 BELLSYSTEM TECHNICAL JOURNAL
+inallvariables, hasbeen considered in(6).Afunction f(X\ ,•••
+,Xn)
+willbesaidtobesymmetric inXi ,X2ifitsatisfies therelation
+f(Xx,X2,•••,Xn)-/(*a ,Xx,•••,Xn).
+Itissymmetric inX\andX'2ifitsatisfies theequation
+f(Xx,Xt,••,X»)-/(*{.ii.Ii,-,^
+These alsoarespecial cases ofthetype offunctional relationships wewill
+consider. Letusdenote by
+\too...o=jtheoperation ofleaving thevariables inafunction asthey
+are,
+Nloo• theoperation ofnegating thefirstvariable (i.e.theoneoccupy-
+ingthe first position),
+Nolo• •othat ofnegating thesecond variable,
+AT
+ii•••othat ofnegating thefirsttwo, etc.
+SothatNutflX, Y,Z)=f(X'YZ') etc.
+Thesymbols Niformanabelian group, with theimportant property that
+eachelement isitsown inverse; NiNi=ITheproduct oftwoelements
+maybeeasily found—iiNiNj =Nk,kisthenumber found byadding i
+andjasthough theywerenumbers inthebasetwobutwithout carrying.
+Note that there are2nelements tothis"negating" group. Now let
+Si,2,z,-..,n —I—theoperation ofleaving thevariables ofafunction inthe
+same order
+S2lX,i,...,n= bethat ofinterchanging thefirsttwovariables
+Sa,»,i.4....,» = thatofinverting theorder ofthefirst three, etc.
+Thus
+WU, Y,Z)=f(Z,X,Y)
+Smf(Z,X,Y)=Sluf(X, Y,Z)=f(Y, Z,X)
+etc.TheSialsoform agroup, thefamous "substitution" or"symmetric"
+group. Itisoforder «!. Itdoes not,however, have thesimple properties
+ofthenegating group—itisnotabelean (n>2)nordoes ithave the self
+inverse property.* Thenegating group isnotcyclic ifn>2,thesymmetric
+group isnot ifn>3.
+Theouter product ofthese twogroups forms agroupGwhose general
+element isoftheformNiSjandsince imayassume 2Bvalues and/, n!values,
+theorder ofGis2n»!
+Itiseasily seen thatSjNi=NhSj, where kmaybeobtained byper-
+*This isredundant; the selfinverse property implies commutativity for ifXX=/
+thenXY=(X7)"1=r*X~* =YX.
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 93
+forming on i,considered asanordered sequence ofzero's and one's, the
+permutation Sj .Thus
+Bythisruleanyproduct suchasNiSjNtNi SmN„SPcanbereduced tothe
+form
+NiNj NnSvS9Sr
+andthiscanthenbereduced tothestandard formNiSj.
+Afunction/ willbesaid tohave anon-trivial group invariance ifthere are
+elements NiSj ofGother than/such that identically inallvariables
+NiSt f-/.
+Itisevident that thesetofallsuchelements, NiSj ,foragiven function,
+forms asubgroupdofG,since theproduct oftwosuchelements isanele-
+ment, theinverse ofsuchanelement isanelement, and allfunctions are
+invariant under /.
+Agroup operator leaving afunction /invariant implies certain equalities
+among theterms appearing intheexpanded form of/.Toshow this,
+consider afixedNiSj ,which changes insomeway thevariables (say)
+Xi ,X2 ,•,Xr.Let the function f(X\,•
+,X») beexpanded
+about X\ ,•••,Xrl
+/=[Xi+x»+•+x r+Mx r+l,'->,xn)]
+[Xi+X2+•••+Xr+f2(Xr+l ,•••,X,)]
+[Xi+X't+•••+Xr+MA% +1 ,•••
+,A\)l
+If/satisfiesN{Sjf=/wewillshow that there areatleast\2requalities
+between thefunctions /i,/i,• •
+,fir.Thus thenumber offunctions
+satisfying thisrelation is
+<(2l""r
+)!2r=212"
+since each independent /,canbeanyofjust 2 functions, andthere are
+atmostf2rindependent ones. Suppose NiSj changes
+Xi ,X2,•••,Xr A
+into
+Aqi >Xat ,•••,Xar B
+where the*'smaybeeither primes ornonprimes, butnoXai=A\ .Give
+
+
+94 BELLSYSTEM TECHNICAL JOURNAL
+Xithevalue 0.This fixessome element inBnamely,Xaiwhere a,-=1.
+There aretwocases:
+(1)Ifthiselement isthefirstterm, a\=1,thenwehave
+QX 2,---,Xr
+1Xai ,•••,Xar
+LettingX2,• •
+,Xrrange through their 2r_1possible setsofvalues gives
+2T~Xequalities between different functions oftheset /,-since these are
+really
+f(Xi,X2,• •,Xr,Xr+i,•,Xn)
+withXi ,X2,•••,Xrfixed atadefinite setofvalues.
+(2)Iftheelement inquestion isanother term, sayXa2 ,wethen giveX2
+inlineAtheopposite value,X2=(X*2)'=(X2)'.Nowproceeding as
+before with theremaining r—2variables weestablish 2r~equalities between
+the/,.
+Now there arenotmore* than 2"nl relations
+NiSjf-/
+ofthegroup invariant type thatafunction could satisfy, sothatthenumber
+offunctions satisfying anynon-trivial relation
+<2nn\2i2\
+Since
+2"«! 2J2722"->0 as»-*00
+wehave:
+Theorem 13:Almost allfunctions havenonon-trivial group invariance.
+Itappears fromTheorems 12and13andfromother results thatalmost all
+functions areofanextremely chaotic nature, exhibiting nosymmetries or
+functional relations ofanykind. This result might beanticipated from the
+factthatsuch relations generally lead toaconsiderable reduction inthe
+number ofelements required, andwehave seenthatalmost allfunctions are
+fairly high in"complexity".
+Ifwearesynthesizing afunction bythedisjunctive treemethod andthe
+function hasagroup invariance involving thevariables
+^1 ,X2,•••,Xr
+atleast 2r~2oftheterminals inthecorresponding treecanbeconnected to
+*Ourfactor isreally lessthan thisbecause, first,wemust exclude NiSj=I;andsecond,
+except forselfinverse elements, onerelation ofthistype implies others, viz.thepowers
+(NiSM =f.
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 95
+other ones, since atleast thismany equalities existbetween thefunctions to
+bejoined tothese terminals. This will, ingeneral, produce aconsiderable
+reduction inthecontact requirements ontheremaining variables. Alsoan
+economy canusually beachieved intheMnetwork. Inorder toapply this
+Fig.22—Networks forgroup invariance intwovariables.
+Fig.23—Networks forgroup invariance inthree variables.
+method ofdesign, however, itisessential thatwehave amethod ofdeter-
+mining which, ifany, oftheNiSj leave afunction unchanged. The
+following theorem, although not allthatmight behoped for,shows thatwe
+don't need toevaluate NiS,-f forallNiSjbutonlytheNffandSjf.
+Theorem 14:Anecessary and sufficient condition thatN%Sjf=fisthat
+Nif=Sif.
+This follows immediately from theselfinverse property ofthe 2v<.Of
+
+
+% BELLSYSTEM TECHNICAL JOURNAL
+course, group invariance canoften berecognized directly from circuit re-
+quirements inadesign problem.
+Tables IandIIhavebeen constructed forcases where arelation exists
+involving twoorthree variables. Toillustrate their use,suppose wehave
+afunction such that
+NuiSmf-f
+Fig.24—
+Mnetwork forpartially symmetric functions.
+Thecorresponding entryZ'Y'X inthegroup table refers ustocircuit 9of
+Fig. 23.Theasterisk shows thatthecircuitmaybeused directly; ifthere
+isnoasterisk aninterchange ofvariables isrequired. Weexpand /about
+X,Y,Zandonlytwodifferent functions willappear inthefactors. These
+twofunctions arerealized withtwotrees extending from theterminals ofthe
+network 9.Anysuchfunction/ canberealized with (using justonevariable
+intheNnetwork)
+9+2(2"~4—2)-f-2
+=2H~*
+-f-7 elements,
+
+
+SYNTHESIS OFSWITCHING CIRCUITS 97
+amuch better limitthan thecorresponding
+2'- 1+18
+forthegeneral function.
+Table I
+Group Invariaxce Involving Two Variables (Superscripts Refer toFig. 22)
+Sn 521
+Noo (.ty) ()'a-)1*
+Nol (-v/)1*
+(>1^3*
+Ni0 (-V>y)l{y'x)3*
+Nn (*Y) (y'x'Y
+Table II
+Group Invarianck:Involving Three Variables (Superscripts Refer toFig.
+Sin Sim Sm Ssil SlU Sail
+N„00XYZ XZY« YXZ'* FZA3* ZA'I'2*ZFA-
+NuOl XYZ'3*XZY'** YXZ''I'ZA"9ZAT"JZI'A"
+Nolo XV'Z
+3 XZ'Y** YX'Z4I'Z'A" ZA'J'9ZY'X1
+N„n XY'Z'* XZ'Y'1YX'Z'8YZ'X" ZX'Y'3 ZY'X'»
+Nloo X'YZ3 X'ZY1*Y'XZ4Y'ZX* Z'XY9Z'YX*
+Ar
+ioiX'YZ'* X'ZY'8*Y'XZ's*Y'ZX" Z'XY'2 Z'YX'1
+Nno X'Y'Z6*X'Z'Y** Y'X'ZiY'Z'X* Z'X'Y3 Z'Y'X6*
+Nut X'Y'Z' X'Z'Y'i Y'X'Z'7Y'Z'X"» Z'X'Y'3Z'Y'X'''
+9.Partially Symmetric Functions
+Wewillsaythatafunction is"partially symmetric" or"symmetric ina
+certain setofvariables" ifthese variables may beinterchanged atwill
+without altering thefunction. Thus
+XYZW+(AT+X'Y)W+WZ'
+issymmetric inXandF.Partial symmetry isevidently aspecial case of
+thegeneral group invariance wehavebeen considering. Itisknown that
+anyfunction symmetric inallvariables canberealized with notmore than
+irelements, where nisthenumber ofvariables. Inthissection wewill
+improve andgeneralize this result.
+Theorem 15:Anyfunction f(Xi ,A"2,•••,Xm ,I'i ,F2,•••Y„)sym-
+metric inA'i ,X2,•••,Ar
+,„canbewritten
+f{X* ,A2,•••,Xm ,V, ,F2,•••
+,F„)
+=[S(X! ,A'o ,•••
+,A„,)+f{Yi ,Y, ,,Yn)].
+[S1(Xl,X2, ,Xm)+MY, ,F2,•••,F„)].
+[Sm(Xi ,X2,•••,Xm)+fm{Yi ,Y,, ,Yn)] (6)
+where
+fK(Yx,F2,•••,Fn)
+=/(0, 0,•••,0,1,1,••.,1,Fx ,F2,••-,Yn)
+£0's (m-k)l's
+
+
+98 BELLSYSTEM TECHNICAL JOURNAL
+andSk(Xi ,X*,•••
+,Xm)isthesymmetric function ofXi ,X§,• •,X»
+withkfor itsonlya-number.
+Thistheorem follows from thefactthatsince/ issymmetric inXi ,X2,
+•••
+,X,„thevalue of/depends onlyonthenumber ofX'sthatarezeroand
+thevalues oftheI"s. Ifexactly A'oftheX'sarezero thevalue of/is
+therefore fK ,buttheright-hand sideof(6)reduces tofKinthiscase, since
+thenSiiXi ,Xi,,Xm)=1,J9*K, andSK=0.
+Theexpansion (6) isofaform suitable forourdesign method. Wecan
+realize thedisjunctive functions SK(Xi ,X2,••
+,X„)with thesymmetric
+function lattice andcontinue with thegeneral treenetwork asinFig. 24,
+onetreefromeach level ofthesymmetric function network. Stopping the
+trees atF„_i ,itisclear thattheentire network isdisjunctive andasecond
+application ofTheorem 1allows ustocomplete thefunction/ withtwo ele-
+ments fromF„Thuswehave
+Theorem 16.Anyfunction ofm+nvariables symmetric inmofthemcan
+berealized with notmore than thesmaller of
+(m4-1)(X(»)+m)or(m+1)(2»+m-2)+2
+elements. Inparticular afunction ofnvariables symmetric inn-2ormore
+ofthemcanberealized with notmore than
+n-—n+2
+elements.
+Ifthefunction issymmetric inX\ ,X2,••,Xm ,andalsoinYi,F2,••,
+Fr,andnotinZi ,Z2,• •
+,Z„itmayberealized bythesame method,
+using symmetric function networks inplace oftrees fortheFvariables.
+Itshould beexpanded firstabout theX's(assuming m<r)thenabout the
+F'sand finally theZ's.TheZpart willbeasetof(m+l)(r+1)trees.
+References'
+1.G.Birkhoffand S.MacLane, "ASurvey ofModern Algebra," Macmillan, 1941.
+2.L.Couturat, ''The Algebra ofLogic," Open Court, 1914.
+3JH.Wootlger, "The Axiomatic Method inBiology," Cambridge, 1937.
+4.W.S.McCulloch andW.Pitts,"ALogical Calculus oftheIdeasImmanent inNervous
+Activity," Bull. Math. Biophysics, V.5,p.115,1943.
+5.E.C.Berkeley, "Boolean Algebra andApplications toInsurance," Record {American
+Institute ofActuaries), V.26,p.373,.1947.IC.,.n. ..„r,
+6CEShannon, "ASymbolic Analysis ofRelay andSwitching Circuits, Irons. A.
+I.E.E.,V.57,p.713,1938.
+7.T.Riordan andC.E.Shannon, "TheNumber ofTwo-Terminal Series Parallel Net-
+works," Journal ofMathematics andPhysics, V.21,No. 2,p.83,1942.
+8.A.Nakashima, Various papers inNippon Electrical Communication Engineering, April,
+Sept., Nov., Dec, 1938.
+9HPiesch, Papers inArchiv. from Elcctrotechnik XXXIII, p.692and p.733,1939.
+10GAMontgomerie, "Sketch foranAlgebra ofRelay andContactor Circuits," Jour.
+I.ojE. E.,V.95,Part III,No.36,July 1948, p.303.
+11GPolya, "SurLesTypes desPropositions Composers," Journal ofSymbolic Logic,
+V.5,No. 3,p.98,1940.
+
+

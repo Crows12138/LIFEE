@@ -1,0 +1,2155 @@
+
+
+Can  Automatic  Calculating  Machines 
+Be  Said  To  Think?  (1952) 
+
+Alan  Turing,  Richard  Braithwaite, 
+Geoffrey  Jefferson ,  Max  Newman 
+
+
+Introduction 
+
+Jack  Copeland 
+
+This  discussion  between  Turing,  Newman,  R.  B.  Braithwaite,  and  G.  Jefferson  was 
+recorded  by  the  BBC  on  10  January  1952  and  broadcast  on  BBC  Radio  on  the 
+14th,  and  again  on  the  23rd,  of  that  month.  This  is  the  earliest  known  recorded 
+discussion  of  artificial  intelligence.1 
+
+
+The  Participants 
+
+The  anchor  man  of  the  discussion  is  Richard  Braithwaite  (1900-90).  Braithwaite 
+was  at  the  time  Sidgwick  Lecturer  in  Moral  Science  at  the  University  of  Cam¬ 
+bridge,  where  the  following  year  he  was  appointed  Knightsbridge  Professor  of 
+Moral  Philosophy.  Like  Turing,  he  was  a  Fellow  of  King’s  College.  Braithwaite’s 
+main  work  lay  in  the  philosophy  of  science  and  in  decision  and  games  theory 
+(which  he  applied  in  moral  philosophy). 
+
+Geoffrey  Jefferson  (1886-1961)  retired  from  the  Chair  of  Neurosurgery  at 
+Manchester  University  in  1951.  In  his  Lister  Oration,  delivered  at  the  Royal 
+
+
+1  The  present  material  together  with  the  dialogues  recorded  in  Wittgenstein’s  Lectures  on  the  Foundations 
+of  Mathematics  (ed.  C.  Diamond,  Ithaca,  NY:  Cornell  University  Press,  1976)  are  the  only  known  transcrip¬ 
+tions  of  discussions  involving  Turing.  (Some  rather  compressed  notes  of  a  discussion  between  Turing, 
+Newman,  Young,  Polanyi,  and  others,  entitled  ‘Rough  Draft  of  the  Discussion  on  the  Mind  and  the 
+Computing  Machine,  held  on  Thursday,  27th  October,  1949,  in  the  Philosophy  Seminar’  (anon.,  n.d., 
+University  of  Manchester  Philosophy  Department),  are  in  The  Turing  Archive  for  the  History  of  Computing 
+<www.AlanTuring.net/philosophy_seminar_octl949>.  I  am  grateful  to  Wolfe  Mays  for  making  these  notes 
+available.) 
+
+
+488  I  Jack  Copeland 
+
+
+College  of  Surgeons  of  England  on  9  June  1949,  he  had  declared:  ‘When  we  hear 
+it  said  that  wireless  valves  think,  we  may  despair  of  language.’2 
+
+Turing  gave  a  substantial  discussion  of  Jefferson’s  views  in  ‘Computing  Ma¬ 
+chinery  and  Intelligence’  (pp.  451-2),  rebutting  the  ‘argument  from  conscious¬ 
+ness’  that  he  found  in  the  Lister  Oration.  In  the  present  chapter,  Jefferson  takes 
+numerous  pot  shots  at  the  notion  of  a  machine  thinking,  which  for  the  most  part 
+Turing  and  Newman  are  easily  able  to  turn  aside. 
+
+Jefferson  may  have  thought  little  of  the  idea  of  machine  intelligence,  but  he 
+held  Turing  in  considerable  regard,  saying  after  Turing’s  death  that  he  ‘had  real 
+genius,  it  shone  from  him’.3 
+
+
+The  Turing  Test  Revisited 
+
+From  the  point  of  view  of  Turing  scholarship,  the  most  important  parts  of  ‘Can 
+Automatic  Calculating  Machines  Be  Said  to  Think’  are  the  passages  containing 
+Turing’s  exposition  of  the  imitation  game  or  Turing  test.  The  description  of  the 
+test  that  Turing  gave  in  ‘Computing  Machinery  and  Intelligence’  is  here  modified 
+in  a  number  of  significant  ways. 
+
+The  lone  interrogator  of  the  original  version  is  replaced  by  a  ‘jury’  (p.  495). 
+Each  jury  must  judge  ‘quite  a  number  of  times’  and  ‘sometimes  they  really  are 
+dealing  with  a  man  and  not  a  machine’.  For  a  machine  to  pass  the  test,  a 
+‘considerable  proportion’  of  the  jury  ‘must  be  taken  in  by  the  pretence’.  The 
+members  of  the  jury  interrogate  the  contestants,  but  their  contributions  ‘don’t 
+really  have  to  be  questions,  any  more  than  questions  in  a  law  court  are  really 
+questions’;  for  example,  ‘I  put  it  to  you  that  you  are  only  pretending  to  be  a  man’ 
+is  ‘quite  in  order’. 
+
+In  its  original  presentation  (Chapter  11),  the  Turing  test  is  a  three-party  game 
+involving  the  parallel  interrogation  by  a  human  of  a  computer  and  a  human  foil. 
+According  to  the  1952  formulation,  however,  members  of  a  jury  interview  a 
+series  of  contestants  one  at  a  time,  some  of  the  contestants  being  machines  and 
+some  humans.  In  the  original  form  of  the  test,  each  interrogator  knows  that  one 
+of  each  pair  of  interviewees  is  a  human  and  one  a  machine,  but  in  the  single¬ 
+interviewee  version  of  the  test,  this  condition  is  necessarily  absent.  It  appears  that 
+the  earlier  formulation  is  in  fact  superior,  since  the  single-interviewee  version  is 
+open  to  a  biasing  effect  which  disfavours  the  machine.  Results  of  the  Loebner 
+series  of  single-interviewee  Turing  tests  reveal  a  strong  propensity  among  jurors 
+to  classify  human  respondents  as  machines.  (New  York  businessman  Elugh 
+Loebner  started  the  annual  Loebner  Prize  competition  in  1991,  offering  the 
+
+
+2  G.  Jefferson,  ‘The  Mind  of  Mechanical  Man’,  British  Medical  Journal,  25  June  1949,  1105-10  (1110). 
+
+3  Letter  from  Jefferson  to  Sara  Turing,  18  Oct.  1954.  The  letter  is  among  the  Turing  Papers  in  the  Modern 
+Archive  Centre,  King’s  College,  Cambridge  (catalogue  reference  A  16). 
+
+
+Can  Automatic  Calculating  Machines  Be  Said  To  Think?  I  489 
+
+sum  of  $100,000  to  the  programmer(s)  of  the  first  programme  to  pass  the  Turing 
+test.  $2,000  is  awarded  each  year  for  the  best  effort.  So  far  the  grand  prize 
+remains  unclaimed.)  In  the  Loebner  competition  held  at  Dartmouth  College, 
+New  Hampshire,  in  January  2000,  human  respondents  were  mistaken  for  com¬ 
+puters  on  ten  occasions,  a  computer  for  a  human  on  none.  The  same  effect  was 
+present  in  a  series  of  single-interviewee  tests  performed  with  Kenneth  Colby’s 
+historic  programme  Parry.4  In  a  total  of  ten  interviews,  there  were  five  misiden- 
+tifications;  in  four  of  these  a  human  respondent  was  mistaken  for  a  computer. 
+Presumably  this  phenomenon  is  the  result  of  a  determination  on  the  part  of  the 
+jurors  not  to  be  fooled  by  a  programme.  This  lengthening  of  the  odds  against  the 
+machine  cannot  occur  in  the  three-player  form  of  the  test. 
+
+
+Turing’s  Predictions 
+
+Turing  is  often  misquoted  as  having  predicted  that,  by  the  turn  of  the  twentieth 
+century,  artificial  intelligence  indistinguishable  from  human  intelligence  would 
+be  in  existence.  What  he  in  fact  wrote  in  1950  was  that  (p.  449): 
+
+in  about  fifty  years’  time  it  will  be  possible  to  programme  computers ...  to  make  them 
+play  the  imitation  game  so  well  that  an  average  interrogator  will  not  have  more  than  70 
+per  cent  chance  of  making  the  right  identification  after  five  minutes  of  questioning. 
+
+Some  commentators  have  reported  this  prediction  the  wrong  way  about,  as  the 
+claim  that,  by  the  end  of  the  twentieth  century,  computers  would  succeed  in 
+deceiving  the  interrogator  70  per  cent  of  the  time.5 
+
+In  ‘Can  Automatic  Calculating  Machines  Be  Said  to  Think’,  Turing  offered  a 
+prediction  that  is  interestingly  different  from  the  above,  and  which  seems  to 
+concern  success  of  a  more  substantial  nature  (p.  495): 
+
+Newmam  I  should  like  to  be  there  when  your  match  between  a  man  and  a  machine  takes 
+place,  and  perhaps  to  try  my  hand  at  making  up  some  of  the  questions.  But  that  will  be 
+a  long  time  from  now,  if  the  machine  is  to  stand  any  chance  with  no  questions  barred? 
+Turing-.  Oh  yes,  at  least  100  years,  I  should  say. 
+
+In  Chapter  11,  Turing  describes  a  form  of  the  imitation  game  in  which  the 
+interrogator  must  attempt  to  distinguish  between  a  woman  (the  foil)  and  a  man 
+pretending  to  be  a  woman.  This  form  of  the  game  serves  as  a  reference  point  for 
+evaluating  the  computer’s  performance  in  the  computer-human  imitation  game 
+(p.  441): 
+
+
+4  J.  F.  Heiser,  K.  M.  Colby,  W.  S.  Faught  and  R.  C.  Parkison,  ‘Can  Psychiatrists  Distinguish  a  Computer 
+Simulation  of  Paranoia  from  the  Real  Thing?’,  Journal  of  Psychiatric  Research,  15  (1980),  149-62. 
+
+5  See,  for  example,  R.  Brooks,  ‘Intelligence  without  Reason’,  in  L.  Steels  and  R.  Brooks  (eds.),  The 
+Artificial  Life  Route  to  Artificial  Intelligence  (Mahwah,  NJ:  Erlbaum,  1995),  n.  8,  and  P.  Millican  and  A.  Clark 
+(eds.),  Machines  and  Thought:  The  Legacy  of  Alan  Turing  (Oxford:  Oxford  University  Press,  1996),  61. 
+
+
+490  I  Jack  Copeland 
+
+
+We  now  ask  the  question,  ‘What  will  happen  when  a  machine  takes  the  part  of  A  in  this 
+[man-imitates-woman]  game?’  Will  the  interrogator  decide  wrongly  as  often  when  the 
+game  is  played  like  this  as  he  does  when  the  game  is  played  between  a  man  and  a  woman? 
+
+Reformulating  Turing’s  1952  prediction  in  these  terms  produces:  It  will  be  at 
+least  100  years  (2052)  before  a  computer  is  able  to  play  the  imitation  game 
+sufficiently  well  so  that  jurors  will  decide  wrongly  as  often  in  man-imitates- 
+woman  imitation  games  as  in  computer-imitates-human  imitation  games,  in 
+each  case  no  questions  being  barred. 
+
+
+‘Fiendish  Expert’  Objections  to  the  Turing  Test 
+
+‘Fiendish  expert’  objections,  of  which  there  are  many,  are  of  the  form:  ‘An  expert 
+could  unmask  the  computer  by  asking  it . . .  All  can  be  dealt  with  in  a  similar 
+fashion.  (Some  other  objections  to  the  test  are  discussed  in  the  introduction  to 
+Chapter  11.) 
+
+An  interesting  example  is  put  forward  by  Robert  French.6  French’s  objection 
+involves  the  phenomenon  of  associative  priming,  observed  in  what  psychologists 
+call  the  word/ non- word  recognition  task.  A  subject  seated  in  front  of  a  screen  is 
+presented  for  a  brief  time  with  what  may  or  may  not  be  a  word  (e.g.  ‘dog’, 
+‘dok’).  If  the  subject  recognizes  the  letters  as  a  word  he  or  she  must  press  a 
+button.  The  experimenter  measures  the  time  that  the  subject  takes  to  respond.  It 
+is  found  that,  on  average,  subjects  require  less  time  to  recognize  a  word  if  the 
+word  is  preceded  by  a  brief  presentation  of  an  associated  word  (e.g.  ‘fish’  may 
+facilitate  the  recognition  of ‘chips’,  ‘bread’  of ‘butter’).  French’s  claim  is  that  this 
+priming  effect  may  be  used  to  unmask  the  computer  in  the  Turing  test: 
+
+The  Turing  Test  interrogator  makes  use  of  this  phenomenon  as  follows.  The  day  before  the 
+Test,  she  selects  a  set  of  words  (and  non- words),  runs  the  lexical  decision  task  on  the 
+interviewees  and  records  average  recognition  times.  She  then  comes  to  the  Test  armed 
+with  the  results . . .  [and]  identifies  as  the  human  being  the  candidate  whose  results  more 
+closely  resemble  the  average  results  produced  by  her  sample  population  of  interviewees. 
+The  machine  would  invariably  fail  this  type  of  test  because  there  is  no  a  priori  way  of 
+determining  associative  strengths . . .  Virtually  the  only  way  a  machine  could  determine, 
+even  on  average,  all  of  the  associative  strengths  between  human  concepts  is  to  have 
+experienced  the  world  as  the  human  candidate  and  the  interviewers  had.7 
+
+Turing,  however,  was  happy  to  rule  out  expert  jurors.  In  ‘Can  Automatic 
+Calculating  Machines  Be  Said  to  Think’  he  said  that  the  interrogator  ‘should 
+not  be  expert  about  machines’  (p.  495),  and  in  chapter  10,  describing  the  chess¬ 
+player  version  of  the  test,  he  said  that  the  discriminator  should  be  a  ‘rather  poor’ 
+chess  player  (p.  431).  Turing  did  not  mention  other  kinds  of  expert,  but  the 
+
+6  R.  French,  ‘Subcognition  and  the  Limits  of  the  Turing  Test’,  Mind,  99  (1990),  53-65. 
+
+7  Ibid.  17. 
+
+
+Can  Automatic  Calculating  Machines  Be  Said  To  Think?  I  491 
+
+reasons  for  excluding  experts  about  machines  apply  equally  well  to  experts  about 
+minds. 
+
+In  any  case,  French’s  proposal  is  illegitimate.  The  specifications  of  the  Turing 
+test  are  clear:  the  interrogator  is  allowed  only  to  put  questions.  There  is  no 
+provision  for  the  use  of  the  equipment  necessary  for  administering  the  lexical 
+decision  task  and  for  measuring  the  contestants’  reaction  times.  One  might  as 
+well  allow  the  interrogator  to  bring  along  equipment  for  measuring  the  contest¬ 
+ants’  magnetic  fields  or  energy  dissipation.8 
+
+
+Can  Machines  Think? 
+
+In  Chapter  11,  Turing  said  that  the  question  ‘Can  machines  think?’  is  ‘too 
+meaningless  to  deserve  discussion’  (p.  449).  He  certainly  did  not  allow  this 
+view  to  prevent  him  from  indulging  rather  often  in  such  discussion.  In  the 
+present  chapter,  Turing  records  a  considerably  milder  attitude  to  the  question 
+(p.  495): 
+
+You  might  call  it  a  test  to  see  whether  the  machine  thinks,  but  it  would  be  better  to  avoid 
+begging  the  question,  and  say  that  the  machines  that  pass  are  (let’s  say)  ‘Grade  A’ 
+machines.  . . .  [The  question  whether]  machines  really  could  pass  the  test  [is]  not  the 
+same  as  ‘Do  machines  think?’,  but  it  seems  near  enough  for  our  present  purpose,  and 
+raises  much  the  same  difficulties. 
+
+In  Chapter  10  Turing  wrote  (p.  431): 
+
+The  extent  to  which  we  regard  something  as  behaving  in  an  intelligent  manner  is 
+determined  as  much  by  our  own  state  of  mind  and  training  as  by  the  properties  of  the 
+object  under  consideration.  If  we  are  able  to  explain  or  predict  its  behaviour ...  we  have 
+little  temptation  to  imagine  intelligence.  With  the  same  object  therefore  it  is  possible  that 
+one  man  would  consider  it  as  intelligent  and  another  would  not;  the  second  man  would 
+have  found  out  the  rules  of  its  behaviour. 
+
+Turing  develops  this  point  in  the  present  discussion  (p.  500): 
+
+As  soon  as  one  can  see  the  cause  and  effect  working  themselves  out  in  the  brain,  one 
+regards  it  as  not  being  thinking,  but  a  sort  of  unimaginative  donkey-work.  From  this  point 
+of  view  one  might  be  tempted  to  define  thinking  as  consisting  of  ‘those  mental  processes 
+that  we  don’t  understand’.  If  this  is  right  then  to  make  a  thinking  machine  is  to  make  one 
+which  does  interesting  things  without  our  really  understanding  quite  how  it  is  done. 
+
+Many  years  later  Marvin  Minsky  put  forward  this  same  view,  saying  that 
+‘intelligence’  is  simply  our  name  for  whichever  problem-solving  mental  processes 
+
+
+8  There  is  additional  discussion  of  French’s  objections  to  the  Turing  test  in  my  ‘The  Turing  Test’,  Minds 
+and  Machines ,  10  (2000),  519-39  (reprinted  in  J.  H.  Moor  (ed.),  The  Turing  Test  (Dordrecht:  Kluwer,  2003)). 
+
+
+492  I  Jack  Copeland 
+
+we  do  not  yet  understand.9  Minsky  likens  intelligence  to  the  concept  ‘unexplored 
+regions  of  Africa’:  it  disappears  as  soon  as  we  discover  it. 
+
+
+Analogy  and  Creativity 
+
+Turing  sketches  an  interesting  mechanical  explanation  of  how  analogy  works  in 
+the  human  brain,  and  suggests  that  a  digital  computer  can  be  made  to  do  the 
+same  (p.  499).  Another  proposal  which  does  not  appear  elsewhere  in  Turing’s 
+writings  concerns  the  vexed  issue  of  creativity.  A  machine  that  combines  words 
+more  or  less  at  random  and  then  scores  the  combinations  ‘for  various  merits’ 
+would,  he  says,  be  able  to  find  useful  new  concepts.  His  example  is  ‘lumping 
+together  rain,  hail,  snow  and  sleet,  under  the  word  “precipitation”’  (p.  499).  He 
+agrees  with  Newman  that  this  process  would  be  ‘shockingly  slow’.  Nevertheless, 
+this  brief  suggestion  of  Turing’s  is  an  economical  illustration  of  the  possibility  of 
+a  machine’s  acquiring  new  concepts  for  itself. 
+
+
+Machine  Learning 
+
+‘Can  Automatic  Calculating  Machines  Be  Said  to  Think’  contains  a  lengthy 
+discussion  of  machine  learning,  in  which  Turing  alludes  to  the  P-type  machines 
+of  Chapter  10  (pp.  425-9).  He  says  in  response  to  Jefferson’s  point  that  real 
+learning  involves  intervention  by  teachers,  ‘I  have  made  some  experiments  in 
+teaching  a  machine  to  do  some  simple  operation,  and  a  very  great  deal  of  such 
+intervention  was  needed’  (p.  497).  Turing  emphasizes  several  times  that  a 
+learning  machine,  if  it  is  to  be  effective,  must  not  only  learn  first-order  facts 
+but  must  also  be  able  to  learn  to  improve  its  learning  methods  (compare  the 
+discussion  of  the  Mathematical  Objection  in  Chapter  12  and  elsewhere). 
+
+Newman  gives  a  simple  illustration  (on  p.  496)  of  how  a  computer  can  learn  to 
+do  better  with  practice.  His  example  makes  use  of  the  idea  of  the  computer 
+modifying  its  own  programme,  mentioned  by  Turing  in  Chapter  9  (p.  393). 
+Faced  with  a  two-move  chess  problem,  the  machine  initially  follows  an  instruc¬ 
+tion  to  choose  a  move  at  random.  If  the  move,  say  B-Q5,  is  found  to  lead  to 
+forced  mate  in  two  moves,  then  the  machine  changes  the  instruction  to  ‘Try  B- 
+Q5’.  When  presented  with  the  same  problem  again,  the  machine  immediately 
+gives  the  right  answer. 
+
+
+Newman’s  Test 
+
+Towards  the  end  of  the  discussion  Newman  suggested  a  test — and  the  term 
+‘Newman’s  test’  seems  appropriate — for  when  machines  have  ‘begun  to  think’ 
+
+
+9  M.  Minsky,  The  Society  of  Mind  (London:  Pan  Books,  1988),  71. 
+
+
+Can  Automatic  Calculating  Machines  Be  Said  To  Think?  I  493 
+
+
+(pp.  504-5).  That  stage  of  development  has  been  reached,  he  said,  when  a 
+machine  can  solve  a  mathematical  problem  for  which  no  effective  method  exists. 
+
+
+Provenance 
+
+The  discussion  is  taken  from  a  BBC  script  (which  is  marked  ‘Not  checked  in 
+Talks  Department  with  “as  broadcast”  script’).10 
+
+
+10  The  script  is  in  the  Modern  Archive  Centre,  King’s  College,  Cambridge  (catalogue  reference  B  6).  It 
+was  first  published  in  B.  J.  Copeland  (ed.),  ‘A  Lecture  and  Two  Radio  Broadcasts  on  Machine  Intelligence  by 
+Alan  Turing’,  in  K.  Furukawa,  D.  Michie,  and  S.  Muggleton  (eds.),  Machine  Intelligence  15  (Oxford:  Oxford 
+University  Press,  1999). 
+
+
+Can  Automatic  Calculating  Machines 
+Be  Said  To  Think? 
+
+Braithwaite:  We’re  here  today  to  discuss  whether  calculating  machines  can  be 
+said  to  think  in  any  proper  sense  of  the  word.  Thinking  is  ordinarily  regarded 
+as  so  much  a  speciality  of  man,  and  perhaps  of  other  higher  animals,  that  the 
+question  may  seem  too  absurd  to  be  discussed.  But,  of  course,  it  all  depends 
+on  what  is  to  be  included  in  thinking.  The  word  is  used  to  cover  a  multitude  of 
+different  activities.  What  would  you,  Jefferson,  as  a  physiologist,  say  were  the 
+most  important  elements  involved  in  thinking? 
+
+Jefferson:  I  don’t  think  that  we  need  waste  too  much  time  on  [a]  definition  of 
+thinking  since  it  will  be  hard  to  get  beyond  phrases  in  common  usage,  such  as 
+having  ideas  in  the  mind,  cogitating,  meditating,  deliberating,  solving  prob¬ 
+lems  or  imagining.  Philologists  say  that  the  word  ‘Man’  is  derived  from  a 
+Sanskrit  word  that  means  ‘to  think’,  probably  in  the  sense  of  judging  between 
+one  idea  and  another.  I  agree  that  we  could  no  longer  use  the  word  ‘thinking’ 
+in  a  sense  that  restricted  it  to  man.  No  one  would  deny  that  many  animals 
+think,  though  in  a  very  limited  way.  They  lack  insight.  For  example,  a  dog 
+learns  that  it  is  wrong  to  get  on  cushions  or  chairs  with  muddy  paws,  but  he 
+only  learns  it  as  a  venture  that  doesn’t  pay.  He  has  no  conception  of  the  real 
+reason,  that  he  damages  fabrics  by  doing  that. 
+
+The  average  person  would  perhaps  be  content  to  define  thinking  in  very 
+general  terms  such  as  revolving  ideas  in  the  mind,  of  having  notions  in  one’s 
+head,  of  having  one’s  mind  occupied  by  a  problem,  and  so  on.  But  it  is  only 
+right  to  add  that  our  minds  are  occupied  much  of  the  time  with  trivialities. 
+One  might  say  in  the  end  that  thinking  was  the  general  result  of  having  a 
+sufficiently  complex  nervous  system.  Very  simple  ones  do  not  provide  the 
+creature  with  any  problems  that  are  not  answered  by  simple  reflex  mechan¬ 
+isms.  Thinking  then  becomes  all  the  things  that  go  on  in  one’s  brain,  things 
+that  often  end  in  an  action  but  don’t  necessarily  do  so.  I  should  say  that  it  was 
+the  sum  total  of  what  the  brain  of  man  or  animal  does.  Turing,  what  do  you 
+think  about  it?  Have  you  a  mechanical  definition? 
+
+Turing:  I  don’t  want  to  give  a  definition  of  thinking,  but  if  I  had  to  I  should 
+probably  be  unable  to  say  anything  more  about  it  than  that  it  was  a  sort  of 
+buzzing  that  went  on  inside  my  head.  But  I  don’t  really  see  that  we  need  to 
+agree  on  a  definition  at  all.  The  important  thing  is  to  try  to  draw  a  line 
+between  the  properties  of  a  brain,  or  of  a  man,  that  we  want  to  discuss,  and 
+those  that  we  don’t.  To  take  an  extreme  case,  we  are  not  interested  in  the  fact 
+
+
+Printed  with  the  permission  of  the  BBC,  Lewis  C.  Braithwaite,  Antony  A.  Jefferson,  Edward  Newman,  and 
+the  Estate  of  Alan  Turing. 
+
+
+Can  Automatic  Calculating  Machines  Be  Said  To  Think?  I  495 
+
+that  the  brain  has  the  consistency  of  cold  porridge.  We  don’t  want  to  say 
+‘This  machine’s  quite  hard,  so  it  isn’t  a  brain,  and  so  it  can’t  think.’  I  would  like 
+to  suggest  a  particular  kind  of  test  that  one  might  apply  to  a  machine.  You 
+might  call  it  a  test  to  see  whether  the  machine  thinks,  but  it  would  be  better  to 
+avoid  begging  the  question,  and  say  that  the  machines  that  pass  are  (let’s  say) 
+‘Grade  A’  machines.  The  idea  of  the  test  is  that  the  machine  has  to  try  and 
+pretend  to  be  a  man,  by  answering  questions  put  to  it,  and  it  will  only  pass  if 
+the  pretence  is  reasonably  convincing.  A  considerable  proportion  of  a  jury, 
+who  should  not  be  expert  about  machines,  must  be  taken  in  by  the  pretence. 
+They  aren’t  allowed  to  see  the  machine  itself — that  would  make  it  too  easy.  So 
+the  machine  is  kept  in  a  far  away  room  and  the  jury  are  allowed  to  ask  it 
+questions,  which  are  transmitted  through  to  it:  it  sends  back  a  typewritten 
+answer. 
+
+Braithwaite :  Would  the  questions  have  to  be  sums,  or  could  I  ask  it  what  it  had 
+had  for  breakfast? 
+
+Turing:  Oh  yes,  anything.  And  the  questions  don’t  really  have  to  be  questions, 
+any  more  than  questions  in  a  law  court  are  really  questions.  You  know  the  sort 
+of  thing.  ‘I  put  it  to  you  that  you  are  only  pretending  to  be  a  man’  would  be 
+quite  in  order.  Likewise  the  machine  would  be  permitted  all  sorts  of  tricks  so 
+as  to  appear  more  man-like,  such  as  waiting  a  bit  before  giving  the  answer,  or 
+making  spelling  mistakes,  but  it  can’t  make  smudges  on  the  paper,  any  more 
+than  one  can  send  smudges  by  telegraph.  We  had  better  suppose  that  each  jury 
+has  to  judge  quite  a  number  of  times,  and  that  sometimes  they  really  are 
+dealing  with  a  man  and  not  a  machine.  That  will  prevent  them  saying  ‘It  must 
+be  a  machine’  every  time  without  proper  consideration. 
+
+Well,  that’s  my  test.  Of  course  I  am  not  saying  at  present  either  that 
+machines  really  could  pass  the  test,  or  that  they  couldn’t.  My  suggestion  is 
+just  that  this  is  the  question  we  should  discuss.  It’s  not  the  same  as  ‘Do 
+machines  think,’  but  it  seems  near  enough  for  our  present  purpose,  and  raises 
+much  the  same  difficulties. 
+
+Newman:  I  should  like  to  be  there  when  your  match  between  a  man  and  a 
+machine  takes  place,  and  perhaps  to  try  my  hand  at  making  up  some  of  the 
+questions.  But  that  will  be  a  long  time  from  now,  if  the  machine  is  to  stand  any 
+chance  with  no  questions  barred? 
+
+Turing:  Oh  yes,  at  least  100  years,  I  should  say. 
+
+Jefferson:  Newman,  how  well  would  existing  machines  stand  up  to  this  test?  What 
+kind  of  things  can  they  do  now? 
+
+Newman:  Of  course,  their  strongest  line  is  mathematical  computing,  which  they 
+were  designed  to  do,  but  they  would  also  do  well  at  some  questions  that  don’t 
+look  numerical,  but  can  easily  be  made  so,  like  solving  a  chess  problem  or 
+looking  you  up  a  train  in  the  time-table. 
+
+Braithwaite:  Could  they  do  that? 
+
+
+496  I  Turing,  Braithwaite,  Jefferson,  Newman 
+
+Newman :  Yes.  Both  these  jobs  can  be  done  by  trying  all  the  possibilities,  one  after 
+another.  The  whole  of  the  information  in  an  ordinary  time-table  would  have 
+to  be  written  in  as  part  of  the  programme,  and  the  simplest  possible  routine 
+would  be  one  that  found  the  trains  from  London  to  Manchester  by  testing 
+every  train  in  the  time-table  to  see  if  it  calls  at  both  places,  and  printing  out 
+those  that  do.  Of  course,  this  is  a  dull,  plodding  method,  and  you  could 
+improve  on  it  by  using  a  more  complicated  routine,  but  if  I  have  understood 
+Turing’s  test  properly,  you  are  not  allowed  to  go  behind  the  scenes  and  criticise 
+the  method,  but  must  abide  by  the  scoring  on  correct  answers,  found  reason¬ 
+ably  quickly. 
+
+Jefferson:  Yes,  but  all  the  same  a  man  who  has  to  look  up  trains  frequently  gets 
+better  at  it,  as  he  learns  his  way  about  the  time-table.  Suppose  I  give  a  machine 
+the  same  problem  again,  can  it  learn  to  do  better  without  going  through  the 
+whole  rigmarole  of  trying  everything  over  every  time?  I’d  like  to  have  your 
+answer  to  that  because  it’s  such  an  important  point.  Can  machines  learn  to  do 
+better  with  practice? 
+
+Newman :  Yes,  it  could.  Perhaps  the  chess  problem  provides  a  better  illustration  of 
+this.  First  I  should  mention  that  all  the  information  required  in  any  job — the 
+numbers,  times  of  trains,  positions  of  pieces,  or  whatever  it  is,  and  also  the 
+instructions  saying  what  is  to  be  done  with  them — all  this  material  is  stored  in 
+the  same  way.  (In  the  Manchester  machine  it  is  stored  as  a  pattern  on  something 
+resembling  a  television  screen.)  As  the  work  goes  on  the  pattern  is  changed. 
+Usually  it  is  the  part  of  the  pattern  that  contains  the  data  that  changes,  while  the 
+instructions  stay  fixed.  But  it  is  just  as  simple  to  arrange  that  the  instructions 
+themselves  shall  be  changed  now  and  then.  Well,  now  a  programme  could  be 
+composed  that  would  cause  the  machine  to  do  this:  a  2-move  chess  problem  is 
+recorded  into  the  machine  in  some  suitable  coding,  and  whenever  the  machine 
+is  started,  a  white  move  is  chosen  at  random  (there  is  a  device  for  making 
+random  choices  in  our  machine).  All  the  consequences  of  this  move  are  now 
+analysed,  and  if  it  does  not  lead  to  forced  mate  in  two  moves,  the  machine 
+prints,  say,  ‘P-Q3,  wrong  move’,  and  stops.  But  the  analysis  shows  that  when  the 
+right  move  is  chosen  the  machine  not  only  prints,  say,  ‘B-Q5,  solution’,  but  it 
+changes  the  instruction  calling  for  a  random  choice  to  one  that  says  ‘Try  B-Q5.’ 
+The  result  is  that  whenever  the  machine  is  started  again  it  will  immediately  print 
+out  the  right  solution — and  this  without  the  man  who  made  up  the  routine 
+knowing  beforehand  what  it  was.  Such  a  routine  could  certainly  be  made  now, 
+and  I  think  this  can  fairly  be  called  learning. 
+
+Jefferson:  Yes,  I  suppose  it  is.  Human  beings  learn  by  repeating  the  same  exercises 
+until  they  have  perfected  them.  Of  course  it  goes  further,  and  at  the  same  time 
+— we  learn  generally  to  shift  the  knowledge  gained  about  one  thing  to  another 
+set  of  problems,  seeing  relevances  and  relationships.  Learning  means  remem¬ 
+bering.  How  long  can  a  machine  store  information  for? 
+
+
+Can  Automatic  Calculating  Machines  Be  Said  To  Think?  I  497 
+
+
+Newman:  Oh,  at  least  as  long  as  a  man’s  lifetime,  if  it  is  refreshed  occasionally. 
+
+Jefferson:  Another  difference  would  be  that  in  the  learning  process  there  is  much 
+more  frequent  intervention  by  teachers,  parental  or  otherwise,  guiding  the  arts 
+of  learning.  You  mathematicians  put  the  programme  once  into  the  machine 
+and  leave  it  to  it.  You  wouldn’t  get  any  distance  at  all  with  human  beings  if  that 
+is  what  you  did.  In  fact,  the  only  time  you  do  that  in  the  learning  period  is  at 
+examinations. 
+
+Turing:  It’s  quite  true  that  when  a  child  is  being  taught,  his  parents  and  teachers 
+are  repeatedly  intervening  to  stop  him  doing  this  or  encourage  him  to  do  that. 
+But  this  will  not  be  any  the  less  so  when  one  is  trying  to  teach  a  machine.  I  have 
+made  some  experiments  in  teaching  a  machine  to  do  some  simple  operation, 
+and  a  very  great  deal  of  such  intervention  was  needed  before  I  could  get  any 
+results  at  all.  In  other  words  the  machine  learnt  so  slowly  that  it  needed  a  great 
+deal  of  teaching. 
+
+Jefferson:  But  who  was  learning,  you  or  the  machine? 
+
+Turing:  Well,  I  suppose  we  both  were.  One  will  have  to  find  out  how  to  make 
+machines  that  will  learn  more  quickly  if  there  is  to  be  any  real  success.  One 
+hopes  too  that  there  will  be  a  sort  of  snowball  effect.  The  more  things  the 
+machine  has  learnt  the  easier  it  ought  to  be  for  it  to  learn  others.  In  learning  to 
+do  any  particular  thing  it  will  probably  also  be  learning  to  learn  more 
+efficiently.  I  am  inclined  to  believe  that  when  one  has  taught  it  to  do  certain 
+things  one  will  find  that  some  other  things  which  one  had  planned  to  teach  it 
+are  happening  without  any  special  teaching  being  required.  This  certainly 
+happens  with  an  intelligent  human  mind,  and  if  it  doesn’t  happen  when  one 
+is  teaching  a  machine  there  is  something  lacking  in  the  machine.  What  do  you 
+think  about  learning  possibilities,  Braithwaite? 
+
+Braithwaite:  No-one  has  mentioned  what  seems  to  me  the  great  difficulty  about 
+learning,  since  we’ve  only  discussed  learning  to  solve  a  particular  problem.  But 
+the  most  important  part  of  human  learning  is  learning  from  experience — not 
+learning  from  one  particular  kind  of  experience,  but  being  able  to  learn  from 
+experience  in  general.  A  machine  can  easily  be  constructed  with  a  feed-back 
+device  so  that  the  programming  of  the  machine  is  controlled  by  the  relation  of 
+its  output  to  some  feature  in  its  external  environment — so  that  the  working  of 
+the  machine  in  relation  to  the  environment  is  self-corrective.  But  this  requires 
+that  it  should  be  some  particular  feature  of  the  environment  to  which  the 
+machine  has  to  adjust  itself.  The  peculiarity  of  men  and  animals  is  that  they 
+have  the  power  of  adjusting  themselves  to  almost  all  the  features.  The  feature 
+to  which  adjustment  is  made  on  a  particular  occasion  is  the  one  the  man  is 
+attending  to  and  he  attends  to  what  he  is  interested  in.  His  interests  are 
+determined,  by  and  large,  by  his  appetites,  desires,  drives,  instincts — all  the 
+things  that  together  make  up  his  ‘springs  of  action’.  If  we  want  to  construct  a 
+machine  which  will  vary  its  attention  to  things  in  its  environment  so  that  it 
+
+
+498  I  Turing,  Braithwaite,  Jefferson,  Newman 
+
+will  sometimes  adjust  itself  to  one  and  sometimes  to  another,  it  would  seem  to 
+be  necessary  to  equip  the  machine  with  something  corresponding  to  a  set  of 
+appetites.  If  the  machine  is  built  to  be  treated  only  as  a  domestic  pet,  and  is 
+spoon-fed  with  particular  problems,  it  will  not  be  able  to  learn  in  the  varying 
+way  in  which  human  beings  learn.  This  arises  from  the  necessity  of  adapting 
+behaviour  suitably  to  environment  if  human  appetites  are  to  be  satisfied. 
+
+Jefferson:  Turing,  you  spoke  with  great  confidence  about  what  you  are  going  to  be 
+able  to  do.  You  make  it  sound  as  if  it  would  be  fairly  easy  to  modify 
+construction  so  that  the  machine  reacted  more  like  a  man.  But  I  recollect 
+that  from  the  time  of  Descartes  and  Borelli  on  people  have  said  that  it  would 
+be  only  a  matter  of  a  few  years,  perhaps  3  or  4  or  maybe  50,  and  a  replica  of 
+man  would  have  been  artificially  created.  We  shall  be  wrong,  I  am  sure,  if  we 
+give  the  impression  that  these  things  would  be  easy  to  do. 
+
+Newman :  I  agree  that  we  are  getting  rather  far  away  from  computing  machines  as 
+they  exist  at  present.  These  machines  have  rather  restricted  appetites,  and  they 
+can’t  blush  when  they’re  embarrassed,  but  it’s  quite  hard  enough,  and  I  think  a 
+very  interesting  problem,  to  discover  how  near  these  actually  existing  ma¬ 
+chines  can  get  to  thinking.  Even  if  we  stick  to  the  reasoning  side  of  thinking,  it 
+is  a  long  way  from  solving  chess  problems  to  the  invention  of  new  mathemat¬ 
+ical  concepts  or  making  a  generalisation  that  takes  in  ideas  that  were  current 
+before,  but  had  never  been  brought  together  as  instances  of  a  single  general 
+notion. 
+
+Braithwaite:  For  example? 
+
+Newman:  The  different  kinds  of  number.  There  are  the  integers,  0,  1,  —2,  and  so 
+on;  there  are  the  real  numbers  used  in  comparing  lengths,  for  example  the 
+circumference  of  a  circle  and  its  diameter;  and  the  complex  numbers  involving 
+V—l;  and  so  on.  It  is  not  at  all  obvious  that  these  are  instances  of  one  thing, 
+‘number’.  The  Greek  mathematicians  used  entirely  different  words  for  the 
+integers  and  the  real  numbers,  and  had  no  single  idea  to  cover  both.  It  is 
+really  only  recently  that  the  general  notion  of  kinds  of  number  has  been 
+abstracted  from  these  instances  and  accurately  defined.  To  make  this  sort  of 
+generalisation  you  need  to  have  the  power  of  recognising  similarities,  seeing 
+analogies  between  things  that  had  not  been  put  together  before.  It  is  not  just  a 
+matter  of  testing  things  for  a  specified  property  and  classifying  them  accord¬ 
+ingly.  The  concept  itself  has  to  be  framed,  something  has  to  be  created,  say  the 
+idea  of  a  number-field.  Can  we  even  guess  at  the  way  a  machine  could  make 
+such  an  invention  from  a  programme  composed  by  a  man  who  had  not  the 
+concept  in  his  own  mind? 
+
+Turing:  It  seems  to  me,  Newman,  that  what  you  said  about  ‘trying  out  possibil¬ 
+ities’  as  a  method  applies  to  quite  an  extent,  even  when  a  machine  is  required 
+to  do  something  as  advanced  as  finding  a  useful  new  concept.  I  wouldn’t  like 
+to  have  to  define  the  meaning  of  the  word  ‘concept’,  nor  to  give  rules  for  rating 
+
+
+Can  Automatic  Calculating  Machines  Be  Said  To  Think?  I  499 
+
+
+their  usefulness,  but  whatever  they  are  they’ve  got  outward  and  visible  forms, 
+which  are  words  and  combinations  of  words.  A  machine  could  make  up  such 
+combinations  of  words  more  or  less  at  random,  and  then  give  them  marks  for 
+various  merits. 
+
+Newman:  Wouldn’t  that  take  a  prohibitively  long  time? 
+
+Turing:  It  would  certainly  be  shockingly  slow,  but  it  could  start  on  easy  things, 
+such  as  lumping  together  rain,  hail,  snow  and  sleet,  under  the  word  ‘precipi¬ 
+tation.’  Perhaps  it  might  do  more  difficult  things  later  on  if  it  was  learning  all 
+the  time  how  to  improve  its  methods. 
+
+Braithwaite:  I  don’t  think  there’s  much  difficulty  about  seeing  analogies  that  can 
+be  formally  analysed  and  explicitly  stated.  It  is  then  only  a  question  of 
+designing  the  machine  so  that  it  can  recognise  similarities  of  mathematical 
+structure.  The  difficulty  arises  if  the  analogy  is  a  vague  one  about  which  little 
+more  can  be  said  than  that  one  has  a  feeling  that  there  is  some  sort  of 
+similarity  between  two  cases  but  one  hasn’t  any  idea  as  to  the  respect  in 
+which  the  two  cases  are  similar.  A  machine  can’t  recognise  similarities  when 
+there  is  nothing  in  its  programme  to  say  what  are  the  similarities  it  is  expected 
+to  recognise. 
+
+Turing:  I  think  you  could  make  a  machine  spot  an  analogy,  in  fact  it’s  quite  a 
+good  instance  of  how  a  machine  could  be  made  to  do  some  of  those  things 
+that  one  usually  regards  as  essentially  a  human  monopoly.  Suppose  that 
+someone  was  trying  to  explain  the  double  negative  to  me,  for  instance,  that 
+when  something  isn’t  not  green  it  must  be  green,  and  he  couldn’t  quite  get  it 
+across.  He  might  say  ‘Well,  it’s  like  crossing  the  road.  You  cross  it,  and  then 
+you  cross  it  again,  and  you’re  back  where  you  started.’  This  remark  might  just 
+clinch  it.  This  is  one  of  the  things  one  would  like  to  work  with  machines,  and  I 
+think  it  would  be  likely  to  happen  with  them.  I  imagine  that  the  way  analogy 
+works  in  our  brains  is  something  like  this.  When  two  or  more  sets  of  ideas 
+have  the  same  pattern  of  logical  connections,  the  brain  may  very  likely 
+economise  parts  by  using  some  of  them  twice  over,  to  remember  the  logical 
+connections  both  in  the  one  case  and  in  the  other.  One  must  suppose  that 
+some  part  of  my  brain  was  used  twice  over  in  this  way,  once  for  the  idea  of 
+double  negation  and  once  for  crossing  the  road,  there  and  back.  I  am  really 
+supposed  to  know  about  both  these  things  but  can’t  get  what  it  is  the  man  is 
+driving  at,  so  long  as  he  is  talking  about  all  those  dreary  nots  and  not-nots. 
+Somehow  it  doesn’t  get  through  to  the  right  part  of  the  brain.  But  as  soon  as 
+he  says  his  piece  about  crossing  the  road  it  gets  through  to  the  right  part,  but 
+by  a  different  route.  If  there  is  some  such  purely  mechanical  explanation  of 
+how  this  argument  by  analogy  goes  on  in  the  brain,  one  could  make  a  digital 
+computer  do  the  same. 
+
+Jefferson:  Well,  there  isn’t  a  mechanical  explanation  in  terms  of  cells  and  con¬ 
+necting  fibres  in  the  brain. 
+
+
+500  I  Turing,  Braithwaite,  Jefferson,  Newman 
+
+
+Braithwaite:  But  could  a  machine  really  do  this?  How  would  it  do  it? 
+
+Turing :  I’ve  certainly  left  a  great  deal  to  the  imagination.  If  I  had  given  a  longer 
+explanation  I  might  have  made  it  seem  more  certain  that  what  I  was  describing 
+was  feasible,  but  you  would  probably  feel  rather  uneasy  about  it  all,  and  you’d 
+probably  exclaim  impatiently,  ‘Well,  yes,  I  see  that  a  machine  could  do  all  that, 
+but  I  wouldn’t  call  it  thinking.’  As  soon  as  one  can  see  the  cause  and  effect 
+working  themselves  out  in  the  brain,  one  regards  it  as  not  being  thinking,  but  a 
+sort  of  unimaginative  donkey-work.  From  this  point  of  view  one  might  be 
+tempted  to  define  thinking  as  consisting  of  ‘those  mental  processes  that  we 
+don’t  understand’.  If  this  is  right  then  to  make  a  thinking  machine  is  to  make 
+one  which  does  interesting  things  without  our  really  understanding  quite  how 
+it  is  done. 
+
+Jefferson:  If  you  mean  that  we  don’t  know  the  wiring  in  men,  as  it  were,  that  is 
+quite  true. 
+
+Turing:  No,  that  isn’t  at  all  what  I  mean.  We  know  the  wiring  of  our  machine,  but 
+it  already  happens  there  in  a  limited  sort  of  way.  Sometimes  a  computing 
+machine  does  do  something  rather  weird  that  we  hadn’t  expected.  In  principle 
+one  could  have  predicted  it,  but  in  practice  it’s  usually  too  much  trouble. 
+Obviously  if  one  were  to  predict  everything  a  computer  was  going  to  do  one 
+might  just  as  well  do  without  it. 
+
+Newman:  It  is  quite  true  that  people  are  disappointed  when  they  discover  what  the 
+big  computing  machines  actually  do,  which  is  just  to  add  and  multiply,  and  use 
+the  results  to  decide  what  further  additions  and  multiplications  to  do.  ‘  That’s 
+not  thinking’,  is  the  natural  comment,  but  this  is  rather  begging  the  question.  If 
+you  go  into  one  of  the  ancient  churches  in  Ravenna  you  see  some  most  beautiful 
+pictures  round  the  walls,  but  if  you  peer  at  them  through  binoculars  you  might 
+say,  ‘Why,  they  aren’t  really  pictures  at  all,  but  just  a  lot  of  little  coloured  stones 
+with  cement  in  between.’  The  machine’s  processes  are  mosaics  of  very  simple 
+standard  parts,  but  the  designs  can  be  of  great  complexity,  and  it  is  not  obvious 
+where  the  limit  is  to  the  patterns  of  thought  they  could  imitate. 
+
+Braithwaite:  But  how  many  stones  are  there  in  your  mosaic?  Jefferson,  is  there  a 
+sufficient  multiplicity  of  the  cells  in  the  brain  for  them  to  behave  like  a 
+computing  machine? 
+
+Jefferson:  Yes,  there  are  thousands,  tens  of  thousands  more  cells  in  the  brain  than 
+there  are  in  a  computing  machine,  because  the  present  machine  contains — 
+how  many  did  you  say? 
+
+Turing:  Half  a  million  digits.  I  think  we  can  assume  that  is  the  equivalent  of  half  a 
+million  nerve  cells. 
+
+Braithwaite:  If  the  brain  works  like  a  computing  machine  then  the  present 
+computing  machine  cannot  do  all  the  things  the  brain  does.  Agreed;  but  if  a 
+computing  machine  were  made  that  could  do  all  the  things  the  brain  does, 
+wouldn’t  it  require  more  digits  than  there  is  room  for  in  the  brain? 
+
+
+Can  Automatic  Calculating  Machines  Be  Said  To  Think?  I  501 
+
+Jefferson:  Well,  I  don’t  know.  Suppose  that  it  is  right  to  equate  digits  in  a  machine 
+with  nerve  cells  in  a  brain.  There  are  various  estimates,  somewhere  between 
+ten  thousand  million  and  fifteen  thousand  million  cells  are  supposed  to  be 
+there.  Nobody  knows  for  certain,  you  see.  It  is  a  colossal  number.  You  would 
+need  20,000  or  more  of  your  machines  to  equate  digits  with  nerve  cells.  But  it 
+is  not,  surely,  just  a  question  of  size.  There  would  be  too  much  logic  in  your 
+huge  machine.  It  wouldn’t  be  really  like  a  human  output  of  thought.  To  make 
+it  more  like,  a  lot  of  the  machine  parts  would  have  to  be  designed  quite 
+differently  to  give  greater  flexibility  and  more  diverse  possibilities  of  use.  It’s  a 
+very  tall  order  indeed. 
+
+Turing:  It  really  is  the  size  that  matters  in  this  case.  It  is  the  amount  of  infor¬ 
+mation  that  can  be  stored  up.  If  you  think  of  something  very  complicated  that 
+you  want  one  of  these  machines  to  do,  you  may  find  the  particular  machine 
+you  have  got  won’t  do,  but  if  any  machine  can  do  it  at  all,  then  it  can  be  done 
+by  your  first  computer,  simply  increased  in  its  storage  capacity. 
+
+Jefferson:  If  we  are  really  to  get  near  to  anything  that  can  be  truly  called  ‘thinking’ 
+the  effects  of  external  stimuli  cannot  be  missed  out;  the  intervention  of  all 
+sorts  of  extraneous  factors,  like  the  worries  of  having  to  make  one’s  living,  or 
+pay  one’s  taxes,  or  get  food  that  one  likes.  These  are  not  in  any  sense  minor 
+factors,  they  are  very  important  indeed,  and  worries  concerned  with  them  may 
+greatly  interfere  with  good  thinking,  especially  with  creative  thinking.  You  see 
+a  machine  has  no  environment,  and  man  is  in  constant  relation  to  his 
+environment,  which,  as  it  were  punches  him  whilst  he  punches  back.  There 
+is  a  vast  background  of  memories  in  a  man’s  brain  that  each  new  idea  or 
+experience  has  to  fit  in  with.  I  wonder  if  you  could  tell  me  how  far  a  calculating 
+machine  meets  that  situation.  Most  people  agree  that  man’s  first  reaction  to  a 
+new  idea  (such  as  the  one  we  are  discussing  today)  is  one  of  rejection,  often 
+immediate  and  horrified  denial  of  it.  I  don’t  see  how  a  machine  could  as  it 
+were  say  ‘Now  Professor  Newman  or  Mr.  Turing,  I  don’t  like  this  programme 
+at  all  that  you’ve  just  put  into  me,  in  fact  I’m  not  going  to  have  anything  to  do 
+with  it.’ 
+
+Newman:  One  difficulty  about  answering  that  is  one  that  Turing  has  already 
+mentioned.  If  someone  says,  ‘Could  a  machine  do  this,  e.g.  could  it  say  “I 
+don’t  like  the  programme  you  have  just  put  into  me”  ’,  and  a  programme  for 
+doing  that  very  thing  is  duly  produced,  it  is  apt  to  have  an  artificial  and  ad  hoc 
+air,  and  appear  to  be  more  of  a  trick  than  a  serious  answer  to  the  question.  It  is 
+like  those  passages  in  the  Bible,  which  worried  me  as  a  small  boy,  that  say  that 
+such  and  such  was  done  ‘that  the  prophecy  might  be  fulfilled  which  says’  so 
+and  so.  This  always  seemed  to  me  a  most  unfair  way  of  making  sure  that  the 
+prophecy  came  true.  If  I  answer  your  question,  Jefferson,  by  making  a  routine 
+which  simply  caused  the  machine  to  say  just  the  words  ‘Newman  and  Turing,  I 
+don’t  like  your  programme’,  you  would  certainly  feel  this  was  a  rather  childish 
+
+
+502  I  Turing,  Braithwaite,  Jefferson,  Newman 
+
+trick,  and  not  the  answer  to  what  you  really  wanted  to  know.  But  yet  it’s  hard 
+to  pin  down  what  you  want. 
+
+Jefferson:  I  want  the  machine  to  reject  the  problem  because  it  offends  it  in  some 
+way.  That  leads  me  to  enquire  what  the  ingredients  are  of  ideas  that  we  reject 
+because  we  instinctively  don’t  care  for  them.  I  don’t  know  why  I  like  some 
+pictures  and  some  music  and  am  bored  by  other  sorts.  But  I’m  not  going  to 
+carry  that  line  on  because  we  are  all  different,  our  dislikes  are  based  on  our 
+personal  histories  and  probably  too  on  small  differences  of  construction  in  all 
+of  us,  I  mean  by  heredity.  Your  machines  have  no  genes,  no  pedigrees. 
+Mendelian  inheritance  means  nothing  to  wireless  valves.  But  I  don’t  want  to 
+score  debating  points!  We  ought  to  make  it  clear  that  not  even  Turing  thinks 
+that  all  that  he  has  to  do  is  to  put  a  skin  on  the  machine  and  that  it  is  alive! 
+We’ve  been  trying  for  a  more  limited  objective  whether  the  sort  of  thing  that 
+machines  do  can  be  considered  as  thinking.  But  is  not  your  machine  more 
+certain  than  any  human  being  of  getting  its  problem  right  at  once,  and 
+infallibly? 
+
+Newman:  Oh! 
+
+Turing:  Computing  machines  aren’t  really  infallible  at  all.  Making  up  checks  on 
+their  accuracy  is  quite  an  important  part  of  the  art  of  using  them.  Besides 
+making  mistakes  they  sometimes  haven’t  done  quite  the  calculation  one  had 
+expected,  and  one  gets  something  that  might  be  called  a  ‘misunderstanding’. 
+
+Jefferson:  At  any  rate,  they  are  not  influenced  by  the  emotions.  You  have  only  to 
+upset  a  person  enough  and  he  becomes  confused,  he  can’t  think  of  the  answers 
+and  may  make  a  fool  of  himself.  It  is  high  emotional  content  of  mental 
+processes  in  the  human  being  that  makes  him  quite  different  from  a  machine. 
+It  seems  to  me  to  come  from  the  great  complexity  of  his  nervous  system  with 
+its  1010  cells  and  also  from  his  endocrine  system  which  imports  all  sorts  of 
+emotions  and  instincts,  such  as  those  to  do  with  sex.  Man  is  essentially  a 
+chemical  machine,  he  is  much  affected  by  hunger  and  fatigue,  by  being  ‘out  of 
+sorts’  as  we  say,  also  by  innate  judgements,  and  by  sexual  urges.  This  chemical 
+side  is  tremendously  important,  not  the  least  so  because  the  brain  does 
+exercise  a  remote  control  over  the  most  important  chemical  processes  that 
+go  on  in  our  bodies.  Your  machines  don’t  have  to  bother  with  that,  with  being 
+tired  or  cold  or  happy  or  satisfied.  They  show  no  delight  at  having  done 
+something  never  done  before.  No,  they  are  ‘mentally’  simple  things.  I  mean 
+that  however  complicated  their  structure  is  (and  I  know  it  is  very  compli¬ 
+cated),  compared  with  man  they  are  very  simple  and  perform  their  tasks  with 
+an  absence  of  distracting  thoughts  which  is  quite  inhuman. 
+
+Braithwaite:  I’m  not  sure  that  I  agree.  I  believe  that  it  will  be  necessary  to  provide 
+the  machine  with  something  corresponding  to  appetites,  or  other  ‘springs  of 
+action’,  in  order  that  it  will  pay  enough  attention  to  relevant  features  in  its 
+environment  to  be  able  to  learn  from  experience.  Many  psychologists  have 
+
+
+Can  Automatic  Calculating  Machines  Be  Said  To  Think?  I  503 
+
+
+held  that  the  emotions  in  men  are  by-products  of  their  appetites  and  that  they 
+serve  a  biological  function  in  calling  higher  levels  of  mental  activity  into  play 
+when  the  lower  levels  are  incapable  of  coping  with  an  external  situation.  For 
+example,  one  does  not  feel  afraid  when  there  is  no  danger,  or  a  danger  which 
+can  be  avoided  more  or  less  automatically:  fear  is  a  symptom  showing  that  the 
+danger  has  to  be  met  by  conscious  thought.  Perhaps  it  will  be  impossible  to 
+build  a  machine  capable  of  learning  in  general  from  experience  without 
+incorporating  in  it  an  emotional  apparatus,  the  function  of  which  will  be  to 
+switch  over  to  a  different  part  of  the  machine  when  the  external  environment 
+differs  too  much  from  what  would  satisfy  the  machine’s  appetites  by  more 
+than  a  certain  amount.  I  don’t  want  to  suggest  that  it  will  be  necessary  for  the 
+machine  to  be  able  to  throw  a  fit  of  tantrums.  But  in  humans  tantrums 
+frequently  fulfil  a  definite  function — that  of  escaping  from  responsibility; 
+and  to  protect  a  machine  against  a  too  hostile  environment  it  may  be  essential 
+to  allow  it,  as  it  were,  to  go  to  bed  with  a  neurosis,  or  psychogenic  illness — just 
+as,  in  a  simpler  way,  it  is  provided  with  a  fuse  to  blow,  if  the  electric  power 
+working  it  threatens  its  continued  existence. 
+
+Turing:  Well,  I  don’t  envisage  teaching  the  machine  to  throw  temperamental 
+scenes.  I  think  some  such  effects  are  likely  to  occur  as  a  sort  of  by-product  of 
+genuine  teaching,  and  that  one  will  be  more  interested  in  curbing  such 
+displays  than  in  encouraging  them.  Such  effects  would  probably  be  distinctly 
+different  from  the  corresponding  human  ones,  but  recognisable  as  variations 
+on  them.  This  means  that  if  the  machine  was  being  put  through  one  of  my 
+imitation  tests,  it  would  have  to  do  quite  a  bit  of  acting,  but  if  one  was 
+comparing  it  with  a  man  in  a  less  strict  sort  of  way  the  resemblance  might 
+be  quite  impressive. 
+
+Newman:  I  still  feel  that  too  much  of  our  argument  is  about  what  hypothetical 
+future  machines  will  do.  It  is  all  very  well  to  say  that  a  machine  could  easily  be 
+made  to  do  this  or  that,  but,  to  take  only  one  practical  point,  what  about  the 
+time  it  would  take  to  do  it?  It  would  only  take  an  hour  or  two  to  make  up  a 
+routine  to  make  our  Manchester  machine  analyse  all  possible  variations  of  the 
+game  of  chess  right  out,  and  find  the  best  move  that  way — if  you  didn’t  mind 
+its  taking  thousands  of  millions  of  years  to  run  through  the  routine.  Solving  a 
+problem  on  the  machine  doesn’t  mean  finding  a  way  to  do  it  between  now  and 
+eternity,  but  within  a  reasonable  time.  This  is  not  just  a  technical  detail  that 
+will  be  taken  care  of  by  future  improvements.  It’s  most  unlikely  that  the 
+engineers  can  ever  give  us  a  factor  of  more  than  a  thousand  or  two  times 
+our  present  speeds.  To  assume  that  runs  that  would  take  thousands  of  millions 
+of  years  on  our  present  machines  will  be  done  in  a  flash  on  machines  of  the 
+future,  is  to  move  into  the  realms  of  science  fiction. 
+
+Turing:  To  my  mind  this  time  factor  is  the  one  question  which  will  involve  all  the 
+real  technical  difficulty.  If  one  didn’t  know  already  that  these  things  can  be 
+
+
+504  I  Turing,  Braithwaite,  Jefferson,  Newman 
+
+done  by  brains  within  a  reasonable  time  one  might  think  it  hopeless  to  try 
+with  a  machine.  The  fact  that  a  brain  can  do  it  seems  to  suggest  that  the 
+difficulties  may  not  really  be  so  bad  as  they  now  seem. 
+
+Braithwaite:  I  agree  that  we  ought  not  to  extend  our  discussion  to  cover  whether 
+calculating  machines  could  be  made  which  would  do  everything  that  a  man 
+can  do.  The  point  is,  surely,  whether  they  can  do  all  that  it  is  proper  to  call 
+thinking.  Appreciation  of  a  picture  contains  elements  of  thinking,  but  it  also 
+contains  elements  of  feeling;  and  we’re  not  concerned  with  whether  a  machine 
+can  be  made  that  will  feel.  Similarly  with  moral  questions:  we’re  only  con¬ 
+cerned  with  them  so  far  as  they  are  also  intellectual  ones.  We  haven’t  got  to 
+give  the  machine  a  sense  of  duty  or  anything  corresponding  to  a  will:  still  less 
+need  it  be  given  temptations  which  it  would  then  have  to  have  an  apparatus 
+for  resisting.  All  that  it  has  got  to  do  in  order  to  think  is  to  be  able  to  solve, 
+or  to  make  a  good  attempt  at  solving,  all  the  intellectual  problems  with  which 
+it  might  be  confronted  by  the  environment  in  which  it  finds  itself.  This 
+environment,  of  course,  must  include  Turing  asking  it  awkward  questions  as 
+well  as  natural  events  such  as  being  rained  upon,  or  being  shaken  up  by  an 
+earthquake. 
+
+Newman :  But  I  thought  it  was  you  who  said  that  a  machine  wouldn’t  be  able  to 
+learn  to  adjust  to  its  environment  if  it  hadn’t  been  provided  with  a  set  of 
+appetites  and  all  that  went  with  them? 
+
+Braithwaite:  Yes,  certainly.  But  the  problems  raised  by  a  machine  having  appetites 
+are  not  properly  our  concern  today.  It  may  be  the  case  that  it  wouldn’t  be  able  to 
+learn  from  experience  without  them;  but  we’re  only  required  to  consider 
+whether  it  would  be  able  to  learn  at  all — since  I  agree  that  being  able  to  learn 
+is  an  essential  part  of  thinking.  So  oughtn’t  we  to  get  back  to  something  centred 
+on  thinking?  Can  a  machine  make  up  new  concepts,  for  example? 
+
+Newman:  There  are  really  two  questions  that  can  be  asked  about  machines  and 
+thinking,  first,  what  do  we  require  before  we  agree  that  the  machine  does 
+everything  that  we  call  thinking?  This  is  really  what  we  have  been  talking  about 
+for  most  of  the  time;  but  there  is  also  another  interesting  and  important 
+question:  Where  does  the  doubtful  territory  begin?  What  is  the  nearest  thing 
+to  straight  computing  that  the  present  machines  perhaps  can’t  do? 
+
+Braithwaite:  And  what  would  your  own  answer  be? 
+
+Newman:  I  think  perhaps  to  solve  mathematical  problems  for  which  no  method 
+is  known,  in  the  way  that  men  do;  to  find  new  methods.  This  is  a  much  more 
+modest  aim  than  inventing  new  mathematical  concepts.  What  happens  when 
+you  try  to  solve  a  new  problem  in  the  ordinary  way  is  that  you  think  about  it 
+for  a  few  seconds,  or  a  few  years,  trying  out  all  the  analogies  you  can  think  of 
+with  problems  that  have  been  solved,  and  then  you  have  an  idea.  You  try  it  out 
+in  detail.  If  it  is  no  good  you  must  wait  for  another  idea.  This  is  a  little  like  the 
+chess-problem  routine,  where  one  move  after  another  is  tried,  but  with  one 
+
+
+Can  Automatic  Calculating  Machines  Be  Said  To  Think?  I  505 
+
+
+very  important  difference,  that  if  I  am  even  a  moderately  good  mathematician 
+the  ideas  that  I  get  are  not  just  random  ones,  but  are  pre-selected  so  that  there 
+is  an  appreciable  chance  that  after  a  few  trials  one  of  them  will  be  successful. 
+Henry  Moore  says  about  the  studies  he  does  for  his  sculpture,  ‘When  the  work 
+is  more  than  an  exercise,  inexplicable  jumps  occur.  This  is  where  the  imagin¬ 
+ation  comes  in.’  If  a  machine  could  really  be  got  to  imitate  this  sudden  pounce 
+on  an  idea,  I  believe  that  everyone  would  agree  that  it  had  begun  to  think,  even 
+though  it  didn’t  have  appetites  or  worry  about  the  income  tax.  And  suppose 
+that  we  also  stuck  to  what  we  know  about  the  physiology  of  human  thinking, 
+how  much  would  that  amount  to,  Jefferson? 
+
+Jefferson:  We  know  a  great  deal  about  the  end-product,  thinking  itself.  Are  not 
+the  contents  of  our  libraries  and  museums  the  total  up  to  date?  Experimental 
+psychology  has  taught  us  a  lot  about  the  way  that  we  use  memory  and 
+association  of  ideas,  how  we  fill  in  gaps  in  knowledge  and  improvise  from  a 
+few  given  facts.  But  exactly  how  we  do  it  in  terms  of  nerve  cell  actions  we  don’t 
+know.  We  are  particularly  ignorant  of  the  very  point  that  you  mentioned  just 
+now,  Newman,  the  actual  physiology  of  the  pounce  on  an  idea,  of  the  sudden 
+inspiration.  Thinking  is  clearly  a  motor  activity  of  the  brain’s  cells,  a  sugges¬ 
+tion  supported  by  the  common  experience  that  so  many  people  think  better 
+with  a  pen  in  their  hand  than  viva  voce  or  by  reverie  and  reflection.  But  you 
+can’t  so  far  produce  ideas  in  a  man’s  mind  by  stimulating  his  exposed  brain 
+here  or  there  electrically.  It  would  have  been  really  exciting  if  one  could  have 
+done  that — if  one  could  have  perhaps  excited  original  thoughts  by  local 
+stimulation.  It  can’t  be  done.  Nor  does  the  electro-encephalograph  show  us 
+how  the  process  of  thinking  is  carried  out.  It  can’t  tell  you  what  a  man  is 
+thinking  about.  We  can  trace  the  course,  say,  of  a  page  of  print  or  of  a  stream 
+of  words  into  the  brain,  but  we  eventually  lose  them.  If  we  could  follow  them 
+to  their  storage  places  we  still  couldn’t  see  how  they  are  reassembled  later  as 
+ideas.  You  have  the  great  advantage  of  knowing  how  your  machine  was  made. 
+We  only  know  that  we  have  in  the  human  nervous  system  a  concern  compact 
+in  size  and  in  its  way  perfect  for  its  job.  We  know  a  great  deal  about  its 
+microscopical  structure  and  its  connections.  If  fact,  we  know  everything  except 
+how  these  myriads  of  cells  allow  us  to  think.  But,  Newman,  before  we  say  ‘not 
+only  does  this  machine  think  but  also  here  in  this  machine  we  have  an  exact 
+counterpart  of  the  wiring  and  circuits  of  human  nervous  systems,’  I  ought  to 
+ask  whether  machines  have  been  built  or  could  be  built  which  are  as  it  were 
+anatomically  different,  and  yet  produce  the  same  work. 
+
+Newman:  The  logical  plan  of  all  of  them  is  rather  similar,  but  certainly  their 
+anatomy,  and  I  suppose  you  could  say  their  physiology,  varies  a  lot. 
+
+Jefferson:  Yes,  that’s  what  I  imagined — we  cannot  then  assume  that  any  one  of 
+these  electronic  machines  is  a  replica  of  part  of  a  man’s  brain  even  though  the 
+result  of  its  actions  has  to  be  conceded  as  thought.  The  real  value  of  the 
+
+
+506  I  Turing,  Braithwaite,  Jefferson,  Newman 
+
+machine  to  you  is  its  end  results,  its  performance,  rather  than  that  its  plan 
+reveals  to  us  a  model  of  our  brains  and  nerves.  Its  usefulness  lies  in  the  fact 
+that  electricity  travels  along  wires  2  or  3  million  times  faster  than  nerve 
+impulses  pass  along  nerves.  You  can  set  it  to  do  things  that  man  would  need 
+thousands  of  lives  to  complete.  But  that  old  slow  coach,  man,  is  the  one  with 
+the  ideas — or  so  I  think.  It  would  be  fun  some  day,  Turing,  to  listen  to  a 
+discussion,  say  on  the  Fourth  Programme,  between  two  machines  on  why 
+human  beings  think  that  they  think! 
+
+
+Artificial  Life 
+
+Jack  Copeland 
+
+
+1.  What  is ‘Artificial  Life? 
+
+The  highly  interdisciplinary  field  of  Artificial  Life  was  so  named  by  Christopher 
+Langton,  a  physicist  working  at  the  Los  Alamos  National  Laboratory.1  In  1987 
+Langton  organized  at  Los  Alamos  what  he  described  as  an  ‘interdisciplinary 
+workshop  on  the  synthesis  and  simulation  of  living  systems’.2  The  workshop 
+was  a  rallying  point,  bringing  together  researchers  with  shared  interests  and 
+diverse  backgrounds. 
+
+Artificial  Life  (‘A-Life’)  aims  to  achieve  theoretical  understanding  of  naturally 
+occurring  biological  life,  in  particular  of  the  most  conspicuous  feature  of  living 
+matter,  its  ability  to  self- organize,  i.e.  to  develop  form  and  structure  spontan¬ 
+eously.  Langton  defines  Artificial  Life  as  ‘the  study  of  man-made  systems  that 
+exhibit  behaviors  characteristic  of  natural  living  systems’.3  A-Life,  he  says,  ‘com¬ 
+plements  the  traditional  biological  sciences  concerned  with  the  analysis  of  living 
+organisms  by  attempting  to  synthesise  life-like  behaviors  within  computers  and 
+other  artificial  media’.4 
+
+The  use  of  computers  to  simulate  living  and  life-like  systems  is  central  to 
+A-Life.  Langton  says: 
+
+Computers  should  be  thought  of  as  an  important  laboratory  tool  for  the  study  of  life, 
+substituting  for  the  array  of  incubators,  culture  dishes,  microscopes,  electrophoretic  gels, 
+pipettes,  centrifuges,  and  other  assorted  wet-lab  paraphernalia,  one  simple-to-master 
+piece  of  experimental  equipment.5 
+
+Langton  even  suggests  that  the  ‘ultimate  goal  of  the  study  of  artificial  life 
+would  be  to  create  “life”  in  some  other  medium,  ideally  a  virtual  medium  where 
+the  essence  of  life  has  been  abstracted  from  the  details  of  its  implementation  in 
+any  particular  hardware’.6 
+
+1  C.  G.  Langton,  ‘Studying  Artificial  Life  with  Cellular  Automata’,  Physica  D,  22  (1986),  120-49. 
+
+2  C.  G.  Langton  (ed.),  Artificial  Life:  The  Proceedings  of  an  Interdisciplinary  Workshop  on  the  Synthesis  and 
+Simulation  of  Living  Systems  (Redwood  City,  Calif.:  Addison-Wesley,  1989). 
+
+3  C.  G.  Langton,  ‘Artificial  Life’,  in  Langton,  Artificial  Life,  1. 
+
+4  Ibid. 
+
+5  Ibid.  32. 
+
+6  Langton,  ‘Studying  Artificial  Life  with  Cellular  Automata’,  147. 
+
+
+508  I  Jack  Copeland 
+
+2.  Morphogenesis 
+
+Turing  was  the  earliest  pioneer  of  computer-based  A-Life:  he  was  the  first  to  use 
+computer  simulation  to  investigate  a  theory  of  the  development  of  organization 
+and  pattern  in  living  things.7  Early  in  1951,  the  world’s  first  commercially 
+manufactured  general-purpose  electronic  digital  computer,  the  Manchester- 
+built  Ferranti  Mark  I,  was  installed  in  the  Computing  Machine  Laboratory  at 
+Manchester  University.8  Turing  immediately  set  about  using  the  machine  to 
+model  biological  growth.  In  February  1951  he  wrote  to  a  colleague  at  the 
+National  Physical  Laboratory: 
+
+Our  new  machine  [the  Ferranti  Mark  I]  is  to  start  arriving  on  Monday.  I  am  hoping  as  one 
+of  the  first  jobs  to  do  something  about  ‘chemical  embryology’.  In  particular  I  think  one 
+can  account  for  the  appearance  of  Fibonacci  numbers  in  connection  with  fir-cones.9 
+
+In  a  Fibonacci  number-series,  each  number,  except  for  the  first  two,  is  the  sum  of 
+the  two  previous  numbers:  for  example  1,  3,  4,  7,  11 . . . 
+
+In  brief,  Turing’s  ‘chemical  embryology’  is  the  hypothesis  that  the  develop¬ 
+ment  of  anatomical  structure  in  the  animal  or  plant  embryo  is  a  result  of  the  fact 
+that  diffusing  chemicals  reacting  with  one  another  can  form  spatial  patterns.  This 
+is  a  thoroughly  reductionist  view:  forms  found  in  living  matter  are  accounted  for 
+by  the  fact  that,  under  appropriate  conditions,  sheer  chemical  reaction  produces 
+pattern  and  form. 
+
+Turing  took  his  cue  from  the  zoologist  D’Arcy  Thompson  (to  whose  work 
+Turing  refers  at  the  end  of  Chapter  15).  D’Arcy  Thompson  held  that  the  forms  of 
+living  things,  no  less  than  naturally  occurring  forms  in  inorganic  matter,  are  to 
+be  explained  in  terms  of ‘the  operation  of  physical  forces  or  mathematical  laws’.10 
+
+Cell  and  tissue,  shell  and  bone,  leaf  and  flower,  are  so  many  portions  of  matter,  and  it  is  in 
+obedience  to  the  laws  of  physics  that  their  particles  have  been  moved,  moulded  and 
+conformed.  . . .  The  form ...  of  any  portion  of  matter,  whether  it  be  living  or  dead,  and 
+
+
+7  Another  early  pioneer  of  A-Life  was  the  neurophysiologist  W.  Grey  Walter  (a  founder  of  the  Ratio 
+Club,  of  which  Turing  was  also  a  member).  His  famous  ‘tortoises’ — built  from  about  1949  onwards — were 
+mobile,  battery-powered  devices  exhibiting  life-like  properties.  He  constructed  them  in  order  to  show  that 
+seemingly  complex  behaviour  can  result  from  simple  mechanisms  (W.  Grey  Walter,  The  Living  Brain 
+(London:  Gerald  Duckworth,  1953),  82-7  and  appendix  B).  Although  digital  computers  were  not  involved, 
+Grey  Walter’s  work  certainly  conforms  to  Langton’s  description  given  above:  ‘Artificial  Life  . . .  attempt  [s]  to 
+synthesise  life-like  behaviors  within  computers  and  other  artificial  media ’  (italics  added). 
+
+8  A  digital  facsimile  of  Turing’s  Programmers'  Handbook  for  Manchester  Electronic  Computer  (University 
+of  Manchester  Computing  Machine  Laboratory,  1950)  is  in  The  Turing  Archive  for  the  History  of 
+Computing  <www.AlanTuring.net/programmers_handbook>. 
+
+9  Letter  from  Turing  to  Michael  Woodger,  undated,  received  12  Feb.  1951  (in  the  Woodger  Papers, 
+National  Museum  of  Science  and  Industry,  Kensington,  London;  a  digital  facsimile  is  in  the  Turing  Archive 
+for  the  History  of  Computing  <www.AlanTuring.net/turing_woodger_feb51>). 
+
+10  W.  D’Arcy  Thompson,  On  Growth  and  Form  (2nd  edn.  Cambridge:  Cambridge  University  Press, 
+1942),  3. 
+
+
+Artificial  Life  I  509 
+
+the  changes  of  form  which  are  apparent  in  its . . .  growth,  may  in  all  cases  alike  be  described 
+as  due  to  the  action  of  force.11 
+
+Concerning  the  puzzling  fact  that  the  scales  of  a  fir-cone,  or  the  florets  of  a 
+sunflower,  are  grouped  together  in  numbers  that  form  a  Fibonacci  series,  D’Arcy 
+Thompson  boldly  declared: 
+
+while  the  Fibonacci  series  stares  us  in  the  face  in  the  fir-cone,  it  does  so  for  mathematical 
+reasons;  and  its  supposed  usefulness,  and  the  hypothesis  of  its  introduction  into  plant- 
+structure  through  natural  selection,  are  matters  which  deserve  no  place  in  the  plain  study 
+of  botanical  phenomena.12 
+
+Turing  summarized  his  own  theory  as  the  suggestion  that  ‘certain  well-known 
+physical  laws  are  sufficient  to  account  for  many  of  the  facts’  of  morphogenesis 
+(p.  519).  (‘Morphogenesis’  means  ‘generation  of  form’.)  Turing  described  an 
+idealized  chemical  mechanism,  now  called  the  reaction-diffusion  model.  He 
+showed  that  this  mechanism  could  lead  to  a  number  of  simple  but  life-like 
+patterns  and  forms.  The  reaction-diffusion  model  is  the  topic  of  Chapter  15, 
+‘The  Chemical  Basis  of  Morphogenesis’.  ‘The  Chemical  Basis  of  Morphogenesis’ 
+has  been  widely  cited  in  the  biological  literature  and  today  reaction-diffusion 
+remains  a  possible,  although  still  unconfirmed,  explanation  of  aspects  of  the 
+generation  of  biological  pattern  and  form. 
+
+The  geneticist  C.  H.  Waddington  commented  in  a  letter  to  Turing  in  1952  that 
+the  most  clear-cut  application  of  Turing’s  theory  appeared  to  be  ‘in  the  arising  of 
+spots,  streaks,  and  flecks  of  various  kinds  in  apparently  uniform  areas  such  as  the 
+wings  of  butterflies,  the  shells  of  molluscs,  the  skin  of  tigers,  leopards,  etc’.13 
+Modern  computer  simulations  of  Turing’s  reaction-diffusion  mechanism  have 
+indeed  produced  leopard-like  spots,  cheetah-like  spots,  and  giraffe-like  stripes,  as 
+well  as  textures  reminiscent  of  reptile  skin,  corals,  and  the  surfaces  of  some 
+fungi.14  Turing  himself,  however,  envisaged  diverse  applications  of  his  theory 
+(as  he  indicated  in  the  letter  to  biologist  J.  Z.  Young  quoted  below),  includ¬ 
+ing  leaf  arrangements  and  the  appearance  of  Fibonacci  sequences,  and 
+phenomena  such  as  gastrulation.  (Gastrulation  is  a  process  of  rearrange¬ 
+ment  of  cells  in  the  spherical  embryo,  involving  the  folding  inwards  of  part 
+of  the  surface,  producing  a  depression  akin  to  the  dent  formed  by  poking  a 
+balloon  with  a  finger.)  Furthermore,  Turing  described  his  research  into 
+
+
+11  Ibid.  10,  16. 
+
+12  Ibid.  933. 
+
+13  Letter  from  Waddington  to  Turing  (11  Sept.  1952).  The  letter  is  among  the  Turing  Papers  in  the 
+Modern  Archive  Centre,  King’s  College,  Cambridge  (catalogue  reference  D  5). 
+
+14  J.  D.  Murray,  ‘A  Pre-pattern  Formation  Mechanism  for  Animal  Coat  Markings’,  Journal  of  Theoretical 
+Biology,  88  (1981),  161-99;  G.  Turk,  ‘Generating  Textures  on  Arbitrary  Surfaces  Using  Reaction-Diffusion’, 
+Computer  Graphics,  25  (1991),  289-98;  A.  Witkin  and  M.  Kass,  ‘Reaction-Diffusion  Textures’,  Computer 
+Graphics,  25  (1991),  299-308. 
+
+
+510  I  Jack  Copeland 
+
+
+morphogenesis  as  ‘not  altogether  unconnected’  to  his  work  on  neural  net¬ 
+works  (see  Chapter  10). 
+
+Turing  simulated  the  reaction-diffusion  mechanism  using  the  Ferranti  com¬ 
+puter.  A  mathematician  using  paper  and  pencil  to  analyse  the  behaviour  of  a 
+reaction-diffusion  system  risks  becoming  overwhelmed  by  formidable  math¬ 
+ematical  complexity,  and  must  make  (what  Turing  calls)  ‘simplifying  assump¬ 
+tions’.  Turing  explains  that  use  of  the  computer  enables  such  assumptions  to  be 
+dispensed  with  to  some  extent.  This  freedom  enables  Turing  to  employ  non¬ 
+linear  differential  equations  to  describe  the  chemical  interactions  hypothesized 
+by  his  theory.15  Non-linear  differential  equations  are  mathematically  intractable. 
+Turing  used  the  computer  to  explore  in  detail  particular  cases  of  interactions 
+governed  by  equations  of  this  type.  He  may  well  have  been  the  first  researcher  to 
+engage  in  the  computer-assisted  exploration  of  non-linear  systems.16  (It  was  not 
+until  Benoit  Mandelbrot’s  discovery  of  the  ‘Mandelbrot  set’  in  1979  that  the 
+computer-assisted  investigation  of  non-linear  systems  gained  widespead 
+attention.17) 
+
+Turing’s  work  on  morphogenesis  was  in  every  respect  ahead  of  its  time.  He 
+died  while  in  the  midst  of  this  groundbreaking  work,  leaving  a  large  pile  of 
+handwritten  notes  and  various  programmes.18  This  material  is  still  not  fully 
+understood. 
+
+The  computer  programme  shown  in  Figure  1,  which  is  in  Turing’s  own 
+hand,  formed  part  of  his  study  of  the  development  of  the  fir-cone.  He  also 
+investigated  the  development  of  the  sunflower.  The  photograph  and  diagram 
+shown  in  Figure  2  are  from  his  notes.19 
+
+
+3.  The  Reaction-Diffusion  Model 
+
+In  reaction-diffusion,  two  or  more  chemicals  diffuse  through  the  embryo  reacting 
+with  each  other.  Turing  showed  that  under  certain  conditions  a  stable  pattern 
+of  chemical  concentrations  will  be  reached.  For  example,  in  the  case  of  an  artifi¬ 
+cially  simple  embryo  consisting  of  nothing  but  a  ring  of  twenty  cells,  reaction- 
+diffusion  will  produce  a  stable,  regular  pattern  of  concentration  and  rarefaction 
+around  the  circumference  of  the  ring.  The  points  of  highest  concentration 
+
+
+15  See  p.  561  of  Chapter  15;  also  section  2  of  Turing’s  ‘Morphogen  Theory  of  Phyllotaxis’,  in  Morphogen- 
+esis:  Collected  Works  of  A.  M.  Turing,  ed.  P.  T.  Saunders  (Amsterdam:  North-Holland,  1992). 
+
+16  Unless  perhaps  the  computer-assisted  modelling  of  non-linear  systems  was  first  undertaken  a  little 
+earlier,  in  secret,  by  members  of  the  Los  Alamos  group  in  connection  with  nuclear  explosions. 
+
+17  B.  B.  Mandelbrot,  The  Fractal  Geometry  of  Nature  (New  York:  Freeman,  1977;  revised  and  expanded 
+1982,  1983).  For  a  popular  exposition  see  J.  Gleick,  Chaos:  Making  a  New  Science  (London:  Cardinal,  1988). 
+
+18  Some — but  by  no  means  all — of  this  material  appears  in  Morphogenesis,  ed.  Saunders. 
+
+19  The  notes  and  programme  sheets  are  among  the  Turing  Papers  in  the  Modern  Archive  Centre,  King’s 
+College,  Cambridge  (catalogue  references  C  25,  C  27). 
+
+
+Artificial  Life  I  511 
+
+
+MANCHESTER  UNIVERSITY  COMPUTING  MACHINE  LABORATORY 
+
+
+Programme  Sheet  1  (b) 
+
+
+ROUTINE  Ihtu- 
+
+
+(a.  c-/‘wiT''‘r'w  r' 
+
+.-r «J  ire  1  N  K 
+
+
+IhtoM. 
+
+•  4 
+
+►  t 
+
+) 
+
+/  1C.  M/  <-'2. 
+
+
+L 
+
+/ 
+
+J 
+
+M 
+
+t  :  1 
+
+/ 
+
+L*. 
+
+o 
+
+pj 
+
+E 
+
+“Jt 
+
+w 
+
+f\ 
+
+E 
+
+* 
+
+/ 
+
+<s 
+
+Gr 
+
+7" 
+
+V  O 
+
+y 
+
+o 
+
+
+/ 
+
+/ 
+
+<3t 
+
+
+/ 
+
+A 
+
+A»  : 
+
+y 
+
+» 
+
+A 
+
+i  , 
+
+ft 
+
+/ 
+
+t 
+
+Lr  > 
+
+y 
+
+/ 
+
+: 
+
+£ 
+
+f" 
+
+/ 
+
+y 
+
+S 
+
+V  K 
+
+w 
+
+* 
+
+S 
+
+V 
+
+
+'c 
+
+
+V  K 
+
+t 
+
+C 
+
+
+
+N 
+
+u 
+
+V  *< 
+
+/ 
+
+£ 
+
+u 
+
+M 
+
+/ ' 
+
+A 
+
+i 
+
+-i 
+
+V  I* 
+
+/ 
+
+
+/  K 
+
+Ca 
+
+O 
+
+D 
+
+V  .  * . 
+
+u 
+
+o 
+
+D 
+
+5f 
+
+r 
+
+T 
+
+✓ 
+
+R 
+
+/  ./ 
+
+u 
+
+
+R 
+
+u 
+
+« 
+
+T 
+
+ft 
+
+J 
+
+w  ■ 
+
+/ 
+
+/ 
+
+J 
+
+«5i 
+
+K 
+
+
+A) 
+
+N 
+
+7>  £ 
+
+7/ 
+
+j 
+
+N 
+
+A 
+
+K 
+
+✓ 
+
+F 
+
+H 
+
+A/ 
+
+F 
+
+$ 
+
+/ 
+
+C 
+
+if  •/ 
+
+/ 
+
+C 
+
+G-e- 
+
+-z- 
+
+-7 
+
+
+K 
+
+
+4" 
+
+K 
+
+V) 
+
+u 
+
+T 
+
+;4 
+
+w 
+
+c 
+
+T 
+
+Mia- 
+
+. 
+
+<  O 
+
+Z 
+
+\ 
+
+w 
+
+ft 
+
+Z 
+
+lr 
+
+4  is/ 
+
+T 
+
+/ 
+
+L 
+
+A 
+
+✓ 
+
+/ 
+
+: 
+
+4. 
+
+L 
+
+£  c 
+
+r 
+
+* 
+
+W 
+
+✓ 
+
+/ 
+
+/ 
+
+f 
+
+X  ^ 
+
+✓ 
+
+T* 
+
+W 
+
+- 
+
+6a. 
+
+© 
+
+H 
+
+ft* 
+
+w 
+
+
+/ 
+
+IT  • 
+
+y 
+
+d. 
+
+H 
+
+Oa. 
+
+
+Y 
+
+£  1 
+
+E 
+
+/ 
+
+7> 
+
+1  / 
+
+
+Y 
+
+- 
+
+(A 
+
+
+P 
+
+_ 
+
+/ 
+
+w  dr 
+
+/ 
+
+ir 
+
+*r 
+
+P 
+
+r/ 
+
+L - 
+
+Q 
+
+/ 
+
+/ 
+
+r>  ^ 
+
+[  ✓ 
+
+T 
+
+Uria*** 
+
+Q 
+
+V 
+
+r 
+
+A 
+
+O 
+
+* 
+
+k" 
+
+V 
+
+X  >• 
+
+rV 
+
+O 
+
+»v 
+
+
+/ 
+
+B 
+
+e 
+
+£ 
+
+r 
+
+B 
+
+r 
+
+/ 
+
+
+( 
+
+JC. 
+
+L. 
+
+G 
+
+* 
+
+/ 
+
+r 
+
+J 
+
+G 
+
+V 
+
+N 
+
+r 
+
+✓ 
+
+kf 
+
+J 
+
+hrjL. 
+
+/£_ 
+
+z 
+
+X 
+
+fr-r- 
+
+»» 
+
+w- 
+
+s 
+
+✓ 
+
+tru-  j 
+
+M 
+
+fc” 
+
+/  . 
+
+/ 
+
+A~7  ,  / 
+
+ft-rr 
+
+"7" 
+
+T 
+
+M 
+
+p 
+
+✓ 
+
+✓ 
+
+l 
+
+cl. 
+
+(  ( 
+
+X 
+
+/ 
+
+’  ✓ 
+
+/ 
+
+e 
+
+iv 
+
+// 
+
+X>  r/ 
+
+"7 
+
+X 
+
+* 
+
+A/ 
+
+/ 
+
+✓ 
+
+- 
+
+l 
+
+' 
+
+/ 
+
+A 
+
+*• 
+
+i 
+
+A- 
+
+«r 
+
+K 
+
+V 
+
+l 
+
+J" 
+
+✓ 
+
+/ 
+
+n* 
+
+( 
+
+(  A 
+
+•+J 
+
+\ 
+
+/ 
+
+VL 
+
+•• 
+
+{ 
+
+V  / 
+
+t* 
+
+z.  1 
+
+£ 
+
+k 
+
+%J 
+
+/ 
+
+/ 
+
+* 
+
+/ 
+
+Figure  1. 
+
+
+occur  equidistantly  from  one  another.  Turing  picturesquely  describes  this  pattern 
+as  a  stationary  ‘chemical  wave’.  His  suggestion  is  that  at  the  points  of  high 
+concentration  around  the  ring,  the  chemical  acts  as  a  trigger  to  stimulate  growth. 
+For  example,  a  ring  of  cells  might  sprout  leaves  at  these  points,  or  tentacles, 
+producing  a  structure  reminiscent  of  Hydra  (‘something  like  a  sea-anenome  but 
+liv[ing]  in  fresh  water  and  hav[ing]  from  about  five  to  ten  tentacles’  (p.  556)). 
+Regular  but  non-stationary  patterns  of  concentration — travelling  waves — are 
+also  possible.  Turing  suggested  that  the  movements  of  the  tail  of  a  spermatozoon 
+may  provide  an  example  of  these  travelling  waves. 
+
+
+512  I  Jack  Copeland 
+
+
+It  might  be  wondered  how  genes  fit  into  this  picture.  Given  our  current 
+knowledge  of  the  role  played  by  genes  in  the  determination  of  anatomical 
+structure,  is  Turing’s  theory  archaic?  Not  at  all.  On  Turing’s  account,  reaction- 
+diffusion  is  the  mechanism  by  which  genes  determine  the  anatomical  structure  of 
+the  resulting  organism.  The  function  of  genes,  he  suggested,  is  catalytic.  The 
+genes  are  presumed  to  catalyse  the  production  of  appropriate  chemicals,  so 
+setting  reaction-diffusion  in  train. 
+
+Turing  calls  the  chemicals  that  diffuse  and  react  ‘morphogens’,  suggesting 
+hormones  as  an  example.  However,  his  aim  is  not  to  give  a  taxonomy  of 
+morphogens  or  to  describe  specific  morphogens,  but  rather  to  demonstrate  in 
+the  abstract  that,  given  certain  realistic  assumptions  about  unspecified  morpho¬ 
+gens,  reaction-diffusion  will  produce  pattern.  These  assumptions  include  the 
+rates  at  which  the  morphogens  diffuse  between  the  cells,  the  rates  at  which  the 
+various  chemical  reactions  between  the  morphogens  take  place,  and  the  ways  in 
+which  these  rates  change  (due,  for  example,  to  increases  in  temperature  in  the 
+tissue,  or  increases  in  concentration  of  morphogens  that  act  as  catalysts).  The 
+initial  concentrations  of  the  morphogens  must  be  specified,  and  the  number, 
+dimensions,  and  positions  of  the  cells  making  up  the  mass  of  tissue  through 
+which  the  morphogens  diffuse.  This  mass — the  embryo — is  assumed  to  be 
+initially  homogeneous.  (Other  features  of  the  situation,  such  as  the  motions 
+and  elasticities  of  the  cells,  are  ignored  in  order  to  simplify  the  model.) 
+
+Turing  represents  the  reactions  between  morphogens  purely  schematically, 
+making  no  assumptions  concerning  the  actual  chemical  compositions  of  the 
+substances  involved.  For  example,  two  reactions  might  be  specified  like  this: 
+morphogens  X  and  Y  react  to  produce  Z;  Z  and  morphogen  A  react  to  produce 
+
+
+Figure  2.  Turing’s  numbering  of  the  individual  florets  of  a  sunflower. 
+
+
+20  Editor’s  note.  A  blastula  is  a  hollow  sphere  of  cells,  one  cell  in  thickness. 
+
+
+Artificial  Life  I  513 
+
+2  Y.  The  first  reaction  therefore  depletes  the  supply  of  morphogen  Y,  while  the 
+second  tends  to  build  up  the  concentration  of  Y. 
+
+Uniform  diffusion  and  uniform  reaction  in  a  uniform  mass  of  tissue  can 
+produce  only  uniformity,  not  differentiation  and  pattern.  Some  sort  of  sym¬ 
+metry-breaker  must  be  thrown  into  the  mix.  As  Turing  put  it  (p.  525): 
+
+There  appears  superficially  to  be  a  difficulty  confronting  this  theory  of  morphogenesis, 
+or,  indeed,  almost  any  other  theory  of  it.  An  embryo  in  its  spherical  blastula20  stage 
+has  spherical  symmetry,  or  if  there  are  any  deviations  from  perfect  symmetry,  they  cannot 
+be  regarded  as  of  any  particular  importance,  for  the  deviations  vary  greatly  from  embryo 
+to  embryo  within  a  species,  though  the  organisms  developed  from  them  are  barely 
+distinguishable.  One  may  take  it  therefore  that  there  is  perfect  spherical  symmetry.  But 
+a  system  which  has  spherical  symmetry,  and  whose  state  is  changing  because  of  chemical 
+reactions  and  diffusion,  will  remain  spherically  symmetrical  forever.  ...  It  certainly 
+cannot  result  in  an  organism  such  as  a  horse,  which  is  not  spherically  symmetrical. 
+
+Turing  suggested  various  possible  symmetry-breakers,  including  small  disturb¬ 
+ances  caused  by  the  presence  of  anatomical  structures  neighbouring  the  embryo, 
+and  purely  statistical  fluctuations  at  the  molecular  level.  An  example  of  the  latter  is 
+statistical  fluctuation  in  the  number  of  molecules  of  a  given  morphogen  passing 
+through  the  wall  of  a  cell,  so  producing  small  fluctuations  in  the  concentration  of 
+that  morphogen  within  the  cell.  Turing’s  point  is  that  in  certain  circumstances, 
+small  fluctuations  such  as  this  can  bring  about  large  effects,  just  as  a  small  nudge 
+that  under  normal  circumstances  would  have  no  effect  on  a  person’s  balance  could 
+be  enough  to  topple  someone  balancing  on  one  foot. 
+
+Turing  demonstrated  that  under  appropriate  conditions  small  departures 
+from  uniformity  can  indeed  lead  to  the  formation  of  chemical  waves. 
+
+
+4.  Genetic  Algorithms 
+
+An  important  concept  both  in  Artificial  Life  and  in  Artificial  Intelligence  is  that 
+of  a  genetic  algorithm  (GA).  GAs  employ  methods  analogous  to  the  processes  of 
+natural  evolution  in  order  to  produce  successive  generations  of  software  entities 
+that  are  increasingly  fit  for  their  intended  purpose.  Turing  anticipated  the 
+concept  of  a  genetic  algorithm  in  a  brief  passage  of  his  ‘Intelligent  Machinery’, 
+where  he  described  what  he  called  a  ‘genetical  or  evolutionary  search’  (Chapter 
+10,  p.  431;  see  also  Chapter  11,  p.  463,  and  the  introduction  to  Chapter  16, 
+p.  565).  The  actual  term  ‘genetic  algorithm’  was  introduced  circa  1975  by  John 
+Holland  and  his  research  group  at  the  University  of  Michigan.21  Holland’s  work 
+is  responsible  for  the  current  intense  interest  in  GAs.  (Holland,  a  student  of 
+Arthur  Burks,  was  influenced  by  von  Neumann’s  ideas — see  below.) 
+
+
+21  J.  H.  Holland,  Adaptation  in  Natural  and  Artificial  Systems  (Cambridge,  Mass.:  MIT  Press,  1992),  p.  x. 
+
+
+514  I  Jack  Copeland 
+
+
+Turing  described  an  early  example  of  a  GA  in  connection  with  his  chess-player 
+in  Chapter  16. 
+
+One  of  the  first  GAs  to  be  implemented  (in  the  1950s)  formed  part  of  the 
+learning  mechanism  of  Samuel’s  checkers  or  draughts  programme  mentioned 
+above  in  Artificial  Intelligence’.22  Samuel’s  programme  used  heuristics  to  rank 
+moves  and  board  positions  (the  programme  ‘looked  ahead’  as  many  as  ten  turns 
+of  play).  To  speed  up  learning,  Samuel  would  set  up  two  copies  of  the  pro¬ 
+gramme,  Alpha  and  Beta,  on  the  same  computer  and  leave  them  to  play  game 
+after  game  with  each  other.  The  learning  procedure  consisted  in  the  computer 
+making  small  numerical  changes  to  Alpha’s  ranking  procedure,  leaving  Beta’s 
+unchanged,  and  then  comparing  Alpha’s  and  Beta’s  performance  over  a  few 
+games.  If  Alpha  played  worse  than  Beta,  these  changes  to  the  ranking  procedure 
+were  discarded,  but  if  Alpha  played  better  than  Beta  then  Beta’s  ranking  proced¬ 
+ure  was  replaced  with  Alpha’s.  As  in  biological  evolution,  the  fitter  survived.  Over 
+many  such  cycles  of  mutation  and  selection,  the  programme’s  quality  of  play 
+increased  markedly. 
+
+The  use  of  GAs  is  burgeoning,  in  AI  and  elsewhere.  In  one  application  a  GA- 
+based  system  and  a  witness  to  a  crime  cooperate  to  generate  on-screen  faces  that 
+become  closer  and  closer  to  the  recollected  face  of  the  criminal.23  In  A-Life, 
+researchers  study  GAs  as  a  means  of  studying  the  process  of  evolution  itself. 
+
+
+5.  John  von  Neumann  and  A-Life 
+
+John  von  Neumann  was  another  important  early  pioneer  of  Artificial  Life.  In  his 
+1948  Hixon  Symposium,  entitled  ‘The  General  and  Logical  Theory  of  Automata’, 
+he  said: 
+
+Natural  organisms  are,  as  a  rule,  much  more  complicated  and  subtle,  and  therefore  much 
+less  well  understood  in  detail,  than  are  artificial  automata.  Nevertheless ...  a  good  deal  of 
+our  experiences  and  difficulties  with  our  artificial  automata  can  be  to  some  extent 
+projected  on  our  interpretations  of  natural  organisms.24 
+
+Arthur  Burks  (who  edited  and  completed  von  Neumann’s  posthumously 
+published  volume  Theory  of  Self-Reproducing  Automata,  listed  in  the  section  of 
+Further  Reading)  wrote  this  concerning  von  Neumann’s  research  on  the  problem 
+of  self-reproduction: 
+
+
+22  A.  L.  Samuel,  ‘Some  Studies  in  Machine  Learning  Using  the  Game  of  Checkers’,  IBM  Journal  of 
+Research  and  Development,  3  (1959),  211-29;  reprinted  in  E.  A.  Feigenbaum  and  J.  Feldman  (eds.), 
+Computers  and  Thought  (New  York:  McGraw-Hill,  1963). 
+
+23  D.  E.  Goldberg,  ‘Genetic  and  Evolutionary  Algorithms  Come  of  Age’,  Communications  of  the  Associ¬ 
+ation  for  Computing  Machinery,  37  (1994),  113-19. 
+
+24  J.  von  Neumann,  ‘The  General  and  Logical  Theory  of  Automata’,  in  vol.  v  of  von  Neumann’s  Collected 
+Works,  ed.  A.  H.  Taub  (Oxford:  Pergamon  Press,  1963),  288-9. 
+
+
+Artificial  Life  I  515 
+
+
+Von  Neumann  had  the  familiar  natural  phenomenon  of  self-reproduction  in  mind . . .  but 
+he  was  not  trying  to  simulate  the  self-reproduction  of  a  natural  system  at  the  levels  of 
+genetics  and  biochemistry.  He  wished  to  abstract  from  the  natural  self-reproduction 
+problem  its  logical  form.25 
+
+This  passage  is  quoted  approvingly  by  Langton,  who  italicizes  the  final  sentence 
+and  comments: 
+
+This  approach  is  the  first  to  capture  the  essence  of  Artificial  Life.  To  understand  the  field 
+of  Artificial  Life,  one  need  only  replace  references  to  ‘self-reproduction’  in  the  above  with 
+references  to  any  other  biological  phenomenon.26 
+
+Von  Neumann  was  thinking  about  issues  relevant  to  A-Life  at  least  as  early  as 
+1946.  In  a  letter  to  the  cyberneticist  Norbert  Wiener  (dated  29  November  1946), 
+von  Neumann  wrote:  ‘I  did  think  a  good  deal  about  self-reproductive  mechan¬ 
+isms.  I  can  formulate  the  problem  rigorously,  in  about  the  style  in  which  Turing 
+did  it  for  his  mechanisms.’27  There  is  no  doubt  that  von  Neumann’s  theorizing 
+about  self-reproduction  was  strongly  influenced  by  Turing’s  discovery  of  the 
+universal  computing  machine  (or  ‘universal  automaton’,  as  von  Neumann  called 
+it).  Von  Neumann’s  colleague  Herman  Goldstine  wrote: 
+
+von  Neumann  had  a  profound  concern  for  automata.  In  particular,  he  always  had  a  deep 
+interest  in  Turing’s  work.  . . .  Turing  proved  a  most  remarkable  and  unexpected  result.  . . . 
+In  essence  what  he  showed  is  that  any  particular  automaton  can  be  described  by  a  finite  set 
+of  instructions,  and  that  when  this  is  fed  to  his  universal  automaton  it  in  turn  imitates  the 
+special  one.  . . .  Von  Neumann  was  enormously  intrigued  with  these  ideas,  and  he  started 
+in  1947  working  on . . .  how  complex  a  device  or  construct  needed  to  be  in  order  to  be  self- 
+reproductive.28 
+
+In  his  Hixon  Symposium,  von  Neumann  said: 
+
+For  the  question  which  concerns  me  here,  that  of  ‘self-reproduction’  of  automata, 
+Turing’s  procedure  is  too  narrow  in  one  respect  only.  His  automata  are  purely  computing 
+machines.  Their  output  is  a  piece  of  tape  with  zeros  and  ones  on  it.  What  is  needed ...  is 
+an  automaton  whose  output  is  other  automata.  There  is,  however,  no  difficulty  in 
+principle  in  dealing  with  this  broader  concept  and  in  deriving  from  it  the  equivalent  of 
+Turing’s  result.  . . .  The  problem  of  self-reproduction  can ...  be  stated  like  this:  Can  one 
+build  an  aggregate  out  of. . .  elements  in  such  a  manner  that  if  it  is  put  into  a  reservoir,  in 
+which  there  float  all  these  elements  in  large  numbers,  it  will  then  begin  to  construct  other 
+aggregates,  each  of  which  will  at  the  end  turn  out  to  be  another  automaton  exactly  like  the 
+
+
+25  A.  W.  Burks  (ed.),  Essays  on  Cellular  Automata  (Urbana:  University  of  Illinois  Press,  1970),  p.  xv. 
+
+26  C.  G.  Langton,  ‘Artificial  Life’,  in  M.  A.  Boden  (ed.),  The  Philosophy  of  Artificial  Life  (Oxford:  Oxford 
+University  Press,  1996),  47. 
+
+27  Letter  from  von  Neumann  to  Wiener,  29  Nov.  1946  (in  the  von  Neumann  Archive  at  the  Library  of 
+Congress,  Washington,  DC). 
+
+28  H.  H.  Goldstine,  The  Computer  from  Pascal  to  von  Neumann  (Princeton:  Princeton  University  Press, 
+1972),  271,  274-5. 
+
+
+516  I  Jack  Copeland 
+
+
+original  one?  This  is  feasible,  and  the  principle  on  which  it  can  be  based  is  closely  related 
+to  Turing’s  [universal  automaton]  outlined  earlier.29 
+
+In  lectures  von  Neumann  described  a  ‘universal  constructor’  (remarking,  ‘You 
+see,  I’m  coming  quite  close  to  Turing’s  trick  with  universal  automata’).30  Just  as 
+complete  descriptions  of  Turing  machines  can  be  fed  into  the  universal  automa¬ 
+ton  in  the  form  of  programmes,  complete  descriptions  of  automata  can  be 
+inserted  into  the  universal  constructor.  The  universal  constructor  floats  in  a 
+medium — or  sea — in  which  also  float,  in  practically  unlimited  supply,  the 
+components  from  which  the  universal  constructor  is  made.  Given  a  complete 
+description  of  an  automaton,  the  universal  constructor  will  assemble  that 
+automaton. 
+
+If  what  is  inserted  into  the  universal  constructor  is  a  description  I  of  the 
+universal  constructor  itself,  the  constructor  assembles  a  duplicate  of  itself — self¬ 
+reproduction.  Since  the  duplicate  is  to  be  an  exact  copy,  it  must  contain  the 
+description  I.  This  is  done  by  a  copying  mechanism  in  the  universal  constructor 
+and  the  copy  of  I  is  inserted  into  the  offspring.31  Thus  the  offspring,  too,  is  capable 
+of  self-reproduction.  Von  Neumann  likened  the  description  I  to  the  gene,  saying 
+that  the  copying  mechanism  ‘performs  the  fundamental  act  of  reproduction,  the 
+duplication  of  the  genetic  material,  which  is  clearly  the  fundamental  operation  in 
+the  multiplication  of  living  cells’.32  Allowing  the  copying  mechanism  to  make 
+occasional  random  errors  affords  the  possibility  of  random  mutation  in  the 
+genes  of  the  offspring,  thus  opening  the  door  to  Darwinian  evolution.33 
+
+In  his  letter  to  Wiener  (29  November  1946),  von  Neumann  voiced  some 
+concerns  that  might  equally  well  be  raised  concerning  the  focus  of  modern 
+research  in  A-Life  and  Artificial  Intelligence.  Von  Neumann  pointed  out  that 
+when  automata  theorists  choose  the  human  nervous  system  as  their  model, 
+they  are  unrealistically  selecting  ‘the  most  complicated  object  under  the  sun — 
+literally’.  Moreover,  he  said,  there  is  little  advantage  in  choosing  instead  simpler 
+organisms  with  fewer  neurons,  for  example,  the  ant:  any  nervous  system  exhibits 
+‘exceptional  complexity’.  Von  Neumann  suggested  that  automata  theorists  ‘turn 
+to  simpler  systems’,  and  he  recommended  attention  to  ‘organisms  of  the  virus  or 
+bacteriophage  type’.  These,  he  pointed  out,  are  ‘self-reproductive  and . . .  are  able 
+to  orient  themselves  in  an  unorganized  milieu,  to  move  towards  food,  to 
+appropriate  it  and  to  use  it’.  He  estimated  that  a  typical  bacteriophage  might 
+consist  of  6  million  atoms  grouped  into  a  few  hundred  thousand  ‘mechanical 
+elements’,  saying  that  this  represents  ‘a  degree  of  complexity  which  is  not 
+
+29  von  Neumann,  ‘The  General  and  Logical  Theory  of  Automata’,  315. 
+
+30  J.  von  Neumann,  Theory  of  Self-Reproducing  Automata,  ed.  and  completed  by  A.  W.  Burks  (Urbana: 
+University  of  Illinois  Press,  1966),  83. 
+
+31  von  Neumann  ‘The  General  and  Logical  Theory  of  Automata’,  316-17. 
+
+32  Ibid.,  317. 
+
+33  Ibid.  317-18. 
+
+
+Artificial  Life  I  517 
+
+necessarily  beyond  human  endurance’.  By  following  this  path,  he  said,  the 
+‘decisive  break’  might  be  achieved. 
+
+6.  Letter  from  Turing  to  Young 
+
+Shortly  before  the  Ferranti  computer  arrived  in  1951,  Turing  wrote  about  his 
+work  on  morphogenesis  in  a  letter  to  the  biologist  J.  Z.  Young.  The  letter 
+connects  Turing’s  work  on  morphogenesis  with  his  interest  in  neural  networks 
+(Chapter  10),  and  moreover  to  some  extent  explains  why  he  did  not  follow  up 
+his  earlier  suggestion  (Chapter  10,  p.  428)  and  use  the  Ferranti  computer  to 
+simulate  his  ‘unorganised  machines’. 
+
+I  am  afraid  I  am  very  far  from  the  stage  where  I  feel  inclined  to  start  asking  any 
+anatomical  questions  [about  the  brain] .  According  to  my  notions  of  how  to  set  about  it 
+that  will  not  occur  until  quite  a  late  stage  when  I  have  a  fairly  definite  theory  about  how 
+things  are  done. 
+
+At  present  I  am  not  working  on  the  problem  at  all,  but  on  my  mathematical  theory  of 
+embryology . . .  This  is  yielding  to  treatment,  and  it  will  so  far  as  I  can  see,  give  satisfactory 
+explanations  of 
+
+i)  Gastrulation. 
+
+ii)  Polyogonally  symmetrical  structures,  e.g.,  starfish,  flowers. 
+
+iii)  Leaf  arrangement,  in  particular  the  way  the  Fibonacci  series  (0,  1,  1,  2,  3,  5,  8, 
+13,  . . . )  comes  to  be  involved. 
+
+iv)  Colour  patterns  on  animals,  e.g.,  stripes,  spots  and  dappling. 
+
+v)  Patterns  on  nearly  spherical  structures  such  as  some  Radiolaria,  but  this  is  more 
+difficult  and  doubtful. 
+
+I  am  really  doing  this  now  because  it  is  yielding  more  easily  to  treatment.  I  think  it  is 
+not  altogether  unconnected  with  the  other  problem.  The  brain  structure  has  to  be  one 
+which  can  be  achieved  by  the  genetical  embryological  mechanism,  and  I  hope  that  this 
+theory  that  I  am  now  working  on  may  make  clearer  what  restrictions  this  really  implies. 
+What  you  tell  me  about  growth  of  neurons  under  stimulation  is  very  interesting  in  this 
+connection.  It  suggests  means  by  which  the  neurons  might  be  made  to  grow  so  as  to  form 
+a  particular  circuit,  rather  than  to  reach  a  particular  place.34 
+
+
+Further  reading 
+
+Boden,  M.  A.,  Mind  as  Machine:  A  History  of  Cognitive  Science  (Oxford:  Oxford  University 
+Press,  2005). 
+
+- (ed.),  The  Philosophy  of  Artificial  Life  (Oxford:  Oxford  University  Press,  1996). 
+
+34  Letter  from  Turing  to  Young,  8  Feb.  1951  (a  copy  of  the  letter  is  in  the  Modern  Archive  Centre,  King’s 
+College,  Cambridge  (catalogue  reference  K  78)). 
+
+
+518  I  Jack  Copeland 
+
+
+Holland,  J.  H.,  ‘Genetic  Algorithms’,  Scientific  American,  267  (July  1992),  44-50. 
+
+Swinton,  J.,  ‘Watching  the  Daisies  Grow:  Turing  and  Fibonacci  Phyllotaxis’,  in  C.  Teuscher 
+(ed.),  Alan  Turing:  Life  and  Legacy  of  a  Great  Thinker  (Berlin:  Springer- Verlag,  2004). 
+Turing,  A.  M.,  Morphogenesis:  Collected  Works  of  A.  M.  Turing,  ed.  P.  T.  Saunders 
+(Amsterdam:  North-Holland,  1992). 
+
+Turk,  G.,  ‘Generating  Textures  on  Arbitrary  Surfaces  Using  Reaction-Diffusion’,  Computer 
+Graphics,  25  (1991),  289-98. 
+
+von  Neumann,  J.,  Theory  of  Self-Reproducing  Automata,  ed.  and  completed  by  A.  W.  Burks 
+(Urbana:  University  of  Illinois  Press,  1966).

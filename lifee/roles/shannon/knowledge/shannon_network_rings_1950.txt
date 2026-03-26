@@ -1,0 +1,737 @@
+NETWORK RINGS
+
+C. E. Shannon
+Bell Laboratories Memorandum, June 11, 1948
+26 pp. + 4 figs.
+
+Source: Claude E. Shannon: Collected Papers, edited by N. J. A. Sloane
+and A. D. Wyner, IEEE Press, 1993, pp. 571-583.
+
+======================================================================
+
+NETWORK RINGS*
+Claude E. Shannon
+1. INTRODUCTION
+A method developed by a group of Chinese scientists 1.2,3,4 for finding the admittance
+determinant IY i] Iof a linear electrical network proceeds as follows.
+Label each admittance of
+the network with a different letter, say aI, a2' ... ,am. Choose a set of independent nodes or
+junction points, i.e., a set of all but one from each separate part of the network.
+Form the
+symbolic "sums"
+of the letters corresponding to the branches which are connected to each
+selected node and "multiply" these "sums" out by the ordinary rules of algebra, simplifying
+with the two additional rules
+a+a=O,
+a . a = 0 ,
+(1)
+(2)
+where a is any letter or expression. The resulting polynomial is IYij Iwhen we substitute the
+values of the admittances for the corresponding letters, and interpret addition and multiplication
+in the ordinary arithmetic sense. For example, in Fig. 1 the expression is
+(a + b + e)(a + b + d) = ad + bd + ae + be + cd ,
+and if a, b, c, d are interpreted as the corresponding admittances we have the admittance
+determinant.
+c
+b
+d
+Figure I
+a
+Similar methods give impedance determinants and the numerator determinants in the
+fractions representing driving point and transfer admittances and impedances. These rules have
+been treated only as short cut methods of obtaining these determinants. In a conversation with
+the writer about these results R. M. Foster pointed out that the algebraic system suggested by
+the two rules (I) and (2) might be worth studying for its own properties. The present paper is
+an attempt to exploit this idea. This has led to a method of treating the topological properties of
+*
+Bell Laboratories Memorandum,June 11, 1948.
+
+c. E. Shannon
+linear
+graphs
+algebraically,
+much
+as
+analytic
+geometry
+studies
+Euclidean
+geometry
+algebraically. A linear graph is represented by an algebraic expression in a certain type of ring,
+and topological properties of the graph correspond to algebraic properties of the expression.
+The algebra as developed here is particularly adapted to the study of properties of networks of
+importance in electrical work, since two network expressions are equal if and only if the
+corresponding linear graphs are "two-isomorphic"
+in the sense of H. Whitney", Two graphs
+are said to be two-isomorphic if one can be obtained from the other by a sequence of the
+following operations: (I) separating two parts which are connected through a single junction,
+(2) joining two separate parts at a single junction, (3) inverting a part connected at two
+junctions only to a second part.
+This means that two-isomorphic networks have equivalent
+electrical properties (self and transfer impedances, etc.) and conversely",
+The correspondence between graphs and network expressions in the ring is not, however,
+perfect. Every graph has a unique network expression (in the two-isomorphic sense) but there
+are some network expressions which do not correspond to ordinary graphs.
+Restricting the
+study to those expressions corresponding to graphs introduces very unnatural and artificial
+restrictions. All basic theorems hold equally well for the more general class of expressions.
+This suggests that we consider the set of graphs as a subclass of the general set of networks
+defined abstractly by the algebraic methods. Many of the peculiarities of linear graph theory
+then become more understandable. For example, duality theory becomes much more complete
+- every network has a dual (not just planar networks) and the whole duality concept can be
+defined and treated in a unified abstract manner.
+The network expressions studied here are isomorphic to a subclass of the "rnatroids' of H.
+Whitney 7 , being in fact isomorphic to the set of matrices with integer elements reduced
+modulo 2, when row addition is allowed as an equivalence operation. Many of the theorems in
+the ring hold for the more general class of matroids, but the proofs given here are of a more
+,'algebraic' , character.
+The terminology chosen is taken from linear graph theory 8 .
+2. THE COVERING RING
+Consider a finite commutative ring in which each element is nilpotent of index 2 for both
+addition and multiplication.
+Let a I , ... , a n be a polynomial basis for the ring, i.e., every
+element is a polynomial in the a i, but this property is lost if any a, is omitted from the set. The
+ring will be called a network ring if there exists such a basis with a I a 2 ••• an "# O. Thinking
+of a fixed basis, the elements of this basis will be called' 'branches". The number of branches
+in the basis (which turns out to be independent of the basis chosen) will be called the order of
+the ring. A polynomial in the basis ai'
+P = a r
+•.• at + ... + a p ..• a q ,
+will be called reduced if it contains no repeated a's in a term and no repeated terms,
+Theorem 1. In a network ring there is a unique (apart from order of terms or of factors in a
+term) reduced expression for each element X '# 0 in terms of a given basis a i » n a,
+t:- O.
+By definition of the basis there must be one such expression. To prove uniqueness assume
+two reduced representations of some element
+Then
+
+Network Rings
+and after P is reduced it still contains some terms since P 1 and P 2 were reduced and different.
+Let a,. ... a( be the term (or one of the terms) in P with the least number of factors.
+Multiply
+by all a i not among a,., ... , a t- We obtain
+al"'an=O,
+since all other terms contain repeated factors, and this contradicts our hypothesis.
+Theorem 2. The number of elements in a network ring of order n is 2(2" - I).
+For we have 2n -
+1 possible products of the a i without repeated factors, and may form
+2(2
+n
+- I) different selections from these, all of which lead to different elements by Theorem 1.
+The case where no products are taken corresponds to the element O.
+Suppose now we have a second set of elements forming a basis b 1 , ••• , b m : Evidently
+m ~ n since there are at most 2(2
+m
+-
+I) irreducible polynomials in the b i and there are 2(2" - I)
+elements in the ring. If m > n then n b, = 0 since each b, is a polynomial in the ai' and each
+term in the product contains at least one repeated a. But then there is a subset of at least 11 of
+the bi with non-vanishing product, as we see by considering n a i * 0 with the a i expressed in
+terms of the hi' This subset forms a basis and therefore the original hi did not. Hence m = 11,
+and n b i * O. Conversely if we have n elements b i with Il b,
+~ 0 they form a basis since the
+2(2" - 1) polynomials in them are all different and must then be the same as the elements in the
+ring. Thus we have:
+Theorem 3. A necessary and sufficient condition that a set of hi be a basis for a network ring of
+order n is that there be n of them and that n bi "* O.
+We can now characterize any basis b , , ... , b n in terms of a given basis a I , ... , an' Since
+the a i form a basis any set of elements can be written as polynomials in the a i:
+hi =L, +(11,
+b2 = L 2 + (12,
+(3)
+where the L, are linear in the a i' while the (Xi contain no first degree terms, We have
+n b i = n L i + [terms with more than 11 factors a i ]
+= n L; + 0 ,
+since all products of more than 11 a i contain repeated a's and vanish.
+Theorem 4. A necessary and sufficient condition that b i (i = I, ... , 11) be a basis is that the
+hi can be written in the form (3) in terms of a given basis with n L, *- O.
+Theorem 5. For any 11, there exists a unique abstract network ring of order 11.
+That two network rings of order 11 are isomorphic follows immediately from Theorem 1 on
+setting the branches a" ... , a n of the one
+ring in correspondence with the branches
+b I , ... , b n of the other, and corresponding polynomials in correspondence.
+
+c. E. Shannon
+We now prove by induction that a network ring exists for any n. For n = 1 we have the
+network ring consisting of a single a with:
++ °
+a
+° °
+a
+a
+a
+o
+a
+a
+Now suppose we have exhibited a network ring N n of order n. Consider the set of ordered
+triplets
+(<X, ~, y)
+where <X and
+~ are any elements of N nand 'Y is °or I.
+We define equality, addition and
+multiplication by
+(al'~I'YI) =
+(a2'~2'Y2) ifal = a2,fll = J32,YI = Y2,
+(aI, ~I' YI) + (a2' ~2' Y2) = (ClI + Cl2, ~1 + ~2' YI + Y2)
+(the y's are added mod 2),
+(aJ,J31'YI)(Cl2'~2'Y2)= (al<X2,alJ32 +a2J3J +'Y2(l1 +YJ(l2,'YJ'Y2),
+(4)
+where 1 a = a. These are clearly well defined and closed.
+It is readily verified that these elements (a, ~,y) form a commutative ring with the desired
+nilpotency properties, and that the elements
+hi = (a;,O,O),
+i = 1,2, ... .n ,
+bn + J = (0,0,1)
+form a polynomial basis. Finally
+n b, = (a I a2
+a n ,0,0)(0,0, 1)
+= (O,aJ
+an,O) *" °
+and the definition is nonvacuous for every n.
+If each term of a polynomial contains the same number of terms r we say it is homogeneous
+of rank r.
+</)
+Theorem 6. There are 2 r homogeneous reduced expressions of rank r.
+For the number of different products of r factor is (n), etc.
+r
+3. NETWORKS
+Thinking of a fixed basis we will define a network as an element that can be written as a
+product of linear terms in the branches.
+Thus 0 = a . a, ab + ac + be = (a + b)(a + c),
+etc., are networks; ab + cd is not.
+The set of branches in any term of the polynomial of a network will be called a frame
+("gerust") of the network. For example, the network ab + ae + be has three frames; the set
+a, b, the set a, e and the set b, c.
+
+Network Rings
+Theorem 7. Suppose aI' a 2, ... , a r is a frame of the networkf
+We can write f as
+f = (al + L t )(a 2 + L 2) ···(a r + L r )
+,
+where L I , ... , L I" are linear terms not involving a I , ... , a 4' This representation is unique,
+given the frame a I , ... , a 1". Finally, iff can be represented in this form, a I , ... , a r is a frame."
+To prove this note that sincef is a network we have
+f
+= M t M 2 .•• M, ,
+with the M's linear. a 1 must appear in one of these terms since otherwise it could not appear in
+the
+polynomial
+expression
+for f
+Suppose
+it
+appears
+in
+M I'
+Using
+the
+fact
+that
+Xy = Xy + YY = (X + Y) Y, add M I to aJl other M's in which a I appears, thus cancelling it.
+Hence
+where the N's do not involve a 1.
+Now a2 must appear in one of the N's since otherwise it
+could not appear in a product with a 1 in the polynomial. Suppose it appears in N 2' Add N 2 to
+all other terms in which a 2 appears (including possibly M I) thus cancelling it. Hence we get
+f
+= M~ N 2 S 3 ... S,.
+where now only M~ contains a I and only N 2 contains a 2'
+Continuing in this way we obtain
+the desired expansion. Now assume the expansion is not unique:
+f
+= (at +L 1) ···(a r + LI") = (al + M 1 ) "'(al" + M r )
+,
+with L t "* MI'
+Suppose L I contains ap and M I not.
+Then the expansion of the left side
+contains the tenn
+and the right side does not. As this term could not be cancelled we have a contradiction. The
+last part of the theorem is obvious on multiplying out the' 'frame expansion" off
+The frame
+expansion is of fundamental importance in this theory.
+Theorem 8. Given one factorization of a network
+any other factorization may be obtained by a sequence of operations, each operation consisting
+of adding one factor to another (as in the proof of Theorem 7).
+The inverse operation is also of this type, e.g.,
+L I L 2 ···LI" = (L I +L 2)L 2 ···L,
+has the inverse
+Now by the proof of Theorem 7 we can go from any factorization of f to a given frame
+expansion by a sequence of adding operations.
+Thus we go from anyone factorization
+L 1 ••• L,. to a frame expansion MI· .. M,., and then to any other factorization N I ••• N,..
+Theorem 9. If a network! = L I L 2 ..• L,. "* 0, the L; are linearly independent. Conversely, if
+the L; are linearly independent.j" == L) ... L,. =t O.
+
+C. E. Shannon
+Suppose a relation L r + L s + ... + L t = O.
+Adding L s •.. L t to L r' this term then
+vanishes. Hence! = 0, contradicting the hypothesis. Now assume no relation. We may apply
+the frame expansion method and never arrive at a 0, since if we did the series of adding
+operations would define a linear relation. The frame expansion does not vanish since it
+contains a frame term on multiplying out.
+Any factor of a networkf
+t:. 0 will be called a cut set off. The network 0 is considered to
+be of rank 0 and to have no cut sets.
+Theorem 10. A necessary and sufficient condition that L ~ 0 be a cut set off 7; 0 is that
+Lf = 0 .
+If L is a cut set of f then j' = Lg, hence Lf = LLg = O.
+If Lf = 0, f
+7; 0, there is a
+relation among the factors off and L, actually involving L, so that L is a sum of certain factors
+off, hence a cut set off.
+Theorem 11. Letf
+= L I L 2 ••• L,. be any factorization off
+~ O. Then any cut set M can be
+written as a linear combination of the Lr, and conversely any linear combination of the L; not
+identically 0 is a cut set off.
+This is obvious from Theorems 9 and 10. Thus one set of factors of a network f forms a
+basis for cut sets - any may be expressed as linear combinations of these factors. There are
+2" - I linear combinations of r factors. These must all be different since equality of two would
+imply a relation among the L i : Hence:
+Theorem 12. A network! ~ 0 of rank r has 2" - 1 different cut sets.
+Theorem 13. Any network of rank r can be factored in exactly
+r!
+1'-1n (2" - 2P )
+p=o
+N(r) =
+different ways .
+From the (2" -
+1) factors of f we may choose the first in (2" -
+I) ways, the second in
+(2" - 2) ways since it must be different from the first; the third in (2 r
+- 4) since it must be
+independent of the first 2, the pth in (2" - 2P - J). As we want combinations, not permutations,
+we divide by r!'
+Theorem 14. There are exactly
+networks of rank r with n branches.
+There are 2
+-
+1 linear expressions in the a i : We may choose the first in 2" -
+I ways; the
+kth in 2" - 2k - J ways to be independent of the first k - 1. Thus we can get
+..l rill (2n _ 2*)
+r!
+k=O
+1 r-I
+combinations of factors. Since each network can be factored in ;T k~O (2 r
+- 2*) ways the
+result follows.
+
+Network Rings
+Theorem 15.
+If a homogeneous f can be factored, a set of factors is given by the following
+processes. Pick a frame, say aI, a 2 ' ... , a,.. The factoring is
+g = (al +L 1)(a 2 +L 2) "'(a r +L r ) ,
+where
+L i
+is
+the
+sum
+of
+the
+other
+branches
+in
+all
+frames
+contammg
+branches
+ai, ... , a; _1, a; + I , ••• , a r : To determine if the expressionf can be factored construct g and
+multiply out. If g = f, g is a factoring off, if notf is not a network.
+If f can be factored it can be factored uniquely about the frame a I, ... .o». Suppose this
+factoring is
+Then M I = L I , since on multiplying out we get terms
+M I a2 ... a,
+which cannot be cancelled, and appear in the polynomial expansion. Also these are clearly the
+only terms of this type. The rest of the theorem is obvious.
+4. DUALITY
+We now define the dual f
+I of a network f as follows.
+Let f be written in its polynomial
+expansion. Then f
+I is the sum of products of branches not appearing in the terms off. Thus
+with branches a, b, c and d, the dual of ab + ac is cd + bd.
+Theorem J6. Iff is a network thenf I is a network. If a frame expansion off is
+f
+= (al + L t )( a 2 + L 2) ... (a,. + L r )
+then a frame expansion off I is
+g =I' = (b , + M I)(b 2 + M 2 ) ••• (b ; + M n )
+where hi, ... , b n are the branches not appearing among a I , ... , a ,., and M j is the sum of the
+a i of the factors off in which bj appears in the L part.
+Thus the dual off = (Q + a) (£ + a) with a, b, c , d the branches is
+I' = (~ + c) (~ + b + c)
+where we have underlined the frame terms inI andr'. Let us construct the g of Theorem 16. If
+we multiply f out we get a sum of terms each consisting partly of a's from the frame part off
+and partly of b's from the L i • Those terms containing two equal b's necessarily vanish. All
+others correspond to a dual term in the expansion of a g found by taking the b's in g factors
+which do not appear among the b' s of the f term in question and a's from the M i corresponding
+to the b's which were taken in theftenn. These a's actually are available in the proper M; due
+to the method of constructingf
+Conversely each term of g corresponds to a term offand hence
+they are duals in our sense.
+The rank off
+I will be called the "nullity" off, the cut sets off
+I are "circuits" off and the
+frames of f
+I are "fundamental systems"
+of f
+These are examples of dual concepts.
+In
+general, the dual of any operation on, or concept associated with, a network f is the same
+operation on, or concept associated with,r. Any theorem we may derive concerning networks
+has a dual theorem which may be found by replacing "network"
+by "dual of network"
+and
+simplifying through the use of the dual definitions - e.g., "rank of the network"
+becomes
+
+c. E. Shannon
+"rank of the dual of the network" and hence' 'nullity of the network. " The dual theorem must
+be true since "networks" and the "duals of networks" are two descriptions of the same class.
+A networkfwill be called inseparable if it cannot be written as a product
+! = g I 82
+with g I , g 2 involving mutually exclusive sets of branches. Otherwisef is separable.
+Theorem J7. Any networkf can be written uniquely apart from order of factors as
+!=glg2···gs,
+where the g; are inseparable and involve mutually exclusive sets of branches.
+The g; together with the branches not appearing in f will be called the inseparable
+components of f.
+Obviously there exists at least one such resolution.
+To prove uniqueness
+suppose we have two resolutions
+Choose a frame off and expand each side about this frame, using the method used in proving
+Theorem 7. This will clearly not disturb the separation. Suppose the frame terms in g I are
+as~ ... .o;
+These frame terms on the h side must appear in the same hi for, if not, gl is
+separable. Conversely all terms appearing in this hi appear in g J otherwise this hi is separable.
+Continuing this method with g 2 , g 3 ... we obtain the theorem. Incidentally we also obtain:
+Theorem 18. To resolve a network into separable components, factorf about a frame:
+f = (al + L 1)(a 2 + L 2) ... (a, + L r )
+.
+To
+the
+term
+(a I + L I)
+annex
+all
+terms
+containing
+branches
+appearing
+in
+L J'
+say
+(a 2 + L 2) ..• (a s + L s)' also all terms containing branches appearing in L 2 •.. L s' etc.
+When this process terminates we have grouped the factors of an inseparable component. If any
+factors of I remain, use the same process on these, abstracting components until all factors ofI
+are used.
+If a branch a does not appear in the polynomial expansion of a network/we will say that a
+is a circuit of f. If a appears in every term off, a is an open branch off. It is easily seen that
+these are dual concepts. If neither of these obtains a is essentially involved inf.
+We now define an operation on networks which will be called extraction. If f is of rank
+greater than one and a is not a circuit, we can write f = a g + h with h possibly O. We define
+Eaf = g. In case f is of rank 1 and a not a circuit we define Ea f = O. Eaf is not defined
+when a is a circuit off.
+Theorem 19. Ealis a network if/is a network. Also
+Ea(f + g) = Eaf + Eag ,
+E; Ebl = Eb Eaf (we write this as Eabl) ,
+Ea (f g) = f Ea g + g E af ,
+rank of f, g > 1 ,
+whenever an expressions have a meaning.
+Note the similarity of Ea with aaa. Indeed iff is expressed in polynomial form and is of
+
+Network Rings
+rank> 1 , and if + and, be interpreted arithmetically then
+a
+Eaf = a;; f .
+The inverse of this operation is not unique. We will call the inverse operation insertion, and
+denote it by Ja' Jag exists only for networks g not involving a.
+Theorem 20. The most general/such that
+Ea/
+= g ,
+g being a given network with a as a circuit, is
+/ = Jag = (a + L) g
+when g ~ 0, and I a g when g = 0, where L is an arbitrary linear expression in the branches
+other than a.
+An operation similar to Ea/is (Eaf')'. It is defined only in casef' involves a. We may
+denote this operation by Ea' and it obeys the same laws as Ea. Its general inverse is (g must be
+~ times a network)
+Ja' g = [(a + L) g']' .
+Theorem 21.
+t = a Eat + fla=o .
+These last three theorems follow easily from the definitions, as does the next one.
+Theorem 22. If a 1 ••• a,. is a frame offthen
+Further if this equation is meaningful and true then a 1 '"
+ar is a frame off
+Two elements a and b will be said to be in parallel in/if E a /
+= E b / . They will be said to
+be in series if E a ' f = E b ' f·
+We define a "simple" cut set as one such that no proper subset of its branches is also a cut
+set. A simple circuit is defined similarly.
+Theorem 23. Any factor of a frame expansion is a simple cut set. Conversely any simple cut
+set is a factor in some frame expansion. Furthermore, any branch in the simple cut set may be
+used as the frame term in the factor.
+To prove the first part assume in contradiction that
+l
+> ;«, +A+B)(a2+ L2}"'(a r + Lr )
+is a frame expansion with B a cut set. Obviously if a I + A is the part of the first term which is
+a cut set then B also is, for B = (a I + A + B) + (a I + A) and the sum of two cut sets is a cut
+set. Then by Theorem 13, B is a linear combination of the other terms
+B = (af' + Lp ) + (a q + L q ) +
+,
+which is manifestly impossible since the frame terms a p , a q , ... do not appear in B and could
+
+C. E. Shannon
+not cancel out. The second part may be proved as follows. Let
+!==L tL 2"'L r
+,
+L I being the given simple cut set. Choose any branch in L I , say a I , and add Lito other L's in
+which a I appears, as in the regular frame expansion:
+t >t», +M I)M2···M r •
+We continue as in the proof of Theorem 9 but choose from M 2 a letter not appearing in MI.
+This is possible, for otherwise a subset of M I is a cut set. Continue with the expansion, always
+choosing for the next frame term a letter not appearing in M I. We need never then add any
+terms to the first one, which is left intact.
+Thus we see that the set of simple cut sets is identical with the set of frame cut sets and we
+may construct the former in this way. We may also use these results to determine if a given cut
+set is simple.
+s. RELATION TO LINEAR GRAPHS AND ELECTRICAL NETWORK THEORY
+We will say that a network is real if it can be factored in such a way that no branch appears
+in more than two factors, otherwise it is ideal. Thus (a + b)(a + c) is real and
+(a + d + e + g)(b + d + f + g)(c + e + f + g)
+is ideal. This last is true since adding any two terms leaves the distribution of appearances of
+branches the same, a branch in each term, in each pair of terms and in all three terms. As any
+factoring can be reached by a sequence of such additions, any factoring has a letter appearing in
+three terms.
+We will now set up a correspondence between real networks and linear graphs. Let any real
+network!
+be factored in such a way that no branch appears in more than two factors.
+Associate a junction point with each factor and add one additional junction point.
+To each
+branch appearing in two factors we make correspond a branch of the graph connecting the
+corresponding junctions. For each branch appearing in one factor only we draw a branch
+connecting the associated junction with the additional junction. For each branch appearing in
+no factors we draw a closed loop. It is easily seen that the original factors form a cut set basis
+for the graph. Furthermore, the cut sets of our network are cut sets of the graph since they are
+linear combinations of the basis cut sets modulo 2. Two graphs corresponding to the same
+network are two-isomorphic since they have the same cut sets and it has been shown by
+Whitney that these properties are equivalent. With this as a basis it is not difficult to show that
+the other terms we have defined correspond in the case of real networks to similarly named
+concepts in graph theory. Hence there is a one-to-one correspondence between real networks
+and the linear graphs under two-isomorphism that can be constructed from a set of labeled
+branches.
+Ignoring interchanges of letters, the possible graphs with three branches9 are shown in
+Fig. 2, together with the corresponding network expressions in the network ring of order three.
+It is known that the network admittance discriminant (Yi] [of an electrical network is equal
+to a sum of products, each product having for factors admittances making up a frame.
+Hence
+we have the Wang result that the admittance discriminant
+D I = f Yij ( =II a, :: Y,
+by which we mean that f (written as a polynomial) is evaluated as though + and, were the
+
+Network Rings
+arithmetic operations, the admittances of branches being substituted for the branches. Similarly
+the impedance determinant is given by
+D 2 = tZ ij , = /'fa, = Z,
+.
+Also the driving point admittances Y 11 looking across branch a I is
+Dy
+Yl t =--
+aD)'
+.
+aft
+Hence for f not of rank I,
+r ,1 =
+/
+,
+E f
+a, =)',
+Q 1
+a
+<)
+~
+a
+a e
+b
+b -==-
+<)
+-8
+b
+c
+c
+c
+c
+<)
+-8 -8
+a
+a+b
+a+b+c
+~
+RANK 0
+RANK I
+Figure 2
+•
+a •
+•
+a •
+•
+a •
+•
+b •
+b n
+•
+h •
+-==-
+c
+c
+c
+<)
+•
+c •
+ab
+a(b +c)
+(a +b)(a +c)
+abc
+RANK 2
+6. SOLUTION OF CAMPBELL'S PROBLEM
+RANK 3
+A problem proposed by G. A. Campbell is that of determining whether or not a given
+homogeneous expression in certain admittances (or impedances) is the determinant of an
+electrical network, and if so to find the network. Theorem 15 solves half of this problem, for it
+gives a method of determining whether the given expression represents a network - we must
+now find a method for determining whether a network is real or ideal.
+Theoretically,
+Theorem 8 is a solution of this, for we may use it to factor a network in all possible ways, and
+inspect the various factorings to determine if any occur in which all branches appear at most
+
+C.E.Shannon
+twice. However, this process is very long and impractical even for quite simple networks. We
+will now describe a very rapid method of determining whether a given network is real.
+It is
+based on the dual of Theorem 23: all circuits of a fundamental system expansion of fare
+simple. Let us expandf about a fundamental system:
+f = [(aJ + L,)(a2 + L 2 )
+.,. (an + L Il ) ]
+'
+•
+Each of these factors is a simple circuit of the network f
+If f is a graph and we omit
+aI, ... , an' leaving the sets L 1 , L 2 " ••• , L n » we have a tree.
+We proceed step-by-step to
+construct this tree, using the sets L I , L 2 , .•. sequentially. The process is best described by an
+example. Suppose
+A
+L} =a+b+c+d
+B
+L2 =a + b
+C
+L 3 = b + c + d
+D
+L 4 = a + b + C
+E
+Ls = b + d
+I
+b/
+,
+a
++
+b
++
+c
++
+d
+"'; +
+d
+3a
+3b
+a
+b
+3c
+(c
++
+d)
+a
+b
+3d
+c
+d
+Figure 3
+where A, B, ... , E are the corresponding fundamental system branches. The first term L J tells
+us that a, b, C, d occur in a sequence, since adding one more branch completes a simple circuit.
+The first approximation to the tree is shown in Fig. 3a. The + sign between the letters indicates
+commutativity - nothing is yet known of the order of these branches in the sequence. Now
+consider L 2 = a + b. a and b must be adjacent, hence the second approximation to the tree is
+given in Fig. 3b. The arrows on C + d indicate that c and d can be distributed in any way on the
+tails of the tree, both at one or the other end in any order, or one at each end. Now consider
+L 3 = b + C + d. c and d must be in sequence with b, hence we get the third approximation of
+Fig. 3c. L 4 = a + b + c gives Fig. 3d, and L 5 = b + d is impossible so the network is ideal.
+The dual of this network is real, however. The dual has
+a:
+L 1 =A+B+D
+b:
+L 2 = A + B + C + D + E
+c:
+L 3 = A + C + D
+d:
+L4 = A + C + E .
+The successive approximations are shown in Fig. 4 with the network shown in Fig. 4e.
+This
+method is very rapid - with a little practice it is possible to construct a network of rank 20 or 30
+
+Network Rings
+in a few minutes, starting with a frame or fundamental system expansion. It is usually best,
+however, to take the L; in such an order that each one taken involves as many letters previously
+written down as possible and to start with a large L. With these precautions the process
+described will converge rapidly to the proper solution for any ordinary network.
+C
+(A +8 +D)
+4a
+(A +D)
+B
+E
+C
+(A +8 +D)
+4b
+A
+D
+B
+4c
+4d
+b
+Figure 4
+d
+c
+4e
+REFERENCES
+1.
+K. T. Wang, On a New Method for the Analysis of Electric Networks, Memoir of the
+National Research Institute of Engineering, Academia Sinica, April 1934.
+2.
+S. L. Ting, On the General Properties of Electric Network Determinants and the Rules
+for Finding the Denominator and the Numerators, Scientific Papers, National Research
+Institute of Physics, Academia Sinica, v. 1, No.7, October 1935.
+3.
+Chin-Tao Tsai, Short Cut Methods for Expanding the Determinants Involved in Network
+Prohlems, Chinese Journal of Physics, v. 3, No.2, October 1939, p. 148.
+4.
+Wei-Liang Chow, On Electric Networks, Journal of the Chinese Mathematical Society,
+v. 2,1940.
+5.
+H. Whitney, On the Classification of Graphs, American Journal of Mathematics, v. LV,
+No.2, April 1933.
+6.
+H. Whitney, 2-lsomorphic Graphs, American Journal of Mathematics, v. LV, No.2,
+April 1933.
+7.
+H. Whitney, On the Abstract Properties of Linear Dependence, American Journal of
+Mathematics, v. LVII, No.3, July 1935.
+8.
+D. Konig, Theorie der Endlichen und Unendlichen Graphen, Leipzig, 1936.
+9.
+R.
+M.
+Foster, Geometrical Circuits of Electrical Networks,
+Trans.
+AlEE,
+v.51,
+June 1932, p. 309.

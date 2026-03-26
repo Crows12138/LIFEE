@@ -1,0 +1,86 @@
+EQUIVALENCE OF LEFT AND RIGHT ALMOST PERIODICITY
+
+A. M. TURING*.
+
+[Extracted from the Journal of the London Mathematical Society, Vol. 10, 1935.]
+
+
+In his paper "Almost periodic functions in a group", J. v. Neumann†
+has used independently the ideas of left and right periodicity. I shall show
+that these are equivalent.
+
+f(x) is a complex-valued function of a variable x which runs through
+an arbitrary group G. f(x) is said to be right almost periodic (r.a.p.) if
+for each epsilon > 0 we can find a finite set b_1, ..., b_m of elements of G such that
+to each t of G there corresponds a mu = mu(t) satisfying
+
+    |f(xt) - f(xb_mu)| < epsilon    for all x in G.                (D)
+
+The definition of left almost periodicity is obtained from this by
+replacing the inequality (D) by
+
+    |f(tx) - f(b_mu x)| < epsilon.
+
+Suppose now that f(x) is r.a.p., then to prove f(x) l.a.p. it is sufficient to
+find, for each epsilon > 0, a finite number of elements c_1, ..., c_n of G such that to
+each s of G there corresponds a nu = nu(s) satisfying
+
+    |f(sb_mu) - f(c_nu b_mu)| < epsilon    for each mu;            (K)
+
+-----
+* Received 23 April, 1935; read 25 April, 1935.
+† J. v. Neumann, Trans. American Math. Soc., 36 (1934), 445-492.
+
+[p. 285]
+
+285       EQUIVALENCE OF LEFT AND RIGHT ALMOST PERIODICITY.
+
+for then, by the r.a.p. property of f(x),
+
+    |f(sb_mu) - f(st)| < epsilon,
+
+    |f(c_nu b_mu) - f(c_nu t)| < epsilon,
+
+where mu = mu(t).
+
+Putting pi = mu(t) in the inequality (K), we have
+
+    |f(st) - f(c_nu t)| < 3*epsilon    for each t,
+
+i.e. f(x) is l.a.p.
+
+To prove the existence of the elements c_1, ..., c_n let us introduce a space
+R of m complex dimensions. Consider the set S of points P_y of R whose
+coordinates are [f(yb_1), ..., f(yb_m)] (y runs through G). f(x) being r.a.p.
+is bounded*; S is therefore bounded and can be covered with a finite
+number of spheres of diameter epsilon each containing some point of S. Let the
+finite set of elements of S obtained in this way be P_{c_1}, ..., P_{c_n}; then for
+each s of G there is a nu = nu(s) with P_s distant less than epsilon from P_{c_nu}; hence,
+for each mu,
+
+    |f(sb_mu) - f(c_nu b_mu)| < epsilon,
+
+i.e. c_1, ..., c_n have the required property.
+
+Thus f(x) is r.a.p. implies that f(x) is l.a.p. and the converse follows
+similarly or by the use of the inverse group. v. Neumann's theory can
+now be used to show that each l.a.p. function has a unique left mean.
+Previously it was necessary to suppose f(x) to be both l.a.p. and r.a.p.
+The theory of a.p. functions in a group can now be taken over to sets of
+objects which admit transitive transformations by the group. Let A be
+a set of objects admitting (left-) transformations by the group G. Represent
+the elements of A by small Gothic letters. Then to a function f(y) in A
+corresponds a function f(y) in G defined by f(y) = f(y), whenever yt = y,
+t being some fixed element of A. f(y) may be said to be a.p. if f(y) is l.a.p.,
+and will then have a unique left mean.
+
+King's College,
+        Cambridge.
+
+-----
+* Putting x = e in (D), we have
+        |f(t) - f(b_mu)| < epsilon.
+  Then
+        |f(t)| < epsilon + max{|f(b_1)|, ..., |f(b_m)|}.
+
+Printed by C. F. Hodgson & Son, Ltd., Newton St., London, W.C.2.

@@ -1,0 +1,677 @@
+Practical Forms of Type Theory
+Author(s): A. M. Turing
+Source: The Journal of Symbolic Logic, Vol. 13, No. 2 (Jun., 1948), pp. 80-94 
+Published by: Association for Symbolic Logic
+Accessed: 01/02/2014 06:02
+ .
+content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms
+ .
+Journal of Symbolic Logic.
+
+THU JOUBimAL OF SYMBOLIC LOGIC 
+PRACTICAL FORMS OF TYPE THEORY 
+A. M. TURING 
+Russell's theory of types,1 though probably not providing the soundest pos- 
+sible foundation for mathematics, follows closely the outlook of most mathema- 
+ticians. The present paper is an attempt to present the theory of types in forms 
+in which the types themselves only play a rather small part, as they do in ordi- 
+nary mathematical argument. Two logical systems are described (called the 
+"nested-type" and "concealed-type" systems). It is hoped that the ideas 
+involved in these systems may help mathematicians to observe type theory in 
+proofs as well as in doctrine. It will not be necessary to adopt a formal logical 
+notation to do so. 
+1. The nested-type system for a finite universe. In this section the nota- 
+tion of the nested-type system will be explained. The explanation will be in 
+terms of the 'finite universe,' i.e. we start with a finite number of objects or 
+'individuals' and build up other entities from these. We can then formulate 
+certain rules which give valid results in this case and hope that they will apply 
+in the infinite case also. We cannot of course hope that all such rules will work. 
+We have to imagine that many rules of this kind have been tried, found wanting 
+and rejected, and that others are still in use. This rather unsatisfactory-sound- 
+ing process is as good an account as the author feels can be given of the way in 
+which current mathematical procedure has grown up. But whatever the truth 
+of this may be the finite universe provides a first class ground on which to de- 
+scribe the nested-type system, and we proceed accordingly. 
+Our finite universe has initially as its members the 'individuals' U1, ..* , UN- 
+Although these include all the individuals, they need not exhaust our stock-in- 
+trade, for we can also bring in functions taking the individuals as arguments and 
+having them also as values. With our increased range of commodities we can 
+then go into business again and produce a still greater variety of objects, and 
+repeat without limit. There obviously arises a great variety of different kinds 
+of functions which may need to be distinguished, but for the present system 
+we need only trouble ourselves with the very broadest divisions, which will be 
+called types. These divisions are described below. 
+The individuals U1, -**, UN form type 0. 
+The functions of individuals, taking individuals as values, together with the 
+individuals themselves, form type 1. 
+The functions of arguments in type 1, taking values also in type 1, together 
+with the members of type 1, form type 2. 
+The functions of arguments in type n, taking values also in type n, together 
+with the members of type n, form type n + 1. 
+Received January 6, 1947. 
+1 A. N. Whitehead and Bertrand Russell, Principia mathematical, Cambridge, England, 
+1925. 
+
+PRACTICAL FORMS OF TYPE THEORY 81 
+It must be understood that by a "function" we mean the function itself and 
+not merely one of its values. To illustrate the point by analogy with functions 
+of a real variable, we should say that "sin" denotes a function, but that "sin 
+0.3" and "sin x" do not, although the latter is often used (incorrectly in the 
+author's opinion) as if synonymous with "sin". 
+It is convenient to require functions to be defined throughout the appropriate 
+type, i.e. not to permit such definitions as "f(O) = 0, but if x is different from 0 
+then f(x) is undefined." In order to cover such cases we shall set apart from 
+the outset a particular individual U, ,which we shall rename "C", to be the value 
+of a function in all cases where it would normally be regarded as undefined. So 
+far as possible we try to keep C on a par with the other individuals. We deviate 
+from this principle by adopting the convention that the value of a function is 
+always C unless the function is of higher type than the argument. (More 
+strictly, if the function belongs to every type to which the argument belongs.) 
+We respect the principle by refraining from considering every expression con- 
+taining "C" to have the value C. 
+The functions and individuals together will be known as terms. With our 
+finite universe it is convenient to think of the functions as given by tables, con- 
+sisting of two columns, in the first of which appear all the necessary arguments, 
+and opposite them in the second column the appropriate values. Thus with 
+N = 4 a typical member of type 1 would be represented by the table 
+U2 U3 
+(1) U1 Ui 
+U3 U1 
+U4 U4 
+It would be a convenience to have the table rearranged with the first column in 
+natural order. In the case of the above table (1) we should simply have to 
+interchange the first two rows. Such a table may be said to be in normal form. 
+We can do this for all tables of type 1, and when we have done so we are in a 
+position to define a natural order for the members of type 1. With both tables 
+in normal form, the earlier table is to be the one which has the earlier value in 
+the last row in which the two tables differ. Thus the table (1) above precedes 
+U1 U1 
+(2) U2 U4 
+U4 U4 
+since when (1) is put into normal form the two tables differ last in the third row, 
+and there (1) has the value U1 but (2) has the value U3. We shall also adopt the 
+convention that the individuals in type 1 precede the tables. We may now con- 
+tinue the numbering of terms so as to include all type 1, simply numbering them 
+in the natural order just defined. The numbers will extend from 1 to N + NN. 
+It may be verified that the above tables (1) and (2) are U205 and U241 respectively. 
+A similar process may now be carried out for type 2 and then for type 3. In 
+
+82 A. M. TURING 
+general when we are dealing with type n we have already numbered the members 
+of type n - 1. It is easily verified that those tables which have already appeared 
+as members of type n - 1 have the order which they had in that type, and precede 
+all the new tables. The order of any two tables (new or old) is that of the last 
+pair of values in which they differ. 
+Let us now introduce the notation (UV) to denote the result of looking up V 
+in the table U; in slightly different words it is the entry against V in the table U.2 
+In other words again it is the value of the function U for the argument V, and 
+might therefore, in agreement with current mathematical practice have been 
+denoted by U(V). Our conventions require (UV) to be C in cases where the 
+table gives no information: these are just the cases where the lowest type to 
+which U belongs does not exceed the lowest for V. We may also introduce the 
+notation U = V to denote the identity of the terms U and V. It should be 
+noticed that so long as U and V are tables known to belong to some particular 
+type n we can establish their identity by showing that they have the same values 
+throughout type n - 1 (this is known as the principle of extensionality and gives 
+rise to the "axiom of extensionality"). The principle fails for individuals, for if 
+U and V are individuals then (UX) is always identical with (VX), both being 
+C, and yet U and V may well be different. The principle also fails when the 
+types of the terms are unknown, for we can never then be sure that we have ex- 
+amined sufficient arguments for the functions. There may be some argument 
+in a higher type than we have yet considered for which the two functions differ. 
+The expression U = V which we have just introduced denotes a proposition, 
+unlike (UV) which was a term. Propositions may be thought of as having a 
+value which is either truth (T) or falsity (F). By taking T and F to be indi- 
+viduals we could have arranged for the propositions to be included amongst the 
+terms, but we have not in fact done so. 
+There are several other ways of forming propositions. If P and Q are proposi- 
+tions then (U-..P) is a proposition whose value is opposite to that of P and (P D Q) 
+is one whose value is F if and only if P is T and Q is F. We may read ('%.P) 
+as "not P" and (P D Q) as "P implies Q." If U is a term then D' U represents 
+the proposition that U is in type r, i.e. it is T if and only if U is in type r. 
+We could of course introduce a great variety of further means for forming 
+terms and propositions. We could for instance define (P & Q) as a proposition 
+whose value is T if and only if both P and Q are T. We shall be content however 
+with comparatively few, namely those we have already introduced, together 
+with one further way of forming propositions and one of forming terms. These 
+cannot be described without bringing in the ideas of "variable" and "formula 
+with variables." Variables are of little importance except as parts of formulas. 
+All we need say about them is that as a matter of notation small italic letters 
+with any number of primes will be used as variables. The letters p, q, r, s, t, 
+2 We shall use heavy type letters throughout to represent variables or undetermined 
+formulas or tables. They occur only in metamathematical discussions. All our statements 
+are understood to be true whatever substitutions of formulas (or tables, as the case may be) 
+are made for the heavy type capital letters, and whatever substitutions of variables are 
+made for the small heavy type letters. 
+
+PRACTICAL FORMS OF TYPE THEORY 83 
+(possibly with primes) will be proposition variables and the others term variables. 
+Small heavy type letters may be used to stand for any variable, with an obvious 
+convention concerning the kind of variable. An example of a "formula with 
+variables" is the expression x = U5. On substituting a term, e.g. U10 for the 
+the term variable x it becomes a proposition. Similarly( U405 X) is a formula with 
+variables: in this case substitution yields a term. In general a formula with 
+variables or more briefly a formula is an expression which yields a term or proposi- 
+tion on substituting terms and propositions for the (free) term and proposition 
+variables respectively. The formulas may be called term formulas or proposition 
+formulas according as they give rise to terms or propositions on substitution. 
+The word free in the definition should be ignored for the present. 
+We can now describe our remaining ways of forming terms and propositions. 
+If P is a proposition formula with only the one free term variable x and no 
+proposition variables then (ox, r) P is a term and (x, r) P is a proposition. Of 
+these the term (Ox, r) P has the value C unless there is one and only one term 
+U in type r for which the result SJP I of substituting U for x in P is T: if there 
+is a unique U with this property then the value of (7x, r) P is that U. The value 
+of the proposition (x, r) P is T if and only if all the results of substitution, S'P i 
+with U in type r, have the value T. We may read (ox, r) P as "the x in type r 
+such that P" and (x, r) P as "P, for all x in type r." 
+Now consider the expression (x, 3) (x = y). In it there occur the two variables 
+x and y. If we substitute a term, e.g. U6, for y we shall obtain a proposition, 
+but if at the same time we substitute U9 for x we shall obtain nonsense. We 
+would like to excuse ourselves from making this second substitution and admit 
+(x, 3) (x = y) to membership of the class of formulas. Our excuse is that sub- 
+stitution should only be made for the free occurrences of a variable, and that the 
+occurrences of x in (x, 3) (x = y) are not free but bound. We say that a variable 
+u occurs bound in a formula if the occurrence in question is in a part of form 
+(7u, r)P or (u, r)P. Thus the first occurrence of x in (y, 1) [x = (1X, 0) (X = X)] 
+is free and the others are bound. This expression is a proposition formula accord- 
+ing to our definition. To verify this, first note that x = x is a proposition formula 
+with no free variables other than x and that (ox, 0) (x = x) is therefore a term. 
+Consequently U = (ox, 0) (x = x) is a proposition, and a fortiori a proposition 
+formula, for any term U. It has no free variables orher than y (indeed it has 
+none at all), and therefore (y, 1) [ U = (1X, 0) (x = x) ] must be a proposition for 
+any term U, i.e. (y, 1) [x = (ox, 0) (x = x)] is a proposition formula. 
+It will now be seen that terms and propositions are just term formulas and 
+proposition formulas without free variables. 
+Free and bound variables are familiar in mathematics though they are seldom 
+consciously recognized. A typical example of a bound variable is that of x in the 
+integral f x dx; x occurs free in the equation x(x - 1) = 0. A convenient 
+method of distinguishing between bound and free variables is to make a sub- 
+stitution of a constant (of the appropriate kind) for the variable in question. 
+If nonsense results the variable is certainly bound: if sense results it is most 
+probably free. Sense may perhaps result from substitution for a bound variable 
+
+84 A. M. TURING 
+if the result of the substitution and the original expression are interpreted ac- 
+cording to different conventions. The double suffix summation convention 
+of tensor theory provides an example of this. Using this convention the variable 
+j in the expression aijbik is bound, but we can substitute 1 for j and obtain a 
+perfectly sensible expression; it is sensible because it is interpreted without 
+applying the double suffix convention. 
+The outcome of our definition of "formulas" is that they will include terms, 
+propositions, and variables. Also if A and B are term formulas, P and Q 
+proposition formulas, x a term variable, and r a numeral representing a non- 
+negative integer, then (A B) and (ax, r)P are also term formulas and (A = B), 
+D' A, (U-..-P), (P D Q), and (x, r)P are proposition formulas. Our use of the letter 
+"r" in these cases must not of course be confused with its use as a proposition 
+variable. One further method of constructing formulas is worth mentioning 
+although it is possible to do without it, and define it in terms already explained. 
+This is "abstraction." If A is a term formula then (Xx, r) A is a term formula of 
+type r + 1. It stands for the function whose value for the argument U in type 
+r is S'JA provided that S'JA I is in type r for every Uin type r: if however there 
+is a single argument U in type r for which S'JA I is not in type r then (Xx, r) A 
+is C. We can define (Xx, r) A in previously explained terms as 
+(7y, r + 1) (-[(x, r) (yx = A) DDOy]) 
+where y is any variable not occurring free in A. 
+In the case of a finite universe the individuals U1, . . ., UN form a part of the 
+system. When dealing with an infinite universe this does not seem to be neces- 
+sary, but it is convenient to retain symbols for three of them; these are U1 which 
+is called C and which we have already mentioned, U2 which is called T' and U3 
+which is called F'. These last two may be regarded as unofficial representatives 
+of truth and falsity, looking after their interests amongst the terms: their official 
+representatives are T and F which are propositions. The chief use of T' and 
+F' is in connection with propositional functions. If we wish to express 'x is 
+mortal' we form a function M which is defined for individuals (supposed to 
+include mammals) and has the value T' for mortal arguments, F' for immortal 
+arguments. Then "x is mortal" is written as Mx = T'. 
+At this point we should pause and consider what we have done. We have 
+defined a class of expressions which we have called term-formulas and proposi- 
+tion-formulas, and which roughly correspond to the terms and propositions of 
+mathematics. These formulas are given interpretations in the finite universe 
+in terms of individuals and tables. Each term formula without free variables 
+has an interpretation as a particular individual or table, and each proposition 
+formula has an interpretation which is truth or falsity. We are able to determine 
+whether a proposition formula without free variables is true by working out its 
+interpretation, although this will be a very lengthy business unless the formula 
+is very simple and N very small. The work involved in establishing the truth 
+of formulas can be greatly reduced by the use of various rules, e.g. that if two 
+formulas P, Q are true then -'(P D -'Q) is true. A process of application of such 
+rules may be allowed to oust the process of working out the interpretation. 
+
+PRACTICAL FORMS OF TYPE THEORY 85 
+Since the majority of the rules involved do not make any reference to the 
+number N it is easy to forget the finite universe, and to allow the various rules 
+to become reflex action. Eventually we break off almost all connection with the 
+finite universe picture: in particular we repudiate such propositions as 
+(x, r) (y, r) ((x $ y) D ((fx) $ (Jy))) D (x, r) (3 y, r) ((fy) = x) 
+which are especially connected with such a picture. Finally we even repudiate 
+the picture more violently by adopting an "axiom of infinity." 
+This, in my opinion, is a very idealised but essentially correct account of how 
+the present mathematical argument-form has grown up. The last step or two 
+may appear very lame, but I think this cannot be helped: I think that these 
+last steps are not really sound. 
+One set of rules which can replace the finite universe picture is given below 
+in ?2 (rules I-X, XI,). 
+ABBREVIATIONS. At this point we are obliged to introduce a few conventions 
+which permit us to abbreviate our formulas. The unabbreviated formulas 
+would be disagreeably cumbrous. 
+(a) We may introduce abbreviations by means of the arrow: a formula stand- 
+ing to the left of an arrow is understood to be an abbreviation of that on the right 
+of it. If heavy type letters appear in these expressions it is understood that the 
+formula on the left is an abbreviation of that on the right for any meaningful 
+substitutions of formulas for the heavy-type letters. With these conventions 
+we introduce the abbreviations: 
+(P & Q) (--(P D (Q))) 
+(P v Q) ((U--P) ZD Q) 
+(P - Q) ((P DQ) & (Q'DP)) 
+(3x, r)P (,.((x, r)(,.P))) 
+(3!x, r)P ((3x, r)P & (x, r)(y, r)(P $ SP D x = y)) 
+(A s B) (-.,(A = B)) 
+T (x, O)x= x 
+F (AT) 
+The variable y must not be free in P. 
+(b) Formulas of form A & B & . . . & P we consider not to need any more 
+brackets, since they have the same meaning in whatever manner the brackets 
+are put in. Strictly speaking this equivalence only applies in virtue of rule IV 
+below, and the reader may prefer to adopt some definite convention of his own 
+as to the way the missing brackets are to be supplied. Similar considerations 
+apply to formulas of form A v B v ... v P. 
+(c) We shall often leave brackets out in cases where it is quite obvious how 
+they should be replaced. Excessive bracketing often makes the formulas difficult 
+to read. It is not thought worth while to introduce definite conventions in the 
+
+86 A. M. TURING 
+present paper: we rely on common sense instead. Likewise we permit altera- 
+tions in the form of a pair of brackets. These common sense conventions have 
+already been applied to some extent. 
+2. Formal account of the nested-type system. We now describe the practical 
+system in the usual formal manner, specifying what series of symbols are to be 
+regarded as term-formulas, proposition formulas, variables, provable formulas, 
+etc. We do not follow this aspect very far in the present paper, believing that 
+mathematics is suffering more from lack of sound notation than from lack of 
+rules of procedure. 
+Term variables. The symbols a, b, . ., n, o, u, v, w, x, y, z, a', b', . . . are term 
+variables. 
+Proposition variables. The symbols p, q, r, s, t, p', q',... are proposition 
+variables. 
+Term formulas, proposition formulas, and formulas. Term variables are 
+term-formulas. Terms (UH , UH2... ) are term formulas. Prosposition variables 
+are proposition formulas. If A and B are term formulas and P and Q are 
+proposition formulas and x is a term-variable and r a numeral representing a 
+non-negative integer, then (A B) and (7x, r) P are term formulas and (A = B), 
+(-P), (P D Q), DrA, (x, r)P are proposition formulas. Term formulas and 
+proposition formulas are formulas. No expression is a term variable, term 
+formula, proposition variable, proposition formula, or formula unless compelled 
+to be so by the foregoing. 
+Free and bound occurrences of variables. Each occurrence of a variable in a 
+formula is either a bound or a free occurrence, but cannot be both. Occurrences 
+of proposition variables are always free. The occurrence of the term variable 
+X in the formula X is free. In the formulas (AB), (7 X, r) P, (A = B), (- P), 
+(P D Q), DrA, ( X, r)P the occurrences of the various variables are free or bound 
+according as they were free or bound in their corresponding occurrences in 
+A, B, P, or Q except that the occurrences of X in ( X, r) P, (a X, r) P are bound. 
+It may be observed that all four possible combinations concerning the presence 
+or absence of a variable bound or free in a formula can occur. Examples are 
+T', x, (Ox, O)(x = x), x = (ax, O)(x = x). 
+Formulas and tautological formulas of the propositional calculus. The formulas 
+of the propositional calculus are defined to be the least class of formulas contain- 
+ing the propositional variables, and containing (P D Q) and (-P) whenever it 
+contains P and Q. Tautological formulas of the propositional calculus are those 
+which always give the value T if a substitution of values T or F is made for the 
+variables, and the result then evaluated as follows: T DT is F, T D F is F, 
+F D T is T, F D F is T, -T is F, OF is T. 
+The rules of procedure (provable formulas). We word our rules of procedure 
+in the form of a definition of the "provable formulas". Throughout, r is any 
+numeral representing a non-negative integer. 
+
+PRACTICAL FORMS OF TYPE THEORY 87 
+Rule I (Change of bound variables). The formulas 
+(x, r)P (y, r) eSyPI 
+(OX, r)P (1y, r) SYP| 
+are provable if P is a proposition formula in which y does not occur free, and x 
+is not free at a place where y would be bound. 
+Rule II (Substitution). If P is provable, then SAP I and S7P I are provable, 
+where A and Q are respectively term and proposition formulas, and the bound 
+variables of P are distinct both from x and q and from the free variables of A 
+and of Q. 
+Rule III (Quantifiers). If either of the two formulas H D (Dtx D P), 
+H D (x, r) P is provable, and x is not free in H, then the other is also provable. 
+Rule IV (Propositional calculus). Any tautologous formula of the proposi- 
+tional calculus is provable. 
+Rule V (Modus ponens). If the formulas P D Q and P are both provable then 
+Q is provable. 
+Rule VI (Descriptions). If P is a proposition formula in which x does not 
+occur bound, then the formulas 
+(3!x, r)P D S(',,r)PpPI 
+-.-(3!x, r)PD(ix, r)P = C 
+Dr(ix, r)P 
+are provable. 
+Rule VII. The formula 
+(x, r)Dr A D (3y, r + l)('-,Doy & (x, r) yx = A) 
+is provable provided y does not appear free in the term formula A. 
+Rule VIII (Axioms). For any numeral r representing a non-negative integer 
+the following formulas numbered Al to C2 are provable: 
+Al. C $ T' & C F' & T' F F' 
+A2. DOC & DOT' & D0F' 
+A3. [Dlx v (D`+1 x & -D'Dy)] xy = C 
+A4. Drx D Dr+1x 
+A5. Dv'+x ODDxy 
+Bi. x= x 
+B2. (y= x &y = z) D x = z 
+B3. x= y (zx = zy & xz = yz) 
+Cl. (x, r)fx = gx D[f = g v Dof v Dog v Dr+' f v D'+D g] 
+(Axiom of extensionality.) 
+C2. (3 i, r + 2) (f, r + 1) ((3 x, r)fx = T') D f(if) = T'] 
+(Axiom of choice.) 
+Rule IX (Axiom of infinity). The following formula is provable: 
+C3. (3h, 1)(3v, O)(x, O)(y, O)[(hx = hy D x = y) & v 0 hx] 
+
+88 A. M. TURING 
+If we have a finite universe with N individuals instead of an infinite one we 
+must replace rule IX by: 
+Rule IXN. The following, Dl and D2, are provable: 
+D1. D% x (x = UH v ... v UN) 
+D2. U n U 
+where m and n are different and not greater than N. 
+We may make a number of remarks about these axioms and rules: 
+(1) Axioms DI, D2 are rather stronger than is really necessary. Instead 
+we could use the one axiom 
+D X D (x = U' v ... V X = UN) 
+which would be more nearly analogous to C3, but would admit the possibility 
+of there being fewer than N individuals. 
+(2) The second formula under rule VI might have been omitted. If this had 
+been done it would have been necessary to define a new description operator 
+in terms of the old one in such a way that the second formula would apply for 
+the new operator. 
+(3) It may be wondered why rules VI and VII do not appear under the axioms, 
+yx = T' being written for P and yx for A. If there had been any more rules of 
+this kind they could have been replaced by axioms, by making similar substitu- 
+tions, but these axioms would only be equivalent to the corresponding rule in the 
+presence of rules VI, VII. It will now be clear why rules VI, VII cannot them- 
+selves be written as axioms. 
+(4) A term Urn and its corresponding formula UH are not regarded as identical 
+as they were in ?1. We have introduced a distinction rather similar to the 
+distinction between the real and complex numbers 7r. This distinction will be of 
+value in any attempt to provide a formal justification of the system in terms of 
+tables: it would then be very embarrassing to have the same notation both for a 
+formula and its interpretation. The author has carried through such a justifica- 
+tion in detail, together with a proof that the system is complete for the finite 
+universe. This provides a good check that no essential axioms have been 
+omitted. The theorem mentioned in the next section provides a similar check. 
+(5) Although rule III does not permit H D (D' x D P) to be deduced directly 
+from H D (x, r) P if x is free in H, the deduction may be made indirectly. 
+(6) The axiom of choice is optional, i.e. we may drop this axiom and still 
+retain a system adequate for the greater part of mathematics. 
+(7) We shall not carry out any proofs in this paper, but the following provable 
+formulas are of interest: 
+x = y D (Drx D Dry) 
+(x, r)(P Q) D (7x, r) P = (7x, r)Q 
+(x, r) A = B D (Xx, r) A = (Xx, r) B 
+(x, r)D'A D (x, r)[((Xx, r)A)x = A] 
+D`'+ (Ax, r) A 
+(f,r)(g, r)[(x, r + l)(xf = xg) Df = g] 
+D'+'x [(y, r + 1) ID'xy & (D'y v xy = C) I & D'+2x] 
+
+PRACTICAL FORMS OF TYPE THEORY 89 
+3. Equivalence with Church's system. The nested-type system described 
+above may be proved equivalent, in a certain sense, to Church's simplified theory 
+of types.3 The proof is long and tedious, and would not justify publication, but 
+it may be of interest to give an exact statement of the equivalence theorem. 
+The form of "equivalence" used has a certain interest in itself. 
+DEF[NITION. A logical system 1 will be said to be equivalent to the logical 
+system 2 if to each proposition-like formula A of 1 we can make correspond a 
+proposition-like formula A" .21 of 2, and conversely to each proposition-like 
+formula P of 2 we can make correspond a proposition-like formula p(2,1) of 1, 
+in such a way that 
+(i) If A is provable in 1 then A(' 2) is provable in 2. 
+(ii) If P is provable in 2 then p(2,1) is provable in 1. 
+(iii) If A is a proposition-like formula of 1 then (A(1'2))2 A is provable 
+in 1. 
+(iv). If P is a proposition-like formula of 2 then (p(21))(12) P is provable in 2. 
+(v) If A and B are proposition-like formulas of 1 then we can prove (A A B) (12) 
+_ (A~l@= B(1,2)) in 2. 
+(vi) If P and Q are proposition-like formulas of 2 then we can prove 
+(P Q)(2,1) (pW2,l) Q(2,1)) in 1 
+The formula A(' 2) must be an effectively calculable function of A and p(2,1) 
+of P. 
+It is understood that for each system there is defined a special kind of formulas 
+called 'proposition-like formulas'; that every provable formula is necessarily 
+proposition-like, and that it is a comparatively trivial matter to determine 
+whether a formula is proposition-like or not. Specifically we may say that the 
+statement "A is a proposition-like formula" should be equivalent to some state- 
+ment of the form "so(n) = 0" where n is the Godel representation of A and so 
+is some primitive recursive function. It is also understood that both systems 
+"include the propositional calculus": this is required in connection with the 
+logical equivalence signs in (iii) to (vi). 
+We are justified in describing this relation as the equivalence of the two sys- 
+tems, for the relation is transitive, symmetric, and reflexive, as I shall now show. 
+The symmetry of the relation follows at once from the fact that interchange of 
+systems 1 and 2 simply interchanges conditions (i) and (ii), (iii) and (iv), (v) 
+and (vi). Reflexiveness is proved by taking A(") to be A. Transitivity is not 
+quite so easy. We shall have to bring in a third system 3. We will define 
+A""3) to be (A" 2))(2 3) and A(3") to be (A(3' 2))(2"). We assume conditions (i) 
+to (vi) to hold for the pairs 1,2 and 2,3 and attempt to prove them for the pair 
+1,3. Because of the symmetry it is sufficient to prove (i), (iii), (v). To prove 
+(i) we must prove (A"' 2))(2,3) in 3 assuming A provable in 1. Now by (i) for the 
+pair 1,2 we see that A" 2) is provable in 2, and then by (i) for the pair 2,3 we get 
+(Ak 2))(23) in 3. To prove (iii) we must prove (((A" 2))=(23))(3,2))(2 l) _ A in 1. 
+' Alonzo Church, A formulation of the simple theory of types, this JOURNAL, Vol. 5 (1940), 
+pp. 5-S68. 
+
+90 A. M. TURING 
+Using (iii) for the pair 2,3 gives us ((A(12 A2 (i 2) whence by 
+(ii) for the pair 1,2 we have 
+(((A"'1 ,2)) (2,3)) (3,2) (1.2)) (2,1) 
+Also by (vi) for the pair 1,2 we have 
+(((A(' 2)) (2,8)) (3,2) = -A1'2)) (2,1) 
+= ((((A(1' 2)) (2,3) ) (3,2)) (2,1) = (A 2)) (2,1) 
+and by (iii) for the pair 1,2 we have 
+(kt2)) (2.1) A 
+Combining these last three results by the rules of the propositional calculus 
+we obtain 
+(((A(' 2))(23))(32))(2 l)-= A 
+as required. 
+To prove (v) for the pair 1,3 we must prove 
+((A _ B)(1'2))(2,3)=-((A(1' 2))(2,3) _ (B( 2)) (23)) 
+By an application of (v) to the pair 1,2 followed by an application of (i) to the 
+pair 2,3 we get 
+((A B)(12) = (A(' 2) = .2)))(2.3) 
+and by an application of (v) to the pair 2,3 we have 
+((A = B) 2) = (A(1'~ = B( 21)),22 32_ (((A = B)(1'2))(2'3) = (A"12) _ 2))(2,= 
+Combining these by the propositional calculus gives 
+((AB) (1,2)) (2,3) _ .( 2) _(12)) (2,3) ((A = B1')23 = (A"'2 " 
+Condition (v) applied to 2,3 also gives 
+((,2) = 12)) (2,3) _ ( (12)) (2,3) _ .12)) (2,3)) (k B" ~~= ((A("~~' (B= 
+from which we now obtain the required result. 
+Our definition of the equivalence of two systems could be summed up by 
+saying that they are equivalent if we can translate from either system to the 
+other in such a way that provable propositions translate into provable proposi- 
+tions again, and so that a double translation gives rise to a proposition equivalent 
+to the original. This explanation ignores the last two conditions (v) and (vi), 
+which are rather too tenuous for such rough handling. 
+The equivalence theorem then states that the nested-type system is equivalent 
+to Church's system, if the proposition-like formulas of the nested-type system 
+are taken to be the proposition formulas without free variables, and the proposi- 
+tion-like formulas of Church's system are those of type o without free variables. 
+4. Relaxation of type notation. The form of type theory which we have de- 
+scribed is one in which the types themselves do not intrude very much. Even 
+so they do still intrude to an appreciable extent, and it would be desirable to 
+
+PRACTICAL FORMS OF TYPE THEORY 91 
+see how much further they can be relegated to the background. A possible way 
+of doing so will be described in this section. 
+We could sum up the effect of type theory as it appears in this system by 
+saying that we give no meaning to the expressions 'for all x, A,' 'there exists an 
+x, such that A,' 'the x, such that A,' 'the function whose value for argument x 
+is A' (usually expressed symbolically as (x) A, (3x) A, (7x) A, (Xx) A, respec- 
+tively). Instead we give meaning to the expressions (x, r) A, (3x, r) A, (ix, r) A, 
+(Xx, r) A. Nevertheless in a large class of cases we can assign meanings to (x) A, 
+(3x) A, (7x) A, (Xx) A in a satisfactory manner. A typical case is that of a formula 
+of the form (ix) P where P is such that we can prove P DD'0x, say. In this case 
+for any integers r, s > 10 we can prove (7x, r) P = (7x, s) P and it is therefore 
+natural to stipulate that (ix)P shall stand for the common value of (1x, 10)P, 
+(ix, 11)P, - - . We may say more generally that if (7x, ro) P = (ix, r) P is provable 
+for all r > ro then (7x) P shall be said to be interpretable and to have the inter- 
+pretation (Ox, ro)P. This is of course still only the beginning of a definition of 
+"the interpretation of a formula with some type bounds omitted." In order to 
+give the complete definition we must deal properly with formulas having free 
+variables: results such as P ODD1x (quoted above) are not normally provable if 
+P has free variables other than x. On this account we introduce the idea of 
+"interpretability under hypotheses"; the hypotheses involved are usually of the 
+form D'x. The complete definition is as follows: 
+All variables and C, T', F' provide their own interpretations under any hy- 
+potheses. 
+If A, B, P, Q have interpretations A', B', P', Q' under certain hypotheses, 
+then (A B), (A = B), D7A ,(P D Q), (U-,P) have the interpretations (A'B'), 
+(A' = B'), DrA', (P' D Q'), (-P') respectively under the same hypotheses. 
+If, for each r ' ro, P has the interpretation P, under hypothesis H & D'x where 
+H does not contain x free and we can prove 
+(A) H D (7x, ro)Pro = (ix, r)Pr 
+then (ix) P has the interpretation (7x, ro) PO under hypothesis H. If instead of 
+(A) we can prove 
+H D [(x, ro) Pro- (x, r) Pr] 
+then (x) P has the interpretation (x, ro) P under H. 
+No formula has any interpretation unless compelled to by the foregoing. 
+It may be observed that every formula of the nested-type system is inter- 
+pretable and provides its own interpretation. Also that if H D K is provable 
+and a formula has a certain interpretation under K then it has the same in- 
+terpretation under H. 
+If P has the interpretation P, under H & Drx and we wish to show either that 
+(ix)P has the interpretation (ix, ro)P0, or that (3x)P has the interpretation 
+(3x, ro) Pro under H, it is sufficient to prove Pr D DTrx (r > ro). 
+It will be seen that this definition does not provide an effective means of de- 
+termining whether or not an expression is interpretable. This need not be 
+
+92 A. M. TURING 
+considered a serious drawback, as we seldom need to establish that an expression 
+is not interpretable. 
+The most natural cases where we can apply the above definitions are those of 
+(x)(A D B), (3x)(A &B), (7x)(A &B) where A D Dt~x is provable for some ro. 
+It is fairly easy to remember which are the most important expressions A of this 
+kind: e.g. in almost any formalization we shall have " 'x is a real number' DDr'xY 
+with ro = 10 say; this fact would be remembered in the form "the class of real 
+numbers is all right." It is not so easy to remember the appropriate numbers 
+ro, but it is hardly necessary to do so if the notations (x) A etc. are adhered to 
+throughout. When A is such that for some ro we can prove A D DDOx I shall call 
+the class of x for which A is true a "noun-class." There is a very close connec- 
+tion between the part played by the formulas A in our system and nouns in 
+ordinary language; so much so that one might say that type theory had been 
+instinctively obeyed for thousands of years before its discovery by Russell. 
+This connection may be seen by translating (x) (A D B), (3x) (A & B), (7x) (A &B) 
+roughly as "All A satisfy B," "There exists an A satisfying B" and "The A which 
+satisfies B." In each case A is translated in the form of a noun. It seems that 
+the necessity to use nouns prevents us automatically from committing type 
+fallacies in common speech. We can probably only break down this 'safety 
+device' by using nouns such as 'thing' or 'object' with the intended meaning 
+'anything whatever.' In the case of the Russell paradox ('class of all classes 
+which are not members of themselves') we use the word 'class' in very much that 
+way. We use it to mean 'class of anythings whatever.' 
+There are various ways in which we might make use of the idea of interpretable 
+formulas to transform what we have called the 'nested type system' into some- 
+thing rather more closely analogous to common mathematical practice. One 
+possibility is simply to regard the formulas without types as abbreviations of the 
+appropriate formulas of the nested-type system, such formulas only being used 
+when the appropriate metamathematical result justifying the interpretation 
+has been established. This does not seem to be really satisfactory because of 
+the frequent need to prove such metamathematical results. Alternatively we 
+may set up some new symbolic system in which the formulas form a considerably 
+wider class than those of the nested-type system, and are all interpretable as 
+defined above. The author has investigated two such systems. In one of them 
+the expression. (x, A) P had the meaning which we have assigned to (x) (Ax = 
+T' D P). This is always interpretable if A is interpretable and without free 
+variables. This scheme leads to rather heavy formulas in the elementary stages, 
+though it may have advantages when more advanced branches of mathematics 
+are reached. The second system appears rather more hopeful, and will now be 
+described briefly. It may be called the "concealed type" system. 
+The formulas in the concealed type system will be described as "admissible 
+formulas" to distinguish them from the formulas of the nested-type system. 
+The admissible formulas will in fact be included amongst the interpretable for- 
+mulas associated with the nested-type system. There will be admissible term 
+formulas (ATF) and admissible proposition formulas (APF). We define APF, 
+ATF, and provable formula by a simultaneous induction. Consequently there 
+
+PRACTICAL FORMS OF TYPE THEORY 93 
+is no rule for determining whether an expression is an admissible formula or not: 
+this is not usual in logical systems, but there seems to be no good reason for a 
+positive taboo on such an arrangement. We now give the inductive definitions. 
+Every term variable is an ATF and every proposition variable is an APF. 
+The symbols E, C, T', F' are ATF. 
+If A, B, F are ATF and P, Q, R, S are APF, and P D Ax = T',-Q D Ax = T' 
+are provable formulas then (3x) P, (x) Q, (B = F), (R D S), -R are APF, and 
+(7x)P, (BF) are ATF. The variable x must not occur free in A. 
+Free and bound occurrences of variables are defined as in the nested-type 
+system. 
+The symbol E corresponds to (Xx, 0) T' of the nested type system. Its main 
+purpose is to take the place of Do and indirectly to replace the other D'. For 
+any formula A we can prove ((Xx, 0) T') A _ DOA in the nested-type system. 
+If A and B are ATF not containing x, y, or z free then the two expressions 
+below are ATF, viz. 
+(7y)(x)[(yxV yx = C) & #~-Ey & (yx _ (Axv Bx))] 
+(7y)(x)[(yxV yx = C) & K-Ey & (yx -(z) (Bz D A(xz) & (- Bz D xz = C)] 
+They may be abbreviated respectively to Sum A B and Pot A B. In these for- 
+mulas we have adopted the useful convention that a formula of form A = T' 
+may be abbreviated to A. The context will always enable one to determine 
+when this abbreviation has been applied. We shall continue to use this con- 
+vention. 
+Strictly speaking the definitions of Sum AB and Pot AB are invalid because 
+the bound variables x, y, z were not specified. This technical difficulty may be 
+resolved by requiring x, y, z to be the three earliest variables not appearing 
+free in A, B. 
+The remainder of the definition consists of the axioms and rules of procedure. 
+It may be remembered that these took the form of a definition in the nested-type 
+system also 
+Rules of procedure (concealed-type system). 
+Rule I. The formulas 
+(x)P (y)SPI 
+(7x)P = (7y)SyPI 
+are provable if (x)P is an APF in which x is not bound in P, y does not occur 
+free, x does not occur at a place where y would be bound, and (7x)P is an ATF. 
+Rule II. If P is provable, then S'Pj and SQPI are provable, where A and P 
+are respectively an ATF and an APF, and the bound variables of P are distinct 
+both from x and q and from the free variables of A and of Q. 
+Rule III. If H D P and H D (x)P are both APF and one of them is provable 
+then the other is provable also. 
+Rule IV. Any tautologous formula of the propositional calculus is provable. 
+Rule V. If the formulas P D Q and P are both provable then Q is provable. 
+
+94 A. M. TURING 
+Rule VI. If P is an APF in which x does not occur bound, then the formulas 
+(3Sx) P D $X IX)PPI 
+'3X(3Ix)PD(7x)P = C 
+are provable provided they are APF. 
+Rule VII. If A is an APF in which x, y, z, u do not occur free, then 
+(x)(ux DzA) D (3y)[(Potzu)y & (x)(ux Dyx = A)] 
+is provable. 
+In rule VI the definition 
+(3 !x) P (3x) P & (x)(y) (P & SXP D x-y) 
+is understood, y standing for a variable not occurring free in P. 
+The axioms are: 
+Al CsT' &CsF' &T'5sF' 
+A2 EC & ET' & EF' 
+A3 Ex Dzy = C 
+Bi x= x 
+B2 (y =x &y = z) Dx = z 
+B3 (x =y) D (zx = zy & xz = yz) 
+Cl [(Pot yu)f & (Pot yu)g & (x)(ux D fx = gX)] D f = g 
+C2 (3i)[(Pot u(Pot Eu))i & (f) {[(Pot Eu)f & (3x)fx] Df(if) I] 
+C3 (3t)[(PotEE)t & (3v)[Ev & (x)(y) {(Ex & Ey) 
+D ((tx = ty D x = y) & v ix) ]] 
+To complete our inductive definition we need only add that no expression is 
+an ATF, APF, or provable formula unless compelled to be so by the foregoing. 
+We may say that roughly speaking type theory appears in the concealed type 
+system only through the condition that P D Ax = T' must be provable if (7x) P 
+is to be an ATF, and a similar condition for (x) P. The system is related to the 
+nested-type system by the following metamathematical results: 
+(1) If we substitute (Xx, 0) T' for E throughout an admissible formula without 
+free variables we obtain an interpretable formula. 
+(2) If in a provable formula of the concealed-type system without free variables 
+we make the substitution mentioned in (1) and then form an interpretation of the 
+resulting formula we obtain a provable formula of the nested-type system. 
+(3) Every provable formula of the nested-type system is obtainable as in (2). 
+A valuable aid in the proof of these is the following result which concerns the 
+nested-type system only: 
+(4) If A is a term formula containing only the variables xl, x2, ... , x. free, 
+and ml, m2, * **, mn are non-negative integers, then there is an integer k such 
+that Dtm xi & ... & DmIxn D DkA is provable. 
+NATIONAL PHYSICAL LABORATORY, TEDDINGTON 
+

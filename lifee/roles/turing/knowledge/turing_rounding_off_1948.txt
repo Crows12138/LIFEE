@@ -1,0 +1,870 @@
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES
+By A. M. TURING
+{National Physical Laboratory, Teddington, Middlesex)
+[Received 4 November 1947]
+SUMMARY
+A number of methods of solving sets of linear equations and inverting matrices
+are discussed. The theory of the rounding-off errors involved is investigated for
+some of the methods. In all cases examined, including the well-known 'Gauss
+elimination process', it is found that the errors are normally quite moderate: no
+exponential build-up need occur.
+Included amongst the methods considered is a generalization of Choleski's method
+which appears to have advantages over other known methods both as regards
+accuracy and convenience. This method may also be regarded as a rearrangement
+of the elimination process.
+THIS paper contains descriptions of a number of methods for solving sets
+of linear simultaneous equations and for inverting matrices, but its main
+concern is with the theoretical limits of accuracy that may be obtained in
+the application of these methods, due to rounding-off errors.
+The best known method for the solution of linear equations is Gauss's
+elimination method. This is the method almost universally taught in
+schools. It has, unfortunately, recently come into disrepute on the ground
+that rounding off will give rise to very large errors. It has, for instance,
+been argued by HoteUing (ref. 5) that in solving a set of n equations we
+should keep nlog104 extra or 'guarding' figures. Actually, although
+examples can be constructed where as many as «log102 extra figures
+would be required, these are exceptional. In the present paper the
+magnitude of the error is described in terms of quantities not considered
+in HoteUing's analysis; from the inequalities proved here it can imme-
+diately be seen that in all normal cases the Hotelling estimate is far too
+pessimistic.
+The belief that the elimination method and other 'direct' methods of
+solution lead to large errors has been responsible for a recent search for
+other methods which would be free from this weakness. These were
+mainly methods of successive approximation and considerably more
+laborious than the direct ones. There now appears to be no real advantage
+in the indirect methods, except in connexion with matrices having special
+properties, for example, where the vast majority of the coefficients are
+very small, but there is at least one large one in each row.
+The writer was prompted to cany out this research largely by the
+practical work of L. Fox in applying the elimination method (ref. 2). Fox
+
+--- Page 2 ---
+288 A. M. TURING
+found that no exponential build-up of errors such as that envisaged by
+Hotelling actually occurred. In the meantime another theoretical investi-
+gation was being carried out by J. v. Neumann, who reached conclusions
+similar to those of this paper for the case of positive definite matrices, and
+communicated them to the writer at Princeton in January 1947 before the
+proofs given here were complete. These results are now published (ref. 6).
+1. Measure of work in a process
+It is convenient to have a measure of the amount of work involved in
+a computing process, even though it be a very crude one. We may count
+up the number of times that various elementary operations are applied in
+the whole process and then give them various weights. We might, for
+instance, count the number of additions, subtractions, multiplications,
+divisions, recordings of numbers, and extractions of figures from tables.
+In the case of computing with matrices most of the work consists of
+multiplications and writing down numbers, and we shall therefore only
+attempt to count the number of multiplications and recordings. For this
+purpose a reciprocation will count as a multiplication. This is purely
+formal. A division will then count as two multiplications; this seems a
+little too much, and there may be other anomalies, but on the whole
+substantial justice should be done.
+2. Solution of equations versus inversion
+Let us suppose we are given a set of linear equations Ax = b to solve.
+Here A represents a square matrix of the nth order and x and b vectors
+of the nth order. We may either treat this problem as it stands and
+attempt to find x, or we may solve the more general problem of finding
+the inverse of the matrix A, and then allow it to operate on b giving the
+required solution of the equations as x = A-1b. If we are quite certain
+that we only require the solution to the one set of equations, the former
+approach has the advantage of involving less work (about one-third the
+number of multiplications by almost all methods). If, however, we wish
+to solve a number of sets of equations with the same matrix A it is more
+convenient to work out the inverse and apply it to each of the vectors b.
+This involves, in addition, n2 multiplications and n recordings for each
+vector, compared with a total of about \n3 multiplications in an independent
+solution. There are other advantages in having an inverse. From the
+coefficients of the inverse we can see at once how sensitive the solution
+is to small changes in the coefficients of A and of b. We have, in fact,
+
+--- Page 3 ---
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES 289
+This enables us to estimate the accuracy of the solution if we can judge
+the accuracy of the data, that is, of the matrix A and the vector b, and
+also enables us to correct for any small changes which we may wish to
+make in these data.
+It seems probable that with the advent of electronic computers it will
+become standard practice to find the inverse. This time has, however, not
+yet arrived and some consideration is therefore given in this paper to
+solutions without inversion. A form of compromise involving less work
+than inversion, but including some of the advantages, is also considered.
+3. Triangular resolution of a matrix
+A number of the methods for the solution of equations and, more
+particularly, for the inversion of matrices, depend on the resolution of a
+matrix into the product of two triangular matrices. Let us describe
+a matrix which has zeros above the diagonal as 'lower triangular' and
+one which has zeros below as 'upper triangular'. If in addition the
+coefficients on the diagonal are unity the expressions 'unit upper
+triangular' and 'unit lower triangular' may be used. The resolution is
+essentially unique, in fact we have the following
+THEOREM ON TRIANGULAR RESOLUTION. // the principal minors of the
+matrix A are non-singular, then there is a unique unit lower triangular
+matrix L, a unique diagonal matrix D, with non-zero diagonal elementSj and
+a unique unit upper triangular matrix U such that A = LDU. Similarly
+there are unique L', D', U' such that A = U'D'L'.
+The kth diagonal element of D will be denoted by dk. The \k coefficient
+of the equation A = LDU gives us lndtulk = alk and since lu = un = 1
+this determines dt to be au and ulk to be a^/d^, these choices satisfy the
+equations in question. Suppose now that we have found values of lti, uik
+with,; < i0 (that is, we have found the first i0— 1 rows of L and columns of U)
+and the first i0— 1 diagonal elements dk, so that the equations arising from
+the first i0—1 rows of the equation A = LDU are satisfied; .and suppose
+further that these choices are unique and dk ^ 0. It will be shown how
+the next row of L and the next column of U, and the next diagonal
+element du 7^ 0 are to be chosen so as to satisfy the equations arising from
+the next row of A = LDU, and that the choice is unique. The equations
+to be satisfied in fact state
+i
+The right-hand sides of these equations are entirely in terms of quantities
+already determined. When k = i0 the first equation is satisfied and can
+
+--- Page 4 ---
+290 A. M. TURING
+only be satisfied by putting dio — right-hand side, determining dit. The
+equations for k > i0 can then be satisfied by one and only one set of values
+of u{ok, provided dia ^ 0. The equations for k < i0 can also be satisfied by
+one and only one set of values of liok, since each dk is different from 0 The
+new diagonal element d^ is not 0 because the ioth principal minor of A is
+equal to the product of the first i0 diagonal elements dk.
+4. The elimination method
+Suppose that we wish to solve the equations Ax = b by the elimination
+method. The procedure is as follows. We first add such multiples of the
+first equation to the others that the coefficient of xx is reduced to zero in
+all of them (excepting the first). We then add multiples of the second
+equation to the later ones until the coefficient of x2 is reduced to zero.
+After re—1 steps of this nature we shall be left with a set of equations of
+the form 2 vaxj — c<- From the equation vnnxn = cn the unknown xn
+can then be found immediately, and by substituting it in the equation
+vrs-i,n-ixn-i+vn-i,nxn = cn-i we then find xn_lt and so on until by
+repeated back-substitution we have found all the coefficients of the
+(originally) unknown vector x. This description of the elimination process
+is all that is required in order to apply it. We shall find it instructive,
+however, to look at it further from a number of points of view.
+(1) The process of replacing the rows of a matrix by linear combinations
+of other rows may be regarded as left-multiplication of the matrix by
+another matrix, this second matrix having coefficients which describe the
+linear combinations required. Each stage of the above-described elimina-
+tion process is of this nature, so that we first convert the equations Ax = b
+into JjAx = Jxb and record JXA and J^. We then convert them into
+J2 Jj Ax = J2 Jxb, and so on, until we finally have Jn_l...J1 Ax = Jn-V.. Jjb.
+In accordance with the theorem on triangular resolution we may write
+«Jn_i...Ji = Lr1andJn_1...J1A = DU. The matrix DU is upper triangular,
+that is, it has no coefficients other than zeros below the diagonal. The
+matrix L-1 and its inverse L are lower triangular.
+(2) The matrix L can be very easily obtained from the matrices
+n-l
+Jv..., Jn_i. We have in fact L = 1+ }T (1—Jr)- The proof of this will
+r-=l
+be left to the reader.
+(3) There is no need for us to take either the equations or the unknowns
+in the order in which they are given. In other words, if P, 0 represent
+permutations we may solve instead A'x' = b', where A' = PAQ, b' = Pb,
+x = Ox'. The permutations F. 0 may be chosen bit by bit as we carry
+the process through. One popular method is to let 0 be the identity, that is,
+
+--- Page 5 ---
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES 291
+to take the variables in the order given, and to choose P so that the
+coefficients in the matrices Jr do not exceed unity in absolute magnitude.
+This is always possible, and for almost all matrices gives a unique P.
+Alternatively, this variation of the method may be described by saying
+that P is chosen so that d^ shall have the largest possible value, and subject
+to this, d2 to be as large as possible, and so on. This procedure is called
+'taking the largest coefficient in the column as pivot'. The diagonal
+elements dv d2,..., dn are known as the first, second,..., last pivots. There
+seems to be a definite advantage in using the largest pivot in the column
+as it is likely to have smaller proportionate errors than other possible
+pivots, and saves us from the embarrassment of getting a pivot which is
+little different from zero. It is possible that there is also a further advan-
+tage in choosing the largest coefficient in the matrix as pivot.
+(4) The leading terms of the work involved in solving a set of n equations
+by the elimination method are as follows: \nz-\-O(n2) multiplications and
+recordings of v.v'ch \n2-\-O(n) recordings involve the vector b.
+(5) If, after we have solved one set of equations Ax = b, we are asked
+to solve a second set Ax' = b' with the same matrix A, we have only to
+operate on b with the matrices Jlv.., Jn-1 the values of which may be
+supposed to have been kept for reference, and then solve DUx = Jn_1...J1b.
+In other words, if the matrices 3X Jn-i have been kept (amounting to
+\n(n—1) numbers) the work involved in solving a second set with the
+same A is that part of the original work which involved b, namely,
+\w?-\-O(ri) multiplications and n recordings.
+This process may also be expressed in another form, which appears to
+be quite different, but actually is an identical calculation. As mentioned
+in (2), the triangle L in the resolution A = LDU may be obtained imme-
+diately from the matrices Jj,..., Jn_r If we put DUx' = y' we shall then
+have Ly' = b'. The equations Ly' = b' may be solved for y' by one back-
+substitution process and then the equation DUx' = y' solved by a second
+back-substitution.
+(6) As we have described it, the matrices 31 A, J2i1 A,..., are all written
+down in full. Actually, however, we are not really interested in all the
+coefficients of all these matrices. All we need in the end are Jlt..., Jn_j
+and Jn_1...J1A. It is sufficient, therefore, to calculate all coefficients of
+Jn_1...J1A, and those coefficients of ^...t^A which are required for the
+determination of Jr+1. If we write A(r) for ^...J! A we have
+A(.rX)
+where (Jr)fr = —r^rr,.
+
+--- Page 6 ---
+292 A. M. TURING
+and by addition
+Ag> = Atj+ ii
+If i < r we have A$ = A^~1( and so
+A#> = A,,+ni\
+Thus we can obtain the numbers actually required (A^, (Jr)ir) without
+recording intermediate quantities. This variation of the elimination
+method will be seen to be identical with the method (1) of § 6 (the
+'unsymmetrical Choleski method').
+This form of the elimination method is to be preferred to the original
+form in every way. The recording involved in the work on the matrix is
+reduced from \v?-\-O(n2) to n2-\-O(n), and the rounding off is at the same
+time made correspondingly less frequent.
+(7) The elimination method may be used to invert a matrix. One
+method is to solve a succession of sets of equations Ax<r) = b(r), where
+b<r> = Sir. The total work involved in the inversion is then n3-\-O(n2)
+multiplications. Alternatively, we may invert the matrices L and DU
+separately by back-substitution and then multiply them together. The
+work is still n3-\-O(n2) multiplications.
+(8) When the matrix A is symmetric, the matrices L and U are trans-
+poses, and it is therefore unnecessary to calculate both of them. The best
+arrangement is probably to proceed as with an unsymmetrical matrix, but
+to ignore all the coefficients below the diagonal in the matrices A<r>. These
+coefficients are all either zero or equal to the corresponding elements of the
+transpose. This fact enables us to find the appropriate matrices Jr at each
+stage.
+(9) The elimination method can be described in another, superficially
+quite unrelated form. We may combine multiplication of rows and addition
+to other rows with multiplication of columns and adding to other columns.
+In other words, we may form a product Jn_1...J1AK1...Kn_1, and try to
+arrange that it shall be diagonal. The matrix Jr is to differ from unity
+only in the rth column below the diagonal, and Kr is to differ from unity
+only in the rth row above the diagonal. If we carry out the multiplications
+by Jx Jn-i before the multiplications by K1;..., Kn_lt then it is clear that
+we have only the elimination method, for in either case we form J^A,
+
+--- Page 7 ---
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES 293
+J2 Jt A,... and the multiplications by K^..., Kn_x which come after actually
+involve no computation; they msrely result in replacing certain coefficients
+in the matrix Jn_1...J1A by zeros (compare note (2)). It is not quite so
+clear in the case where the order of calculation is A, .^A, JJAKJ,
+J2 Jx AKX In this case, however, the right-multiplications do not alter
+that part of the matrix which will be required later; in fact, they again
+do nothing but replace certain coefficients by zeros. So far as the subse-
+quent work is concerned, we may consider that these right-multiplications
+were omitted, and that we formed Jn_i... Jx A as in the elimination method.
+When this method is used and we choose the largest pivot in the matrix,
+it is clear that all the coefficients of Jr and of K, do not exceed unity.
+This provides one proof that when the largest pivot in the matrix is chosen
+the coefficients of L, U do not exceed unity (in absolute magnitude).
+5. Jordan's method for inversion
+In § 4(1) we mentioned that the elimination process could be regarded
+as the reduction of a matrix to triangular form by left-multiplication of it
+by a sequence of matrices J1(..., Jn_i- In the Jordan method we left-
+multiply the matrix A by a similar sequence of matrices. The difference
+is that with the Jordan method we aim at reducing A to a diagonal,! or
+preferably to the unit matrix, instead of merely to a triangle.f
+The process consisto m. forming the successive matrices Jx A, J2 Jx A,...,
+where Jr differs from the unit matrix only in the rth column, and where
+Jr...JxA differs from a diagonal matrix only in the columns after the rth.
+Let us put AW = Jr...J1A, X<« = J,...^,
+we shall then have
+AS1""1*
+(so that M$ = 0 if
+Ag> = (Jr),r
+The particular diagonal to which A is reduced is at our disposal.
+Possible choices include the following. The diagonal may be the unit
+matrix. Or we may arrange that the diagonal elements of the Jr are all
+unity and tolerate the non-unit diagonal elements in Jn...JxA. A third
+alternative is to arrange that the diagonal elements in Jn...JxA shall be
+between 0-1 and 1 and that the diagonal elements in Jr shall be powers of 10.
+t Hereafter 'triangle' and 'diagonal' will be written for 'triangular matrix' and 'diagonal
+matrix'.
+
+--- Page 8 ---
+294 A. M. TURING
+Jordan's method is probably the most straightforward one for inversion.
+Although it can be used for the solution of equations, it is not very
+economical for that purpose. For hand work it has the serious disadvan-
+tage that the recording is very heavy and cannot be avoided by methods
+such as that suggested in connexion with the elimination method. It may
+be the best method for use with electronic computing machinery.
+6. Other methods involving the triangular resolution
+There are several ways of obtaining the triangular resolution. When it
+has been obtained, it can be used for the solution of sets of equations, or
+for the inversion of the matrix as has been described under the elimination
+method. Possible methods of resolution are described below.
+(1) We may use the formulae given in the proof of the theorem on
+triangular resolution. This involves $v?-\-O(nz) multiplications, n2-\-O(n)
+recordings. This method is closely related to Choleski's method for sym-
+metrical matrices ((7) below), and we may therefore describe it as the
+'unsymmetrical Choleski method'.
+(2) We may apply the elimination method, regarded as a means of
+obtaining the triangular resolution; see notes (1), (2), (6) on the elimination
+method.
+(3) We may obtain simultaneously, and bit by bit, the four triangles
+L, L,-1, U, U-1 and the diagonal D. The method makes use of the following
+simple facts about triangles:
+(a) If we wish to invert a triangle, but only know the values in a sub-
+triangle, we can obtain the coefficients of the inverse in the corre-
+sponding subtriangle: for example, if we know the first 5 rows of a
+lower triangle L, then we can obtain the first 5 rows of L-1.
+(b) If we know the first r columns of a unit lower triangle then we know
+its first r+1 rows: likewise, if we know the first r rows of a unit
+upper triangle we know also its first r+1 columns.
+Let us suppose that we have carried the process to the point of knowing
+the first r rows of L, the first r—2 of L-1 and r—\ of U and U-1. We
+carry on the inversion of L to obtain the (r—l)th and rth rows of L-1,
+and then multiply these rows into A to obtain the rth and (r—l)th rows
+of L-1A, i.e. of DU. From this we obtain at once the rth and (r—l)th
+rows of D, and dividing obtain the rth and (r— l)th rows of U. By (b) we
+have the rth and (r+l)th columns of U and by (a) obtain those of U"1.
+Multiplying we obtain the rth and (r+l)th columns of AU"1, i.e. of LD,
+and from this the rth and (r+l)th elements of D and columns of L. By
+(6) we have the (r+l)th and (r+2)th rows of L.
+We can, of course, arrange to increase r by 1 instead of 2 at each stage.
+
+--- Page 9 ---
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES 295
+This is essentially Morris's escalator method (ref. 4), so called because
+by breaking off the work at any stage we obtain the solution for one of
+the principal minors of A; the order of the minor increases in steps.
+Morris's method differs in one small point. The diagonal elements D are
+not obtained as the diagonal of L-1A or of AU-1, but by using the identity
+dk = akk— 2 (AU-1)tidf1(L~1A)ifc, which follows from the (kk) coefficient
+i<k
+of the matrix equation A = (AU~1)D-1(L-1A).
+If Morris's method is used for the inversion of a matrix the work
+involved consists of |w3+O(n2) multiplications (two triangle inversions
+each $n3-\-O(n2), two multiplications of a triangle by A, each \nz-\-O(n2),
+and one multiplication of two triangles f opposite type, \nz-\-O[n2)), and
+3w3+0(ra2) recordings (this can be slightly reduced). It does not appear
+to be especially satisfactory in either respect.
+To relate the above ;j.ocount to Morris's put
+qk = dk, Xi = (U-*)u, Vi = (£/-%,.., x\ = (£-%, y\ = {Lr1)*,
+(4) We may look for an upper triangular matrix M such that
+M*A*AM = 1,
+that is, so that AM is orthogonal. From the first r rows of M (which are also
+the first r columns of M*) we can obtain the first r rows of M* because
+of its triangular character, and hence the corresponding rows of M*A*
+and M*A*A. The equation M*A*A.M = 1 is then applied, using the
+first r columns in the (r+l)th row of the product. This determines the
+ratios of the coefficients of M in tbe (r-f-l)th row. The (r+l)th diagonal
+element of the equation then determines the multiplying factor. Having
+found M and AM we obtain the inverse as M(AM)*, or we may solve
+Ax = b by forming (AM)*b and then M(AM)*b. In the terminology of
+orthogonal vectors, as described below, the formation of (AM)*b would
+be 'expressing b in terms of the base of orthogonal vectors'.
+This method is the orthogonalization process described in ref. (3), p. 9.
+It is closely related to the Morris method for symmetrical matrices (see (5)
+below). We may apply Morris's method by forming A*A and then looking
+for the upper triangular matrix M to satisfy M*A*AM = 1. This would
+only involve A through the formation of A*A and hence of MA*A. Thus
+Morris's method applied to the normalized matrix A*A differs from the
+orthogonalization process only in that M*A*A is obtained as M*(A*A)
+instead of as (M*A*)A.
+We now come to methods for symmetrical matrices. These can all be
+made to provide methods for unsymmetrical matrices by normalizing the
+given matrix, that is, forming AA* from A. For instance, if we wish to solve
+Ax = b, we may form A*A and A*b, and then solve A*Ax = A*b by
+
+--- Page 10 ---
+296 A. M. TURING
+one of jhese methods. This normalizing technique is, however, of doubtful
+value. The formation of A*A involves \nz-\-O(n2) multiplications, so that
+the work involved is greater with normalization than without, in the case
+of solving equations, and is no less for the case of inversion. Moreover,
+normalizing tends to make equations more 'ill-conditioned' (see § 8 below).
+(5) A scheme mentioned in note (8) under the elimination method.
+(6) We may apply the method (1), but we shall only need to find L and
+D, since U = L*. As a slight variation we may find LD.
+(7) Another variation on (6) is to find LD*. This method is due to
+Choleski (ref. 1). The matrix LD* may involve some pure imaginary
+numbers, but no strictly complex ones.
+(8) Morris's method simplifies considerably for symmetric matrices.
+From the first r rows of L we can obtain the first r columns of L*-1, i.e. U"1,
+by inverting. Left-multiplication by A gives the first r columns of AU-1,
+i.e. of LD, and from this we obtain the first (r+1) rows of L. Again Morris
+obtains D different^.
+This method is identical with a variation of the orthogonalization
+method, applicable to symmetric matrices and due to L. Fox (ref. 2).
+Fox regards two vectorsb and c as 'orthogonal' relative to A if (c, Ab) = 0
+(scalar product). Fox finds a set of vectors v1; v2,..., vn which are ortho-
+gonal in this sense. The vectors Avr may be used as a base for other
+vectors: we have in fact
+(b,vr) .
+AV
+The solution of equations is effected by means of the formula
+A-ib=^ (b>Vr)
+(vr,Avr) r-
+It is best to obtain v1( v2,..., vn by orthogonalizing the unit coordinate-axis
+vectors, that is, besides the vectors being orthogonal, vr is restricted to be a
+linear combination of e^ e2,..., en, or in other words, to have all coefficients
+after the rth equal to 0. In this case the vectors vr are the rows of L-1,
+and the orthogonality relation is L~1(AL~1*) = D. The orthogonalization
+process by which L~x is found is identical with the inversion of AL~1*D~1.
+7. Measure of the magnitude of a matrix
+There are a number of ways in which the magnitude of a matrix may
+be measured by a real number. They include:
+The norm. The norm N(A) of the matrix A is given by
+N(A) = (trace A*A)* = ( 2 4)*-
+
+--- Page 11 ---
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES 297
+The maximum expansion B(A). This is given by
+The maximum coefficient M(A). This is the largest coefficient in the
+matrix: ,,,. . . .
+M(A) = max \a{i\.
+Of these measures one of the first two above is probably of greatest
+theoretical significance. In this paper we deal chiefly with the maximum
+coefficient, since it is the most easily computed.
+A num^jr of inequalities relating these are listed below.
+M(X+Y) < J\1(X)+M(Y) (7.1)
+lf(XY) < nM(X)M(Y) (7.2)
+B(X t-Y)< B(X)+B(Y) (7.3)
+J3(XY) < B(X)B(Y) (7.4)
+N(X+Y) < N(X)+N(Y) (7.5)
+N(XY) < N(X)N(Y) (7.6)
+N(X) < nM(X) (7.7)
+M(X) < N(X) (7.8)
+M(X) < B(X) (7.9)
+B(X) < n*M(X) (7.10)
+B(X) < N(X) (7.11)
+2V(X) < niB(X) (7.12)
+8. Ill-conditioned matrices and equations
+When we come to make estimates of errors in matrix processes we shall
+find that the chief factor limiting the accuracy that can be obtained is
+'ill-conditioning' of the matrices involved. The expression 'ill-conditioned'
+is sometimes used merely as a term of abuse applicable to matrices or
+equations, but it seems most often to carry a meaning somewhat similar
+to that defined below.
+Consider the equations
+l-4x+0-9y = 2-7 >
+— O-Sx+l-ly = —1-2 )
+and form from them another set by adding one-hundredth of the first to
+the second, to give a new equation replacing the first
+— 0-186x+l-709y = —1-173
+-0-800Z+1-7001/
+The set of equations (8.2) is fully equivalent to (8.1), but clearly if we
+attempt to solve (8.2) by numerical methods involving rounding-off errors= -1-200 I
+
+--- Page 12 ---
+298 A. M. TURING
+we are almost certain to get much less.accuracy than if we worked with
+equations (8.1). We should describe the equations (8.2) as an ill-conditioned
+set, or, at any rate, as ill-conditioned compared with (8.1). It is charac-
+teristic of ill-conditioned sets of equations that small percentage errors in
+the coefficients given may lead to large percentage errors in the solution.
+Tf we are required to solve the equations Ax = b, but the coefficients used
+tre those of A—S instead of those of A, S being a small matrix, then, to
+a-st order in S, the solution obtained v/ill be xo+A-1Sxo, where x0 is the
+correct solution. We may average the effect of this over a random popula-
+tion of matrices S, and over the coefficients in the solution and matrix,
+and we shall find the
+R.M.S. error of coefficients of solution
+R.M.S. coefficient of solution
+1 jir/A XXT/A-I»R-M.S. error of coefficients of A
+= n ( ' ( ' R.M.S. coefficient of A '
+This equation suggests that we might take either N-(A)N(A~l) or
+- N(A)N(A~1) as a measure of the degree of ill-conditioning in a matrix.n
+We will adopt the latter and call - ^(A)^(A-1) the N-condition number of A.
+n
+We will also use nM(A)M(A-1) as another measure of ill-conditioning and
+call it the M-condition number of A. There is substantial agreement
+between the two measures, though the M-number tends to be the larger,
+especially with diagonal or nearly diagonal matrices.
+It should be noted that if all the coefficients of a matrix are multiplied
+by the same factor the condition numbers are unaltered, but that if a row
+or column is multiplied, by a very large or a very small number the
+condition numbers are usually increased. For instance, the matrices
+/ 0-8 0-6\ / 0-008 0-006\
+(8.3) and (8.4)
+\-0-6 0-8/ \—0-6 0-8 /
+have the M-condition numbers 1-28 and 128 respectively and i^-condition
+numbers 1 and 50- 005. This may be considered quite a satisfactory
+example of the application of the definition. In practice one will tend to
+work with the same number of figures throughout a matrix, and the small
+values in the first row of (8.4) will prejudice the accuracy obtainable,
+because of the number of significant figures available. It is certainly true
+that a trivial modification improves the conditioning, but we should
+consider that until the possibility of this modification has been observed
+and action taken, the matrix remains ill-conditioned.
+
+--- Page 13 ---
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES 299
+It is often stated that ill-conditioned matrices are ones which have
+small determinants, that is, small considering the magnitudes of the
+coefficients. This statement contains a certain amount of truth. It is
+certainly the case that bad conditioning and small determinants tend to
+go together. However, the determinant may differ very greatly from the
+above-defined condition numbers as a measure of conditioning. This may
+be illustrated by the cases of the matrices
+{\ 0 0\ /I 0 0 \ /I 1
+0 01 01; (0 1 1 j; (l 11
+^0 0 01/ \0 0 0-01/ \l 1
+all of which have the determinant 0-01, and which have the M-condition
+numbers 30, 300, 69-3, 612, respectively, and ^-condition numbers 4-77,
+47-1, 33-0, 232.
+The best conditioned matrices are the orthogonal ones, which have
+.^-condition numbers of 1. Their M-condition numbers are mostly of the
+order of magnitude of logn (for large order n). If the coefficients of a
+matrix are chosen at random from a normal population we shall get
+^/"-condition numbers of the order of ra* and M-condition numbers about
+log n times greater. Thus random matrices are only slightly ill-conditioned.
+The matrices which occur in practical problems are by no means random
+in this sense. There is a very large class of problems which naturally give
+rise to highly ill-conditioned equations. Suppose, for example, that we have
+reason to believe that some function of position in two dimensions can be
+represented by a polynomial of the fourth degree and that we wish to
+determine the coefficients. To this end we measure the values of the
+function at 25 points, and so obtain 25 linear equations for the desired
+coefficients. It may well happen that we are only able to make the
+measurements within a small region, and this will certainly mean that
+the equations are ill-conditioned. In such a case the equations might be
+improved by a differencing procedure, but this will not necessarily be the
+case with all problems. Preconditioning of equations in this way will
+always require considerable liaison between the experimenter and the
+computer, and this will limit its applicability.
+9. The classical iterative method
+Suppose that B is an approximate inverse of A. Then we can obtain
+from it a better inverse B2 by the formula B2 = 2B—BAB. If we write
+E = 1—AB, E2 = 1—AB2, so that E and E2 give a measure of the
+incorrectness of the two inverses: we have E2 = E2, so that at each
+application of this process the error is essentially squared.
+
+--- Page 14 ---
+300 A. M. TURING
+The work involved in applying this method is considerable, since it
+involves 2n3 multiplications at each stage. It may be useful in cases
+where a good approximate inverse is already available, and 1—AB has
+already been calculated, but found to be a little larger than can be
+tolerated. We may then calculate B2 but carry the process no farther.
+This involves n3 multiplications, but since we may write B2 = B+BE,
+the number of figures in one of the factors (viz. in E) may be kept
+small.
+A somewhat similar type of method applies for the improvement of
+solutions of sets of equations. Suppose, for example, we have to solve the
+equations Ax = b and that we have obtained a resolution A = L. DU
+(say), somewhat inaccurately. By double back-substitution we obtain
+a solution xx of L. DUx = b, which is an inaccurate solution of Ax = b.
+We may further test this solution by forming the 'residual' vector
+bx = b—Axx, and if this is too large we solve Ax = bx to obtain a cor-
+rection. In this process we do not obtain 'quadratic convergence' but only
+convergence in geometric progression. On the other hand, the method is
+very practical because the work involved per stage is only 2n2 multi-
+plications.
+10. General remarks on error estimates. The error in a reputed
+inverse
+Error estimates can be of two kinds. We may wish to know how
+accurate a certain result is, and be willing to do some additional computa-
+tion to find out. A different kind of estimate is required if we are planning
+calculations and wish to know whether a given method will lead to accurate
+results. In the former case we do not care what quantities the error is
+expressed in terms of, provided they are reasonably easily computed.
+With these estimates we wish to be absolutely sure that the error is
+within the range stated, but at the same time not to state a range which
+is very much larger than necessary. With the second type of estimate, the
+error is preferably expressed in terms of quantities whose meaning is
+sufficiently familiar that the general run of values involved may at least
+be guessed at. We are also as much interested in the statistical behaviour
+of the errors as in the maximum possible value.
+This paper is mainly concerned with estimates of the second kind, since
+those of the first kind can be quickly dismissed. Let B be a reputed inverse
+of A. To determine its accuracy we form E = 1—AB. Then in view of
+the inequalities (7.1), (7.2), and the equation
+A-i-B = B(E+E2+...)
+
+--- Page 15 ---
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES 301
+we have
+Jf(B-A-i) <J,Jf(BE') < Z
+which is the required error estimate. In order to apply this inequality it
+is necessary to carry out the matrix multiplication BA, involving n3
+multiplications. However, if it is intended to apply the classical iteration
+method for improving the inverse at least once, we shall have to calculate
+E in doing so, and we shall have 1—AB2 = E2 = E2 and therefore
+l-nM(E2) ^ l-
+It should be observed that this inequality is only applicable to the
+inversion of a matrix, and not to the solution of equations. It is difficult
+to determine the accuracy of the solution of a set of equations without
+inverting the matrix. This is another reason why it is preferable to treat
+inversion rather than solution of equations as a standard process.
+When making estimates of the effects of rounding-off errors we need the
+process under examination to be rather minutely described. If, for instance,
+a product abc is to be formed, we need to know whether it is obtained as
+ab. c or as a. be. If it is obtained as ab. c we shall need to know how many
+figures are kept in ab. This may be either a definite number of decimal or
+binary places, or a definite number of significant figures, or the number
+of figures kept may be made to depend on the results of previous calcula-
+tions. Usually, however, by a trivial modification of the quantity recorded,
+these latter cases can be reduced to one of the former.
+The variety of possible detailed calculation procedures is, of course,
+vastly greater than the list of methods which we have considered, for
+these can be subdivided into numerous alternatives which appear only
+trivially different at first sight, but which may differ very seriously from
+the point of view of error estimates. We cannot here carry out the analysis
+for more than a very few of the procedures. These have been chosen so as
+to give bounds of error which are both reasonably small and also fairly
+simple in their analytical form. We have concentrated particularly on
+error estimates which can be expressed in terms of the matrix A and its
+inverse. In practical work the details of the procedure must be determined
+by other considerations. With any particular procedure it will usually be
+found possible to obtain some estimate of the type proved in this paper,
+but usually quantities such as M(L), M(D~l), etc., will be involved.
+These can be obtained conveniently as a by-product in the calculation.
+Alternatively, one may find bounds of error by calculating 1—AB as above.
+In this case the importance of the analysis which follows is to show that
+5092.3
+
+--- Page 16 ---
+302 A. M. TURING
+it is probable that the error obtained will be reasonably small if a process
+is used which is somewhat similar to one of those here considered, and that
+these methods are therefore reasonable ones to use. Our main purpose in
+this paper is to establish that the exponential build-up of errors need r?ot
+occur, and this will be proved when we have found one method of inversion
+where it is absent.
+11. Rounding-off errors in Jordan's method
+The Jordan method was described in § 5, but we have now to specify
+the details of the'rounding-off and the diagonal. We shall consider the
+case where A is reduced to a unit matrix. We assume that in the calcula-
+tion of each quantity . (r_1). ir_1)
+an error of at most e is made. How this is to be secured need not be
+specified, but it is clear that the number of figures to be retained in
+A^~1'/A^~1) will have to depend on the values of the A^"1'. Likewise, we
+assume that in the calculation of
+»—1)
+an error of at most e' is made. It is convenient to think of these errors
+as quantities deliberately added after the accurate calculation has been
+made. If the quantities added after the calculation of A(r), X(r> are the
+matrices Sr, S'r we shall have
+Jw[...{J,(Ji A+S1)+S,}...]+Sn = 1,
+Jn[-{J2(J1+s'1)+s^}...]+s; = s,
+where 2 represents the actual matrix obtained at the end of the calculation
+as the value of A"1.
+The equations (11.1) give us
+and hence 2 = (l+A-12Xr-1Sr)A-'(l+ JX^S;). (11.3)\ r ' » r I
+The matrix X, A is the result of the first r stages of the reduction of A
+and agrees with D in the first r columns. This fact may be expressed in
+the equation (X,A-l)Ir = 0, (11.4)
+where Ir is that matrix which agrees with the unit matrix in the first r
+columns and with the zero matrix elsewhere. It is also clear that X, differs
+
+--- Page 17 ---
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES 303
+from the unit matrix only in the first r columns; this fact may be expressed
+in the equation (Xr-l)(l-Ir) = 0. (11.5)
+From (11.4) and (11.5) we now find X71;
+Xr^AL+l-L. (11.6)
+When we ignore the second-order terms in the rounding-off errors (11.3),
+(11.6) give us
+-i-s;). (1L7)
+r
+Let us now assume that each coefficient Sr is at most c and each coefficient
+of S'r at most e'. From (11.7) we can estimate the error in if-measure
+)}, (11.8)
+or in 5-measure,
+B(S-A-i) < 2 B{Ir+A-i(l-Ir)}{B(Sr A-i
++e'}, (11.9)
+or in i^-measure,
+(11.10)
+If we use the relations SrIr = SJ.(1—Ir) = 0, which follow from the
+restrictions on the coefficients which can suffer rounding-off errors, (11.8)
+may be improved to
+w(ra1)(^^-1)). (11.11)
+This result is best possible in the sense that given e, e', M we can find
+Sr, S;, A so that M(Sr) < e, M(S'r) < e, M(A~l) = M and the error
+ifcf(E—A-1), still ignoring second-order terms, is exactly
+, win— 1) ,,/ , , 2?i—lne'+ v 2 'Mle+e'-\ 3-
+We may also use (11.7) to give us an estimate of the statistical error.
+Let the coefficients of the matrices S^..., Sn which are not obliged to be
+
+--- Page 18 ---
+304 A. M. TURING
+0 be *!,..., 8K in some order, and likewise let the coefficients of S^,..., S'n
+which are not necessarily zero be sK+1,..., 8P. The equation (11.7) may
+then be put in the form
+(S-A-% = Icijusu,
+where ciiu depends only on the coefficients of A-1. Suppose that the
+rounding-off errors su are independent and have standard deviation au
+p
+and zero mean, then the mean square value of (S—A-1)« is 2 ciiu°u-
+Let us put au = 7] for u < K, au = -r\ for u > K and the mean square
+K P
+error in Ay1 becomes TJ2 2 cyu+7?'2 2 c%u- When we substitute in the
+u=l u=K+l
+correct values for ciju we obtain:
+mean square error in (A-1)^
+where r/ is the standard deviation and zero the mean of each coefficient
+of Sr, and r/ is the standard deviation and zero the mean of each coefficient
+ofs;.
+Also
+mean square error in (A-1)^
+The leading term in the R.M.S. error in (A-1)y is therefore at most
+The assumptions M(Sr) < e, M(S'r) < c' in the above analysis state in
+effect that we are working to a fixed number of decimal places both in the
+reduction of the original matrix to unity and in the building up of the
+inverse. It is not easy to obtain corresponding results for the case where
+a definite number of significant figures are kept, but we may make some
+qualitative suggestions.
+The error when working with a fixed number of decimal places arose
+almost entirely from the reduction of the original matrix, and very little
+from the building up of the inverse. This, at any rate, applies for the
+inversion of ill-conditioned matrices with coefficients of moderate size.
+
+--- Page 19 ---
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES 305
+However, the coefficients of the inverse are larger than those of the
+original matrix-, so that if we work to the same number of significant
+figures in both we may expect the discrepancy to disappear. The genera)
+idea of this may be expressed by putting
+M(Sr) < Sif(A), M(S'r) <
+There still remains the factor multiplying 8'. This could be removed
+M(A)
+by arranging to reduce A, not to the unit matrix, 1, but to M(A). 1. This
+would be a reasonable procedure in any case, though it would be more
+convenient to choose the nearest power of 10 to take the place of M(K).
+We see now that it is the .flf-con'lition number nM(A)M(A.~1) which
+determines the magnitude of the errors when we work to a definite
+number of figures.
+In the case of positive definite, symmetric matrices it is possible to give
+more definite estimates for the case where calculation is limited to a
+specific number of significant figures. Results of this nature have been
+obtained by J. v. Neumann and H. H. Goldstine (ref. 6).
+It is instructive to compare the estimates of. error given above with
+the errors liable to arise from the inaccuracy of the original matrix. If we
+desire the inverse of A, but the figures given to us are not those of A but
+of A—S, then if we invert perfectly correctly we shall get (A—S)-1 instead
+of A"1, that is, we shall make an error of (A—S)"1—A-1, i.e. of
+If we ignore the second-order terms this is A-XSA-1. The leading terms
+in the error in the Jordan method were AWJ (1—I^JSrlA"1 so that we
+might say that the greater part of the error is equal to that error which
+would have been produced by an original error in the matrix of 2 (l~I|-)Sr.
+r
+It is possible to give error estimates also for several others amongst the
+methods suggested elsewhere in this paper. This is, for instance, the case
+for the elimination method.
+The elimination method in its first phase proceeds similarly to the
+Jordan process, but we only attempt to reduce A to a triangle and not
+to a diagonal: also the matrix representing the complete operation in this
+first phase is triangular.
+12. Errors in the Gauss elimination process
+We will consider the errors in the Gauss elimination process as con-
+sisting of two parts, one arising from the reduction of the matrix to the
+
+--- Page 20 ---
+306 . A. M. TURING
+triangular form, and the other from the back-substitution. Of these we
+are mainly interested in the error arising from the reduction, since this is
+the part of the process which has been most criticized. We adopt the
+description of the process given in § 4, note (1), and observe that apart
+from a slight difference in the form of the matrices Jr, the reduction is
+similar to the Jordan process. As in the Jordan process, we shall assume
+that we make matrix errors Slf S2,..., Sn in the various stages of the
+reduction of A, and vector errors s1, s2,..., sn in the operations on b.
+Assuming there are no back-substitution errors, and ignoring the second-
+order terms in the errors we should have:
+error in x = U-1X;
+where X, = Jr...Ji. Now, assuming that the process has been done with
+the largest pivot chosen from each column, we shall have M(X71) = 1, for
+X71 =1+2 (1-J«) as mentioned in § 4 (2). Then
+I error in xm| = |(A-» 2 Xr^-S, A-»b))m|
+= 2 (A-iUXT V8r)*- I (Sr)w(A-%bp
+1,k.r UP
+where M(s'r) < e', M(Sr) < e.
+To these errors we have to add those which arise from the back-substitu-
+tion. This consists in solving the equations DUx = L~1b, where U is unit
+upper triangular and D diagonal. We obtain xn first and then xT in order
+of decreasing r by means of the formula xr = d71(L~1b)r— 2 (DU)ri xt.
+i>r
+Now if we make an error of tr in the calculation of xr from the previously
+obtained coefficients of x, then we shall have solved accurately the
+equations DUx = L-Ib+Dt, that is, we shall have introduced an error of
+U-H, or, since A = LDU, of A-JLDt. If we arrange that M\tT\ ^ ed,1,
+the greatest error in any coefficient from this source is n2M(A~1)e, and
+normally much smaller than the error arising from the first part of the
+process. Furthermore, dr will normally tend to be less than 1.
+It is interesting to note the value of the error in the last pivot, that is,
+the error in the (nn) coefficient of Jn...Ji A. The matrix error in Jn...J1A
+is Xn 2 X,"1^, that is, since Xn L"1 = DUA"1, it is DUA"1 £ X^S,.. The
+r r
+(nn) coefficient is dn £ "n^^^r^n^d since-M^X^1) = l,if(Sr) <eitdoesT
+not exceed nHn M(A~1)e in absolute magnitude, that is, the proportionate
+error in the last pivot is at most n2M(A-1)e. This cannot be very large
+
+--- Page 21 ---
+ROUNDING-OFF ERRORS IN MATRIX PROCESSES 307
+unless the matrix is ill-conditioned. With worst possible conditioning we
+find an error somewhat similar to Hotelling's estimate. The matrix error
+in J^.-JjA may be written L^JX^S,., from which we find that the
+error in the last pivot cannot exceed n^Mfh'1). But since M(L) = 1 we
+find ^(L-1) <: 2"-1 (and equality can be attained): that this error may
+actually be as great as 2n~2e may be seen by considering the inversion of
+a matrix differing only slightly from
+1 0 0 ... 0
+—1 1 0 ... 0
+—1—1 1 ... 0
+—1 -1 —1 . , . 1
+It appears then that the error in the last pivot can only be large if L-1 is
+large, and that this can only happen with ill-conditioned equations.
+Actually even then we may consider ourselves very unlucky if L-1 is
+large. Normally, even with ill-conditioned equations we may expect the
+off-diagonal coefficients of L to be distributed fairly uniformly between
+— 1 and 1, possibly with a tendency to be near 0. Only when there is
+a strong tendency for negative values will we find a large L-1.
+13. Errors in the unsymmetrical Choleski method
+When obtaining the triangular resolution of a matrix by the method of
+the theorem (§ 3) it is convenient to think of the process as follows. We
+are given a matrix A and the matrices L and DU (= W, say). We form
+the product LW coefficient by coefficient. When calculating any one of
+the coefficients of LW, we always find that the data are incomplete to the
+extent of one number, and we therefore choose this number so as to give
+the required coefficient in A. The unknown quantity when forming aif is
+always either l{j or wti. Regarding the process in this way suggests the
+following rule for deciding the number of figures to be retained. We
+always retain sufficient figures to give us an error of not more than e in
+the coefficient of A under consideration. In actual hand computation this
+rule is extremely simple to apply. Suppose, for example, that e is \ 10"7
+and that we are forming the product (LW)94, i.e. 2 hjwa- We first formi—i
+^,hiwj4 accumulating the products in the machine. All the relevant
+quantities should be available at this stage. We then set up the multi-
+plicand wu which should also be known and 'turn the handle' until the
+quantity in the product register, rounded off to seven figures, first agrees
+
+--- Page 22 ---
+308 ROUNDING-OFF ERRORS IN MATRIX PROCESSES
+with the given value of a9i (which is assumed to have zeros in the eighth
+and later figures). All the figures in the multiplier register are then
+written down as the value of l9t.
+The theory of the errors in this method is peculiarly simple. The
+triangular resolution obtained is an exact resolution of a matrix A—S,
+where M(S) < e, and the resultant error in the inverse ie A-1SA~1, and
+in any coefficient at most n2{M(A.-l)}2e. A similar procedure is appropriate
+in the inversion of the triangles L and W. When inverting W (say) we
+can arrange, by an exactly similar computing procedure, that its product
+with its reputed inverse differs from unity by at most e' in each coefficient,
+i.e. LK = 1—S', where iHf(S') < e and K is the reputed inverse. Note
+the order in the product which is significant. Likewise we find a reputed
+inverse V for DU such that V.DU =-- 1—S" and M(S") < e. The error
+arising from using these reputed inverses is — (1—S°)~1VK(1—S')+VK,
+or neglecting second-order terms, S"A-1+A~1S'. Finally, there is a
+possible source of error due to rounding off in the actual formation of the
+product VK. If this does not exceed e" in any coefficient, the error in any
+coefficient of the reputed inverse of A is in all at most
+n2e{M( A-1)}^ 2ne'M (A"1)+e".
+This paper is published with the permission of the Director of the
+National Physical Laboratory.
+REFERENCES
+1. Commandant BENOIT, 'Note sur une m^thode, etc' (Proce'de^ du Commandant
+CHOLESKY), Bull. Oiod. (Toulouse), 1924, No. 2, 5-77.
+2. L. Fox, H. D. HUSKEY, and J. H. WILKINSON, 'Notes on the solution of algebraic
+linear simultaneous equations', see above, pp. 149-73.
+3. J. v. NEUMANN, V. BABOMANN, and D. MONTGOMERY, Solution of Linear Systems
+of High Order, lithographed, Princeton (1946).
+4. J. MORRIS, ' An escalator method for the solution of linear simultaneous equations',
+Phil. Mag., series 7, 37 (1946), 106.
+5. H. HOTELLINO, 'Some new methods in matrix calculation', Ann. Math. Stat. 14
+(1943), 34.
+6. J. v. NEUMANN and H. H. GOLDSTINE, 'Numerical inverting of matrices of high
+order', BtM. Amer. Math. Soc. 53 (1947), 1021-99.

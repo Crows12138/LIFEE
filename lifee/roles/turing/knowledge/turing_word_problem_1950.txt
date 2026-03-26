@@ -1,0 +1,1021 @@
+The Word Problem in Semi-Groups With Cancellation
+Author(s): A. M. Turing
+Source: Annals of Mathematics, Second Series, Vol. 52, No. 2 (Sep., 1950), pp. 491-505
+Published by: Annals of Mathematics
+Accessed: 24/09/2013 19:03
+ .
+content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms
+ .
+Mathematics.
+
+--- Page 2 ---
+THE WORD PROBLEM IN SEMI-GROUPS WITH CANCELLATION 
+BY A. M. TURING 
+(Received August 13, 1949) 
+It will be shown that the word problem in semi-groups with cancellation is 
+not solvable. The method depends on reducing the unsolvability of the problem 
+in question to a known unsolvable problem connected with the logical computing 
+machines introduced by Post (Post, [1]) and the author (Turing, [1]). In this we 
+follow Post (Post, [2]) who reduced the problem of Thue to this same unsolvable 
+problem. 
+1. Semi-groups with cancellation 
+By a semi-group with cancellation we understand a set e within which is 
+defined a function f(a, b) described as a product and satisfying 
+(i) The associative law f(f(a, b), c) = f(a, f(b, c)) 
+(ii) The cancellation laws f(a, b) -f(a, c) D b 
+c 
+f(b, a) 
+- f(c, a) D b 
+c 
+for any a, b, c in (B. 
+In view of the associative law we naturally write abc for both f(f(a, b), c) and 
+f(a, f(b, c), and similarly for strings of letters of any length. If A and B are two 
+such strings (e.g. arghm and gog) then AB represents the result of writing one 
+after the other (i.e. arghmgog). 
+We have here used the convention (to be fol- 
+lowed throughout) that capital letters are variables for strings of letters. 
+2. The word problem 
+One may construct a semi-group 
+with cancellation by means of generators and 
+relations as follows. We first define a certain finite set 5 of letters to be the genera- 
+tors. Strings of such letters are described as words. A class j of pairs of words is 
+chosen and described as the fundamental relations (abbreviated sometimes to 
+F.R.). The words are understood to represent members of a semi-group, and 
+pairs forming 
+a fundamental relation to represent equal members, but no pairs 
+of words to represent the same member unless obliged to by this condition. The 
+object of the 'word problem' is to find a method for determining 
+whether a given 
+pair of words do or do not represent the same semi-group element. Such a pair 
+of words will be described as a relation of the semi-group. 
+Treating the above explanation of the meaning of a relation as relatively in- 
+formal and intuitive, we may also give a more formal definition 
+which is equiva- 
+lent to the first. This greater formality 
+would in many applications tend to dry- 
+ness and obscurity, but for our present purpose it gives greater clarity, since we 
+are not concerned so much with obtaining relations as with showing that certain 
+relations cannot be obtained. This requires a very unambiguous form of defini- 
+tion. 
+
+--- Page 3 ---
+A. M. TURING 
+Immediate deducibility 
+and assertibility 
+We say that 
+(i) Any pair in W is immediately assertible. 
+(ii) Any pair of form (A, A) is immediately assertible. 
+(iii) (A, B) is immediately deducible from (B, A). 
+(iv) (A, B) is immediately deducible from (A, C) and (C, B). 
+(v) (AG, BG) is immediately deducible from (A, B) for any generator G. 
+(vi) (GA, GB) is immediately 
+deducible from (A, B) for any generator G. 
+(vii) (A, B) is immediately deducible from (AG, BG) for any generator G. 
+(viii) (A, B) is immediately 
+deducible from (GA, GB) for any generator G. 
+Note that we use a capital for G. If g is a generator it is a quite definite one. 
+Immediate deducibility and assertibility apply in no other cases but those 
+listed above. 
+Semi-group relations 
+A pair (A, B) is a relation of the semi-group (i arising from the fundamental 
+relations 0 if there is a 'proof' of (A, B) consisting of a sequence of pairs of which 
+each is either immediately assertible or immediately deducible from previous 
+pairs of the sequence, and the last pair is (A, B). 
+We wish to find out whether the word problem for semi-groups is solvable or 
+not. The possibilities may be divided into three alternatives. 
+(a) There might be a general method applicable for all sets j of fundamental 
+relations, and all pairs (A, B). 
+(b) For any given set of fundamental 
+relations there might be a special method 
+which could be used, but no general method applicable for all sets. 
+(c) There may be some particular set of F.R. such that no method will ap- 
+ply with it: i.e., any reputed method will give the wrong answer for some pair of 
+words. 
+We shall show that (c) is the correct alternative. 
+3. Computing machines 
+As in Turing [1], Post [1], we identify the existence of a 'general method for 
+determining. . . ' with that of a 'computing machine constructed to determine 
+. . . '. Numerous alternative definitions 
+have been given (Church [1], Kleene [1], 
+see also Hilbert and Bernays, Appendix to vol. II) and proved equivalent 
+(Kleene [2], Turing [21). 
+A computing machine is imagined as a mechanical device capable of a finite 
+number of states or internal configurations 
+(I.C.) q1, q2, 
+- 
+, qr, working on a 
+(both ways) infinite tape divided into squares on which symbols are printed. 
+These symbols 
+are drawn from the set so, si, 
+S1 
+, 
+* ... 
+* 
+sr, . At any moment 
+one 
+particular square is especially closely connected with the machine. It is called 
+the scanned square. The behavior of the machine at this moment is determined by 
+its own I.C. and the symbol on the scanned square. The behavior consists in 
+altering this symbol and possibly also shifting the scanned square one place to 
+
+--- Page 4 ---
+THE WORD PROBLEM 
+IN SEMI-GROUPS 
+right or left. The state of the whole system at any moment is called its complete 
+configuration 
+(C.C.). The C.C. could be described by giving the sequence of 
+symbols on the tape, starting with the first 
+which is not blank and ending with the 
+last, and interposing 
+the name of the I.C. on the left of the symbol on the scanned 
+square. In Turing [1] the expression configuration 
+(unqualified) was used to de- 
+scribe the combination of I.C. with scanned symbol, so that the behavior of the 
+machine is determined by the configuration 
+at each moment. 
+For our present purpose many of the conventions of Turing [1] are not ideally 
+chosen, but we are to some extent bound by them since we have to use the results 
+of that paper. We shall describe a C.C. differently. 
+We shall take the form 
+described 
+above and flank it with 
+S4 at either end. Thus for instance 
+S45153q251s4 
+represents a C.C. in which the I.C. is q2 and the tape bears S1538l the last of 
+these symbols being on the scanned square. This device is due to Post (who uses 
+h for S4) and greatly facilitates the connection with the word problem and Thue 
+systems. We shall divide the internal configurations 
+into two classes, the left- 
+facing and the right-facing. 
+The left-facing 
+I.C.'s will be lo , 11, 12, - 
+, lR and 
+the right facing will be r1 , 
+*, .. 
+, rR (some otiose ones may be included in one 
+of the classes to equalize numbers). If the I.C. is an ri the new convention requires 
+the machine's behavior to be determined by it and the symbol next on its right, 
+but in the case of an 1 it is determined by li and the symbol on its left. It is easy 
+to modify a machine constructed according to the original conventions to give 
+one with similar properties but satisfying the new conventions. We leave the 
+details to the reader. The new convention is not of course considered desirable in 
+general, but only where semi-groups (and perhaps groups) are concerned. 
+In accordance with these conventions 
+we make the following 
+definitions. 
+A computing machine is determined by giving a (finite) set of symbols, com- 
+prising tape symbols, left-facing 
+internal configurations, 
+and right-facing 
+internal 
+configurations, 
+and also a table. 
+A complete 
+configuration 
+is a word made up of tape symbols together with one 
+internal configuration. 
+A table consists of a number of entries, 
+each of which is a 
+pair of words of one of the following eight forms 
+(risk 
+, Sktrit ) 
+(soli, 
+sOsoli' ) 
+(Skli 
+, 1ifSkf) 
+(soli 
+lit) 
+(Skli 
+, skkri) 
+(rso X 
+ri, soso) 
+(rsk 
+, li'Skl) 
+(risoX rv,) 
+where the left-facing 
+internal configurations 
+are lo, 11 
+, 12, 
+, 1R and the right- 
+facing are r1 r2 , 
+-.. 
+, rR . The tape symbols are so S, 
+, 
+. 
+N 
+, 
+A table must be so constructed that no C.C. has two subwords which are first 
+members of different 
+entries. As a consequence of this condition we may define 
+the (unique if existent) successor of a C.C. as follows. If (U, V) is an entry of a 
+table then the successor of X U Y is X V Y. We say that B is a descendant of 
+A if it is possible to connect A to B by a finite sequence of words each of which 
+
+--- Page 5 ---
+A. M. TURING 
+is the successor (in our technical sense) of the one which immediately precedes 
+it in the sequence. 
+We might restrict the definition 
+of a C.C. by insisting that a C.C. must begin 
+and end with S4 . But it will appear shortly that it will make no difference 
+for our 
+purpose whether we do so or not. 
+Note that if B is a descendant of A in a machine 9X then (A, B) is a relation 
+of the semi-group whose F.R. are the entries of WN. 
+The symbol so represents 'blank'. If a machine following the new convention 
+is made to correspond in behavior with one following 
+the old it is necessary that 
+the entries (soli, 
+soso, i ) (soli , l2), (riso 
+, risoso), (riso 
+, ri,) should only come into 
+play when the machine is scanning a blank square in one of the two continuous 
+infinite sequences of blank squares at the two ends of the tape. This would be 
+ensured by appropriate entries in the machine's table, and would be made 
+possible by the presence of the 'end symbols' S4 . However so long as we are 
+satisfied that the behavior of the machines in Turing [1] can be modelled by 
+machines following the present conventions we need not consider these details 
+any further. 
+There is no general method which can be used to determine, given a machine 
+and a C.C., whether that C.C. has any descendants in which a given generator 
+occurs. The equivalent of this was stated in Turing [1] (p. 248), but Post has 
+exposed a weakness in the proof which was given there. Post pointed out that 
+certain conventions which should only have been used in the construction of 
+particular machines had actually been assumed to apply to arbitrary machines. 
+This convention required partial answers never to be erased, and to have a 
+space order corresponding 
+to the time order of their printing. Such a restriction 
+applied to machines in general would be most undesirable. Post suggests over- 
+coming the difficulty 
+by considering 
+the 'answer' to be given by the time sequence 
+of printings, 
+and ignoring the space sequence altogether. Another possibility is 
+to show that the objectionable convention is in some sense inessential. This could 
+be done by making use of the fact that the 'universal machine' itself obeys the 
+convention. However there is no intention to enter into these questions in detail 
+here, and we shall assume the theorem proved in the form in which it is stated at 
+the beginning of this paragraph. 
+If we were content to prove the unsolvability of the word problem in the weak 
+form ((b) or (c)), it would be natural to attempt to reduce it to the unsolvable 
+problem just mentioned. For the strong form (c) however we prefer a result 
+about a particular machine which may be translated into a result about a particu- 
+lar semi-group. 
+This is made possible by the existence of the 'universal machine' 
+U. This machine has the property that, given the table of any other machine 9M 
+and a C.C. K of 9X we can find a C.C. of U, c(9I, K) say, such that a certain easily 
+distinguishable subsequence of the descendants of c(9-N, 
+K) corresponds in a 
+certain simple way to the descendants of K in the motion of 9W. The details of 
+U are to a very large extent arbitrary, and so are the details of the above-men- 
+tioned correspondences. 
+One possible convention is that -he special subsequence 
+
+--- Page 6 ---
+THE WORD PROBLEM 
+IN SEMI-GROUPS 
+of descendants of c(9J, K) consists of those whose penultimate symbol is S3 , and 
+that of the corresponding 
+descendant of K is obtained by omitting all symbols 
+which are not symbols for 9. (This of course requires that there are certain 
+symbols which are sacred to the use of U). However in spite of the arbitrariness 
+we shall speak of U as though it were a quite definite 
+machine whose table was 
+before us. In order actually to obtain such a table we should have to take the 
+description of the universal machine in Turing [1] and modify it in several 
+ways. Firstly it would be necessary to expand all the abbreviations used: secondly 
+it must be modified to accord with the conventions of the present paper, and 
+finally various matters of detail noted by Post (Post [2], p. 7, footnote) must be 
+corrected. As a consequence of the properties of U and the above mentioned 
+unsolvable problem concerning 
+machines in general there is a machine Z3 such 
+that there is no general method 
+by which given a C.C. of 3 we can determine 
+whether 
+5410S4 is one of its descendants 
+or not. Q3 is such that any C.C. containing 
+lo has no 
+successor. Here QT is a machine obtained by a small modification 
+of U. 3 behaves 
+like U in its earlier steps, but as soon as it reaches a C.C. in which S3 appears it 
+behaves differently, 
+proceeding quickly to the C.C. 541054 by erasures, etc. 
+In what follows we shall not be concerned with any other machines than I%, 
+apart from some parenthetical remarks about a machine Q'. Our interest in 
+machines in general, and the conventions by which they are restricted, 
+therefore 
+fades. All we need to know is that Q satisfies the above italicized statement and 
+that its table follows our new conventions. 
+4. The semi-group So. 
+The semi-group 
+(o is obtained from the table for QT as follows. Let the tape 
+symbols for 3 be so, si, ., 
+SN, 
+the left-facing 
+internal configurations 
+, 12, 
+IR and the right-facing 
+ones ri , r2, 
+* r,* 
+: let the entries of the table for 
+Z3 be E1, 
+,E M . Then the generators of So are to be y, am , Tm , ji X ki, ni, 
+Pi,) Uk,7 V~k wk. Zk (m - 1, 2, * * * , M; i = O. 1, - * 
+-, N; k = 1, 2, .. * * R). 
+The F.R. of @o will be classified into three kinds, principal relations, 
+commutation 
+relations, 
+and change relations. 
+Principal relations. For each entry of Q we have two principal relations, called 
+first phase and second phase relations. A table is given below of the forms that 
+these relations take for the entry Em according to the eight different 
+forms that 
+this entry can have 
+Entry Em 
+First phase relation 
+Second phase relation 
+(r,,Sh, Sh'ri') 
+(vikh 
+XT Cjh 
+X Vi , Tm) 
+(amnh Zi X Tm X Ziph) 
+(Shli 
+li'Sh') 
+(jhUi 
+Xamui 
+kh ITM) 
+(El~i 
+Ph'Tm 
+XnhWi) 
+(sahs, 
+Shtri,) 
+(jhUi, 
+Cmjh'Vitrn) 
+(ormnh'Zil 
+Tm ,nhWi) 
+(ri2h, 
+li'Sh') 
+(vikh , lmui'kh'Tm) 
+((lmWi'ph'Tm X Ziph) 
+(s8i, sosoli') 
+(joui, 
+amj0j0uiiTm) 
+(amnonowitrm 
+, nowi) 
+(sol 
+,i 1i') 
+(joui 
+X 
+imui' TM) 
+(amwi'Tm 
+X now1) 
+(riso ri'soso) 
+(viko, avi, kokoTm) 
+(lmZi'popoTm 
+, ziko) 
+(riso , rib) 
+(viko X umviiTm) 
+(amZi'Tm , ziko). 
+
+--- Page 7 ---
+A. M. TURING 
+Commutation 
+relations 
+(mhi 
+, UiTrm) 
+(virm, omvi) i= 1, 
+* 
+R 
+(WiTrm X mWi)m 
+= 1,.. 
+M). 
+(UmZi, 
+ZiTm) 
+Change relations 
+(j4uo , n4y) 
+(yk4 ,Wop4) 
+(YTm , (my) 
+(m =1, 
+,M). 
+The symbols which occur in first phase relations may be called first phase symbols. 
+Words made up of such symbols may be called first phase words. Second phase 
+symbols and words may be defined similarly. 
+The symbols ui , vi, wi , zi (which correspond to internal configurations) 
+will 
+be called active symbols. The symbols 
+jh , hh, am which always appear to the left 
+of the active symbols in the F.R., are called left symbols, 
+and kh , Ph. 
+Tm are 
+called right symbols. 
+A word is described as normal if it contains exactly one active symbol and all 
+the symbols to the left of this active symbol are left symbols and all to the right 
+of it are right symbols. Both members of an F.R. are evidently normal. 
+It will be seen that the first phase relations are obtained from the corresponding 
+entries by 
+(a) Substituting vi for ri and us for li . Also substituting 
+jh for Sh when it 
+occurs on the left of the I.C. but substituting kh for it when it occurs on the 
+right. 
+(b) Inserting am on the left of the second term and Tm on its right. 
+The second phase entries are obtained by 
+(c) Substituting zi for ri and wi for li . Also substituting 
+nh for Sh when it 
+occurs on the left of the I.C. but substituting 
+Ph for it when it occurs on the 
+right. 
+(d) As (b). 
+(e) Interchanging 
+the two terms. 
+The complete set of relations for Eo may be regarded as forming 
+the table for 
+a certain machine 23'. The movements of Q3 correspond to the earlier steps in the 
+movement of Q', which may be called the first phase of the movement of V3'. The 
+C.C.'s of the two machines 
+correspond 
+if the generators 
+am , Tm are ignored 
+and 
+the substitutions (a) applied. This correspondence 
+applies throughout 
+if 93 never 
+reaches the C.C. s4lOs4 . However if it does so the motion of Q3' continues further. 
+After the first phase comes an 'intermediate 
+phase' in which the C.C. 2j4uoTjK4T2 
+is changed to 2nwoT1p4T2 
+. Here 2 is a word formed entirely from the generators 
+al1, U2 , ... 
+, 
+M and T1, T2 are formed entirely from T1, T2, ..., 
+TM. Finally 
+we have the second phase in which the motions of the first phase are carried out 
+again, but in reverse order and with different 
+tape symbols and internal con- 
+
+--- Page 8 ---
+THE WORD PROBLEM 
+IN SEMI-GROUPS 
+figurations. 
+At the end of this we return to the original C.C. with certain substi- 
+tutions applied. We intend to show that the necessary and sufficient 
+condition that 
+s410s4 be a descendant of C is that (<1(C), <2(C)) be a relation of (2o where S01, 
+,2 
+represent 
+the substitutions (a) and (c) above. The proof of the necessity is easy 
+and consists essentially in establishing the above properties of $'. This argument 
+is in effect reproduced in Lemmas 1-4 below, but without explicit reference 
+to 
+the machine 93'. Indeed the machine 9' is wholly fictitious 
+since it does not obey 
+either the old or the new conventions. It has the power of "manufacturing 
+tape" on which to write the symbols 
+am, Tmr. Such machines 
+are certainly 
+worthy 
+of consideration, 
+but are not recognized here. The sufficiency 
+is more difficult, 
+for we are permitted to do certain operations in semi-groups 
+which do not cor- 
+respond to motions of the machines, e.g., cancellation. The generators 
+am , Tm 
+have been introduced into the F.R. to ensure that any results which can be ob- 
+tained by the application of these operations could also be obtained without. 
+This means that the permission to cancel becomes a dead letter. The introduc- 
+tion of different 
+sets of symbols for use on the right and the left of the active 
+symbol has a similar purpose. It ensures that relations which contain more than 
+one active symbol in each term can be split up into ones containing only one: 
+this enables these relations to be interpreted in terms of machines. More pic- 
+turesquely we can say that when the left and right symbols are distinguishable 
+we can let two or more machines work on the same tape without danger of their 
+interfering 
+with one another. 
+We shall eventually prove 
+THEOREM 
+1. The necessary and sufficient 
+condition that (so1(C), cp2(C)) be a rela- 
+tion of Co is that s410s4 
+be a descendant 
+of C in the machine 93. 
+As we have mentioned sop , p2, 
+represent 
+the substitutions 
+(a) and (c). An equiva- 
+lent definition 
+is given below. Combining Theorem 1 with the principle enunciated 
+at the end of ?3 we have 
+THEOREM 2. There is no general method by which we can determine 
+whether 
+a 
+given pair of words is or is not a relation of So . For if there were such a method 
+we 
+could apply it to pairs of the form (sPl(C), so2(C)) and so determine 
+whether 
+s4ls4 is 
+a descendant 
+of C in 93. 
+Since we shall be concerned with no other semi-groups than (o we shall use 
+the word 'relation' to mean 'relation of so'. 
+5. Sufficiency 
+in Theorem 1 
+We begin by defining certain functions of words and C.C.'s. The null word is 
+denoted by A. The functions 
+pi, ,2 
+(already mentioned above) are defined for all 
+C.C.'s of 93 by the equations 
+S<P~i= u- 
+i, 
+S (ri) = vi, 
+(P(ShX) 
+= jh(P1(X), 
+(1(Xsh) 
+=l(X)kh 
+f =(li) 
+w i, 
+P2(ri) = zi , 
+P2(,ShX) = nhp2(X), 
+s02(XSh) -- p2(X)ph 
+The functions 
+A1, _2 are defined for first and second phase words respectively 
+by 
+equations 
+
+--- Page 9 ---
+A. M. TURING 
+4ii(XG) = 41i(X)41i(G), 4J1(ui) 
+= 1s, 
+,J1(vi) 
+= v, 
+t,61(A) 
+= A 
+41 (kh) 
+= Al (jh) = 
+ShA 
+I Aui(m) = Al(Tm) - A 
+412(XG) 
+= 412(X)412(G), t2(wi) = l 4, 
+t2(Zi) = vi, 
+{t2(A) = A 
+4/2(rh) 
+= 
+422(ph) = Sh X 
+2 (am) = 
+V2(Tm) = A. 
+The function x is defined for first phase words by the equations 
+x(XG) = x(X)x(G), 
+x(u) = wi, 
+x(v) = zi, 
+x(A) 
+A 
+X(jh) 
+= rh , 
+x(kh) = Ph , 
+X(am) 
+= 0m" 
+X(T)= 
+Tm. 
+The function 
+r is defined 
+for words containing 
+only a-i, 02, X 
+M 
+* 
+and o for 
+words containing 
+only ri T2 , * 
+, TM by the equations 
+T (A) = A, 
+T (X0m) = T (X).Tm 
+cT(A) 
+A, 
+fY(XTm) = aT(X)aTm. 
+In these definitions 
+X is any word and G any generator. 
+LEMMA 1. For all arguments 
+for which the functions are defined we have 
+lip(XY) = Pi(X)ik(Y), 
+I2(XY) 
+= {2(X)+2(Y) 
+X(4=(X)) 
+= 
+2(X) 
+P2(V/(X)) 
+= X(X) 
+1 (<1(V)) 
+= 
+V 
+4/2(f=2(V)) 
+V. 
+These results are all trivial. 
+LEMMA 2. The fundamental 
+relations corresponding 
+to the 
+mth entry (U, V) of 
+the table for S3 are (5pi(U), Tmoi (V)Tm) (first phase) and (Oam'p2(V)Tm, 5P2(U)) (second 
+phase). 
+This merely requires verification 
+in each of the eight cases. 
+LEMMA 3. If C = Co , C1 , C2 
+. 
+are the descendants 
+of C in Q (the sequence 
+possibly terminating), 
+then for each Cr we can find a normal word Hr such that 
+(Ho , Hr) and (x(Hr), x(Ho)) are relations and Ho = pi(Co), 4A'(Hr) = Cr . 
+In the case r = 0 the value soj(Co) evidently satisfies all the requirements. 
+Suppose Hr-1 has been defined and satisfies the conditions. We may write 
+CG-i as A UB and Cr as A VB where (U, V) is one of the entries of the machine. 
+Now if Hri = PQR then A UB = 4t'1(P)I, '(Q)4',(R). If P and R are sufficiently 
+short, p1(P) and 41(R) are respectively 
+contained in A and B. If we take them as 
+long as can be done consistently 
+with this, we shall have 41(P) = A and 4I'i(R)= 
+B, for each increase of P or R by one symbol does not increase the length of 
+4q(P) or 4i(R) by more than one symbol. Hence 4{(Q) = U. We now define 
+Hr to be Pomlpj(V)rmR where (U, V) is the entry Em . Then 
+44,(Hr) = (P~i(Um)4'i(Pi(V))4ii(Tm)1i 
+(R) 
+= AVB = Cr 
+The relation (Hr-i, Hr) then follows from (Spi(U), a-m,((p(V)rm) which is an F.R. 
+by Lemma 2. The F.R. (0-,mp2(V)Tm , <P2(U)) can also be written as 
+{_..1 
+_ 
+\1. _ TF\.l.X_ 
+(Qn) 
+
+--- Page 10 ---
+THE WORD PROBLEM 
+IN SEMI-GROUPS 
+in virtue of the equation 41,(Q) = U and Lemma 1. From this F.R. follows 
+the relation (x(H,), x(Hr-D)) . 
+LEMMA 4. If s410s4 
+is a descendant 
+of C in Q then (<1(C), sP2(C)) is a relation. 
+Using the notation of Lemma 3 suppose that CR is s410s4 . Then (5,r(C), H,) and 
+(x(HR), P2(C)) are relations and it remains to obtain the relation (HR, X(HR)). 
+Since 41'(HR) = S41084 by Lemma 3 we can write the relation (HR , x(HR)) as 
+(21j422uoTjK4T2, 21n422woT1P4T2) 
+where Z12 
+contain only Ol, U2, ... 
+, a M, and 
+T1T2 contain only T , T2, 
+*... 
+, TM .We obtain (22u0 , uOT (12)) and 
+(u(Tl)wo, woT1) from the commutation relations and (j4uO, n4y), (YT(22)Tl, 
+-22(Tj)y), (yK4 , woP4) from the change relations. From these the required rela- 
+tion follows. 
+6. The necessity in Theorem 1 
+This completes the sufficiency 
+part of Theorem 1, and it remains to prove the 
+necessity.We are no longer interested in the detailed form of (p2(C), but only in 
+the fact that it is not a first phase word, for this is in itself enough to ensure that 
+Q reaches S41054 .We proceed by an induction over the steps of the proof of the 
+semi-group 
+relation. We shall show that this proof need not contain any cancella- 
+tions, and need only involve normal words. 
+Length of proof. Suppose that a proof contains a applications of (vii) or (viii), 
+b applications of (i), c of (ii), (iii) or (iv) and d of (v) or (vi). We describe the 
+length of the proof by the polynomial aW2 
++ bw + c + 2d. We regard one poly- 
+nomial as greater than another (and the corresponding 
+proof as longer) if its 
+values are greater for all sufficiently 
+large positive values of Co. Alternatively 
+we 
+may regard aW2 + bo + c + 2d as an ordinal, but this may be misleading since 
+our addition will be the addition of polynomials rather than the addition of 
+ordinals. Thus for instance (co+ 1) + (w2 + C) is C02 
++ 2w + 1 and not W2 
++ W. 
+We shall use the notation [A, B] to mean "the length of the proof of the relation 
+(A, B)". 
+The proofs are "well-ordered" when arranged according to their length in this 
+sense. This means that if we can show that a property which holds of all proofs 
+shorter than the proof P must also hold of P, then the property will hold of all 
+proofs. Or in other words there is always a shortest proof not having a given 
+property if there is any not having it. This is the basis of the arguments below. 
+LEMMA 5. If a relation (A1B) satisfies no < [A, B] < (n + 1)X, then there is a 
+chain A = A0, Al , - 
+, A,, = B of words such that each pair of consecutive 
+members 
+(or links) is either of form (XUY, XVY) or of form (XVY, XUY) where 
+(U, V) is an F.R. In the former case the pair is described as a progressive 
+joint, 
+and in the latter as a retrogressive 
+joint. 
+The notation of this lemma is used throughout what follows. Consider the 
+relation for which the lemma fails and for which the proof is shortest. The last 
+step of the proof uses as premisses relations with shorter proofs and therefore 
+ones for which the lemma holds. This last step is not by (vii) or (viii) for if it 
+
+--- Page 11 ---
+A. M. TURING 
+were the length would be at least W2. If the last step is by (i) then the length is 
+c, and the lemma holds with n = 1 by taking U = A, V = B and x, y void. 
+If the last step is by (ii) then the length is 1 and the lemma holds with n = 0. 
+If the last step is by (iii) then the chain for (B, A) gives ones for (A, B) when 
+reversed in order. If it is by (iv) the chains for (A, C) and for (C, B) give one for 
+(A, B) when taken in combination. If it is by (v) and (F, H) has the chain 
+Fo, 
+, * * , Fn then (FG, HG) has the chain FoG, F1G, 
+, FAG . Similarly 
+if it is by (vi). In each case there is a chain for the conclusion with the appropriate 
+length, contrary to hypothesis. Hence the assumption that the lemma fails for 
+some proof is false. 
+LEMMA 6. If one link of a chain is nomal then every link is normal. 
+It will suffice 
+to show that the neighbors of a normal link are normal. Suppose 
+XUY, XVY are two consecutive links and XUY is normal, and either (U, V) 
+or (V, U) is an F.R. Since XUY is normal X consists of left symbols and Y of 
+right symbols. Also V is normal being a term of an F.R. Hence XVY is normal. 
+Chains such as those concerned in Lemma 6 will be called normal chains. 
+If (XUY, XVY) is a joint of a chain and (U, V) or (V, U) is an F.R. then the 
+joint is said to be justified by that F.R. 
+A two-generator 
+word is described as a barrier if the proposition that the first 
+generator is a left symbol is logically equivalent to the proposition that the 
+second is a right symbol. A word is said to have a barrier if a barrier is a subword. 
+LEMMA 7. No barrier occurs as a subword of either term of an F.R. 
+This must be verified by detailed examination of the various F.R. 
+LEMMA 8. A word without 
+barriers is either normal or else consists entirely 
+of left 
+symbols or entirely 
+of right symbols. 
+This follows at once from the fact that two consecutive generators which do 
+not form a barrier must form one of the four combinations left-left, 
+left-active, 
+active-right, 
+right-right. 
+LEMMA 9. If one link of a chain has no barriers, 
+then no link of the chain has a 
+barrier. 
+We have only to show that if XUY has no barriers and either (U, V) or (V, U) 
+is an F.R. then XVY has no barriers. Any barrier which it has cannot be wholly 
+contained in either X or Y, since it would then appear in XUY; nor can it be 
+contained in V by Lemma 7. If it overlaps from X to V then its first generator 
+is a left symbol, for it precedes a symbol in U which is not a right symbol. The 
+first generator of V must therefore 
+be a right symbol, which is impossible. Like- 
+wise the barrier cannot overlap from V to Y. 
+LEMMA 10. If [G1A, G2BI < w2 and GG1 is a barrier then GG2 is a barrier. Likewise 
+if [AG1, BG2] < co2 and G1G is a barrier then G2G is a barrier. 
+We will consider only the first assertion. There is a chain for (G1A,G2B) by 
+Lemma 5, and therefore 
+one for (GG1A, GG2B), by preceding each link with G. 
+The result follows by lemma 9. 
+LEMMA 11. Let AG1G2F 
+and BG3G4H be abbreviated 
+to P and Q, and let [P, QI < co2. 
+Suppose also that G1G2 and G3G4 are barriers and either AG1 and BG3 contain no 
+
+--- Page 12 ---
+THE WORD PROBLEM IN SEMI-GROUPS 
+barriers or G2F and G4H contain no barriers. Suppose further 
+that P, Q are not 
+identical. Then [AG, , BG3] + [G2F, G4HI + 1 _ [P, QI. 
+If the lemma is false we suppose that (P, Q) is the relation with the shortest 
+proof consistent with denying the lemma. We deal only with the case where 
+AG1 and BG3 contain no barriers, the case where G2F and G4H contain none being 
+similar. Let us consider the last step in the proof of (P, Q). The premisses to this 
+last step must obey the lemma, if they are of appropriate form, i.e. if both terms 
+have a barrier and they are not identical. This last step could not be by (i) since 
+an F.R. has no barriers, nor by (ii) since P, Q are not identical. If it is by (iii) 
+the proof could be reduced in length by omitting the last step and adopting a 
+modified conclusion, while still denying the lemma. Now take the case where the 
+last step is by (iv).We may suppose the premisses were (P, D) and (D, Q). We 
+may suppose that D is not identical with either P or Q for if it were we could omit 
+the last step and the identical premiss. If D contains a barrier it is of form EGrG61 
+where G5G6 is a barrier and E contains no barriers. The lemma then applies to 
+both premises, 
+i.e., to (AG1G2F, 
+EG6G61) 
+and (EG6G61, 
+BG3G6H) so that 
+[AG, , EG6] + [G2F, G61] + 1 < [PF D]. 
+[EG6 , BG3] + [G6I, G4H] + 1 < [D, Q]. 
+But 
+[A G1, EG61] 
++ [EGO, BG3] + 1 ? [AG, , BG3] 
+[G2F, G61] + [GeI, G4HI] + 1 ? [G2F1G4H] 
+[P. D] + [D, Q] + 1 = [P, Q] 
+and so 
+[AG,, BG3] + [G2F, G4H] + 1 < [P, Q]. 
+Hence D cannot contain a barrier. But this contradicts Lemma 9. If the last step 
+is by (v) we may write F'G and H'G for F and H. Then 
+[G2F, G 
+LH] < [G2F', G(LH'] + 1 
+[AG,, BG3] + [G2F, G4H] + 1 < [AG1 , BG3] + [G2F', GHII'] 
++ 2 
+< [AG, G2 F', BG3G4H'] + 1 
+[,P Q]. 
+If the last step is by (vi) then (P, Q) is of form (GG6P', GG6Q') where GGrG6 are 
+generators and P', Q' may possibly be void. If GG5is a barrier then so is GG6 by 
+Lemma 10 and we see that A, B are void. (AG, , BG3) reduces to (G, G) whose 
+proof is of length 1. The premiss of the last step is (G2F, G4H) and 
+[G2F, G4H] + 2 = [P, Q]. Hence [AG1, BG3] + [G2F, G4H] + 1 = [P, Q]. 
+If GG5 is not a barrier then GG6 is not either and we see that A, B are not 
+void. Put A = GA', B = GB'. A' and B' may be void. The premiss of the last 
+step is (A'G1G2F, B'G3G4H) and so since G1G2 , G3G4 are barriers and A'G, 
+B'G3 have no barriers and A'G1G2F, 
+B'G3G4H are not identical 
+[A'G1, B'G3] + [G2F, G4H] + 3 < [A'GlG2F', B'G3G4H] + 2 = [PI Q]. 
+
+--- Page 13 ---
+A. M. TURING 
+But 
+[A'G1 , B'G3] + 2 > [AG, , BG31 
+so that 
+[AG1 , BG3] + [G1F, G4H] + 1 ? [P, Q]. 
+LEMMA 12. No normal first phase word can be expressed in more than one way in 
+the form XUY where U is the first term of an F.R. nor in more than one way in the 
+form XVY where V is the second term of an F.R. 
+If XUY = X'U'Y' then 46(X)P(U)4k(Y) = #,(X')4P(U')4,6(Y'). 
+But then 
+soP (N(X)X 
+P7'(;(U))s(oP'6,t(Y)) = '11t'(X'))Pt U'))soP(k(Y')) 
+and (pP'(44(U)), (-1 (41(U')) are first terms in entries of the table for 53, and 
+op'(4(XUY)), (p1(41(X'U'Y')) are C.C.'s. Then by the restrictions 
+to which all 
+tables are subject we have op' (1 '( U)) = p(l 4( (U')). Also U and U' have no genera- 
+tors am (being first terms) and therefore 
+U = Al(U), U'= 4/(U'). Hence U = U'. 
+If XVY = X'V'Y' then since both sides are normal V and V' must overlap, and 
+since they both terminate with a ?m or Tm they must have a ?m or TM in common. 
+Hence the value of m is the same for both, i.e., V and V' are the same relation. 
+Since the words are normal they contain at most one active symbol each. Hence 
+in XVY, X'V'Y' the active symbol of V must occur at the same distance from 
+the beginning of both expressions, so that X = X' and likewise Y = Y'. 
+LEMMA 13. In a normal chain without 
+repetitions 
+there is no change of direction, 
+i.e. the joints are either all progressive 
+or all retrogressive. 
+Suppose there is a link which is flanked both by a progressive 
+and by a retro- 
+gressive joint. 
+Then it is expressible in both the forms XUY and X'U'Y' where (U, V) and 
+(U', V') are F.R. or else in both the forms XVY and X'V'Y' In the former case 
+the flanking links are XVY and X'V'Y', and in the latter they are XUY and 
+X'U'Y'. In either case they are identical, by Lemma 12 together with the fact 
+that an F.R. is uniquely determined by either of its terms. The chain therefore 
+has a repetition contrary to hypothesis. 
+LEMMA 14. If the end links of a chain are first phase words, and there 
+is no change 
+of direction, 
+then all links are first phase. 
+We will suppose the chain progressive. Consider the last link which is not 
+first phase, and suppose that the joint following it is justified by (U, V). Then 
+V is first phase but U is not. But looking through the fundamental relations we 
+see that there is no such (U, V). 
+LEMMA 15. A normal chain without 
+change of direction 
+is completely 
+determined 
+by its first link. 
+This is an immediate consequence of Lemma 12 and the definition 
+of a chain. 
+LEMMA 16. Let 11 
+,2 be words formed 
+from oWa2, ... 
+, a M, and let G be a first 
+phase symbol, G' a second phase symbol. Then 2,G'X cannot precede T2GY in a 
+progressive 
+chain. 
+
+--- Page 14 ---
+THE WORD PROBLEM 
+IN SEMI-GROUPS 
+Every link can be written in the form 2FZ where I (and also T,3 X 24 etc.) 
+contains only 01 02, 
+* 
+... 
+, 
+N, and the generator F is not a 0m . If T3F'X', 24FY' 
+are two consecutive links of the chain then the corresponding 
+joint must be 
+justified by an F.R. of the form 26F'X", 16FY". If Y3F'X' is the last link for which 
+F' is second phase, then F' is second phase but F is not. Clearly such an F.R. is 
+neither first phase nor second phase, and no such relation can be found among 
+the commutation relations or the change relations. 
+LEMMA 17. If G is a generator 
+and there is a normal chain for (GA, GB) or for 
+(AG, BG) then there is one for (A, B). 
+Consider the case where the given chain is one for (GA, GB), and suppose 
+that there is no chain for (A, B). Let the chain for (GA, GB) be Fo , F1 , 
+X**, Fn 
+Not all the links of the chain begin with G, for if they did we could obtain a chain 
+for (A, B) simply by omitting G from each link. Let the first and last links which 
+do not begin with G be F, and F, .We will assume the chain progressive. Then 
+(Fr,. X Fr) is justified by some F.R. of form (GU, V) and (F, , F,+1) by one of 
+form (U', GV') where V and U' do not begin with G. Thus G is both the leftmost 
+symbol of the first member of a relation and the leftmost symbol of a second 
+member. The only symbols which can satisfy this condition are 0m . The first 
+symbol of V must be of form zi , ui, or nh 
+. If it is zi or ui then it is the active 
+symbol in V, and the link (F, , F,.?1) must be justified by a relation whose 
+first member begins with that symbol. But there is no such relation, so that V 
+begins with nh . Likewise U' begins with an jh . But there is a progressive chain 
+from V to U' contradicting 
+Lemma 16. This completes the proof for the case 
+(GA, GB). The argument for the case (AG, BG) is similar; although there is not 
+complete symmetry 
+in the change relations between left and right, it does not 
+affect the argument at any point. 
+LEMMA 18. If one term of a relation contains no active symbol 
+and the proof of the 
+relation does not apply (vii) or (viii), then the relation is an identity. 
+We consider the last step of the shortest proof of such a relation which is not 
+an identity. It is not by (i) since every F.R. has an active symbol in each term, 
+nor by (ii) since it is not an identity. If it is by (iii) we could omit the last step 
+and obtain a shorter proof denying the lemma. If it is by (iv) one of the premisses 
+has a term which contains no active symbol. This premiss has a shorter proof 
+than the relation in question and therefore 
+is an identity, 
+and the last step may be 
+omitted. If it is by (v) or (vi) the premiss must be an identity by a similar argu- 
+ment, and the conclusion is therefore 
+also an identity. A step by (vii) or (viii) 
+has been excluded by the conditions of the lemma. Hence there is no such relation 
+which is not an identity. 
+LEMMA 19. The shortest 
+proof of a normal relation does not use (vii) or (viii) or 
+words which are not normal. 
+We consider the relation (P, Q) which denies the lemma and, consistently 
+with this, has the shortest possible proof. If there is an application of (vii) or 
+(viii) consider the first one, and suppose it is applied to (GA, GB) to obtain 
+(A, B). Then either (A, B) is (P, Q) or else A, B are not normal for in any other 
+
+--- Page 15 ---
+A. M. TURING 
+case (A, B) would deny the lemma and have a shorter proof than (P, Q). If 
+(A, B) is (P, Q) then (GA, GB) cannot be normal, for if it were its proof would 
+use only normal words, being shorter than that of (P, Q). There would there- 
+fore be a normal chain for (GA, GB) by Lemmas 5, 6 and one for (A, B) (i.e., 
+for (P, Q)) by Lemma 17. Then (P, Q) satisfies the lemma contrary to hypoth- 
+esis. Equally if (A, B) is not normal (GA, GB) will not be normal. Then by 
+Lemma 8 there are either barriers in GA, GB or one of them contains no active 
+symbol. In the latter case since (vii) and (viii) are not used in the proof of 
+(GA, GB) this relation must be an identity (Lemma 18). But in this case we 
+can shorten the proof of (A, B) since it is an identity. Hence there are barriers 
+in GA and GB. Applying Lemma 11 we see that either the barriers are right 
+at the beginning and [G, G] + [A, B] + 1 < [GA, GB] or else (A, B) is of form 
+(A'G1G2F, B'G3G4H) 
+where G1G2 and G3G4 are barriers and GA'G1, GB'G3 with- 
+out barriers and 
+[GA'G1, GB'G3] + [G2F, G4H] + 1 _ [GA, GB] < [PF Q]. 
+We may apply Lemma 17 to (GA'G, GB'G3): this shows that there is a chain 
+for (A'G1, B'G3). Combining this with the proof of (G2F, G4H) gives us a proof 
+of (P, Q) which does not apply (vii) or (viii) and is therefore 
+shorter than the 
+original one. The same is true if [G, G] + [A, B] + 1 < [GA, GB]. Hence there 
+is not any application of (viii) and likewise none of (vii). The whole proof is 
+therefore 
+of length less than co2, so that by Lemma 5 there is a chain for (P, Q). 
+But then (P, Q) does not deny the lemma, contrary to hypothesis. This estab- 
+lishes the lemma. 
+LEMMA 20. If for some W which is not first phase (<p(C), TV) is a relation, 
+then S410S4 is a descendant 
+of C. 
+By Lemmas 19, 15 there is a chain for (sol(C), W). Let the last first phase link 
+XUY and the joint connecting it to the next link be ustified by (U, V). Then 
+U is first phase but V is not. This identifies (U, V) as (j4Uo I u4y). Now consider 
+the words Hr described in Lemma 3. As each H7 consists only of first phase sym- 
+bols the same is true of each link of its chain (Lemma 14). This chain therefore 
+is wholly contained in the chain for (sol(C), XUY), which we will suppose is of 
+length n. Then r < n so that C has only a finite number of descendants. Let- 
+the last be C,, and consider the chain leading from H, to XUY 
+Since it con- 
+sists entirely of first phase symbols the fundamental relations involved must be 
+either first phase relations or commutation relations. I assert that they are all 
+commutation relations. For if one is a first phase relation then C, has a suc- 
+cessor. Since these steps are all by commutation relations, H, contains uo and 
+therefore 
+C8 contains 1l , and is therefore 
+841084 by the properties of Q3. 
+Theorem 1 follows at once from Lemmas 4, 20 and the fact that 02(C) is not 
+first phase. 
+VICTORIA UNIVERSITY 
+MANCHESTER, ENGLAND 
+
+--- Page 16 ---
+THE WORD PROBLEM 
+IN SEMI-GROUPS 
+REFERENCES 
+ALONZO CHURCH, [1]. An unsolvable problem of elementary number theory, Amer. J. Math., 
+58 (1936), 345-363. 
+S. C. KLEENE, [1]. General recursive functions of natural numbers, Math. Ann., 112 (1935-6), 
+727-742. 
+S. C. KLEENE, [2]. X-definability 
+and recursiveness, Duke Math. J., 2 (1936), 340-353. 
+E. L. POST, [1]. Finite combinatory processes-formulation 1, J. Symbolic Logic, 1 (1936), 
+103-105. 
+E. L. POST, [2]. Recursive unsolvability of a problem of Thue, J. Symbolic Logic, 12 (1947), 
+1-11. 
+A. M. TURING, [1]. On computable numbers, with an application to the Entscheidungsproblem, 
+Proc. London Math. Soc. (2), 42 (1937), 230-265. A correction to this paper has 
+appeared in the same periodical, 43 (1937), 544-546. 
+A. M. TURING, [2]. Computability and X-definability, J. Symbolic Logic, 2 (1937), 153-163. 
+D. HILBERT and P. BERNAYS, Grundlagen der Mathematik, 2 vols., Berlin, (1940). 

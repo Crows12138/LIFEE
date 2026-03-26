@@ -1,0 +1,2382 @@
+A Mathematical Theory of Communication
+By C. E. SHANNON
+(Concluded from July 1948 issue)
+PART III: MATHEMATICAL PRELIMINARIES
+In
+this final installment
+of the paper we consider the case where
+the
+signals or the messages or both are continuously variable,
+in contrast with
+the discrete nature assumed until now.
+To a considerable extent the con-
+tinuous case can be obtained through a limiting process from the discrete
+case by dividing the continuum of messages and signals into a large but finite
+number of small regions and calculating the various parameters involved on
+a discrete basis.
+As the size of the regions is decreased these parameters in
+general approach as limits the proper values for the continuous case.
+There
+are, however, a few new effects that appear and also a general change of
+emphasis in the direction of specialization of the general results to particu-
+lar cases.
+We will not attempt,
+in the continuous case, to obtain our results with
+the greatest generality, or with the extreme rigor of pure mathematics, since
+this would involve a great deal of abstract measure theory and would ob-
+scure the main thread of the analysis.
+A preliminary study, however, indi-
+cates that
+the theory can be formulated
+in a completely axiomatic and
+rigorous manner which includes both the continuous and discrete cases and
+many others.
+The occasional liberties taken with limiting processes in the
+present analysis can be justified in all cases of practical interest.
+18. Skts and Ensemblks of Functions
+We shall have to deal
+in the continuous case with sets of functions and
+ensembles of functions.
+A set of functions, as the name implies, is merely a
+class or collection of functions, generally
+of one variable, lime.
+It can be
+specified by giving an explicit representation of the various functions in the
+set, or implicitly by giving a property which functions in the set possess and
+others do not.
+Some examples are:
+1. The set of functions:
+fe(l) =
+sin
+(/ + d).
+Each particular value of 9 determines a particular function in
+the set.
+BELL SYSTEM TECHNICAL JOURNAL
+2. The set of all functions of time containing no frequencies over W cycles
+per second.
+3. The set of all functions limited in band to W and in amplitude to A.
+4. The set of all English speech signals as functions of time.
+An ensemble of functions is a set of functions together with a probability
+measure whereby we may determine the probability of a function in the
+set having certain properties.^
+For example with the set,
+fed) =
+sin
+(/ + e),
+we may give a probabiHty distribution for 6, P(6).
+The set then becomes
+an ensemble.
+Some further examples of ensembles of functions are:
+1. A finite set of functions /t(0
+{k =
+1,
+2,
+, n) with the probability of
+fk being pk
+.
+2. A finite dimensional family of functions
+f{ai
+, aj
+,
+•
+, a„
+;
+with a probability distribution for the parameters a,
+:
+p{ai
+,
+, an)
+For example we could consider the ensemble defined by
+n
+/ffli
+,
+, a„
+, 01
+,
+•
+, ^n
+;
+= 2
+On sin n{a]t
+-|- &„)
+n>il
+with the amplitudes a; distributed normally and independently, and the
+phrases 5. distributed uniformly (from
+to 2ir) and independently.
+3. The ensemble
+rf
+A
+T\
+sin^(21Kf - n)
+/{at
+,
+t) = Z^a„ ——=^
+~r-
+n.^«)
+Tr(,2lr/ — n)
+with the
+fli normal and independent all with the same standard deviation
+\/N.
+This is a representation of "white" noise, band-limited to the band
+from
+to W cycles per second and with average power N.
+* In mathematical terminology the functions belong to a measure space whose total
+measure is unity.
+* This representation can be used as a definition of band limited white noise.
+It has
+certain advantages in that it involves fewer limiting operations than do definitions that
+have been used in the past.
+The name "white noise," already firmly intrenched in the
+literature,
+is perhaps somewhat unfortunate.
+In optics white
+light means either any
+continuous spectrum as contrasted with a point spectrum, or a spectrum which is flat with
+wavetenglh (which is not the same as a spectrum flat with frequency).
+'liLlMlt.
+MATHEMATICAL THEORY OF COMMUNIGATION
+4. Let points be distributed on the
+t axis according to a Poisson distribu-
+tion.
+At each selected point the function /(/)
+is placed and the different
+functions added, giving the ensemble
+E
+fit +
+i,)
+k=-co
+where the
+Ik are the points of the Poisson distribution.
+This ensemble
+can be considered as a type of impulse or shot noise where all the impulses
+are
+identical.
+5. The set of English speech functions with the probability measure given.
+by the frequency of occurrence in ordinary use.
+An ensemble of functions /„(/)
+is slalionary
+if the same ensemble results
+when all functions are shifted any fixed amount in time.
+The ensemble
+foil) =
+sin
+(/ + 8)
+is stationary if 9 distributed uniformly from
+to 2t.
+If we shift each func-
+tion by
+(i we obtain
+feit +
+/i) =
+sin
+(/ +
+/i -F
+9)
+=
+sin
+(( +
+<p)
+with
+(p distributed uniformly from
+to
+2ir.
+Each function has changed
+but the ensemble as a whole is invariant under the translation.
+The other
+examples given above are also stationar}'.
+An ensemble is ergodic if it is stationary, and there is no subset of the func-
+tions in the set with a probability different from
+and
+1 which is stationary.
+The ensemble
+sin
+{i -H
+9)
+is ergodic.
+No subset of these functions of probability t^O,
+1 is transformed
+into itself under all time translations.
+On the other hand the ensemble
+a sin
+(/
+-I- 9)
+with a distributed normally and 9 uniform
+is stationary but not ergodic.
+The
+subset
+of
+these functions with
+a between
+and
+for
+example
+is
+stationary.
+Of the exainples given, 3 and 4 are ergodic, and 5 may perhaps be con-
+sidered so.
+If an ensemble
+is ergodic we may say roughly that each func-
+tion in the set
+is typical of the ensemble.
+More precisely it is known that
+with an ergodic ensemble an average of any statistic over the ensemble
+is
+equal (with probability
+1) to an average over all the time translations of a
+BELL SYSTEM TECHNICAL JOURNAL
+particular function in the set.^
+Roughly speaking, each function can be ex-
+pected, as time progresses, to go through, with the proper frequency, all the
+convolutions of any of the functions in the set.
+Just as we may perform various operations on numbers or functions to
+obtain new numbers or functions, we can perform operations on ensembles
+to obtain new ensembles.
+Suppose, for example, we have an ensemble of
+functions /a(0 and an operator T which gives for each function /„(/) a result
+Probability measure is defined for the set ga{i) by means of that for the set
+fJJ).
+The probability of a certain subset
+of the
+ga{l) functions
+is equal
+to that of the subset of the /„(/) functions which produce members of the
+given subset of g functions under the operation T.
+Physically this corre-
+sponds to passing the ensemble through some device, for example, a filter,
+a
+rectifier or a modulator.
+The output functions of the device form the
+ensemble ga{t)-
+A device or operator T will be called invariant if shifting the input merely
+shifts the output,
+i.e.,
+if
+g.{t) = TUt)
+implies
+g.{l + h) = TMl + 4)
+for all/a(0 and all k
+.
+It
+is easily shown (see appendix
+1) that
+if T
+is in-
+variant and the input ensemble
+is stationary then the output ensemble
+is
+stationary.
+Likewise if the input is ergodic the output will also be ergodic.
+A filter or a rectifier is invariant under all time translations.
+The opera-
+tion of modulation is not since the carrier phase gives a certain time struc-
+ture.
+However, modulation
+is invariant under
+all translations which are
+multiples of the period of the carrier.
+Wiener has pointed out the intimate relation between the invariance of
+physical devices under
+time
+translations and
+Fourier
+theory.*
+He has
+^ This is the famous ergodic theorem or rather one aspect of this theorem which was
+proved is somewhat cUfferent formulations by Birkhoff, von Neumann, and Koopman, and
+subsequently generaUzeH by Wiener, Hopf, Hurewicz and others.
+The hteratureon ergodic
+theory is quite extensive and the reader is referred to the papers of these writers for pre-
+cise and general formulations; e.g., E. Hopf "Ergodetitheorie" Ergebnisse der Mathematic
+und
+ihrer Grenzgebiete, Vol.
+5, "On
+Causality
+Statistics and
+Probability" Journal
+of
+Mathematics and Physics, Vol. XIII, No.
+1, 1934; N. Wciner "The Ergodic Theorem"
+Duke Mathematical Journal, Vol.
+5, 1939.
+Communication theory is heavily indebted to Wiener for much of its basic philosophy
+and theory.
+His classic NDRC report "The Interpolation, Extrapolation, and Smoothing
+of Stationary Time
+Series,"
+to appear soon
+in book form, contains the
+first clear-cut
+formulation of communication theory as a
+statistical problem,
+the study of operations
+MATHEMATICAL THEORY OF COMMUNICATION
+shown, in fact, that if a (le\'ice is linear as well as invariant Fourier analysis
+is then the appropriate mathematical tool for dealing with the problem.
+An ensemble of functions is the ai)j)ropriate mathematical representation
+of the messages produced by a continuous source
+(for example speech), of
+the signals produced by a transmitter, and of the perturbing noise.
+Com-
+munication theory Is properly concerned, as has been emphasized by Wiener,
+not with operations on
+particular functions, but with
+operations on en-
+sembles of functions.
+A communication system
+is designed not for a par-
+ticular speech function and still less for a sine wave, but for the ensemble of
+speech
+functions.
+19. Band Limited Ensembles of Functions
+If a function of time/(/)
+is limited to the band from
+to IF cycles per
+second
+It is completely determined by giving its ordinates at a series of dis-
+crete points spaced -^ seconds apart in the manner indicated by the follow-
+ing result.
+Theorem 13: Let /(/) contain no frequencies over W.
+Then
+f(,\ _ V V
+si" Tr{2Wt - n)
+'^'^ " ti'^"
+xf2T'F/- n)
+-(2Wi - «)
+where
+X. =f \2w)
+'
+In
+this expansion
+f(l)
+is represented as a sum of orthogonal
+functions.
+The coefficients
+A',, of the various terms can be considered as coordinates in
+an infinite dimensional "function space."
+In this space each function cor-
+responds to precisely one point and each point to one function.
+A function can be considered to be substantially limited to a time T if all
+the ordinates A"„ outside this interval of time are zero.
+In this case all but
+2T\V of the coordinates will be zero.
+Thus functions limited to a band IF
+and duration T correspond to points in a space of 27'TF dimensions.
+A subset of the functions of band
+II' and duration T corresponds to a re-
+gion in this space.
+For example, the functions whose total energy
+is less
+on time
+series.
+This work, iiUhough chieOy concerned with
+the
+linear prediction and
+filtering problem, is an important collateral reference in connection with the present paper.
+We may also refer here
+to Wiener's forthcoming book "Cybernetics"
+dealing with
+the
+general problems of communication and control.
+^ For a proof of this theorem and further discussion see the author's paper "Communi-
+cation in the Presence of Noise" lo be published in the Proceedings of lite Instiliile of Radii)
+Engineers.
+BELL SYSTEM TECHNICAL JOURNAL
+than or equal to E correspond to points in a 2TW dimensional sphere with
+radius
+r =
+\/2WE.
+An ensemble of functions of limited duration and band will be represented
+by a probability distribution p{xi
+x„) in the corresponding n dimensional
+space.
+If the ensemble is not limited in time we can consider the 2TW co-
+ordinates in a given interval T to represent substantially the part of the
+function in the interval T and the probability distribution p(xi
+,
+•
+,
+x^)
+to give the statistical structure of the ensemble for intervals of that duration.
+20. Entropy op a Continuous Distribution
+The entropy of a discrete set of probabilities Pi,
+Pn has been defined as
+:
+In an analogous manner we define the entropy of a continuous distribution
+with the density distribution function p{x) by:
+3 ^ - [
+p(x) log p{x) dx
+With an n dimensional distribution ^(xi
+,
+, a;n) we have
+H ^ -I
+I p{xi
+x„) log p(xi
+,
+• • ,Xn) dxi-
+dxr,
+.
+If we have two arguments x and y (which may themselves be multi-dimen-
+sional) the joint and conditional entropies of p{x, y) are given by
+Hix, y) = -jj
+p(x, y) log p(x, y) dx dy
+and
+^^^y^ = -//^f^'>'^^"s^^''^'^5'
+^"^^^ = -// ^^*' y^ ^°s ^-^ ^^ ^y
+jx, y
+p(y)
+where
+p(x) = j p(x, y) dy
+p{y) = j
+Pi^, y) ^x.
+The entropy of continuous distributions have most (but not
+all)
+of the
+properties of the discrete case.
+In particular we have the following:
+MATHEMATICAL THEORY OF COMMUNICATION
+1.
+li X is limited to a certain volume v in its space, then H(x)
+is a maximum
+and equal to log v when p{x)
+is constant
+( - ) in the volume.
+2. With any two variables x, y we have
+H(x, y) < H{x) + E(y)
+with equality if (and only if) x and y are independent, i.e., p(x, y) =
+p(x)
+p{y) (apart possibly from a set of points of probability zero)
+.
+3.
+Consider a generalized averaging operation of the following type:
+with
+p'iy) = j
+a(-v, y)p(x) dx
+I
+a(x, y) dx =
+/
+a{x, y) dy -
+1,
+a{x, y) >
+0.
+Then the entropy of the averaged distribution p'{y)
+is equal to or greater
+than that of the original distribution p(x).
+4. We have
+Hix, y) = H(x) + HAy) - H{y) + Uyi^)
+and
+H.{y) <my).
+5. Let p{x) be a one-dimensional distribution.
+The form of ^(:v) giving a
+maximum entropy subject to the condition that the standard deviation
+of X be fixed at a is gaussian.
+To show this we must maximize
+Hix) - - j pix) log p(x) dx
+with
+a" =
+I
+p(x)x' dx
+and
+^ —
+I P(^) '^^
+as constraints.
+This requires, by the calculus of variations, maximizing
+J
+\~p{x) log p{x) + \p{x)x^ + npix)\ dx.
+The condition for this is
+-1 - \ogp{x) +
+Xa:' + M -
+and consequently
+(adjusting
+the constants
+to
+satisfy
+the
+constraints)
+BELL SYSTEM TECHNICAL JOURNAL
+Similarly
+in
+n
+dimensions,
+suppose
+the
+second
+order moments
+of
+/"(.vi
+,
+,
+-v,,) are fixed at
+-4,-/
+:
+/I,; = j
+•• j XiXjpixi
+,
+, .r„) dxi
+dxn
+.
+Then
+the maximum
+entropy
+occurs
+{by
+a
+similar
+calculation) when
+^(^1
+,
+, .T„)
+is the n dimensional gaussian distribution with the second
+order moments Aij
+.
+6. The entropy of a one-dimensional gaussian distribution whose standard
+deviation
+is
+a-
+is given by
+H{x) = log ^/l^ea.
+This is calculated as follows:
+*^"^ = VS.'
+T
+-log p(x^ =
+log Vln-iT + ^2
+FI(x) = - j p(x) log p(x) dx
+- j p(x) log \/2^adx + j p(x) ~ dx
+= log VStt o" + 2^2
+= log y/lr ff + log -y/e
+= log -s/lwea.
+Similarly
+the
+n
+dimensional
+gaussian
+distribution
+with
+associated
+quadratic form
+a,-,
+is given by
+P(x, ,---,x.) = 10^, exp (- h^a:jXad
+and the entropy can be calculated as
+H = log (lireT'^
+\ Oij
+I*
+where
+| o,/
+is the determinant whose elements are
+a,y
+.
+7.
+If a; is limited to a half line (p(x) =
+for ^ < 0) and the first moment of
+X is fixed at a:
+a =
+j
+p{x)x dx,
+.-^r.^i*>
+—
+.
+MATHEMATICAL THEORY OF COMMUNICATION
+then the maximum entropy occurs when
+a
+and is equal to log ea.
+There
+is one important difference between the continuous and discrete
+entropies.
+In
+the
+discrete
+case
+the entropy measures
+in an
+absolute
+way the randomness of the chance variable.
+In the continuous case the
+measurement
+is relative to the coordinate system.
+If we change coordinates
+the entropy will in general change.
+In fact
+if we change to coordinates
+Vi
+yn the new entropy
+is given by
+H{y) = \
+I
+p(-'-^
+^")-^ (-) ^og P^-'^
+-'-^J {^) ^y^--- ^y-
+where J
+( - ) is the Jacobian of the coordinate transformation.
+On ex-
+panding the logarithm and changing variables to
+xi
+•
+a'„
+, we obtain:
+Iliy) = Hix) -// A(-Vi
+,
+•
+, A-J log / (~j dx, dx„.
+Thus the new entropy
+is the old entropy less the expected logarithm of
+the Jacobian.
+In the continuous case the entropy can be considered a
+measure of randomness relative
+lo an assumed standard, namely the co-
+ordinate system chosen with each small volume element dxi
+dx„ given
+equal weight.
+When we change the coordinate system the entropy in
+the new system measures the randomness when equal volume elements
+dyi
+dy,i in the new system are given equal weight.
+In
+spite
+of
+this dependence on
+the
+coordinate system
+the entropy
+concept is as important in the continuous case as the discrete case.
+This
+is due
+to
+the
+fact
+that the derived concepts
+of information
+rate and
+channel
+capacity depend on
+the
+dijference
+of two
+entropies and
+this
+difference does not depend on the coordinate frame, each of the two terms
+being changed by the same amount.
+The entropy of a continuous distribution can be negative.
+The scale
+of measurements sets an arbitrary zero corresponding to a uniform dis-
+tribution over a unit volume.
+A distribution which is more confined than
+this has less entropy and will be negative.
+The rates and capacities will,
+however, always he non-negative.
+9. A particular case of changing coordinates is the linear transformation
+yj - H do Xi
+BELL SYSTEM TECHNICAL JOURNAL
+In this case the Jacobian is simply the determinant
+| a,, j~^ and
+B(y) = Hix) + log
+I a,y
+i
+In the case of a rotation of coordinates (or any measure preserving trans-
+formation) / =
+1 and H(y) = H(x).
+21. Entropy of an Ensemble of Functions
+Consider an ergodic ensemble of functions limited
+to a certain band of
+width W
+cycles
+per
+second.
+Let
+p(Xl
+Xn)
+be the density distribution function for amplitudes
+.ri
+.r^ at n successive
+sample points.
+We define the entropy of the ensemble per degree of free-
+dom by
+H' ^ -Lim -
+/
+•
+/
+pixi
+Xn) log p(xi
+,
+•
+•
+, x„) dxi-
+• dxn
+.
+We may also define an entropy H per second by dividing, not by n, but by
+the time T in seconds for
+;; samples.
+Since n = 2TW, H' = 2WH.
+With white thermal noise p is gaussian and we have
+H' = log V2TreN,
+H = W log lireN.
+For a given average power
+A'^,
+white
+noise has the maximum possible
+entropy.
+This
+follows from
+the maximizing
+properties
+of
+the
+Gaussian
+distribution noted above.
+The entropy
+for
+a continuous
+stochastic process has many properties
+analogous to that for discrete processes.
+In the discrete case the entropy
+was related to the logarithm of the probability of long sequences, and to the
+number of reasonably probable sequences of long length.
+In the continuous
+case
+it
+is related
+in a similar fashion to the logarithm
+of the probability
+density for a long series of samples, and the volume of reasonably high prob-
+abiUty in the function space.
+More precisely,
+if we assume ^(:Vi
+x,^ continuous in all the
+.r.- for all w,
+then for sufficiently large n
+for all choices of
+(.vi
+,
+, a^O apart from a set whose total probability is
+less than
+5, with 8 and
+e arbitrarily small.
+This follows from the ergodic
+property if we divide the space into a large number of small cells.
+4ti^f>>^:uu«^ <i*^
+MATHEMATICAL THEORY OF COMMUNICATION
+The relation of H to volume can be stated as follows; Under the same as-
+sumptions consider the n dimensional space corresponding to p{xi
+,
+, .v„).
+Let V„(q) be the smallest volume in this space which includes in its interior
+a total probability q.
+Then
+^^iogr„(g)^^.
+provided
+f/ does not equal
+or
+1.
+These results show that for large n there is a rather well-defined volume (at
+least
+in the logarithmic
+sense)
+of high
+probability, and
+that within
+this
+volume the probability density is relatively uniform (again in the logarithmic
+sense).
+In the white noise case the distribution function is given by
+Since this depends only on Iix] the surfaces of equal probabihty
+density
+are spheres and the entire distribution has spherical symmetry.
+The region
+of high probability is a sphere of radius \/nN.
+As w—^ w
+the probability
+of being outside a sphere of radius \/n{N + e) approaches zero and - times
+n
+the logarithm of the volume of the sphere approaches log s/lreN.
+In the continuous case it is convenient to work not with the entropy H of
+an ensemble but with a derived quantity which we
+will
+call the entropy
+power.
+This
+is defined as the power in a white noise limited to the same
+band as the original ensemble and having the same entropy.
+In other words
+if H' is the entropy of an ensemble its entropy power is
+Ni = -^ exp 2H'.
+\
+lire
+In the geometrical picture
+this amounts to measuring the high probability
+volume by the squared radius of a sphere having the same volume.
+Since
+white noise has the maximum entropy for a given power, the entropy power
+of any noise is less than or equal to its actual power.
+21. Entropy Loss in Line.\r Filters
+Theorem 14:
+If an ensemble having an entropy Hi per degree of freedom
+in band W is passed through a
+filter with characteristic
+!'(/) the output
+ensemble has an entropy
+H,=H,-\-^f^ log
+I Y{f) f df.
+BELL SYSTEM TECHNICAL JOURNAL
+The operation
+of
+the
+filter
+is
+essentially a
+linear transformation
+of
+co-
+ordinates.
+If we think of the different frequency components as the original
+coordinate system, the new frequency components are merely the old ones
+multiplied by factors.
+The coordinate transformation matrix
+is thus
+es-
+TABLE
+I
+GAIN
+ENTROPY
+POWER
+FACTOR
+ENTROPY
+POWER GAIN
+IN DECIBELS
+IMPULSE
+RESPONSE
+I\
+e2
+-a.ea
+{ff-t)2
+0)
+1-4(2—
+—^
+(f)'
+-5.32
+.
+SINt
+cost]
+L
+t2
+J
+CO
+l-(y3-
+—^
+0.384
+-4.15
+"cOSt-l
+cost
+J
+SINt]
+L
+t"
+t3
+J
+U
+>^
+(if
+-2.66
+"Vi-<y2-
+(O
+e2a
+-B.&ea
+—~
+cos(i-a')t-cost
+(Tt^
+L
+J
+hAl
+Qi
+I
+sentially diagonalized in terms of these coordinates.
+The Jacobian of the
+transformation
+is (for n sine and n cosine components)
+/ = fl
+I y{fi) t
+'^'.:WA'
+i..-9S^
+.
+MATHEMATICAL THEORY OF COMMUNICATION
+where the /, are equally spaced through the band W.
+This becomes
+in
+the limit
+expl£.log|r(/)ri/.
+Since J
+is constant its average value is this same quantity and applying the
+theorem on the change of entropy with a change of coordinates, the result
+follows.
+We may also phrase
+it in terms of the entropy power.
+Thus
+if
+the entropy power of the first ensemble is A^ that of the second is
+iV,expi£ logiF(/)pd/.
+The final entropy power is the initial entropy power multiplied by the geo-
+metric mean gain
+of the
+filter.
+If the gain
+is measured
+in
+db, then
+the
+output entropy power
+will be increased by the arithmetic mean db gain
+over W.
+In Table I the entropy power loss has been calculated (and also expressed
+in db) for a number of ideal gain characteristics.
+The impulsive responses
+of these filters are also given for II' =
+27r, with phase assumed to be 0.
+The entropy loss for many other cases can be obtained from these results.
+For example the entropy power factor — for the first case also applies to any
+gain characteristic obtained from 1 —
+oj by a measure preserving transforma-
+tion of the
+0} axis.
+In particular a linearly increasing gain G(a)) =
+ai, or a
+"saw tooth" characteristic between
+and
+1 have the same entropy
+loss.
+The reciprocal gain has the reciprocal factor.
+Thus -
+has the factor
+e^.
+Raising the gain to any power raises the factor to this power.
+22. Entropy of the Sum of Two Ensembles
+If we have two ensembles of functions /„(/) and g^{i) we can form a new
+ensemble by "addition."
+Suppose the
+first ensemble has the probability
+density function p{xi
+,
+, x„) and
+the second
+g(.vi
+,
+,
+.v„).
+Then the
+density function for the sum is given by the convolution:
+r(xi, • ,x„) = j
+j
+p(yi,
+,yn)
+(/(>! - yi,
+,^''^ - J") fh'i ,'^y2,---,(iyu-
+Physically this corresjionds to adding the noises or signals represented by
+the original ensembles of functions.
+BELL SYSTEM TECHNICAL JOURNAL
+The following result is derived in Appendix 6.
+Theorem 15: Let the average power of two ensembles be
+A''! and N^ and
+let their entropy powers be Ni and Ni
+.
+Then the entropy power of the
+sum, iVa
+, is bounded by
+White Gaussian noise has the peculiar property that
+it can absorb any
+other noise or signal ensemble which may be added to
+it with a resultant
+entropy power approximately equal to the sum of the white noise power and
+the signal power (measured from the average signal value, which is normally
+zero), provided the signal power is small, in a certain sense, compared to
+the
+noise.
+Consider the function space associated with these ensembles having n
+dimensions.
+The white noise corresponds to a spherical Gaussian distribu-
+tion in this space.
+The signal ensemble corresponds to another probability
+distribution, not necessarily Gaussian or spherical.
+Let the second moments
+of
+this
+distribution
+about
+its
+center
+of
+gravity
+be
+a,/
+.
+That
+is,
+if
+p{xi
+, •
+, x^
+IS the density distribution function
+0,7 =/'/
+^(^' ~
+"»")(^j ~
+«i) dxi, ••
+, dxn
+where the a,- are the coordinates of the center of gravity.
+Now a.y is a posi-
+tive definite quadratic form, and we can
+rotate our coordinate system to
+align
+it with the principal directions of this forra.»
+aij
+is then reduced to
+diagonal form ba
+.
+We require that each ba be small compared to N, the
+squared radius of the spherical distribution.
+In this case the convolution of the noise and signal produce a Gaussian
+distribution whose corresponding quadratic form is
+N + bu
+.
+The entropy power of this distribution is
+[n(iv + 6«)r
+or approximately
+= [(NT + 26.-.-(iV)"-Y'"
+= N-\-- Xbii
+n
+The last term is the signal power, while the first is the noise power.
+MATHEMATICAL THEORY OF COMMUNICATION
+PART IV: THE CONTINUOUS CHANNEL
+23. The Capacity of a Continuous Channel
+In a continuous channel the input
+or transmitted signals
+will be con-
+tinuous functions of time/(/) belonging to a certain set, and the output or
+received signals will be perturbed versions of these.
+We will consider only
+the case where both transmitted and received signals are limited to a certain
+band W.
+They can then be specified, for a time T, by 2TW numbers, and
+their
+statistical
+structure by
+finite
+dimensional
+distribution
+functions.
+Thus the statistics of the transmitted signal will be determined by
+P{xi
+,
+, ^„) = P{x)
+and those of the noise by the conditional probability distribution
+The rate of transmission of information for a continuous channel is defined
+in a way analogous to that for a discrete channel, namely
+R = H(x) - Hy(x)
+where H{x)
+is the entropy of the input and Hy(x) the equivocation.
+The
+channel capacity C is defined as the maximum of R when we vary the input
+over
+all possible ensembles.
+This means that in a finite dimensional ap-
+proximation we must vary P(x) = P(xi
+,
+•
+•
+, x„) and maximize
+- / Pix) log P(x) dx + jj P(x, y) log^^ dx dy.
+This can be written
+using the fact that
+/
+/ P{x, y) log P{x) dx dy =
+I P{x) log P(x) dx.
+The
+channel capacity
+is thus expressed
+C = Lim Max 1
+( (Pix, y) log -^'J^l^ dx dy.
+T_=o
+Pix) T J
+J
+P{x)P{y)
+It is obvious in this form that R and C are independent of the coordinate
+P{x, y)
+system since the numerator and denominator in log „,,„,. will be multi-
+^
+"" P{x)P{y)
+plied by the same factors when x and y are transformed in any one to one
+way.
+This integral expression for C is more general than H(x) ~
+By{x).
+Properly interpreted (see Appendix 7) it will always exist while H{x) — Hy{x)
+-,
+BELL SYSTEM TECHNICAL JOURNAL
+may assume an indeterminate form w —
+co in some cases.
+This occurs, for
+example, if x is limited to a surface of fewer dimensions than
+ii in its n dimen-
+sional approximation.
+If the logarithmic base used in computing H(x) and Hy(x)
+is two then C
+is the maximum number of binary digits that can be sent per second over the
+channel with arbitrarily small equivocation,
+just
+as
+in the discrete
+case.
+This can be seen physically by dividing the space of signals into a large num-
+ber of small
+cells,
+sufficiently small so that the probability density F^iy)
+of signal x being perturbed to point y
+is substantially constant over a cell
+(either of x or y).
+If the cells are considered as distinct points the situation
+is essentially the same as a discrete channel and the proofs used there will
+apply.
+But
+it
+is clear physically that this quantizing of the volume into
+individual points cannot in any practical situation
+alter the final answer
+significantly, provided the regions are sufficiently small.
+Thus the capacity
+will be the limit of the capacities for the discrete subdivisions and this
+is
+just the continuous capacity defined above.
+On the mathematical side it can be shown first (see Appendix 7) that if u
+is the message, x is the signal, y is the received signal (perturbed by noise)
+and
+V the recovered message then
+H(x) - H,{x) > H{u) - HM
+regardless of what operations are performed on w to obtain x or on y to obtain
+V.
+Thus no matter how we encode the binary digits to obtain the signal, or
+how we decode the received signal to recover the message, the discrete rate
+for the binary digits does not exceed the channel capacity we have defined.
+On the other hand,
+it
+is possible under very general conditions to find a
+coding system for transmitting binary digits at the rate C with as small an
+equivocation or frequency of errors as desired.
+This is true, for example,
+if,
+when we take a finite dimensional approximating space for the signal func-
+tions, P{x, y)
+is continuous in both
+.r and y except at a set of points of prob-
+ability zero.
+An important special case occurs when the noise
+is added to the signal
+and is independent of it (in the probability sense).
+Then Px{y) is a function
+only of the difference w =
+{y —
+x),
+P.{y) = Q{y - x)
+and we can assign a definite entropy to the noise (independent of the sta-
+tistics of the signal), namely the entropy of the distribution Q{n).
+This
+entropy will be denoted by Hiji).
+Theorem
+16:
+If the signal and
+noise are independent and the received
+signal
+is the sum of the transmitted signal and the noise then the rate of
+MATIIEMATKWL THEORY Of COMMUNICATION
+d^'^
+transmission
+is
+R = H(y) - H{n)
+i.e., the entropy of
+tiie received signal
+less the entropy of the noise.
+The
+channel capacity
+is
+C = Max E{y) - H{ii).
+We have, since y =
+.v + n:
+H(x, y) = H(x, „).
+Expanding the left side and using the fact that .v and n are independent
+II(y) + Syix) - H{x) + //(».).
+Hence
+R = H{x) - H„{x) = Eiy) - H(n).
+Since H(n)
+is independent of P(x), maximizing R requires maximizing
+H{y), the entropy of the received signal.
+If there are certain constraints on
+the ensemble of transmitted signals, the entropy of the received signal must
+be maximized subject to these constraints.
+24. Channel Capacity with an Average Power Limitation
+A simple application of Theorem 16 is the case where the noise is a white
+thermal noise and the transmitted signals are limited to a certain average
+power P.
+Then the received signals have an average power P + N where
+iV is the average noise power.
+The maximum entropy for the received sig-
+nals occurs when they also form
+a white noise ensemble since
+this
+is the
+greatest [wssible entropy
+for a power P +
+-V and can be obtained by a
+suitable choice of the ensemble of transmitted signals, namely if they form a
+white
+noise ensemble
+of power P.
+The entropy
+(per second)
+of the
+re-
+ceived ensemble
+is then
+//{).) -
+\V log 2MP + AO,
+and the noise entropy
+is
+H()i) = W log^xe.V.
+The channel capacity is
+P + A^
+C = lliy) - I]{n) - iriog
+N
+Summarizing we have the following:
+Theorem 17: The capacity of a channel of band
+IT' perturbed by white
+BELL SYSTEM TECHNICAL JOURNAL
+thermal noise of power A'' when the average transmitter power is P is given by
+C = PF log
+N
+This means of course that by sufficiently involved encoding systems we
+P
+-\- N
+can transmit binary digits at the rate W log2 —-rz— bits per second, with
+arbitrarily small frequency of errors.
+It
+is not possible
+to transmit at a
+higher rate by any encoding system without a definite positive frequency of
+errors.
+To approxunate this limiting rate of transmission the transmitted signals
+must approximate, in statistical properties, a white noise.
+A system which
+approaches the ideal rate may be described as follows: Let M =
+2' samples
+of white
+noise be constructed each
+of duration
+T.
+These
+are assigned
+binary numbers from
+to {M —
+1).
+At the transmitter the message se-
+quences are broken up into groups of s and for each group the corresponding
+noise sample is transmitted as the signal.
+At the receiver the M samples are
+known and the actual received signal (perturbed by noise) is compared with
+each of them.
+The sample which has the least R.M.S. discrepancy from the
+received signal
+is chosen as the transmitted signal and the corresponding
+binary number reconstructed.
+This process amounts to choosing the most
+probable {a posteriori)
+signal.
+The number M of noise samples used
+will
+depend on the tolerable frequency e of errors, but for almost all selections of
+samples we have
+,
+.
+-,
+.
+log M{t, T)
+„,,
+P
+-\- N
+Lim Lun
+^
+'
+'
+' = W log —^,r—
+,
+so that no matter how smah
+e
+is chosen, we can, by taking T sufficiently
+N
+P
+-\- N
+.
+large, transmit as near as we wish to TW log ——— binary digits in the
+time T.
+P + N
+Formulas sunilar to C = W log —,^— for the white noise case have
+been developed independently by several other writers, although with some-
+what different interpretations.
+We may mention the work of N. Wiener,
+W. G. TuUer,* and H. Sullivan in this connection.
+In the case of an arbitrary perturbing noise (not necessarily white thermal
+noise)
+it does not appear that the maxunizing problem involved in deter-
+'This and other properties of the white noise case are discussed from
+the geometrical
+point of view in "Communication in the Presence of Noise,"
+loc. cit.
+^"Cybernetics," loc. cit.
+'Sc. D. thesis, Department of Electrical Engineering, M.I.T., 1948.
+MATHEMATICAL THEORY OF COMMUNICATION
+mining the channel capacity C can be solved explicitly.
+However, upper
+and lower bounds can be set for C in terms of the average noise power N
+and the noise entropy power Ni
+.
+These bounds are sufficiently close to-
+gether
+in most
+practical
+cases
+to furnish a
+satisfactory
+solution
+to
+the
+problem.
+Theorem 18: The capacity of a channel of band W perturbed by an arbi-
+trary noise is bounded by the inequalities
+^ ^'^S —^^ <C <W log —^^
+where
+P = average transmitter power
+N = average noise power
+Ni = entropy power of the noise.
+Here again the average power of the perturbed signals will he P
+-\- N.
+The maximum entropy for this power would occur
+if the received signal
+were white noise and would be W log 2iTe{P +
+A'^).
+It may not be possible
+to achieve this;
+i.e. there may not be any ensemble of transmitted signals
+which, added to the perturbing noise, produce a white thermal noise at the
+receiver, but at least this sets an upper bound to B{y).
+We have, therefore
+C = max B{y) - H{n)
+< W log lireiP
+-\- N) - W log lireNi
+.
+This is the upper limit given in the theorem.
+The lower limit can be ob-
+tained by considering the rate
+if we make the transmitted signal a white
+noise, of power P.
+In this case the entropy power of the received signal
+must be at least as great as that of a white noise of power P
+-\- Ni since we
+have shown in a previous theorem that the entropy power of the sum of two
+ensembles
+is greater than or equal
+to the sum of the individual entropy
+powers.
+Hence
+max H(y) > W log 2Te{P + Ni)
+and
+C > W log 2Tt(P + Ni) - W log 2weNi
+P+ Ni
+= W log
+N,
+As P increases, the upper and lower bounds approach each other, so we
+have as an asjnnptotic rate
+TI/1
+P + ^
+BELL SVSTEAf TECHNICAL JOURNAL
+If the noise
+is
+itself white, N = Ni and the result reduces to the formula
+proved previously:
+c = iriog(i + ^).
+If the noise is Gaussian but with a spectrum which is not necessarily flat,
+A^ is the geometric mean of the noise power over the various frequencies in
+the band W.
+Thus
+Ni = exp~f^\ogNif)df
+where N(f)
+is the noise power at frequency/.
+Theorem
+19:
+If we
+set
+the
+capacity
+for
+a
+given
+transmitter power P
+equal
+to
+r
+w
+P-^N -71
+C = W\og
+-^^
+then
+ij
+is monotonic decreasing as P increases and approaches
+as a limit.
+Suppose that for a given power Pi the channel capacity
+is
+This means that the best signal distribution, say p{x), when added to the
+noise
+distribution
+q{x),
+gives a received
+distribution
+r{y) whose entropy
+power is {Pi + A^ —
+t/i).
+Let us increase the power to A + A/' by adding
+a white noise of power A-P to the signal.
+The entropy of the received signal
+is now at least
+B{y) = W log 2ire{Pi + A^ -
+tji + AP)
+by application of the theorem on the minimum entropy power of a sum.
+Hence, since we can attain the H indicated, the entropy of the maximizing
+distribution must be at least as great and
+t? must be monotonic decreasing.
+To show that
+t? —»
+as P ^
+°c consider a signal which is a white noise with
+a
+large P.
+Whatever
+the perturbing
+noise,
+the
+received
+signal
+will be
+approximately a white noise,
+if P is sufficiently large, in the sense of having
+an entropy power approaching P +
+A'".
+25. The Channel Capacity with a Peak Power Limitation
+In some applications the transmitter is limited not by the average power
+output but by the peak instantaneous power.
+The problem of calculating
+the channel capacity is then that of maximizing (by variation of the ensemble
+of transmitted symbols)
+H{y) - H{n)
+MATHEMATICAL THEORY OF COMMUNICATION
+64,^
+subject to the constraint that
+all the functions /(/) in the ensemble be less
+than or equal to V^. say, for all
+/.
+A constraint of this type does not work
+out as well mathematically as the average power limitation.
+The most we
+S
+have obtained for this case is a lower bound valid for al! — , an "asymptotic"
+/
+5\
+.
+.
+upper band
+( valid for large —
+J and an asymptotic value of C for
+- small.
+Theorem 20: The channel capacity C for a band W perturbed by white
+thermal noise of power N
+is bounded by
+where S is the peak allowed transmitter power.
+For
+sufficiently large —
+- S + N
+CKWlog""-'-^
+(1 +
+s
+where e
+is arbitrarily small.
+As
+- -^
+(and provided the band W starts
+at
+0)
+C -. W log (l + I
+We wish to maximize the entropy of the received signal.
+If -
+is large
+this
+will occur very nearly when we maximize the entropy of the trans-
+mitted ensemble.
+The asymptotic upper bound
+is obtained by relaxing the conditions on
+the ensemble.
+Let us suppose that the power
+is limited to S not at every
+instant of time, but only at the sample points.
+The maximum entropy of
+the
+transmitted
+ensemble under
+these weakened
+conditions
+is
+certainly
+greater than or equal to that under the original conditions.
+This altered
+problem can be solved easily.
+The maximum entropy occurs if the different
+samples are independent and have a distribution function which is constant
+from — \/S to + -s/S.
+The entropy can be calculated as
+W log 4^'.
+The received signal will then have an entropy less than
+W log (45 + 2-KeN){\ +
+t)
+BELL SYSTEM TECHNICAL JOURNAL
+with e —^
+as — —>
+<» and the channel capacity is obtained by subtracting
+the entropy of the white noise, W log lireN
+W log (AS + 27rc7V)Cl +
+e) - T^ log (lireN) = W log ^'^-—
+(1 + e).
+This
+is the desired upper bound to the channel capacity.
+To obtain a lower bound consider the same ensemble of functions.
+Let
+these functions be passed through an ideal filter with a triangular transfer
+characteristic.
+The gain is to be unity at frequency
+and decline linearly
+down to gain
+at frequency W.
+We first show that the output functions
+of the filter have a peak power limitation S at aU times (not just the sample
+.
+„.
+,
+,
+sin 2irWt
+.
+.
+,
+_,
+pomts).
+tirst we note that a pulse
+gomg mto the inter produces
+1 sm' wWt
+(irWiy
+in the output.
+This function
+is never negative.
+The input function
+(in
+the general case) can be thought of as the sum of a series of shifted functions
+sin lirWi
+^
+2irlVi
+where a, the amplitude of the sample,
+is not greater than \/s.
+Hence the
+output is the sum of shifted functions of the non-negative form above with
+the same
+coefficients.
+These
+functions being
+non-negative,
+the
+greatest
+positive value for any
+/
+is obtained when
+all the coefficients a have
+their
+maximum positive values,
+i.e. v^-
+In this case the input function was a
+constant of amphtude v^ and since the
+filter has unit gain for D.C., the
+output is the same.
+Hence the output ensemble has a peak power S.
+The entropy of the output ensemble can be calculated from that of the
+input ensemble by using the theorem deahng with such a situation.
+The
+output entropy
+is equal
+to the input entropy plus the geometrical mean
+gain of the
+filter;
+flogG'rf/=flog(iL^y./=-2,F
+Hence the output entropy is
+W log 45 - 2 IF = W log
+--
+MATHEMATICAL THEORY OF COMMUNICATION
+and the channel capacity
+is greater than
+,,.
+,
+We now wish to show that, for small — (peak signal power over average
+white noise power), the channel capacity is approximately
+C = WMog(l+|).
+S
+N
+/
+S\
+S
+More precisely C/W log
+(
+1 + -
+1 -^^
+1 as ^^ 0.
+Since the average signal
+power P is less than or equal to the peak S, it follows that for all ^
+C < HMog(l + ^) < lFlog(l + I).
+Therefore, if we can find an ensemble of functions such that they correspond
+to a rate nearly W log (
+1 +
+t-, ) and are limited to band W and peak S the
+result will be proved.
+Consider the ensemble of functions of the following
+type.
+A series of
+/ samples have the same value, either +v5 or — \/S,
+then the next
+/ samples Iiave the same value,
+etc.
+The value for a series
+is chosen at random,
+probability 5
+for -\-\/S and §
+for —-y/S
+If
+this
+ensemble be passed through a filter with triangular gain characteristic (unit
+gain at D.C.), the output is peak limited to zLS.
+Furthermore the average
+power is nearly S and can be made to approach this by taking
+I sufficiently
+large.
+The entropy of the sum of this and the thermal noise can be found
+by applying the theorem on the sum of a noise and a small signal.
+This
+theorem will apply if
+is sufficiently small.
+This can be insured by taking - small enough (after
+t is chosen).
+The entropy power will be 5 + iV to as close an approximation
+as desired, and hence the rate of transmission as near as we wish to
+M'-V)-
+BELL SYSTEM TECHNICAL JOURNAL
+PART V: THE RATE FOR A CONTINUOUS SOURCE
+26. Fidelity Evaluation Functions
+In the case of a discrete source of information we were able to determine a
+definite rate of generating information, namely the entropy of the under-
+lying stochastic process.
+With a continuous source the situation
+is con-
+siderably more involved.
+In the first place a continuously variable quantity
+can assume an infinite number of values and requires, therefore, an infinite
+number of binary digits for exact specification.
+This means that to transmit
+the output of a continuous source with exact recovery at the receiving point
+requires,
+in
+general, a channel
+of
+infinite capacity
+(in
+bits per
+second).
+Since, ordinarily, channels have a certain amount of noise, and therefore a
+finite capacity, exact transmission is impossible.
+This, however, evades the real issue.
+Practically, we are not interested
+in exact transmission when we have a continuous source, but only in trans-
+mission to within a certain tolerance.
+The question
+is, can we assign a
+definite rate to a continuous source when we require only a certain fidelity
+of recovery, measured in a suitable way.
+Of course, as the fidelity require-
+ments are increased the rate will increase.
+It will be shown that we can, in
+very general cases, define such a rate, having the property that it is possible,
+by properly encoding the information, to transmit
+it over a channel whose
+capacity is equal to the rate in question, and satisfy the fidehty requirements.
+A channel of smaUer capacity
+is insufficient.
+It is first necessary to give a general mathematical formulation of the idea
+of fidelity of transmission.
+Consider the set of messages of a long duration,
+say T seconds.
+The source
+is described by giving the probabihty density,
+in the associated space, that the source will select the message in question
+P{x).
+A given communication system is described (from the external point
+of view) by giving the conditional probability Pi{y) that
+if message x
+is
+produced by the source the recovered message at the receiving point will
+be y.
+The system as a whole (including source and transmission system)
+is described by the probability function P{x, y)
+of having message x and
+final output
+y.
+If this function
+is known, the complete characteristics of
+the system from the point of view of fidelity are known.
+Any evaluation
+of
+fidelity must
+correspond
+mathematically
+to an
+operation
+applied
+to
+P{x, y).
+This operation must at least have the properties of a simple order-
+ing of systems; i.e.
+it must be possible to say of two systems represented by
+Pi{x, y) and Piix, y) that, according to our fidelity criterion, either (1) the
+first has higher fidelity,
+(2) the second has higher fidehty, or (3) they have
+AfATHEMATICAL THEORY OF COMMUNICATION
+equal fidelity.
+This means that a criterion of fidelity can be represented by
+a numericall}' valued function:
+v{P{x,
+v))
+whose argument ranges over possible probability functions i*(.v, y).
+We will now show that under very general and reasonable assumptions
+the function v{P{x, y)) can be written in a seemingly much more specialized
+form, namely as an average of a function p{x, y) over the set of possible values
+of
+X- and y:
+v(P(x, y)) = jj P{x,y) p{x, y) dx dy
+To obtain this we need only assume
+(1)
+that the source and system are
+ergodic so that a very long sample wiU be, with probability nearly 1, typical
+of the ensemble, and
+(2)
+that the evaluation
+is ''reasonable"
+in the sense
+that
+it
+is possible, by observing a tj'pical input and output xi and yi
+, to
+form a tentative evaluation on
+the
+basis
+of
+these samples; and
+if these
+samples are increased in duration the tentative evaluation will, with proba-
+bility
+1, approach the exact evaluation based on a full knowledge of P(x, y).
+Let the tentative evaluation be
+p(.v,
+y).
+Then the function
+p(.r,
+y)
+ap-
+proaches (as r —» «) a constant for almost all
+(x, y) which are in the high
+probability region corresponding to the system;
+p(x, y) -^ v(P(x, y))
+and we may
+also
+write
+since
+j I P(x,y)dxdy =
+This establishes the desired result.
+The function p(x, y) has the general nature of a "distance" between x
+and
+y.^
+It measures how bad
+it
+is {according to our fidelity
+criterion) to
+receive y when
+.v
+is transmitted.
+The general
+result given above can be
+restated as follows: Any reasonable evaluation can be represented as an
+average of a distance function over the set of messages and recovered mes-
+sages
+.r and y weightefl according to the probability P(x, y) of getting the
+pair in question, pro\'idcd the duration T of the messages be taken
+suffi-
+ciently large.
+'It
+is not a "metric"
+in the strict sense, however, since in general
+it does not satisfy
+either p(.r, y) = p(y, x) or p{x, y) + p(v, z) >
+p(.v, z).
+BELL SYSTEM TECHNICAL JOURNAL
+The following are simple examples of evaluation functions;
+1. R.M.S.
+Criterion.
+V =
+{x{l) - ym
+In this very commonly used
+criterion of fidelity the distance function
+p(.r,
+y)
+is
+(apart from a constant
+factor)
+the square of the ordinary
+euclidean distance between the points x and y in the associated function
+space.
+p{^,y) = ^ jj
+[xiO - y(i)? dt
+2. Frequency weighted R.M.S.
+criterion.
+More generally one can apply
+different weights to the different frequency components before usmg an
+R.M.S. measure of fidelity.
+This is equivalent to passing the difference
+x{t) —
+y{t) through a shaping filter and then determining the average
+power in the output.
+Thus let
+e(/) =
+xit) - y{t)
+and
+/(/) =
+f
+e{T)k{t - r) di
+J—eo
+then
+p(^.:y) = ^j['/W'rf^
+3. Absolute error criterion,
+p{x,y) = ^Ij \x(0 -yU)\dt
+4. The structure of the ear and brain determine implicitly an evaluation, or
+rather a number of evaluations, appropriate in the case of speech or music
+transmission.
+There
+is,
+for example,
+an
+"intelligibility"
+criterion
+in
+which p(x, y)
+is equal to the relative frequency of incorrectly interpreted
+words when message x{l)
+is received as y{t).
+Although we cannot give
+an explicit representation of p(x, y) in these cases
+it could, in principle,
+be determined by
+sufficient experimentation.
+Some
+of
+its
+properties
+follow from well-known experimental results in hearing,
+e.g., the ear
+is
+relatively insensitive to phase and the sensitivity to ampHtude and fre-
+quency
+is roughly logarithmic.
+5. The discrete case can be considered as a specialization in which we have
+^Tate—i.--^'
+.
+MATHEMATICAL THEORY OF COMMUNICATION
+tacitly assumed an evaluation based on the frequency of errors,
+The
+function p(.v, y) is then defined as the number of symbols in the sequence
+y differing from the corresponding symbols in
+.v divided by the total num-
+ber of symbols in
+a-.
+27. The Rate for a Source I^elative to a Fidelity Evaluation
+We are now in a position to define a rate of generating information for a
+continuous source.
+We are given P(.r) for the source and an evaluation v
+determined by a distance function p(.v, y) which will be assumed continuous
+in both -v and y.
+With a particular system P{x, y) the quality is measured by
+^=11
+p(-*"' y)
+-^f-'*"' y^ ^^ ^y
+Furthermore the rate of flow of binary digits corresponding to P{x, y)
+is
+We define the rate
+i?i of generating information for a given quality
+Vi of
+reproduction to be the minimum of R when we keep v fixed at Vi and vary
+P^iy).
+That
+is:
+* - ^ II
+''^^'' y^
+'"^mm
+"^ "
+subject to the constraint:
+I'l =
+jj
+P{x, y)p(x, y) dx dy.
+This means that we consider, in effect, all the communication systems that
+might be used and that transmit with the required
+fidelity.
+The rate of
+transmission in bits per second is calculated for each one and we choose that
+having the least rate.
+This latter rate
+is the rate we assign the source for
+the fidelity
+in question.
+The justification of this definition lies in the following result:
+Theorem 21:
+If a source has a rate Ri for a valuation
+I'l
+it
+is possible to
+encode the output of the source and transmit it over a channel of capacity C
+with fidelity as near
+I'l as desired provided Ri <
+C.
+This is not possible
+if Ri >
+C.
+The last statement in the theorem follows immediately from the definition
+of Ri and previous results.
+If it were not true we could transmit more than
+C bits per second over a channel of capacity C.
+The first part of the theorem
+is proved by a method analogous to that used for Theorem 11.
+We may, in
+the first place, divide the {x, y) space into a large number of small cells and
+BELL SYSTEM TECHNICAL JOURNAL
+represent the situation as a discrete case.
+This will not change the evalua-
+tion function by more than an arbitrarily small amount (when the cells are
+very small) because of the continuity assumed for
+p(.v, y).
+Suppose that
+Pi{x, y) is the particular system which minimizes the rate and gives Ri
+.
+We
+choose from the high probability y's a set at random containing
+members where e ^^
+as T ^> «.
+With large T each chosen point will be
+connected by a high probability line (as in Fig. 10) to a set of .v's.
+A calcu-
+lation similar to that used in proving Theorem 11 shows that with large T
+almost
+all
+.v's are covered by the fans from the chosen y points for almost
+all choices of the
+v's.
+The communication system
+to be used operates as
+follows: The selected points are assigned binary numbers.
+When a message
+X is originated it will (with probability approaching
+1 as T ^
+oi )
+lie within
+one at least of the fans.
+The corresponding binary number
+is transmitted
+(or one of them chosen arbitrarily
+if there are several) over the channel by
+suitable coding means to give a small probability of error.
+Since Ri < C
+this is possible.
+At the receiving point the corresponding y is reconstructed
+and used as the recovered message.
+The evaluation
+I'l for this system can be made arbitrarily close to
+Vi by
+taking T sufficiently large.
+This is due to the fact that for each long sample
+of message
+x(!) and recovered message
+y{l)
+the evaluation approaches
+vi
+(with probability 1),
+It
+is interesting to note that, in this system, the noise in the recovered
+message
+is actually produced by a kind of general quantizing at the trans-
+mitter and
+is not produced by the noise in the channel.
+It
+is more or less
+analogous to the quantizing noise in P.CM.
+28. The
+C.4.lculation of Rates
+The definition of the rate
+is similar in many respects to the definition of
+channel capacity.
+In the former
+with P{x) and ui =
+//
+P(x, y)p(x, y) dx dy fixed.
+In the latter
+with Px{y) fixed and possibly one or more other constraints {e.g., an average
+power limitation) of the form
+A.' ^ ff P(x, y) X(.r, y) dx dy.
+MATHEMATICAL THEORY OF COMMUNICATION
+A partial solution of the general maximizing problem for determining the
+rate of a source can be given.
+Using Lagrange's method we consider
+ff
+I Fix, v) log p.%!^^,^ +
+i"
+P(-'-> y)p(-'-> y) + K-v)i'(.T,
+v)l dx dy
+The
+variational equation (when we
+take
+the
+first
+variation on P{x, y))
+leads
+to
+Pyix) = Bix) e^'"'''"'
+where X
+is determined
+to give the required fidelity and B(x)
+is chosen to
+satisfy
+"
+_B(a-)r^'''''" dx -
+/
+This shows that, with best encoding, the conditional probability of a cer-
+tain cause for various received y, Py{x) will decline exponentially with the
+distance function p{x, y) between the
+.v and y is question.
+In the special case where the distance function p(.r, y) depends only on the
+(vector) difference between
+.v and y,
+p(x, y) = p(x -
+y)
+we have
+j B{x)e~""''~''^ dx =
+1.
+Hence B(x)
+is constant, say a, and
+Unfortunately these formal solutions are difficult to evaluate in particular
+cases and seem to be of little value.
+In fact, the actual calculation of rates
+has been carried out in only a few very simple cases.
+If the distance function p{x, y)
+is the mean square discrepancy between
+X and y and the message ensemble
+is white noise, the rate can be determined.
+In that case we have
+R = Min \H{x) - Hy{x)] = H(x) - Max Hy{x)
+with N = {x — yf.
+But the Max Hy{x) occurs when y — x is a white noise,
+and is equal to
+ll'i log lire N where ll'i is the bandwidth of the message en-
+semble.
+Therefore
+R = Wi log ItvcQ - Wi log lireN
+= H^ilog|
+where Q is the average message power.
+This proves the following:
+BELL SYSTEM TECHNICAL JOURNAL
+Theorem 22: The rate for a white noise source of power Q and band Wi
+relative to an R.M.S. measure of fidelity
+is
+R= TF,log|
+where
+A'' is the allowed mean square error between original and recovered
+messages.
+More generally with any message source we can obtain inequalities bound-
+ing the rate relative to a mean square error criterion.
+Theorem 23: The rate for any source of band Wi
+is bounded by
+Wilog^ <R< T'Filog|
+where Q is the average power of the source, ^i its entropy power and N the
+allowed mean square error.
+The lower bound follows from the fact that the max Hy{x) for a given
+{x — y) = N occurs in the white noise case.
+The upper bound results if we
+place the points (used in the proof of Theorem 21) not in the best way but
+at random in a sphere of radius \/Q — N-
+Acknowledgments
+The writer
+is indebted to his colleagues at the Laboratories, particularly
+to Dr. H. W. Bode, Dr. J. R. Pierce, Dr. B. McMillan, and Dr. B. M. Oliver
+for many helpful suggestions and criticisms during the course of this work.
+Credit should also be given to Professor N. Wiener, whose elegant solution
+of the problems of filtering and prediction of stationary ensembles has con-
+siderably influenced the writer's thinking in this field.
+APPENDIX 5
+Let ^1 be any measurable subset of the g ensemble, and S-2 the subset of
+the/ ensemble which gives ^i under the operation T.
+Then
+Let H^ be the operator which shifts
+all functions in a set by the time X.
+Then
+H^Si = H^TSi = TH^S2
+since T is invariant and therefore commutes with H
+.
+Hence if m[S\
+is the
+probability measure of the set S
+= mlSi] =
+tn{Si]
+MATHEMATICAL THEORY OF COMMUNICATION
+where the second equality
+is by definition of measure
+in the g space
+the
+third since the/ ensemble is stationar>', and the last by definition of g meas-
+ure again.
+To prove that the ergodic property is preserved under invariant operations,
+let Si be a subset of the g ensemble which is invariant under H
+, and let S2
+be the set of all functions/ which transform into Si,
+Then
+H^Si = H^TS2 =
+TH^S^. = Si
+so that H^Si is included in Si for all X.
+Now, since
+m[II%] =
+m\Si]
+this implies
+H^S2 = S2
+for all X with miSz] ?^ 0,
+1.
+This contradiction shows that Si does not exist.
+APPENDIX 6
+The upper bound, N3 < Ni
+-\- N2
+, is due to the fact that the maximum
+possible entropy for a power A'^i + A^ occurs when we have a white noise of
+this power.
+In this case the entropy power is
+A^^i + N2.
+To obtain the lower bound, suppose we have two distributions in n dimen-
+sions p{xi) and
+q{xi) with entropy powers Ni and N2.
+What form should
+p and q have to minimize the entropy power N3 of their convolution r(.r,):
+r(xi) = j Piydqi^i - yd dji.
+The entropy ^3 of r is given by
+Hz ^ —
+\
+r(.Vi) log r{xi) dx-i.
+We wish to minimize this subject to the constraints
+-ffi = - / p{xd log ^(.T,) dXi
+^2 = -
+/
+q{xi) log q{x,) dxi
+We consider then
+[/ = -| \r{x) log r(.v) + X/(.v) log ^(.v) \- (iq{x) log ^(.v)] dx
+5f/ = -|
+[[1 + log r(.v)l5f(.v) + X[l + log p(x)]6p{x)
++ ^[i + log q(.x)5qix)\] dx.
+BELL SYSTEM TECHNICAL JOURNAL
+If
+/»(.!•)
+is varied at a particular argument
+.v, =
+S;
+, the variation in
+r(.r)
+is
+5/-(.r) -
+9(.r,- -
+5,)
+and
+SV = -j q{x,- -
+Si) log f(.r,)
+(f.v, - A log /»(5,) =
+and similarly when q is varied.
+Hence the conditions for a minimum are
+j
+q{xi —
+Si) log r{.r,) = -X log p{si)
+j
+p(xi -
+Si) log r(.v,) ^ -M log q(si).
+If we multiply the first by p{si) and the second by q{si) and integrate with
+respect to s we obtain
+Hs = — X ffi
+or solving for X and ^ and replacing in the equations
+III j
+q(xi —
+Si) log r(xi) dxi = -Ih log p{si)
+Il-i j p(xi -
+Si) log r{xi) dxi = -H, log p(si).
+Now suppose p{xi) and q{xi) are normal
+u-
+r'^
+(27r)"'2
+{lir)"'^
+Then
+r(.r,)
+will also be normal with quadratic form C,j.
+If the inverses of
+these forms are a,j, 6,;, c,7 then
+c.j =
+aij +
+6,y
+We wish to show that these functions satisfy the minimizing conditions
+if
+and only if a,j = Kbij and thus give the minimum Hs under the constraints.
+First we have
+log r(xi) = - log —
+1 Cij
+I - ^'SCijXiXj
+L
+ZTT
+f
+JZ
+j
+q{xi -
+Si) log r(a-,) = ^ log —
+I C;
+I - i2Ci, 5,^j - ^SC.yft.-/
+MATHEMATICAL THEORY OF COMMUNICATION
+This should equal
+r7_ r,.
+-4 ,7
+I - ^XAijSiSi
+Tl
+which requires A i, = - - C,/
+as
+TT
+In this case /I,-y = ^r ^<i ^^id both equations reduce to identities.
+APPENDIX
+The following will indicate a more general and more rigorous approach to
+the central
+definitions of communication
+theory.
+Consider a probability
+measure space whose elements are ordered pairs
+{x, y).
+The variables x, y
+are to be identified as the possible transmitted and received signals of some
+long duration T.
+Let us call the set of all points whose x belongs to a subset
+5i of X points the strip over .^i
+, and similarly the set whose y belongs to ^2
+the strip over 52
+.
+We divide x and y into a collection of non-overlapping
+measurable subsets Xi and Y; approximate to the rate of transmission R by
+where
+P(Xi)
+is the probability measure of the strip over Xi
+P(Yi)
+is the probability measure of the strip over
+I",-
+P{Xi, I.)
+is the probability measure of the intersection of the strips.
+A further subdivision can never decrease Ri
+.
+For let Xi be divided into
+Xi = Xl + X[' and let
+PiW) = a
+P(Xi) =
+b +
+c
+P{X[) ^-b
+P{X[,
+]\) - d
+P{X") =
+c
+P{X'l,
+I",) -
+e
+PiX,,\\) = d+e
+-
+-
+Then in the sum we have replaced (for the
+A'l,
+I'l intersection)
+((/ +
+e) log ——— -
+by
+rf log — + e log —
+.
+a{o +
+c)
+ao
+ac
+It is easily shown that with the limitation we have on b,
+c, d,
+e,
+d + e
+BELL SYSTEM TECHNICAL JOURNAL
+and consequently the sum is increased.
+Thus the various possible subdivi-
+sions form a directed set, with R monotonic increasing with refinement of
+the subdivision.
+We may define R unambiguously as the least upper bound
+for the Ri and write it
+i? = i//p(.,.)log^].g)^.<i,.
+This integral, understood in the above sense, includes both the continuous
+and discrete cases and of course many others which cannot be represented
+in either form.
+It is trivial in this formulation that if x and u are in one-to-
+one correspondence, the rate from
+it to y is equal to that from x to y.
+If v
+is any function of y (not necessarily with an inverse) then the rate from x to
+y is greater than or equal to that from
+a; to v since, in the calculation of the
+approximations, the subdivisions of y are essentially a finer subdivision of
+those for
+v.
+More generally
+if y and
+v are related not functionally but
+statistically, i.e., we have a probability measure space (y, v), then R(x, v) <
+R{x, y).
+This means that any operation applied to the received signal, even
+though
+it involves statistical elements, does not Increase R.
+Another notion which should be defined precisely in an abstract formu-
+lation of the theory is that of "dimension rate," that is the average number
+of dimensions required per second to specify a member of an ensemble.
+In
+the band limited case 2W numbers per second are sufficient.
+A general
+definition can be framed as follows.
+Let/a(/) be an ensemble of functions
+and
+let pi [fail), fnil)] be a metric measuring the "distance" from/a to /^
+over the time T (for example the R.M.S. discrepancy over this interval.)
+Let N(€, 5, T) be the least number of elements/ which can be chosen such
+that all elements of the ensemble apart from a set of measure
+5 are within
+the distance e of at least one of those chosen.
+Thus we are covering the
+space to within e apart from a set of small measure
+5.
+We define the
+di-
+mension rate \ for the ensemble by the triple limit
+\ogN{e,6,T)
+\ = Lim Lim Lim
+rioge
+This
+is a generalization
+of the measure type definitions oJ dimension in
+topology, and agrees with the intuitive dimension rate for simple ensembles
+where the desired result is obvious.

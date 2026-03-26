@@ -1,0 +1,3928 @@
+A Mathematical Theory of Communication
+By C. E. SHANNON
+Introduction
+THE recent development of various methods of modulation such as PCM
+and PPM which exchange bandwidth for signal-to-noise ratio has in-
+tensified the interest in a general theory
+of communication.
+A basis
+for
+such a theory is contained in the important papers of Nyquist
+1 and Hartley2
+on this subject.
+In the present paper we will extend the theory to include a
+number of new factors, in particular the effect of noise in the channel, and
+the savings possible due to the statistical structure of the original message
+and due to the nature of the final destination of the information.
+The fundamental problem
+of communication
+is that of reproducing at
+one point either exactly
+or approximately a message selected
+at another
+point.
+Frequently the messages have meaning; that
+is they refer to or are
+correlated according
+to some system with certain physical
+or conceptual
+entities.
+These semantic aspects
+of communication are irrelevant
+to the
+engineering problem.
+The significant aspect
+is that the actual message
+is
+one selected from a set of possible messages.
+The system must be designed
+to operate for each possible selection, not just the one which will actually
+be chosen since this is unknown at the time of design.
+If the number of messages
+in the set
+is
+finite then
+this number or any
+monotonic function of this number can be regarded as a measure of the in-
+formation produced when one message
+is chosen from the set,
+all choices
+being equally
+likely.
+As was pointed out by Hartley the most natural
+choice
+is the logarithmic function.
+Although this definition must be gen-
+eralized considerably when we consider the influence of the statistics of the
+message and when we have a continuous range of messages, we will in
+all
+cases use an essentially logarithmic measure.
+The logarithmic measure is more convenient for various reasons:
+1.
+It
+is practically more useful.
+Parameters of engineering importance
+1 Nyquist, H., "Certain Factors Affecting Telegraph Speed," Bell System Technical Jour-
+nal, April 1924,
+p. 324; "Certain Topics in Telegraph Transmission Theory," .4. I.E. E.
+Tians.,
+v. 47, April 1928, p. 617.
+2 Hartley, R. V. L., "Transmission of Information," Bell Svsteni Technical Journal, Julv
+1928, p. 535.
+BELL SYSTEM TECHNICAL JOURNAL
+such as time, bandwidth, number of relays, etc., tend to vary linearly with
+the logarithm of the number of possibilities.
+For example, adding one relay
+to a group doubles the number of possible states of the relays.
+It adds
+to the base 2 logarithm of this number.
+Doubling the time roughly squares
+the number of possible messages, or doubles the logarithm, etc.
+2.
+It
+is nearer to our intuitive feeling as to the proper measure.
+This
+is
+closely
+related to (1) since we intuitively measure
+entities by linear com-
+parison with common standards.
+One feels, for example, that two punched
+cards should have twice the capacity of one for information storage, and two
+identical channels twice the capacity of one for transmitting information.
+3.
+It is mathematically more suitable.
+Many of the limiting operations
+are simple in terms of the logarithm but would require clumsy restatement in
+terms
+of
+the number
+of
+possibilities.
+The choice of a logarithmic base corresponds to the choice of a unit for
+measuring information.
+If the base 2
+is used the resulting units may be
+called binary digits, or more briefly bits, a word suggested by J. W. Tukey.
+A device with two stable positions, such as a relay or a flip-flop circuit, can
+store one bit of information.
+N such devices can store N bits, since the
+total number of possible states
+is 2N and log22* = N.
+If the base 10
+is
+used the units may be called decimal
+digits.
+Since
+log2 M =
+logio M/logi 2
+= 3.32 log™M,
+a decimal digit is about 3£ bits.
+A digit wheel on a desk computing machine
+has ten stable positions and therefore has a storage capacity of one decimal
+digit.
+In analytical work where integration and differentiation are involved
+the base e
+is sometimes useful.
+The resulting units of information will be
+called natural units.
+Change from the base a to base b merely
+requires
+multiplication by
+logb
+a.
+By a communication system we will mean a system of the type indicated
+schematically in Fig.
+1.
+It consists of essentially five parts:
+1. An information source which produces a message or sequence of mes-
+sages to be communicated to the receiving terminal.
+The message may be
+of various types : e.g.
+(a) A sequence of letters as in a telegraph or teletype
+system;
+(b) A single function of time /(/) as
+in radio or telephony;
+(c) A
+function of time and other variables as in black and white television—here
+the message may be thought of as a function /(.v,
+y,
+t) of two space coordi-
+nates and time, the light intensity at point (x, y) and time
+/ on a pickup tube
+plate;
+(d) Two or more functions
+of
+time, say /(/),
+g{t), £(/)—this
+is the
+case in "three dimensional" sound transmission or
+if the system is intended
+to service several individual channels in multiplex;
+(e) Several functions of
+MATHEMATICAL THEORY OE COMMUNICATION
+several variables—in color television the message consists of three functions
+/(•v>
+3*> Oj S(xt
+Ji 0> h(x,
+y,
+I)
+defined
+in a three-dimensional continuum
+we may also think of these three functions as components of a vector field
+defined in the region—similarly, several black and white television sources
+would produce "messages"
+consisting
+of a number of functions
+of
+three
+variables;
+(f)
+Various combinations
+also
+occur,
+for example
+in
+television
+with
+an
+associated audio channel.
+2. A transmitter which operates on the message in some way to produce a
+signal suitable for transmission over the channel.
+In telephony this opera-
+tion consists merely of changing sound pressure into a proportional electrical
+current.
+In telegraphy we have an encoding operation which produces a
+sequence
+of dots, dashes and spaces on the channel corresponding
+to the
+message.
+In a multiplex PCM system the different speech functions must
+be sampled, compressed,
+quantized and
+encoded, and
+finally
+interleaved
+INFORMATION
+SOURCE
+TRANSMITTER
+RECEIVER
+DESTINATION
+SIGNAL O
+MESSAGE
+RECEIVED
+SIGNAL
+NOISE
+SOURCE
+Fig.
+1—Schematic diagram of a general communication system.
+properly
+to
+construct
+the
+signal.
+Vocoder systems,
+television, and
+fre-
+quency modulation are other examples of complex operations applied to the
+message
+to obtain
+the
+signal.
+3. The channel
+is merely the medium used
+to transmit the
+signal from
+transmitter to receiver.
+It may be a pair of wires, a coaxial cable, a band of
+radio frequencies, a beam of light, etc.
+4. The receiver ordinarily performs the inverse operation of that done by
+the transmitter, reconstructing the message from the signal.
+5. The destination
+is the person
+(or thing)
+for whom the message
+is
+in-
+tended.
+We wish
+to consider certain general problems involving communication
+systems.
+To do this
+it
+is
+first necessary to represent the various elements
+involved
+as mathematical
+entities, suitably
+idealized from
+their physical
+counterparts.
+We may roughly classify communication systems into three
+main categories: discrete, continuous and mixed.
+By a discrete system we
+will mean one in which both the message and the signal are a sequence of
+BELL SYSTEM TECHNICAL JOURNAL
+discrete symbols.
+A
+typical
+case
+is
+telegraphy where
+the message
+is a
+sequence
+of
+letters and the signal a sequence
+of dots, dashes and spaces.
+A continuous system is one in which the message and signal are both treated
+as continuous functions, e.g. radio or television.
+A mixed system
+is one in
+which both discrete and continuous variables appear,
+e.g., PCM transmis-
+sion
+of
+speech.
+We
+first consider the discrete case.
+This case has applications not only
+in communication
+theory, but also in the theory of computing machines,
+the design of telephone exchanges and other fields.
+In addition the discrete
+case forms a foundation for the continuous and mixed cases which will be
+treated in the second half of the paper.
+PART
+I: DISCRETE NOISELESS SYSTEMS
+1. The Discrete Noiseless Channel
+Teletype and telegraphy are two simple examples of a discrete channel
+for transmitting information.
+Generally, a discrete channel
+will mean a
+system whereby a sequence of choices from a finite set of elementary sym-
+bols Si
+S n can be transmitted from one point to another.
+Each Of the
+symbols S {
+is assumed
+to have a certain duration in time
+/,- seconds (not
+necessarily the same for different St
+, for example the dots and dashes in
+telegraphy).
+It is not required that all possible sequences of the Si be cap-
+able of transmission on the system; certain sequences only may be allowed.
+These will be possible signals for the channel.
+Thus in telegraphy suppose
+the symbols are:
+(1) A dot, consisting of line closure for a unit of time and
+then line open for a unit of time;
+(2) A dash, consisting of three time units
+of closure and one unit open; (3) A letter space consisting of, say, three units
+of line open;
+(4) A word space of six units of line open.
+We might place
+the restriction on allowable sequences that no spaces follow each other (for
+if two letter spaces are adjacent,
+it
+is identical with a word space).
+The
+question we now consider
+is how one can measure the
+capacity of such a
+channel to transmit information.
+In the teletype case where all symbols are of the same duration, and any
+sequence of the 32 symbols
+is allowed the answer
+is easy.
+Each symbol
+represents
+five
+bits
+of
+information.
+If
+the system
+transmits n symbols
+per second it is natural to say that the channel has a capacity of 5n bits per
+second.
+This does not mean that the teletype channel will always be trans-
+mitting information
+at
+this rate—this
+is the maximum possible rate and
+whether or not the actual rate reaches this maximum depends on the source
+of information which feeds the channel, as will appear later.
+MATHEMATICAL THEORY OF COMMUNICATION
+In the more general case with different lengths of symbols and constraints
+on the allowed sequences, we make the following definition:
+Definition: The capacity C of a discrete channel is given by
+C = Lim !SS*02
+T-+ao
+i-
+where N(T)
+is the number of allowed signals of duration T.
+It
+is easily seen that
+in the teletype case
+this reduces to the previous
+result.
+It can be shown that the limit in question will exist as a finite num-
+ber in most cases of interest.
+Suppose all sequences of the symbols Si
+,
+•
+•
+•
+,
+Sn are allowed and these symbols have durations
+i\
+,
+,
+l„
+What is the
+channel capacity?
+If N(l) represents the number of sequences of duration
+/ we have
+N(l) = N(l -
+/,) + N(t - h) +
+•
+•
+• + N(t -
+In)
+The total number is equal to the sum of the numbers of sequences ending in
+Si
+, Si
+,
+•
+•
+•
+, Sn and these are Nil -
+h), N(t - to),---
+, N(t -
+/„), respec-
+tively.
+According to a well known result in finite differences, N(l)
+is then
+asymptotic for large
+/ to
+A'n where X
+is the largest real solution
+of
+the
+characteristic
+equation:
+X~h + X~'
+2 +
+••• + X'
+tn =
+and
+therefore
+C = log X
+In case there are restrictions on allowed sequences we may still often ob-
+tain a difference equation of
+this type and find C from the characteristic
+equation.
+In the telegraphy case mentioned above
+N(t) = N(l -
+2) + Ml -
+4) + N(t -
+5) + N(t -
+7) + N(t -
+8)
++ N(t -
+10)
+as we see by counting sequences of symbols according to the last or next to
+the last symbol occurring.
+Hence C
+is —
+log
+/i
+where
+/j
+is the positive
+root of 1 = m
+2 + M
+4 + M
+5 + M
+7 + M
+s + M
+-
+Solving this we find C = 0.539.
+A very general type of restriction which may be placed on allowed se-
+quences is the following
+: We imagine a number of possible states a x
+, a 2
+,
+•
+•
+,
+am
+.
+For each state only certain symbols from the set Si
+,
+•
+•
+•
+, Sn can be
+transmitted (different subsets for the different states).
+When one of these
+has been transmitted the state changes to a new state depending both on
+the old state and the particular symbol transmitted.
+The telegraph case is
+a simple example of this.
+There are two states depending on whether or not
+BELL SYSTEM TECHNICAL JOURNAL
+a space was the last symbol transmitted.
+If so then only a dot or a dash
+can be sent next and the state always changes.
+If not, any symbol can be
+transmitted and the state changes
+if a space
+is sent, otherwise
+it remains
+the same.
+The conditions can be indicated in a linear graph as shown in
+Fig.
+2.
+The junction points correspond to the states and the lines indicate
+the symbols possible in a state and the resulting state.
+In Appendix I it is
+shown that
+if the conditions on allowed sequences can be described in this
+form C
+will
+exist and can be calculated in accordance with the following
+result:
+Theorem 1
+: Let 6$ be the duration of the s th symbol which
+is allowable in
+state
+i and leads to state j.
+Then the channel capacity C
+is equal to log
+W where W is the largest real root of the determinant equation:
+\ZW-W- 8*1 =
+0.
+where 8 y =
+if i = j and
+is zero otherwise.
+DASH
+DOT
+DA5H
+WORD SPACE
+Fig.
+2—Graphical representation of the constraints on telegraph symbols.
+=
+For example, in the telegraph case (Fig. 2) the determinant is:
+-1
+(B-
+2 + W
+)
+(TJ/-3 +
+if/-")
+(ji/-2 + w~* _
+i)
+On expansion this leads to the equation given above for this case.
+2. The Discrete Source or Information
+We have seen that under very general conditions the logarithm of the
+number of possible signals in a discrete channel increases linearly with time.
+The capacity to transmit information can be specified by giving this rate of
+increase, the number of bits per second required to specify the particular
+signal
+used.
+We now consider the information source.
+How
+is an information source
+to be described mathematically, and how much information in bits per sec-
+ond is produced in a given source?
+The main point at issue is the effect of
+statistical knowledge about
+the source
+in reducing the required capacity
+MATHEMATICAL THEORY OF COMMUNICATION
+of the channel, by the use of proper encoding of the information.
+In teleg-
+raphy,
+for example,
+the messages
+to be transmitted
+consist
+of sequences
+of
+letters.
+These
+sequences,
+however,
+are
+not
+completely
+random.
+In
+general, they form sentences and have the statistical structure of, say, Eng-
+lish.
+The letter E occurs more frequently than Q, the sequence TH more
+frequently than XP,
+etc.
+The
+existence
+of
+this structure allows one
+to
+make a saving in time (or channel capacity) by properly encoding the mes-
+sage sequences into signal sequences.
+This is already done to a limited ex-
+tent in telegraphy by using the shortest channel symbol, a dot, for the most
+common English letter E; while the infrequent
+letters, Q, X, Z are repre-
+sented by longer sequences of dots and dashes.
+This idea
+is carried
+still
+further in certain commercial codes where common words and phrases are
+represented by four- or live-letter code groups with a considerable saving in
+average time.
+The standardized greeting and anniversary telegrams now
+in use extend this to the point of encoding a sentence or two into a relatively
+short sequence
+of numbers.
+We can think, of a discrete source as generating the message, symbol by
+symbol.
+It will choose successive symbols according to certain probabilities
+depending, in general, on preceding choices as well as the particular symbols
+in question.
+A physical system, or a mathematical model of a system which
+produces such a sequence of symbols governed by a set of probabilities
+is
+known as a stochastic process. 3
+We may consider a discrete source, there-
+fore, to be represented by a stochastic process.
+Conversely, any stochastic
+process which produces a discrete sequence of symbols chosen from a finite
+set may be considered a discrete source.
+This will include such cases as:
+1. Natural written languages such as English, German, Chinese.
+2. Continuous information sources that have been rendered discrete by some
+quantizing
+process.
+For example, the quantized speech from a PCM
+transmitter,
+or a quantized
+television
+signal.
+3. Mathematical
+cases
+where we
+merely
+define
+abstractly
+a
+stochastic
+process which generates a sequence of symbols.
+The
+following are ex-
+amples of this
+last type
+of source.
+(A) Suppose we have live
+letters A, B, C, D, E which are chosen each
+with
+probability
+.2,
+successive
+choices
+being
+independent.
+This
+would lead to a sequence of which the following is a typical example.
+BDCBCECCCADCBD I) A A E C E E A
+ABBDAEECACEEBAEECBCEAD
+This was constructed with the use of a table of random numbers. 4
+3 See, for example, S. Chandrasekhar, "Stochastic Problems in Physics and Astronomy,"
+Reviews of Modern Physics,
+v.
+15, Xo.
+1, January
+1943. p.
+1.
+1 Kendall and Smith. "Tables of Random Sampling Numbers," Cambridge, 1939.
+BELL SYSTEM TECHNICAL JOURNAL
+(B) Using the same five letters
+let the probabilities be
+.4,
+.1,
+.2,
+.2,
+.1
+respectively,
+with
+successive
+choices
+independent.
+A
+typical
+message from
+this source
+is then:
+AAACDCBDCEAADADACEDA
+EADCABEDADDCECAAAAAD
+(C) A more complicated structure
+is obtained
+if successive symbols are
+not chosen independently but
+their probabilities depend on preced-
+ing letters.
+In the simplest case of this type a choice depends only
+on the preceding letter and not on ones before that.
+The statistical
+structure can then be described by a set of transition probabilities
+Pi(j), the probability that letter i is followed by letter,/.
+The
+in-
+dices
+i and j range over all the possible symbols.
+A second equiv-
+alent way of specifying the structure
+is to give the "digram" prob-
+abilities p(i, j),
+i.e., the relative frequency of the digram
+% j.
+The
+letter frequencies
+p(i),
+(the probability
+of
+letter
+i), the transition
+probabilities p { (j) and the digram probabilities p(i,j) are related by
+the
+following
+formulas.
+Pd) = Z pd, j) = Z pU, i) = Z pU)pM
+i
+i
+i
+p(i,j) = p(i)pi(j)
+T,pi(j) = HpV) = T,paj) =
+i-
+As a specific example suppose there are three letters A, B, C with the prob-
+ability tables:
+Piij)
+A
+j
+H
+c
+A
+i
+B
+i
+C
+2f
+(i
+-2'Y
+"2T
+pa, j)
+j
+A
+B
+C
+A
+TrT
+i
+T5
+i
+B
+2 7
+C
+2 7
+TS'S
+T5~5
+A typical message from this source
+is the following:
+ABBABABABABABABBBABBBBBAB
+ABABABABBBACACABBABBBBABB
+ABACBBBABA
+The next increase in complexity would involve trigram frequencies
+but no more.
+The choice of a letter would depend on the preceding
+two letters but not on the message before that point.
+A set of tri-
+gram frequencies
+p(i, j, k) or equivalently a set of transition prob-
+MATHEMATICAL THEORY OF COMMUNICATION
+abilities pa{k) would be required.
+Continuing in this way one ob-
+tains
+successively more complicated
+stochastic
+processes.
+In
+the
+general //-gram case a set of //-gram probabilities p(ii
+,
+i2
+,
+•
+•
+, in)
+or
+of
+transition
+probabilities
+/>,,
+,
+»2
+....
+,
+1-,,-,0'J
+is
+required
+to
+specify
+the
+statistical
+structure.
+(D) Stochastic processes can also be defined which produce a text con-
+sisting
+of
+a sequence
+of "words."
+Suppose
+there
+are
+five
+letters
+A, B,
+C, D, E and 16 "words"
+in the language with
+associated
+probabilities:
+.10 A
+.16BEBE
+.11 CABED
+.04 DEB
+.04 ADEB
+.04 BED
+.05 CEED
+.15 DEED
+.05 ADEE
+.02 BEED
+.08 DAB
+.01 EAB
+.01 BADD
+.05 CA
+.04 DAD
+.05 EE
+Suppose
+successive
+"words"
+are
+chosen 'independently
+and
+are
+separated by a space.
+A typical message might be:
+DAB EE A BEBE DEED DEB ADEE ADEE EE DEB BEBE
+BEBE BEBE ADEE BED DEED DEED CEED ADEE A DEED
+DEED BEBE CABED BEBE BED DAB DEED ADEB
+If all the words are of finite length this process
+is equivalent to one
+of the preceding type, but the description may be simpler in terms
+of the word structure and probabilities.
+We may
+also generalize
+here and introduce transition probabilities between words, etc.
+These artificial languages are useful
+in constructing simple problems and
+examples to illustrate various possibilities.
+We can also approximate to a
+natural language by means of a series of simple artificial languages.
+The
+zero-order approximation
+is obtained by choosing
+all letters with the same
+probability and independently.
+The first-order approximation
+is obtained
+by
+choosing
+successive
+letters
+independently but each
+letter having
+the
+same probability that
+it does in the natural language. 6
+Thus, in the
+first-
+order approximation to English, E
+is chosen with probability
+.12
+(its
+fre-
+quency
+in normal English) and W with probability .02, but there
+is no in-
+fluence between
+adjacent
+letters and no tendency
+to form
+the
+preferred
+digrams such as TH, ED, etc.
+In the second-order approximation, digram
+structure
+is introduced.
+After a letter
+is chosen, the next one
+is chosen
+in
+accordance with
+the frequencies with which the various letters follow the
+first one.
+This requires a table of digram frequencies Pi(j).
+In the third-
+order approximation, trigram structure is introduced.
+Each letter is chosen
+with probabilities which depend on the preceding two
+letters.
+6 Letter, digram and trigram frequencies are given in "Secret and Urgent" by Fletcher
+Pratt, Blue Ribbon Books 1939.
+Word frequencies are tabulated in "Relative Frequency
+of English Speech Sounds," G. Dewey, Harvard University Press,
+1923.
+BELL SYSTEM TECHNICAL JOURNAL
+3. The Series of Approximations to English
+To give a visual idea of how this series of processes approaches a language,
+typical sequences in the approximations to English have been constructed
+and are given below.
+In all cases we have assumed a 27-symbol "alphabet,"
+the 26 letters and a space.
+1. Zero-order approximation
+(symbols independent and equi-probable).
+XFOML RXKHRJFFJUJ ZLPWCFWKCYJ
+FFJEYVKCQSGXYD QPAAMKBZAACIBZLHJQD
+2.
+First-order approximation (symbols independent but with frequencies
+of English text).
+OCRO HLI RGWR NMIELWIS EU LL NBNESEBYA TH EEI
+ALHENHTTPA OOBTTVA NAH BRL
+3. Second-order approximation
+(digram
+structure as
+in
+English).
+ON IE ANTSOUTINYS ARE T INCTORE ST BE S DEAMY
+ACHIN D ILONASIVE TUCOOWE AT TEASONARE FUSO
+TIZIN ANDY TOBE SEACE CTISBE
+4. Third-order
+approximation
+(trigram
+structure
+as
+in
+English).
+IN NO 1ST LAT WHEY CRATICT FROURE BIRS GROCID
+PONDENOME OF DEMONSTURES OF THE REPTAGIN IS
+REGOACTIONA OF CRE
+5. First-Order Word Approximation.
+Rather than continue with tetra-
+gram,
+•
+•
+, //-gram structure
+it
+is easier and better to jump at
+this
+point to word units.
+Here words are chosen independently but with
+their appropriate frequencies.
+REPRESENTING AND SPEEDILY IS AN GOOD APT OR
+COME CAN DIFFERENT NATURAL HERE HE THE A IN
+CAME THE TO OF TO EXPERT GRAY COME TO FUR-
+NISHES THE LINE MESSAGE HAD BE THESE.
+6. Second-Order Word Approximation.
+The word
+transition
+probabil-
+ities are correct but no further structure
+is included.
+THE HEAD AND IN FRONTAL ATTACK ON AN ENGLISH
+WRITER THAT THE CHARACTER OF THIS POINT
+IS
+THEREFORE ANOTHER METHOD FOR THE LETTERS
+THAT THE TIME OF WHO EVER TOLD THE PROBLEM
+FOR AN UNEXPECTED
+The resemblance to ordinary English text increases quite noticeably at
+each of the above steps.
+Note that these samples have reasonably good
+structure out to about twice the range that
+is taken into account in their
+construction.
+Thus
+in
+(3)
+the
+statistical process
+insures reasonable
+text
+for
+two-letter
+sequence,
+but
+four-letter sequences from
+the sample can
+usually be
+fitted into good sentences.
+In
+(6) sequences of four or more
+MATHEMATICAL THEORY OF COMMUNICATION
+words can easily be placed
+in sentences without unusual or strained con-
+structions.
+The particular sequence of ten words "attack on an English
+writer that the character of this"
+is not at
+all
+unreasonable.
+It appears
+then that a sufficiently complex stochastic process will give a satisfactory
+representation of a discrete source.
+The
+first two samples were constructed by the use of a book of random
+numbers
+in conjunction with
+(for example
+2) a table of letter frequencies.
+This method might have been continued for
+(3),
+(4), and
+(5), since digram,
+trigram, and word frequency tables are available, but a simpler equivalent
+method was used.
+To construct
+(3) for example, one opens a book at ran-
+dom and selects a letter at random on the page.
+This
+letter is recorded.
+The book
+is then opened to another page and one reads until this letter
+is
+encountered.
+The succeeding letter
+is then recorded.
+Turning to another
+page
+this second letter
+is searched for and the succeeding letter recorded,
+etc.
+A similar process was used for (4), (5), and
+(6).
+It would be interest-
+ing
+if further approximations could be constructed, but the labor involved
+becomes enormous at
+the
+next
+stage.
+4. Graphical Representation of a Markoff Process
+Stochastic
+processes
+of
+the
+type
+described
+above
+are known mathe-
+matically as discrete Markoff processes and have been extensively studied in
+the literature. 6
+The general case can be described as follows: There exist a
+finite number of possible "states" of a system; Si
+, S«
+,
+, S n
+.
+In addi-
+tion there is a set of transition probabilities; /»,•(/) the probability that
+if the
+system
+is
+in state Si
+it
+will next go
+to state Sj
+.
+To make
+this Markoff
+process into an information source we need only assume that a letter is pro-
+duced for each transition from one state to another.
+The states will corre-
+spond to the "residue of influence" from preceding
+letters.
+The situation can be represented graphically as shown in Figs. 3, 4 and 5.
+The "stales" are the junction points in the graph and the probabilities and
+letters produced
+for a
+transition
+arc given beside the corresponding
+line.
+Figure 3
+is for the example B
+in Section
+2, while Fig. 4 corresponds to the
+example
+('.
+In
+Fig. 3
+there
+is only one state since successive
+letters are
+independent.
+In Fig. 4 there are as many states as letters.
+If a trigram
+example were constructed there would be at most
+n- states corresponding
+to the possible pairs of
+letters preceding the one being chosen.
+Figure
+is a graph for the case of word structure in example D.
+Here S corresponds
+to
+the
+"space"
+symbol.
+8 For a detailed treatment see M. Frechet, "Methods des fonctions arbitrages.
+Theorie
+des £n6nements en chaine dans le cas d'un nombre fmi d'etats possibles."
+Paris, Gauthier-
+Vi liars. 1<MK.
+BELL SYSTEM TECHNICAL JOURNAL
+5. Ergodic and Mixed Sources
+As we have indicated above a discrete source for our purposes can be con-
+sidered to be represented by a Markoff process.
+Among the possible discrete
+Markoff processes there
+is a group with special properties of significance in
+D
+.2
+Fig. 3—A graph corresponding to the source in example B.
+Fig. 4—A graph corresponding to the source in example C.
+D__
+•
+»
+S-
+Fig. 5—A graph corresponding to the source in example D.
+communication
+theory.
+This special class consists of the "ergodic" proc-
+esses and we shall call the corresponding sources ergodic sources.
+Although
+a rigorous definition of an ergodic process is somewhat involved, the general
+idea is simple.
+In an ergodic process every sequence produced by the proc-
+MATHEMATICAL THEORY OF COMMUNICATION
+ess
+is
+the same
+in
+statistical
+properties.
+Thus
+the
+letter
+frequencies,
+digram
+frequencies,
+etc., obtained from particular sequences
+will,
+as
+the
+lengths of the sequences
+increase, approach definite limits independent of
+the particular sequence.
+Actually this is not true of every sequence but the
+set for which
+it
+is false has probability zero.
+Roughly the ergodic property
+means
+statistical homogeneity.
+All
+the examples of
+artificial languages given above are ergodic.
+This
+property is related to the structure of the corresponding graph.
+If the graph
+has the following two properties
+7 the corresponding process will be ergodic:
+1. The graph does not consist of two isolated parts A and B such that it is
+impossible to go from junction points in part A to junction points in
+part B along lines of the graph in the direction of arrows and also im-
+possible to go from junctions in part B to junctions in part A.
+2. A closed series of lines in the graph with all arrows on the lines pointing
+in the same orientation will be called a "circuit."
+The "length" of a
+circuit
+is the number of lines in
+it.
+Thus in Fig. 5 the series BEBES
+is a
+circuit
+of length
+5.
+The second property required
+is that the
+greatest common divisor of the lengths of all circuits in the graph be
+one.
+If the first condition
+is satisfied but the second one violated by having the
+greatest common divisor equal to d >
+1, the sequences have a certain type
+of periodic structure.
+The various sequences
+fall into d different
+classes
+which are statistically the same apart from a shift of the origin
+(i.e., which
+letter in the sequence
+is called letter 1).
+By a shift of from
+up to d —
+any sequence can be made statistically equivalent to any other.
+A simple
+example with d =
+is the following: There are three possible letters a,
+b,
+c.
+Letter a
+is followed with either
+ft ore with probabilities \ and f respec-
+tively.
+Either b or c is always followed by letter a.
+Thus a typical sequence
+is
+abacacacabacababacac
+This type of situation
+is not of much importance
+for
+our
+work.
+If the first condition
+is violated the graph may be separated into a set of
+subgraphs each of which satisfies the first condition.
+We will assume that
+the second condition
+is also satisfied for each subgraph.
+We have in this
+case what may be called a "mixed" source made up of a number of pure
+components.
+The
+components
+correspond
+to
+the
+various
+subgraphs.
+If Li
+, Ls
+, L.
+,
+•
+•
+• are the component sources we may write
+L =
+piLi +
+p-J.-i + piU +
+where
+/>,
+is the probability of the component source L,
+.
+7 These arc restatements in terms of the graph of conditions given in Frechet.
+BELL SYSTEM TECHNICAL JOURNAL
+Physically the situation represented
+is
+this: There are several
+different
+sources L\
+, L2 , L3
+,
+•
+which are each of homogeneous statistical structure
+(i.e., they are ergodic).
+We do not know a priori which
+is to be used, but
+once the sequence starts in a given pure component Li
+it continues indefi-
+nitely according to the statistical structure of that component.
+As an example one may
+take two
+of the processes
+defined above and
+assume pi =
+.2 and pt =
+.8.
+A sequence from the mixed source
+L =
+.2 Li +
+.8 L 2
+would be obtained by choosing
+first L\ or Li with probabilities
+.2 and
+.8
+and after this choice generating a sequence from whichever was chosen.
+Except when the contrary is stated we shall assume a source to be ergodic.
+This assumption
+enables one to
+identify averages along
+a sequence with
+averages over the ensemble of possible sequences (the probability of a dis-
+crepancy being zero).
+For example the relative frequency of the letter A
+in a particular infinite sequence will be, with probability one, equal to
+its
+relative frequency in the ensemble of sequences.
+If Pi
+is the probability of state
+i and pi(j) the transition probability to
+state j, then for the process to be stationary
+it
+is clear that the Pi must
+satisfy
+equilibrium
+conditions:
+Pi = HPipi(j)-
+i
+In the ergodic case
+it can be shown that with any starting conditions the
+probabilities Pj(N) of being in state j after N symbols, approach the equi-
+librium values as N —>
+.
+6. Choice, Uncertainty and Entropy
+We have represented a discrete information source as a Markoff process.
+Can we define a quantity which will measure, in some sense, how much in-
+formation is "produced" by such a process, or better, at what rate informa-
+tion
+is produced?
+Suppose we have a set of possible events whose probabilities of occurrence
+are Pi
+, po
+,
+, pn
+.
+These probabilities are known but that is all we know
+concerning which event will occur.
+Can we find a measure of how much
+"choice" is involved in the selection of the event or of how uncertain we are
+of the outcome?
+If there is such a measure, say H(pi
+, p 2
+,
+•
+•
+•
+, p n ),
+it
+is reasonable to
+re-
+quire of it the following properties:
+1. H should be continuous in the pi
+.
+2.
+If all the
+/>, are equal, pi = -
+, then H should be a monotonic increasing
+MA THEMA TICA L THEOR Y OF COMMl'NICA TION
+function of n.
+With equally likely events there is more choice, or un-
+certainty, when there are more possible events.
+3.
+If a choice be broken down into two successive choices, the original
+H should be the weighted sum
+of the individual values
+of H.
+The
+meaning
+of
+this
+is
+illustrated, in
+Fig.
+6.
+At the
+left we have
+three
+possibilities pi =
+$, p% =
+J, p$ =
+|.
+On the right we first choose be-
+tween two possibilities each with probability \, and
+if the second occurs
+make another choice with probabilities
+§,
+\.
+The
+final results have
+the same
+probabilities
+as
+before.
+We
+require,
+in
+this
+special
+case,
+that
+The coefficient \
+is because this second choice only occurs half the time.
+/6s
+.
+V
+.1/6
+Fig. 6—Decomposition of
+;i choice from three possibilities.
+In Appendix
+II, the following result
+is established:
+Theorem
+2: The
+only H satisfying the
+three above assumptions
+is of the
+form:
+// = -KJtptlogPi
+i—i
+where K
+is a positive constant.
+This theorem, and the assumptions required for its proof, are in no way
+necessary for the present theory.
+It
+is given chiefly to lend a certain plausi-
+bility to some of our later definitions.
+The real justification of these defi-
+nitions, however,
+will
+reside
+in
+their implications.
+Quantities of the form 77 = — 2
+/>, log
+/>, (the constant A' merely amounts
+to a choice of a unit of measure) play a central role in information theory as
+measures of information, choice and uncertainty.
+The form of U
+will be
+recognized as that of entropy as defined in certain formulations of statistical
+mechanics" where />, is the probability of a system being in cell
+i of its phase
+space.
+is then, for example, the H in Boltzmann's famous H theorem.
+We shall
+call H = — 2
+/>,
+log
+/», the entropy of
+the set of probabilities
+" See,
+for example,
+R.
+C.
+Tolman,
+"Principles
+of
+Statistical
+Mechanics,"
+Oxford,
+Clarendon, 1938.
+BELL SYSTEM TECHNICAL JOURNAL
+pi,
+•
+, pn
+•
+If x is a chance variable we will write H(x) for its entropy;
+thus -v is not an argument of a function but a label for a number, to differen-
+tiate it from H(y) say, the entropy of the chance variable y.
+The entropy in the case of two possibilities with probabilities p and q =
+1 —
+p, namely
+11 = - (p log p + q log q)
+is plotted in Fig.
+7 as a function of p.
+The quantity H has a number of interesting properties which further sub-
+stantiate
+it as a reasonable measure of choice or information.
+/
+\
+/
+\
+/
+\
+H
+.6
+/
+\
+/
+\
+BITS
+.5
+/
+•
+\
+/
+\
+\
+/
+\
+/
+\
+/
+\
+/
+\
+\
+Fig. 7—Entropy in the case of two possibilities with probabilities p and
+(1 —
+p).
+1. H =
+if and only
+if all the pi but one are zero, this one having the
+value unity.
+Thus only when we are certain of the outcome does H vanish.
+Otherwise H
+is positive.
+2. For a given n, H is a maximum and equal to log n when all the pi are
+equal
+i.e., -
+)
+.
+This is also intuitively the most uncertain situation.
+tij
+3. Suppose there are two events, x and y, in question with m possibilities
+for the first and n for the second.
+Let p(i, j) be the probability of the joint
+occurrence of i for the first and _; for the second.
+The entropy of the joint
+event
+is
+H(x, y) = - 2 P(i, J) l°g P(h j)
+.
+MA THEMA TICA L T1IE0R I ' OF COMMUNICA TION
+while
+my) = -zp(i,.i)\ogZp(ij).
+It
+is
+easily shown
+that
+H(x, y) <
+II(x) + H(y)
+with equality only
+if the events are independent
+(i.e.,
+p(i, j) =
+p(j) p(j)).
+The uncertainty of a joint event
+is
+less than or equal
+to the sum
+of the
+individual
+uncertainties.
+4. Any change toward equalization
+of the probabilities
+pi
+, p 2
+,
+•
+•
+, p n
+increases II.
+Thus
+if pi < p 2 and we increase Pi
+, decreasing p 2 an equal
+amount so that pi and p 2 are more nearly equal, then # increases.
+More
+generally,
+if we perform any "averaging" operation on the pi of the form
+P'i = Z) an Pi
+i
+where 2 a 'J = S <kj =
+1, and all ay >
+0, then // increases (except in the
+*
+f
+special case where this transformation amounts to no more than a permuta-
+tion of the pj with H of course remaining the same).
+5. Suppose there are two chance events x and y as in 3, not necessarily
+independent.
+For any particular value
+i that x can assume there
+is a con-
+ditional probability
+/>,(/)
+tnat
+>'
+'ias tne value/.
+This
+is given by
+Mj) = tUj)
+•
+i
+We define the conditional entropy of y, H x (y) as the average of the entropy
+of y for each value of x, weighted according to the probability of getting
+that
+particular
+x.
+That
+is
+ffx(y) = -Z/>0\./) log
+/>,(./)•
+This quantity measures how uncertain we are of y on the average when we
+know x.
+Substituting the value of />,(/) we obtain
+H.(y) = -E pa, j) log pa, j) + z pa, j) iog z pa,
+/)
+•;
+a
+i
+= H(x, y) - H(x)
+or
+H(x, y) =
+II(x) + H x (y)
+BELL SYSTEM TECHNICAL JOURNAL
+The uncertainty (or entropy) of the joint event x, y is the uncertainty of x
+plus the uncertainty of y when x is known.
+6. From 3 and 5 we have
+H{x) + H(y) > H(x, y) = H(x) + II x (y)
+Hence
+B(y) >
+II Ay)
+The uncertainty of y
+is never increased by knowledge of
+x.
+It will be de-
+creased unless
+.t and y are independent events, in which case it is not changed.
+7. The Entropy of an Information Source
+Consider a
+discrete
+source
+of
+the
+finite
+state
+type
+considered
+above.
+For each possible state
+i there
+will be a
+set
+of probabilities pi(j)
+of pro-
+ducing the various possible symbols j.
+Thus
+there
+is an entropy
+//, for
+each state.
+The entropy of the source
+will be defined
+as the average of
+these Hi weighted in accordance with the probability of occurrence of the
+states
+in
+question:
+H = T,PiHi
+= --£p,-M;)iogM/)
+i.i
+This
+is the entropy of the source per symbol of text.
+If the Markoff proc-
+ess is proceeding at a definite time rate there
+is also an entropy per second
+H' = JLfjHi
+i
+where/,- is the average frequency (occurrences per second) of state i.
+Clearly
+H' = mH
+where m
+is the average number of symbols produced per second.
+H or H'
+measures the amount of information generated by
+the source per symbol
+or per second.
+If the logarithmic base
+is
+2, they
+will represent bits per
+symbol or per second.
+If
+successive symbols are independent
+then H
+is simply —Zpt log pi
+where p t is the probability of symbol
+/.
+Suppose in this case we consider a
+long message of N symbols.
+It will contain with high probability about
+ptN occurrences of the
+first symbol, 'p 2N occurrences of the second,
+etc.
+Hence the probability of this particular message will be roughly
+P = tf
+ilf ti
+ilf ---pznN
+or
+MATHEMATICAL THEORY OF COMMUNICATION
+log p ± N 2 pi log Pi
+i
+log/) = -NE
+U = log */*
+//
+is thus approximately the logarithm
+of the reciprocal probability
+of a
+typical long sequence divided by the number of symbols
+in the sequence.
+The same result holds for any source.
+Stated more precisely we have (see
+Appendix
+III):
+Theorem 3 : Given any e >
+and 5 >
+0, we can find an N
+such that the se-
+quences of any length N > Nq
+fall into two classes:
+1. A
+set whose total probability
+is
+less than
+e.
+2. The remainder,
+all
+of whose members have probabilities satisfying
+the
+inequality
+log pl
+TJ
+I ^ A
+log p~ l
+In other words we are almost certain to have —~~ very close to H when N
+N
+J
+is
+large.
+A
+closely
+related
+result deals with
+the number of sequences
+of various
+probabilities.
+Consider again the sequences of length N and
+let them be
+arranged
+in
+order
+of
+decreasing
+probability.
+We
+define
+n(q)
+to be
+the
+number we must take from this set starting with the most probable one in
+order to accumulate a total probability
+</ for those taken.
+Theorem
+4:
+Lim
+]^
+ll) = H
+when q does not equal
+or
+1.
+We may interpret log n(q) as the number of bits required
+to specify the
+sequence when we consider only the most probable sequences with a total
+probability
+q.
+Then
+N
+is
+the number
+of
+bits per symbol
+for the
+specification.
+The theorem says that for large N this will be independent of
+q and equal to
+//.
+The rate of growth of the logarithm of the number of
+reasonably probable sequences
+is given by H, regardless of our interpreta-
+tion of "reasonably probable."
+Due
+to these results, which are proved in
+appendix III, it is possible for most purposes to treat the long sequences as
+though there were just 2HS of them, each with a probability 2_WA
+.
+BELL SYSTEM TECHNICAL JOURNAL
+The next two theorems show that H and H' can be determined by limit-
+ing operations directly from the statistics of the message sequences, without
+reference to the states and transition probabilities between states.
+Theorem 5: Let p(Bi) be the probability of a sequence B t of symbols from
+the source.
+Let
+GN = -^T, p(Bi) log p(Bt)
+where the sum
+is over
+all sequences B< containing N symbols.
+Then GN
+is a monotonic decreasing function of N and
+Lim Gn =
+II.
+Theorem
+6: Let p(B i}
+Sj)
+be the probability of sequence Bi followed by
+symbol Sj and pBi (Sj) = p(B<
+, Sj)/p(Bi) be the conditional probability of
+Sj after B t
+.
+Let
+FN = -HpiBuSj) log pBi (Sj)
+where the sum is over all blocks B t of TV -
+1 symbols and over all symbols
+Si
+.
+Then FN
+is a monotonic decreasing function of N,
+FN = NGN -(N-l) G#-i
+,
+G* = ^ E Fn
+,
+Fn ^ Gn
+,
+and Lim FN = B.
+AT-»oo
+These results are derived in appendix
+III.
+They show that a series of
+approximations
+to E can be obtained by considering only the
+statistical
+structure of the sequences extending over
+1,
+2,
+•
+•
+• N symbols.
+Fn
+is the
+better approximation.
+In fact FN
+is the entropy of the N
+lk order approxi-
+mation to the source of the type discussed above.
+If there are no statistical
+influences extending over more than N symbols, that
+is
+if the conditional
+probability
+of
+the next symbol knowing the preceding (N -
+1)
+is not
+changed by a knowledge of any before that, then FN = H.
+FK of course is
+the conditional entropy of the next symbol when the
+(iV —
+1) preceding
+ones are known, while G N
+is the entropy per symbol of blocks of N symbols.
+The ratio of the entropy of a source to the maximum value
+it could have
+while
+still restricted to the same symbols will be called
+its relative entropy.
+This
+is the maximum compression possible when we encode into the same
+alphabet.
+One minus the relative entropy is the redundancy.
+The redun-
+MATHEMATICAL THEORY OF COMMUNICATION
+dancy of ordinary English, not considering statistical structure over greater
+distances than about eight letters
+is roughly 50%.
+This means that when
+we write English half of what we write is determined by the structure of the
+language and half
+is chosen freely.
+The figure 50% was found by several
+independent methods which
+all gave results in this neighborhood.
+One
+is
+by calculation of the entropy of the approximations to English.
+A second
+method
+is to delete a certain fraction of the letters from a sample of English
+text and then
+let someone attempt
+to restore them.
+If they can be
+re-
+stored when 50% are deleted the redundancy must be greater than 50%.
+A third method depends on certain known results in cryptography.
+Two extremes of redundancy
+in English prose are represented by Basic
+English and by James Joyces' book "Finigans Wake."
+The Basic English
+vocabulary
+is limited to 850 words and the redundancy is very high.
+This
+is reflected in the expansion that occurs when a passage is translated into
+Basic English.
+Joyce on the other hand enlarges the vocabulary and
+is
+alleged to achieve a compression of semantic content.
+The redundancy of a language
+is related
+to the existence of crossword
+puzzles.
+If the redundancy
+is zero any sequence of letters
+is a reasonable
+text in the language and any two dimensional array of letters forms a cross-
+word
+puzzle.
+If
+the redundancy
+is
+too
+high
+the language imposes
+too
+many constraints for large crossword puzzles to be possible.
+A more de-
+tailed
+analysis shows
+that
+if we assume
+the constraints imposed by the
+language are of a rather chaotic and random nature, large crossword puzzles
+are just possible when the redundancy
+is 50%.
+If the redundancy
+is 33%,
+three dimensional crossword puzzles should be possible,
+etc.
+8. Representation of the Encoding and Decoding Operations
+We have yet to represent mathematically the operations performed by
+the
+transmitter and
+receiver
+in encoding and decoding the
+information.
+Either
+of
+these
+will be
+called
+a
+discrete
+transducer.
+The
+input
+to
+the
+transducer is a sequence of input symbols and its output a sequence of out-
+put symbols.
+The transducer may have an
+internal memory so
+that
+its
+output depends not only on the present input symbol but also on the past
+history.
+We assume that
+the
+internal memory
+is
+finite,
+i.e.
+there
+exists
+a finite number m of possible states of the transducer and that
+its output
+is
+a function of the present state and the present input symbol.
+The next
+state will be a second function of these two quantities.
+Thus a transducer
+can be described by two functions:
+>' n = /(.v„
+, an)
+a»+i =
+g(-Vn
+, a„)
+BELL SYSTEM TECHNICAL JOURNAL
+where:
+.r„
+is
+the
+n th
+input
+symbol,
+a n is the state of the transducer when the n"' input symbol is introduced,
+y„ is the output symbol
+(or sequence of output symbols) produced when
+x„ is introduced if the state is a n -
+If the output symbols of one transducer can be identified with the input
+symbols of a second, they can be connected in tandem and the result
+is also
+a transducer.
+If there exists a second transducer which operates on the out-
+put of the first and recovers the original input, the first transducer will be
+called non-singular and the second will be called its inverse.
+Theorem 7: The output of a finite state transducer driven by a finite state
+statistical source
+is a finite state statistical source, with entropy (per unit
+time)
+less than or equal
+to that
+of the input.
+If the transducer
+is non-
+singular they are equal.
+Let a represent the state
+of the source, which produces a sequence
+of
+symbols x t
+; and let
+/3 be the state of the transducer, which produces, in its
+output, blocks of symbols jj
+.
+The combined system can be represented
+by the "product state space"
+of pairs
+(a,
+/3).
+Two points
+in the space,
+(ai
+,
+/3i) and (a 2 /32), are connected by a line
+if ai can produce an x which
+changes ft to ft
+, and this line is given the probability of that x in this case.
+The line is labeled with the block of y, symbols produced by the transducer.
+The entropy of the output can be calculated as the weighted sum over the
+states.
+If we sum first on /3 each resulting term
+is less than or equal to the
+corresponding term for a, hence the entropy is not increased.
+If the trans-
+ducer is non-singular let its output be connected to the inverse transducer.
+If H[
+, #2 and H'3 are the output entropies of
+the
+source,
+the
+first and
+second transducers respectively, then H[ > Hi >
+Ili = H[ and therefore
+H[ = #2
+•
+Suppose we have a system of constraints on possible sequences of the type
+which can be represented by a linear graph as in
+Fig.
+2.
+If probabilities
+Pi'j were assigned to the various lines connecting state i to stated this would
+become a source.
+There is one particular assignment which maximizes the
+resulting entropy
+(see Appendix IV).
+Theorem 8: Let the system of constraints considered as a channel have a
+capacity C.
+If we assign
+Pa =s i
+Cr,i
+where 1$
+is the duration of the s
+th symbol leading from state
+i to state j
+and the #,• satisfy
+then H is maximized and equal to C.
+.1/.4 THEMA TICA L THEOR Y OF COMMUNICA TION
+By proper assignment of the transition probabilities the entropy of sym-
+bols on a channel can be maximized at the channel capacity.
+9. The Fundamental Theorem for a Noiseless Channel
+We
+will now
+justify
+our
+interpretation
+of H
+as the
+rate
+of generating
+information by proving that H determines the channel capacity required
+with most efficient coding.
+Theorem 9: Let a source have entropy H
+(bits per symbol) and a channel
+have a capacity C (bits per second).
+Then it is possible to encode the output
+of the source in such a way as to transmit at the average rate — —
+e symbols
+per second over the channel where e
+is arbitrarily small.
+It
+is not possible
+C
+to transmit
+at an average rate greater than —
+The converse part of the theorem, that — cannot be exceeded, may be
+H
+proved by noting that the entropy of the channel input per second
+is equal
+to that of the source, since the transmitter must be non-singular, and also
+this entropy cannot exceed the channel capacity.
+Hence H' < C and the
+number of symbols per second = H'/H < C/H.
+The first part of the theorem will be proved in two different ways.
+The
+first method
+is to consider the set of all sequences of N symbols produced by
+the source.
+For N large we can divide these into two groups, one containing
+less than 2 H+v A members and the second containing less than 2
+ffA members
+(where R
+is the logarithm of the number of different symbols) and having a
+total probability less than p.
+As N increases
+77 and fx approach zero.
+The
+number of signals of duration T in the channel
+is greater than
+2(C~6)T with
+8 small when T
+is large.
+If we choose
+'-(? + >
+then there will be a sufficient number of sequences of channel symbols for
+the high probability group when .V and T are sufficiently large (however
+small
+X) and
+also some
+additional
+ones.
+The high
+probability group
+is
+coded in an arbitrary one to one way into this set.
+The remaining sequences
+are represented by larger sequences, starring and ending with one
+of the
+sequences not used for the high probability group.
+This special sequence
+acts as a start and stop signal for a different code.
+In between a sufficient
+time is allowed to give enough different sequences for all the low probability
+messages.
+This will require
+T, = g + „) I,
+\
+BELL SYSTEM TECHNICAL JOURNAL
+where
+<p
+is small.
+The mean rate of transmission in message symbols per
+second will then be greater than
+>-4+4T=[
+(i -
+s) G/+x
+) +5 (i + *)r
+Q
+As N increases 5, X and <p approach zero and the rate approaches —
+.
+a
+Another method of performing this coding and proving the theorem can
+be described as follows: Arrange the messages of length N in order of decreas-
+ing probability and suppose their probabilities are pi > p2 >
+ps
+.
+. > pn
+-
+s-l
+Let P8 = ]C
+Pi
+'> that
+is P ,
+is the cumulative probability up to, but not
+yAcIuding, ps
+.
+We first encode into a binary system.
+The binary code for
+message s is obtained by expanding Ps as a binary number.
+The expansion
+is carried out to ma places, where mt
+is the integer satisfying:
+log2 — < m s <
+1 + log2 —
+pa
+Ps
+Thus the messages of high probability are represented by short codes and
+those of low probability by long
+codes.
+From these inequalities we have
+-1 < p. < -i
+The code for Ps
+will differ from
+all succeeding ones
+in one or more of
+its
+ms places, since all the remaining Pi are at least — larger and their binary
+expansions therefore differ in the first ma places.
+Consequently all the codes
+are different and
+it
+is possible to recover the message from its code.
+If the
+channel sequences are not already sequences of binary digits, they can be
+ascribed binary numbers in an arbitrary fashion and the binary code thus
+translated into signals suitable for the channel.
+The average number H' of binary digits used per symbol of original mes-
+sage is easily estimated.
+We have
+H' =±2ms ps
+But,
+and therefore,
+i Z (log, I) f < i **.*. < £ ^ (l + ^ Q P.
+MATHEMATICAL THEORY OF COMMUNICATION
+— 2p. log p t < H' < — - Zp s log p.
+As N increases — Zp s log p, approaches H, the entropy of the source and W
+approaches H.
+We see from this that the inefficiency in coding, when only a finite delay of
+N symbols
+is used, need not be greater than — plus the difference between
+the true entropy // and the entropy GN calculated for sequences of length N.
+The per cent excess time needed over the ideal is therefore less than
+9e+ J_ -
+1.
+// T UN
+This method
+of encoding
+is
+substantially the same
+as one found
+inde-
+pendently by R. M. Fano. 9
+His method is to arrange the messages of length
+N in order of decreasing probability.
+Divide this series into two groups of
+as nearly equal probability as possible.
+If the message
+is in the first group
+its first binary digit will be 0, otherwise
+1.
+The groups are similarly divided
+into subsets of nearly equal probability and the particular subset determines
+the second binary digit.
+This process is continued until each subset contains
+only one message.
+It is easily seen that apart from minor differences (gen-
+erally in the
+last
+digit)
+this amounts to the same thing as the arithmetic
+process described above.
+10. Discussion
+In order to obtain the maximum power transfer from a generator to a load
+a transformer must in general be introduced so that the generator as seen
+from the load has the load resistance.
+The situation here is roughly anal-
+ogous.
+The transducer which does the encoding should match the source
+to the channel in a statistical sense.
+The source as seen from the channel
+through the transducer should have the same
+statistical structure as the
+source
+which
+maximizes
+the
+entropy
+in
+the
+channel.
+The
+content
+of
+Theorem 9 is that, although an exact match is not in general possible, we can
+approximate
+it as closely as desired.
+The ratio of the actual rate of trans-
+mission to the capacity C may be called the efficiency of the coding system.
+This
+is of course equal
+to the
+ratio of the actual entropy of the channel
+symbols to the maximum possible entropy.
+In
+general,
+ideal
+or nearly
+ideal encoding
+requires a
+long delay
+in the
+transmitter
+and
+receiver.
+In
+the
+noiseless
+case
+which
+we
+have
+been
+considering,
+the main function
+of
+this delay
+is
+to allow
+reasonably good
+''Technical Report No. 65. The Research Laboratory of Electronics. M.
+I. T.
+BELL SYSTEM TECHNICAL JOURNAL
+matching
+of probabilities to corresponding lengths of sequences.
+With a
+good code the logarithm of the reciprocal probability
+of a long message
+must be proportional
+to the duration of the corresponding signal, in fact
+I log p~
+x _ r
+! ~T
+L
+must be small for all but a small fraction of the long messages.
+If a source can produce only one particular message
+its entropy
+is zero,
+and no channel
+is required.
+For example, a computing machine set up to
+calculate the successive
+digits
+of
+it produces a definite sequence with no
+chance element.
+No channel
+is required
+to
+"transmit"
+this
+to another
+point.
+One could construct a second machine to compute the same sequence
+at the point.
+However,
+this may be impractical.
+In such a case we can
+choose to
+ignore some or
+all of the
+statistical knowledge we have
+of the
+source.
+We might consider the digits of
+tt to be a random sequence in that
+we construct a system capable
+of sending any sequence
+of
+digits.
+In
+a
+similar way we may choose to use some of our statistical knowledge of Eng-
+lish in constructing a code, but not all of it.
+In such a case we consider the
+source with the maximum entropy subject to the statistical conditions we
+wish to retain.
+The entropy of this source determines the channel capacity
+which
+is necessary and sufficient.
+In the
+it example the only information
+retained
+is that all the digits are chosen from the set 0,
+1,
+.
+.
+.,
+9.
+In the
+case of English one might wish to use the statistical saving possible due to
+letter frequencies, but nothing else.
+The maximum entropy source
+is then
+the first approximation to English and its entropy determines the required
+channel capacity.
+11. Examples
+As
+a simple example
+of some of these
+results consider a source which
+produces a sequence of letters chosen from among A, B, C, D with prob-
+abilities
+\,
+\,
+I,
+|,
+successive symbols being chosen
+independently.
+We
+have
+// - -(f log*+'|log* + flog|)
+=
+|- bits per symbol.
+Thus we can approximate a coding system
+to encode messages from
+this
+source into binary digits with an average
+of
+•£ binary
+digit per symbol.
+In this case we can actually achieve the limiting value by the following code
+(obtained by the method of the second proof of Theorem 9)
+V
+MATHEMATICAL THEORY OE COMMUNICATION
+A
+B
+C
+/;
+The average number of binary digits used in encoding a sequence of N sym-
+bols
+will be
+tf(i Xl + iX2 + fX3)=£iV
+It is easily seen that the binary digits 0,
+1 have probabilities \, \ so the H for
+the coded sequences is one bit per symbol.
+Since, on the average, we have \
+binary symbols per
+original
+letter,
+the entropies on a time basis
+are
+the
+same.
+The maximum possible entropy for the original
+set
+is log 4=2,
+occurring when A
+, B, C, D have probabilities \, \, \, \.
+Hence the relative
+entropy is £.
+We can translate the binary sequences into the original set of
+symbols on a two-to-one basis by
+the following table:
+A'
+B'
+C"
+D'
+This double process then encodes the original message into the same symbols
+but with an average compression ratio |
+.
+As a second example consider a source which produces a sequence of A 's
+and h's with probability p for A and q for P.
+If p < <
+</ we have
+h = -iog/(i- py-"
+= -plogpil-pf-"""
+In such a case one can construct a fairly good coding of the message on a
+0,
+channel by sending a
+special sequence, say 0000,
+for the infrequent
+symbol A and then a sequence indicating the number of B's following
+it.
+This could be indicated by the binary representation with
+all numbers con-
+taining the special sequence deleted.
+All numbers up to 16 are represented
+as usual; 16
+is represented by the next binary number after 16 which does
+not contain four zeros, namely 17 =
+10001, etc.
+It can be shown that as p —>
+the coding approaches ideal provided the
+length of the special sequence
+is properly adjusted.
+BELL SYSTEM TECHNICAL JOURNAL
+PART
+II: THE DISCRETE CHANNEL WITH NOISE
+11. Representation
+of a Noisy Discrete Channel
+We now consider the case where the signal
+is perturbed by noise during
+transmission or at one or the other of the terminals.
+This means that the
+received signal
+is not
+necessarily the same as that sent out by the trans-
+mitter.
+Two cases may be distinguished.
+If a particular transmitted signal
+always produces the same received signal,
+i.e. the received signal
+is a definite
+function of the transmitted signal, then the efFect may be called distortion.
+If this function has an inverse—no two transmitted signals producing the
+same received signal—distortion may be corrected, at least in principle, by
+merely performing the inverse functional operation on the received signal.
+The case of interest here is that in which the signal does not always undergo
+the same change in transmission.
+In this case we may assume the received
+signal E to be a function of the transmitted signal S and a second variable,
+the noise N.
+E = f(S, N)
+The
+noise
+is considered
+to be a chance variable just as the message was
+above.
+In general
+it may be represented by a suitable stochastic process.
+The most general type of noisy discrete channel we shall consider is a general-
+ization
+of
+the
+finite
+state
+noise
+free channel
+described
+previously.
+We
+assume a finite number of states and a set of probabilities
+This
+is the probability,
+if the channel
+is in state a and symbol
+i
+is trans-
+mitted, that symbol j will be received and the channel left in state
+/3.
+Thus
+a and /3 range over the possible states, i over the possible transmitted signals
+and j over the possible received signals.
+In the case where successive sym-
+bols are independently perturbed by the noise there
+is only one state, and
+the channel is described by the set of transition probabilities pdj), the prob-
+ability of transmitted symbol
+i being received as j.
+If a noisy channel
+is fed by a source there are two statistical processes at
+work: the source and the noise.
+Thus there are a number of entropies that
+can be calculated.
+First there
+is the entropy H(x) of the source or of the
+input to the channel (these will be equal
+if the transmitter
+is non-singular).
+The entropy of the output of the channel,
+i.e. the received signal, will be
+denoted by E(y).
+In the noiseless case H(y) = H(x).
+The joint entropy of
+input and output
+will be H(xy).
+Finally there are two conditional entro-
+pies Hx (y) and Hy (x), the entropy of the output when the input
+is known
+and conversely.
+Among these quantities we have the relations
+H(x, y) = H(x) + H x (y) = H(y) + Hy{x)
+MATHEMATICAL THEORY OF COMMUNICATION
+All of these entropies can be measured on a per-second or a per-symbol
+basis.
+12. Equivocation and Channel Capacity
+If the channel
+is noisy
+it is not in general possible to reconstruct the orig-
+inal message or the transmitted signal with certainty by any operation on the
+received signal E.
+There are, however, ways of transmitting the information
+which are optimal in combating noise.
+This is the problem which we now
+consider.
+Suppose there are two possible symbols
+and
+1, and we are transmitting
+at a rate of 1000 symbols per second with probabilities pa =
+pi = \
+.
+Thus
+our source is producing information at the rate of 1000 bits per second.
+Dur-
+ing transmission the noise introduces errors so that, on the average, 1 in 100
+is received incorrectly (a
+as 1, or 1 as 0).
+What is the rate of transmission
+of information?
+Certainly
+less than 1000 bits per second since about 1%
+of the received symbols are incorrect.
+Our first impulse might be to say the
+rate is 990 bits per second, merely subtracting the expected number of errors.
+This
+is not satisfactory since
+it
+fails to take into account the
+recipient's
+lack of knowledge of where the errors occur.
+We may carry it to an extreme
+case and suppose the noise so great that the received symbols are entirely
+independent of the transmitted symbols.
+The probability of receiving
+is
+\ whatever was transmitted and similarly for 0.
+Then about
+half
+of the
+received syiribols are correct due to chance alone, and we would be giving
+the system credit
+for transmitting 500
+bits per second while actually no
+information
+is
+being
+transmitted
+at
+all.
+Equally
+"good"
+transmission
+would be obtained by dispensing with the channel entirely and flipping a
+coin at the receiving point.
+Evidently the proper correction
+to apply to the amount of information
+transmitted
+is the amount of this information which
+is missing in the
+re-
+ceived
+signal,
+or alternatively
+the uncertainty when we have received a
+signal of what was actually sent.
+From our previous discussion of entropy
+as a measure
+of uncertainty
+it seems
+reasonable
+to use
+the conditional
+entropy of the message, knowing the received signal, as a measure of this
+missing information.
+This is indeed the proper definition, as we shall see
+later.
+Following this idea the rate of actual transmission, R, would be ob-
+tained by subtracting from the rate of production
+(i.e., the entropy of the
+source) the average rate of conditional entropy.
+R =
+II(x) - Hy (x)
+The conditional entropy Hy (x)
+will, for convenience, be called the equi-
+vocation.
+It measures the average ambiguity of the received signal.
+BELL SYSTEM TECHNICAL JOURNAL
+In the example considered above,
+if a
+is received the a posteriori prob-
+ability that a
+was transmitted
+is
+.99, and that a
+1 was transmitted
+is
+.01.
+These figures are reversed
+if a
+is received.
+Hence
+Hv (x) = -
+[.99 log .99 + 0.01 log 0.01]
+= .081 bits/symbol
+or 81 bits per second.
+We may say that the system is transmitting at a rate
+1000 — 81 = 919 bits per second.
+In the extreme case where a
+is equally
+likely to be received as a
+or 1 and similarly for
+1, the a posteriori proba-
+bilities are f , § and
+H„(x) = - [*log* + iIog_4]
+=
+1 bit per symbol
+or 1000 bits per second.
+The rate of transmission
+is then
+as
+it should
+be.
+The
+following theorem
+gives a
+direct
+intuitive
+interpretation
+of
+the
+equivocation and also serves to justify it as the unique appropriate measure.
+We consider a communication system and an observer (or auxiliary device)
+who
+can
+see
+both what
+is
+sent
+and
+what
+is
+recovered
+(with
+errois
+due to noise) .
+This observer notes the errors in the recovered message and
+transmits data to the receiving point over a "correction channel" to enable
+the receiver to correct the errors.
+The situation
+is indicated schematically
+in Fig. 8.
+Theorem 10:
+If the correction channel has a capacity equal to H b (x)
+it
+is
+possible
+to so encode the correction data as
+to send
+it over this channel
+and correct all but an arbitrarily small fraction
+e of the errors.
+This is not
+possible if the channel capacity is less than Hy (x).
+Roughly then, Hu (x)
+is the amount of additional information that must be
+supplied per second at the receiving point to correct the received message.
+To prove the
+first part, consider long sequences of received message M'
+and
+corresponding
+original
+message M.
+There
+will
+be
+logarithmically
+THy(x) of the M's which could reasonably have produced each M'.
+Thus
+we have THy (x) binary digits to send each T seconds.
+This can be done
+with e frequency of errors on a channel of capacity H„(x).
+The second part can be proved by noting, first, that for any discrete chance
+variables x, y, z
+Uy(x, S) > Lly(x)
+The left-hand side can be expanded to give
+Hy {z) + Hvt{x)
+>
+Hy(x)
+Hyz (x)
+>
+Hv (x)
+- Hy{z)
+>
+Hy{x)
+-
+ff(s)
+MATHEMATICAL THEORY OF COMMUNICATION
+If we identify x as the output of the source, y as the received signal and z
+as the signal sent over the correction channel, then the right-hand side
+is the
+equivocation
+less the rate of transmission over the correction channel.
+If
+the capacity of this channel is less than the equivocation the right-hand side
+will be greater than zero and Hh2 (x) >
+0.
+But this
+is the uncertainty
+of
+what was sent, knowing both the received signal and the correction signal.
+If
+this
+is greater than zero the frequency of errors cannot be arbitrarily
+small.
+Example:
+Suppose the errors occur at random in a sequence of binary digits: proba-
+bility p that a digit is wrong and q =
+\ — p that
+it is right.
+These errors
+can be corrected
+if their position
+is known.
+Thus the correction channel
+need only send information as to these positions.
+This amounts to trans-
+CORRECTION
+DATA
+^
+'
+OBSERVER
+i
+K
+r\ '
+SOURCE
+TRANSMITTER
+RECEIVER
+Fig. 8— Schematic diagram of a correction system.
+CORRECTING
+DEVICE
+milling from a source which produces binary digits with probability p for
+(correct) and q for
+(incorrect).
+This requires a channel
+of capacity
+- [p log p + q log q]
+which
+is the equivocation of the
+original system.
+The rate of transmission R can be written in two other forms due to the
+identities noted above.
+We have
+R = H(x) - Hg {x)
+= H(y) - H x (y)
+= H(x) + H(y) - H(x, y).
+The
+first defining expression has already been interpreted as the amount of
+information sent
+less the uncertaintv of what was sent.
+The second meas-
+BELL SYSTEM TECHNICAL JOURNAL
+ures the amount received less the part of this which
+is due to noise.
+The
+third is the sum of the two amounts less the joint entropy and therefore in a
+sense is the number of bits per second common to the two.
+Thus all three
+expressions have a certain intuitive significance.
+The capacity C of a noisy channel should be the maximum possible rate
+of transmission,
+i.e., the rate when the source
+is properly matched to the
+channel.
+We therefore define the channel capacity by
+C = Max (H(x) - Hy (x))
+where the maximum
+is with respect to all possible information sources used
+as input to the channel.
+If the channel is noiseless, Hy (x) =
+0.
+The defini-
+tion is then equivalent to that already given for a noiseless channel since the
+maximum entropy for the channel
+is
+its capacity.
+13. The Fundamental Theorem tor a Discrete Channel with
+Noise
+It may seem surprising that we should define a definite capacity C for
+a noisy channel since we can never send certain information in such a case.
+It is clear, however, that by sending the information in a redundant form the
+probability
+of
+errors
+can
+be
+reduced.
+For
+example, by
+repeating
+the
+message many times and by a
+statistical study
+of the different
+received
+versions of the message the probability of errors could be made very small.
+One would expect, however, that to make this probability of errors approach
+zero, the redundancy of the encoding must increase indefinitely, and the rate
+of transmission therefore approach zero.
+This is by no means true.
+If
+it
+were, there would not be a very well defined capacity, but only a capacity
+for a given frequency of errors, or a given equivocation
+; the capacity going
+down
+as the error requirements are made more stringent.
+Actually
+the
+capacity C defined above has a very definite
+significance.
+It
+is possible
+to send information at the rate C through the channel with as small a fre-
+quency of errors or equivocation as desired by proper encoding.
+This state-
+ment
+is not true for any rate greater than C.
+If an attempt
+is made
+to
+transmit at a higher rate than C, say C + Ri
+, then there will necessarily
+be an equivocation equal to a greater than the excess Ri
+.
+Nature takes
+payment by
+requiring
+just
+that much
+uncertainty,
+so
+that we
+are not
+actually getting any more than C through correctly.
+The situation
+is indicated
+in Fig.
+9.
+The rate of information
+into the
+channel is plotted horizontally and the equivocation vertically.
+Any point
+above the heavy line in the shaded region can be attained and those below
+cannot.
+The points on the line cannot in general be attained, but there will
+usually be two points on the line that can.
+MATHEMATICAL THEORY OF COMMUNICATION
+AW
+These
+results are
+the main
+justification
+for the definition
+of C and
+will
+now be proved.
+Theorem
+11.
+Let a discrete channel have the capacity C and a discrete
+source the entropy per second H.
+If H < C there exists a coding system
+such that the output of the source can be transmitted over the channel with
+an arbitrarily small frequency of errors (or an arbitrarily small equivocation).
+If H > C it
+is possible to encode the source so that the equivocation
+is less
+than H — C
+-\-
+e where e is arbitrarily small.
+There is no method of encod-
+ing which gives an equivocation less than 77 — C.
+The method of proving the first part of this theorem is not by exhibiting
+a coding method having the desired properties, but by showing that such a
+code must exist
+in a certain group of codes.
+In fact we will average the
+frequency of errors over this group and show that this average can be made
+less than
+c.
+If the average of a set of numbers
+is
+less than
+e there must
+exist at least one
+in the set which
+is
+less than
+e.
+This
+will establish the
+desired result.
+C
+H(X)
+Fig. 9—The equivocation possible for a given input entropy to a channel.
+The capacity C of a noisy channel has been defined as
+C = Max
+(//(.v) - Hy(x))
+where x is the input and y the output.
+The maximization is over all sources
+which might be used as input to the channel.
+Let So be a source which achieves
+the maximum capacity C.
+If
+this
+maximum
+is not actually achieved by any source
+let S
+be a source which
+approximates to giving the maximum rate.
+Suppose S
+is used
+as input
+to
+the channel.
+We consider the possible transmitted and received sequences
+of a long duration T.
+The following will be true:
+1. The transmitted sequences fall into two classes, a high probability group
+with about
+2T" (X) members and
+the
+remaining sequences of
+small
+total
+probability.
+2.
+Similarly
+the received sequences have a
+high probability
+set
+of about
+,r iiui) members and a low probability set of remaining sequences.
+.?. Each high probability output could be produced by about 2
+The probability of all other cases has a small total probability.
+TH,,(x) inputs.
+BELL SYSTEM TECHNICAL JOURNAL
+All the
+e's and
+8's implied by the words "small" and "about"
+in these
+statements approach zero as we allow T to increase and So to approach the
+maximizing source.
+The situation
+is summarized in Fig.
+10 where
+the
+input sequences are
+points on the
+left and output sequences points on the right.
+The fan
+of
+cross
+lines represents the range of possible causes for a typical output.
+Now suppose we have another source producing information at rate R
+with R <
+C.
+In the period T this source will have 2
+1 " high probability
+outputs.
+We wish to associate these with a selection of the possible channe
+E
+HIGH PROBABILITY _
+_
+MESSAGES
+-^^
+2 nly
+H(Y )T
+•
+high probability
+hJxJt
+received
+signal:
+?"y
+REASONABLE
+CAUSES
+FOR
+EACH
+E
+• REASONABLE
+EFFECTS •
+FROM
+EACH
+M
+•
+Fig. 10— Schematic representation of the relations between inputs and outputs in a
+channel.
+inputs in such a way as to get a small frequency of errors.
+We will set up
+this association in
+all
+possible ways (using, however, only the high proba-
+bility group of inputs as determined by the source 5
+) and average the fre-
+quency of errors for this large class of possible coding systems.
+This
+is the
+same as calculating the frequency of errors for a random association of the
+messages and channel inputs of duration
+T.
+Suppose
+a particular output
+yi is observed.
+What
+is the probability of more than one message in the set
+of possible causes of y{?
+There are 2™messages
+distributed
+at random in
+TH(z)
+points.
+The probability
+of a particular point
+being a message
+is
+thus
+r.T(R-H(x))
+MATHEMATICAL THEORY OF COMMUNICATION
+The probability that none of the points in the fan
+is a message (apart from
+the actual originating message)
+is
+,,_[<_ 2nR~" (- x)) \i Tl'u (x)
+Now R < H(x) -
+H„(x) so R -
+H(x) = -Hu (x) -
+rj with
+r, positive-
+Consequently
+p _
+(1 _
+-y-THyW-TmoTHniz)
+approaches (as T —>
+<*
+)
+1 - 2~T\
+Hence the probability of an error approaches zero and the
+first part of the
+theorem
+is proved.
+The second part of the theorem
+is easily shown by noting that we could
+merely send C bits per second from the source, completely neglecting the
+remainder of the information generated.
+At the receiver the neglected part
+gives an equivocation II (x) — C and the part transmitted need only add e.
+This limit can also be attained in many other ways, as will be shown when we
+consider the continuous case.
+The last statement of the theorem
+is a simple consequence of our definition
+of C.
+Suppose we can encode a source with R = C + a in such a way as to
+obtain an equivocation II„(x) = a —
+e with e positive.
+Then R = H(x) =
+C + a and
+H(x) - H„(x) = C +
+€
+with
+e
+positive.
+This contradicts the
+definition of C as the maximum
+of
+II (x) - Hv(x).
+Actually more has been proved than was
+stated in the theorem.
+If the
+average of a set of numbers
+is within
+t of their maximum, a fraction of at
+most \/^can be more than y/\ below the maximum.
+Since e is arbitrarily
+small we can say that almost all the systems are arbitrarily close to the ideal.
+14. Discussion
+The demonstration of theorem
+11, while not a pure existence proof, has
+some
+of
+the
+deficiencies
+of such
+proofs.
+An
+attempt
+to
+obtain
+a good
+approximation to ideal coding by following the method of the proof
+is gen-
+erally
+impractical.
+In
+fact,
+apart
+from
+some
+rather
+trivial
+cases and
+certain limiting situations, no
+explicit
+description of a series of approxima-
+tion to the ideal has been found.
+Probably this is no accident but is related
+to the difficulty of giving an explicit construction for a good approximation
+to a random sequence.
+BELL SYSTEM TECHNICAL JOURNAL
+All approximation to the ideal would have the property that if the signal
+is altered in a reasonable way by the noise, the original can still be recovered.
+Tn other words the alteration
+will not
+in general bring
+it closer to another
+reasonable signal than the original.
+This
+is accomplished at the cost of a
+certain amount
+of redundancy
+in
+the
+coding.
+The redundancy must be
+introduced
+in
+the proper way
+to combat
+the
+particular
+noise
+structure
+involved.
+However, any redundancy in the source will usually help
+if
+it
+is
+utilized at the receiving point.
+In particular,
+if the source already has a
+certain redundancy and no attempt
+is made to eliminate it in matching to the
+channel, this redundancy will help combat noise.
+For example, in a noiseless
+telegraph channel one could save about 50% in time by proper encoding of
+the messages.
+This
+is not done and most
+of
+the redundnacy
+of English
+remains
+in
+the
+channel
+symbols.
+This has
+the advantage,
+however,
+of
+allowing considerable noise in the channel.
+A sizable fraction of the
+letters
+can
+be
+received
+incorrectly and
+still
+reconstructed by
+the
+context.
+In
+fact this
+is probably not a bad approximation
+to the ideal in many cases,
+since the statistical structure of English is rather involved and the reasonable
+English sequences are not too far (in the sense required for theorem) from a
+random selection.
+As in the noiseless case a delay is generally required to approach the ideal
+encoding.
+It now has the additional function of allowing a large sample of
+noise to affect the signal before any judgment
+is made at the receiving point
+as to the original message.
+Increasing the sample size always sharpens the
+possible
+statistical
+assertions.
+The content of theorem 11 and its proof can be formulated in a somewhat
+different way which exhibits the connection with the
+noiseless case more
+clearly.
+Consider the possible signals of duration T and suppose a subset
+of them is selected to be used.
+Let those in the subset all be used with equal
+probability, and suppose the receiver is constructed to select, as the original
+signal, the most probable cause from the subset, when a perturbed
+signal
+is received.
+We define N(T, q) to be the maximum number of signals we
+can choose for the subset such that the probability of an incorrect
+inter-
+pretation
+is less than or equal to q.
+Theorem 12: Lim -°—J^— - = C, where C
+is the channel
+capacity,
+pro-
+T-.00
+I
+vided that q does not equal
+or
+.
+In other words, no matter how we set our
+limits of
+reliability, we can
+distinguish reliably in time T enough messages to correspond to about CT
+bits, when T
+is sufficiently large.
+Theorem 12 can be compared with the
+definition of the capacity of a noiseless channel given
+in section
+1.
+MATHEMATICAL THEORY Of COMMUNICATION
+15. Example of a Discrete Channel and Its Capacity
+A simple example
+of a
+discrete channel
+is indicated in Fig.
+11.
+There
+are three possible symbols.
+The first is never affected by noise.
+The second
+and
+third each have probability p of coming through undisturbed, and
+q
+of being changed into the other of the pair.
+We have (letting «= —
+[/> log
+•s
+- P
+TRANSMITTED
+SYMBOLS
+RECEIVED
+SYMBOLS
+p
+Fig.
+11 —Example of a discrete channel.
+p + q log
+</] and P and Q be the probabilities of using the first or second
+symbols)
+H(x) = -PlogP- 2QlogQ
+II„(x) = 2Qa
+We wish to choose P and Q in such a way as to maximize H(x) — Hy (x),
+subject to the constraint P
+-f- 2Q =
+1.
+Hence we consider
+U = -7Mog P - 20 log O - 2Qa + X(P + 20
+d±= -1 -logP + X =
+— = -2-2 logO - 2a + 2\ = 0.
+Eliminating A
+log P = log Q + a
+p = Qe
+a =
+Qfl
+/3+
+l
++ 2"
+The channel capacity
+is then
+( =
+log ——
+.
+BELL SYSTEM TECHNICAL JOURNAL
+Note how this checks the obvious values in the cases p =
+1 and p =
+\
+.
+In the first,
+=
+1 and C =
+log 3, which is correct since the channel
+is then
+noiseless with
+three possible symbols.
+If p =
+\,
+(3 =
+2 and C =
+log
+2.
+Here the second and third symbols cannot be distinguished at
+all and act
+together like one symbol.
+The first symbol
+is used with probability P =
+\ and
+the second and
+third
+together with probability
+\
+.
+This may be
+distributed in any desired way and
+still achieve the maximum capacity.
+For intermediate values
+of p the channel capacity
+will
+lie between log
+2 and log 3.
+The distinction between the second and third symbols conveys
+some information but not as much as in the noiseless case.
+The first symbol
+is used somewhat more frequently than the other two because of its freedom
+from
+noise.
+16. The Channel Capacity
+in
+Certain Special Cases
+If the noise affects successive channel symbols independently
+it can be
+described by a set of transition
+probabilities pa
+.
+This
+is the probability,
+if symbol
+i
+is sent, that j will be received.
+The maximum channel rate
+is
+then given by the maximum of
+Z Pi Pa log Z P> Pa ~ Z Pi Pa log Pa
+i.j
+i
+i.j
+where we vary the P, subject to 2i\ =
+1.
+This leads by the method of
+Lagrange to the equations,
+Z P» log v"p~a" = m
+S -
+1, 2,
+•
+•
+•
+.
+;
+Z_f 'iVH
+i
+Multiplying by P„ and summing on s shows that n = —C.
+Let the inverse
+of p„j
+(if it exists) be h sl so that Z KtP»i =
+8tj
+Then
+s
+Z bst Psj log p,j - log Z Pipu = —CzLhst.'
+i
+.Z Pipit = exp [C Z htl + Z htt p.j log p ti \
+Hence:
+or,
+Pi = Z hu exp [C Z h„ + Z hlt psj log p tj\.
+(
+>
+s.j
+This is the system of equations for determining the maximizing values of
+Pi
+, with C to be determined so that 2 P, =
+1.
+When this is done C will be
+the channel capacity, and the P, the proper probabilities for the channel
+symbols to achieve this
+capacity.
+MATHEMATICAL THEORY OF COMMUNICATION
+If each input symbol has the same set of probabilities on the lines emerging
+from
+it, and the same
+is true of each output symbol, the capacity can be
+easily calculated.
+Examples are shown
+in
+Fig.
+12.
+In
+such a case H x(y)
+is independent of the distribution of probabilities on the input symbols, and
+is given by — S pi log
+/>, where the p< are the values of the transition proba-
+bilities from any input symbol.
+The channel capacity
+is
+Max
+[H{y)
+-
+Hx(y)]
+= Max H(y) + 2 pi log pi
+.
+The maximum
+of H(y)
+is clearly log m where m
+is the number of output
+j/3_—
+^4.
+Xj*^
+l/6\
+\^l/6
+J^^\/\.
+1/6/
+Vyv^
+^/T-
+\
+1/3
+^s^v
+a
+b
+c
+Fig. 12—Examples of discrete channels with the same transition probabilities for each
+input and for each output.
+symbols, since
+it
+is possible
+to make them
+all equally probable by making
+the input symbols equally probable.
+The channel capacity
+is therefore
+C =
+log m + 2 pi \og pi.
+In
+Fig. 12a
+it would be
+C =
+log 4 —
+log 2 =
+log 2
+.
+This could be achieved by using only the 1st and 3d symbols.
+In Fig. 12b
+C =
+log 4 -
+I log 3 - \ log 6
+=
+log 4 -
+log 3 - \ log 2
+=
+log \ 2
+s
+.
+In
+Fig.
+12c we have
+C =
+log 3 - ^log 2 - \ log 3 - | log 6
+-
+log J#$
+BELL SYSTEM TECHNICAL JOURNAL
+Suppose the symbols
+fall into several groups such that the noise never
+causes a symbol in one group to be mistaken for a symbol in another group.
+Let the capacity for the
+;/th group be C„ when we use only the symbols
+in this group.
+Then
+it
+is easily shown that, for best use of the entire set,
+the total probability P„ of all symbols in the wth group should be
+p. =
+2-
+.
+22 r"
+Within a group the probability
+is distributed just as
+it would be
+if these
+were the only symbols being used.
+The channel capacity
+is
+C = log22c\
+17. An Example of Efficient Coding
+The following example, although somewhat unrealistic,
+is a case in which
+exact matching
+to
+a
+noisy
+channel
+is
+possible.
+There
+are two channel
+symbols,
+and
+1, and the noise affects them in blocks of seven symbols.
+A
+block of seven
+is either transmitted without error, or exactly one symbol of
+the seven is incorrect.
+These eight possibilities are equally likely.
+We have
+C = Max \H(y) - Hx(y)]
+= |[7 + |log|]
+= 4 bits/symbol
+.
+An efficient code, allowing complete correction of errors and transmitting at
+the rate C, is the following (found by a method due to R. Hamming):
+Let a block of seven symbols be Xh X->,
+.
+.
+. X7 .
+Of these X3 , X6 , X6 and
+X7 are message symbols and chosen arbitrarily by the source.
+The other
+three are redundant and calculated as follows:
+X4 is chosen to make
+a =
+A', + X6 + A' 6 + X7 even
+Xo «
+"
+"
+"
+= X, + X3 + X, +
+X-,
+"
+X1 "
+"
+"
+"
+7 = *i + -V3 + -VB + A7
+"
+When a block of seven
+is received a,/3 and 7 are calculated and if even called
+zero,
+if odd called one.
+The binary number a
+7 then gives the subscript
+of the Xi that
+is incorrect
+(if
+there was no error).
+APPENDIX
+The Growth of the Number of Blocks of Symbols With A
+Finite State Condition
+Let Ni(L) be the number of blocks of symbols of length L ending in state
+/.
+Then we have
+_
+Nj(L) = Z Nt{L - b?f)
+Mathematical theory of communication
+where b\j
+,
+b~i,
+,
+.
+.
+.
+£>?,• are the length of the symbols which may be chosen
+in state
+i and lead to state j.
+These are linear difference equations and the
+behavior as L —*
+=c must be of the type
+Substituting
+in
+the
+difference equation
+AjWL = E-l-H'^y"
+i.S
+or
+iS
+E (L H'-
+h "' - Bu)A t =
+0.
+i
+s
+For this to be possible the determinant
+D(\V) =
+\a tJ
+\ = iZTr-
+6'"' -8u\
+,s
+must vanish and this determines IT, which
+is, of course, the largest real root
+of D =
+0.
+The quantity C is then given by
+_
+,.
+Log VAjWL
+,
+...
+C = Lim
+p—-1
+= log
+II
+/. ->oc
+L
+and we also note that the same growth properties result
+if we require that all
+blocks start
+in the same
+(arbitrarily chosen)
+state.
+APPENDIX
+Derivation of // = — 2
+/>, log
+/>,
+("">"") "' >~) =
+•'(")•
+From condition
+(3) we can decompose
+a
+choice from
+s'" equally likely possibilities into a series of m choices each
+from s equally likely possibilities and obtain
+A (sm
+) = m A (s)
+Similarly
+.!(/") =
+;/,!(/)
+We can choose ;/ arbitrarily large and find an
+;;/ to satisfy
+BELL SYSTEM TECHNICAL JOURNAL
+Thus, taking logarithms and dividing by n log s,
+in
+. log
+/
+- m
+,
+» —
+log s ~
+n
+or
+logj
+log 5
+<
+€
+where c is arbitrarily small.
+Now from the monotonic property of A (n)
+A(sm
+) <
+A(t
+n
+) <
+A(sm+l
+)
+mA(s)<nA(t)< (m+l)A(s)
+Hence, dividing by nA(s),
+»
+A(t)
+in
+A{l) ^ m
+.
+n ~ A(s) ~ n
+n
+<
+e
+A®
+A(s)
+logj
+logs <
+2«
+4(5)
+4(0 = -A log*
+where A must be positive to satisfy (2).
+Now suppose we have a choice from n possibilities with commeasurable prob-
+abilities pi = — where the m are integers.
+We can break down a choice
+from S»j possibilities into a choice from n possibilities with probabilities
+pi.
+.
+. p„ and then,
+if the /th was chosen, a choice from m with equal prob-
+abilities.
+Using condition 3
+again, we equate the
+total choice from 2w,
+as computed by two methods
+K log 2«< = H{pi
+,
+.
+.
+.
+, pn) + K2 pi log n
+Hence
+H = K [2
+/>,- log 2 »,- - 2
+/>,• log m]
+= -KZpilog^- = -KZptlogpi.
+If the
+/»,- are incommeasurable, they may be approximated by rationals and
+the same expression must hold by our continuity assumption.
+Thus the
+expression holds in general.
+The choice of coefficient A' is a matter of con-
+venience and amounts to the choice of a unit of measure.
+APPENDIX 3
+Theorems on Ergodic Sources
+If it is possible to go from any state with P >
+to any other along a path
+of probability p >
+0, the system is ergodic and the strong law of large num-
+bers can be applied.
+Thus the number of times a given path p {j in the net-
+MATHEMATICAL THEORY OF COMMUNICATION
+work
+is traversed in a long sequence of length N is about proportional to the
+probability of being at i and then choosing this path, PtpaN.
+If N is large
+enough the probability of percentage error ± 8 in this is less than e so that
+for all but a set of small probability the actual numbers lie within the limits
+(PiPii ± 5)N
+Hence nearly
+all sequences have a probability p given by
+p = up^iVii±SiN
+log p
+and —~
+is limited by
+^ = 2U>,/>,/± 5) log
+/>,-,-
+or
+\ogp
+X
+- ZPipijlogpij
+<v-
+This proves theorem
+3.
+Theorem 4 follows immediately from this on calculating upper and lower
+bounds for n(q) based on the possible range of values of p in Theorem 3.
+In the mixed (not ergodic) case
+if
+L-2pi Li
+and the entropies of the components are Hi > H? >
+.
+.
+. > H„ we have the
+Theorem: Lim -^-^- = f{q)
+is a decreasing step function,
+.V-»oo
+N
+s-1
+«
+ip(q) = H 3
+in the interval ^ a, <
+q <
+J*j
+a,-
+.
+i
+i
+To prove theorems*5 and 6 first note that Fn
+is monotonic decreasing be-
+cause
+increasing N adds a subscript
+to a conditional entropy.
+A
+simple
+substitution for pBi (Sj) in the definition of FN shows that
+FN = N GN - (N -
+1) GN-i
+and summing this for all N gives Gn = -^ 2 FN
+.
+Hence GN > Fy and GN
+monotonic decreasing.
+Also they must approach the same limit.
+By using
+theorem 3 we see that Lim Gs =
+//.
+JV-»oo
+APPENDIX 4
+Maximizing the
+Ratio for a System of Constraints
+Suppose we have a set of constraints on sequences of symbols that
+is of
+the
+finite state type and can
+be represented therefore by
+a
+linear graph.
+BELL SYSTEM TECHNICAL JOURNAL
+Let A-? be the lengths of the various symbols that can occur in passing from
+state i to state j.
+What distribution
+of probabilities Pi for the different
+states and p\'j for choosing symbol s in state i and going to state j maximizes
+the rate of generating information under these constraints?
+The constraints
+define a discrete channel and the maximum rate must be less than or equal
+to the capacity C
+of this channel, since
+if
+all blocks of large length were
+equally likely, this rate would result, and
+if possible this would be best.
+We
+will show that this rate can be achieved by proper choice of the Pi and
+/>,*•
+.
+The rate in question
+is
+ZPwtfitfi
+' M
+'
+Let la = 2 fit'
+Evidently for a maximum
+/>•"•' = k exp /#.
+The con-
+straints on maximization are SPj =1,2^
+P>j =
+1> ^ Pi\P*i —
+&ti) =
+«.
+i
+Hence we maximize
+V = -^P*Pu\og Pu +x£i>,. + ^,p,j + *HPi{t« ~ k,)
+2P< pij tij
+i
+dC _ _MU\±\ogP, ]) + NPqii + x + m +
+p< =
+Solving for />,,
+Since
+/>,,- = .hBjD-
+(i '.
+i
+'
+The correct value of D is the capacity C and the /*> are solutions of
+for then
+or
+MATHEMATICAL THEORY OF COMMUNICATION
+So that
+if X, satisfy
+*Bi
+Bi
+ZliC4" =
+7;
+Pi = Bai
+Both of the sets of equations for B
+, and 7, can be satisfied since C is such that
+\C'(ii - Ba\ =
+In this case the rate is
+ZPipatii
+,
+Bj
+zPiPuHji
+= c
+-'
+vpipiilii
+but
+-/', />,,(log Bi -
+log Bt ) = E Pi log Bj - ZPi log Bi =
+i
+Hence the rate is C and as this could never be exceeded this is the maximum,
+justifying the assumed solution.
+(To be con!in tied)

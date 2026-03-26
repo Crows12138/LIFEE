@@ -1,0 +1,2596 @@
+J. VON NEUMANN
+On inﬁnite direct products
+Compositio Mathematica, tome 6 (1939), p. 1-77
+<http://www.numdam.org/item?id=CM_1939__6__1_0>
+© Foundation Compositio Mathematica, 1939, tous droits réservés.
+L’accès aux archives de la revue « Compositio Mathematica » (http:
+//http://www.compositio.nl/) implique l’accord avec les conditions gé-
+nérales d’utilisation (http://www.numdam.org/conditions). Toute utili-
+sation commerciale ou impression systématique est constitutive d’une
+infraction pénale. Toute copie ou impression de ce ﬁchier doit conte-
+nir la présente mention de copyright.
+Article numérisé dans le cadre du programme
+Numérisation de documents anciens mathématiques
+http://www.numdam.org/
+On infinite direct products
+by
+J. v. Neumann
+Princeton, N.J.
+Introduction.
+1. 
+In the theory of vector spaces two important general
+operations on such spaces are these: Formation of direct sums
+and formation of direct products. It is convenient to recall the
+definitions of these notions.
+A (complex) vector space * is a set of elements f, g, ..., in
+which the operations f + g and (for every complex number a)
+af are defined, and possess the usual properties (commutativity
+and associativity for f + g, associativity for af, both distribu-
+tivities, the existence of 0, and 1f = f, of= 0)1). If a finite
+subset f1, 
+..., f,n of B is such, that every element f of B can be
+written as
+in one and only one way, then fi, ..., fn form a finite basis of B.
+If B1, B2 are two vector spaces with finite bases 1 
+..., f1n
+and f i, ..., f., then it is well known, how two vector spaces
+S8 and 38 can be defined, yvhich have - if proper notations
+M’ is the direct sum B1 E9 B2, U" is the direct product B1 Q9 B2.
+B1 Q9 B2 can be formed without reference to finite bases of
+the definitions
+For
+such a general procedure would be hampered by
+1) 
+In the abstract-algebraical terminology: B 
+is an Abelian group (à modulus)
+with the complex num bers as operators. 
+many difficulties; for Hilbert-spaces a ,,basisless" procedure has
+been given in (7), pp. 127-133 (cf. particularly § 2.2, loc. cit. ).
+that these operations are both commutative and associative, so
+2. These opérations may be studied for Hilbert spaces
+B1, ..., Bk in particular, or somewhat more generally, for unitary
+spaces (cf. § 1.1). Now the application of the operation Q) has
+turned out to be a powerful tool in dealing with Hilbert spaces.
+Two examples may be quoted: The theory of closed and adjoint
+operators, as dealt with in (10)2); and the theory of operator
+rings, (9), where the fundamental Theorem 5 (pp. 393-396, loc.
+cit.) is established with its help 3). Indications of similar possi-
+bilities for 0 exist. It seems reasonable, therefore, to study the
+effects of Q) and Q9 on unitary spaces. By restricting ourselves
+to unitary spaces, we avoid all difficulties connected with the
+possible non-existence of bases, which are extremely serious
+in general vector spaces.
+But if such a detailed study is undertaken, then the generali-
+zation to infinite direct sums and products, B1 (D B2 OE) ... and
+?1 0 B2 0 
+..., seems to be desirable, too.
+3. We say first a few words about infinite direct sums, although
+they will not be the subject of this paper 4). It turns out, that
+?1 EB B2 - - . is not the widest possible generalization. If x
+is a parameter which varies over a space S in which a Lebesgue-
+measure u(T) is defined 5), and if for every x of S a unitary
+which is a unitary space again. (The first example of 5) leads
+2) 
+The space sfdefined on p. 299, loc. cit., which is the basis of the entire
+investigation, is clearly our &#x26;J EB &#x26;J.
+3) 
+The Hilbert space S5 used there is clearly our &#x26;J EB ... 0153 Sj (k addends).
+4) They will be dealt with exhaustively in another publication, which is to
+appear soon.
+5) 
+For instance : S the set of all positive integers, f1(T) = Number of elements
+of T. Or: S the set of all real numbers, 1.l(T) some Lebesgue-Stieltjes-measure
+And this generalization seems to be a very natural and con-
+venient one, because it permits various interesting applications.
+Thus, with its help, the author succeeded in characterising all
+operator rings by means of those, whieh F. J. Murray and the
+author called "factors", and for which an extensive quantitative
+theory exists. (Cf. (7) concerning the ,factors.".) These investi-
+gations permit us to extend the réduction theory of unitary
+group-representations to all unitary spaces (including Hilbert
+spaces), and to connect it with the above mentioned theory of
+,,factors". (This will be carried out in the publication mentioned
+in footnote 4) above.)
+4. Let us now return to direct products. As mentioned in
+§ 2, finite direct products i 0 ... @ &#x26;)n (for unitary spaces
+Sj1, ..., S)n) have been defined in (7), as a tool for the theory
+of ,,factors". we will extend this to infinite ones, jji @ jj © ..., 
+and it will appear, that again a further generalisation is possible,
+but in a totally different sense than for the infinite direct sums
+(resp. direct integrals) discussed in § 3.
+This generalisation consists in permitting direct products
+with any number of factors: If I is an arbitrary set, and if for
+every aEI a unitary space S)(t is given, then the direct product
+n0(t El S)cx can be formed 6). Our main reason for considering all
+these TI0(tEI S)(t is, that while the theory of the enumerably in-
+finite direct products &#x26;)1 (D &#x26;)2 0 ... presents essentially new
+features, when compared with that of the finite &#x26;)1 @ ... 0 S)n,
+the passage from H1 0 H2 0 ... to the general fl©oeei Ha presents
+no further difficulties.
+It seems worth pointing out, that while the generalisations of
+the direct sum point toward the theory of Lebesgue-Stieltjes-
+measure, the generalisations of the direct product lead to higher
+set-theoretical powers (G. Cantor’s "Alephs" ), and to no measure-
+problems at all.
+5. The discussion of infinité direct products H©oee Ha neces-
+sitates a careful analysis of infinite numerical products llocEIZOC
+(the za are complex numbers). As this is done in Chapter 2 in
+considerable detail, we need not speak about it now. Three
+remarks, however, seem to be appropriate (all of which will be
+discussed more fully in the paper):
+First: Infinite direct products IIQ9EI Sjcx differ essentially from
+the finite ones in this, that they "split up" into "incomplete"
+direct products II ® â E r «. The importance of this phenomenon is
+particularly put in evidence by Theorems I, V, VI, and X.
+Second: The generalised notion of convergence ( "quasi-con-
+vergence") of TIcx£Izcx, as described in § 2.5, could be avoided
+if we restricted ourselves ab initio to the "incomplete" direct
+products II 
+(cf. § 4.1 ). This would have another advantage,
+too: If all SJcx are separable, and I finite or enumerably infinite,
+then the IIQ9EI cx are again separable, while II0cxEI S)cx is not. (Cf.
+Theorem V and Lemma 6.4.1.) Thus II0EI S)cx would permit us
+to restrict ourselves to (finite dimensional) Euclidean and to
+Hilbert spaces, while II® « E r« nécessitâtes the use of general
+unitary spaces. 
+But since no real new difficulties arise, and since II0cxE l CX
+seems to be a more natural basis for our considerations than
+li®«Er CX, particularly in the light of the results of Part IV, we
+choose the first alternative. And once II0cxEI S)cx is used, there
+seems to be no reason to insist on l’s enumerability.
+Third: As I may be unenumerable, we must define unenumera-
+bly infinité products iZ« E r « (and sums EAEI zag too). This is
+done in Chapter 2, and causes no difficulties. In particular,
+the complication of "quasi-con-vergence" (cf. § 2.5) arises already
+for enumerably infinite l’s.
+6. An essential result of our theory is, that the ring B# of all
+those bounded operators of II«EI Ha which are generated (alge-
+braically or by limiting-processes) by operators of the Ha, rJ..EI,
+does not contain all bounded operators of II®« E r Sjoc. Its structure
+is exactly determined in Theorems IX and X.
+What happens could be described in the quantum-mechanical
+terminology as a "splitting up" of II ® « E r cx into "non-intercom-
+bining systems of states", corresponding to the "incomplete"
+direct products II0EISj(X. This viewpoint, as well as its connec-
+tion with the theory of "hyperquantisation" will be discussed
+elsewhere.
+Another application of our theory could be made to the theory
+of measure in infinite products of spaces, which is the basis for
+the modern theory of probabilities. (Cf. (2), (3), (5).) Here a
+certain "incomplete" direct product 110EI Sjcx is fundamental.
+This application too, will be discussed in another publication.
+7. 
+Part IV shows in a very characteristic way, how differently
+the various parts of a simply defined subring of B# may behave,
+when the II(DOE,, cx Scx-decomposition of TIQ9acI Sja is applied to them.
+A special example of particular interest is discussed in detail.
+(Cf. in particular §§ 7.3-7.5.) It seems to be essentially con-
+nected with the theory of "factors" of F. J. Murray and of the
+author, (7), and provides particularly simple examples of various
+sorts of such "factors", particularly of the important type
+(II1). ( "Finite-continuous", cf. (7) pp. 172, 209-229.)
+8. A detailed table of contents has been given, to facilitate
+orientation in the paper. AIJ quotations refer to the bibliography,
+(1)2013(15). The notations to be used are fully explained in § 1.1.
+The reader is supposed to be familiar with the general theory
+of Hilbert space, as contained in (8), (12) or (14) and its generali-
+sation to unitary spaces, as given in (4), (12), (13), or (15) (cf.
+1.1, (b)). For Part III at least familiarity with the general ideas
+of (7) or (9) is desirable. In § 7.5 only will results of (7) be used.
+Contents.
+Chapter 4. Decomposition of the complete direct product into
+incomplete direct products. 
+Part III. Operator-rings in direct products.
+Chapter 5. Extension of operators and the direct product.
+Chapter 6. The ring of all extended operators.
+Part IV. Discussion of a special case.
+Chapter 7. Discussion of a special case.
+Bibliography.
+(1) 
+G. BIRKHOFF: Moore-Smith convergence in general topology, Annals of
+Math. (2) 38 (1937), 39201456.
+(2) 
+E. HOPF: On causality, statistics, and probability, Journal of Math. and
+Phys. 13 (1934), 512014102.
+(3) 
+A. KOLMOGOROFF : Grundbegriffe der Wahrscheinlichkeitsrechnung, J. Sprin-
+ger, Berlin (1933).
+(4) H. LÖWIG: Komplexe euclidische Räume von beliebiger endlicher oder
+transfiniter Dimensionszahl, Acta Szeged 7 (1934), 1-33.
+(5) 
+Z. LOMNICKI and S. ULAM: Sur la théorie de la mesure dans les espaces
+combinatoires et son application au calcul des probabilités, I, Fund. Math.
+23 (1934), 2372014278.
+(6) E. H. MOORE and H. L. SMITH: A general theory of limits, American Journal
+of Math. 44 (1922), 102-121.
+(7) F. J. MURRAY and J. v. NEUMANN: On rings of operators, Annals of Math.
+(2) 37 (1936), 116-229.
+(8) 
+J. v. NEUMANN: Allgemeine Eigenwerttheorie Hermitescher Funktional-
+operatoren, Math. Annalen 102 (1929), 492014131.
+(9) 
+J. v. NEUMANN: Zur Algebra der Funktionaloperatoren, Math. Annalen
+102 (1929), 370-427.
+(10) 
+J. v. NEUMANN: Über adjungierte Funktionaloperatoren, Annals of Math.
+(2) 33 (1932), 2942014310.
+(11) J. v. NEUMANN: On a certain topology for rings of operators, Annals of Math.
+(2) 37 (1936), 111-115.
+(12) J. v. NEUMANN: Lectures on operator theory [Princeton 1934, mimeo-
+graphed].
+(13) F. RELLICH: Spektraltheorie in nichtseparablen Räumen, Math. Annalen
+110 (1935), 3422014356.
+(14) M. H. STONE: Linear Transformations in Hilbert space, Amer. Math. Soc.
+Coll. Publications, Vol. XV (1932).
+(15) Y. Y. TSENG: Thesis, Chicago (1932).
+Part I : 
+Preparatory considerations.
+Chapter 1: Notations.
+1.1. We will use the notations of (8), (9) in about the same
+way as in (7). It will be necessary, however, to include non-
+separable hyper-Hilbert-spaces ab initio in our discussions,
+thereby diverging from loc. cit. above. For this reason it seems
+appropriate to give an independent account of the notions and
+symbols to be used.
+(a) oc E S means that oc is an element of the set S, 5 C T or
+T D S that S is a subset of T (including the possibility of S = T).
+The set-theoretical sum of all sets Sa’ oc running over all clements
+possessing a certain property e(lJ), will be denoted by 6( Sa; e(oc» 7) .
+If these Sa may be written as a finite or (enumerably) infinite
+sequence S1, S2, ..., we will write 6(51, S2, ... ) too. If S has a
+unique element x we may write x for S. The empty set will be
+denoted by O.
+(b) A complex linear space with a (Hermitean and definite)
+7) 
+In particular: If oc runs over all elements of a given set I, we write
+BS (SC(; oc EI). In (7) the letter 25 was omitted.
+linear inner product, which is complete, will be denoted by Sj.
+(We will make free use of affixes and suffixes, as many such
+spaces will occur.) In other words: Sj is a space in which oper-
+ations af, f + g, ( f, g) satisfying the conditions A, B, E of (8)
+p. 64-66, are given. Conditions C and D (loc. cit. ) are explicitly
+excepted. (They express the separability and the inf inite-dimen=
+sionality of Sj.) It is known, that in spite of these omissions
+S can be treated almost precisely along the same lines as in
+(8), (12) and (14) (where all conditions A - E are used). In
+particular: A system of elements pa E S, where a runs over an
+arbitrarily given set of indices I, is a complete normalised or-
+thogonal set, if
+Such systems cpa, oc E I do exist, and for ail of them I has the
+same power N = N(S), the dimension of S. (Cf. (15), also (4),
+(13) or (12).) Correspondingly S) will belong to one of the
+three following types:
+is a (non-separable) hyper-Hilbert space. (C holds, D fails.)
+We exclude explicitly the case -- N -- 0, where S = (0).
+Any such S) will be called, for the sake of brevity, a unitary
+space.
+(c) Closed linear subsets of § are denoted by 8R, 91. As they
+are again unitary spaces (except when = (0)), their symbols
+sometimes replace Sj. 
+The smallest linear or the smallest closed linear set containing
+certain sets and elements are denoted by @{...} resp. 5[...].
+(The details of this notation are as in (a), where the smallestx
+set containing them - that is their set-theoretical sum - was
+denoted by 6(...).) 8) The set of all elements of 8R which are
+orthogonal to 91 is a closed linear set, to be denoted by 8R - 9l.
+(d) For operators, rings of operators, etc., we use the same
+notations as in (7), p. 127.
+8) 
+In (7) the letter @ was omitted in all thèse symbols.
+(e ) The topologies to be used in § and in the space B = tB ( S) ) .1
+of ail bounded operators of S), are those discussed in (7), p. 127.
+Considering the cases (1)2013(3) in (b) above, we see: In cases
+(1), (2) (Euclidean spaces and Hilbert space) these topologies
+behave as described loc. cit., and (9), (11). In case (3) (hyper-
+Hilbert spaces) one verifies easily, that the conditions are iden-
+tical with those of case (2), with one exception: The second 
+countability axiom of Hausdorff holds for none of our topologies,
+not even in the unit-sphere of Sj or 0 (defined by Il cp!1  1
+resp. III A III  1).
+Chapter 2: Convergence.
+2.1. 
+Let I be a set of indices of arbitrary size, and let for
+each oc E I a unitary space S)et be given. We wish to define a
+direct product of these Sx, oce I, whieh will be denoted by
+TI0aEI et, under the guidance of the following heuristic prin-
+ciples :
+We desire that II0etEI Sjet be again a unitary space. For
+any given sequence of elemellts f et E Sjet, 
+K runs over I, this
+IT0etEI Sjet shall contain a (symbolic) élément II0etE 1 iet. For
+these elements we require
+The Il , (fa, ga) on the right side of (*) is a numerical product,
+which may have infinitely, perhaps even unenumerably in-
+finitely, many factors. Therefore its convergence is a serious
+question, which must be dealt with by appropriate definitions,
+before a notion of I1Q9aEI S)rx fulfilling our heuristic requirements
+can be satisfactorily described.
+Specialise (*) with fa = ga, then this results:
+This formula shows, that we cannot insist on forming II0aElfa
+for all sequences f« E S)a, oc e 1 :
+(1) Only séquences, rx E l, with a convergent IIaEI Ilfe; Ii 
+I 
+can
+be permitted 10).
+1) We denote the inner product and the absolute value by (rp, w) and Il cp Il I
+if qJ, PE I10aEI5;?et and also by (Jet,get) and Il Jet Il if Jet’ get E5;?et.
+lo) 
+For a finite I the problem does not arise; for an unenumerably infinite one
+IIa El has not yet been defined. But if I is enumerably infinite, it is obvious,
+that HocE, can diverge in the usual sense. 
+Another observation:
+(2) In the définition of convergence to be given, convergence
+of ITaEllifali to 011) may be considered as convergence. But
+sequences fa, cx E I, with ITaEI Il fa Il = 0 are of no importance for
+our purpose, because (**) forces us to define for them IIQ9aE l fa = 0.
+(*) is a relation between two sequences fa, ocE I and ga, oecZ
+and not a property of one. This is apt to be a source of compli-
+cations, except if we manage to secure this:
+(3) If Il.,,E , 11 f. 11 and ITaEI Il ga!! 
+I, converge, then ITaEI (fa’ ga)
+converges too.
+Finally we wish, that our direct products IT@aEI S)a fulfill the
+commutative rule of multiplication unrestrictedly. This makes it
+plausible to require:
+(4) The definitions of convergence for TIa E 111 f ex; /1 and for
+TIaEI (fa’ ga) shall dépend on no ordering of the set I.
+2.2. We proceed now to define the notion of convergence
+for ITaE l za, the Zex; being arbitrary complex numbers, so that the
+desiderata (1)2013(4) of § 2.1 are fulfilled as far as possible. It is
+convenient, to define at thé same time aEI Za too.
+(4) 
+forbids us to introduce any ordering of I. Therefore the
+following définition seems natural 12):
+DEFINITION 2.2.1. aEI Zex; resp. IIEI Za is convergent, and a is its
+value (the Za as well as a are complex numbers), if there exists
+for every ô &#x3E; 0 a finite set Io = Io(ô) C I, such that for every
+finite 
+set J = @(Xi, ..., 1 oc) (the ocl, ..., oc. being mutually
+différent) with 10 C J C I
+COR,OLLARY: The value a of CXEl Zcx resp. IICXEI Zcx is unique,
+if it exists at all (that is: if we have convergence).
+Proof : Let a’, a" be two values. If à &#x3E; 0, choose the corres-
+ponding finite sets I’0 = Io (d ), I’’0 = I’’0 (à ). Put J = C5(I¿, I’’0) =
+@(oe, ..., «n ). J is finite, I¿ C Je 1, I§ C J CI so
+and thus
+was arbitrary, we have
+11) Which, if all Il f X Il # 0, is usually called "divergence to 0".
+12) 
+It is a special case of a notion of limit in "directed sets", due to E. H. MOORE,
+H. L. SlBlITH, and G. BIRKHOFF. Cf. (1), (6).
+2.3. We now derive the basic properties of So 
+1 za.
+LEMMA 2.3.1. If all Zx are real and &#x3E; 0, then z,,, converges
+if and only if the set @( +... + ZOE,.; 
+a1, ..., cc. mutually
+different, and all e I) is bounded. Its value is then the l.u.b. 13)
+of this set.
+Proof : Necessity: If lote i Za converges, then let a be its value,
+and put .Io = 10(1). If oc1, - - ., (Xn are mutually different and all
+E I, then let (Xn+l’ ..., oc. be the different elements of Io, which
+Thus the set in question is bounded.
+Sufficiency and value: If the set 6(za +... + Za ; ocl, ..., an
+mutually different and all E 1) is bounded, then let a be its l.u.b.
+For every ô &#x3E; 0 choose al’...’ an mutuall y different and e I,
+with 
+zZX1 + 
+... + zan &#x3E; a - à. 
+Put 10 = Io(ô) = Éb(&#x26;, ..., cn).
+Now if J = 6(OCl’ ..., ocm) is finite and Jo C Je I (the a1, ..., ocm
+mutually différent), then the ¿Xl’ ..., ân occur among the ocl, ..., ocm
+and so (as all Za &#x3E; 0)
+As 0 &#x3E; 0 was arbitrary, ZOCEL ZOC is convergent, and its value is a.
+LEMMA 2.3.2. If all Zac are real and &#x3E; 0, then LacEI Zoc converges
+if and only if 
+( I ) 
+Zac =1= 0 occurs for a finite or enumerably infinite number
+of (xe7 only, say for the (mutually different) (Xl’ (X2’ ... 14),
+(II) 
+Zac + za2 + ... (in the usual sensé) is finite. Its value
+is then the Zacl + ZOC2 + ... of (II ).
+Proof: Necessity: Denote the l.u.b. of 6(ZPl + 
+... + ZPn;
+Pl, ..., Pn mutually different and E I) by a. 
+If we had
+ZP1’ ..., zPn &#x3E; 0 for some fixed 6 &#x3E; 0, then a &#x3E; zp +... + 
+z.8. &#x3E; no,
+n  :; would ensue. So only a finite number of a. E I with Zoc &#x3E; 0
+exists. Put Ô =: 1 5 2&#x3E; 3 , ... successively ; this proves (I ).
+Form the Xi, «2, ... of (I ). Then zac1 + .... + zacm  a and as
+all z a,, ZCX2’ 
+... &#x3E;0; this implies the finiteness of zac + ZCt2 + .... 
+13) 
+l.u.b. = least upper bound. 
+14) The length of this sequence may be 0, 1, 2, ... or co.
+Sufficiency and value: If (1), (II) hold, thell Za + za2+ ...
+is clearly the l.u.b. described in Lemma 2.3.1.
+LEMMA 2.3.3. If the z,, are arbitrary complex numbers, tben
+EOCEIZOC converges if and only if 2:aEI 1 Za converges.
+Proof: The convergence of aEl Za is clearly equivalent to
+thé combined convergences of EocE, Rza, E oc E , 3z/X 1,I). The same
+is true for aEll Za and XEI 1 ffiza 1, c(EI 13za owing to 
+(Use Lemma 2.3.1. ) So we may consider 9îz,,, zx instead of z,,.
+That is: We may assume that z,, is real.
+Necessity: If 1,,,,z,,, converges, then let a be its value, and
+10 = Io ( 1 ) = @(Yi, ..., 0152n), the a1..., eXn mutuall y different. If
+oc,, ..., ara are mutually different and 
+eX1’ ..., eXn then
+so
+Now dénote the oci, ..., xm with z,, &#x3E; 0 by a1, ..., xs and those
+with ZXi  0 by v.", 1 ..., x,?2-s . Then we have similarly
+and so
+Now if {JI’ ..., {Jp are mutually different, but otherwise ar-
+bitrary, then let 
+xl, ..., am be those 03B21, ..., Pp which are
+(say). So Li.EI z,,, eonv erges by Lemma 2.3.1.
+Sufficiency: Let l’ be the set of all ocE I with z, &#x3E; 0; then
+I - I’ consists of those with Zcx  0. If l:cxEII Zcx converges, then
+zoc,E 1, 1 z. 1, 
+, lac 1 - 1, 11 converge too, by Lemma 2.3.1. But for all
+oc E]’, Zcx = 1 Zex 1, 
+1, and for ail oc E] - ]’, z,, = - 1 z,, 
+1. So CXE l’ Zex’
+15 ) 
+If z = u + iv, u, v real, then Rz = u, T z = v.
+loc Ei -il z converge too, and this clearly implies the conver-
+gence of Eaeizot.
+LEMMA 2.3.4. If the Zex are arbitrary complex numbers, then
+exE 1 Zex converges if and only if 
+( I ) 
+Zex =F 0 occurs for a finite or enumerably infinite number
+of oc E I only, say for the (mutually different) OC1, lf..2’ ... 13).
+( II ) 
+1 zexJ | + 
+1 zex2| + 
+... (in the usual sense) is f inite. Its
+value is then Zx1 + Za2 + ... (in the usual sense).
+Proof : Necessity and sufficiency: Immediate by Lemmata
+2.3.2 and 2.3.3.
+Value : As ,ve may consider c(E[ Rza, exEl SZex instead of exEIZex’
+we may assume that all z. are real. Let I’ again be the set of
+éàll ce E I with za &#x3E; 0, so that I - I’ consists of those with Za  0.
+Our statement holds for exEI’ ZlJ. because here za = | 1 Zao 1, 
+, as well
+as for lJ.E [-1’ ZlJ. because there za = 2013 1 Zex 1. (In both cases use the
+last statement of Lemma 2.3.2.) So it holds for aoEl Zao too.
+COROLLARY: If I is finite, that is I = @(Xi, ..., an ) (the
+a1, ..., an mutually different), then exE[ ZlJ. is alwTays convergent
+and its value is Zao +... + Zan. If I is enumerably infinite,
+n
+that is I = ( «1, oc2, ... ) (the X1, C(2’ ... mutually différent),
+then Scxez Zcx is convergent if and oniy if Zaol + z«2 + 
+... is absolutely
+convergent in the usual sense, and then its value is z,, + Za2 + 
+...
+Proof: Clear by Lemma 2.3.4.
+Our notion of convergence is thus an extension of the usual
+notion of absolute convergence. At any rate exEI Zcx conserves its
+usual meaning for finite sets I.
+2.4. We next discuss Il ex El Zcx, again beginning with the special
+case, where all Zex are real and &#x3E; 0.
+LEMMA 2.4.1. If all Za are real and &#x3E; 0, then
+( ) 
+IIcxE[ Zao converges if and only if either c(E[ Max (za -1, 0 )
+converges, or some z. = 0,
+( II ) 
+llCXEI Zao converges and is # 0 if and only if laE, 1 Zex - 11
+converges and all Zcx =F 0.
+Proof : If any zp 
+= 0, then nCXEI ZOC is convergent and has the
+value 0: Io = io(b) = @(fl) will do for any ô &#x3E; 0. So zfl 
+= 0
+has the desired effect in both (1), (II), and therefore we may
+assume that all z{3 =1=- 0, and diseuss (1), (II ) under this assumption.
+Necessity of (1): Assume that I1exEIZex converges, and that its
+value is 
+a. 
+Put I o = I0(1) = @(ai, ..., cxn)’ 
+the cl, ..., CXn
+mutually different. Let C(1,...’ am. be mutually different and
+But if Zao - 
+1 &#x3E; 0 for all Za., then
+and so
+Now denote the ocl, ..., anz with zai 2013 1 &#x3E; 0 by x’j, ..., ocs.
+Then the above evaluation does hold for (za’1 - 1 ) + ... + (zas -1).
+In other word s :
+By Lemma 2.3.1 
+this 
+establishes 
+the 
+convergence 
+of
+LOCEl Max (za- 1, 0).
+Sufficiency of (I): We will prove below that TICtEIZCt converges,
+if LCtEIlza-II 
+] 
+converges. So we need only consider the case
+where CtEI Max (zoc-l, 0) converges and CtEIIZCt-11 
+| does not,
+that is 16 ) CtEI Max (1-z, 0 ) does not.
+By Lemma 2.3.1 the first statement implies
+for some fixed ao, whenever the ocl, ..., Am are mutually different.
+Hence 
+For the same reason the second statement implies the existence
+of a set of mutually différent a1, ..., am for any given A &#x3E; 0
+such that Max (1 - zîl, 0 ) )+...+ Max (1 - z-,., 0) &#x3E; 4. Clearly
+16) 
+Observe that ) 1 u 1 = Max (u, 0) + i%lax (- u, 0) for all real 2c.
+every &#x26;i with zai &#x3E; 1 could be omitted from this set, so we may
+assume that all z£  1. Now we have
+Any à &#x3E; 0 being given, choose A with eao-A , and put
+Jo = I0(à) = @(c1 ..., cin). Then any finite J with 10 C J C I
+has the form J = @(&#x26;, ..., cin, oe1, ..., (Xm) the âl, ..., an, ocl, ..., (Xm
+being mutually different, and
+Thus n(,£EI Z(’£ converges (its value is 0).
+Necessity and sufficiency of (II): That IIcxElzcx be convergent
+with the value a, all Zcx #- 0 and a :A 0 is clearly equivalent to
+ « EI lnzcx being convergent with the value In a. By Lemma 2.3.1
+this means, that CXEI lIn Zcx 1 be convergent.
+Compare this with the convergence of cxEllzcx-I/. If either
+expression converges, Lemma 2.3.2 requires, that 1 ln Z,, 1 &#x3E; 1/3
+resp. 1 z,,, - 11 &#x3E; 1 occur only a finite number of times. The
+second inequality implies the first one, so we have 1 Zo -11 
+| - 2
+with a finite number of exceptions. Now 
+1 Zcx -11 
+|  1 implies
+3/ Zcx -11 
+|1  /]n Zcx 
+|  21 Z(’£ _1/17), and so the two convergences
+are equivalent by Lemma 2.3.1.
+COR,OLLARY : Explicit criteria for the convergence of II CXE 1 Zcx
+resp. for its convergence with a value "* 0 (all Zcx real and &#x3E; 0)
+can now be obtained by applying Lemmata 2.3.1 and 2.3.2.
+LEMMA 2.4.2. If the Zrx are arbitrary complex numbers, then
+IIOCEIZOC converges if and only if 
+( I ) 
+either TIaEllzal 
+| converges and its value is 0,
+(II) 
+or TIaEI/Zxl converges and its value is *0, and
+£ oe ei ) 1 arcus Za |18) converges.
+In case (I ) the value of TI cx El Zcx is 0, in case (II) it is
+ITaEI 1 Za 1  ei lo,,E , arcus 
+zoe, and thus * 0.
+Proo, f : Necessity: As
+the convergence of TI rxEI Zrx clearly implies the convergence of
+n rx El 1 Zrx 1. It remains to be shown, that when II rx El 1 Zrx 
+| 0,
+then it implies the convergence of 1 ocE , 1 arcus z., 
+| too.
+As IIrxEI Zcx., TICXEllzcx.1 
+| converge, the Jatter with a value *- 0 so
+za 
+Zex. = H j ei 
+areus zoe (all z # 0 necessarily!) converges
+]zoe] 
+too. Let the limit be e, and put Io = Io( 2B/2 7, 0152n)
+(for II ex.E 1 ei .arcus Za;), the cil, .... 0152n mutually different. Consider
+any mutually different xl, .. (lnp all # 
+&#x26;1, ..., 0152n. Then we
+have 
+aiid so
+and therefore excludes
+Considering oci alone instead of a1, 
+..., am, excludes
+and considering
+we obtain 
+Consider now
+oe1 , ..., 9 Y-1 
+instead of a1, ..., am for all 1 = 0, 1, 2, ..., m.
+1 arcus ZCX1 + ... + arcus Zcxll 
+| 
+is 
+0 for / = 0, 
+it changes by
+n
+ arcus ZOtzJ 
+| "2 when 1 is replaced by 1 + 1, and it never
+2 n 
+3n 
+n
+enters the Interval -  u  2013. Therefore it remains always  n
+2 - 2 
+.
+In particular 1 = m gives:
+Denote now those a1, ..., x. for which arcus za, 
+&#x3E; 0 by
+oc 1 ..., a’s, and the others, for which arcus zaj ç 0, by a’’1 , ..., ocm -.g.,
+Then again
+Adding gives
+and so
+(say).
+Thus if fll, ..., f3p are mutually different, but otherwise ar-
+bitrary, then
+Thus Lemma 2.3.1 secures the convergence of 1,,,,Ej 1 arcus z, 1.
+Sufficiency and value: Case (1): As
+the convergence of IICXEI Izcxl 
+| with the value 0 implies the same
+for II /XE 1 Zcx .
+Case ( II ) : CXEI arcus zcxl converges, so /XEI arcus Z/X converges
+too (by Lemma 2.3.3), and with it IICXEIei.arcuszoe. The latter’s
+value is eie, where 0 is the value of CXEIarcus z/X. Now nCXEI 1 z. |
+converges and its value is an a zA 0 so TI /XEI Zcx === II /XEI z., |ei 
+.arcus z.
+converges too, and its value is aeio :A 0.
+COROLLARY: Explicit criteria for the convergence of IIoc,
+resp. for its convergence with a value "* 0 (the z,,, are arbitrary
+complex numbers), can again be obtained by applying Lemmata
+2.3.1 and 2.3.2. For a finite set I = @(Xi, 
+..., (Xn) (the (Xl’ ..., (Xn
+mutually different) in particular, IIef is always convergent
+and its value is Zoc ..... Zcx .
+2.5. We see (from Lemma 2.3.3 resp. 2.4.2): While the
+convergence of £oeei 1 zocl is necessary and sufficient for that one of
+la IE , zcx, the convergence of fl oe e i 1 z,,, is necessary but not sufficient
+for that of H oe ei zoe. This is very inconvenient, because it violates
+our desideratum (3) in 2.1: Choose for each oc e I a qJcxES)cxwith
+We remove this difficulty by defining:
+DEFINITION 2.5.1. I1ocElzoc is quasi-convergent, if and only if
+II OCEll Zcx 
+|1 
+is convergent. Its value is
+( I ) 
+the value of nOCEIZOC (in the sense of Definition 2.2.1),
+if it is even convergent,
+(II) 
+0, if it is not convergent.
+COROLLARY : 
+The value of II « E r « is again unique, if it
+exists at all (that is: if we have quasi-convergence).
+For Zoc &#x3E; 0 we have za = 1 Zoc 1, and so convergence and quasi-
+convergence are then identical.
+Thus we have introduced this convention: If TIocEllz(X1 converges,
+but if Il,,,, Zoc does not, owing to a too vehement oscillation of
+the arcus z,,, (cf. Lemma 2.4.2, (II )) , then we attribute to nOCEl Zoc
+the value o. This convention is somewhat arbitrary, but probably
+simpler and more plausible than any alternative one would be.
+Besides it secures (3) in § 2.1 (cf. Lemma 2.5.2), and leads to
+a workable theory of direct products fl© oeej lijoe, as will appear
+in the subsequent parts of this paper.
+LEMMA 2.5.1. Quasi-convergence of TIocEl Z(’L. with a value =1=- 0
+is equivalent to convergence with such a value. It holds if and
+only if all zoc=l=-O, and OCEIIZCt-II 
+| converges.
+Proof : The first statement is immediate by Definition 2.5.1.
+Now Lemmata 2.4.2 and 2.4.1, (II), give this necessary and
+sufficient condition: Allz,:AO, and :LrxEI Il zrxl-II, II« E r arcus Zetl 
+|
+converge. But clearly
+and so these convergences are equivalent to that one of
+(xEllz(X-11 (use Lemma 2.3.1).
+COR,OLLARY: Explicit criteria can again be obtained by applying
+Lemmata 2.3.1 and 2.3.2.
+In what follows, the values of expressions nE l Z(X will always
+be understood in the sense of quasi-convergence, except where
+the opposite is stated.
+We are now able to prove (3) in 2.1:
+LEMMA 2.5.2. If fa’ ga. E Sja. for all oc E I, and if lIa. El Il fa. Il , 
+,
+nx~7!!gK!! are ( quasi- )convergent, then na.EI (fa.’ ga.) is quasi-
+convergent too.
+Proof: TIa.EI (1Ifa.11) 2, TIa.EI (i ig«1 1) converge along with H oe e&#x3E; ’ if« i i 
+,
+na.E11Iga.ll. 
+. From these we wish to derive the convergence of
+TIa.EI B(fa., ga.)B. 
+. Since an 11 f,, 11 = 0 or !gJ! = 
+0 implies (fa, ga.)= 0,
+Lemma 2.4.1, (1), shows that we need only to derive the
+convergence of loc-EiMax(l(f.,g.)1-1,0) 
+from those 
+of
+Xl oeei Max (lIfa.II)2-1, 0), L-’aEf Max «Ilg.!1)2_1@ 0).
+New ( foe , g« ) )  é (l l foe ’ l) + É (1 1 g« 1 1) , SO
+Now (fa’ ga)  2 (Ilfall) + 
+2 Iigall) , so
+and hence
+So Lemma 2.3.1 gives the desired result.
+Part II: The direct product.
+Chapter 3: Construction of the complète direct product.
+3.1. As in 2.1, let I be a set of indices of arbitrary size, and
+let for each aE I a unitary space jjoe be given.
+We are now able to live up to (1) in § 2.1, and define those
+sequences fa’ ocE I, for whieh II® will be later on (in Defi-
+nition 3.1.3) defined.
+After having obtained these n0aElfa we will form all their
+finite linear aggregates (in Definition 3.1.3) and then ,,complete"
+their space. This could be done entirely abstractly, in the manner
+of G. Cantor, but we prefer to use a specific representation
+by means of "conjugate-linear functionals" (cf. below, and later
+in Definition 3.5.1 and Theorem III).
+DEFINITION 3.1.1. A sequence fa’ oc E I, is a C-sequence if and
+only if frx E a for all aEI, and IIaE! IIfall converges.
+LEMMA 3.1.1. If fa’ a E I, and ga, rx E l, are two C-sequences,
+then TI aE! (fr/..’ gx) is quasi-convergent.
+Proof : Immediate by Lemma 2.5.2.
+Now we define the conjugate-linear functionals, on which our
+construction of II0 aE! Sja will be based.
+We will consider functionals 0, which have complex numerical
+values, and an argument fx for each rx E l, the domain of Ja being
+. We will denote such functionals by (j)(frx; rx El). Another
+possible aspect would be this: The argument of (j) is the sequence
+fa, 
+, cxe I, as a whole. The 0 we shall consider, will however, be
+defined for C-sequences only.
+Whenever it is necessary to consider a particular argument frxo
+(for some fixed oco E I ) separately, we will write 0 
+rxE 1, ce # oeo)
+instead of (jJ ( f rx; ocei).
+DEFINITION 3.1.2. 
+Consider those functionals (j)(frx; rx El)
+which have complex numerical values, are defined for all C-
+sequences frx’ oce I and for those only and which are conjugate-
+linear in each f a0 , rxo El:
+Dénote the set of these 0 by II 0/X El Sj/X.
+TI0/XEI Sj/X is a set of complex-valued functionals, therefore the
+opérations u(/&#x3E; (u any complex number) and 0 + y have an
+immediate meaning for its elements (P, IF. Clearly ul/J, l/J + P
+belong to TI0/XEI /X again (that is, they are conjugate-linear),
+as well as the identically vanishing functional 0. So we see:
+n/XEI Sj/X is a linear space with complex coefficients.
+We will now define certain special elements TI0/XEI f:
+DEFINITION 3.1.3. Given a C-sequence f,’, a E I, Lemma 2.5.2
+permits us to form the functional
+where fx, ae I, runs over all C-sequences, and those only. Clearly
+.f/J E IIOCE 1 Sj{X. Define 
+DEFINITION 3.1.4. Consider all finite linear aggregates of the
+above elements: 
+Clearly TI’ 0!XEl Sj(X C OO « E 1 SjC(, and both sets are linear spaces
+with complex coefficients.
+3.2. 
+In II’ 0 C(El SjC( (but not in n(xE l C(!), an inner product
+can be defined.
+LEMMA 3.2.1. 
+If 0, IFE II’ 0rJ..EI $/lce, that is if
+then Lemma 2.5.2 permits us to form
+This expression depends on rI&#x3E;, P only, but not on the particular
+decompositions used for 0, P.
+Proof: It suffices to prove that (rI&#x3E;, Y) is unchanged, if only
+O’s decomposition is changed, or if only P’s is, changed. As
+(rI&#x3E;, Y) = (W, l/J) 
+(for the same decompositions ! ), we need to
+consider the first case only. Instead of comparing two decom-
+positions of 0, we might as well compare their (formal ) difference
+with 0. In other words : We must only prove (0, P) = 0 for
+0 = 0 (that is, identically 0(fa; a E I) = 0), for every possible
+decomposition of this 0.
+Now in this case
+LEMMA 3.2.2. 
+(0, P) is linear in 0, conjugate-linear in P,
+and of Hermitean symmetry in 0, Y:
+Proof : The uniqueness of (W, Y) being established, all these
+formulae are obvious.
+Proof : Immediately by our definition of (..., ... ).
+3.3. Before we can continue the discussion of (tP, zl’) we must
+introduce and analyse a notion of equivalence for C-sequences.
+DEFINITION 3.3.1. A sequence foc’ ex E I, is a C0-sequence, if and
+LEMMA 3.3.1. Every Co-sequence is a C-sequence, too; every
+C-sequence with IIQ9aEI fa =1= 0 is a Co-sequence, too.
+Proof : The first statement follows from Lemma 2.4.1, (I), the
+second one from Lemma 2.4.1, (II), if we replace II(D,,, f, zA 0 by
+naEI Ifall =1= o. But the first inequality implies the second one.
+We argue a contrario: naEI 11 f,,, 11 = 0 implies for every C-sequence
+and thus the two convergences are équivalent. (Use Lemma
+2.3.1.) 
+DEFINITION 3.3.2. Two Co-sequences frx’ oeei and gx, oeel
+are equivalent, in symbols (foe; a E I ) (gx; a e I ), if and only if
+LrxEI 1 (frx’ grx) - 1B 
+I converges.
+LEMMA 3.3.3. 
+The equivalence ~ for Co-sequences is reflexive,
+symmetric, and transitive:
+Proof: Ad (I): Obvious by Lemma 3.3.2.
+Ad (II): Obvious as
+are convergent, m-e must prove, that
+verges too.
+are all bounded, say  C. We hav e reached our goal, if we can
+prove
+for some constant D, a finite number of exceptions oc being
+permissible. (Use Lemma 2.3.1.)
+and except for a finite number of
+Then
+Now
+We will now evaluate this expression, using 1 01  1/2, and
+Dl, D2 will be constants yvhich depend on C. The first term
+is clearly
+As to the second term, observe that
+and both expressions are
+Thus
+Combining, we obtain that
+with a finite number of exceptions a. But this is the desired
+inequality, and so the proof is completed.
+DEFINITION 3.3.3. The equivalence ~ decomposes the set of
+all Co-sequences into mutually disjoint equivalence-classes.
+(Cf. Lemma 3.3.3. ) Denote the set formed by these equivalence
+classes by F, and the equivalence-class of a given Co-sequence
+Theorem I. If two Co-sequences fa’ a E I, and grx, a El, belong to
+two different equivalence-classes, then (IT0aElfa’ II0rxEI ga) === o.
+If 
+they 
+belong 
+to 
+the 
+same 
+equivalence-class, 
+then
+(II0aEI fa’ II0aEI goc) = 0 if and only if some ( fa, goe) = 0.
+Proof: Clearly (IT0aElfa’ II0aEI ga) = TIaEI (fag ga) (in the
+sence of quasi-convergence), and so our statement coincides with
+that of Lemma 2.5.1.
+Some additional information about ~:
+Proof: In other words : These convergences are equivalent to that
+are convergent by Lemma 3.3.2, we may as well compare with
+Now
+and the convergence of CXEIZtX is always equivalent to the
+the proof of Lemma 2.3.3). This completes the proof.
+LEMMA 3.3.5. (fa.; (J. El) R; (ga; a E I ) if f, e ga occurs for a
+finite number of oc’s only.
+Proof : Clear by Lemma 3.3.4, 
+as 
+fa. = ga 
+implies
+The Lemma which follows deserves some attention, as it is
+a very characteristic consequence of our conventions attributing
+values to quasi-convergent (but not convergent) expressions
+II ex. El ZCX.
+LEMMA 3.3.6. Let the z,, be arbitrary complex numbers, and
+TI CXE l Zcx quasi-convergent.
+Remark : Combining (III), (IV) with Theorem 1 shows, that
+whenever (t) fails to hold, we have
+Proof : Ad (I): As IIetEIIZetl, IIetElllfetl1 
+Î converges, so does
+and thus cxEllllzcxfcxll-11 
+I converges. (Use Lemma 2.3.1.)
+Ad (III): 
+(t) 
+means, 
+that 
+(I1QSJCXEI zcxfcx) (ga.; rfw E I) ==
+= TIa.EIZCX. (TIQSJa.Elfrx)(gcx; ocEI) for ail C-sequences goc, (XEI, that
+is H oe ei (z«f« , g« ) = H «ei z« . H oeei( foe , goe). 
+put zl = ( f« , g«),
+then this formula becomes
+20) By Lemma 2.4.1, (II), this is certainly so, if IICXEI zoc 1 # 0. A fortiori,
+if floeel z,, does not converge or is #- 0.
+Now it is easy to verify, that this formula holds, if one of the
+two factors on the right side is convergent, while the other need
+only be quasi-convergent 21). (Use Lemma 2.4.2.) Thus in case
+(t) fails, both TI rxEI za. and TI rxEI z are not convergent. This
+excludes (by Lemma 2.4.2, (1)) 
+llrxeI 1 z1 = 0. As 1 z1 =
+= ) ( f« , g« ) )  1 1 f« 1 1 1 1 g« 1 
+~ and as TI E 1 ilfrx Il, 
+, TI a.E 1 Il ga. Il 
+~ converge,
+it excludes TIa.EI Ilfa.11 == 0 too, and llrxEl (IIfrxll) 2 === 0 too. Now
+(TIQ9rxe] fa.) (fa.; OCEf) = TIrx E](frx, frx)= TI a.E] (lif rxll) 2 #0, TIQ9a.E] fa. #0.
+So llrxEIZrx is not convergent, and II@rxElfrx * 0 if (f) fails.
+This implies rxEllzrxl*o (cf. Lemma 2.4.2, (1)), and so the
+convergence of rxE/llzrxl-11 (cf. 20)), together with Za. #0;
+and further the Co-sequence character of fa’ oe el (cf. Lemma
+3.3.1). Thus Zrx’ fa fulfill the assumptions of (II).
+Ad (IV): 
+: rxElllzal-11, 
+, rxEllllfa.II-11 converge by assump-
+tion. Equivalence of fa’ oc E I, 
+and zrxfrx’ r:t. El, 
+means that
+Sc 
+1 (Za.fa., frx) - 11 i = £ « e i 1 z«  , i ,f« 1 1 &#x3E;2 - i converges. Now Ilz(XI-II 
+~
+is bounded, so 
+1 Za. 
+| 
+is too, say  C. Thus
+Il Za. - 11 - 1 Za. (! 1 f rx Il )2 - 111  1 (zrx - 1) - (za. (II f rx Il )2 - 1) 
+1 ===
+= ( z« ( ( 1 1 f« 1 1 ) - i ) Î  CÎ ( ’ ’ f« ’ Î l - i Î 
+,
+therefore rxE]llzrx-II-lzrx(lIfrxI1)2-111 
+| converges (use Lemma
+2.3.1), and with it Xl ce i ( ] z oe - i -lzrx(lIfrxll)2- 11)). (Use Lemma
+2.3.3. ) Thus the convergence of c(EI Iza. (1lfrxll )2-11 
+I is equivalent
+to the one of 1 oc E 1 1 zoc - 11. This proves the first part of (IV).
+Make now the additional assumption that all Z,,, :A 0. The
+convergence of exEI Zex is equivalent to the one of S(xe7 ! arcus Zex 
+(use Lemma 2.4.2, ( II ), we have TIcxEllzexl 
+| =0 by Lemma 2.4.1,
+(II)), and this is equivalent to the convergence of exEllzcx-II,
+because of
+We have TIO:Ezlzo:l 
+1 +/ 0 (by Lemma 2.4.1, (II)), and so if
+TI O:E Z Zo: converges, it is necessarily ~ 0 too (by Lemma 2.4.2 22).
+Thus the convergence of Il,,,, z,,, can be eharacterised by Lemma
+2.5.1: It is equivalent (as all z,,, :A 0) to the convergence of
+ Ci. El 1 Zo: - 11. This proves the second part of (IV).
+We will see the effect of this Lemma later in § 6.2. This is
+an infèrence, which could have been obtained directly, too:
+21) 
+If both are quasi-convergent, it may not hold: Put
+where n  Ba  n, anci E 0,,E 11 1 Ba does not converge.
+22) 
+Mere quasi-convergence would not imply this ! 
+LEMMA 3.3.7. Each equivalence-class (S contains a (C0- ) sequence
+fa, oe e I, with Il f B1.11 = 1 for all oc e I.
+Proof : Choose ( f§ ; ce e I) e OE. As I:/XEI Illfll- 1B converges,
+therefore 
+we have, 
+except for 
+a finite number of cx’s,
+Every sequence f0a,v, 
+, alci is a C-sequence. For each one which
+is not a Co-sequence, Lemma 3.3.1 gives 11®«EI fa,y = 0, so we
+can omit all such terms. We may therefore assume, that all
+fa,v, (J.. E l, 
+are Co-sequences. Denote the equivalence-class of
+fâ,v, xe7, by 0152v. Denote the different ones among the (Si, ..., 0152p
+by D1, ..., Dq (clearly q = 1, ..., p). Let Ni be the set of those
+v = 1, ..., p, for which 0152v = Di (i = 1, ..., q).
+Now put
+But
+Each term is convergent, therefore this will certainly be
+if we can show
+for every set of mutually different elle, ..., os.
+Put (f,v’ f’J1J 
+= a" . Then for any (complex) x1, ..., xp
+So the matrix (af1)’V’fl=l,...,P is semi-definite for each a E I. 
+Therefore it is the sum of p semi-definite matrices of rank 1 23),
+that is of p terms of the form u’ u’ . Thus
+is a sum of ps terms of the form
+23 ) 
+This statement is orthogonal-invariant; therefore it suffices to verify it
+when a:jl has the diagonal form : a" 
+= a:V-jl. (Q=l or 0 if e=0 resp. #0). The
+semi-definiteness implies ai &#x3E; 0. Now a’ = Y-’. ace ,,, the a;vlt 
+= a" Ô,_ ,ô
+being the desired matrices.
+LEMMA 3.4.3. 0 :y,- 0 implies Ii (]J 112 = (0@ 0) &#x3E; 0.
+Proof : By Lemma 3.4.1 always Il (])112 = (OE, 16) &#x3E; 0, so we must
+only infer 0 = 0 from Ill/JII = 0.
+Now il 0 Il = 0 implies (Pl Y))  Ip 
+]] Y]) = 0, (P, W) = 0
+for all IF by Lemma 3.4.2. Put Y = II@cxElf, then this becomes
+(/J( J’ex; a E I) = 0 by Lemma 3.2.3. As fcx’ « E I, was an arbitrary
+C-sequence, necessarily 0 = 0.
+Theorem 1I. With the (0, P) of Lernma 3.2.1, TI’ Ç?)CXEI S)cx is a
+(complex) linear space with a (Hermitean and definite) linear
+inner product, that is, it satisfies the conditions A, B of (8),
+p. 64.
+Thus it can be metrised by defining :
+Proof : This follows from Lemmata 3.2.2, 3.4.3, remembering
+(8), pp. 64-65.
+II@(£EI is 
+not necessarily complete (condition E of (8), p. 66),
+and this prescribes the course of our further constructions.
+3.5. LEMMA 3.5.1. We have Il fl©aei f%]) = Il,,,, , )] f%)] and for
+every (]J (E II Q9EI (£)
+Proof : By definition
+Now Lemmata 3.2.3 and 3.4.2 (Schwarz’s inequality) give
+DEFINITION 3.5.1. Consider those funetions (/) E I1@(X E l S)(X for
+which a séquence 0,, (/)9.,... E II’ ©m , r SJrv exists, such that
+’rhe set they form is the complete direct product of the s)cx, oe e I,
+to be denoted by Ilo,,, , , SjC(. The relations (I ), (II) will be denoted
+LEMMA 3.5.2. 
+If a sequence 0,, (/J2’... E II ©oeei #ce satisfies
+condition (II) in Definition 3.5.1, then there exists exactly one
+OE e TI0rJ; E l S)C( with 0 = L (P,. f 
+r---&#x3E;, oo
+If 0 = L Or, then all sequences Yi, P2,... E TI0C( E 1 SjC( with
+r--&#x3E; oo 
+(p = L IF, are characterised by lim 11 Or - IF, 11 = 0.
+r--&#x3E;oo 
+r--. 00
+Proof: We have (by Lemma 3.5.1)
+for every C-sequence fx. So (II) gives
+and thus the (numerical) lim (j)r(flf.; r:J.. El) exists. Denote it by
+r--&#x3E;oo
+(j)(flf.; r:J.. El). Clearly 0 is a functional E nlf.EI Sjlf.. By ;on-
+struction (I), (II) hold, so (j) === L or. Thus tP E II®«I SjIX’ 
+and 0 is unique by (1). 
+r-+ 00
+As to the second statement, we may replace 0, tPr, Pr by 0,
+- 
+Pr, 0. So we may assume 0 = YJr = 0. Thus we must
+prove, that
+are équivalent to lim 
+[ r [ [ = U.
+r--&#x3E; oo
+Sufficiency: If lim Il Pr:1 =0, then B Pr(fa; « El)  Or 
+TIaEI ifa!1 
+~
+T-.¿. 00
+(use Lemma 3.5.1 ) gives (I )’, and IIPr - PslB  Prll + IIà&#x3E;sl 
+i
+gives (II)’.
+Necessity : Assume (1)’, (II)’, and the invalidity of lim Il Prll [ = 0.
+r--&#x3E; -0
+Then there would be 
+Il Prll &#x3E; a for a f ixed a &#x3E; 0 and infinitely
+many r’s. Now (1)’ means lim (Pr, II0aEI fa) = 0 (use Lemma
+r-+ 00
+3.2.3), and so lim (Pr, Q) = 0 for all Q 
+E TI’ 0aEI S)a. Now choose
+r-&#x3E; o0 
+an ro with !11B1I &#x3E; a 50 great, that r, 8 &#x3E;ro imply lIPr - Psii  :
+(use (II)’), and put Q 
+=: Pro. Then we have for r 2 ro
+LEMMA 3.5.3. If (]J, 1Jf E TI00c E 1 SjOC’ that is
+then lim (1&#x3E;r, Pr) exists. Denote it by (0, Y). This quantity
+r-* 00
+depends on W, Y only, and not on the particular representation
+used. If fJJ, P E TI’ 0(J.,EI SJx’ then it agrees with the previous
+definition.
+Proo, f : 
+We have lim 110,- 0,11 =0, lim IIPr-PsII==O,
+r, s-ce 
+r, S --&#x3E; c’O
+these imply by Sehyvarz’s inequality lim 1 (1&#x3E;r, Pr) - (4)s, Ps)B = 0,
+r, s-&#x3E; oo
+hence iim (0,, Pr) exists. If fyrther P = L P’, Y’ = L Y’ then
+r --&#x3E; -0 
+r--&#x3E; ao 
+r--&#x3E; 00
+we have lim Il Or - Çb’till =: 01 lim IF, - P,! 0 (use Lemma
+r--&#x3E; oo 
+r--&#x3E;oo
+3.5.2), and Schwarz’s inequality gives lim B (1&#x3E;r, Pr)-(4);, P;)I ===0,
+r-+ 00
+hence lim (CPr, Pr) lim (0’, P;). Thus lim (or, Pr) depends on
+r--&#x3E; -o 
+r--&#x3E; -0 
+r--&#x3E; 00
+OE, Y only.
+If 1&#x3E;, P E II’ 0(J.,E 1 SJ(X’ then we may put all Or = 0, Pr = IF which
+makes it clear, that the new (0, P) agrees with the old one.
+LEMMA 3.5.4. In II0(J.,EI Sj(J.,’ (0, y) is linear in 0, conjugate-
+linear in IF, of Hermitean symmetry in 0, IF, and definite. Together
+with 114&#x3E;11 = y’ (1&#x3E;,4» &#x3E; 0 it fulfills Schwarz’s inequality. (Cf.
+Lemmata 3.2.2, 3.4.3, 3.4.2, where the corresponding statements
+are made for II’ 0(J.,E l Sj(J.,.)
+Proof : All these properties, except definiteness, follow by
+continuity from Lemmata 3.2.2, 3.4.2.
+(0, P) &#x3E; 0 follows by continuity from Lemma 3.4.1. 
+If
+(0, 0) = 0, then choose 0,, 0,, ... e H’ ©aei with 0 = L (pr-
+r-&#x3E;oo
+Then lim Il 4&#x3E;r112 = lim (1&#x3E;r, Or) = (0, 0) = 0, lim lI1&#x3E;rll = 0. Thus
+r--&#x3E; oo 
+r--&#x3E;00 
+r--&#x3E; oo
+Lemma 3.5.2 gives 0 - L 0 = 0. So 0 0 implies (0, 01 &#x3E; 0,
+r--&#x3E;oo
+proving the definiteness.
+LEMMA 3.5.5. With the (0, Y) of Lemma 3.5.3 II0(J.,EI SJ(X is a
+(complex) linear space with a (Hermitean and definite ) linear inner
+product, that is, it satisfies the conditions A, B of (8), p. 64.
+Thus it can be metrised by defining:
+Distance (0, P) = Il fi&#x3E; - Pli, 
+, 
+where Il 1&#x3E; Il I = vi (fi&#x3E;, 1» &#x3E; 0 (cf.
+Lemma 3.5.4).
+il’ @(XEI S)0153, as described in Theorem II, is a linear subset of
+TI@C(EI C(’ with the same définitions of ufJJ, fJJ::!: YI, (0, YI), Il fl&#x3E;11. 
+Proof: The first and the second part follow from Lemma
+3.5.4, remembering (8), pp. 64 - 65; the last part follows from
+Lemma 3.5.3.
+Lemma 3.5.6. Lemmata 3.2.3 and 3.5.1 
+hold for 
+ail
+Proof: They hold for all elements of
+, then they hold for all rpr. Now Definition
+extend them by continuity to
+Sufficiency:
+by Lemma 3.5.6 (3.5.1), and (II) eod. by
+LEMMA 3.5.9.
+is topologically complete, that is, it
+For each
+Thus Lemma 3.5.2 secures the existence of
+this complètes the proof.
+Theorem III. With the (0, U) of Lemma 3.5.3 IIQ9cxEI lijoe is
+a unitary space, that is, it satisfies conditions A, B, E of (8),
+pp. 64-66. It is metrised as described in Lemma 3.5.5.
+Il’ © oeej S)cx, as described in Theorem II, is a linear and everywhere
+dense subset of IT0cxEI S)cx, "vith the same définition of uW, W + Y,
+(01 U’), ll wll.
+Further essential properties are given in Lemma 3.5.6.
+Proof : This follows immediately from Lemmata 3.5.5, 3.5.9,
+3.5.8.
+3.6. The importance of this unitary space l1@cxEI Sj becomes
+clear in the light of the following Theorem:
+Theorem IV. Consider a unitary space H with the folloiving
+properties:
+(I) For every C-sequence (or alternatively: for every Co-
+( III ) The finite linear aggregates of the IlQ9£l fa. form a set Sj’
+whieh is everywhere dense in Sj.
+This is equivalent to the existence of an isomorphism of jj
+and II®« E r Ha, under which each 1Z® E r f « corresponds to
+IIQ9cxElfcx. This isomorphism is unique.
+Proof: Sufficiency: H = H©oeei Sjcx’ oc = 
+H©oeeif« possess
+the properties (I)-(III) by Theorem III. (As to (III), in the
+case of Co-sequence, observe that the non-Co-sequences fcx’ ocEI,
+do not matter: Their 05 
+by Lemma 3.3.1.) And
+this is unaffected by isomorphisms.
+Necessity: Assume, that Sj and IIQ9Elfcx possess the properties
+(I ) - (III) (either for all C-sequences, or for all Co-sequences).
+Let H©§ej foe in jj correspond to IIQ9cxEI fcx in II’ Q9cx£I cx. This
+correspondence leaves (tP, P) invariant, as (II ) holds both in jj and
+in II’ Q9CXEI Sjcx. Therefore we can extend it (in a unique way ) to a
+linear correspondence between Sj’ and II’ Q9cxEI Sjcx. (In the case of
+Co-sequences remember the remark in the sufficiency-proof. ) This
+still leaves (W, Y) invariant, and with it ]]W]] = V (l/J, l/J) and
+Distance (l/J, P) = 110 - 11111. 
+. Thus it is one-to-one and isometric.
+Therefore this correspondence extends by continuity (in a unique
+way) to a one-to-one and isometric correspondence between
+the closures of lij’ and of II’ Q9cxEI Sjcx’ that is between H and
+fl©oeei #ce. By continuity this correspondence is again lineair,
+and leaves (0, Il) invariant. Thus it is an isomorphism. And we
+have already observed, that it maps IIQ9:Elfcx on TI0cxElfa..
+Uniqueness: Obvious by the above construction of the iso-
+morphism.
+We see in particular, that if I has only one element, say rxo,
+then lij = jj with H©§ejfoe = foe fulfills the requirements of
+Theorem IV. So IT00cEI Sjoc is isomorphic to Sjoco. But Sjoco is simply
+the set of all Ho)ej foe, so Hooeej #ce is the set of all TI00cEI foc’
+and so a fortiori equal to fl’ ooeei Joe. It is easy to verify, that
+this is not generally true, if I has two or more elements.
+We make use of this isomorphism to identify the elements
+which correspond under it. 
+So we have n0(x~/@x==@xo?
+110xElfoc = fa0 if oc, is the only element of I.
+For every finite set I our construction of Hooei coincide
+with that one of (7), pp. 127-131. (There I is the set @(1, ..., n)
+n
+and H©oeei S)oc is written TI0 S)i.) The discussion of these I can
+bd found there, too. 
+i=1
+If I is finite, then our Definitions 3.3.1, 3.3.2 show, that every
+sequence fa, a E I is a C- and even a Co-sequence, and that any
+two such sequences are equivalent. So h (cf. Definition 3.3.3)
+consists of one equivalence class only. As we will see in Lemma
+6.4.1, F consists of infinitely many equivalence classes, whenever
+I is infinite.
+If a closed, linear subset Ma A (0) of each s;,oc is given, we
+can form 9NOt. The II(Do,,, f,,, (foc E SJJtoc, and foc’ rx E l, a
+C-sequence) which vve need for this construction, may be denoted
+by fi00cEI flX in order to distinguish them from the TI00cEI fa of
+II00cEI S)oc. Consider finally the TI00cEI foc (in II00cEI CX) with
+f « E SJJtoc, and denote the closed, linear set, which they determine,
+by ÏÏ00CEI WCoc (C H©oe ei soc). Now apply TheoremIV (to TI00cEI moc,
+iÍ0cxElfoc in place of Il 
+§x. II0cxElfoc)’ putting Sj=fiQ9OCEI Ma,
+TI0EI foc = IT0aEI foc (here f E moc). Then an isomorphism of
+II00cEI IDCoc with n0o3Rx results, which carries lZ ® « E r f o into
+II00cEI fa.
+We make use of this isomorphism, to identify the elements
+which correspond under it. 
+Thus il©oeej imcx = ÏÏ00CEI imoc,
+TI0aEI foc = II0aEI foc. So we have now II(DAE, ma C TI0aEI Sja if
+H©«ei fa = H©aei fa. So we have now H©aei lJla C Hoej jj if
+all Ma C S)oc, and their II00cE l fa agree if all fr/w E Ma.
+Chapter 4: Décomposition of the complète direct
+product into incomplète ones.
+4.1. DEFINITION 4.1.1. If (Se F is an equivalence-class, then
+let TIQ9El Sja. be the closed linear set determined by all
+TIQ9a.Elfa. where f,,,, ocEI, is any Co-sequence from OE. Clearly
+Il®OGEI "c’« C -‘®OCEI ’c’«’
+This n0(xe/@x is an incomplete direct product of the &#x26;ja.’ oe el,
+more specifically: It is the 0152-adic incomplete direct product.
+LEMMA 4.1.1. The TI0EI &#x26;ja.’ for all 
+are mutually
+orthogonal, and the closed linear set they determine is
+TI0a.E l Ha.
+Proof : Assume OE, ’ZE T, 0152 #-:). Consider two Co-sequences
+(f,,,; oc E 1) e OE, (ga.; oc E 1) E:). Then (fa.; 
+oc E I) j (ga; oc E I), so
+by Theorem 1 TI0a.Elfa. is orthogonal to TI0a.EI ga.. Therefore
+TIQ9a.Elfa. is orthogonal to all fl©lei #ce, and again all TI@EI Sja.
+are orthogonal to all ll(S)Z Sja..
+TI0a.EI Hx is the closed, linear set determined by all II0a.Elfoc
+where fa., oc El, runs over all C-sequences. By Lemma 3.3.1. it
+suffices to let it run over all Co-sequences. But each Co-sequence
+belongs to some 0152 E r, so II@a.El a. is a fortiori determined by
+all Il0EI Sja., 0152 E r.
+LEMMA 4.1.2. Consider an 0152 Er, and a Co-sequence (fi; xe I),e OE
+with ]] f£ ]] = 1. (Cf. Lemma 3.3.7.) Then II®EI « is the elosed,
+linear set determined by all Co-sequences fa.’ oc E l, for which
+fa. YS occurs for a finite number of oc’s only.
+Proof: Let §2* be the closed, linear set which these I1@OCElfoc
+determine. Lemma 3.3.5 secures H* Cn0EI Ha. If we can prove,
+that TI@a.El fa. E Sj whenever (fa.; oc El) E 0152, 
+then necessarily
+fl©§Îei Ha. C H*, and so Sj* === oc 
+Sjoc’ completing the proof.
+Assume therefore (f,,; cc E I) E (S, that is (foc; oc E 1) (fg; oc El).
+That is: a.EI I(fa.,f) -1B converges.
+If 1 1 H©« e i f« 1 1 = H« e i l lf« i l = °, then H© « e i f« = 0 e #* . We maY
+assume therefore, that TIa.Elllfa.11 =F 0.80 Il fa. Il 0, and TIa.EI /1 fa Il 
+I
+converges and is # 0. So for z = Ilfl! 
+&#x3E; 0, !:acE[ 1 Zac ,- 11 converges
+by Lemma 2.4.1, (II). Now Lemma 3.3.6, (III), (IV), apply:
+(za.fa.; oc El) 6Ë too, 
+and TI0a.EI za.fa. === Ila.El Za.. » 
+-
+= nacE:[[f", ° H©oeeifoe, S° II(DOCEifoc = TIacE! llfx l! ° H© oeel Zoefoe° S°
+we may consider the Co-sequence zafa, oc E I, instead of fa’ r:J.. El.
+But IIZafal1= zallfall i 1. So ive see: We may assume Ilf,,,Il = 1
+for all (X El.
+Choose a Ô with 0  ô  1, and then a f inite set J = e;( (Xl’ ..., ocn ),
+Clearly II(xEI (foc, f0a) is convergent (not only quasi-convergent).
+For any mutually different Pl’...’ Pm E I - J we have 24)
+Therefore
+Define now
+Then clearly
+As our ô, 0  à  1, was otherwise arbitrary, this means that
+nQ9Elf(X is a limit-point of Sj*, and therefore belongs to Sj*.
+Thus the proof is completed.
+LEMMA 4.1.3. If fao is a fixed element of §2, and if the
+frx’ (X"* (Xo, are held fixed, so as to form a C- (or even a Co-)
+sequence25) then nQ9EI fa is a linear and continuous function
+of f « .
+Proof: We have clearly 26)
+24, Due to the easily verifiable inequality
+25) 
+Clearly neither fact depends on the choice of f .
+(a0
+26) 
+In order to be able to handle the factor cx = (Xo separately, we shall write
+S)cxo 0 II0cx El, CX # CXo Sjcx and foe © H©« ei , « # «nfoe for II0cx El Sjcx and
+ll0cxEI tcx respectively.
+These formulae prove all statements of our Lemma.
+LEMMA 4.1.4. Consider an (Se F. Select from E a sequence
+fx, oc E I, with )) f£)] = 1. (Cf. Lemma 3.3.7.)
+Let Ncx be the dimensionality of S)cx. Use a set of indices Krx
+of power Ncx, and form a complète normalised orthogonal set
+CPcx, {3’ fJ E K rx’ in S)cx. Make these choices in such a manner, that
+0 E Krx, and oc , 0 - oc ° 
+Let F be thé set of all functions 03B2(03B1), which are defined for
+all oc E I and for those only, such that oc E I implies fJ( oc} E Kcx,
+and such that #(ce) # o occurs for a finite number of oc’s only.
+Then, if 03B2(x) runs over all F, all IIQ9cxEICPrx,{3((x) exist, and they
+form a complète, normalised orthogonal set in II0EI §,.
+Proof: As Àl ce e i ) ) ] qoe , fl ce&#x3E; ) ) - 1 ) = Àl ce e ] l - 1 [ = £ i o conver-
+ges, all sequences CfJrx, [:J(rxh ocEl are Co-sequences, and so all
+TI0rxEI CfJrx, f:Hrx) 
+exist. 
+As 
+qJrx, (3(rx) iA cp«, o = f« 
+occurs only if
+{3( l/..) *- 0, 
+that is 
+for 
+a finite number of 
+oc’s, 
+we have
+(C{Jrx, (3(rx); oe eI ) sw ( f£; a E I) (use Lemma 3.3.5) and so (qJrx, (3(rx); l/..EI) E OE,
+Il0rxEI CfJrx,{3(rx) E 11®x EI S)rx.
+(TI0rxEI CfJrx,{3(rx)’ TI0rxEI qJrx,y(rx») 
+= TIrxEI (CfJrx,{3(rxb qJrx, y(rx»). 
+If
+((x)=y((x) for all a E I, then all factors on the right side are
+= 1, and so this expression is = 1. If fl(a) =Ay(oc) ever occurs,
+then the corresponding factor on the right side is 0, and so the
+expression is 0.
+Thus the TI0rxEI CfJrx,{3(rxh {3(l/..) E F, form a normalised, orthogonal
+set in IIâEI jjoe. It remains to prove, that it is complète. Let S)*
+be the closed, linear set determined by the ll0rxEI qJrx,,8(rxh 03B2(03B1) E F.
+Then we must prove, that S)* contains oc 
+S)rx. Owing to Lemma
+4.1.2 it suffices to prove,, that it contains all those II® « E I f« E ’
+for which frx =F f occurs for a finite number of oc’s only.
+Consider this statement S, (n = 0, 1, 2, ... ) : If
+(I)n the number of those l/..’S for which fa gg,,, @,6 (for all fle Ka)
+is - n, and if 
+( II ) the number of those ot’s for which fx =f= qJrx,o = f£ is finite,
+then fI©«ei foe E @*- 
+50 is true: If foe, oce I, satisfies (I)0, (II), then frx = Prx, (3(rx&#x3E;,fJ( x) E F,
+so IIQ9rxEI frx = IIQ9rxEI qJa.,{3(rx&#x3E; E Sj*. Assume now, that S.-, holds
+for some n - 1, n = 1, 2, ..., and consider Sn. Let frx, oce I,
+fulfill (I)n, (II ). Denote the oc for which foe # çoe, # by a1, ..., an.
+We ask: For which gan E Sjrxn is grxn 0 II®aEr, rx#rxn frx E Sj*? These
+ga form a closed, linear set 9t in S)(Y.n’ considering that S)* is
+one, by Lemma 4.1.3. Every qJrxn,{3 E 91, as we assumed the
+validity of S.-,. So 91 = 5)rx , and in particular frx e in. That is,
+n 
+n
+IIQ9rxElfrx ===fi/..n @ IIQ9rxEI, rx#rxnfrx E S)*, proving Sn. Thus all state-
+ments Sn are true.
+Now let frx’ « E I, fulfill (II) only. The number of the x’s with
+fr:/. "* Srx, fJ (being a subsct of those with frx "* qoe, o = f£ ) is neces-
+sarily finite, = 0, 1, 2, ... Let n be this number. Then (I)n
+holds, too, and so we have IIQ9rxEI frx E 5)* by S,,. But this is
+exactly what we needed in order to complete our proof.
+Theorem V. Using the notations of Lemma 4.1.4 for OE, fx,
+Nrx’ Ka, Prx,{3’ and the set F of functions P(x), there exists a one-
+to-one correspondence between the Oe Il(&#x26; oc and the coef-
+ficient-systems a [fJ( x); X El] such that
+( I ) a[fl(oc); IX E 1] is defined for the ftinctions P(o,.),EF and for
+those only, its values 27) being complex numbers,
+This correspondence is established by the following équations :
+If (/J, 1Jf correspond to
+then
+(This 1,6(,),EF is convergent.)
+Proof : The IT0c(E 1 9?cx, @(q), fl (oc),E F, form a complete, normalised,
+orthogonal set in IT0EI §ce, by Lemma 4.1.4. Therefore the
+first equation of ( I ) creates a one-to-one correspondence of the
+0 e 
+with the a[fl(oc); oc EI as described in (I), (II).
+And equation 2) holds. (Cf. the respective theorems of (4), (12),
+(13) 
+or (15)). The second équation of (1) coincides with
+Lemma 3.2.3.
+27) 
+a [fl(ac); oc -E I] does not depend on oc, the argument is the function f3( ex) !
+Theorem V (or Lemma 4.1.4, to which it is practically equi-
+valent) clarifies the structure of the oc 
+while Lemma
+4.1.1, describes how TIQ9CXEI ce is built up from the IU(&#x26;OE SJcx, 0152 Er
+We see in particular, that each Holile i §ce has the same dimension:
+The power of F. It is easy to determine this power with the help
+of the Ncx, ccE I; we shall do this in some special cases (cf. § 7.2).
+The dimension of IIQ9cxEI @x is clearly = power of h 
+power of F.
+We shall reconsider this in Lemma 6.4.1 and immediately after it.
+4.2. 
+The associative law holds for our products in a restricted
+form only: It is particularly noteworthy, that it applies to the
+incomplete direct products ll(&#x26;OE,j SJcx only, and not to the com-
+plete direct product TIQ9CXEI a. There are no restrictions,
+however, as to the number (power) of factors 28). The Theorem
+which follows, describes the situation exhaustively. 
+Theorem VI. Let I be a set of indices oc, L a set of indices y,
+and let for each y E L a set I y of indices oc be given. Assume, 
+that the I y , y E L, are mutually disjoint, and that their sum is I.
+Let for each oc E I a unitary space Ha be given.
+(I ) If fa’ rxEI, is a C- or a Co-sequence, then every sequence
+fa’ rx Ely, as well as the sequence TI0aElyla, y EL, is a C- or a
+Cn-seauence respectively. In the case of Co-sequences form the
+(II) Thé classes 0152y, OE° dépend on 6 only (and not on the
+particular choice of the fa.’ a E I ).
+(III) There exists 
+a unique isomorphism of I1@EI Sja.
+(C I10cxEI Ha) and Ho§l (I10Iy Hx) (C I10YEL (II0cxEly cx))
+where TI0a.Elfa. corresponds to ll0YEL (TI0a.Elyfa.) for all
+Co-sequences fa.’ « E I, of 0152.
+Proof : Ad (I): If lla.Elllfa.1I converges, then all TIa.EI y Ilfa.11 do
+so by Lemma 2.4.1, ( I ), and if £ oe ei ) )) foe )) - i ) converges, then ail
+Eoeei ( llfoe ll -i) do so by Lemma 2.3.1 (owing to IyCI). So the
+fa.’ rJ..Ely are C- resp. Co-sequences along with fa.’ (xEI. Thus
+only the C- resp. Co-sequence-character of TI0a.EI fa.’ y E L, must
+be established. 
+y
+28) 
+It is evident from our constructions, in which no ordering of I occurs, that
+the commutative law holds unrestrictedly.
+For any mutually different
+converges (use Lemma 2.3.1 ), so 1’:CCEl y Max (ii!ccl!- 1,0)  l,
+except for a finite number of y’s. Our above inequality esta-
+blishes therefore the convergence of E ye L Max (1ln0aElyfal/ -l, 0).
+(Use Lemma 2.3.1.) So 110,,, yfo,, y, L is a C-sequence, too.
+Next
+(use the inequality in 24) on page [36] 36)
+Again for every Co-sequence
+converges. (Use Lemma 2.3.1.) So (xEly 1 Ilf,,,11 - 11 ç 1 except
+for a finite number of y’s. Our inequality now establishes the
+convergence of EVEL 
+III llQ9(xElyf(X Il 
+- 1 1. (Use Lemma 2.3.1.) So
+IT0cxEI y fa.’ Y E L, is a Co-sequence too.
+Ad (II): We must prove: If (f(X; rx E I) = (ga.; oe e l), then
+(f(X; rx Ely)  x -E I.) and (TI0cxEI y j; ye L) (TIQ9(xEI y goc YEL).
+That is : If M, ., , 1 (f,,,, g« ) - 11 converges, then 
+g(X) -1B I
+and lyEL 1 (II0cxElyfcx, TI@(XElyg(X)-IB converge. The f irst statement
+is obvious. As to the second one observe that we have (just as
+29) Due to the easily verifiable inequality (zl, ..., z. real and &#x3E; 0)
+in the last part of the proof of (I)) for any mutually different
+converges, so
+except for a finite number
+of y’s. Our inequality now establishes the convergence of
+Ad (III) : Consider the équation
+for two Co-sequences (fa; a E I ) and (ba; o,.,E I) e OE. By (1), (II)
+all these H are convergent (and not merely quasi-convergent;
+use Lemma 2.4.1). Therefore (*) holds, as one verifies easily 30).
+(frx.; IH: l y) d£y, CrIl2irx.EI/rx.; Y’E L) E :O). This correspondence leaves
+(0, Y) invariant by (*). Therefore it extends in a unique way,
+literally as in the proof of necessity in the proof of Theorem
+IV, to an isomorphism of the closed, linear sets determined by
+the H©«eifoe resp. the TI0YEL (II®«EIY f«). The former set is
+II®«Er « by definition, denote the latter by §. So we must
+only prove H = H©§i ( H©ill SjaJ. But C is obvious, so we need
+only show D.
+By (II) we can use any séquence ( f«; I),c OE, so we may
+assume that ail !!/oJ! = 1 (use Lemma 3.3.7). Choose a complète,
+normalised, orthogonal set f{Jex, f3, f3 E K ex, ill each ex , with
+O’EK,, gg,,,) =/x- Let Fy be the set of all functions P(y, oc) which,
+are defined for the oc Ely, P(y, a) E Kex and which are = 0 for a
+finite number of oe’s ( oe eI,,) only - all this for a fixed y E L.
+(woe,o; aE IV) = ( f«; IL Ely) E 0152y. 
+So Lemma 4.14 applies to
+30) 
+It would not be so in case of quasi-convergence. Thus 1Za E y (1, 2,...) (-1 )=0
+(quasi-convergence), while ny E y(l, 2, ...) (II C( E y(2Y-l, 2y) - i » 
+= II y E y(1, 2, ...) 1 = 1.
+a complete, normalised orthogonal set there. Denote the function
+f3(y, «) = 0 (for all el Ely) by 0, then Oy, o = H © ce e i Pex;, 0 
+=: TI0ex;Elyf.
+Let po be the set of all functions PO(y), whieh are defined for
+all y E L, P(y) E Fy, and which are * 0 for a finite number of
+y’s (y EL) only. As PO(y) is really a function of if.., oc Ely, we prefer
+to write flO(,y, oc) for it. (OEy , 0; y E L) _ (TI 0 ex; Ely P ex;, 0; Y E L) =
+= (TI0ex;EI fex;; y EL) E ZO. 
+So Lemma 4.1.4 may be applied
+again, 
+now to TI0YEL (TI0ex; Iy ex;): The TI0YEL OEy, P" (’Y, a) =
+= Il 0,L (TI0ex;Ely Pex;, {3°ey, ex;») form a complete, normalised, or-
+thogonal set in H©/$°ii (rloOE, Iv Ha).
+Now we have, except for a finite number of y’s, PID(,y) = 0
+that is O(y, x) 
+=: 0 for all oeely. And for the remaining y’s
+(JO (y ) E F y so fl"(,y, oc) = 0 again, except for a finite number of
+rL.’S (y being fixed). Thus (JO(y, a) = 0 holds always, except for
+a finite number of oc’s (y is free). As the domain of a in #°(y, a)
+is 7.,, and as the I y, y E L, 
+are mutually exclusive, we may
+write (3°(y, a) as a function of ce only: #°(ce), a El. So the
+II0YEL (II0CtEly ({JCt, /30(Ct») form a complete, normalised, orthogonal
+We know already that our isomorphism maps TI0aElj on
+TI0YEL (TI0aEly fa). Its uniqueness (with this restriction) is
+obvious by its construction.
+This associative law cannot be extended to the complete
+direct products TI0aEI Sja and ll(&#x26;VEL @x)? when L is
+infinite, for two reasons. 
+y
+First, different OE’s may give rise to the same OEy and OEO: Put
+L=@(l,2,...), 1===6(1,2,...), Iy = @(2y- 1, 2y) (cf. 30)).
+Choose in each Sja’ rx El, an fa Ewith 11 f,,, = 1, and put ga = - fa.
+Then let, (xef, and ga, oc e I, 
+are clearly two inequivalent Co-
+sequences for TI0c£EI S)et, but they are equivalent for each
+TI0etEly S)et (Iy 
+is 
+finite), and as H©oeeifoe =f2y-l 0 f2y,
+IT0cxEly ga - 92y-l © g2Y = (- f2y- 1) 0 ( 
+f2y) 
+- f2y-1 © f2y So
+are equivalent, too (for
+(It must be admitted, however, that this phenomenon is due
+to our way of disposing of quasi-convergence in Definition
+2.5.1 (II ). )
+Second, I10YEL (II0(xEly S)(X) may possess such equivalence-
+classes (£0 == (£0 (OEy; YEL) too, for which lJ&#x3E;yE I10tlElyS)(X cannot
+be chosen of the form I10tlEI y f(X. This phenomenon will be
+decisive in § 7.3. 
+These complications cannot arise, however, if L is finite (the
+Iy may be arbitrary).
+Theorem VII. If L is finite, then the isomorphisms mentioned
+in Theorem VI, (III) can be extended simultaneously to a
+unique isomorphism of II0tlEI tl and TI0YEL (TI0tlêly #a).
+Proof: As L is finite, only one equivalence-class OE° exists
+for 1-lo’YEL (TI0(xEly « ) (cf. the second remark at the end of 3.6).
+Thus Theorem VI, (III) establishes an isomorphism between
+As L is finite, ex El 1 (f ex’ 1 goc) - 1 
+1 converges if and only if all
+oc,c 1, 1 (f,,, g,,,) - 1 1, y,,E L, converge (use Lemma 2.3.1 ). Thus a
+change of 0152 changes at least one 0152y, y E L. On the other hand
+any prescribed combination 0152y, y E L, belongs to an OE: Choose
+all representatives fa with fa = 1 (use Lemma 3.3.7). Thugs 6
+and all combinations 0152y, y E L, are in a one-to-one correspondence.
+The ][IoOE,, §, are mutually orthogonal, and so are the
+(use Lemma 4.1.1). Thus thé 110(11, )
+are mutually orthogonal too. Therefore the isomorphisms of the
+various H©lei #a with their RIOVEL (1-10 OEV Sjoc) extend in a
+unique way to an isomorphism of the closed, linear sets deter-
+mined by the H©§Îe Ha resp. the 110 ( H©1§ y Sjex). The former
+set is II0tXEI Sj/X (by Lemma 4.1.1), denote the latter by h. So
+we must only prove Ç, = II® y E L (ll0ocHy Sjoc). But C is obvious,
+so we need only show -D. This is established if we prove
+II0YEL (/JyE Sj for any 0 E
+L is a finite set, put L = @ (yi, ..., Ym), the y,, ..., ym mutually
+different. Consider now this statement, Rn (n =o, 1, 2, ..., m):
+If (P E II®, Ejv S)/X 
+for y E L, but for y = Yn+1, ..., Ym even
+Ro is true:
+Assume now,
+that Rn-1 holds for some n - 1, n = 1, 2, ..., m, and consider
+Rn. Choose some OEy E H©a ei ±a for y E L, with $y E n@ ly SjIX
+for y = vz+i, ..., vn. We ask: For which p"J E TI0etEI et 
+is
+yi Yn © H©ye , y#y n OEy e #? These pYn form a closed, linear set
+9l in II0etEI Yn &#x26;jet, considering § is one, by Lemma 4.1.3. Every
+fl©ll’§) Yn &#x26;jet C 9l, as 
+we assumed the validity of Rn-1 So
+R = H©«ei %« (by Lemma 4.1.1), and in particular (/J"J E W.
+That is TI0YEL f/Jy = C/JYn @ H©ye, Y#Yn rJ&#x3E;y E, proving R,2.
+Thus all statements R,2 are true.
+But Rm - states this: 
+If ([&#x3E;y E n@0153EI y Sj0153 
+for y E L, then
+n0YEL ([&#x3E;y E Sj, and this completes the proof.
+Part III: Operator-rings and the direct product.
+Chapter 5: Extension of operators and the
+direct product.
+5.1. We now wish to study the relationship of operators in
+the various Sj(X’ (xe7, to those in llQ9aEI Sj0153. We shall denote the
+ring of ail bounded (everywhere defined, linear, and closed)
+operators in Sja by :B0153, and the ring of those in II ®« E 1 @x by
+{JJ0 (cf. (7), p. 135).
+LEMMA 5.1.1. If a.n operator Axo E {B0153o is given, then there
+exists a unique operator Acxo E:B@, such that for all C-sequences
+.fa, 
+, OCE I, 
+Proof: Aet’s values are prescribed for every H©oeei fm, so if
+Aeto E:130 exists at all, then its values are uniquely determined
+in the entire closed, linear set determined by the n0aI fet., which
+is n0aEI S)et. Thus ACto E [J3@ is unique, if it exists.
+If Ja, el El, is a C-sequence, but not a Co-sequence, then Aet.o!rxo
+and Jet., el El, 
+el #- (xo, 
+is such, too. So TI0ccEI fcx === 0 
+alld
+(Aet Jet ) 0 TI0cxEI ex -+-et fcx = 0 and our requirement for Aet
+becomes vacuous in this case.
+Thus we must only prove the existence of Aet.o E t’B0, and we
+need to consider Co-sequences fx, x E I, only.
+Apply Theorem
+We have an isomorphism between
+makes correspond
+for all Co-sequences fa.’ r.J. El. Thus if our Lemma holds for
+II®yEc, &#x3E; SjY’ where @l = Sja.o’ ?2 = IT0a.EI-(5(a.o) Sja. (1 repla-
+cing the oco ), then it holds for II0a.EI Sja.’ too. In other vvords :
+We may assume l = @(1, 2), (xo = 1.
+Let Pe’ e E K, be a complete, normalised orthogonal set in
+S)2. We want an .If 1 E {fJrg; with
+for all fl1E 51, f2,,E SJ2. Now it suffices to secure (*) for f2 = Pe’ QEK,
+only : For any fixed fi, the f2 for which (*) holds, form a closed,
+linear set in S)2 (by Lemma 4.1.3), and as it contains ah Pe’ e E K,
+it must be - SJ2 .
+Consider now the set Sj’ of all finite linear aggregates
+,fÎ 0 PeI + ... + fin) @ CfJen (fil), ..., fin) E S), the oi, ..., on e K
+are mutually différent). The closed, linear set determined by
+Sj’ contains all fI 0 CfJe’ and so (by Lemma 4.1.3) all /i0/2,
+therefore it is @i) §2. But S)’ is a linear set, therefore it must
+be dense in §1 0 S)2.
+Define now an operator Ai in S)’ by
+Ã 
+is clearly linear. As Al E :BI’ there is a C, such that always
+ Î A-1 J 1 I I1 ç C)) fi))1 Now (**) gives, as the addends on both sides
+are mutually orthogonal (the el, - - ., en being mutually différent),
+31) Observe, that S)Clo (29 II0Cl El, Cl * Clo Cl is just another way to write
+TIQ9C£EISjCl (cf. 26)), while SjClo (29 II0ClEI-@?(Clo) Cl denotes a different object.
+But Theorem .VII establishes their isomorphic character.
+for all OE E Sj’ .
+This relation, together with the linearity of A1 and the fact,
+that Sj’ is dense in Sjl 0 Sj2’ secure the existence of a closure
+AlE,Do of Ã1. (Cf. (10), top of p. 296.) Now
+which is the desired special case of (*). Thus the proof is com-
+pleted. 
+DEFINITION 5.1.1. Denote the set of all a , Aa E:Ba , by
+0,,. (C:BtOI). We will call A a the extension of A a .
+LEMMA 5.1.2. The correspondence A,,,,-ÂOCO is a one-to-one
+mapping of Sx on :Ba , isomorphic for the operations u A (u
+any complex number), A * (adjoint), A + B, A B. It carries the
+operators Oao, la (null and unit in Sja ) into OtOl, 1,&#x26; (null and
+unit in TI0aE 1 S)a). 
+Proof: One-to-one character : A «a = Ba 0 implies clearly Aa 0 === Ba . 0
+Assume conversely A ao = B«o . Choose an fa E Sja’ Iifaii === 1 for
+each ocE I, x 
+uo . Then for any fa E Sja , oc 
+E I, is a Co-
+sequence, and 
+Isomorphism for uA, A + B, A B, 0,1 : Obvious.
+Isomorphism for A *: For any two C-sequences fa’ rx El, and
+ga, m e I, we have
+5.2. Our next objective is the study of the isomorphism
+AIX -A,., the extension, on operator-rings. We will have to use
+ao -- 
+therefore the notions which were introduced and the properties
+which were established in (9) and (11). These papers dealt with
+separable spaces, but in most cases no use was made of the
+separability. It is necessary to discuss therefore, how they apply
+to arbitrary unitary spaces.
+We will use the various operator-topologies: The "weak", the
+,,strong" (cf. (9), pp. 378-388) and the "strongest" (cf. (11),
+pp. 111-112 ) topology, cf. our discussion in 1.1, (e). The notion
+of a ring will be used in the same sense as in (9), p. 388, Definition
+1: A ring is a subset M of JJ (that is a set of bounded operators
+in the unitary space H), which contains uA, A *, A + B, A B along
+with A, B and which is "weakly" closed. The last condition can
+be replaced equivalently by "strongly" closed or even by
+,,strongest" closed (assuming the preceding algebraic condition):
+The proofs given in (9), pp. 393-396, and (11), pp. 112-113,
+hold verbatim for every unitary Sj.
+For any subset c5’ of ffl we again define cS’ as the- set of those
+A E B, which commute with B, B* for all BEcS. The considera-
+tions of (9), pp. 388-398, apply verbatim, while those on pp.
+398 -404 (on Abelian rings) make use of the separability of Sj,
+and are therefore invalid 32).
+Thus cS’’ is always a ring and contains 1, and c5’" - cS holds
+if and only if cS is a ring containing 1.
+I is again an arbitrary set of indices, each IX’ lJ.. E l, a unitary
+space, ao a fixed element of I.
+LEMMA 5.2.1. 0,, is a ring containing 1.
+32) 
+This seems to be the only part of the general theory, where separability
+of § is essential.
+Proqf: 33) Proceed as in the proof of Lemma 5.1.1: Apply
+Theorem VII, with L = 6(1,2), Il = Éb(ceo), I, = I - @(a0). We
+have an isomorphism between II0cxEl SjC(. = Hx0 II@cxEI, a =FCXo Ha
+and II(DVEZ(1,2) (TI@NEI Ha) = S)C(. 0II@CXEI-(CX) &#x26;jcx which makes
+correspond
+for all Co-sequences fa, fX El (cf. 31)). Thus if our Lemma holds
+for II®yE (1,2) My where Oj = Sj(f.o’ 01522 = II0(f. El, ce #oeo Sj(f. 
+(1
+replacing the oco), it holds for IT0(f.EI Sja too. In other words :
+We may assume I = 6(1, 2), oco = 1. 
+Assume noiv conversely A E (B2)’. Consider any f2E S)2’ Il f2 Il = 1,
+and the operator Pu 2 ] E:B2 34). Then E = Pu 2 
+E B2, and for
+every çp = g10g2, Eçb Pu 2 ]gl @g2 = g10 Pu 2 ] g2 = gl0 (g2’ f2) f2 =
+- (g2, f2) g, (D f2, so EP has the forni hl 0 f2. Thus this holds for
+every çp E S"jl 0 S)2. Conversely, if 0 = hl (D f2, then the above
+formula gives E 0 = hl 0 f2 = 0. So E is the projection of the
+closed, linear set of the hl 0 tf2’ hl E S)l. Now A commutes with
+this E E :B2 by assumption, so A (h1 0 f2) has again this form,
+say h1 @ 12; h’ could depend on both h1, f2.
+Consider next any other h E 2, Î2 = 1 , then A (h10f2) = h 072.
+Choose a U2’e DI with U2 f2 Î2 - u 2 E :B2’ so A commutes with
+U2 by assumption. 
+But U2(h10f2) = hl 0 U2 f2 = h1 @f2’
+U2(hl 0f2)=h! 0 U2f2 -h’(&#x26;i2 1 sa h1 2-^hl 2, h1-h1)J2=0
+and thus (form the 11 ... 111) h1 - h1 = o. So h1 does not depend
+on f2. Therefore an operator A 1 can be defined by A1h1 = h1. Thus
+for IIf211 = 1. But (*) extends immediately to all 12 E S)2.
+Ai is clearly linear. As A E{[j0’ so a C with IIAOII  Cil Pli
+exists. Choose again ilf2ll = 1, then
+33) Bao contains uA, A *, A + B, A B along with A, B as w ell as 1, by, Lemma
+5.1.2. The essential point is to prove, that it is weakly closed.
+34) 
+The projection of the closed, linear set [f2]:
+Thus Al E {BI. Now (*) makes clear, that A = A 1 E ‘‘ljl. Therefore
+([82)’ C {BI. 
+80 B1 = (:B2)’, and (B2)’ is clearly a ring containing 1.
+LEMMA 5.2.2. Every l/J E Sjl Q9 Sj2 can be written as a finite
+or enumerably infinite (strongly convergent) sum
+where fl, f,, ... E H1, w1, w2, ... E Sj2 and the latter form a nor-
+malised, orthogonal set.
+Proof: Let CPr¿’ QEK,, be a complete, normalised, orthogonal
+set in H!, and "Pa’ Ue K2, one in H2. Then Tp0 y,, QE Kl, or E K,,
+is one in SjI Q9 5)2 (by Lemma 4.1.6, remembering the second
+remark at the end of 3.6). Thus
+where 1 Ull2 + 
+1 U212 + 
+... is f inite, and the pairs (e1, 61)’ (e2’ (12)’ ...
+are mutually different. Let il’ i2’ ... be the different ones among
+the Qll Q2, . - -1 and vl, V2, ... the different ones among the
+or1, or2, ... , 
+, then
+Thus w, = y have the desired properties.
+LEMMA 5.2.3. Let be 
+a set Co,,,, and c5’ao its image under
+the isomorphism A,,,  A «o . 
+. Then cS’«Q is a ring if and only if
+J,,,. is one. 
+Proof : Just as in the proof of Lemma 5.2.1, we may assume
+I = @(1, 2), oeo = 1.
+A ring can be defined as follows : It contains uA, A*, A + B,
+A B along with A, B and it is closed in the strongest topology.
+(Cf. the discussion at the beginning of 5.2.) The first four pro-
+perties hold for S1 if and only if they hold for S1, owing to Lemma
+5.1.2. And for the last one, closure in the strongest topology,
+this follows from (11), p. 114 (§ 4). In fact: The separability
+of l (8) 2 was not used there, the symbols f, 0, 0, ... &#x3E;
+(for a given f E h1) which occur there, may be replaced by f (8) cp
+(with any cp E 2’ Il cpll = 1 ), and the symbols f/J = f1’ f2’ ... &#x3E;
+(for a given OE e §1 @ H2) by the fI (8) (01 + f2 8) (02 + ... of
+Lemma 5.2.2.
+Theorem VIII. The correspondence Acx  A(j. , as defined in
+Lemma 5.1.1, is a one-to-one mapping of 0,,,. on a certain subset
+:Bcxo of [B0’ which is a ring containing 1. It is an isomorphism
+for the operations uA, A*, A + B, A B and for 0, 1. If it maps
+a set cJcx C [Bcx on the set cS’«o C [B,., , then cS’ao is a ring if and
+only if cJcxo is one.
+Proof : This follows immediately from Lemmata 5.1.2, 5.2.1,
+5.2.3.
+Chapter 6: The ring of all extended operators.
+6.1. We saw in Lemma 3.3.6, that the intuitively plausible
+equation 11®aEI zcxfcx = TIcxElzcx . II0cxElfcx holds only, if IIcxEI Z{X
+is convergent (or II0{XElfcx = 0 ). Otherwise the sequence zrxfrx’ oc El,
+and f« , a E I, are not even equivalent, that is the II0cxElzcxfcx
+and II0cxElfcx belong to two different incomplete direct products
+II(D oc This situation provides the motive for the defini-
+tion which follows:
+DEFINITION 6.1.1. Two Co-sequences fcx’ ocEl, and gx, a E I,
+are weakly equivalent, in symbols (fa; ceel) = (gx; oc El), if
+w
+complex numbers Zcx, oc E I, can be found, such that zcxfrx’ oc E I,
+is a Co-sequence, and equivalent to ga, oc E I.
+LEMMA 6.1.1. Without modifying the meaning of Definition
+6.1.1, we may require that all 1 z,,, -- 1.
+Proof: In other words: If fcx, oc E I, and zcxfcx, oce I, are Co-sequences
+we can find such zi with 
+1 z" oc =1, that (zafa; oc E 1) ~ (z’ oc f,,,; oc E I)
+As LrxEllllzcxfcxll-1B converges, therefore zcxf{X = 0 (yvhieh im-
+plies za f. 11 - 1 1) can occur for a finite number of oc’s only.
+For these we may replace z., by 1 and fcx by some f,,O, zA 0 (use
+Lemma 3.3.5). So we may assume, that always zoe foe =F 0.
+As LCXEI illfcxll- 11, cxEIIIJzcxfcxll- 1B 
+I converge, and all f.
+Il z{Xf(j., Il =1= 0 
+so Lemma 2.4.1, (II), secures the convergence of
+ITcxE lllfrx !I, TIcxEI Il zcxfcx Il and that their values are :A 0. Thus
+converges too, and has a value "* 0, because
+Therefore
+converges b3T Lemma 2.4.1, (II). Now
+Lemma 3.3.6, (II), (IV), give
+all the desired properties.
+LEMMA 6.1.2. The weak equivalence ~ for Co-sequences is
+w
+reflexive, symmetric, and transitive:
+Proof : Obvious, since we may restrict ourselves to Zr! with
+IZa/ 
+== 1 by Lemma 6.1.1.
+DEFINITION 6.1.2. The weak equivalence ~ decomposes the
+w
+set of all Co-sequences into mutually disjoint weak équivalence
+classes. (Cf. Lemma 6.1.2.) Denote the set formed by these
+equivalence classes by Tw, and the équivalence class of a given
+Co-sequence fa’ rJ.. E I, by 0152w (fa; rJ.. E I).
+Since equivalence implies weak équivalence, therefore every
+0152 E T is OE C OEw for exactly one OEw C Tw, and every OEzw C r w
+is the sum of ail 6 C r with 0152 C 0152w.
+DEFITION 6.1.3. If 0152w E r w 
+is 
+a weak equivalence class,
+then let IT@ EI Sja be the closed, linear set determined by all
+w
+IT@aEI fa’ where fa’ rJ.. E I, is any Co-sequence from 0152w. Clearly
+Hj /llI %ce C H©oe ei %ce.
+w
+Our previous remarks show, that 110 1izi Sja is the closed, linear
+w
+set determined by all IT@EI S)a with 0152 e r, OE C 0152w.
+An explicit criterium of ::
+LEMMA 6.1.3. (fa; rt..EI)  (gr;(; (XEI) if and only if aElll (fa’ ga)I-I!
+converges 35). 
+w
+Proof : 
+(fr:J..; rJ.. E I) ~ (gr:J..; rJ.. E I) 
+means by Lemma 6.1.1 (and
+w
+Definition 3.3.2), that we can find such numbers za with 1 za 1 = 1
+that cxEII(zcxJcx,gcx)-ll 
+I converges. Now for every given a E I
+1 (zexfco gex)- 11 
+l depends on Zex only, and possesses (and assumes)
+a minimum: (zexfcx, gcx) = Z. (f. 1 g,,,) varies over a circle of center
+0 and of radius 1 (f ex’ gcx) 
+I when z« varies over the circle iz,,,l = 1,
+the nearest point to 1 on which is 1 f«, gcx)l. Thus the minimum
+of 1 (Zet f ex’ g.) - 1 is Il (f ex’ g,,,) 1 I 
+. Thus our condition becomes
+this: il 
+I must converge.
+6.2. LEMMA 6.2.1. Assume that a Zet with 
+iz,,,l = 1 is given for
+each a. E I. Then there exists one and only one closed, linear
+operator U, such that 
+for every Co-sequence f rx’ u e 7. This U is unitary.
+Proof : Existence and unitary character : Apply Theorem IV
+to # = H© i #ce , II0; Elfrx = II0aEI zrxfrx (use Co-sequences only).
+Its conditions are fulfilled: ( I ) obviously, (III) because every
+n0rxEIfcx is a n@EIgrx (with grx =zrxfrx)’ and (II) owing to
+Thus an isomorphism of II0ClEI x on itself exists, whieh carries
+every llQ9aElfx into its H©g foe = II0aElzxfCl. This isomorphism
+may be looked at as a unitary (and therefore closed, linear)
+operator U, and it possesses the desired properties.
+Uniqueness: If U is the above defined unitary operator, and
+U’ another closed, linear operator which meets our require-
+ments, then U, U’ agree for all II0ClEI!Cl’ and so for the f inite
+linear aggregates of these, too. Thus they agree on an every-
+where dense set, but U is continuous and U’ is closed, therefore
+they agree everywhere.
+DEFINITION 6.2.1. Denote the U of Lemma 6.2.1 by U(zx; a E I ).
+Denote the projection operator of 110 OE Ej ,, OE EI, by P[Ë]
+LEMMA 6.2.2. U(za; lf.. El) maps HO §ÎIÎI li$ce on itself, that is,
+it commutes with Pw[0152w]. 
+W
+Proof: U(ZC(; « EI) maps II0aElfa on ll0aEl zC(fC(; if (JC(; lf..EI)E0152w
+then (zC(Ja; lf.. El) E 0152w tao, so U(zC(; rx El) maps H© jz % on part
+w
+of itself. As the same is true for the inverse of U(za; cxeZ), that
+is U (zr:/.; lf.. El), therefore it maps H© iQI li$ce exactiy on itself.
+w
+LEMMA 6.2.3. (I) U(za; (X El) maps H©le #oe Oll itself, that is
+it commutes with P[0152], if and only if IIEl Za. converges 36).
+Then U(Za; ce e I ) = (TIaEI za) .1.
+(II ) If this is not the case, then U(za; (a E I) maps II@El Sja.
+on a n@EI Sja. with OE # T).
+Proof : We proceed in a somewhat changed order:
+Ad (II): Assume that TIa.EIZa. does not converge. Then
+(fa; a E I) e OE implies (Za.fa.; oc El) E SI) =F 0152 owing to Lemma 3.3.6,
+(IV). D) depends on 0152 only (and not on the choice of fa.’ oc E I ),
+because ( f«; (03B1 E I) ~ (gx; oc E I) implies (Z03B1f03B1; (xe) (Za. ga.; x E I ),
+as (Za.fa., za. ga.) = (fa.’ ga) (use Définition 3.3.2). Thus U(za.; oc El)
+maps TI@EI Sja. on part of iZ®xEI Sja.- Similarly its inverse,
+- 
+maps H©i J, on part of Hoj #. Therefore
+II®EI a has exactly the image 110x67 Sjrt., and we know that
+OE # %
+Ad (I): Sufficiency : If necEI ZC( converges, then Lemma 3.3.6,
+(III), secures U (za; a e I) = (TIec El Za) . 1, and the remainder is
+immediate.
+Necessity: Obvious by (II). 
+LEMMA 6.2.4. For any operator Acxo E [JJa.o’ (Xo El, the extended
+operator Aecn commutes with every P[0152], P w[0152w] and U(za.; a E I ).
+36) 
+This is equivalent to the convergence of Zoc CI 1 arcus Zcx 1, 
+, or to that
+one of S(x~z)(x " 1 . (Use Lemma 2.4.1, (II), and Lemma 3.3.6, (IV), remem-
+bering that 1 Zcx = 
+1. )
+3’) 
+Let E be the projection of M, and A, A* both map 9R on parts of itself.
+This means EA E = A E and EA*E = A*E Apply * to the second equation,
+then EA E = EA ensues, and so A E = EA.
+6.3. DEFINITION 6.3.1. Denote the ring generated by all Acxo
+with arbitrary Arxo E ;Bcxo and all (xo El, by B. Clearly B# C [!J(j9.
+Obviously B* might have just as well been defined as the
+ring generated by all :J3cxo’ (xo El. (Cf. Definition 5.1.1 and Lemma
+5.2.1. ) That is:
+,D* = ’R (00to; GCOE I).
+If I is finite, then 0* =-,Do (cf. (7), p. 135), and we will prove
+(Theorem IX or X), that this holds only if I is finite. Now ;Bi
+is in a way more important than :B0: The elements of B#
+arise from those of the Bxo’ (xo E l, by extension (cf. Definition
+5.1.1) and algebraical and topological processes. In other words:
+They are the only operators in IZ® « E r whieh 
+are based directly
+on operators in the S)cx, (X El. Therefore it is of importance to
+determine the structure of mi, as e 
+may no longer be identical
+with :B@.
+LEMMA 6.3.1. Every A E:Bi commutes with all P[0152], (Se F),
+then Aao commutes with X, by Lemma 6.2.4, that is
+As (X)’ is a ring, this implies
+commutes with X.
+DEFINITION 6.3.2. Given a 0,E 
+denote by 9N[O] the
+closed, linear set determined by all U (za; fY.. E I)f/J, (j z,,, 1 - 1).
+Denote by E[O] the projection of M[01.
+LEMMA 6.3.2. (I) If 0,E II(D OE,, @(x then E [OE] commutes with
+P[OE] and their product is PFOI 38).
+(III) E[O] commutes with every U(z«; « EI).
+Proof : Ad (1): Denote the closed, linear sets determined by
+the U(zoc; E oe I)OE ( Zoc - 1) with a convergent resp. divergent
+nOCEI Zoc by M1 resp. m2. Clearly M[OE] 
+= (25[9Xl, Wè2].
+38) 
+The projection of the closed, linear set [0]:
+If ITexEI Zex diverges, then
+This is a projection, so E[O], P[OE] commute (cf. (8), p. 76)
+and their product is p[q&#x3E;r 
+LEMMA 6.3.3. For any Co-sequence f â , oc E I, with I!f Il = 1
+we have E[ Hoff ] e $JÔ.
+Proof : The proof will be carried out in several successive stages.
+(I) 
+It suffices to show, that E[II@0153Elf0153J is a strongest (and
+thus a fortiori a strong, cf. § 1.1, (e), and particularly (11),
+pp. 1112013112) condensation point of B#. And this is certainly
+the case, if we can find for an (enumerably infinité) sequence
+.. 
+of elements of TI@0153EI 0153 an F E Bi, such that
+F4i = E [TI@0153EI f£] OE,,z for n = 1, 2, ...
+Each Wu is the limit of a séquence of (finite) linear aggregates
+of elements II®« E g« (gr, oeeI a Co-sequence, cf. Theorem VI,
+(III)). AU II@EI gx which arise in connection with a given Wn
+form again a séquence : TI00153EI g’i, i=1, 2, 
+.... F( II@0153EI g,i) =
+=E[n0](ng’) for i = 1, 2, ... 
+implies 
+clearly
+F=E[Il0JS] Now we may write the TI0ClEI g,i,
+n, i = 1, 2, ..., 
+as a simple sequence, and replace the f/Jn’
+n = 1, 2, ..., by them. In other words : We may as well assume
+f/Jn = TI@0153EI h (h«, oc E I, a Co-sequence) for each n = 1, 2, ....
+If any hna=0, then its (/Jn === TI0ClEI h = 0 may be omitted.
+So we may assume, that all hg # 0.
+Every U(ZCl; ce e I) commutes with E[TI00153EI f] and F by Lem-
+mata 6.3.2, (III), and 6.3.1. Thus we may replace our(/Jn =n0ClElh
+by any U(z; oc E 1) tPn = TIQ9ClEI z h n = 1, 2, ... We can use
+this freedom to obtain for every n = 1, 2, ... for which
+(hna; ce e I ) xw ( fâ; oc E 1), even (hna; oc E I) ~ (f003B1; oc E I). So we may
+w
+assume: Let (Bi be the set of all n with (hâ; oc E I) ~ ( fa; oc E I)
+and G2 the set of all n with (hna; oc El) not ~ ( fâ; a E I ), then
+w
+every n = 1, 2, ... belongs either to @i or to G2.
+If n E G1, then ClEI 1 (h, f) - 1/ 
+f converges (by Definition
+3.3.2), and so we have (hâ, fa) = 1, except for a finite or enume-
+rably infinité set of oc’s, Jn (by Lemma 2.3.2, (1)). If n e @,
+then (x’EI Il (h, f)1 20131) diverges (by Lemma 6.1.3), and there-
+fore an enumerably infinite set of oc’s, Kn, exists, such that
+L(xEKn /1 ) (h), fg ) ] - i diverges 39). Finally « E r I j j h j j -1 converges
+for each n ( Co-sequences ), so we have ~hna~ = 1 except for a
+finite or enumerably infinite set of oc’s, Ln. Now let 1° be the sum
+of all Jn (n E l)’ Kn(n e @2), Ln (n = 1, 2, ... ). 1° is finite or
+enumerably infinité, and we have :
+this implies the convergence of E. E io Max ( 1 (honc 1 f.0) 1 - 1 1 0)
+(by Lemma 2.3.1 ).
+Combining these facts, Lemma 2.4.1 permits us to conclude:
+39) 
+If 2(x67 Ua (Uet &#x3E; 0) diverges, then the Uet1 + 
+... + ua (oei, ..., ai mutually
+different) are not bounded (use Lemma 2.3.1). Choose (Xf,..., (Xl( N with
+’N
+uai + ... + U (XN &#x3E; N for N = 1, 2, ... and let K be the set of all x
+N = 1, 2, ..., k = 1, ..., lN, then E OCE K U,x is clearly divergent.
+holds for all n = 1, 2, ....
+(III) Write 1° as a (finite or enumerably infinite) sequence
+I° = Qb(oe, Cl2’ ... ) ((X2’ (X2’ ... mutually different). For every oc 
+l
+This equation exhibits two facts : First, that all P [fJ ’
+oei
+l = 1, 2, ..., commute. Ail P j jo j 
+are projections E :J)(Xo’ so all
+Pr.oi are projections E ioeo c i, and as they commune, all 
+too are projections E :Bi. And clearly
+Thus lim Q 
+l exists 40), and is again a proj ection E Bi.
+Second, it shows, that Pjjo j (Hooeei zoeik) = Hooeei zoefk, and
+L 
+so P[!I] P = P for aH P E W([I10XEd]. This implies Qp = P
+Lxj
+and lim Q W = W. So
+Thus
+4°) We mean lim Qz if 10 is infinite, and Ql, 
+if I° = 6(Ct1’ ...) (Xl ).
+1= 00 
+implies (lim QJ)O,,= E[ TIQ9CXEI gJ tPn 41) and so it suffices to
+prove (**) for all n = 1, 2, ... Then F = lim Q 
+L meets all
+requirements.
+(IV) We have :
+( Remember, that Ilhll=1 for oeql°.) If we form lim, then
+the second factor on the right side converges to 1, because
+nElo Il hna 
+Il converges. Therefore
+Thus (**) follows from (*).
+The proof is now completed.
+LEMMA 6.3.4. Assume (f.0; x,, I) E and 0 E
+Then there exists an A E{fJi with A(IT0aElf) = (/J.
+Proof: We proceed again in several successive steps.
+( I ) Introduce, together with our 
+f0a, the corresponding Na,
+Ka, CPa,{3’ F ( f% = ggx, o) of Lemma 4.1.4 and Theorem V. Apply
+Theorem V to 0, and let Pl (a), P2( rx), ... be those P( rx) E F (finite
+or enumerably infinité in number) for which a[p(a); oc e I] *0.
+(Cf. Theorem V, (II).) Write ai = a[3i(rx); rx E I], then the situation
+described in Theorem V entails:
+(II) For every ocE I and fl e K,,, define
+Clearly
+Each fJi( r:t.) (j = 1, 2, ...) differs from 0 for a finite number
+41 ) 
+If E, F are two projections, E  F, then Il EOE ) ) = I FID ~ implies
+EO = FO. Indeed, since E, F are projections, so (F(P, -D) = Il E(P ~2 = I FID ~2 =
+(FO, 0) and since F - E is a projection, so 
+Il (F - E)rJ&#x3E; 112 = (F -E)rJ&#x3E;,) =
+=- (FO, 0) - (EO, 0) = 0. So (F - E)O =: 0, FO - EO == 0, FOE = EOE.
+of (l’S only, say for
+so RiE{fJ*. As aIl III P§ ) ))  1, III Pi ) ) [  1 and III E[II@LLElfJ III  1
+( it is a projection), so III Ri III  1.
+(III) Assume i # j. We wish to prove, that R/P’ and RjP"
+are orthogonal for all Y", Y"’ (e TI@CtEI #ce ). It is clearly sufficient
+Consider next the case, where OE’ - 6". Ri, Rj E Dl’ so they
+commute with P[0152’], P[0152"] (by Lemma 6.3.1). Thus
+disposing of this case.
+We may assume therefore, that OE’ = OE" C 0152w. As R2, RJ E {Bi
+they commute with U(z(X; occI) (by Lemma 6.3.1), so we may
+replace P’, 111" by U(z(X; rx E I) P’, U(z(X; rx El) "P". Now OE, OE’ C 0152w,
+so we can choose U(zcx; rx E I) so as to map OE’ = 0152" on 0152. In
+other words: We may even assume 0152’ = 0152" = @.
+Thus we must prove the orthogonality of RiP’ and RjP" for
+P’, P" E ®«EI @(x only. It is clearly sufficient, to consider instead
+the 1jf’ = IT0(xEI f, P" = II0(xEI f’ with ( f§; «EI), ( f§’ ; rx E I) E 0152,
+only.
+Now under these conditions
+(use Lemma 6.3.2, (1))
+and so
+Similarly
+Combining these equations we obtain
+As i =1= j, 
+so an a E I 1;ith F« « ) # Fj ( « ), (Pa, {3i(a) , Pa, {3J(a») == 0
+exists, and so the third factor on the right side is 0. Thus the
+left side is 0 too, and our statement is proved.
+(IV) For any W (E II0aEI a) the R1w, R2P, ... are mutually
+orthogonal, 
+as 
+was shown above. Besides L IlaiR/P112 ===
+= £, ] ai ) / j R Yj )  £, ] a, ) ) [ Yj ) = ( £, ] a, [ ) ] ) Y) [ converges, and
+so the sum LiaiRiP is (strongly ) convergent ( in TI0aEI SjC().
+So we may define an operator A (in TI0aEI Sja) by
+A is the strong limit of all a,R, + ... + ajRj, i = 1, 2, ...,
+and so .4 belongs to De along with Ri, R2, 
+... Finally (*) gives
+and therefore
+Thus A meets all our requirements.
+42 ) 
+This is an extension of Lemma 6.3.3. Observe, that the condition f/J E II0 E l §ce
+cannot be omitted: If E[f/J]E [B14 held for all 0, then we could omit in Lemma 6.3.6.
+and in Theorem IX the condition, that F resp. A must commute with all P(0152).
+Then this fact, together with Theorem IX (or Lemma 6.3.1), would give: If A
+commutes with every U(zC(; IY. El), then it commutes with every P[0152] too. But
+(if I is infinite) A = U (zâ; oce I) with a non-convergent IIaEI z, commutes with
+all U(zC(;’XEI), and (use Lemma 6.2.3, (I)) with no P[0152].
+Lemma 6.3.4. As A commutes with every U(Za; a E I ) (by Lemma
+6.3.1), so
+A (J(Z.; a Ils I) Il , flol) f"o,) U(z,,; OCCI) 0.
+Thus A maps M[ II0f/..EI ff/..J on a set whieh determines the closed,
+linear set M[(P]. That is : The range of AE[II@f/..ElfJ determines
+the closed, linear set M[Ol.
+Let us use the symbol q (cf. (7), p. 141): A and E[ I10f/..E l fJ
+are both E De, therefore 17 B# and thus the characterisation of
+M[O] given above gives M[O]î-i De. So its projection is E [W] &#x3E;1 B#
+too. But this means E[OE] B#. (Cf. loc. cit. above.)
+LEMMA 6.3.6. If a projection F commutes with all P[0152] (OE E T)
+and U(zq; ocE I) (1 1 z 1 = 1), then F E 0.
+Proof : Let in be the closed, linear set of F. Assume rI&#x3E;ESJè.
+0 is a limit of a sequence of (f inite ) linear aggregates of elements
+of the form P- 
+and so a fortiori of elements 111,E TI 0El S)f/..’
+OE e r. So 0 = FOE is a limit of a séquence of (finite) linear
+aggregates of elements FP, P E II0f/..EI &#x26;je’ 0152 E T. As F and P[ OE]
+commute, and their closed, linear sets are N resp. Ilo(, ’Ei @x?
+therefore such an FP E n and at the same time e H©ie §q.
+This makes it clear, that W is the closed, linear set determined
+by those P E in, for whieh P E H©ie §q, OE e T, holds too.
+As F commutes with U(Zf/..; rx E I), therefore U(N«; ac I) maps
+in on itself. We have therefore for the above P E SJè, U(z,,,; cce I)P E 91
+too, and thus M[P] C N. Therefore the following statement holds
+too: N is the closed linear set determined by the W1[P] of all
+those P E W, for which Ylc U(DOE,J I, holds too.
+Now these M(F) are all nB by Lemma 6.3.5 (n as above,
+cf. (7), p. 141). Thus N n B too, and therefore its projection
+F ij 0 4, that is F E B#.
+We are now in the position to prove:
+Theorem IX. A e De if and only if A commutes with all
+Proof: Denote the set of these P[0152] and U(za; oc E I ) by S:
+Then we must prove (cf. (9), p. 388)
+As we have rings on both sides, it suffices to show that both
+sides contain the same projections. (Cf. (9), p. 392.)
+Every projection of M4 belongs to cS’’ by Lemma 6.3.1, and
+every projection of cS’’ belongs to e- by Lemma 6.3.6. Thus
+the proof is completed. 
+6.4. Theorem IX gives a complete characterisation of B#,
+but it is desirable to have a more constructive one, as contained
+in the Theorem which follows.
+Theorem X. (I ) 
+If A E B#, then 0,E II(D OE,, implies
+Ao E -11(&#x26;OE CC E I Sj(t so that A may be considered as an operator in
+nQ9EI Sj(t (instead of IIQ9(tEI Ha), for every 0152 e F. We will denote
+A, when thus restricted to
+(II ) Select for each
+If a bounded operator A0152w is given in each
+Proof: Ad (I): As A commutes with the projection of fl©i Sj(X’
+P(C£), all statements are immediate.
+upper bound for the set in question.
+Sufficiency: Consider an arbitrary OE e F. There is a unique
+AQ: does not depend on the particular choice of the
+proving our statement.
+If OE = OE(OE.) then we may choose zoe = 1, U(z(X; oc E I ) = 1
+and so A0152 coincides with our original A0152w.
+43) 
+l.u.b. = least upper bound.
+Define now an operator A° as follows: A of/&#x3E; is defined if and only
+if 0 =- Wi + 
+... + Pl, where Wi E H©1&#x3E; Sjet, ..., Wl e Hoii xoe ,
+the (fI’ ..., (fl E T being mutually different, and then
+A° is clearly linear and commutes with every P(0152). Owing
+to (*) it commutes with every [J (z(X; lt. El) too. The domain of
+A0 is everywhere dense.
+and so
+Thus A° extends by continuity to an everywhere defined operator
+A (in n0K~7 S)(X). This A is linear, along with A°. (**) gives, by
+continuity, JIAOII  C Il tPll so A E 0152J0 and fil A III  C. Finally A
+commutes with all P[0152] and U(z(X; fXEI), along with A0. So
+Theorem IX gives A e B#.
+A0152(0152w) = A0152w. Therefore this A meets all our requirements.
+Uniqueness: Assume, that A’, A" E:J)lJ:, and A’[([w) == A"[([w)
+for all 
+0152w E Fw. 
+If 0152 C 0152w, then a U(z(X; rf.. El) which maps
+Hoil/$/" jj on H©i jjoe exists. As this U(z(X; rf.. El) commutes
+with A’, A". the assumption A ’[([w) = A"0152([w) implies A’0152 c=A"[.
+As 0152w E r w was arbitrary, this holds for all 0152 E r.
+Therefore it holds
+We saiir in the sufficiency-proof of (II), that if we put
+A OE. =A (S-(C then 
+OEm 
+as desired.
+Theorems IX, X make it clear, that the éléments of Me are
+characterised by two restrictions:
+(I) An Aeo’ 9 is reduced by each H© ÎII#ce, 0152zv E T’W. (Cf.
+W
+Lemma 6.3.1, "Reduction" is defined in (8), pp. 78-80.)
+( II ) Within each I-I(D OE,,, , 0152wEFw, the AE;Bi is reduced
+w
+by each TI0EI Sja’ 0152 C 0152w, 0152 E F, and its behaviour in any one
+of these H©ie #ce determines it in the remaining ones (for a
+given 0152w and the 0152 C 0152w, 0152: ET).
+Now (II), as indeed the entire difference between the sub-
+divisions of TI h. into 110(l,,,,,’s resp. II(D OE"j e::’ is
+w 
+ultimately due to our way of handling the non-convergent but
+quasi-convergent case in 2.5. (The U(Zlf..; (X El) which map an
+0152 C 0152w, 0152: E T, on other SD C 0152w, DeT, have non-convergent but
+quasi-convergent llx,j za’s, cf. Lemma 6.2.3.) A more compli-
+cated procedure in dealing with such infinite products, using
+generalised-Banach-limits, would have permitted us to avoid this.
+Compared with our present method, however, it would have
+been highly artificial and arbitrary, and would have impl ied
+serious difficulties in the formulation of an associative law.
+Having clarified the resp. roles of the OE E F and OEWE Fw we
+proceed to determine their numbers.
+LEMMA 6.4.1. (I ) If I is finite, then F and Fw both possess
+exactly one element, which is the same for both: the set OEO of
+all sequences (flf..; (xEI) 44).
+44) 
+So IIOOE,, 
+= 110 
+= 1Z® « Er « -P(o] - Pw[S0] = 1. Every
+II X El Z(X converges, so U(Z(X; XEl) = (ITXE l z(X). 1. Thus Theorern IX gives
+B* = B in aecordanee with (7), p. 135.
+(II) If I is infinite, its power being N*, then for each 0152w E rw
+(III) 
+If the number of (xe7 with a &#x3E; 2-dimensional Sja is
+finite, then r w possesses exactly one élément, if this number is
+infinite, then power of r w is &#x3E; g 45).
+Proof : Ad (I ): Obvious by Lemma 3.3.5.
+Ad (II): Given an 0152w E rw, the number of all 6 C 0152w, 0152 E r.
+is obviously  the number of al] combinations of Zex, oc e I (1 Zex == 1 ),
+that is NN* = 2"° À* = 2B’ .
+As N0N* = x*, decompose I into mutually disjoint sets
+Jy,YEL, each Jy having the power N0 and L having the power
+N*. For any set L’ CL form zL{ 
+= 1 
+1 if aEJ’" yEL’ Choose a
+sequence (f; lI..EI) E 0152w Ilfex!1 == 1. Then all (zf; lI..EL)E0152w.
+If L’ *- L", then a y exists, for which y e L but 1. L", or
+conversely. 
+At 
+any 
+rate 
+OE E J y 
+gives Zex Zex === - 1, 
+so
+that zâ’ zL’’a = - 1 
+occurs 
+infinitely 
+many times. 
+Thus
+exEI [ (zk’ fg, zi’ f£ ) - 1 ) "= e7 ! zL’’a - 11 
+] 
+contains infinitely
+many terms 1- 1 - 1 = 2, and is therefore divergent. That is,
+(zl’ f%; ce e I) not = (zk" f%; lI.. El) by Definition 3.3.2.
+Summing up : All OE(z§’ f£; OE e I) with L’ C L are C 0152w, Er,
+and mutually different. Their number is 2"*. So the number of
+the 0152 C 0152w, 0152 E r is &#x3E; 2n*. Thus it must be = 2N*.
+Ad (III): Finite number of x~7 with &#x3E; 2-dimensiona Ha:
+We want to prove (fex; oe eI) = (ga; oe eI) for all Co-sequences.
+w
+By Lemma 3.3.7, we may assume )) fx)) = )) gx )) = 1.
+If 
+S)ex 
+is 
+1-dimensional, 
+then fx = cexgex, 1 Cex 
+1 = 1, 
+so
+1 (fex’ gex) ( = 1,) (fx’ gex)| -1| - O. 
+Thtls 
+exEI l(fx, ga)1 - 1 
+converges, and so (fx; oeeI) = (gx; (X El) by Lemma 6.1.3.
+Infinite number of 
+(1. E l 
+with &#x3E; 2-dimensional Sja: Let
+(Xi, j, i, i = l, 2, ... be an enumerably infinité double-sequence
+of such (x’s, and Pa. ", 1jJa.. two normalised orthogonal elements
+of S’JOCi,j" For each ce # all ce, , , sélect an lE S’joc with 1 f£ )) = i .
+For any set N C E (1, 2, ...) form
+Clearly every ( gâ ; ex El) is a Co-sequence. If N’ # A", then an i
+45) N = power of the continuum, N0 = power of any enumerably infinite set.
+exists, for which i EN but eN" or conversely. At any rate
+and is therefore divergent. That is,
+by Lemma 6.1.3. 
+Summing up: All 0152w (gNa; ex El) with N C (S (1, 2, ... ) are E T’a)
+and mutually different. Their number is 2N0=N. So the number
+of all 0152w E Tw is &#x3E;N.
+We forego an exact determination of the power of Tw, which
+would present no difficulties. Clearly power (T) = 2N*. power
+(Tw).
+Part IV : Discussion of a spécial case.
+Chapter 7: Discussion of a spécial case.
+7.1. The unitary spaces ll(&#x26;OE,j are isomorphic to each
+other by Theorem V, and each IZ® â ÉI Sjcx contains the same
+w
+number of II0EI Sjcx by Lemma 6.4.1, (II). Therefore the struc-
+ture of II0cxEI Sjcx (and of its subspaces H©§Îe #ce , II0 OEW #ce)
+w
+can only be investigated further, by considering other objects in
+II0cxEI Sjcx: Operators and rings of operators. This was done in
+Chapter 6 for the ring B#, the next things to discuss are there-
+fore subrings of C. Considering the restricted form in which
+the associative law for TI0 CXE l Sjcx had to be formulated in Theorem
+VI (cf. also the remarks after this Theorem), structural questions
+of some interest will necessarily arise in connection with the
+associative law.
+We know from Theorems IX, X, that every A E B# behaves4
+in the same way in each II0EI Sjcx within one given TI0 QI; w Sjcx.
+w
+Therefore we can only expect interesting phenomena, if more
+than one 0152wErw exists. This means, by Lemma 6.4.1, (III): If
+infinitely many ex E 1; with &#x3E; 2-dimensional Sjcx exist. Further-
+more we know by Theorem VII, that complications in connection
+with the associative law will only arise, if L (that is, the number
+of pieces I y, y E L of I ) is infinite. And as ly’s with one élément
+a are clearly irrelevant, therefore each l y must have &#x3E; 2 elements.
+Thus the simplest possible example, on which the essential
+features of an infinite direct product TI@cxEI cx may already be
+observed, is this one:
+Let I be enumerably infinite, each oc 
+E I, 2-dimensional, let
+each ly, y E L, have exactly 2 elements, and thus L be enumerably
+infinite.
+Specifically:
+Let I be the set of all pairs (n, T),n = 1, 2, ..., T = l, 2,
+L be the set of all n = 1, 2, ..., I n the set consisting of (n, 1)
+and (n, 2) (n, T), n replace ce, y) , S)(nr) is 2-dimensional.
+B# is the ring generated by all :J3(n, T). A subring of De which
+is essentially affected by an application of the associative law
+(in the sense of Theorem VI) to the above I, L and I,,, is the
+ring generated by all B(n,1), which we will denote by ei.
+So we have:
+7.2. We now wish to see the effect of the "associative trans-
+formation" of our fl© oeejjoe into II(DYEL 
+on these
+too, and see what happens to
+Theorem V is clearly enumerably infinite. So each.
+is a Hilbert space, and as B* coïncides in it by Theorems X
+with the ring of all its bounded operators, we may say, using
+the terminology of (7), p. 172: B# is a factor of class (Ioo ) 46) in
+1% = @( (n, -r); n = 1, 2, ...), establishing its isomorphism with
+OYE LI oc e ; D.) 
+= (n, 2)
+(cf. Theorem VII.) In particular, we may form for every 6
+of n0i...,ï) the Si of rl0n=1,2,...,(n,j) and the OE2 of
+Z=1,2
+n=i,...@(n,2) which correspond to it by Theorem VI, (I );
+46 That is: A direct factor cf. (7), pp. 139 and 173.
+will correspond to each other under the above isomorphism
+(by Theorem VI, (III), and Theorem VII). 
+It is evident, that instead of forming a {J3(n,l) directly in
+ive might as well form it indirectly: First in
+phic to this B# in II@1,2,... S)(n,l). But the B# of 11 n-1, 2, ... SJ(n,l)
+in f1°/l/ii,2, ... Sj(n,l} is again a factor of class (Ioe ) ( by the same
+argument as above for
+true for our
+7.3. Let us now investigate the situation in II@YEL( II0c(EI SjC(y) ===
+Y
+=n,, 
+(Sj(n,l) (g) S)(n,2)). For B#’ (we write B#’ instead of
+, 
+to emphasize the différence) the argument of 7.2 applies
+again (using now the 4-dimensional H(n,1) 0 Sj(n,2) in place of
+the 2-dimensional S)(n, T)). B# is a factor of class (I00) in each
+II0=1,2,... (S)(n,l) 0 S)(n,2)) whieh are all Hilbert spaces. 
+As to Éi°’ (in place of eâ), we must, of course, modify the
+définition of 9*’ somewhat: For each $(n,l) (in Sj(n,2)) we
+f irst extend in Sj (n, l) @ Sj (n, 2) to :B (n, l)’ and then we extend
+While until now the rings B#, (?tt, S 
+behaved isomorphic-
+ally in all incomplète direct products, this need not be (and as
+we will soon see, is not) the case for É9"’ in the various
+nQ9=l, 2,... (S){n, 1) 0 S) {n, 2) ). We proceed now to discuss this in
+detail.
+Let flJ{n,T’" x = 1, 2, be a complète normalised orthogonal
+set in S){n,T). Then flJ{n,l),u 0 flJ(n,2),).’ x, Â. == 1, 2, 
+is 
+one in
+Thus the general element of
+while that one of
+We will treat the x(n,T),x as vectors:
+and the Y(n),uÂ as matrices:
+Consider 
+now an incomplète 
+direct product
+n@=1,2,... (Sj(n,l) 0 SJ(n,2)). It is characterised by any Co-sequence
+(g?n); n =1, 2, ...) E iJ, g0(n) E S"j(n, 1) © H(n, 2): Use the expansion (*) 
+for each 9’ then the matrices
+obtain. Thus rlolz n=’1,2, ... (D (,,2» is characterised by this
+sequence of matrices H0(n), n = 1, 2, ....
+Observe now the following points:
+(a) We can choose the 9 0 ), n = 1, 2,..., with Il 150
+(by Lemma 3.3.7), that is: We may assume, that 
+(b ) From the point of view of isomorphism of the parts of
+(3*" in thé various II0=1,2,... (S)(n,l) 0 Sj(n, 2) ) a permutation of thé
+factors S)(n,l) 0 S)(n,2)’ n 
+= l, 2, ..., does not matter - all our
+constructions being entirely independent of any ordering of the
+factors 47). Therefore any permutation of the H0(n)’ n = 1, 2, ...,
+is 
+immaterial 
+for 
+our isomorphism-problem of 
+(3*=’ 
+in
+II0=1, 2,... (SJ(n, 1) @ SJ (n, 2) ). 
+(c) From the same point of view any change of the complète,
+normalised, orthogonal sets in the various SJ(n,T) is immaterial.
+This is rather obvious, or else it may be proved with the help
+of Theorem IV. 
+Replace therefore f/J(n, T),’" " = 1, 2, by lpn, T),X’ " 
+= 1, 2, where
+the matrices
+being unitary, but other-
+wise arbitrary. It is clear, that this replaces each H’.) by
+47) But not from splitting up and recombining factors! We have an unrestricted
+commutative law, but a very restricted associative one. (Cf. Theorem VI.) 
+where V(n) = transposed matrix of U (n, 1) 1w(n) === U(n,2). Thus
+V(n), W(n) are again arbitrary unitary matrices.
+Now it is well-known, that every matrix can be carried by
+(t) into the diagonal form, with diagonal elements &#x3E; 0 48). So
+we may assume that H0(n) has this form:
+By another application of (t) we may interchange
+so we may assume, that
+By (a) we may assume, that
+permutation of the an, n = 1, 2, ... matters.
+(d) We have obtained the normal form
+For two such
+we see that 
+So they determine the same equivalence-class 1 and the same
+converges (by Definition 2.3.2). This has the majorant
+therefore the convergence of (§§) suffices.
+48) 
+Given any H, H*H is Hermitean, so a unitary W exists, so that W*H*HW
+is diagonal, say with the diagonal dl, d2. As it is semi-definite, so dl, d2&#x3E; 0. Let
+K be the diagonal matrix with the diagonal V, 
+1 -111/ d2 then K*K = K2 =
+W*H*HW, so always IIKIII 
+= IIHW/II. Therefore a unitary V with K = VHW
+exists.
+49) 
+Clearly
+We repeat :
+LEMMA 7.3.1. From the point of view of isomorphism of the
+parts of el’ in the various H©/_ 
+(Sj(n, 1) 0 Sj(n.2) ) it suffices to
+consider the équivalence classes T) of sequences (g?n); n = 1, 2, ...)
+of the form (§), with 0  oen  1, n = l, 2, .... Any permutation
+of these «n, n = 1, 2, ... 
+or any replacement by other a.n,
+n = 1, 2, ... for which (§§ ) converges, is immaterial.
+7.4. We will now discuss two extreme special cases. Consider
+first the case oe1 = C(2 == ... === 1.
+LEMMA 7.4.1. 
+(I ) The sequence «n, n = 1, 2, ..., which
+characterises a given II0=1, 2,... (Sj(n, 1) Q9 Sj(n, 2») can be chosen
+as 
+C(l = a2 = 
+... = 1 if and only if D is the equivalence
+class of a sequence (g0(n); n 
+= 1, 2, ...) with g?n) = f0(n,1) (g) f?n,2)
+(f(n,T) E Sj(n, T) ).
+(II) 
+In any such n0=1,2,...(Sj(n,1)@Sj(n,2») the ring ei’ is
+a factor of class (I00). (Cf. § 7.2).
+Proof : Ad (I): Necessity: If oei = oe = ... = l, then (§ ) in
+§ 7.3 gives 
+Sufficiency : We have g0(n) = f?n,l) 0f?n, 2). As n=1,2,...11I g?n) 11- 11
+converges, so g?n) = 0, III g?n) 11- 11 =1 can occur for a finite
+number of n = 1, 2, .. , only. With these exceptions g1n) =/:- 0,
+f?n,l)’ f?n, 2) * o. For thé exceptional n’s we may change f?n,l)’ f?n, 2)
+(use Lemma 3.3.5), so as to have always frn,l)’ f(,2) =F o. Now
+Lemma 3.3.7 permits us to replace these g?n) =f?n,l) 0f?n,2) by
+In other words: We may assume
+We now could choose the
+Then clearly an = 1, that is fXI = oc2 = ... - 1.
+Character 
+of ei’: 
+Assume 
+fXI = oc2 = ... = 1, 
+that 
+is
+g0(n) = fÉn, i&#x3E; © fE, &#x3E; , Il 1&#x26;,1)11 == IIf&#x26;,2)1I = 1 ( cf. above ). Apply the
+associative law (as described in 7.1) in the formulation of
+Theorem VI.
+(f&#x26;, T); n === l, 2, ..., 7: === l, 2) 
+is clearly a Co-sequence for
+IIQ9n=I,2 
+S)(n,T); let OE be its equivalence-class. Then (thé 0152n
+T=l, 2, ... 
+being inessential, as ail ln = @( (n, 1), (n, 2)) are finite) @o = S.
+So our ge’ is isomorphic to the e’4 of 7.2, and therefore it
+is a factor of class (Ioo ).
+7.5. 
+Consider next thecase oc1 = oc2 = ... = 0.
+LEMMA 7.5.1. 
+In 
+any n0=1,2,... (S)(n,l) 0 S)(n,2») 
+With
+03B11 =03B12 = ... = 0, the ring Ca#, is a factor of class (II1). (Cf. (7),
+p. 172.)
+Proof: We proceed in the inverse direction: We will analyse
+one of the examples of factors of class (111), given in (7),
+pp. 192 - 209, and show that it is isomorphic to ge’ in the said
+n0=1, 2,... (S)(n, 1) @ S)(n, 2»).
+n=l, 
+2,... (‘’c(rt,1) ‘’ "c’(rz, 2) )·
+( I ) 
+Let S be the set of all ( enumerably infinite) sequences
+x = (am; m = 1, 2, ... ) where each (Xm = 0,1. Let 0 be the set
+of those x = (oc., m = 1, 2, ...) E S for which 03B1m # 0 occurs for
+a finite number of m’s only.
+Define in S: If x = (ccm; 1n = 1, 2, ...), y = (Bm; m = 1, 2, ... )
+then x e y = (y,,,; m = 1, 2, ... ) where
+Under this definition of "composition" x e y, S is clearly a
+(commutative) group, with the "unit" 0=(0;m=l,2,...),
+and 0152 is an (enumerably infinite) subgroup of S.
+For S (but not for OE ! ) we use the mapping
+of S on the numerical interval 0    1. Except for the ,
+image of (S, the set of all dyadically rational numbers, which
+is a set of Lebesgue-measure 0, this mapping is one-to-one.
+So the common (exterior) Lebesgue-measure in 0    1 is
+mapped by the inverse of E on a Lebesgue-measure in S, in
+the sense of (7), Definition 12.1.2 on p. 192. We will denote it
+by ft* (and for "measurable" sets by p, cf. loc. cit. above).
+We will now consider @ (with the "composition" a -e b for
+a, bE (âR) as the "group" and S (with the "mappings" x --&#x3E; a e x
+for aE0152,xES) as the ,space" described in (7), pp. 1922013195. In
+the sense of Definition 12.1.5, p. 195, eod. (we replace the notations
+ab, ax used there by a-$- b, a-$- x ) @ is an m-group and ergodic
+in S. m-group character : Ad ( I ) loc. cit.: If a = (am; m = 1, 2, ... )
+and ocm = 0 for all m &#x3E; mo, then the mapping x -&#x3E; a 4&#x3E; x of
+S corresponds by E to a mapping of 0  e  1 of this nature:
+a translation as a whole. So the common Lebesgue-measure is
+left invariant in 0  e  1, and corresponding y* in S. Ad (II ) :
+Obvious. Ad (III): If a # o, then clearly every a/+ r # r. The
+ergodicity will be established in (IV) below.
+(II ) Form for these S, OJ the spaces NS and lijg of all (complex-
+valued) functions f(x) resp. F(x, a) (xc S, aEOJ) which are
+,u-measurable in x for each a E OE, aid with a finite
+resp.
+Form the bounded operators
+bounded and u-measurable)
+(pp. 198-199, loc. cit.) and the ring 5W which they generate
+(p. 200, loc. cit.).
+In forming 5W we need not to use all these qJ(ae) and a E (M.
+We may obviously restrict ourselves, in forming M, to (bounded)
+Baire-functions cp(ae), then by continuity to continuous functions
+cp(ae) of e(x), and then again by continuity to functions 99(x)
+of this form:
+for any mo = 1, 2, .... 
+But
+ourselves to the
+then we have
+further restriction to the wl(x), l = 1, 2, ..., is legitimate.
+Put 
+F
+clearly 
+alE @, 
+and 
+if 
+a = (cxm; m = 1, 2, ... ) E @, 
+then
+a = al-$- ... -$- al where 11, ... Lv are those m for which (Xm ::j=. o.
+So it suffices to use the U,,,, 1 
+= 1, 2, ..., only (instead of
+where the ll’ ..., l’V are those m for which ocm =F 0. Define, if
+bOE oE too,
+One verifies immediately, that the
+mutually orthogonal, and as
+are normalised, too.
+rations of (II ) extend this to all bounded, fl-measurable f(x). Put
+x-set of p-measure 0, for each bo E. So the normalised, ortho-
+gonal set Fa o b 0 (a, x), ao, boE Q, is complete, too.
+(IV) Literally the same argument as above shows, that the
+Wa o (0153), a0 e Qj form a normalised, orthogonal, and complete set
+of functions in the space Sjs and that for the operator
+we have (ao = (y-.; m == 1, 2, - - -»
+If the p-measurable set T C S differs for each co E @ from its
+image by x- r e 
+co by a set of u-measure 0 only (depending
+so
+The Fa1{31(X2P2’" (al’ fll, a2’ P2, ...= 0, 11 
+but only a finite
+number of them is # 0) form a complete, normalised, orthogonal
+set in Sj@s. Besides
+(We write 1 - 
+oc in all places, where we should write oc + 1, since
+these numbers are to be reduced mod 2.)
+Apply Lemma 4.1.4 and Theorem V: For every n = 1, 2, ...
+the space S){n,l) (g) S){n,2) has 4 dimensions, so let every Kn be
+the 4-element set of all pairs (oc, P), ce, f3 = 0, 1, and let the
+pair (0,0) play the role assigned to 0 loc. cit. above.
+Put
+one verifies easily, that this is a complete, normalised, ortho-
+gonal set in Sj(n,l) 0 Sj(n,2)’ and has CPn, (0,0) = gn, as required. So
+thé TIQ9n=1,2,... wn,ù(n) (#(?1) 
+=== (an’ f3n)’ an’ fJn = 0,1 
+for every
+n = 1, 2, ... and P(n ) = (0, 0), that is an = f3n = 0, except for
+a finite number of n’s ) form a complète, normalised, orthogonal
+Consider now the two operators Un, Ln in S)(n,l)’ defined by
+One verifies easily, that the operators Un, Ln in S)(n,l) @ S)(n,2) map
+9’n, (0,0)’ CPn, (0,1)’ 5 ’Tn, (1,0)’ f{Jn, (1,1) on (Pn, (0,1)’ f{Jn, (0,0)’ -f{Jn, (1,1)’ 5 -’Tn, (1, 0)
+resp. 
+f{Jn,(l,O)’ 
+, 
+f{Jn,(l,l)’ 
+, 
+9n, (0, 0) 
+, 
+f{Jn,(O,l)’ 
+, 
+that 
+is, 
+f{Jn_,{3)- 
+OIl
+( -1 )C(f{Jn,(OC,l-{3) resp. f{Jn,(l-a,{3). Therefore we have for Un, Ln in
+Observe finally, that in N(n,l) the 4 operators l, un, L7, UnLn
+are linearly independent, and as (n,l) is 2-dimensional, this
+is the maximum number of linearly independent operators in
+S)(n,l). So all of them are linear aggregates of these; therefore
+{B(n,l) = ’R.( un, Ln). Consequently 
+Now we have in
+(VII) 
+Compare Sj0152S and J-jol-, n=l, 2, ( % n, i&#x3E; © S)(n,2) ). The
+F N R N R resp. the (/J,., R IV R (with the same restrictions on
+the 17,1, fll, ’7,2, fl2g ... ) are complete, normalised, orthogonal sets
+in 
+these two spaces. So 
+an isomorphism of Sj@s and
+110=1,2,...(S)(n,1)0S)(n,2)) exists which carries each F(’f..1Pl(’f..2{32...
+into the corresponding (/J(’f..1ffl(’f..2P2 .... 
+. 
+(V) and (VII) establish
+therefore, that it carries Ual into ÜL and Ly,(x) into L . There-
+fore it carries M=R(Ual, L1pl(X); l = 1, 2, ... 
+) (cf. end of (II))
+into 
+Now t7a’r is a factor of class (III) by (7), p. 206. (This is Lemma
+13.1.2 loc. cit.: Every one-point set has the common Lebesgue-
+measure 0.) As ge’ is (spatially) isomorphic to t7a’r, the same
+is true for ee’. This completes the proof.
+7.6. Lemmata 7.4.1 and 7.5.1 shows, how essentially different
+the ring
+is in the various incomplete direct products
+The two cases considered, OCI = OC2 = ... = 1 and ell = 
+oc2 = ... = 0
+are only tivo extremes, and Lemma 7.3.1 describes, how other
+sequences ell’ el2’ ... (all &#x3E; 0,  1) could be used. We wish
+{ 
+= 1 for n even .
+only to mention the choise eln = 0 for n odd in whieh case a
+0 for n odd
+factor of class (II00) (cf. (7) p. 172) results, as can be shown,
+without much trouble.
+We surmise, that el’ is a factor in every n=l, 2, #(n,1)
+(that is: for every choice of oc,, el2’ ...). Its class can never be
+(ln)’ n = 1, 2, ..., because 9 has clearly no finite linear bases.
+We know, that it may be (Ioo)’ (II1 ) and, as observed above,
+(IIoo ) too. Thus the only question which remains is this: Does
+class (11100) occur for any choice of the (Y.11 el2’ ... ?
+The question, whether factors of class (11100) exist at all, is
+as yet unsolved (cf. (7), p. 208), and we do not wish to formulate
+any hypothesis concerning it. But we are rather inclined to
+surmise, that the above É9" will not be a factor of class (IIIoo ),
+whatever the choice of the ocl, OC2, ....
+(Received October 8th, 1937.)

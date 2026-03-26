@@ -1,0 +1,906 @@
+The Logic of Quantum Mechanics
+Garrett Birkhoff; John Von Neumann
+The Annals of Mathematics, 2nd Ser., Vol. 37, No. 4. (Oct., 1936), pp. 823-843.
+Stable URL:
+http://links.jstor.org/sici?sici=0003-486X%28193610%292%3A37%3A4%3C823%3ATLOQM%3E2.0.CO%3B2-Z
+The Annals of Mathematics is currently published by Annals of Mathematics.
+prior permission, you may not download an entire issue of a journal or multiple copies of articles, and you may use content in
+Please contact the publisher regarding any further use of this work. Publisher contact information may be obtained at
+page of such transmission.
+journals and scholarly literature from around the world. The Archive is supported by libraries, scholarly societies, publishers,
+Tue Jan 15 03:38:00 2008
+ANNALS OP MATHEMATICS 
+THE LOGIC OF QUANTUM MECHANICS 
+BY GARRETTBIRKHOFF 
+JOHNVON
+AND 
+NEUMANN 
+(Received April 4, 1936) 
+1. Introduction. One of the aspects of quantum theory which has attracted 
+the most general attention, is the novelty of the logical notions which it pre- 
+supposes. It asserts that even a complete mathematical description of a physi- 
+cal system G does not in general enable one to predict with certainty the result 
+of an experiment on G, and that in particular one can never predict with cer- 
+tainty both the position and the momentum of G (Heisenberg's Uncertainty 
+Principle). It further asserts that most pairs of observations are incompatible, 
+and cannot be made on G simultaneously (Principle of Non-commutativity of 
+Observations). 
+The object of the present paper is to discover what logical structure one may 
+hope to find in physical theories which, like quantum mechanics, do not con- 
+form to classical logic. Our main conclusion, based on admittedly heuristic 
+arguments, is that one can reasonably expect to find a calculus of propositions 
+which is formally indistinguishable from the calculus of linear subspaces with 
+respect to set products, linear sums, and orthogonal wrnpbments--and resembles 
+the usual calculus of propositions with respect to and, or, and not. 
+In order to avoid being committed to quantum theory in its present form, we 
+have first (in $52-6) stated the heuristic arguments which suggest that such a 
+calculus is the proper one in quantum mechanics, and then (in $57-14) recon-
+structed this calculus from the axiomatic standpoint. In both parts an attempt 
+has been made to clarify the discussion by continual comparison with classical 
+mechanics and its propositional calculi. The paper ends with a few tentative 
+conclusions which may be drawn from the material just summarized. 
+2. Observations on physical systems. The concept of a physically observ- 
+able "physical system" is present in all branches of physics, and we shall 
+assume it. 
+It is clear that an "observation" of a physical system G can be described 
+generally as a writing down of the readings from various1 compatible measure- 
+ments. Thus if the measurements are denoted by the symbols PI, . .. ,p, ,then 
+1 If one prefera, one may regard a set of compatible measurements as a single composite 
+"meesurement"-and also admit non-numerical reading-without 
+interfering with subse- 
+quent arguments. 
+Among conspicuous observables in quantum theory are position, momentum, energy, 
+and (non-numerical) symmetry. 
+GARRETT BIRKHOFF AND JOHN YON NEUMANN 
+an observation of @ amounts to specifying numbers XI, . . . , x, corresponding 
+to the different wk . 
+It follows that the most general form of a prediction concerning G is that the 
+point (xl, . . ,xn) determined by actually measuring pl, . - , p,, will lie in a 
+subset S of (xl , . . . , xn)-space. Hence if we call the (xl, 
+. , xn)-spaces asso- 
+ciated with G, its "observation-spaces," we may call the subsets of the observa- 
+tion-spaces associated with any physical system G, the "experimental propo- 
+sitions" concerning G. 
+3. Phase-spaces. There is one concept which quantum theory shares alike 
+with classical mechanics and classical electrodynamics. This is the concept of a 
+mathematical "phase-space." 
+According to this concept, any physical system G is at each instant$ hypo-
+thetically associated with a "point" p in a fixed phase-space Z; this point is 
+supposed to represent mathematically the "state" of G, and the "state" of 6is 
+supposed to be ascertainable by "ma~imal"~ 
+observations. 
+Furthermore, the point po associated with (5at a time to, together with a pre- 
+scribed mathematical "law of propagation," fix the point pr associated with 6 
+at any later time t; this assumption evidently embodies the principle of muthe- 
+matical causation.a 
+Thus in classical mechanics, each point of 2.corresponds to a choice of n 
+position and n conjugate momentum coordinates-and 
+the law of propagation 
+may be Newton's inverse-square law of attraction. Hence in this case Z is a 
+fegion of ordinary 2n-dimensional space. In electrodynamics, the points of Z 
+can only be specified after certain junctions--such as the electromagnetic and 
+electrostatic potential-are known; hence I:is a function-space of infinitely many 
+dimensions. Similarly, in quantum theory the points of I:correspond to so-caIIed 
+11wave-functi&," 
+and hence Z is again a function-space-usually' assumed to 
+be Hilbert space. 
+In electrodynamics, the law of propagation is contained in Maxwell's equa- 
+tions, and in quantum theory, in equations due to Schrodinger. In any case, 
+the law of propagation may be imagined as inducing a steady fluid motion in 
+the phase-space. 
+I t  has proved to be a fruitful observation that in many important cases of 
+classical dynamics, this flow conserves volumes. It may be noted that in 
+quantum mechanics, the flow conserves distances (i.e., the equations are "uni- 
+tary"). 
+2 L. Pauling and E. B. Wilson, "An introduetion to quantum mechanics," McGraw-Hill, 
+1935, p. 422. Dirac, "Quantum mechanics," Oxford, 1930, $4. 
+a For the existence of mathematical causation, cf. also p. 65 of Heisenberg's "The physical 
+principles of the quantum theory," Chicago, 1929. 
+' Cf. J. von Neumann, "Mathematische Gundlagen der Quanten-mechanik," Berlin, 1931. 
+p. 18. 
+LOGIC OE QUANTUM MECHANICS 
+4. Propositions as subsets of phase-space. Now before a phase-space can 
+become imbued with reality, its elements and subsets must be correlated in 
+some way with "experimental propositions" (which are subsets of different 
+observation-spaces). Moreover, this must be so done that set-theoretical inclu- 
+sion (which is the analogue of logical implication) is preserved. 
+There is an obvious way to do this in dynarnical systems of the classical type.5 
+One can measure position and its first time-derivative velocity-and 
+hence 
+momentum-explicitly, and so establish a one-one correspondence which pre- 
+serves inclusion between subsets of phase-space and subsets of a suitable obser- 
+vation-space. 
+In the cases of the kinetic theory of gases and of electromagnetic waves no 
+such simple procedure is possible, but it was imagined for a long time that 
+I (demons" of small enough size could by tracing the motion of each particle, or 
+by a dynamometer and infinitesimal point-charges and magnets, measure quan- 
+tities corresponding to every coijrdinate of the phase-space involved. 
+In quantum theory not even this is imagined, and the possibility of predicting 
+in general the readings from measurements on a physical system f5from a knowl- 
+edge of its "state" is denied; only statistical predictions are always possible. 
+This has been interpreted as a renunciation of the doctrine of predetermina- 
+tion; a thoughtful analysis shows that another and more subtle idea is involved. 
+The central idea is that physical quantities are related, but are not all computable 
+from a number of independent basic quantities (such as position and vel~city).~ 
+We shall show in 512 that this situation has an exact algebraic analogue in the 
+calculus of propositions. 
+5. Propositional calculi in classical dynamics. Thus we see that an un-
+critical acceptance of the ideas of classical dynamics (particularly as they 
+involve n-body problems) leads one to identify each subset of phase-space with 
+an experimental proposition (the proposition that the system considered has 
+position and momentum coordinates satisfying certain conditions) and con-
+versely. 
+This is easily seen to be unrealistic; for example, how absurd it would be to 
+call an "experimental proposition," the assertion that the angular momentum 
+(in radians per second) of the earth around the sun was at a particular instant a 
+rational number! 
+Actually, at least in statistics, it seems best to assume that it is the Lebesgue- 
+mamrable subsets of a phase-space which correspond to experimental proposi- 
+tions, two subseta being identified, if their difference has Lebesgue-measure 0.l 
+Like systems idealizing the solar system or projectile motion. 
+A similar situation arise%when one tries to correlate polarizations in different planes of 
+electromagnetic waves. 
+Cf. J. von Neumann, "Operatorenmethoden in der klassischen Mechanik," Annals of 
+Math. 33 (1932), 5&. 
+The difference of two sets S,, 
+Sr is the set (St+ St) - S1.S2of 
+those pointa, which belong to one of them, but not to both. 
+GARRETT BIRKHOFF AND JOHN VON NEUMANN 
+But in either case, the set-theoretical sum and product of any two subsets, and 
+the complement of any one subset of phase-space corresponding to experimental 
+propositions, has the same property. That is, by definitions 
+The experimental propositions concerning any system in classical mechanics, 
+correspond to a "field" oj subsets of its phase-space. More precisely: To the 
+"quotient" of such a jeld by an ideal in it. At any rate they jomn a "Boolean 
+A lgeb~a."~ 
+In the axiomatic discussion of propositional calculi which follows, it will be 
+shown that this is inevitable when one is dealing with exclusively compatible 
+measurements, and also that it is logically immaterial which particular field of 
+sets is used. 
+6. A propositional calculus for quantum mechanics. The question of the 
+connection in quantum mechanics between subsets of observation-spaces (or 
+I1experimental propositions") and subsets of the phase-space of a system 6, 
+has not been touched. The present section will be devoted to defining such a 
+connection, proving some facts about it, and obtaining from it heuristically by 
+introducing a plausible postulate, a propositional calculus for quantum me- 
+chanics. 
+Accordingly, let us observe that if al, . . . ,a, are any compatible observations 
+on a quantum-mechanical system 6with phase-space 2, thenlo there exists a set 
+of mutually orthogonal closed linear subspaces Q i  of 2 (which correspond to the 
+families of proper functions satisfying a1j = Xi.1j, . - . ,anj = k.,j) such that 
+every point (or function) j e 2 can be uniquely written in the form 
+Hence if we state the 
+DEFINITION:By the "mathematical representative" of a subset S of any 
+observation-space (determihed by compatible observations cull .. . , a,) for a 
+quantum-mechanical system 6,will be meant the set of all points f of the phase- 
+space of @, which are linearly determined by proper functions f k  satisfying 
+a l f k  = A l f k ,  ... ,a n j b  = X n j k ,  where (XI, .. . ,An) e S .  
+Then it follows immediately: (1) that the mathematical representative of any 
+experimental proposition is a closed linear subspace of Hilbert space (2) since 
+all operators of quantum mechanics are Herrnitian, that the mathematical 
+representative of the negativel1 of any experimental proposition is the orthogonal 
+F.Hausdorff, "Mengenlehre," Berlin, 1927, p. 78. 
+M. H. Stone, "Boolean Algebras and their application to topology," Proc. Nat. Acad. 20 
+(1934),p. 197. 
+lo Cf. von Neumann, op. cit., pp. 121,90, or Dirac, op. cit., 17. We disregard complica- 
+tions due to the possibility of a continuous spectrum. They are inessential in the pres- 
+ent case. 
+l1 By the "negativeJJ of an experimental proposition (or subset S of an observation-
+space) is meant the experimental proposition corresponding to the set-complement of S in 
+the same observation-space. 
+LOGIC OF QUANTUM MECHANICS 
+complement of the mathematical representative of the proposition itself (3) the 
+following three conditions on two experimental propositions P and Q concerning 
+a given type of physical system are equivalent: 
+(3s) The mathematical representative of P is a subset of the mathematical 
+representative of Q. 
+(3b) P implies Q-that 
+is, whenever one can predict P with certainty, one can 
+predict Q with certainty. 
+(3c) For any statistical ensemble of systems, the probability of P is at most 
+the probability of Q. 
+The equivalence of (3s)-(3c) leads one to regard the aggregate of the mathe- 
+matical representatives of the experimental propositions concerning any physical 
+system G,as representing mathematically the propositional calculus for 6. 
+We now introduce the 
+POSTULATE:
+The set-theoretical product of any two mathematical representatives 
+of experimental propositions concerning a quantum-mechanical system, is itself the 
+mathematical representative of an experimental proposition. 
+REMARKS:This postulate would clearly be implied by the not unnatural 
+conjecture that all Hermitian-symmetric operators in Hilbert space (phase 
+space) correspond to ob~ervables;'~ 
+it would even be implied by the conjecture 
+that those operators which correspond to obsemables coincide with the Hermi- 
+tian-symmetric elements of a suitable operator-ring M.l$ 
+Now the closed linear sum QI + Qz of any two closed linear subspaces Qi of 
+Hilbert space, is the orthogonal complement of the set-product fl: .Q: of the 
+orthogonal complements Q: of the Q ;hence if one adds the above postulate to the 
+usual postulates of quantum theory, then one can deduce that 
+The set-product and closed linear sum of any two, and the orthogonal complement 
+of any one closed linear subspace of Hilberl space representing mathematically an 
+ezperzerzmed.aEproposition concerning a quantum-mechanical system 6, itself 
+represents an experimental proposition concerning 6. 
+This defines the calculus of experimental propositions concerning G, as a 
+calculus with three operations and a relation of implication, which closely 
+resembles the systems defined in $5. We shall now turn to the analysis and com- 
+parison of all three calculi from an axiomatic-algebraic standpoint. 
+7. Implication as ptWial ordering. It was suggested above that in any 
+physical theory involving a phase-space, the experimental propositions concern- 
+lz I.e., that given such an operator a, one "could" find an observable for which the 
+proper states were the proper functions of a. 
+p. 120. It is shown on p. 141, loc. cit. (Definition 4.2.1 and Lemma 4.2.1), that the closed 
+linear sets of a ring M-that is those, the "projection operators" of which belong to M-
+coincide with the closed linear sets which are invariant under a certain group of rotations of 
+Hilbert space. And the latter property is obviously conserved when a set-theoretical 
+intersection is formed. 
+(1936),
+rings of operators," Annals of Math., 
+"On
+v. Neumann, 
+J.
+Murray and 
+J.
+F. 
+'
+ 
+GARRETT BIRKHOFF AND JOHN VON NEUMANN 
+ing a system k% correspond to a family of subsets of its phase-space 2,in such a 
+way that "x implies y" (x and y being any two experimental propositions) 
+means that the subset of Z corresponding to x is contained set-theoretically in 
+the subset corresponding to y. This hypothesis clearly is important in propor-
+tion as relationships of implication exist between experimental propositions 
+corresponding to subsets of different observation-spaces. 
+The present section will be devoted to corroborating this hypothesis by identi-
+fying the algebraic-axiomatic properties of logical implication with those of set-
+inclusion. 
+It is customary to admit as relations of "implication," only relations satisfy-
+ing 
+S1: x implies x. 
+52: If x implies y and y impliesz, then x impliesz. 
+53: If x implies y and y implies x, then x and y are logically equivalent. 
+In fact, 53 need not be stated as a postulate at all, but can be regarded as a 
+definition of logical equivalence. Pursuing this line of thought, one can interpret 
+as a "physical quality," the set of all experimental propositions logically equiva-
+lent to a given experimental proposition.14 
+Now if one regards the set S, of propositions implying a given proposition x as 
+a "mathematical representative" of x, then by S3 the correspondence between 
+the x and the S, is one-one, and x implies y if and only if S, C S,. While con-
+versely, if L is any system of subsets X of a fixed class r, then there is an iso-
+morphism which carries inclusion into logical implication between L and the 
+system L* of propositions "x is a point of X," X e L. 
+Thus we see that the properties of logical implication are indistinguishable 
+from those of set-inclusion, and that therefore it is algebraically reasonable to try 
+to correlate physical qualities with subsets of phase-space. 
+A system satisfying 51-53, and in which the relation "z implies y" is written 
+x C y, is usually16called a "partially ordered system," and thus our first postu-
+late concerning propositjonal calculi is that the physical qualities attm'butable to 
+any physical systemjomn a partially ordered system. 
+I t  does not seem excessiveto require that in addition any such calculus contain 
+two special propositions: the proposition 0that the system considered exists, 
+and the proposition @ that it does not exist. Clearly 
+S4: @ C x C 0for any x. 
+@ is, from a logical standpoint, the "identically false" or "absurd" proposition; 
+is the "identically true" or "self-evident" proposition. 
+8. Lattices. In any calculus of propositions, it is natural to imagine that 
+there is a weakest proposition implying, and a strongest proposition implied by, 
+l4 Thus in $6, closed linear subspaces of Hilbert space correspond one-many to experi-
+mental propositions, but one-one to physical qualities in this sense. 
+l6 F.Hau~dorff,"Qrundztigeder Mengenlehre," Leipzig, 1914,Chap. VI, $1. 
+LOGIC OF QUANTUM 
+MECHANICS 
+a given pair of propositions. In fact, investigations of partially ordered systems 
+from different angles all indicate that the first property which they are likely to 
+possess, is the existence of greatest lower bounds and least upper bounds to sub- 
+sets of their elements. Accordingly, we state 
+DEFINITION: 
+if and
+A partially ordered system L will be called a "lattice"  
+only if to any pair x and y of its elements there correspond  
+S5: A "meet" or "greatest lower bound'' x n y such that (5a) x n y C x, (5b) 
+x fl y Cy,(5c)z C x a n d z  ~ y i m p l y z  
+c x  n y. 
+S6: A "join" or "least upper bound" x n" satisfying (6a) x U y 3x, (6b) 
+x U y3y,(6c)w 3 x a n d w  3yimplyw 3 x  U y. 
+The relation between meets and joins and abstract inclusion can be sum- 
+. .  marized as foll~ws,~e 
+(8.1) In any lattice L, the following formal identities are true, 
+L1:a n - a  = a a n d a  U a = a. 
+L 2 : a n b = b n a a n d a u b = b u a .  
+L 3 : a n  ( b f l ~ )= ( a n  b) n c a n d a u  ( b u c )  = ( a u  b) Uc. 
+~ 4 :U (a fl b) 
+= a.
+a 
+= a fl (a U b) 
+Moreover, the relations a 3b, a n b = b, and a U b = a are equivalent-each 
+implies both of the others. 
+(8.2) Conversely, in any set of elements satisfying L2-L4 (L1 is redundant), 
+a n b = b and a U b = a are equivalent. And if one defines them to mean 
+a 3b, then one reveals L as a lattice. 
+Clearly L1-L4 are well-known formal properties of and and or in ordinary 
+logic. This gives an algebraic reason for admitting as a postulate (if necessary) 
+the statement that a given calculus of propositions is a lattice. There are other 
+reasons17 which impel one to admit as a postulate the stronger statement that the 
+set-product of any two subsets of a phase-space which correspond to physical 
+qualities, itself represents a physical quality-this 
+is, of course, the Postulate 
+of $6. 
+It is worth remarking that in classical mechanics, one can easily define the 
+meet or join of any' two experimental propositions as an experimental proposi-
+tion-simply 
+by having independent observers read off the measurements which 
+either proposition involves, and combining the results logically. This is true in 
+quantum mechanics only exceptionally-only when all. the measurements in-
+volved commute (are compatible); in general, one can only express the join or 
+10 The final result wes found independently by 0.ore, "The foundation8 of abstract 
+algebra. I.," Annald of Math. 36 (1935), 406-37, and by H. MacNeille in his Haward Doc-. 
+toral Thesis, 1935. 
+l7 The first reason is that this implies no restriction on the abstract nature of a lattice-- 
+any lattice can be realized as a system of its own subsets, in such a way that a n  b is the set- 
+product of a and b. The second reason is that if one regards a subset S of the phase-space of 
+a system 6 as corresponding to the certainty of observing 6in S, then it is natural to assume 
+that the combined certainty of observing 6 in S and T is the certainty of observing G in 
+S.T = SnT,-and assumes quantum theory. 
+GARRETT BIRKHOFF AND J ~ H NVON NEUMANN 
+meet of two given experimental propositions as a class of logically equivalent 
+experimental propositions-i.e., as a physical quality.18 
+9. Complemented lattices. Besides the (binary) operations of meet- and 
+. join-formation, there is a third (unary) operation which may be defined in par- 
+tially ordered systems. This is the operation of complementation. 
+In the case of lattices isomorphic with "fields" of sets, complementation corre- 
+sponds to passage to the set-complement. In the case of closed linear sub- 
+spaces of Hilbert space (or of Cartesian %space), it corresponds to passage.to the 
+orthogonal complement. In either case, denoting the "complement" of an 
+element a by a', one has the formal identities, 
+L71: (a')' = a.  
+L72: a n a' = Q a n d a  U a' = 0.  
+L73: a C b implies a' 3 b'.  
+By definition, L71 and L73 amount to asserting that complementation is a 
+i 1dual automorphism" of period two. It is an immediate corollary of this and the 
+duality between the definitions (in terms of inclusion) of meet and join, that 
+L74: (a fl b)' = a' U b' and (a U b)' = a' fI b' 
+and another corollary that the second half of L72 is redundant. [Proof: by L71 
+and the first half of L74, (a U a') = (a" U a') = (a' n a)' = @', while under 
+inversion of inclusion @ evidently becomes O.] This permits one to deduce L72 
+from the even weaker assumption that a C a' implies a = 0. Proof: for any x, 
+(X n x')' = (XIu x") = u 3 n z'. 
+Hence if one admits as a postulate the assertion that passage from an experi- 
+mental proposition a to its comphent a' is a dual automorphisrn of period two,and 
+a implies a' is absurd, one has in effect admitted L71-L74. 
+This postulate is independently suggested (and L71 proved) by the fact the 
+iicomplement" of the proposition that the readings XI, . . . ,x, from a series of 
+compatible observations bl, . . . , p, lie in a subset S of (4, . . . , xn)-space,is by 
+definition the proposition that the readings lie in the set-complement of S. 
+10. The distributive identity. Up to now, we have only discussed formal 
+features of logical structure which seem to be common to classical dynamics and 
+the quantum theory. +Wenow turn to the central difference between them-the 
+distributive identity of the propositional calculus : 
+which is a law in classical, but not in quantum mechanics. 
+The following point should be mentioned in order to avoid misunderstanding: If a, b 
+are two physical qualities, then a IJb, a n  b and a' (cf. below) are physical qualities too (and 
+so are 0 and I+).
+But a C b is not a physical quality; it is a relation between physi- 
+cal qualities. 
+/ 
+LOGIC OF QUANTUM MECHANICS 
+From an axiomatic viewpoint, each half of L6 implies the other.'g 
+Further, 
+either half of L6, taken with L72, implies L71 and L73, and to assume L6 and 
+L72 amounts to assuming the usual definition of a Boolean algebra.z0 
+From a deeper mathematical viewpoint, L6 is the characteristic property of 
+set-combination. More precisely, every "field" of sets is isomorphic with a 
+Boolean algebra, and conver~ely.~~ 
+This throws new light on the well-known 
+fact that the propositional calculi of classical mechanics are Boolean algebras. 
+It is interesting that L6 is also a logical consequence of the compatibility of the 
+observables occurring in a, b, and c. That is, if observations are made by inde- 
+pendent observers, and combined according to the usual rules of logic, one can 
+prove L1-L4, L6, and L71-74. 
+These facts suggest that the distributive law m a y  break down in quantum 
+mechanics. That it does break down is shown by the fact that if a denotes the 
+experimental observation of a wave-packet fi on one side of a plane in ordinary 
+space, a' correspondingly the observation of fi on the other side, and b the obser- 
+vation of fi in a state symmetric about the plane, then (asone can readily check) : 
+b f l ( a U a l )  = b f l U = b > Q = ( b f l a ) =  ( b n a l )  
+= (b t l  a) U (b n a') 
+REMARK:In connection with this, it is a salient fact that the generalized 
+distributive law of logic : 
+breaks down in the quotient algebra of the field of Lebesgue measurable sets by 
+the ideal of sets of Lebesgue measure 0, which is so fundamental in statistics and 
+the formulation of the ergodic prin~iple.~~ 
+11. The modular identity. 
+AIthough closed linear subspaces of Hilbert 
+space and Cartesian n-space need not satisfy L6 relative to set-products and 
+closed linear sums, the formal properties of these operations are not confined to 
+L1-L4 and L71-L73. 
+In particular, set-products and straight linear sums are knownz3 to satisfy the 
+so-called "modular identity." 
+l Q  R. Dedekind, "Werke," Braunschweig, 1931, vol. 2, p. 110. 
+G. Birkhoff, "On the combination of subalgebsas," Proc. Camb. Phil. Soc. 29 (1933), 
+441-64, 0023-4. 
+Also, in any lattice satisfying L6, isomorphism with respect to inclusion 
+implies isomorphism with respect to complementation; this need not be true if L6 is not 
+assumed, aa the lattice of linear subspaces through the origin of Cartesian n-space shows. 
+M. H. Stone, "Boolean algebras and their application to topology," Proc. Nat. Acad. 20 
+(1934), 197-202. 
+A detailed explanation will be omitted, for brevity; one could refer to work of G. D. 
+Birkhoff, J. von Neumann, and A. Tarski. 
+2a G.Birkhoff, op. cit., $28. The proof is easy. One first notes that since a C (a U b) fl
+c 
+if a C c, and b n c C (a U b) n c in any case, a U (b 17 c) C (a U b) flc. Then one notes 
+GARRETT BIRKHOFF AND JOHN VON NEUMANN
+L5: If a C c ,  thena U (b fl c) = (a U b) fl c. 
+Therefore (since the linear sum of any two finite-dimensional linear subspaces of 
+Hilbert space is itself finite-dimensional and consequently closed) set-products 
+and closed linear sums of the finite dimensional subspaces of any topological 
+linear space such as Cartesian n-space or Hilbert space satisfy L5, too. 
+One can interpret L5 directly in various ways. First, it is evidently a re- 
+_ 
+stricted associative law on mixed joins and meets. It can equally well be re- 
+!: garded as a weakened distributive law, since if a C c, then a U (b n c) = 
+: 
+( a n  C) U (b n c)and(aU b) n c =  ( a U  b) n ( a U  c). Anditisself-dual: 
+replacing C ,  n, U by 3, U , n merely replaces a, b, c, by c, b, a. 
+illso, speaking graphically, the assumption that a lattice L is "modular" 
+(i.e., satisfies L5) is equivalent to2* saying that L contains no sublattice iso- 
+morphic with the lattice graphed in fig. 1: 
+Thus in Hilbert space, one can find a counterexample to L5 of this type. 
+Denote by £1, £ 2 ,  .5, - .  . a basis of orthonormal vectors of the space, and by 
+a, b, and c respectively the closed linear subspaces generated by the vectors 
+(£zn+ 
++ 10-2nbn+l), by the vectors b,, and by a and the vector tl. 
+Then a, b, and c generate the lattice of Fig. 1. 
+Finally, the modular identity can be proved to be a consequence of the assump- 
+tion ihat there exists a numerical dimension-function d(a), with the properties 
+D l  : If a > b, then d(a) > d(b).  
+D2: d(a) + d(b) = d(a n b) + d(a U b).  
+This theorem has a converse under the restriction to lattices in which there is a 
+finite upper bound to the length n of chainsz6 @ < al < a2 < - . . < a, < 0of 
+elements. 
+Since conditions Dl-D2 partially describe the formal properties of prob-
+ability, the presence of condition L5 is closely related to the existeye of an 
+that any vector in (a U b) n c can be written [ = a + 6 [a c a, 6 c b, E r c]. But 6 = 'E - a 
+isinc(einceE ccandu c a c c ) ;  hence[=u+B eaU(bnc), and aU(bnc) 3 (aUb)nc, 
+completing the proof. 
+Z4R. Dedekind, "Werke," vol. 2, p. 255. 
+16 The statements of this paragraph are corollariee of Theorem 10.2 of G. Birkhoff, 
+op. cit. 
+LOGIC OF QUANTUM MECHANICS 
+I Ia priori thermo-dynamic weight of states." 
+But it would be desirable to 
+interpret L5 by simpler phenomenological properties of quantum physics. 
+12. Relation to abstract projective geometries. We shall next investigate 
+how the assumption of postulates asserting that the physical qualities attrib- ' 
+utable to any quantum-mechanical system Q are a lattice satisfying L5 and 
+L71-L73 characterizes the resulting propositional calculus. This question is 
+evidently purely algebraic. 
+We believe that the best way to 'find this out is 
+introduce an assumption 
+limiting the length of chains of elements (assumption of finite dimensions) of 
+the lattice, admitting frankly that the assumption is purely heuristic. 
+I t  is known% that any lattice of finite dimensions satisfying L5 and L72 is the 
+direct product of a finite number of abstract projective geometries (in the sense 
+of Veblen and Young), and a finite Boolean algebra, and conversely. 
+REMARK: I t  is a corollary that a lattice satisfying L5 and L71-L73 possesses 
+independent basic elements of which any element is a union, if and only if it is a 
+Boolean algebra. 
+Again, such a lattice is a single projective geometry if and only if it is irre- 
+ducible-that 
+is, if and only if it contains no "neutral" elements.= 
+x #  @, 0 
+such that a = (a n x) U (a n x') for all a. In actual quantum mechanics such 
+an element would have a projection-operator, which commutes with all projec- 
+tion-operators of observables, and so with all operators of observables in general. 
+This would violate the requirement of "irreducibility" in quantum mechanic^.^^ 
+Hence we conclude that the proposilionul calculus of quantum mechanics has the 
+same strudure asan abstract projective geometry. 
+Moreover, this conclusion has been obtained purely by analyzing internal 
+properties of the calculus, in a way, which involves Hilbert space only indirectly. 
+13. Abstract projective geometries and skew-fields. We shall now try to 
+get a fresh picture of the propositional calculus of quantum mechanics, by 
+recalling the well-known two-way correspondence between abstract projective 
+geometries and (not necessarily commutative) fields. 
+Namely, let F be any such field, and consider the following definitions and con- 
+structions: n elements xl, . . . ,x, of F, not all = 0, form a right-ratio [XI:. . . :x,], , 
+two right-ratios [xl: . . . :x,lr, and [[I: . - . :[,I, 
+being called "equal," if and only 
+if a z r F with b = x,z, i = 1, - . . , n, exists. Similarly, n elements yl, . . . ,y, 
+of F, not all = 0, form a left-ratio [yl: . . . :y,]~, two left-ratios [yl: . . :y,]r 
+and [ql: . . . :q,], being called "equal," if and only if a z in F with q i  = zyi, 
+U
+i = 1, . . . ,n, exists. 
+"G. Birkhoff "Combinatorial relations in projective geometries," Annals of Math. 36 
+(1935), 743-8. 
+27 0.ore, op. cit., p. 419. 
+Ueing the terminology of footnote," and of loc. cit. there: The ring MM; should con- 
+tain no other projection-operators than 0, 1, or: the ring M must be a "factor." Cf. lop. 
+cit.l;, p. 1%. 
+GARRETT BIRKHOFF AND JOHN VON NEUMANN 
+Now define an n - 1-dimensional projective geametry P,-1(F) as follows: 
+The "points" of Pn-l(F) are all right-ratios [XI:. . . :xn],. The "linear sub-
+spaces" of Pm-l(F) are those sets of points, which are defined by systems of 
+equations 
+(m = 1,2, . .. ,the c r k i  are fixed, but arbitrary elements of F). The proof, that 
+this is an abstract projective geometry, amounts simply to restating the basic 
+properties of linear dependen~e.~g 
+The same considerations show, ihat the (n - %dimensional) hyperplanesoin 
+Pm-1(F) correspond to m = 1, not all cri = 0. Put crli = yi, then we have 
+This proves, that the (n - 2-dimensional) hyperplanes in Pm-1(F) are in a one- 
+to-one correspondence with the left-ratios [y,: ...:y,]l. 
+So we can identify them with the left-ratios, as points are already identical 
+with the right-ratios, and (*) becomes the definition of "incidence" (point C 
+hyperplane). 
+Reciprocally, any abstract n - 1-dimensional projective geometry Q,-1 with 
+n = 4, 5, . . . belongs in this way to some (not necessarily commutative field 
+F(Q,-l), and Q,-1 is isomorphic with P,-l(F(Qn-l)).m 
+14. Relation of abstract complementarity to involutory anti-isomorphisms in 
+skew-fields. We have seen that the family of irreducible lattices satisfying L5 
+and L72 is precisely the family of projective geometries, provided we exclude the 
+two-dimensional case. But what about L71 and L73? In other words, for 
+which Pn-l(t) can one define complements possessing all the known formal 
+properties of orthogonal complements? The present section will be spent in 
+answering this que~tion."~ 
+2g Cf. 55103-105 of B. L. Van der Waerden's "Moderne Algebra," Berlin, 1931, Vol. 2. 
+a0 n = 4,5; .. . means of couree n - 1 2 3, that is, that Qn-l is necesearily a "Desargue- 
+sian" geometry. (Cf. 0.Veblen and J. W. Young, "Projective Geometry," New York, 1910, 
+Vol. 1,page 41). Then F = F(Q,-1) can be constructed in the classical way. (Cf. Veblen 
+and Young, Vol. 1, pages 141-150). The proof of the isomorphism between Q,-I and the 
+P,-l(F) as constructed above, amounts to this: Introducing (not necessarily commutative) 
+homogeneous coordinates X I ,  . . . , 2, from Fin Q,-,, and expressing the equations of hyper- 
+planes with their help. This can be done in the manner which is familiar in projective 
+geometry, although most books consider the commutative ("Pascalian") case only. D. 
+Hilbert, ''Grundlagen der Geometrie," 7th edition, 1930, pages 96-103, considers the non- 
+commutative case, but for affine geometry, and n - 1 = 2, 3 only. 
+Considering the lengthy although elementary character of the complete proof, we pro- 
+pose to publish it elsewhere. 
+3On R, Brauer, " A  ch~racte~zationnull systems in projective space," Bull. Am. Math.
+of 
+Soc. 42 (1936), 247-54, treats the analogous question in the opposite case that X n X' 
+# 8 is postulated. 
+First, we shall show that it is sument that F admit an involutory antiso-
+morphism W: 2 = W(x), that is : 
+with a definite diagonal Hermitian form w(xl) y f I + ... + ~ ( x , )y, fn ,where 
+Q4. w(xl)ylxl + ... + w(x,)ynxn = 0 implies XI = .. . = x, = 01 
+the ri being fixed elements of F, satisfying ~ ( y i )= Ti. 
+Proof: Consider ennuples (not right- or left-ratios!) x: (XI, ... , x,), 5: 
+([I, ... ,5,) of elements of F. Define for them the vector-operations 
+xz: (xlz, ... ,xnz) 
+(Z in F), 
+and an "inner product" 
+Then the following formulas are corollaries of Ql-Q4. 
+IP1 (x, 0 = w((f1 XI), 
+IP2 (5, XU) = (€9 ~ ) u 1  
+(fu1 X) = w(u)(f1 x), 
+IP3 (5, x' + xu) = (5, x') + (5, xu), (5' 4-f", X) = (5') 
+(5", x), 
+IP4 (x, x) = w((x, x)) = [XI is # 0 if x # 0 (that is, if any xi # 0). 
+We can define x I f (in words: "x is orthogonal to f") to mean that (6,x) = 0. 
+This is evidently symmetric in x, f, and depends on the right-ratios [xl: .. . :x,],, 
+[FI:. . :[,Ir 
+only SO it establishes the relation of "polarity," a I b, between the 
+points 
+a: [xl:. ..:x,],, 
+b: [fl:. ..:fn], of P,-I(F). 
+The polars to any point b: [El: .:f,], of Pn-l(F) constitute a linear subspace 
+of points of P,l(F), 
+which by Q4 does not contain b itself, and yet with b gener- 
+ates whole projective space P,-1(F), since for any ennuple x: (xl, ... ,x,) 
+x = 2' + f.[fl-'(f, 5) 
+where by Q4, [[I # 0, and by IP (5, 3') = 0. This linear subspace is, therefore, 
+an n-2-dimensional hyperplane. 
+~ e n c kif c is any-k-dimensional element of Pn-l(F) one can set up inductively 
+k mutually polar points b('), ... ,bck) in c. Then it is easy to show that the set 
+c' of points polar to every b'l), ... ,b(l)--or equivalently to every point in c- 
+constitute an n-k-l-dimensional element, satisfying c n c' = @ and c U c' = 0. 
+Moreover, by symmetry (c')' 3 c, whence by dimensional considerations 
+c" = c. Finally, c 3d implies c' C d', and so the correspondence c +c' defines 
+an involutory dual automorphism of PnF1(F) completing the proof. 
+GARRETT BIRKHOFF AND JOHN VON NEUMANN 
+In the Appendix it will be shown that this condition is also necessary. Thus 
+the above class of systems is exactly the class of irreducible lattices of finite 
+dimensions > 3 satisfying L5 and L71-L73. 
+15. Mathematical models for propositional calculi. One conclusion which 
+can be drawn from the preceding algebraic considerations, is that one can 
+construct many different models for a propositional calculus in quantum me- 
+chanics, which cannot be differentiated by known criteria. More precisely, one 
+can take any field F having an involutory anti-isomorphism satisfying Q4 (such 
+fields include the real, complex, and quaternion number systems31), introduce 
+suitable notions of linear dependence and complementarity, and then construct 
+for every dimension-number n a model P,(F), having all of the properties of the 
+propositional calculus suggested by quantum:mechanics. 
+One can also construct infinite-dimensional models P,(F) whose elements 
+consist of all closed linear subspaces of normed infinite-dimensional spaces. But 
+philosophically, Hankel's principle of the "perseverance of formal laws" (which 
+leads one to try to preserve L5)32 and mathematically, technical analysis of 
+spectral theory in Hilbert space, lead one to prefer a continuous-dimensional 
+model P,(F), which will be described by one of us in another paper.33 
+P,(F) is very analogous with the model furnished by the measurable subsets 
+of phase-space in classical dynamics.34 
+16. The logical coherence of quantum mechanics. The above heuristic 
+considerations suggest in particular that the physically significant statements in 
+quantum mechanics actually constitute a sort of projective geometry, while the 
+physically significant statements concerning a given system in classical dynamics 
+constitute a Boolean algebra. 
+They suggest even more strongly that whereas in classical mechanics any 
+propositional calculus involving more than two propositions can be decomposed 
+into independent constituents (direct sums in the sense of modern algebra), 
+quantum theory involves irreducible propositional calculi of unbounded com- 
+plexity. This indicates that quantum mechanics has a greater logical coherence 
+81 In the real case, w(z) = z; in the complex case, w(z + iy) = z - iy; in the quaternionic 
+case, w(u + iz + jy + kz) = u - iz - jy - kz; in all cases, the A, are 1. Conversely, A. 
+Kolmogoroff, "Zur Bependung der projektiven Geometrie," Annals of Math. Q (1932), 175-6 
+has shown that any projective geometry whose k-dimensional elements have a locally 
+compact topology relative to which the lattice operations are continuous, must be over the 
+real, the complex, or the quaternion field. 
+82 L5 can also be preserved by the artifice of considering in P,(F) only elements which 
+either are or have complements which are of finite dimensions. 
+J. von Neumann, "Continuous geometries," Proc. Nat. Acad., 22 (1936), 92-100 and 
+101-109. 
+These may be a more suitable frame for quantum theory, than Hilbert space. 
+In quantum mechanics, dimensions but not complements are uniquely determined by 
+the inclusion relation; in classical mechanics, the reverse is true! 
+LOGIC OF QUANTUM MECHANICS 
+than classical mechanics-a 
+conclusion corroborated by the impossibility in 
+general of measuring different quantities independently. 
+17. Relation to pure logic. The models for propositional calculi which 
+have been considered in the preceding sections are also interesting from the 
+standpoint of pure logic. Their nature is determined by quasi-physical and 
+technical reasoning, different from the introspective and philosophical considera- 
+tions which have had to guide logicians hitherto. Hence it is interesting to com- 
+pare the modification~ which they introduce into Boolean algebra, with those 
+which logicians on "intuitionist" and related grounds have tried introducing. 
+The main difference seems to be that whereas logicians have usually assumed 
+that properties L71-L73 of negation were the ones least able to withstand a 
+critical analysis, the study of mechanics points to the distributive identities L6 as 
+the weakest link in the algebra of logic. Cf. the last two paragraphs of 510. 
+Our conclusion agrees perhaps more with those critiques of logic, which find 
+most objectionable the assumption that a' U b = [I implies a C b (or dually, 
+the assumption that a I7 b' = 0implies b 3 a-the 
+assumption that to deduce 
+an absurdity from the conjunction of a and not b, justifies one in inferring that 
+a implies b) .a6 
+18. Suggested questions. The same heuristic reasoning suggests the follow- 
+ing aa fruitful questions. 
+What experimental meaning can one attach to the meet and join of two given 
+experimental propositions? 
+What simple and plausible physical motivation is there for condition L5? 
+1. Consider a projective geometry &,-I 
+as described in 513. F is a (not neces- 
+sarily commutative, but associative) field, n = 4, 5, . . . , 
+= Pn-l(F) the 
+projective geometry of all righeratios [xl:. . . :xn],, which are the points of 
+&,-I. 
+The (n - 2-dimensional) hyperplanes are represented by the left-ratios 
+[yI: - . . yn]r, incidence of a point [XI: . . . x,], and of a hyperplane [yl: . . :y,]l 
+being defined by 
+All linear subspaces of &,-I form the lattice L, with the elements a, b, c, 
+. . 
+Assume now that an operation a' with the properties L71-L73 in 59 exists: 
+L71 
+(a')' = a  
+L72 a n a' = 0and a U a' = [I,  
+L73 a C b implies a' 3, b'.  
+35 It is not difficult to show, that assuming our axioms Ll-5 and 7, the distributive law 
+L6 is equivalent to this postulate: a' U b = u implies a C b. 
+GARRETT BIRKHOFF AND JOHN VON NEUMANN 
+They imply (cf. 59) 
+L74 (a n b)' = a' U b' and (a U b)' = a' n b'. 
+Observe, that the relation a C b' is symmetric in a, b, owing to L73 and L71. 
+2. If a: [XI:. .:x,], is a point, then a' is an [yl: .. yn]!. So we may write: 
+and define an operation which connects right- and left-ratios. We know from 
+514, that a general characterization of a' (a any element of L) is obtained, as 
+soon as we derive an algebraic characterization of the above [XI: .- .:xn]: . 
+We will now find such a characterization of [XI: ..:xn]:, and show, that it 
+justifies the description given in $14. 
+In order to do this, we will haveto make a rather free use of collineations in 
+A collineation is, by definition, a coordinate-transformation, which 
+. 
+replaces [XI : ..:x,], by [21: . .:Z,], , 
+Here the wi, are fixed elements of F, and such, that (3) has an inverse. 
+fori =.I, . - . , n ,  
+the eijbeing fixed elements of F, too. 
+(3), (4) clearly mean 
+Considering (1)and (5) they imply the contravariant coordinate-transformation 
+for hyperplanes: [yl: . :y,]~ becomes [gl:. . :gn]l, where 
+n 
+.
+-
+a
+gi = c ?A eii , 
+forj = 1, 
+,n, 
+i - 1  
+for i = 1, ... ,n. 
+(Observe, that the position of the coefficients on the left side of the variables in 
+(4), (5), and on their right side in (6), (7)) is essential!) 
+3. We will bring about 
+(8) 
+[6il:...:6i,]: 
+= [6il:...:6in]1 
+for i = 1, ... ,n, 
+LOGIC OF QUANTUM MECHANICS 
+by choosing a suitable system of coijrdinates, that is, by applying suitable col-
+lineations. We proceed by induction: Assume that (8) holds for i = 1, .. a , 
+m - l(m = 1, - . -,n), then we shall find a collineation which makes (8) true for 
+i =  1, ... ,m. 
+Denote the point [ail: ...:6in]r by pf, and the hyperplane [&I:. .:6in] by 
+hf our assumption on (8) is: pf' = hf for i = 1, .. ,m - 1. Consider now a 
+point a: [XI:- .:x,],, and the hyperplane a': [yl:...:y,]l. 
+Now a 5 pf' = hf 
+means (use (1)) xi = 0, and p: 5 a' means (use (8)) yi = 0. But these two 
+statements are equivalent. So we see: If i = 1, ... ,m - 1, then xi = 0 and 
+yi = 0 are equivalent. 
+Consider now p: 
+[am1:...:6,,],. 
+Put p: 
+[y::. ..:y,*]l. As 
+= 0 for 
+i = 1, ... ,m - 1,so we have yf = 0 for i = 1, ... ,m - 1. Furthermore,
+* 
+* 
+p, r) p,' 
+= 0, pf # 0, so p: 
+not 5 p?. 
+By (1) this means y: 
+# 0. 
+Form the collineation (3), (4), (6), (7), with 
+*-I 
+*
+eii = 
+1) 
+emi = wi, 
+= y, 
+yi for i = m + 1, ...,n, 
+d l  other Bij, oij = 0. 
+One verifies immediately, that this collineation leavea the coijrdinates of the
+pi: [6n:...:6idr, i = 1, .-., n, invariant, and similarly those of the 
+pi1: [an: .. :6im]l,i = 1, ... m - 1,while it trapsfom those of 
+into [6,1: ...:6,,]1. 
+So after this collineation (8) holds for i = 1, ... ,m. 
+Thus we may sssume, by induction over m = 1, ... ,n, that (8) holds for all 
+i = 1, . ,n. This we will do. 
+The above argument now shows, that for a: [XI:...:z,], , a' :[yl: ...:y,]l, 
+4. Put a:[zl:...:zn],,a':[yl:...:yn]l, and b:[tl:...:tn],,b':[rll:...:qn] 
+l .  
+Assume Grst 71 = 1, 71 = 7, qs = ... = 7, = 0. Then (9) gives t1 # 0, so 
+we can normalize t1 = 1, and h = ... = t n  = 0. 
+5 2  can depend on 72 = 7 
+only, so 52 = ji(?). 
+Assume further XI = 1. Then (9) gives yl # 0, so we can normalize yl = 1. 
+Now a 5 b' means by (i) 1 + 7x2 = 0, and b 5 a' means 1 + yz j2(7) = 0. 
+These two statements must, therefore, be equivalent. So if xt # 0,we may put 
+7 = - zhl, and obtain y2 = - (j2(7))-l = - (f2(- zt-I))-'. 
+If x2 = 0, then 
+yt = 0 by (9). Thus, z2 determines at any rate yt (independently of 
+%a, - .- ,2,) :yz = q~z(x2). Permuting the i = 2, ... ,n gives, therefore: 
+There exists for each i = 2, ... , n a function 
+such that yi = q~i(z~). 
+Or: 
+(10) 
+Ifa: [l:x~:...:z,],, 
+thena': [l:q~~(z~):...:q~,,(x~)]l. 
+GARRETT BIRKHOFF AND JOHN VON NEUMANN 
+Applying this to a: [l:z2: ...:z,], and c: [l:ul:. ..:u,], shows: As a S c' 
+and c S a' are equivalent, so 
+(11) 
+2 ~i(%)G = - 1is equivalent to 2 p(zi) ui = - 1. 
+i - 2  
+i - 2  
+Observe, that (9) becomes: 
+(12) 
+cpi(z) = 0 if and only if z = 0. 
+5. (11) with zs = . . . = z, = us = . . . = u, = 0 shows: cp2(u2)z2 = - 1 
+is equivalent to cp2(z2)u2 = - 1. If z2 # 0, u2 = (--(p2(~2))-', then the second 
+equation holds, and so both do. 
+Choose 2%,u2 in this way, but leave 2 8 ,  . . . ,z, ,u,, . . . u, arbitrary. Then 
+(11) becomes: 
+(13) ' 
+fd u i )  zi = 0 is equivalent to f (pi (xi) ui = 0. 
+cpa(~s)zs+ cpr(~4)za= 0 is equivalent to cps(zs)us + (p4(~4)U4
+= 0, 
+that is (for zr ,u4 # 0) : 
+(14) is equivalent to 
+Let z4, zs be given. Choose u,, u4 so as to satisfy (b). Then (a) is true, too. 
+Now (a) remains h e ,  if we leave US, u4 unchanged, but change 2 3 ,  z4 without 
+changing zsz~'. So (b) remains too true under these conditions, that is, the 
+value of cpr(zr)-' (ps(zs) does not change. In other words :(pr(z4)-1 (ps(za) depends 
+on zsz4-' only. That is: (p4(~4)-' $93(~3) = cps1(z3z~1). Put z8 = W ,z4 = z, 
+then we obtain : 
+This was derived for z, z # 0, but it will hold for z or z = 0, too, if we define 
+$84(0) = 0. (Use (12).) 
+(15)) with z = 1gives cpa(z) = (p4(z)aa4, where a 3 4  = #s4(l) # 0, owing to 
+(12) for z # 0. Permuting the i = 2, . . . ,n gives, therefore: 
+(Fori = jputaii = 1.)  
+Now (15) becomes  
+LOGIC O F  QUANTUM MECHANICS 
+Put z = 1in (17))write z for z, and use (16)with j = 2: 
+6. Compare (17)for z = 1, z = u ;  z = u, z = v;and z = 1,z = vu. 
+Then 
+results (12) and (18) give 
+(20) 
+w(u) = 0 if and only if u = 0. 
+Now write w(z), r ; for j3w(z)P1, Br;. Then (18)) (19)) (20) remain true, (18) 
+is simplified in so far, as we have j3 = 1 there. So (11) becomes 
+(21) is equivalent to 
+z2 = z, us = u and all other z; = u i  = 0 give: w(u)r2z*= -1 is equivalent to 
+w(z)rzu = -1. If z # 0, u = - r y l  w(z)-1, then the second equation holds, 
+and so the first one gives : z = -ry' w(u)-I = -7;' (w(-~,'w(x)-I))-'. 
+But 
+(19), (20) imply w(1) = 1, w(w-') = w(w)-1, so the above relation becomes: 
+Put herein z = 1, as w(w(1)) = w(1) = 1,so -r;'w(-r2) 
+= 1, w(-72) = -7% 
+results. Thus the above equation becomes 
+and w ( - y ~ )= - 7 2  gives, if we permute the i = 2, ... ,n, 
+(23) 
+w(-7;) = -7;. 
+Put ui = -77' in (21). Then considering (22) and (19) 
+(24) 
+2 2 = 1 is equivalent to f:w ( y )  = 1 
+i - 2  
+i = 2  
+obtains. Put za = z, 
+= y, z4 = 1 - z - y, zr = . . = z, = 0. Then (24) 
+gives w(z) + w(y) = 1 - w ( l  - z - y). So w(z) + w(y) depends on z + y 
+only. Replacing z, y by z + y, 0 shows, that it is equal to w(z + y) + w(0) = 
+w(z + y) (use 20). So we have: 
+GARRETT BIRKEOFF 
+AND JOHN VON NEUMANN 
+(25))(19) and (22) give together: 
+Observe, that (25) implies w( -1) = -w(1) = -1, and so (23)becomes 
+7. Consider a: [ X I :  .. :zn],,a': [yl: ..:ynIl. If z l  # 0, we may write 
+CT: [ 1 : ~ 2 ~ 1 ' :  : ~ n ~ 1 l ] , ,
+and SO a': [l:w(zzzT1)yz: : w ( ~ , z ~ ' ) y ~ ] ~ .
+But 
+w ( x ~ x ~ ' ) ~ ~
+= w ( x ~ ' ) w ( x ~ ) ~ ~
+= W ( X ~ ) - ' W ( X ~ ) ~ ~ ?  
+and so we can write 
+a': XI) :w(zz)yz: ..:w(~,)y,]r 
+too. So we have 
+where the yi for i = 2, . ,n are those from 6., and yl = 1. And w(1) = 1, 
+so (26) holds for all i = 1, . ,n. So we have the representation (27) with y; 
+obeying (26))if xi # 0. 
+Permutation of the i ,= 1, .. ,n shows, that a similar relation holds if x2 # 0: 
+w+(z) being an involutory antisomorphism of F. (w+(z),y t  may differ from 
+w ) ,  !
+) Instead of 71 = 1 we have now y: = 1,but we will not use this. 
+Put all X i  = 1. Then a' : [yl:...:y,]Z can be expressed by both formulae 
+(27)and (27+). As w(z)lw+(z)are both antisomorphism, so w(1) = w+(l) = 1, 
+and therefore [yl:...:y,]~ = [yl: . :y,]Z = [ y f :...:y:Il obtains. ' Thus 
++ -1 + 
++ 
+( 7 1 )  yi = ( ~ l ) - ~ y i
+= T i ,  ~i = yfy;for i = 1, ... ,n. 
+Assume now zp # 0 only. Then (27+) gives yi = w+(zi)y?, but as we are 
+dealing with left ratios, we may as well put 
+Put p = y f  # 0, then we have: 
+Put now zl = z2 = 1, zs = ,z,all other xi = 0. Again a': [yl:...:yn]zcan be 
+expressed by both formulae (27) and (27*), again w(1) = w+(l). Therefore 
+[ Y ~ : Y ~ : Y J : Y ~ : .
+.:Y.]Z = [ Y ~ : Y ~ : w ( x ) ~ ~ : O : .
+. :O]r 
+= [yl:y2:j9+-1w+(z)p+yJ:O:. . .:O]z 
+obtains. This implies w(z) = @+lw(z)@+ for all x, and so (27*) coincides with 
+(27). 
+In other words: (27) holds for xz # 0 too.  
+Permuting i = 2, . . . ,n (only i = 1has an exceptional r6le in (27)), we see:  
+(27) holds if xi # 0 for i = 2, .. . ,n. For xl # 0 (27) held anyhow, and for 
+some i = 1, ... ,n we must have xi # 0. Therefore: 
+(27) holds for all points a : [XI:.'..:xn]r. 
+8. Consider now two points a: [xl: ...:x,], 
+and b: [El:. ..:f,],. 
+Put 
+a': [yi:. ..:gn]l, then b $ a' means, considering (1) and (27) (cf. the end of 7.): 
+a 5 a' can never hold (a n a' = 0, a # 0), so (28) can only hold for xi = t ,  
+if dl xi = 0. Thus, 
+n ,xw(xi)yig = 0 implies xl = ... = xn = 0. 
+i-1 
+Summing up the last result of 6., and formulae (26), (29) and (28), we obtain: 
+There exists an involutory antisomorphism w(x) of F (cf. (22), '(25), (19)) and a 
+n 
+dejinite diagonal Hemitian form 
+w(xi)yi ti in F (cf. (26), (29)), such that for 
+i - 1  
+a : [XI:...:x,], ,b: [El :.. . :En], b 5 a' is defined by polarity with respect to it: 
+This is exactly the result of $14, which is thus justified. 

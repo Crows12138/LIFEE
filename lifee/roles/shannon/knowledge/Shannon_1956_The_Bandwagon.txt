@@ -1,0 +1,155 @@
+The Bandwagon 
+CLAUDE 
+E. SHANNON 
+NFORMATION 
+theory has, in the last few years, 
+become something 
+of a scientific 
+bandwagon. 
+Starting 
+as a technical tool for the communica- 
+tion 
+engineer, 
+it 
+has received 
+an extraordinary 
+amount 
+of publicity 
+in the popular 
+as well as the 
+scientific press. In part, this has been due to connec- 
+tions with such fashionable fields as computing 
+ma- 
+chines, cybernetics, and automation; 
+and in part, to 
+the novelty of its subject matter. As a consequence, 
+it has perhaps been ballooned 
+to an importance 
+beyond its actual accomplishments. 
+Our fellow scien- 
+tists in many different fields, attracted by the fanfare 
+and by the new avenues opened to scientific analysis, 
+are using these ideas in their own problems. Applica- 
+tions are being made to biology, 
+psychology, 
+lin- 
+guistics, fundamental 
+physics, economics, the theory 
+of organization, 
+and many others. In short, informa- 
+tion theory 
+is currently 
+partaking 
+of a somewhat 
+heady draught of general popularity. 
+Although 
+this wave 
+of popularity 
+is certainly 
+pleasant and exciting for those of us working in the 
+field, it carries at the same time an element of danger. 
+While we feel that information 
+theory is indeed a 
+valuable tool in providing 
+fundamental 
+insights into 
+the nature 
+of communication 
+problems 
+and will 
+continue 
+to grow in importance, 
+it is certainly 
+no 
+panacea for the communication 
+engineer or, a fortiori, 
+for anyone else. Seldom do more than 
+a few of 
+nature’s secrets give way at one time. It will be all 
+too easy for our somewhat artificial 
+prosperity 
+to 
+collapse overnight when it is realized that the use of a 
+few exciting words like information, 
+entropy, redun- 
+dancy, do not solve all our problems. 
+What can be done to inject a note of moderation in 
+this situation? 
+In the first place, workers in other 
+fields should realize that 
+the basic results of the 
+subject 
+are aimed in a very specific direction, 
+a 
+direction 
+that 
+is not necessarily 
+relevant 
+to such 
+fields as psychology, 
+economics, and other social 
+sciences. Indeed, the hard core of information 
+theory 
+is, essentially, 
+a branch of mathematics, 
+a strictly 
+deductive system. A thorough understanding 
+of the 
+mathematical 
+foundation 
+and its communication 
+application 
+is surely a prerequisite 
+to other applica- 
+tions. I personally believe that many of the concepts 
+of information 
+theory will prove useful in these other 
+fields-and, 
+indeed, some results are already quite 
+promising-but 
+the establishing of such applications 
+is not a trivial 
+matter of translating 
+words to a new 
+domain, 
+but 
+rather 
+the slow tedious 
+process of 
+hypothesis 
+and experimental 
+verification. 
+If, 
+for 
+example, the human being acts in some situations like 
+an ideal decoder, this is an experimental 
+and not a 
+mathematical 
+fact, and as such must be tested under 
+a wide variety 
+of experimental 
+situations. 
+Secondly, we must keep our own house in first class 
+order. The subject of information 
+theory 
+has cer- 
+tainly been sold, if not oversold. We should now turn 
+our attention 
+to the business of research and devel- 
+opment at the highest scientific plane we can main- 
+tain. Research rather than exposition is the keynote, 
+and our critical thresholds should be raised. Authors 
+should submit only their best efforts, and these only 
+after careful criticism 
+by themselves and their col- 
+leagues. A few first rate research papers are preferable 
+to a large number that are poorly conceived or half- 
+finished. The latter are no credit to their writers and 
+a waste of time to their readers. Only by maintaining 
+a thoroughly 
+scientific attitude 
+can we achieve real 
+progress in communication 
+theory 
+and consolidate 
+our present position. 

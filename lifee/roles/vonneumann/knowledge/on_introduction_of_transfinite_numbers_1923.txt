@@ -1,0 +1,371 @@
+# On the Introduction of Transfinite Numbers
+
+**By JOHANN VON NEUMANN in Budapest**
+
+*Acta litt. Acad. Sc. Szeged X. 1 (1923), pp. 199–208*
+
+English translation by Jean van Heijenoort, published in *From Frege to Gödel: A Source Book in Mathematical Logic, 1879–1931* (Harvard University Press, 1967), pp. 346–354.
+
+---
+
+**Note:** The English translation by van Heijenoort is under copyright (Harvard University Press). What follows below is a new translation from the German original, prepared for reference purposes. The German original is in the public domain.
+
+---
+
+## Introduction
+
+**AA.** The aim of the present work is: to grasp the concept of Cantor's ordinal number uniquely and concretely.
+
+**AB.** This concept is usually obtained, following Cantor's procedure, as an "abstraction" of a common property from certain classes of sets.¹⁾ We wish to replace this somewhat vague procedure by another one, based on unambiguous set operations. The procedure will be presented in the following lines in the language of naive set theory, but it remains valid (in contrast to Cantor's procedure) also in a "formalistic," axiomatized set theory. Thus our conclusions retain full validity also within the framework of Zermelo's axiomatics (when Fraenkel's axiom²⁾ is added).
+
+**AC.** We actually wish to make the proposition: "Every ordinal number is the type of the set of all ordinal numbers preceding it" the basis of our considerations. But in order that the vague concept of "type" be avoided, we use this form: "Every ordinal number is the set of ordinal numbers preceding it." This is not a proved theorem about ordinal numbers; rather, if transfinite induction were already established, it would be a definition of them. According to it (∅ is the empty set, (a, b, c, ...) is the set with elements a, b, c, ...):
+
+```
+0 = ∅
+1 = (∅)
+2 = (∅, (∅))
+3 = (∅, (∅), (∅, (∅)))
+.......................................
+ω = (∅, (∅), (∅, (∅)), (∅, (∅), (∅, (∅))), ...)
+ω + 1 = (∅, (∅), (∅, (∅)), (∅, (∅), (∅, (∅))), ..., (∅, (∅), (∅, (∅)), (∅, (∅), (∅, (∅))), ...))
+.......................................
+```
+
+**AD.** We do not, of course, presuppose transfinite induction as established; rather, we assume only the concepts of "well-ordered set" and "similarity" as given. For the rest, we shall proceed in a strictly formalistic manner, avoiding the ... symbol and the like everywhere.
+
+**AE.** Our notation is the following: If Ξ, Η are sets, then Ξ ≤ Η or Η ≥ Ξ means that Ξ is a subset of Η, and Ξ < Η or Η > Ξ means that Ξ is a proper subset of Η. If Ξ is a set, then x ∈ Ξ means that x is an element of Ξ. — ∅ is the empty set; a, (a, b), (a, b, c) are the sets whose elements are a; a and b; a, b, and c, respectively. If x, y are elements of an ordered set, then x ≺ y or y ≻ x means that, under the given ordering, x comes before y.
+
+**AF.** Let E(x) be a property and f(x) a function defined for all x that have the property E(x). Then let
+
+M(f(x); E(x))
+
+be the set of all f(x), as x runs through all x that have the property E(x).³⁾ — Let Ξ be an ordered set and x an element of Ξ. Then we call the set
+
+M(y; y ∈ Ξ, y ≺ x)
+
+of all elements y of Ξ that precede x the *section* of x in Ξ, and denote it more briefly by A(x, Ξ).
+
+---
+
+## Chapter I
+
+**AG. 1.** Let Ξ be a well-ordered set. We call a function f(x), defined on Ξ, a "counting" of Ξ if, for all elements x of Ξ,
+
+f(x) = M(f(y); y ∈ A(x, Ξ)).
+
+If f(x) is a counting of Ξ, we call
+
+M(f(x); x ∈ Ξ)
+
+an "ordinal number" of Ξ. And if there exist countings of Ξ at all, we call Ξ "countable."
+
+**AH.** If x₁, x₂, x₃, x₄ are the 1st, 2nd, 3rd, 4th elements of Ξ, then evidently for every counting f(x) of Ξ:
+
+```
+f(x₁) = ∅,
+f(x₂) = (∅),
+f(x₃) = (∅, (∅)),
+f(x₄) = (∅, (∅), (∅, (∅)));
+```
+
+consequently, the ordinal number of Ξ, when it has 0, 1, 2, or 3 elements, is, respectively,
+
+```
+∅,
+(∅),
+(∅, (∅)),
+(∅, (∅), (∅, (∅))).
+```
+
+**AI. 2.** Let Ξ be a well-ordered set. Two countings f(x), g(x) of Ξ are always identical.
+
+**AJ.** For in the contrary case there would be a first x for which f(x) ≠ g(x). For all y ≺ x we would then have f(y) = g(y), and therefore
+
+M(f(y); y ∈ Ξ, y ≺ x) = M(g(y); y ∈ Ξ, y ≺ x),
+
+which means precisely f(x) = g(x), contrary to the assumption.
+
+**AK.** A countable Ξ therefore has one and only one counting. Counting and ordinal number are thus uniquely determined concepts for all countable Ξ. In the following, we shall denote the ordinal number of Ξ by OZ(Ξ).
+
+**AL. 3.** Let Ξ be countable, f(x) the counting of Ξ, and x an element of Ξ. Then A(x, Ξ) is countable and its ordinal number is f(x).
+
+**AM.** For the function f′(x), defined on A(x, Ξ) and equal to f(x) there, is a counting of A(x, Ξ). Indeed, for all elements y of A(x, Ξ),
+
+```
+M(f′(y); y ∈ A(x, A(x, Ξ))) =
+  = M(f(y); y ∈ A(x, A(x, Ξ))) =
+    M(f(y); y ∈ A(x, Ξ)) = f(x) = f′(x).
+```
+
+So A(x, Ξ) is countable, and its ordinal number is
+
+```
+OZ(A(x, Ξ)) = M(f′(x); x ∈ A(x, Ξ)) =
+  = M(f′(x); x ∈ A(x, Ξ)) = f(x).
+```
+
+**AN. 4.** Let all sections in Ξ be countable. Then Ξ is also countable.
+
+**AO.** For we define for each x of Ξ
+
+f(x) = OZ(A(x, Ξ))
+
+(We can do this since all A(x, Ξ) are countable.) f(x) is then a counting of Ξ. For if x belongs to Ξ and g(y) is the counting of A(x, Ξ), then for every element y of A(x, Ξ),
+
+g(y) = OZ(A(y, A(x, Ξ))) = OZ(A(y, Ξ)) = f(y),
+
+so that
+
+```
+f(x) = OZ(A(x, Ξ)) = M(g(y); y ∈ A(x, Ξ)) =
+  = M(f(y); y ∈ A(x, Ξ)).
+```
+
+**AP. 5.** Let Ξ be well-ordered. Then Ξ is countable.
+
+**AR.** For in the contrary case, not all sections in Ξ would be countable. There would thus be a first x for which A(x, Ξ) is not countable. Now every section in A(x, Ξ) is equal to
+
+A(y, A(x, Ξ)) = A(y, Ξ)
+
+for an element y of A(x, Ξ). Because of y ≺ x, A(y, Ξ) is then countable. Thus all sections in A(x, Ξ) are countable, that is, A(x, Ξ) is countable, contrary to the assumption.
+
+**AS.** With this we have proved that counting and ordinal number are uniquely determined concepts for all well-ordered sets.
+
+---
+
+## Chapter II
+
+**AT. 6.** Let Ξ be well-ordered and f(x) the counting of Ξ. Then, for no element x of Ξ, is f(x) an element of f(x).
+
+**AU.** For if, for some element x of Ξ, f(x) belonged to f(x), there would be a first such x. Since f(x) is the set of all f(y) with y ≺ x, we would then have f(x) = f(y) for some y ≺ x. But then f(y) would belong to f(y) and y ≺ x, contrary to the assumption.
+
+**AV. 7.** Let Ξ be well-ordered, f(x) the counting of Ξ, and let x, y be two elements of Ξ for which x ≺ y. Then f(x) < f(y).
+
+**AW.** From x ≺ y it follows that A(x, Ξ) < A(y, Ξ), hence
+
+M(f(u); u ∈ A(x, Ξ)) ≤ M(f(u); u ∈ A(y, Ξ)),   f(x) ≤ f(y),
+
+and since f(x) belongs to f(y) (because x ≺ y), but does not belong to f(x), f(x) is different from f(y). Therefore f(x) < f(y).
+
+**AX. 8.** Following an expression of Hessenberg, we call a set of sets Ξ "orderable by subsumption" if, for two distinct elements x, y of Ξ, we always have x < y or x > y. And when that is the case, we define an ordering by stipulating that x ≺ y whenever x < y. This ordering we call the "subsumption ordering."
+
+**AY.** Now let Ξ be well-ordered. Then OZ(Ξ) is always orderable by subsumption, and in the subsumption ordering it is similar to Ξ.
+
+**AZ.** Let f(x) be the counting of Ξ. Any two elements P, Q of OZ(Ξ) are then, because of
+
+OZ(Ξ) = M(f(x); x ∈ Ξ),
+
+equal to f(x) and f(y), respectively. And since x ≺ y or x ≻ y, we have f(x) < f(y) or f(x) > f(y), hence P < Q or P > Q. Therefore OZ(Ξ) is orderable by subsumption.
+
+**BA.** The mapping of x to f(x) is evidently a mapping of Ξ onto OZ(Ξ). And since from x ≺ y it always follows that f(x) < f(y), hence in the subsumption ordering f(x) ≺ f(y), the mapping is also one-to-one and similar. Therefore Ξ is similar to OZ(Ξ).
+
+**BB. 9.** P is an ordinal number if and only if it
+
+**BC.** 1. is a set of sets orderable by subsumption,
+
+**BD.** 2. its subsumption ordering is a well-ordering,
+
+**BE.** 3. for every element ξ of P, we always have ξ = A(ξ, P).
+
+**BF.** First we assume that P is an ordinal number; then let P be the ordinal number of the well-ordered set Ξ, whose counting is f(x).
+
+**BG.** P is a set of sets which, by the theorem just proved, is orderable by subsumption (so condition 1 is fulfilled) and which is similar to the well-ordered Ξ, hence itself well-ordered (so condition 2 is fulfilled). For every ξ of P, since ξ = f(x) (x an element of Ξ) must hold,
+
+```
+ξ = f(x) = M(f(y); y ∈ Ξ, y ≺ x) =
+  = M(f(y); y ∈ Ξ, f(y) ≺ f(x)) =
+  = M(η; η ∈ P, η ≺ ξ) = A(ξ, P);
+```
+
+(so condition 3 is also fulfilled).
+
+**BH.** Second, we assume that P satisfies conditions 1, 2, 3. Then it is orderable by subsumption, and well-ordered in the subsumption ordering. If we set f(x) = x as definition for all elements x of P, then f(x) is a counting of P. Indeed, because of condition 3, for all ξ of P,
+
+f(ξ) = ξ = A(ξ, P) = M(η; η ∈ A(ξ, P)) = M(f(η); η ∈ A(ξ, P));
+
+consequently,
+
+OZ(P) = M(f(ξ); ξ ∈ P) = M(ξ; ξ ∈ P) = P,
+
+so P is an ordinal number, and indeed its own ordinal number.
+
+---
+
+## Chapter III
+
+**BI. 10.** Let P be an ordinal number. Then P is the set of all ordinal numbers that are < P.
+
+**BJ.** Let P be the ordinal number of the well-ordered set Ξ, whose counting is f(x). First we assume that Q is an element of P. Because of condition 3, we then have
+
+Q = A(Q, P) < P,
+
+and since Q = f(x) (x an element of Ξ) must hold, and
+
+f(x) = OZ(A(x, Ξ)),
+
+f(x), and hence also Q, is an ordinal number.
+
+**BK.** Second, we assume that Q is an ordinal number for which Q < P. We order P by subsumption. Let η ≺ ξ, and let ξ belong to Q.
+
+**BL.** Since ξ then belongs to Q and to P, and P, Q are ordinal numbers,
+
+ξ = A(ξ, Q) = A(ξ, P).
+
+Since η belongs to P and η ≺ ξ, η belongs to A(ξ, P). And since
+
+A(ξ, P) = A(ξ, Q) ≤ Q,
+
+it belongs also to Q. That is: Q ≤ P. If η ≺ ξ and ξ belongs to Q, then η also belongs to Q. By a well-known theorem on well-ordered sets (P is well-ordered), Q is therefore a section in P. For an element ξ of P, we thus have
+
+Q = A(ξ, P) = ξ,
+
+so Q belongs to P.
+
+**BM.** We can also state the theorem just proved as follows: If P, Q are ordinal numbers, then P ≺ Q is equivalent to P ∈ Q. Therefore, for an ordinal number P, P ∈ P never holds.
+
+**BN. 11.** Let P, Q be two distinct ordinal numbers. Then P < Q or P > Q.
+
+**BO.** Let R be the intersection of P and Q. Since P is orderable by subsumption and its subsumption ordering is a well-ordering (by conditions 1, 2), and since R ≤ P, the same holds for R; thus R satisfies conditions 1 and 2. Every element ξ of R belongs to P and Q, and, because P, Q are ordinal numbers,
+
+ξ = A(ξ, P) = A(ξ, Q).
+
+A(ξ, R) is the intersection of A(ξ, P) and A(ξ, Q), hence
+
+ξ = A(ξ, R);
+
+thus R also satisfies condition 3. Therefore R is an ordinal number.
+
+**BP.** We have R ≤ P and R ≤ Q. If R = P or R = Q, then P ≤ Q or Q ≤ P, hence P < Q or P > Q (since P ≠ Q). But this is always the case; for if R < P and R < Q, then, since P, Q, R are ordinal numbers, R ∈ P, R ∈ Q. Therefore R ∈ R (since R is the intersection of P and Q), which is impossible, since R is an ordinal number.
+
+**BQ. 12.** Let U be a set of ordinal numbers. Two distinct elements P, Q of U are always ordinal numbers, hence P < Q or P > Q. That is: U is orderable by subsumption. The subsumption ordering of U is, moreover, a well-ordering.
+
+**BR.** To prove this we must show that every V ≤ U, V ≠ ∅, has a first element.
+
+**BS.** Let P be an element of V. (P is an ordinal number.) If there is no element of V that is < P, then V has a first element, namely P. If there are such elements, let their set be W. Since all elements of W are ordinal numbers (because W ≤ V ≤ U) and are < P, they all belong to P; hence W ≤ P. Since W ≤ P, W ≠ ∅, and P is well-ordered, W has a first element Q. (Because Q ∈ W, we have Q < P.) Since every element of V is either ≥ P, hence > Q, or < P, hence an element of W, and thus ≥ Q, Q is also the first element of V. V therefore always has a first element.
+
+**BT. 13.** P is an ordinal number if and only if every element of P is an ordinal number and ≤ P.
+
+**BU.** First, let P be an ordinal number. Every element of P is an ordinal number and < P.
+
+**BV.** Second, let P satisfy our conditions. As a set of ordinal numbers, P is orderable by subsumption and its subsumption ordering is a well-ordering; thus conditions 1 and 2 are fulfilled. Furthermore, for every element ξ of P,
+
+A(ξ, P) = M(η; η ∈ P, η ≺ ξ),
+
+hence, because all elements η of P are ordinal numbers,
+
+= M(η; η ∈ P, η is an ordinal number, η ≺ ξ) = M(η; η ∈ P, η ∈ ξ),
+
+and therefore, since ξ ≤ P,
+
+= M(η; η ∈ ξ) = ξ;
+
+thus condition 3 is also fulfilled. Therefore P is an ordinal number.
+
+**BW.** When P is a set of ordinal numbers, then for every element ξ of P (because P is an ordinal number), ξ ≤ P means that all ordinal numbers that are < ξ (that is, all elements of ξ) belong to P. We can therefore also state the theorem just proved as follows: P is an ordinal number if and only if all elements of P are ordinal numbers, and if for every element ξ of P, all ordinal numbers η for which η < ξ are likewise elements of P.
+
+---
+
+## Chapter IV
+
+**BX. 14.** Let Ξ, Η be well-ordered sets. Ξ and Η are similar to each other if and only if OZ(Ξ) = OZ(Η).
+
+**BY.** First, let OZ(Ξ) = OZ(Η). Since Ξ is similar to OZ(Ξ) ordered by subsumption, and Η is similar to OZ(Η) ordered by subsumption, Ξ is then indeed similar to Η.
+
+**BZ.** Second, let Ξ be similar to Η. Then let φ(x) be a similar mapping of Ξ onto Η, and let g(x′) be the counting of Η. If we set f(x) = g(φ(x)) as definition for all elements x of Ξ, then f(x) is a counting of Ξ. Indeed, for all x of Ξ,
+
+```
+M(f(y); y ∈ Ξ, y ≺ x) = M(g(φ(y)); y ∈ Ξ, y ≺ x) =
+  = M(g(φ(y)); y ∈ Ξ, φ(y) ≺ φ(x)) = M(g(y′); y′ ∈ Η, y′ ≺ φ(x)) =
+  = g(φ(x)) = f(x);
+```
+
+from this it follows that
+
+```
+OZ(Ξ) = M(f(x); x ∈ Ξ) = M(g(φ(x)); x ∈ Ξ) =
+  = M(g(x′); x′ ∈ Η) = OZ(Η).
+```
+
+**CA. 15.** Ξ is similar to a section in Η if and only if OZ(Ξ) < OZ(Η).
+
+**CB.** First, let OZ(Ξ) < OZ(Η). Then, by **12**, OZ(Ξ) is an element of OZ(Η), hence (its own) section in OZ(Η). And since Ξ is similar to OZ(Ξ) and Η is similar to OZ(Η), Ξ is also similar to a section of Η.
+
+**CC.** Second, let Ξ be similar to a section in Η. Let the counting of Η be g(x), and the section in question be A(x′, Η). Then, because of the similarity,
+
+OZ(Ξ) = OZ(A(x′, Η)) = g(x′),
+
+so OZ(Ξ) is an element of OZ(Η), and therefore, by **12**,
+
+OZ(Ξ) < OZ(Η).
+
+**CD. 16.** Since always one and only one of the following three cases occurs (by **11**):
+
+OZ(Ξ) < OZ(Η),   OZ(Ξ) = OZ(Η),   OZ(Ξ) > OZ(Η),
+
+one and only one of the following three cases also always occurs:
+
+- Ξ is similar to a section of Η,
+- Ξ is similar to Η,
+- Η is similar to a section of Ξ.
+
+And these three cases are, respectively, equivalent to:
+
+- OZ(Ξ) < OZ(Η), or OZ(Ξ) ∈ OZ(Η),
+- OZ(Ξ) = OZ(Η),
+- OZ(Ξ) > OZ(Η), or OZ(Η) ∈ OZ(Ξ).
+
+**CE. 17.** Let Ξ be well-ordered. Then there is one and only one ordinal number (ordered by subsumption) that is similar to Ξ, namely OZ(Ξ).
+
+**CF.** OZ(Ξ) is indeed similar to Ξ. And if the ordinal number P is similar to Ξ, then let P be the ordinal number of Η. Since Η is similar to P and P is similar to Ξ, Η is similar to Ξ, and therefore
+
+P = OZ(Η) = OZ(Ξ);
+
+from this it also follows: two ordinal numbers ordered by subsumption are similar if and only if they are identical.
+
+**CG.** From this point on, it is easy to develop the theory of ordinal numbers further. Addition and multiplication of ordinal numbers can be established without difficulty. "Definition by transfinite induction" is, however, admissible only when the following theorem has been proved:
+
+**CH.** "Let f(x) be a function that is defined for all sets of things of a domain B and whose values are always things of the domain B. Then there exists one and only one function Φ(P), defined for all ordinal numbers P, whose values are always things of the domain B, with the property that, for all ordinal numbers P (P ∈ ON means that P is an ordinal number),
+
+Φ(P) = f(M(Φ(Q); Q ∈ ON, Q < P)) = f(M(Φ(Q); Q ∈ P))."
+
+**CI.** The proof of this by no means self-evident theorem is, however, not difficult to provide.⁴⁾ Once this theorem is proved, the theory of exponentiation of ordinal numbers, as well as the theory of "continuous" or "normal"⁵⁾ ordinal number functions, can also be developed.
+
+---
+
+## Notes
+
+**1)** Cantor, *Mathematische Annalen*, vols. 46, 49.
+
+**2)** Zermelo, *Mathematische Annalen*, vol. 65; Fraenkel, *Mathematische Annalen*, vol. 86.
+
+Fraenkel's axiom reads: "If Ξ is a set and every element x of Ξ is replaced by a ξ, then there exists a set Ξ′ whose elements are the ξ." It fills an essential gap in Zermelo's axiomatics.
+
+**3)** From the axiomatic standpoint, it is by no means certain that such a set exists. We must rather require that all x with the property E(x) form a set. Then Fraenkel's axiom guarantees the existence of M(f(x); E(x)). This condition will always be fulfilled in what follows.
+
+**4)** The proof of the theorem proceeds (in close analogy to the arguments in Chapter I, §§1–6) roughly as follows:
+
+a) Let P be an ordinal number. Is there then a function Ψ(Q), defined for all ordinal numbers Q < P, that has the property
+
+Ψ(Q) = f(M(Ψ(R); R ∈ ON, R < Q))?
+
+And how many such functions are there?
+
+b) If there is one at all, there is exactly one. In this case, let P be called "normal," and let Ψ be called Ψ_P. Furthermore, for a normal P, let
+
+Φ(P) = f(M(Ψ_P(Q); Q ∈ ON, Q < P)).
+
+c) If P is normal, then every Q < P is normal, and for all R < Q,
+
+Ψ_Q(R) = Ψ_P(R) and Φ(Q) = Ψ_P(Q).
+
+d) If all Q < P are normal, then P is also normal. (We have Ψ_P(Q) = Φ(Q).)
+
+e) All P are normal. From d) it follows immediately that
+
+Φ(P) = f(M(Ψ_P(Q); Q ∈ ON, Q < P)) = f(M(Φ(Q); Q ∈ ON, Q < P)),
+
+so Φ(P) is the desired function.
+
+f) There is only one such function.
+
+**5)** Hausdorff, *Grundzüge der Mengenlehre*, p. 114.

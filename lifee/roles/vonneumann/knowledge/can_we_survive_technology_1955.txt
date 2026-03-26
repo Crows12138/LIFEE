@@ -1,0 +1,893 @@
+
+
+For the kind of explosiveness that man 
+will be able to contrive by 1980, the globe 
+is dangerously small, its political units 
+dangerously unstable. 
+
+
+CAN WE SURVIVE TECHNOLOGY? 
+
+
+by John von Neumann 
+
+
+Member, Atomic Energy Commission 
+
+
+“The great globe itself” is in a rapidly maturing crisis 
+—a crisis attributable to the fact that the environment 
+in which technological progress must occur has become 
+both undersized and underorganized. To define the crisis 
+with any accuracy, and to explore possibilities of dealing 
+with it, we must not only look at relevant facts, but also 
+engage in some speculation. The process will illuminate 
+some potential technological developments of the next 
+quarter-century. 
+
+In the first half of this century the accelerating indus- 
+trial revolution encountered an absolute limitation—not 
+on technological progress as such but on an essential 
+safety factor. This safety factor, which had permitted 
+the industrial revolution to roll on from the mid- 
+eighteenth to the early twentieth century, was essentially 
+a matter of geographical and political Lebensraum: an 
+ever broader geographical scope for technological activi- 
+
+
+
+
+Reprinted from John von Neumann Collected Works, ed. A. Taub, Vol. VI, pp. 504-519. 
+
+
+Science and Society 659 
+
+
+CAN WE SURVIVE TECHNOLOGY ? 505 
+
+
+ties, combined with an ever broader political integration 
+of the world. Within this expanding framework it was 
+possible to accommodate the major tensions created by 
+technological progress. 
+
+Now this safety mechanism is being sharply inhibited; 
+literally and figuratively, we are running out of room. 
+At long last, we begin to feel the effects of the finite, 
+actual size of the earth in a critical way. 
+
+Thus the crisis does not arise from accidental events 
+or human errors. It is inherent in technology’s relation 
+to geography on the one hand and to political organiza- 
+tion on the other. The crisis was developing visibly in 
+the 1940’s, and some phases can be traced back to 1914. 
+In the years between now and 1980 the crisis will prob- 
+ably develop far beyond all earlier patterns. When or 
+how it will end—or to what state of affairs it will yield 
+—nobody can say. 
+
+
+Dangers—present and coming 
+
+
+In all its stages the industrial revolution consisted of 
+making available more and cheaper energy, more and 
+easier controls of human actions and reactions, and more 
+and faster communications. Each development increased 
+the effectiveness of the other two. All three factors in- 
+creased the speed of performing large-scale operations 
+—industrial, mercantile, political, and migratory. But 
+throughout the development, increased speed did not 
+so much shorten time requirements of processes as ex- 
+tend the areas of the earth affected by them. The reason 
+is clear. Since most time scales are fixed by human re- 
+action times, habits, and other physiological and psycho- 
+logical factors, the effect of the increased speed of 
+technological processes was to enlarge the size of units 
+
+
+660 The Neumann Compendium 
+
+
+506. J. VON NEUMANN 
+
+
+— political. organizational, economic, and cultural — 
+affected by technological operations. That is, instead of 
+performing the same operations as before in less time, 
+now larger-scale operations were performed in the same 
+time. This important evolution has a natural limit, that 
+of the earth’s actual size. The limit is now being reached, 
+or at least closely approached. 
+
+Indications of this appeared early and with dramatic 
+force in the military sphere. By 1940 even the larger 
+countries of continental Western Europe were inade- 
+quate as military units. Only Russia could sustain a 
+major military reverse without collapsing. Since 1945, 
+improved aeronautics and communications alone might 
+have sufficed to make any geographical unit, including 
+Russia, inadequate in a future war. The advent of nuclear 
+weapons merely climaxes the development, Now the 
+effectiveness of offensive weapons is such as to stultify 
+all plausible defensive time scales. As early as World 
+War I, it was observed that the admiral commanding 
+the battle fleet could “lose the British Empire in one 
+afternoon.” Yet navies of that epoch were relatively 
+stable entities, tolerably safe against technological sur- 
+prises. Today there is every reason to fear that even 
+minor inventions and feints in the field of nuclear 
+weapons can be decisive in less time than would be re- 
+quired to devise specific countermeasures. Soon existing 
+nations will be as unstable in war as a nation the size 
+of Manhattan Island would have been in a contest fought 
+with the weapons of 1900. 
+
+Such military instability has already found its political 
+expression. Two superpowers, the U.S. and U.S.S.R., 
+represent such enormous destructive potentials as to 
+afford Jittle chance of a purely passive equilibrium. Other 
+countries, including possible “neutrals,” are militarily 
+
+
+Science and Society 
+
+
+CAN WE SURVIVE TECHNOLOGY ? 507 
+
+
+defenseless in the ordinary sense. At best they will ac- 
+quire destructive capabilities of their own, as Britain 
+is now doing. Consequently, the ‘“‘concert of powers”— 
+or its equivalent international organization—rests on a 
+basis much more fragile than ever before. The situation 
+is further embroiled by the newly achieved political 
+effectiveness of non-European nationalisms. 
+
+These factors would “normally’—that is, in any re- 
+cent century—have led to war. Will they lead to war 
+before 1980? Or soon thereafter? It would be presump- 
+tuous to try to answer such a question firmly. In any 
+case, the present and the near future are both dangerous. 
+While the immediate problem is to cope with the actual 
+danger, it is also essential to envisage how the problem is 
+going to evolve in the 1955-80 period, even assuming 
+that all will go reasonably well for the moment. This 
+does not mean belittling immediate problems of weap- 
+onry, of U.S.-U.S.S.R. tensions, of the evolution and 
+revolutions of Asia. These first things must come first. 
+But we must be ready for the follow-up, lest possible 
+immediate successes prove futile. We must think beyond 
+the present forms of problems to those of later decades. 
+
+
+When reactors grow up 
+
+
+Technological evolution is still accelerating. Technol- 
+ogies are always constructive and beneficial, directly or 
+indirectly. Yet their consequences tend to increase in- 
+stability—a point that will get closer attention after we 
+have had a look at certain aspects of continuing tech- 
+nological evolution. 
+
+First of all, there is a rapidly expanding supply of 
+energy. It is generally agreed that even conventional, 
+chemical fuel—coal or oil—will be available in increased 
+
+
+
+
+662 The Neumann Compendium 
+
+
+508 J. VON NEUMANN 
+
+
+quantity in the next two decades. Increasing demand 
+tends to keep fuel prices high, yet improvements in 
+methods of generation seem to bring the price of power 
+down. There is little doubt that the most significant 
+event affecting energy is the advent of nuclear power. 
+Its only available controlled source today is the nuclear- 
+fission reactor. Reactor techniques appear to be ap- 
+preaching a condition in which they will be competitive 
+with conventional (chemical) power sources within the 
+U.S.; however, because of generally higher fuel prices 
+abroad, they could already be more than competitive in 
+many important foreign areas. Yet reactor technology 
+is but a decade and a half old, during most of which 
+period effort has been directed primarily not toward 
+power but toward plutonium production. Given a decade 
+of really large-scale industrial effort, the economic 
+characteristics of reactors will undoubtedly surpass 
+those of the present by far. 
+
+Moreover, it is not a law of nature that all controlled 
+release of nuclear energy should be tied to fission reac- 
+tions as it has been thus far. It is true that nuclear 
+energy appears to be the primary source of practically 
+all energy now visible in nature. Furthermore, it is not 
+surprising that the first break into the intranuclear do- 
+main occurred at the unstable “high end”’ of the system 
+of nuclei (that is, by fission). Yet fission is not nature’s 
+normal way of releasing nuclear energy. In the long run, 
+systematic industrial exploitation of nuclear energy may 
+shift reliance onto other and still more abundant modes. 
+Again, reactors have been bound thus far to the tradi- 
+tional heat-steam-generator-electricity cycle, just as 
+automobiles were at first constructed to look like buggies. 
+It is likely that we shall gradually develop procedures 
+more naturally and effectively adjusted to the new source 
+
+
+CAN WE SURVIVE TECHNOLOGY ? 509 
+
+
+of energy, abandoning the conventional kinks and de- 
+tours inherited from chemical-fuel processes. Conse- 
+quently, a few decades hence energy may be free—just 
+like the unmetered air—with coal ‘and oil used mainly 
+as raw materials for organic chemical synthesis, to 
+which, as experience has shown, their properties are 
+best suited. 
+
+
+“Alchemy” and automation 
+
+
+It is worth emphasizing that the main trend will be 
+systematic exploration of nuclear reactions—that is, the 
+transmutation of elements, or alchemy rather than 
+chemistry. The main point in developing the industrial 
+use of nuclear processes is to make them suitable for 
+large-scale exploitation on the relatively small site that 
+is the earth or, rather, any plausible terrestrial indus- 
+trial establishment. Nature has, of course, been operat- 
+ing nuclear processes all along, well and massively, but 
+her “natural” sites for this industry are entire stars. 
+There is reason to believe that the minimum space re- 
+quirements for her way of operating are the minimum 
+sizes of stars. Forced by the limitations of our real 
+estate, we must in this respect do much better than 
+nature. That this may not be impossible has been demon- 
+strated in the somewhat extreme and unnatural instance 
+of fission, that remarkable breakthrough of the past 
+decade. 
+
+What massive transmutation of elements will do to 
+technology in general is hard to imagine, but the effects 
+will be radical indeed. This can already be sensed in 
+related fields. The general revolution clearly under way 
+in the military sphere, and its already realized special 
+aspect, the terrible possibilities of mass destruction, 
+
+
+Science and Society 
+
+
+
+
+664 The Neumann Compendium 
+
+
+510 J. VON NEUMANN 
+
+
+should not be viewed as typical of what the nuclear 
+revolution stands for. Yet they may well be typical of 
+how deeply that revolution will transform whatever it 
+touches. And the revolution will probably touch most 
+things technological. 
+
+Also likely to evolve fast—and quite apart from nu- 
+clear evolution—is automation. Interesting analyses of 
+recent developments in this field, and of near-future 
+potentialities, have appeared in the last few years. Auto- 
+matic control, of course, is as old as the industrial revolu- 
+tion, for the decisive new feature of Watt’s steam 
+engine was its automatic valve control, including speed 
+control by a “governor.” In our century, however, small 
+electric amplifying and switching devices put automa- 
+tion on an entirely new footing. This development began 
+with the electromechanical (telephone) relay, continued 
+and unfolded with the vacuum tube, and appears to ac- 
+celerate with various solid-state devices (semi-conductor 
+crystals, ferromagnetic cores, etc.). The last decade or 
+two has also witnessed an increasing ability to control 
+and “discipline” large numbers of such devices within 
+
+~ one machine. Even in an airplane the number of vacuum 
+tubes now approaches or exceeds a thousand. Other 
+machines, containing up to 10,000 vacuum tubes, up to 
+five times more crystals, and possibly more than 100,000 
+cores, now operate faultlessly over long periods, per- 
+forming many millions of regulated, preplanned actions 
+per second, with an expectation of only a few errors per 
+day or week. 
+
+Many such machines have been built to perform com- 
+plicated scientific and engineering calculations and large- 
+scale accounting and logistical surveys. There is no 
+doubt that they will be used for elaborate industrial 
+process control, logistical, economic, and other planning, 
+
+
+Science and Society 
+
+
+CAN WE SURVIVE TECHNOLOGY ? Si 
+
+
+and many other purposes heretofore lying entirely out- 
+side the compass of quantitative and automatic control 
+and preplanning. Thanks to simplified forms of auto- 
+matic or semi-automatic control, the efficiency of some 
+important branches of industry has increased consider- 
+ably during recent decades. It is therefore to be expected 
+that the considerably elaborated newer forms, now be- 
+coming increasingly available, will effect much more 
+along these lines. 
+
+Fundamentally, improvements in control are really 
+improvements in communicating information within an 
+organization or mechanism. The sum total of progress 
+in this sphere is explosive. Improvements in communica- 
+tion in its direct, physical sense—transportation—while 
+less dramatic, have been considerable and steady. If 
+nuclear developments make energy unrestrictedly avail- 
+able, transportation developments are likely to accelerate 
+even more. But even “normal’’ progress in sea, land, and 
+air media is extremely important. Just such “normal” 
+progress molded the world’s economic development, pro- 
+ducing the present global ideas in politics and economics. 
+
+
+Controlled climate 
+
+
+Let us now consider a thoroughly “abnormal’’ indus- 
+try and its potentialities—that is, an industry as yet 
+without a place in any list of major activities: the con- 
+trol of weather or, to use a more ambitious but justified 
+term, climate. One phase of this activity that has re- 
+ceived a good deal of public attention is “rain making.” 
+The present technique assumes extensive rain clouds, and 
+forces precipitation by applying small amounts of chemi- 
+cal agents. While it is not easy to evaluate the signifi- 
+cance of the efforts made thus far, the evidence seems to 
+indicate that the aim is an attainable one. 
+
+
+
+
+
+
+The Neumann Compendium 
+
+
+512 J. VON NEUMANN 
+
+
+But weather control and climate control are really 
+much broader than rain making. All major weather 
+phenomena, as well as climate as such, are ultimately 
+controlled by the solar energy that falls on the earth. To 
+modify the amount of solar energy, is, of course, beyond 
+human power. But what really matters is not the amount 
+that hits the earth, but the fraction retained by the 
+earth, since that reflected back into space is no more use- 
+ful than if it had never arrived. Now, the amount ab- 
+sorbed by the ‘solid earth, the sea, or the atmosphere 
+seems to be subject to delicate influences. True, none of 
+these has so far been substantially controlled by human 
+will, but there are strong indications of control possibili- 
+ties. ae 
+
+The carbon dioxide released into the atmosphere by 
+industry’s burning of coal and oil—more than half of it 
+during the last generation—may have changed.the at- 
+mosphere’s composition sufficiently to account for a 
+general warming of the world by about one degree 
+Fahrenheit. The voleano Krakatao erupted in 1883 and 
+released an amount of energy by no, means. exorbitant. 
+Had the dust of the eruption stayed in the stratosphere 
+for fifteen years, reflecting sunlight away from the earth, 
+it might have sufficed to lower the world’s temperature 
+by six degrees. (in fact, it stayed for about three years, 
+and five such eruptions would probably have achieved 
+the result mentioned). This would have been a substan- 
+tial cooling; the last Ice Age, when half of North 
+America and all of northern and western Europe were 
+under an ice cap like that of Greenland or Antarctica, 
+was only fifteen degrees colder than the present age. On 
+the other hand, another fifteen degrees of warming 
+would probably melt the ice of Greenland and Antarctica 
+and produce world-wide tropical to semi-tropical climate. 
+
+
+Science and Society 
+
+
+CAN WE SURVIVE TECHNOLOGY ? 513 
+
+
+“Rather fantastic effects” 
+
+
+Furthermore, it is known that the persistence of large 
+ice fields is due to the fact that ice both reflects sunlight 
+energy and radiates away terrestrial energy at an even 
+higher rate than ordinary soil. Microscopic layers of col- 
+ored matter spread on an icy surface, or in the atmos- 
+phere above one, could inhibit the reflection-radiation 
+process, melt the ice, and change the local climate. Meas- 
+ures that would effect such changes are technically pos- 
+sible, and the amount of investment required would be 
+only of the order of magnitude that sufficed to develop 
+rail systems and other major industries. The main dif- 
+ficulty lies in predicting in detail the effects of any such 
+drastic intervention. But our knowledge of the dynamics 
+and the controlling processes in the atmosphere is 
+rapidly approaching a level that would permit such pre- 
+diction. Probably intervention in atmospheric and clima- 
+tic matters will come in a few decades, and will unfold 
+on a scale difficult to imagine at present. 
+
+What could be done, of course, is no index to what 
+should be done; to make a new ice age in order to annoy 
+others, or a new tropical, “interglacial” age in order to 
+please everybody, is not necessarily a rational program. 
+In fact, to evaluate the ultimate consequences of either 
+a general cooling or a general heating would be a com- 
+plex matter. Changes would affect the level of the seas, 
+and hence the habitability of the continental coastal 
+shelves; the evaporation of the seas, and hence general 
+precipitation and glaciation levels; and so on. What 
+would be harmful and what beneficial—and to which re- 
+gions of the earth — is not immediately obvious. But 
+there is little doubt that one could carry out analyses 
+needed to predict results, intervene on any desired scale, 
+and ultimately achieve rather fantastic effects. The 
+
+
+
+
+668 The Neumann Compendium 
+
+
+514 J. VON NEUMANN 
+
+
+climate of specific regions and levels of precipitation 
+might be altered. For example, temporary disturbances 
+—including invasions of cold (polar) air that constitute 
+the typical winter of the middle latitudes, and tropical 
+storms (hurricanes) — might be corrected or at least 
+depressed. 
+
+There is no need to detail what such things would 
+mean to agriculture or, indeed, to all phases of human, 
+animal, and plant ecology. What power over our environ- 
+ment, over all nature, is implied! 
+
+Such actions would be more directly and truly world- 
+wide than recent or, presumably, future wars, or than 
+the economy at any time. Extensive human intervention 
+would deeply affect the atmosphere’s general circulation, 
+which depends on the earth’s rotation and intensive solar 
+heating of the tropics. Measures in the arctic may con- 
+trol the weather in temperate regions, or measures in 
+one temperate region critically affect another, one- 
+quarter around the globe. All this will merge each na- 
+tion’s affairs with those of every other, more thoroughly 
+than the threat of a nuclear or any other war may 
+already have done. 
+
+
+The indifferent controls 
+
+
+Such developments as free energy, greater automa- 
+tion, improved communications, partial or total climate 
+control have common traits deserving special mention. 
+First, though all are intrinsically useful, they can lend 
+themselves to destruction. Even the most formidable 
+tools of nuclear destruction are only extreme members of 
+a genus that includes useful methods of energy release 
+or element transmutation. The most constructive 
+schemes for climate control would have to be based on 
+
+
+Science and Society 
+
+
+CAN WE SURVIVE TECHNOLOGY ? 515 
+
+
+insights and techniques that would also lend themselves 
+to forms of climatic warfare as yet unimagined. Tech- 
+nology—like science—is neutral all through, providing 
+only means of control applicable to any purpose, indif- 
+ferent to all. 
+
+Second, there is in most of these developments a trend 
+toward affecting the earth as a whole, or to be more 
+exact, toward producing effects that can be projected 
+from any one to any other point on the earth. There is 
+an intrinsic conflict with geography — and institutions 
+based thereon — as understood today. Of course, any 
+technology interacts with geography, and each imposes 
+its own geographical rules and modalities. The tech- 
+nology that is now developing and that will dominate the 
+next decades seems to be in total conflict with traditional 
+and, in the main, momentarily still valid, geographical 
+and political units and concepts. This is the maturing 
+crisis of technology. 
+
+What kind of action does this situation call for? What- 
+ever one feels inclined to do, one decisive trait must be 
+considered: the very techniques that create the dangers 
+and the instabilities are in themselves useful, or closely 
+related to the useful. In fact, the more useful they could 
+be, the more unstabilizing their effects can also be. It is 
+not a particular perverse destructiveness of one par- 
+ticular invention that creates danger. Technological 
+power, technological efficiency as such, is an ambivalent 
+achievement. Its danger is intrinsic. 
+
+
+Science the indivisible 
+
+
+In looking for a solution, it is well to exclude one 
+pseudosolution at the start. The crisis will not be re- 
+solved by inhibiting this or that apparently particularly 
+
+
+
+
+670 The Neumann Compendium 
+
+
+516 J. VON NEUMANN 
+
+
+obnoxious form of technology. For one thing, the parts 
+of technology, as well as of the underlying sciences, are 
+so intertwined that in the long run nothing less than a 
+total elimination of all technological progress would 
+suffice for inhibition. Also, on a more pedestrian and 
+immediate basis, useful and harmful techniques lie 
+everywhere so close together that it is never possible to 
+separate the lions from the lambs. This is known to all 
+who have so laboriously tried to separate secret, “classi- 
+fied” science or technology (military) from the “open” 
+kind; success is never more—nor intended to be more— 
+than transient, lasting perhaps half a decade. Similarly, 
+a separation into useful and harmful subjects in any 
+technological sphere would probably diffuse into nothing 
+in a decade. 
+
+Moreover, in this case successful separation would 
+have to be enduring (unlike the case of military “classi- 
+fication,” in which even a few years’ gain may be im- 
+portant). Also, the proximity of useful techniques .to 
+harmful ones, and the possibility of putting the harmful 
+ones to military use, puts a competitive premium on in- 
+fringement. Hence the banning of particular technologies 
+would have to be enforced on a worldwide basis. But the 
+only authority that could do this effectively would have 
+to be of such scope and perfection as to signal the resolu- 
+tion of international problems rather than the discovery 
+of a means to resolve them. 
+
+Finally and, I believe, most importantly, prohibition 
+of technology (invention and development, which are 
+hardly separable from underlying scientific inquiry), is 
+contrary to the whole ethos of the industrial age. It is 
+irreconcilable with a major mode of intellectuality as 
+our age understands it. It is hard to imagine such a re- 
+straint successfully imposed in our civilization. Only if 
+
+
+Science and Society 
+
+
+CAN WE SURVIVE TECHNOLOGY ? 517 
+
+
+those disasters that we fear had already occurred, only 
+if humanity were already completely disillusioned about 
+technological civilization, could such a step be taken. 
+But not even the disasters of recent wars have produced 
+that degree of disillusionment, as is proved by the 
+phenomenal resiliency with which the industrial way of 
+life recovered even—or particularly—in the worst-hit 
+areas. The technological system retains enormous vi- 
+tality, probably more than ever before, and the counsel 
+of restraint is unlikely to be heeded. 
+
+
+Survival—a possibility 
+
+
+A much more satisfactory solution than technological 
+prohibition would be eliminating war as “a means of 
+national policy.”’ The desire to do this is as old as any 
+part of the ethical system by which we profess to be 
+governed. The intensity of the sentiment fluctuates, in- 
+creasing greatly after major wars. How strong is it now 
+and is it on the up or the downgrade? It is certainly 
+strong, for practical as well as for emotional reasons, 
+all quite obvious, At least in individuals, it seems world- 
+wide, transcending differences of political systems. Yet 
+in evaluating its durability and effectiveness a certain 
+caution is justified. 
+
+One can hardly quarrel with the “practical” argu- 
+ments against war, but the emotional factors are prob- 
+ably less stable. Memories of the 1939-45 war are fresh, 
+but it is not easy to estimate what will happen to popu- 
+lar sentiment as they recede. The revulsion that followed 
+1914-18 did not stand up twenty years later under the 
+strain of a serious political crisis. The elements of a 
+future international conflict are clearly present today 
+and even more explicit than after 1914-18. Whether the 
+
+
+
+
+
+
+The Neumann Compendium 
+
+
+518 J. VON NEUMANN 
+
+
+‘‘practical’’ considerations, without the emotional 
+counterpart, will suffice to restrain the human species is 
+dubious since the past record is so spotty. True, “prac- 
+tical” reasons are stronger than ever before, since war 
+could be vastly more destructive than formerly. But that 
+very appearance has been observed several times in the 
+past without being decisive. True, this time the danger 
+of destruction seems to be real rather than apparent, 
+but there is no guarantee that a real danger can control 
+human actions better than a convincing appearance of 
+danger. 
+
+What safeguard remains? Apparently only day-to-day 
+—or perhaps year-to-year — opportunistic measures, a 
+long sequence of small, correct decisions. And this is not 
+surprising. After all, the crisis is due to the rapidity of 
+progress, to the probable further acceleration thereof, 
+and to the reaching of certain critical relationships. 
+Specifically, the effects that we are now beginning to 
+produce are of the same order of magnitude as that of 
+“the great globe itself.” Indeed, they affect the earth as 
+an entity. Hence further acceleration can no longer be 
+absorbed as in the past by an extension of the area of 
+operations. Under present conditions it is unreasonable 
+to expect a novel cure-all. 
+
+For progress there is no cure. Any attempt to find 
+automatically safe channels for the present explosive 
+variety of progress must lead to frustration. The only 
+safety possible is relative, and it lies in an intelligent ex- 
+ercise of day-to-day judgment. 
+
+
+Awful and more awful 
+
+
+The problems created by the combination of the pre- 
+sently possible forms of nuclear warfare and the rather 
+
+
+Sctence and Society 673 
+
+
+CAN WE SURVIVE TECHNOLOGY ? 519 
+
+
+unusually unstable international situation are formid- 
+able and not to be solved easily. Those of the next de- 
+cades are likely to be similarly vexing, ‘only more so.” 
+The U.S.-U.S.S.R. tension is bad, but when other nations 
+begin to make felt their full offensive potential weight, 
+things will not becoine simpler. 
+
+Present awful possibilities of nuclear warfare may 
+give way to others even more awful. After global climate 
+control becomes possible, perhaps all our present involve- 
+ments will seem simple. We should not deceive ourselves: 
+once such possibilities become actual, they will be ex- 
+ploited. It will, therefore, be necessary to develop suit- 
+able new political forms and procedures. All experience 
+shows that even smaller technological changes than 
+those now in the cards profoundly transform political 
+and social relationships. Experience also shows that 
+these transformations are not a priori predictable and 
+that most contemporary “first guesses” concerning them 
+are wrong. For all these reasons, one should take neither 
+present difficulties nor presently proposed reforms too 
+seriously. 
+
+The one solid fact is that the difficulties are due to an 
+evolution that, while useful and constructive, is also 
+dangerous. Can we produce the required adjustments 
+with the necessary speed? The most hopeful answer is 
+that the human species has been subjected to similar 
+tests before and seems to have a congenital ability to 
+come through, after varying amounts of trouble. To 
+ask in advance for a complete recipe would be unreason- 
+able. We can specify only the human qualities required: 
+patience, flexibility, intelligence. 
+
+
+
+
+The Neumann Compendium 
+
+
+DEFENSE IN ATOMIC WAR 
+
+
+It will not be sufficient to know that the enemy has only fifty 
+
+
+possible tricks and that we can counter every one of them, but we 
+
+
+must be able to counter them almost at the very instant they occur 
+
+
+HE introduction to any and all 
+
+applied science via the channel 
+
+of military science, while it was 
+rare in the one or two generations that 
+came before us, is not so paradoxical. 
+Without trying to reminisce about 
+things long past, this particular circum- 
+stance has had, since Archimedes and 
+Leonardo da Vinci, a very long pedi- 
+gree. 
+
+I would like nevertheless to reminisce 
+just a little. My particular introduction 
+occurred at the Ballistic Research Lab- 
+ortories in the early years of World 
+War Il. It is remarkable to consider 
+today how small in numbers was the 
+manpower trained for this kind of ap- 
+plied science, and in particular for mili- 
+tary matters. This was especially true in 
+the theoretical field and more especially 
+in my field—mathematics, 
+
+It was astounding that there were 
+considerable numbers of supposedly 
+very sophisticated specialists in very 
+highly complicated fields of effort, and 
+yet how very little we knew about the 
+matters to which we were to be in- 
+troduced. 
+
+
+Aprere the guidance and the ex- 
+ample of somebody who knew what 
+this was all about were tremendously 
+valuable. This whole relationship of 
+being supposedly an expert in one way 
+and yet a complete ignoramus in the 
+way which happened to matter at that 
+time is hard to describe. 
+
+I assume it is best illustrated by a 
+story which I heard recently about the 
+
+
+Dr. John von Neumann 
+
+
+Dr. von Neumann is a mem- 
+ber of the United States Atomic 
+Energy Commission, Wash- 
+ington, D. C. 
+
+
+American Indian who registered at a 
+New York hotel and made two X’s for 
+his name. When asked what this signi- 
+fied, he said that the first X meant 
+“Chief Bald Eagle.” When asked what 
+the second X meant, he said, “Ph.D.” 
+We were all making our X’s in this 
+fashion! 
+
+The other thing which was very re- 
+markable was how this transformation 
+took place in other fields and speci- 
+fically how the’ institutions expanded 
+which were connected with the Ballistic 
+Research Laboratories. 
+
+The first vista I got of this was at the 
+Ballistic Research Laboratories, where, 
+first under Colonel Zornig and then 
+under Colonel Simon, and always under 
+the guidance of Dr, Kent, the institution 
+expanded fiftyfold. And how the com- 
+plexity of what went on grew! 
+
+Quite apart from facts referred to, it 
+was very remarkable that the laboratory 
+was one of the pioneers in supersonic 
+wind tunnel building in America. It 
+was absolutely the pioneer in the field 
+which concerned me very closely after- 
+ward—the building of modern clec- 
+tronic computing machines, 
+
+The first modern electronic full-scale 
+computing machine was built at the 
+University of Pennsylvania for the Bal- 
+
+
+$23 
+
+
+Reprinted from John von Neumann Collected Works, ed. A. Taub, Vol 
+
+
+listic Research Laboratories, and for 
+years afterward the only ones that could 
+operate on the scale required were avail- 
+able there, and only there. It took quite 
+some time before a really high speed 
+machine was developed independently 
+elsewhere. 
+
+Since then, the complexity and the 
+sophistication of the weapons business 
+has been increasing very rapidly from 
+year to year. I should like to mention, 
+as an example of this, the phase of com- 
+puting machines. It is probably true 
+that since 1945 the over-all capacity of 
+these machines has nearly doubled every 
+year. 
+
+This is astounding because over a 
+period of ten years it means a thousand- 
+fold increase. Yet it is true that the in- 
+crease that has occurred is a thousand- 
+fold in certain respects. I know of one 
+instance where it actually has been 
+three or four thousandfold since 1946. 
+
+
+ii is astounding to what extent the 
+use of the computing machine has 
+spread, and in some’ fields today it is 
+very hard to imagine how one would 
+go on working without such machines. 
+One of them is, of course, ballistics 
+in the very complicated forms it now 
+has assumed. Ballistics has progressed 
+from the calculation of firing tables for 
+more or less conventional use into the 
+calculation of firing tables for antiair- 
+craft artillery, then into the more com- 
+plicated field of air-to-air firings, and 
+now into the peculiar and complicated 
+field of missile-trajectories guidance. 
+
+
+. VI, pp. 523-525, 
+
+

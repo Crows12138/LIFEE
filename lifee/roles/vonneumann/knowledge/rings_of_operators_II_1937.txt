@@ -1,0 +1,2785 @@
+ON RINGS OF OPERATORS. II*
+BY
+F. J. MURRAYf AND J. von NEUMANN
+Introduction. 
+This paper is a continuation 
+of one by the same authors :
+On rings of operators, Annals of Mathematics, (2), vol. 37 (1936), pp. 116-229.
+It contains the solution of certain problems which were left open there. We
+will prove the general additivity 
+of trace TrMiA), its weak continuity, 
+and
+certain isomorphisms between §, M, and M' (cf. the remarks (i)-(iv) at the
+end of the above quoted paper). All these considerations 
+refer to "Case (II)"
+for M (cf. Theorem VIII, loc. cit.).
+The properties of Tr¡niA) are established by obtaining for it a represen-
+tation
+m
+TrMiA) = £ 
+iAgi, gi)
+t-i
+(with a fixed, finite m = l, 2, • • • , and fixed gi, ■ ■ ■ , £*>«§)■ This represen-
+tation is remarkable, 
+because it is obviously a close analogue of the repre-
+sentation of 7>Af iA) as a trace, that is, as the arithmetic mean of the diagonal
+matrix-elements 
+of A in the cases (I„), « = 1, 2, • • ■ , when M is essentially
+the full matrix ring of an »-(finite-) dimensional Euclidean space.
+For certain cases (with the help of which the others are then mastered)
+we have even m = l.
+In Part I the above representation 
+of TrMiA) is obtained approximately.
+The technically 
+interested 
+reader may find it worth observing that the ex-
+haustion method we use there (§§1.2 and 1.3) is analogous to certain pro-
+cedures which can be used advantageously 
+in the theories of measures and
+integration 
+too. On this basis we establish the main properties 
+of Tr¡aiA) in
+Part II, and then obtain the exact representation 
+of TrMiA) in Part III.
+Here two maximum-problems, 
+called (A) and (B), which seem to possess
+some independent 
+interest too, play a decisive role.
+Part IV is devoted to establishing an isomorphism between §, M, and M'.
+It turns out that a certain algebraic-topological 
+extension QiM) of M is
+isomorphic to § and that M and M' play in it the role of right- and left-
+multiplication. 
+This leads to an interesting 
+and entirely new type of infinite
+hypercomplex 
+systems, which are at the same time Hubert spaces. A subse-
+quent paper will be devoted to their independent 
+study.
+* Presented to the Society, October 31, 1936; received by the editors July 28, 1936.
+t National Research Fellow.
+ON RINGS OF OPERATORS. II
+The appendix 
+deals with the possibility 
+of considering 
+M (in the case
+(Hi)) as a system of matrices with continuously 
+spread rows and columns.
+We wiU use the notations, 
+definitions, 
+and results of our paper On rings
+of operators, quoted above, throughout 
+this paper. We will quote it, whenever
+necessary, 
+as R.O. All other quotations 
+follow the bibliography 
+of R.O.
+(pp. 125-126, Nos. (l)-(22)).
+The isomorphism 
+problems 
+of different rings M of class (Hi) (cf. the
+remark (v) at the end of R.O.) are not discussed here. They will be dealt with
+in a subsequent 
+publication.
+Since the appearance, of R.O. the second-named 
+author has succeeded in
+finding new representations 
+of case (IL) in terms of infinite direct products,
+which throw new light on (IL.) as a limiting case of the (IB), ra = l, 2, • • • ,
+as well as a way of applying the present theory to quantum-mechanics. 
+These
+subjects too will be discussed in papers which will follow soon.
+Contents
+Introduction.
+Chapter I. Approximate 
+form of TrM(A) (for a^l).
+1.1. The normalization.
+1.2. The notions Et\ 
+£gX and E^p\, 
+E^p\.
+1.3. Selection of an approximately 
+homogeneous 
+piece.
+1.4. Properties 
+of such a piece.
+1.5. Extension of the approximately 
+homogeneous piece.
+1.6. Properties 
+of the extension.
+1.7. Formulation 
+of the result. Theorem I.
+Chapter II. Immediate 
+consequences.
+2.1. Additivity 
+and restricted 
+weak continuity 
+of Tr\¡(A). 
+Properties
+I, II.
+2.2. Definition 
+of  TrM(A)  for all  (not necessarily 
+Hermitian) 
+ AeM.
+Uniqueness. 
+Properties 
+III, IV.
+Chapter III. The exact form of TrM(A) (for a^l).
+3.1. The spectral form /0V(X)¿£(X) with DM(E(\)) =X.
+3.2. The maximum problems (A) and (B).
+3.3. Reducibility of a geÍQ by an EeM.
+3.4. Decomposition 
+of a g from Theorem I.
+3.5. Construction 
+of an exact g for Tr¡n(A). Removal 
+of the condition
+a^l. 
+Unrestricted 
+weak continuity 
+of TrM(A). Theorems 
+II, III,
+IV.
+Chapter IV. The isomorphism of AT, M', and § (for a = l).
+4.1. The isomorphism of § and Q(M) with the help of a u.d.f.
+F. J. MURRAY AND J. von NEUMANN 
+[March
+4.2. The correspondences 
+of §, QiM), 
+and QiM'). 
+Criteria 
+for u.d.
+Equivalence 
+of u.d. for M and for M'. Isomorphism 
+properties 
+of
+these correspondences. 
+Theorems V, VI.
+4.3. Analysis of QiM), QiM'); 
+their Hilbert-space 
+character. 
+Theorems
+VII, VIII, IX.
+4.4. Algebraic properties 
+of QiM). 
+Roles of M, M' in it. Properties
+Io, IIo, IIIo, IVo, Vo. Theorem X.
+4.5. Implication 
+of a spatial isomorphism 
+by an algebraic ring-isomor-
+phism. Theorem XI.
+4.6. Description 
+of further results.
+Appendix. The matrix-aspect 
+of the M of class (Hi).
+Chapter 
+I. Approximate 
+form of TrMiA) (for a è 1)
+1.1. We assume that we have given a factor M in case Hi. Now we nor-
+malize DM and DM- so that C = l (cf. R.O., pp. 179-182). This means (R.O.,
+loc. cit.) that for every /e£, 77M(97c/M') 
+= DM- (SV) and that the range of D„
+is the interval 0^x¿ 
+1. Let the range of Dw be the interval 0^i|a, 
+where
+0 <a^ 
+oo. In this part, we assume that au 1.
+Now M' is a factor of class Hi or II„ by R.O., Theorem X. In the first case
+the range of DM> is in the normalization 
+(loc. cit.) the interval, 0 ^ x ^ 1, and
+C = l/a 
+(since DM' = l/ct times its value in the previous paragraph). 
+Since
+CS1, we have in both cases by the discussion on page 182 of R.O., that
+A0=A. By R.O., Definition 10.1.1, this implies that there exists an/ such
+that Dm($R¡m') = 1. Since we can pass from the normalization 
+of this para-
+graph to that of the previous paragraph 
+by multiplying 
+DM> by a and leaving
+Dm unchanged, we see that this holds even with our previous normalization.
+Thus we have an / such that DM(E,M') = 1 =DM(1) or DM(1 -E,M') =0
+which implies 1 —EfM' = 0; that is, EfM' = 1. We now assume that such an /
+has been chosen and is held fixed for the following discussion.
+1.2. With respect to this fixed/, we now define certain relations concern-
+ing a projection EtM.
+Definition 
+1.2.1. Let E^O be a projection, eM, 6 a real number ^0. The
+relation E>0 (E^d, E<0, E^d) is said to hold if (Ef, f)>6DM(E) ((£/,/)
+TíODmÍE), iEf,f)<dDMiE), (Ef,f)^6DM(E) respectively).
+The relation F^ „X (E^p\) 
+is said to hold for a projection Ej¿0 if for every
+FtMsuch thatF^E, 
+F^0, we haveF^X (F^X).
+Lemma 1.2.1. Let {F,} be a sequence of projections (finite or infinite) with
+EitM, EiEj = 5jiEi. Then if for every i, F¿^X (F.^X), and if for some i, say
+i0, £,0<X (£i0>X) we Aaw£¿F,<X 
+(£,F,>X).
+1937]
+ON RINGS OF OPERATORS. II
+We have, for every i, \D(Et) Ú (£</,/), hence XZ<*¿P(E,) íEW^./O
+and \DiEO<iEiJ,f). These imply X^tD^Ù<ZW, 
+f) or XZ>(Z.E.)
+<(Z¿-E</,/), which was to be shown.
+Lemma 1.2.2. If E^\ 
+(E^X), ZAera there exists an F such that E^F,
+F^PX 
+(FZPX).
+By Definition 1.2.1 we haveE^O. 
+Suppose there is no suchT?. Then there
+must be an Ei, such that E^Ei, 
+and 7£i<X. 
+(Otherwise E itself would be
+such an F.) Now let fi be the first ordinal number which belongs to a cardinal
+number N > N 0. Let a he an ordinal number such that a < 0. Let us suppose
+that for all ß<a 
+an Eß has been defined in such a way that Eß^O, Eß^E,
+Eß<}\, Eßßß^bß^ßfiß,. 
+Now if E—^2ß<aEß = 0, let Ea> be undefined for
+a'^a. 
+If, however, E— Zi<«^/s^O, 
+by hypothesis, E— Z/Ka-E/s is not ^PX,
+hence there exists an E0, with E0^0,E —Zík«^ ^E0,E0<X,E^E 
+—Zík-E?
+^E0. Thus if we let Ea = E0, we have, if E—^1ß<aEß9i0, 
+an Ea which is
+orthogonal 
+to all previous Eß and Ea <X.
+Now D(E) ^£,ß<aD(Eß) for every a. Since D(Eß) >0, this implies that
+there is only denumerably 
+many of the numbers 
+D(Eß). Hence for some
+a<U, 
+E — y~^Jß<:aEa 
+= 0. Inasmuch 
+as a<£2, we can re-index 
+the Eß's into a
+finite or a simply infinite sequence. Now Ei<\, 
+Ei^X, 
+and since 7?=Z<-E«">
+Lemma 1.1 implies that 7£<X, a contradiction.
+Lemma 1.2.3. If E^pX (E^pX), then if E^F, F¿¿0, FeM, we have
+F^pK (F^PX).
+liFi is such that F^Fi, 
+F^O thenE^F^Fi 
+and hence by Definition
+1.2.1, Fi^X. This statement implies that F^ „X.
+1.3. Now (1/,/) = ||/||2 = ||/||277(1). Now let 0O = ||/||2 which is of course not
+zero for 5Dc/M 
+= ^ and this precludes /=0. 
+Thus 1 (the projection, 
+not the
+number) is ^6B- By Lemma 
+1.2.2, there exists an EeM, such that E^p60.
+Now let X be the least upper bound of the numbers 
+0 such that E^Pd.
+X must be less than (Ef, f)/DM(E) and since DM(E) >0, it must be finite.
+Let e be any number 
+>0. £ is not è pX + e. Hence there is an Eu such that
+E^Ei, 
+and Ei^X+e. 
+Lemma 
+1.2.2 now implies that there is an E2 with
+£i^£2and£2^pX+É.
+Now if F is such that E^F, FeM, F^O, we have F^0 for all 0<X, which
+means of course that T^X and E^PX. Now since E^Ei^E2, 
+Lemma 1.2.3
+implies that E2 ^ PX. Thus for some fixed X >0, given any e >0, we can find a
+non-zero £2eM, such that for all FeM with the property 
+E2 ^ F, we have
+(X + e)DM(F) ^ (Ff, f) > XDM(F).
+Now if we let/be 
+X1/2/above, e=\(K-l)E2 
+= E, we see that
+F. J. MURRAY AND J. von NEUMANN 
+[March
+Lemma 1.3.1. To every K>1 
+there exists an f and EeM, E^O, 
+such that
+for every FeM with the property E è F,
+KDM(F) à (Ff,f) >DM(F).
+1.4. We can now show
+Lemma 1.4.1. Let K,f, and E be as in Lemma 1.3.1. Let AeM be a positive
+definite self-adjoint operator such that EA =AE = A. Then
+KTrMiA) ^ 04/,/) 
+= TrMiA).
+Let c be the bound of A, E(K) the resolution of the identity correspond-
+ing to A. Now by R.O., pp. 212-213,
+TruiA) =  f\dDiEi\));        iAf,f)=  f '\d(E(\)f, f).
+J o 
+•'o
+Now since AE = A, F(0) ^ 1 — E, and since A commutes with E, E com-
+mutes with all £(X) (cf. (15), Theorem 8.2). Now 22(X) =£(X)£+F(X)(1 -E).
+Since F(X) and E commute, 
+F(X)£=F(X) 
+is a projection 
+and similarly
+£(X)(1 -E) is a projection. For X^O, we have F(X)(1 -E) g 1 -F 
+and also
+£(X)(1 -E) ^£(0)(1 -E) è (1 -£)2 = 1 -E and thus £(X)(1 -E) = 1 -E. So
+forX^O, F(X) =F(X) + (1 -E). NowF(X)(l -E) =£(X)£(1 -£) =0, hence by
+R.O., Definition 8.2.1, F>(F(X)) =77(F(X))+Z>(l-£). Thus we have
+TrM(A) 
+=  f\dDiE(K))=  f\dDiF(K)) +  [\dDil - E) =  f Xd2?(F(X))
+and
+(Äff) =  f\d(E(\)f,f) =  f\d(F(K)f,f) +  f\d((l - £)/,/)
+•'0 
+•'0 
+" 0
+=  f\d(F(\)f,f).
+J 0
+But Lemma 1.3.1 now implies that if 0^a<ßec, 
+then
+KDM(F(ß) - F(a)) > ((F(ß) - Fia))f, f) ^ DMiFiß) - Fia))
+which by the definition of the Riemann-Stieltjes 
+integral yields that
+KTrMiA) ^ iAf,f) è TrM(A).
+Lemma 1.4.2. For a projection F^0, 
+Etpd 
+(úp6) 
+is equivalent to the
+statement that for all positive definite AtM such that EA =AE = A,
+(Af,f) ^9TrM(A) (^BTrM(A)).
+1937]
+ON RINGS OF OPERATORS. II
+Since TrM(F) = DM(F), F a projection, 
+the last statement 
+implies the
+first. The converse is shown by a proof similar to that of Lemma 1.4.1.
+Lemma 1.4.3. Let AeM be such that EA =AE=A, then \\A*f\\2^K\\Af\\2,
+if E, f, K are as in Lemma 1.3.1.
+A*A is positive 
+definite and eM, Furthermore 
+AE = EA =A implies
+EA* = A*E=A*, and thus EA*A=A*A=A*AE. Hence Lemma 1.4.1 ap-
+plies to A*A and we have
+(a) 
+KTrMiA*A) ^ iA*Af, f) ^ TrMiA*A).
+Using the canonical decomposition 
+(R.O., Definition 
+4.4.1) for A* we have
+A* = UB, where U may be taken as unitary. 
+(In the finite cases, we see
+(cf. R.O., Lemma 16.1.1) that there exists a partially isometric V with initial
+set if; A*f=0) and final set (/; Af=0). Now if W is as in R.O., Definition
+4.4.1, for A =A*, let U = W+V.) B is self-adjoint and equals iAA*)1'2. Now
+A =BU* = BU~1 and hence A*A = UBBU~l = UB2U-^ = UAA*U-\ Hence
+iß) 
+TrMiA*A) = TrMiUAA*U~i) = TrMiAA*).
+Substituting 
+A* for A in our previous result we have
+(7) 
+KTrMiAA*) ^ iAA*f, f) ^ TrMiAA*).
+Combining (a), iß), and (p), we obtain
+KiA*Af,f) è KTrMiA*A) = KTrMiAA*) ^ iAA*f,f).
+Since iA*Af,f) = iAf, Af) = \\Af\\2, iAA*f,f) = iA*f, A*f) = \\A*f\\2; this is the
+desired inequality.
+1.5. Now if E is as in Lemma 1.3.1, let ra be the smallest integer such
+that l/n^DMiE). 
+Then if E°^E 
+is such that DMiE°) = 1/ra, Lemma 1.3.1
+will hold with E° in place of E. Now / was chosen in such a manner 
+that
+W' 
+= £>• This implies that 9ïc|i/ is the range of E°, because since the set
+iA '/; A 'eAf') is dense in §, the set iE°A '/; A 'eAf') = iA 'E°f; A 'eAf') must be
+dense in the range of E°, or Ea = E%. Since C = l, Dm-ÍE^) = DMiE^'{)
+= DMiE°) = l/n.
+Now let E° = Ei, E%f-Ei. 
+Since DM{Ex) = l/n, 7?M(1) = 1, we can find ra
+projections 
+[E,},j=l, 
+■ ■ ■ , ra with the first equal to Ex such that E.eAf,
+y>2i=iEj=l,EiEi = 0iii*j,DMiE]) = l/n. Since7V(£i ) = 1/ra, 7V(1)=<*^1,
+there exist ra projections 
+E¡ eM',j=l, 
+■ ■ ■ , ra, with the first equal to E{ and
+such that ElE'i =0 if iVj and DM^E¡) = 1/ra. Since Z)M(£i) =7»M(£,), there
+is a partially 
+isometric 
+operator 
+W,eM with initial set the range of Ex and
+final set the range of E,- (cf. R.O., Definition 
+4.3.1). Similarly we have a
+W'j eM' with initial set the range of E{ and final set ES. The relations
+F. J. MURRAY AND J. von NEUMANN 
+[March
+WfWi = Ei, WiWf = Eh W;*W! = Ei and W¡W¡* = £/hold,also Wßt = W¡,
+E{W,-W{, EtWf-Wf, WfEj-Wf, W'iEl=W'i, E¡W¡=W¡, EÍWJ*
+= W¡*, W;*E! =W¡* (cf. R.O., Lemma 4.3.1).
+Let W;WiEif=f, Eif=f. 
+Then Eifj = EiWiWiEif=W¡EiW,Eif
+- W¡ WjEif=f and £//,=£/ W¡ WjEíf= W¡ WiEif=f. Thus£/, =/,■ = E¡f.
+Let g =£;_,/,, then Eig = E^Ji 
+= E^dnj_1Eifi=llUEiE¡fi = Eifi=f.
+Similarly Eí g=f. Now for any AeM if either »V/ or ¿5^2, then EiAEkg is
+orthogonal to E,AEtg. For inasmuch as Ekg=fk = Ek g, we have,
+(£,.4£*g, F,v4£,g) = (EjEiAEkg, AE,g)    = óy'(£»¿£*S, ^£,g)
+= t, (£*4£t'g, ¿£/g) 
+= 8i(E¿EiAg, E{ Ag)
+= 8ii(E'iEiEiAg,Ag) = «MiEi'EiAg.Ag).
+These results imply that if A eM, then
+|2
+INI2 =  \\(±E)A(±E)g\\* 
+=
+II  \  1-1 
+/ 
+\  i-l 
+/       II
+£ £ EiAEjg
+i-i j-i
+= ££l|£.^dl2
+.-i j-i
+= £ £||£^£,£dl2 
+= £ £ l|£^./y||2 = £ £ WEiAEiW'iWifW2
+<—1    j-l 
+1—1    ,'-1 
+¿-1    J-l
+= £ £ WwjEiAEiWifW2 
+= £ £ ||ir/Ä/JMJS/iF<fi||«
+•-i j-i 
+<=i »-i
+= £ £ ||£i'£.^£,-^,/i||2 
+= £ £ ||£,^£,Wi£i7i||2
+i-1   J-l 
+1-1   J-l
+= £ 
+£ ||£*4£,Wj/i||2 
+= £ 
+£ ||^*£,^£j-irj/i||2
+1-1 
+J-l 
+1-1 
+J-l
+= £ £ ||W,*£,^£,W,£i/||2 = £ £ WwfEiAEjWjß2,
+i-1   J-l 
+i—1   J-l
+remembering 
+that W,! is isometric on the range of E{, W* on the range of £,
+and WjEx = W,-. Substituting 
+A* for A and interchanging 
+i and/ we also have
+\\A*g\\2 
+= £ £||^,*£j^*£,wvll2 = £ £||(^.*^£j^,)7ll2-
+•-i j-i 
+i-i j—i
+But recalling the properties of W¡ and W* we have
+EiWfEiAEjW,- = WfEiAEjWj = WfEiAEjWjEi.
+Thus   Lemma   1.4.3  with   A =W?EiAEjWj   yields   ||(!-y.*£,,4£,iy,)7||2
+^£||pfr*£,-^4£,Wr¡/||2 
+and with this, we obtain from the above equations 
+for
+pg||2andp*g||2thatM*g||2^£|Mg||2.
+This result may be stated as follows.
+1937] 
+ON RINGS OF OPERATORS. II 
+Lemma 1.5.1. If K is any number > 1, there exists a ge¡Q, g¿¿0 such that for
+every AeM, ||;4*g||2^7sr||.4g||2. Obviously we may assume that ||g|| = 1.
+1.6. We now have
+Lemma 1.6.1. Let K and g be as in Lemma 1.5.1. T'Aéra if E and F, eM, are
+two projections such that Z>m(jE) = 77M(F), ZAera 
+K~l iFg, g) g iEg, g) ^ KiFg, g).
+Inasmuch as DM(E) = DM(F), there exists a partially isometric operator
+IF such that W*W=F, WW* = E, WeM (cf. R.O., Definition 8.2.1, Definition
+6.1.1, and Lemma 4.3.1). Now iFg, g) = (W*Wg, g) = (Wg, Wg) = \\Wg\\2,
+iEg, g) = iWW*g, g) = (W*g, W*g) = \\W*g\\2. Lemma 1.5.1 with A= W im-
+plies iEg, g)^K(Fg, 
+g). With A = W*, the same lemma implies iFg, g)
+^K(Eg, 
+g) or K~l(Fg, g) ^ iEg, g). We have now shown our lemma.
+Suppose EeM is such that DM(E) = 1/f», where m is an integer. Then
+there exist m — 1 projections 
+E2, ■ ■ ■ , Em, such that when we let Ei = E, we
+haveZ,_i-Ej = 1> EiE, = 0, for i^j, E,eM, DM(E,) = l/m. Now returning to
+the g of Lemmas 1.5.1 and 1.6.1, we have
+(m 
+\ 
+m
+\EEig,g)=  Z(Eig,g).
+i-l 
+/ 
+j-1
+Let (Eig, g)=a. 
+Then Lemma 1.6.1 implies that Ka^(Ejg, 
+g)^K~la, 
+for
+every/. 
+Summing over j, gives Kma^ 
+1 ^K~lma 
+or Ka^ 
+l/m^K_1a 
+which
+is the same as
+(+) 
+K(Eg, g) è DM(E) ^ K-\Eg, 
+g),
+since DmiE) = l/m.
+Let us study the class 2 of £'s in Af which satisfy the equation 
+(+).
+Now if Fi, ■ ■ ■ , Fq or Fu F2, ■ ■ ■ satisfy (+) 
+and 7?,77, = 0, if*j, then
+Zi-i-F) orZ^-i^í 
+also satisfies (+). But if FeM is such that DMiF) =q/p,
+F=^y_lFi 
+for mutually orthogonal F/s eM with DMiF,) = l/p and hence
+satisfying (+). Thus if 7>M(F) =q/p, F satisfies (+).
+Let E be any projection 
+of M, DMiE) =a. Let {a,}, a.^0 
+be a sequence
+of rational numbers, ZLi«*= 
+a- Then there exists a set of mutually 
+orthogo-
+nal projections 
+{£,} such that £,^£, 
+E{eM, DM(Ei)=ai. 
+To show this,
+suppose 
+Ei, ■ ■ • , Ei-i 
+have been 
+chosen 
+with 
+these 
+properties. 
+Then
+Dm(E— Z =i-Ej) =Zyl,aJ=.a>- 
+Hence an £,• can be chosen in such a way
+that EieM is ^E-j^^E, 
+with DM(Ei)=a(. Now 77M(£-ZT-i£»)
+=a—Z°Lia¿ = 0 or E =Zr=i^»- Since each Ei satisfies (+), E does too. Since
+E is arbitrary we have
+Lemma 1.6.2. Let K and g be as in Lemma 1.5.1, then for every EeM
+K(Eg,g) ^DM(E) ^ K~KEg,g).
+F. J. MURRAY AND J. von NEUMANN
+[March
+1.7. From Lemma 
+1.6.2 we can conclude, 
+using Lemma 
+1.4.2, that if
+A eM is positive definite, then
+KiAg,g) è 7>mC4) è K-KAg,g).
+We can state our result as follows.
+Theorem 
+I. Let M be a factor in case Hi. Let M and M' be such that
+when Dm and DM> are normalized in such a way that the range of Dm is the
+interval (0, 1) and C = l (cf. §1.1), ZAera the range of DM> is an interval (0, a)
+with 0 <a ^ oo, zAera a^l. 
+Then to every K>1, 
+there exists a gefç> such that for
+every positive definite A eM,
+KiAg,g) ^ TrMiA) ^K~KAg,g).
+Chapter 
+II. Immediate consequences
+2.1. We are now able to show that TrM has the following two properties
+when Mis in a finite case (cf. R.O., Theorem VIII) ; that is, when Af is in a
+case I„ (ra = l, 2, • ■ • ) or IL.
+Property 
+I. For all Hermitian A and BeM
+Tr„iA + B) = TrMiA) + Tr.MiB).
+Property 
+II. TrM iA) is weakly continuous if A is subject to either of these
+conditions:
+(i)  A is uniformly bounded ithat is, \ \ \ A \ \ | g D for some fixed D) ;
+(ii) A is definite.
+These properties 
+are obviously 
+independent 
+of the normalization 
+of
+DM(E) and TrM(A).
+If M is in cases I„, ra = 1, 2, • • • , these are of course well known results
+about TrM(A) (cf. R.O., p. 220). So we may assume Af to be in case IL.
+Then we have in the normalization 
+of R.O., Theorem VIII, three possibili-
+ties for the factorization Af, Af': IL, II«,; Hi, IL with Cal; 
+IL, Hi with
+C2sl. The two first ones correspond 
+to a^l 
+in the normalization 
+of §1.1,
+and since we shall only use Theorem 
+I, from §1.1, we may treat these two
+cases together.
+We therefore consider first the conditions 
+under which Theorem I holds :
+the normalization 
+of §1.1, and «el. 
+We obtain an equivalent 
+statement 
+of
+Theorem 
+I with A eM, Hermitian 
+and not necessarily 
+definite.
+Let K, g be as in Theorem I, then K~l{g, g) = 7C-1||g||2^7>M(l) = 1, or
+||g||2^if. 
+Furthermore 
+if A eM is Hermitian, 
+then A =Ai—A2,where 
+AxandA2
+are  both positive  definite  and  ^4i^42 = 0 = ^42^4i.   (Take  ;li = §(4 +1^4 |),
+1937]
+ON RINGS OF OPERATORS. II
+A2 = i(\A\-A) 
+(cf. (15), Chapter VI, or (19), p. 203 ff.).) Since Ai and A2
+commute, Ttm(A) = TrM(Ax) — TrM(A2) by R.O., Lemma 15.3.4. It is a con-
+sequence of Theorem 1 that, if e = K — 1,
+| TrM(Ai) - (Aig, g) | g e(Axg, g);    \ TrM(A2) - (A2g, g) | Z e(A2g, g).
+These with the above equation for 7>aí(.4) imply
+| TrM(A) - (Ag, g) | ^ t((Aig, g) + (A2g, g)).
+But the bounds of Ax and A2 are each not more than that of A. Also
+||g||2^l+«- 
+So if A has the bound D, we have
+| TrM(A) - (Ag, g) | S 2e(l + e)D.
+Let A, 73, ^4 +73 have the respective bounds Dx, D2, D3. Substituting in
+(1) each of these operators, inasmuch as ((^4 +B)g, g) = (Ag, g) + (Bg, g), we
+get
+| TrM(A + B) - TrM(A) - TrM(B) | ^ 2«(1 + e)(Di + D2 + D3),
+which since e may be taken arbitrarily 
+small, implies Property 
+I.
+We turn our attention 
+to Property 
+II, (-i). Consider the set 2 of all
+Hermitian 
+AtM, 
+with a bound less than or equal to a fixed 77. We will
+show that to every A eS and to every 77 >0, there exists a weak neighborhood
+of A, U(A; g; g; r¡/3) such that for all 73eS and BeU(A; g; g; r¡/3) (i.e.,
+I ((B—A)g, g) I <v/3) we have | TrM(B) — TrM(A) | <r/. Letting e be such that
+e(l+e)D^rj/3, 
+as above we can find ag such that for A and every Bell,
+\TrM(A)-(Ag, 
+g)I Zt(l + e)Diri/3, 
+\TrM(B)-(Bg, 
+g)\ £r,/3. In particu-
+lar for BeU(A; g; g;t]/3) 
+(cf. above) 
+which means 
+that 
+we also have
+I ((B—A)g, g) I <77/3, these inequalities imply that | TrM(A) — TrM(B) \ < 17.
+Thus we have shown the weak neighborhood 
+continuity 
+of TrM(A) with
+of course a restriction. 
+From this the sequential continuity 
+follows immedi-
+ately. (If An—>A, then the An are uniformly 
+bounded 
+and for any r?>0,
+almost all the An must be in the above given neighborhood.) 
+In this situation
+the two kinds of continuity 
+are equivalent 
+(cf. (18), pp. 383-384), but we
+will use only the sequential.
+TrM(A) is also weakly continuous 
+when considered only for the positive
+definite AeM. For suppose A is such and an e>0 is given. Let the K of
+Theorem I be chosen in such a way that 1 <£^2, 
+and (K — 1)TrM(A) <e/5,
+and let g correspond 
+to this K as there. Let 77 be chosen in such a way
+that 77^e/5. Then if a positive definite BeM is in U(A; g; g; rj), we have
+I TrM(A) - TrM(B) | < e (because | ((B-A)g, 
+g)\<V^ e/5, | TrM(A) - (Ag, g) \
+F. J. MURRAY AND J. von NEUMANN
+[March
+^ iK-l)TrMiA) 
+<e/5, and, in addition, | TrMiB) - (Bg, g) \ ^ iK-l)iBg, 
+g)
+^(K-l)((Ag,g)+V)^(K-l)(TrM(A)+e/5+r,)^3e/5).
+Thus we have settled the factorizations IL, IIM and IL, IL withC^l.
+But we still must consider the case IL, Hi with Ol. 
+Let m he an integer
+such that C/m^l, 
+Em an »i-dimensional 
+unitary 
+space. Form Em®lQ (cf.
+R.O., Theorem I). Let N be the ring of operators on Em, N' the corresponding
+set of operators on E&& (cf. R.O., Lemma 2.3.1 and Lemma 2.3.2), B the
+set of all operators in §, B(2) the corresponding 
+set in E®!&.
+Under the above correspondence of B and B(2), Af~M(2), Af'~M/<2). The
+first and hence each of the others is a full ring isomorphism 
+(R.O., Lemma
+2.3.4 and (22), §4). Thus Af<2> and Af'<2> are in case Hi (R.O., Theorem IX).
+Now let pi, ■ ■ ■ , pm he a complete orthonormal 
+set in Em and let us think of
+the set up of R.O., §2.4. By R.O., Lemma 2.4.5, we have Af<2>' = R(Wl\ Af'<2>)
+and by R.O., Lemma 11.5.2, R(N<-1\ M'(2)) is in case IL since as we have
+mentioned before, Af/(2) is in this case.
+Thus the coupled factorization, 
+Af(2), Af(2)/, is in case IL, IL and Af<2) is
+fully ring isomorphic 
+to Af. Furthermore 
+such an isomorphism 
+preserves DM
+in the standard normalization 
+(R.O., Theorem IX) and hence the trace. Now
+suppose we have shown that for Af(2), Af(2)' we have C(2) ¿1. Then Af(2) has
+Properties 
+I and II, by the above and Af must have them to be the iso-
+morphism. 
+(As m is finite, even weak operator 
+topology is conserved under
+the mapping ¿?~5(2).)
+Therefore it remains to show that C(2) ^ 1. Consider the closed linear mani-
+fold, (</>i®/;/«£>) = (say) üfl, in Em®iç>. The correspondence 
+of ffll and & given
+by pi <g>/~/ is unitary. Under it, Af$¡ and R(Wl\ Af'<2))aK (cf. R.O., Definition
+11.3.1) are unitarily equivalent to Af and M' (cf. R.O., §2.4). Thus the C for
+Af, M' is the same as that of M$ and R(N'-1\ M'^)m. 
+Then from the proof
+of Lemma 11.4.3, we can conclude that C = CDMco(£)/Z>M<'>'(3ft))C<2> 
+=t»C<2)
+orC<2>=C/m^l.
+2.2. Previously TrM(A) has only been considered for Hermitian 
+A eM. We
+now define it for all AeM.
+Definition 
+2.2.1. If AeM, then A=B+iC, 
+where B = \(A+A*),
+C = — \i(A —A*) are Hermitian, and we define TrM(A) = TrM(B) +iTrM(C).
+TrM(A) has the following property.
+Property 
+HI. (*) TrM(A) agrees with the previous definition of TrM(A)
+if A is Hermitian.
+(* *) For uniformly 
+bounded or for definite A's, TrM(A) is weakly con-
+tinuous.
+1937]
+ON RINGS OF OPERATORS. II
+(i)     2>m(1) = 1;
+(ii)    TrM (pA)=p TrM (A), p complex ;
+(iii)   TrM(A +73) = TrM(A) + Tru(B) ;
+(iv)    TrM(A) 2:0, if A is definite;
+(iv)' 7/.4 is definite and ¿¿0, TrM(A) >0;
+(v)    TrM(A*) = TrM(A);
+(vi)   TrM(AB) = TrM(BA);
+(vi)' TrM(U-xAU) = TrM(A), if U is unitary.
+Now, (*) and (v) are immediate 
+consequences of the definition, 
+(i), (iv),
+and (iv)' follow from (*) and R.O., Theorem 
+XIII. 
+A* is a weakly con-
+tinuous additive function of A. Thus B and C are too, and we may infer (iii)
+and (* *) from Properties 
+I and II respectively. 
+To show (ii) we first note
+that if A is Hermitian by Definition 2.2.1, TrM(iA) =iTrM(A) and if a
+is real by (*) TrM(aA) =aTrM(A). 
+Then (ii) can be shown by a calculation
+involving (iii).
+To show (vi) suppose A and BeM are Hermitian. 
+Let C = A+iB,
+C*=A-iB. 
+Then TrM(CC*) = TrM(C*C) (by (*), cf. proof of Lemma 1.4.3,
+equation 
+(ß)). Substituting 
+for C, expanding 
+the products 
+according to the
+distributive 
+law and collecting terms, we get 2i(TrM(AB) — TrM(BA)) =0 or
+TrM(AB) = TrM(BA). From this we can show (vi) in general by using Defini-
+tion 2.2.1, (ii) and (iii). (vi) ' follows from (vi) by letting A = U~XA, B = U and
+using the associative 
+law.
+Property 
+IV. (i)-(iv), 
+(v), (vi)' of Property 
+III 
+characterize 
+TrM(A)
+uniquely.
+Let Tr'(A) 
+have the listed properties. 
+Then if A is Hermitian, 
+Tr'(A)
+is real by (v). This and (i)-(iv), 
+(vi)' imply that for AeM and Hermitian
+Tr'(A) = TrM(A) (R.O., Theorem XIII). 
+By (ii) and (iii), we then have that
+for an arbitrary CeM, C=A +iB, A and 73 Hermitian, Tr'(C) = Tr'(A +iB)
+= Tr'(A) + Tr' (iB) = Tr'(A) + iTr' (B) = TrM(A) + iTrM (B) = TrM (A + iB)
+= TrM(C) or Tr'(C) = TrM(C).
+Chapter 
+III. The exact 
+form of TrM(A) (for aS: 1)
+3.1. We again assume M in case Hi. Some lemmas about families of
+projections 
+and spectral forms in M are needed. Of these the two last ones
+have some interest of their own.
+Lemma 3.1.1. For any two projections 
+E, FeM with £^F, 
+and 
+any
+a^DM(E), 
+^DM(F), a projection GeM with E^G^F, 
+DM(G) =a exists.
+F-E 
+is a projection, 
+and 0^a-DM(E) 
+¿DM(F)-DM(E) 
+=DM(F-E)
+F. J. MURRAY AND J. von NEUMANN
+[March
+^ 1. Thus a projection G'eAf with DM(G') =a — DM(E) exists (because Af is
+in case IL). So DM(G') ^DM(F—E) 
+and therefore a projection 
+G"eM with
+G"^F-E, 
+DM(G") =DMiG') =a-DMiE) 
+exists. G" is thus orthogonal to E,
+and therefore G"+E 
+is a projection and DMiG"+E) = DM(G") +DMiE) =a.
+Besides,G"+E^E 
+and G"+Ei%iF-E)+E 
+= F. SoG = G"+Ehas the de-
+sired properties.
+Lemma 3.1.2. For any two projections E, FeM with E^F 
+a family of pro-
+jections G(a) eAf defined for all a with DmÍE) ga| 
+DMiF) exists, which possesses
+the following properties:
+(i)    Gia) =E or F if a = DM(E) or DmÍF) respectively.
+(ii)   a á ß implies Gia) uG(ß).
+(iii) DM(G(a))=a.
+Choose a sequence pi, p2, • • • which lies and is dense in the interval
+DM(E)úa^DM(F), 
+with Pi=DM(E), 
+p2 = DM(F).
+We will now define a sequence of projections 
+G(pi), G(p2), • ■ ■ , eM, so
+that (i)-(iii) hold for a = pi, p2, ■ ■ ■ . Put first G(px)=E, G(p2)=F; then
+(i)-(iii) 
+hold for o = pi, p2. Assume now that 
+for a j = 3, 4, • • • the
+G(pi), • • •, G(pi-x) are already defined, so that (i)-(iii) holds for a = px, ■ • ■ ,
+Pi-i, we will now define G(p,) without violating (i)-(iii).
+Consider the p,-, i = l, ■ • ■ ,j—l, with p,-gp,- (they exist: pi = DM(E) S>P/);
+let p,'be the greatest one. Consider the p¿, i = l, • • • ,/ — l, with p;^p, (they
+exist: p2 = DM(F)^p,); 
+let p," be the smallest one. Thus Pí>ÚPí" and so
+G(pi')^G(pi"). Besides 77M(G(p,0)=P<^P,gp<"=77Ai(G(p,-0). So Lemma
+3.1.1 can be applied to E = G(pi), 77 = G(p,"), a = p,-, and we define G(p,) =G.
+Thus G(pi>) tkG(p¡) ¡íG(pi"), therefore Pi-=p¡, i = l, ■ ■ • , j — l, implies
+Piúpi', G(pi)^G(pi-)èG(p,) 
+and pí^Pj, i = l, ■ ■ ■ , j-l, 
+implies pt^pi",
+G(pi)^G(pi")^G(p,). 
+Besides DM(G(p,))= Pi. So (i)-(iii) hold ior a = pi, ■ ■ -,
+Pi-i, Pi, too.
+Thus all G(pi), G(p2), ■ ■ • are defined. Owing to (ii), limPi.a,PiSa G(pt)
+exists for all a with DM(E) =pi g a ^ p2 = DM(F). If a is equal to a p,-, then this
+limit is meant to denote the value at p,-. So we can extend the definition of
+G(a) to all above a by defining
+G(a) =    lim   Gißt).
+Now (i) remains true, and (ii), (iii) extend by continuity 
+to all above a.
+Lemma 3.1.3. Let AeM be a definite operator with bound jgl. Then there
+exists a monotonous non-decreasing and right semi-continuous function Pia) for
+O^a^l 
+with 0 ^p(a) ^ 1 and a resolution of identity Eia)eM (cf. (16), p. 92,
+or R.O., Definition 15.1.1) with the following properties:
+1937]
+ON RINGS OF OPERATORS. II
+(i)    £(0)=0,£(1) 
+= 1,
+(ii)   DM(E(a))=a,
+(iii) (Af, g) =f\faa)d(E(a)f, g) for any f, g, or symbolically,
+A =   I   (f>(a)dE(a).
+J o
+Let F(X) be the resolution of identity 
+corresponding 
+to A. As A is def-
+inite, so F(0) =0; as the bound of A is ^ 1, so F(l) = 1.
+Consider now the two following functions :
+■7/(X) =DM(F(\)),
+0(a) = l.u.b.        X.
+i/>(X) is monotonous 
+non-decreasing 
+and right semi-continuous 
+in O^X^l,
+because F(X) is a resolution of identity, 
+and besides \p(0) =0, 0(1) = 1. Thus
+0(a) is monotonous 
+non-decreasing 
+and right semi-continuous 
+in O^a^l,
+and its values are all in 0 ;£ X ^ 1. One verifies these facts, as well as those
+which follow, easily; besides, their discussion may be found in (19) (numbers
+in parentheses refer to the bibliography in R.O., pp. 125-126) on p. 193.
+(Our 0(X), 0(a) 
+corresponds 
+to the 0(a), 
+•/>(&) there, 
+thus they are both
+"m-functions," 
+and 0(a) is the "measure 
+function" 
+of 0(X).) The relation
+between 0(a) and 0(X) is symmetric 
+(cf. loe. cit., 0(X) is the "measure func-
+tion" of 0(a), we must define for the empty set in O^X^l 
+the l.u.b. 0);
+that is,
+>A(X) = l.u.b. (0(a) g X).
+Finally (cf. loe. cit.)
+(*) 
+iK0(0(x))) =*(x).
+That is, DM(F(fa\i(K)))=DMiF(K)). But F(0(0(X)))|f(X), 
+and therefore
+this implies
+(**) 
+F(0(.KX))) =F(X).
+If 0(a) < 1, then choose p with 0(a) <p á 1, and let p—>0(a). Under these
+conditions the definition of 0(a) implies DM(F(p.)) >a, so DM(F (0(a))) £:a. For
+0(a) = 1 this holds, too: 2?M(F (0(a))) =Z7M(F(1)) =77M(1) = 1 2:a. On the other
+hand, if 0(a) >0, 
+then a sequence 
+of p with O^p^0(a), 
+p-^faia) 
+and
+DuiFQi)) ^a exists, so 77M(F(0(a) -0)) ^a. This holds for 0(0) =0, too, if we
+identify F(0-0) 
+with F(0) =0: 77M(F(0-0)) =DM(0) =0^a. 
+So we have
+(#) 
+Z)M(F(0(a) - 0)) g « á 7VF(0(«))) ■
+F. J. MURRAY AND J. von NEUMANN 
+[March
+Form now for every O^X^l, 
+E = F(X—0), F = F(X) and apply Lemma
+3.1.2. A family of projections G(a)eM, DM(F(X-0)) èag,DM(F(X)), 
+results.
+Choose for every O^X^l 
+such a family, and hold it fixed: G(X, a). (If
+F(X-0)=F(X), 
+then necessarily a = DM(F(X)), and G(X, a)=F(X). 
+So only
+the X with F(X — 0) ¿¿F(X), the point-proper 
+values of A, are important. 
+Their
+set is finite or enumerably infinite.)
+Now define for every O^ag 
+(§) 
+E(a) = G(p(a), a)
+(this expression has a meaning owing to (#)).
+We have now by definition Z>M(£(a)) =a, so condition 
+(ii) is satisfied.
+For a = 0, 1, this gives £(0)=0, 
+£(1) = 1, so condition 
+(i) is satisfied, too.
+If a-=ß, then Pia) ¿piß). The relation Pia) =Piß) gives
+Eia) = GiPia), a) = Gipiß), a) ¿ GiPiß), ß) = Eiß),
+while Pia) <Piß) gives
+Eia) = GiPia), a) =g F(0(«)) ^ F(*(/8) - 0) £ Gipiß), ß) = Eiß).
+So we see that
+(•) 
+a g ß   implies    £(a) 
+g> Eiß).
+Furthermore 
+ß>a 
+gives
+DuiEiß) 
+- Eia)) 
+= DMiEiß)) - 7?M(£(«)) = ß - a,
+so ]imß~a.ß>a DMiEiß) -Eia)) 
+=0. But
+lim   DuiEiß) - Eia)) =Dm (   lim   Eiß) - Eia)) 
+= 7>M(F(a + 0) - £(«))
+0-«a, 0>a 
+\0->a, ß>a 
+/
+so 7?M(£(a+0)-£(«)) 
+=0, £(a+0) 
+=£(«), 
+or
+(• •) 
+lim   Eiß) = Eia).
+ß->a, 
+ß>a
+(i)> ( ')» ( " ') state that 72(a) is a resolution of unity.
+It remains for us to prove (iii).
+Consider the expression /o0(«)¿(||£(«)/||2)- 
+Pia) and ||£(a)/||2 
+are both
+monotonous 
+non-decreasing 
+functions 
+of a if a increases from 0 to 1, then
+these functions increase from 0(0) to 0(1) = 1 and from 0 to ||/||2 respectively.
+Thus our integral is, by partial integration, 
+equal to ||/||2—/ol||£(a)/||2a0(a).
+We may now introduce 
+a new variable 
+of integration: 
+X=</>(«). Then we
+have (cf. loe. cit., p. 198) /;||£(a)/||^(a)=/;||JE(^(X))/||»d\. 
+But by (§)
+£(,KX))=G(0(«KX)),^(X)),and by (*) PiPiP(X))) =77M(F(0(^(X))). So the
+1937] 
+ON RINGS OF OPERATORS. II 
+definition of Gip, a) gives G(0(0(X)), 0(X)) =F(0(0(X))). By (* *) this is
+F(X), so we have £(0(X)) =F(X). Thus our original expression is equal to
+11/112—/J|F(X)/||2<iX, and 
+this 
+becomes 
+by 
+another 
+partial 
+integration
+f\d\\F(\)f\\2, that is, iAfif). Thus we have proved:
+iAff) =  f  0(a)d||£(a)/||°.
+•r o
+Replacing herein f by f±g/2, 
+and subtracting, 
+gives the real part of (iii).
+Now replacing/, 
+g by if, g gives the imaginary part of (iii). Thus the proof is
+completed.
+Finally we need the following lemma.
+Lemma 3.1.4. Let E(a)eM 
+be a resolution of unity in a^a^b, 
+£(a)=0,
+£(¿>) = 1. Then a bounded Hermitian operator BeM with iBf, g) = f \d(E(k)f, g),
+symbolically B=ft¡\dE(K), 
+exists. For every bounded Baire function 
+0(a)
+an 
+operator 
+C = \p(B)eM with 
+(Cf, g) =/o0(X)¿(£(X)/, g) 
+symbolically
+C=/aV(X)¿£(X) exists. 7/O5¡0(X)^l, 
+then C is Hermitian, definite, and of
+bound 1. For all 0(X)
+7>m(C) =   f 0(X)¿77M(£(X)).
+•7 a
+The existence of the bounded 23 is a well known fact about spectral forms,
+as all £(X)eM so 23eM (see (18), p. 389, Theorem 1). C = \piB) exists and is
+bounded ((19), p. 205), and 73eM implies CeM ((19), p. 213, Theorem 6).
+O^0(a) 
+= l implies the Hermitian, 
+definite character 
+of C and 1— C ((19),
+p. 205) (C Hermitian: by Property b; C and Í—C definite: by Property e),
+with F(x) = 0(x) or l-0(x) 
+and G(x) =77(x) = (F(x))1'2. Thus the bound of
+C is =T. (Alternatively (16), p. 113, Theorem 4*, could be used.)
+It remains 
+to prove the final formula 
+for the trace. 
+If it holds for
+0i(X), 02(X), • • • , and the 0n(X), » = 1, 2, ■ • • are uniformly bounded and
+everywhere 
+convergent 
+in a = Xg6, 
+then 
+it holds 
+for 0(X) =lim„,oo0„(X)
+too: 0(73) =strong Umn^ipniB), the ^ÁB) being uniformly bounded, by (19),
+p. 205, Property 
+h), and TrM is continuous 
+for strong (even for weak) con-
+vergence by Property 
+III, (**). Thus our relation 
+holds for all bounded
+Baire functions 0(X) if it holds for all continuous 
+functions 
+0(X). And it
+holds for these, if it holds for all intervalwise 
+constant 
+functions 0(X). But
+these are linear aggregates of functions 0Cld(X) = 1 for c<X^<2 = 0 otherwise,
+where a^c^d^b. 
+So it suffices to consider these. Now clearly
+0c,d(7i) = E(d) - E(c),
+TrM(pc,diB)) = DM(E(d) - E(c)) = 27M(£(<7)) - DM(E(c)),
+F. J. MURRAY AND J. von NEUMANN 
+[March
+and
+f Pc,dia)dDMiEia)) = 77M(£(<i)) - 77M(F(c)),
+d a
+completing 
+the proof.
+3.2. We return now to the normalization 
+of §1.1, and assume that an Af
+in case Hi is given with a ^ 1.
+Consider a g and K which are related as in Theorem I. Our objective is
+to prove Theorem II below, but we begin by considering these two maximum
+problems.
+(A) For a given X with O^X^l 
+consider 
+all projections 
+FeAf with
+DmÍF) =X, and the corresponding 
+values of iFg, g). Prove that these iFg, g)
+possess a maximum ma which they assume for a certain F = F0 from the above
+class.
+(B) For a given X with O^X^l 
+consider all definite operators 
+BeM of
+bound ^1 with ?>«(£) =X, and the corresponding 
+values of iBg, g). Prove
+that these iBg, g) possess a maximum 
+wj which they assume for a certain
+B = Bo from the above class.
+Lemma 3.2.1. Problem (B) possesses a solution B = Bo, the maximum 
+mb
+fulfills XK-^mb^XK.
+For the B of the class described in Problem (B) we have by Theorem I,
+XK-1 ^ iBg, g) ¿XK. So these iBg, g) possess a l.u.b. mi andXK^^ml 
+¿XK.
+Select now a sequence Bi, B2, ■ ■ • from this class, so that limn^iBng, 
+g)
+= ml. As the Bi; B2, ■ ■ • are uniformly bounded, there exists a subsequence
+B„„ Bn„ ■ • • (»i<«2< 
+• • ■ ) such that 7?0 = weak lim Bni exists. As all Bni
+are eAf, definite, and of bound 3»1, the same is true for B0. As all TrMiBn,) =X,
+so Property II or III, (* *) gives TrMiB0) =X. Finally (J50g, g) =limi<00(£Big, g)
+= limB,«,CSng, g)=mb'.
+Thus Bo belongs to our class, and iB0g, g) =m¿. 
+Therefore 
+the l.u.b. ml
+is a maximum: 
+mi =mb,andXK-x-=mb1kXK. 
+So the proof is completed.
+Lemma 3.2.2. The B0 of Lemma 3.2.1 can be chosen as a projection.
+Consider the B0 of Lemma 3.2.1. By Lemmas 3.1.3 and 3.1.4 we have
+B0=piB), 
+where B=foadEia) 
+(symbolically), 
+Eia) 
+being a resolution 
+of
+unity with F(a)eM, 
+DMiEia)) =cv, and 0(a) a monotonous 
+non-decreasing 
+and
+right semi-continuous 
+function.
+Consider 
+any Baire function 
+\pia), O^a^l, 
+with 0^(a)^l. 
+Form
+PiB)=fopia)dEia) 
+(symbolically), using Lemma 3.1.4. Then piB) is eAf,
+definite, and of bound ^ 1, and
+1937]
+ON RINGS OF OPERATORS. II
+TrM(P(B)) 
+=   f P(a)dDM(E(a)) 
+=   f 0(a)cia.
+•7 o 
+*7 o
+Thus 0(73) belongs to the class of Problem (B) if and only if /o0(a)¿a = A.
+Besides (PiB)g, g) =/0V(a)d(||F(a)g||2).
+Apply this to 0(a) =0(a), 0(73) =0(73) =73 0. We get f]faia)da=\,
+/o0(a)¿(||£(a)g||2) 
+=mh. And the maximum 
+property 
+of 730 gives the follow-
+ing. For every Baire function 
+0(a), O^a^l, 
+with O^0(a)^l 
+the equa-
+tion /o0(a)¿a=X 
+implies /o0(a)d||£(a)g||2 
+= W6.
+If we had 0(1 —X) =0, then the monotony of 0(a) would give 0(a) =0 for
+0 = a=T— X, and the right semi-continuity 
+0(a)^§ 
+for 1—X<a=T—X+e'
+for a suitable e'>0. 
+Besides 0(a) is always = 1. Thus
+/.
+i
+tj
+4>ia)da = 0(1 - X) + £«' + (X - i')l = X - y < X
+o
+contradicting /o0(a)<2a=X. Therefore 0(1 —X) >0.
+If we had 0(1 —X —0) = 1, then the monotony of 0(a) would give 0(a) = 1
+for 1-X = a^l 
+and the definition of 0(1-X-0), 
+0(a) >:§ for 1-X-e'
+= a<l 
+— X, for a suitable e'>0. 
+Besides 0(a) is always 2:0. Thus
+/.
+1                                                   «'                          e'
+4>ia)da > (1 - X - €')-0 -|-h 
+X-l = X H-> 
+X
+o 
+contradicting /o0(a)¿a=X. 
+Therefore 0(1 —X — 0) < 1.
+So we can choose a ô, 0<ô<l, 
+with 0(1—X)>5, 0(1 — X — 0) <1 — ô.
+Thus 1-Xga=l 
+implies (0(a) -i)/(l-i) 
+= (0(1 -X) -fi)/(l-S) 
+2:0 and
+S(l-5)/(l-5)-l, 
+and 
+0 = a = l-X 
+implies 0(a)/(l-5)=O 
+and
+S(l-«)/(l-*)-l. 
+Now put 0i(a)=l 
+for 1-X=a=l 
+and 0i(a)=O for
+0 = a ^ 1 -X. Then we have 0 ^0i(a) = 1 for all 0 = a ^ 1 ; and also, for 02(a)
+= (0(a)-50i(a))/(l-5),Og02(a)ál 
+for allO^a^l 
+(we proved this above
+separately for 1 — X Sa g 1 and for 0 ^a ^ 1 — X). Besides
+(*) 
+0(a) = 50i(a) + (1 - 8)fa(a).
+Now 
+clearly 
+f0fa(a)da=\. 
+This 
+and 
+/o0(a)¿a=X 
+and 
+(*) 
+give
+flfa(a)da=\. 
+Therefore/o10i(a)d||£(a)g||2 
+= m6, />2(a)-i||£(a)g||2 
+= 7M6. But
+( *) gives
+8 f ¿i(a)<7||£(a)g||2+ (1 - «)  f 02(a)¿||£(a)g||2 =   f 0(a)d||£(«)A||* = «».
+•^ 0 
+" o 
+J 0
+Therefore necessarily /o0i(a)</||£(a)g[|2 
+= m&. In other words, for Bi=fa(B)
+which belongs to the class of Problem (B), we have (23ig, g) =mb.
+F. J. MURRAY AND J. von NEUMANN
+[March
+Thus 73i=0i(7}) is a solution of Problem (B), too. But one verifies easily
+that Bx =0i(£) 
+= 1 —E(X), and so Bx is a projection.
+Therefore replacement 
+of B0 by Bi completes the proof.
+Lemma 3.2.3. Problems (A) and (5) possess a common solution E0 = B0, and
+for the maxima we have ma = mb.
+The class of the E in Problem (A) is obviously a subclass of the B in
+Problem 
+(B) : It consists of all projections 
+of the latter class. (This is so,
+because for projections E, DMiE) = TrMiE) (cf. R.O., Lemma 15.3.1).) Now
+Lemma 3.2.2 states, 
+that a solution of Problem 
+(B) exists, which is a pro-
+jection and thus belongs to the class of Problem (A). Therefore it is a solution
+of Problem (A) too, and ma = mb.
+Problems 
+(A) and (B) can be modified, when a projection G = Pcr¡e5Dc is
+given, in the following sense: Replace §, Af by 9Í, Mfä) (cf. R.O., §11.3).
+Then DM(E) must be replaced by DM(E)/DM(G), in order to conserve the
+standard normalization 
+and so the normalization 
+of §1.1 requires replacing
+of Dm>(E') by DM'(E')/Dm(G). 
+This a is replaced by a/DM(G) and so a^l
+remains true. Lemma 3.2.3 is modified, in so far as X is replaced by X/DM(G)
+and Af in Problems (A) and (B) is to be replaced by M(gj). This means that
+projections 
+FeM must be ^G, and operators 
+BeM must fulfill BG = GB =B.
+Combining this and the corresponding 
+changes in Lemma 3.2.1 (observe
+that (Bog, g) = (Eog, g) = \\Eog\\2), we have
+Corollary. 
+Let a projection GeM be given. Replace Problems (A) and (B)
+by Problems (Aa) and (BG), which arise by imposing these further restrictions:
+In (Ao) the projections 
+FeM are F^G. 
+In (BG) the operators BeM fulfill
+BG = GB=B. Assume 0^X^DM(G). 
+Then Problems (Ao) and (B0) possess a
+common solution E0 = B0, and we have for the maxima K~1\\E0g\\2¿ma = mb¿
+K\\Eog\\2.
+3.3. We hold g fixed, and make the following
+Definition 
+3.3.1. Let E, G be two projections eM, E^G. 
+We say that E
+reduces g with respect to G if for every AeM with AG = GA =A
+(AEg,g) = iEAg,g).
+If G may be taken =l,we 
+say that E reduces g.
+Lemma 3.3.1. 7,eZ G be a projection 
+eM, Ea a solution of Problem 
+(AG)
+(cf. the corollary to Lemma 3.2.3). Then Ea reduces g with respect to G.
+If U is unitary, 
+eAf, and commutes with G, then U~lE0U is a projection
+eAf, it is  ¿U-lGU = G, and DM(U~lEoU) =DMiE0) =X.  So (U-'EoUg, g)
+1937]
+ON RINGS OF OPERATORS. II
+IkiEog, g). Now iU-xEoUg, g) = iU*E0Ug, g) = iE0Ug, Ug). So (£0g, g)
+-iEoUg,Ug)^0.
+Let A be Hermitian, 
+eM, and commute 
+with G. Put for some e^O
+0«(a) = (l+îea)/(l— 
+iea). As |0,(a)| 
+=1, so Ut=faiA) 
+is unitary, 
+and it is
+eM and commutes 
+with G along with A. Further 
+0«(a) = l+2¿€a+e20«(a),
+where 
+0e(a) = — a2/(l— iea). 
+So 
+|0((a)|^772 
+if 
+|a| ^D, 
+and 
+therefore
+HI 0,(4) I = ¡I^4|||2 (cf., for instance, (16), p. 113, Theorem 4*). Now
+0 = (Fog, g) - iEoUg, Ug) =■ (Fog, g)
+- (£o(l + 2ieA + e^,(A))g, 
+(1 + 2ieA + e^A^g)
+= 2eiiiAEo - EoA)g, g) + Oi*2).
+So we have
+2«((,4£o 
+- Fov4)g, g) + Oie2) = 0.
+As e^O, this necessitates HAE0—EoA)g, g) =0, that is,
+(AE0g, g) = (E0Ag, g).
+This equation extends from the Hermitian 
+A eM to all A eM, which commute
+with G. Put for such an A, Ai = %(A+A*), A2= -\i(A -A*), then it holds
+for Ai, A2 and so for A =Ai+iA2. 
+Thus we have established that £0 reduces g
+with respect to G.
+Lemma 3.3.2. If E reduces g relatively to G and G reduces g, then E reduces g.
+We must show that for every AeM, (AEg, g) = (EAg, g). Now
+(EAg, g) = (GEAg, g) = (G(EA)g, g) = ((EA)Gg, g) = iEGAGg, g)
+= iGAGEg, g) = iGAEg, g) = HAE)Gg, g) = iAEg, g).
+Lemma 3.3.3. If {£,} is a sequence of projections EitM each of which reduce
+g and Ei • F, = 0 if i ?¿j, then £"_x£, reduces g. If £i and E2 reduce g and £i = £2
+then Ei—E2 reduces g.
+This is immediate 
+for AeM implies A is bounded.
+Lemma 3.3.4. Let {Ei} be a sequence with the same properties as in Lemma
+3.3.3. Let £=£°°_,£.. Then for AeM,
+(EAg, g) = iAEg, g) = iEAEg, g) = £ (£*4£*, g).
+i-i
+Also if E reduces g, EF = 0, FeM, then iEAFg, g) = iFAEg, g) =0.
+We have iEAg, g) = (E(EA)g, g) = iEAEg, g) = (E{AE)g, g) = iiAE)Eg, g)
+= iAEg, g).   Hence we have (EAg, g) = ((£l*_íEi)Ag, g)=Y¡l_í(EiAg, g)
+F. J. MURRAY AND J. von NEUMANN
+[March
+=yZlx(FiAEig, g). Also iEAFg, g) = iEiAF)g, g) = ÜAF)Eg, g) = iAiFE)g, g)
+= 0 = HEF)Ag, g) = iEiFA)g, g) = HFA)Eg, g) = iFAEg, g).
+Lemma 3.3.5. Let {Ei} be a sequence of mutually orthogonal projections.
+If E =ZZ-i-^'' an,d A and EteM,
+oo
+TrM(EAE) = Z TrM(EiAEi).
+i=X
+By Property 
+III, 
+(vi), 
+TrM(EAE) = TrM(AEE) = TrM(AE). Simi-
+larly TrM(EiAE{) = TrM(AEi). By Property III, (**), and (iii) TrM(AE)
+= TrM(£txAEù =ZT_i7>mC4£,). Thus TrM(EAE) =Z;°=17>„CE,v4£0- 
+Note
+that we have also demonstrated 
+the convergence of ^°=lTrM(EiAEi).
+Lemma 3.3.6. Let {E,} be a sequence of projections each Ef ^ „X ( :£ PX) for g.
+Furthermore let us suppose that each E, reduces g and Ei E, = 0 if i 9*j. Then
+E=yZliEi^PX(^pX).
+Let A be positive definite, eM and such that 7L4=^47£=;1. Then by
+Lemma 3.3.4
+(Ag, g) = (EAg, g) = Z (EiAEig, g).
+,=i
+Now EiAEi is positive definite and is unchanged by left- or right-multiplica-
+tion with Ei. Hence Lemma 1.4.2 yields (EiAEig, g) ^¿XTrM(EiAE¿). Thus by
+Lemma 3.2.6
+(Ag, g) = T, (EiAEig, g) è XZ TrM(EiAE,) = XTrM(A).
+i-X 
+i~X
+Lemma 1.4.2 now implies E¡zpX.
+3.4. We still suppose that g is held fixed.
+Lemma 3.4.1. Let E^Obeaprojection, 
+eM, and such that a¿ pE^Pb. Let aX
+with 0 <X<DM(E) 
+be given. Then there exists a projection E0eM with the follow-
+ing properties: (i) E0^E; 
+(ii) DM(E0) =X; (iii) E0 reduces g with respect to E;
+and (iv) there exists a £0 with a^pE—E0^pi;oi£PE0^Pb.
+Consider the solution E0 of Problem (AG) with G = E, in the corollary to
+Lemma 3.2.3. This E0 is a projection eAf and fulfills (i), (ii) by definition,
+and it fulfills (iii) by Lemma 3.3.1. As to (iv), both E0 and E — E0 are ~^pa
+and ^ pb along with E, by Lemma 1.2.3.
+So we must only find a £ with E — E0 ^ ,,£ f¡ PE0. Let V he the set of all
+tj's, for which there exists an F^£0 
+with F<y; 
+and let T" be the set of all
+y's for which there exists an F^E 
+— E0 with F>y. 
+V and V" are open in-
+1937] 
+ON RINGS OF OPERATORS. II 
+tervals, and clearly every 77 >Z> belongs to V, and every 77 < a belongs to T".
+So there exists either a ¿0 such that every 77 in V is 2:£0 and every 77 in T" is
+^£0, or T' and T" have a common element £1.
+If the former holds, then F^£0 
+implies F 2:77 for all 77<£o, and so F>:£o,
+that is, F0 2: j,£„. Similarly £—£0 = P£o- So in this case the rest of (iv) is proved,
+too.
+If the latter holds, then we have even a £1 — 5 in V and £1+5 in T" for
+some suitable 5>0. So an Fi^Fo 
+with Fi<£i — 5 exists, and an F2^£—£0
+with F2>£i+S. 
+By Lemma 1.2 there exist two F3 and F4 (both ^0), with
+F3áFi, 
+F^F2 
+and F3gp£i-.5, 
+F^^i+S. 
+We may assume that DM(F3)
+=27M(F4), since otherwise we may replace F3, F4 by two Fi úF3, Ft ^F4 with
+2VF3')=Z>M(F4')= 
+min (DM(F3), 77M(F4)) (remembering Lemma 1.2.3).
+Now as FzSEo, F4 = £—£0, so £0—F3+F4, 
+is a projection 
+g£, 
+and
+2X,(£o - F3 + F4) = 2?m(Fo) - 77M(F3) + DM(Ft) = DM(Eo) = X,
+while
+((F0 - F3 + F,)g, g) = (Eog, g) - (F3g, g) + (Fig, g)
+^ma- 
+(£1 - 8)DM(F3) + (£1 + 8)Dm(F<)
+2: ma - 
+(£1 - 8)DM(F3) + (£1 + 8)DM(F3)
+= ma+ 
+28Dm(F3) >ma,
+contradicting 
+the maximum property 
+of ma. So this case cannot arise.
+The proof is therefore completed.
+Lemma 3.4.2. We can define for all 0^a = l a family of projections E(a)
+and a function £(a) with the following properties:
+(i)    £(0) = 0, £(1) = 1, 
+(ii)   a = ß implies £(a) = E(ß),
+(iii) £(0) = K, £(1) = K-\ 
+(iv)  a = ß implies £(a) = £(/3),
+(v)   DM(E(a)) =a, 
+(vi) £(a) 
+reduces g,
+(vii) a </3 m»/>2í<:í £(/3-0) =" p£(/3) -£(a) 
+^ P£(a+0).
+Choose a sequence 
+pi, p2, • • • which lies and is everywhere 
+dense in
+0 = a^l, 
+with pi = 0, p2 = l. We will define £(a) and £(a) for a = pi, p2, ■ ■ ■
+so that they fulfill (i)-(vi) and
+(vii)' E(a) = ¿(a), 
+1 -E(a) 
+= p£(a),
+for all a = pi, p2, ■ ■ ■ .
+Put first £(0) =0, £(1) = 1, £(0) =K, £(1) =K~X. Then a = Pi, p2 are taken
+care of, and (i)-(vi) as well as (vii)' hold for a = pi, p2. Assume now that for
+a/ = 3, 4, ■ • • the E(a), £(a) for a = pi, • • -, p,_i are already 
+defined, so
+that (i)-(vi), 
+(vii)' hold for a = pi, • ■ • , p,_i, we will now define £(p,), £(p,)
+without violating 
+(i)-(vi), 
+(vii)'.
+F. J. MURRAY AND J. von NEUMANN
+[March
+Consider the pi} i = l, ■ ■ ■ , j — l with piúp¡ (they exist: pi = 0^p,); 
+let
+pi' be the greatest one. Consider the p„ i = l, ■ ■ • ,j — l, with Pí^pí 
+(they
+exist: p2 = l^p,); 
+let pi>> be the smallest one. As p<-, Pi'^p,-, 
+so we have
+Pí'<Pí<Pí.: 
+So (ii) gives Eißi) £E(ßt»), 
+and (v) gives DM(E(pi..)-E(pi'))
+= P." — P, > P,—P.- > 0.
+Apply now Lemma 3.4.1 to £ = £(p,") — £(p,-), X = Pj-pi> with a = £(p,"),
+b = t(pi')- Owing to (vii)' and Lemma 1.2.3 we have £(p<") — £(p¿0 ^£(p<")
+and 
+therefore 
+^p£(p<><), and 
+£(p<<<) -E(pi-) 
+^l-£(p¿0 
+and 
+therefore
+¿¿(Pi-). 
+That is, a£pE^pb. 
+An E0^E(pi»)-E(pi.) 
+and a £0 result, put
+E(p,) =E(pi')+E0 
+(this is a projection 
+eAf) and £(p,) =£0. Let us now con-
+sider (i)-(vi), 
+(vii)' for a = pi, • • -, py_,, p,-.
+(i), (iii) are unaffected.
+In (ii), (iv) the only new possibilities 
+are a = p<^p,=/3 
+and a = pi^pi=ß,
+where i = l, ■ ■ ■ , j—1. In the first case Piikpv, 
+so £(a) =£(p.) 
+^£(p,0
+¿E(pi,)+Eo = E(P,)=E(ß), 
+and £(a) = £(p.) ££(p,0 =^£o=£(p¿) 
+= £(0). In
+the second case pí^pí-, 
+so £(/3)=£(pi)^£(p.") 
+= £(p,)+£(p,")-£(p<')
+HEÍp,)+Eo = EÍPi) =£(«), and £(0) = £(P<) g£(Pi«) = a^£o = £(p/) =£(«)• So
+(ii), (iv) remain true.
+In (v) we need only 7>M(£(p,)) =p,. 
+Now DMiEip,)) = 77M(£(p</)+£o)
+= DmÍEÍpí.)) +DmÍE0) = Pi' + ÍPi-Pi-) = p,.
+In (vi) we need only that £(p,) 
+reduces g. As £(p,) =£(p,0+£o, 
+and
+£(p,0 
+reduces g, we must only show that Ea reduces g (use Lemma 3.3.3).
+But Eo reduces g with respect to £ = £(p¿") —-ECPt') by Lemma 3.4.1, (iii),
+and £(p<") — £(p,-) reduces g because £(p,") and £(p<0 do (again use Lemma
+3.3.3), therefore E0 reduces g by Lemma 3.3.2. So the property 
+(vi) remains
+true.
+In (vii)' 
+we need only £(p,) èP£(p,), 
+1-£(p,) 
+áp£(p}). 
+Now £(p,)
+= £(p<0 +£0, and £(p<0 ^ p£(P<0 ^£(p,), £<, = p£„ = £(p,) by Lemma 3.4.1, (iv),
+so £(p,)èP£(p,) 
+by Lemma 3.3.6. On the other hand 1 -E(p,) = l-£(p<")
+-K(£(p,«)-£(p."))--Eo) 
+and by Lemma 3.4.1, (iv), l-£(p,-) 
+aP£(p<")
+=££(p,), ((£(p,-0-£(p,0)-£o)=£-£o^p£o 
+= £(p,) sothat 1-£(p,)^p£(p,)
+by Lemma 3.3.6. Therefore (vii)' remains true.
+Thus we have verified (i)-(vi), 
+(vii)' for a—pi, • • • , p,-i, p¡. Therefore
+all a = pi, p2, • • • are taken care of, and (i)-(vi), 
+(vii)' hold for all of them.
+Owing to (ii) and (iv) lim Pi,„,Piè«£(p,) 
+and limp^«,Pi>a£(p,) 
+exist for all a
+with 0 ^ a ^ 1. If a is equal to a p,-, then this limit is meant to denote the
+value at p,. So we can extend the definitions of E(a) and £(a) to all above a
+by defining
+E(a) =    lim    £(pí), 
+£(«) =    lim    £(p¿).
+pi—Hit, pi^a 
+pi—HX, Pi^tx
+1937] 
+ON RINGS OF OPERATORS. II 
+The statements 
+(i), (iii) are unaffected 
+by this extension, 
+while (ii),
+(iv)-(vi) extend by continuity 
+to all 0^a=T.
+Let us now consider (vii). Assume a<ß. 
+Choose a sequence p,„, « = 0,
+±1, 
++2, • - • , with 
+a< 
+■ ■ ■ <pt-M<pi.i<ptt<pit<ptt< 
+■ ■ ■ <ß 
+and
+lim „,_Mp,n = a, limn,00p¿„=/3. 
+We have Pi_i>Pi_t> 
+■ ■ >a, so that 
+Eipi_i)
+è£(p._,)è 
+• ■ • è£(<*). Therefore limB^_»£(p,-n) exists, and is 2:£(a).Now
+we have
+DM( lira   EipiJ - E(a)) =  lim   DMiEipin)) - DM(E(a))
+Vi—*— » 
+/        n—* — «
+=   lim   pi„ — a = a — a = 0,    lim   £(p,„) = £(a).
+n—» —» 
+n—» — »
+Similarly
+UraE(Pi,)=E(ß).
+n-*oo
+Therefore
+£ 
+(£(P^+i) - EipiJ) = lim  £ 
+(F(p,m+1) - £(p J)
+m=—oo 
+rt—♦«  m=—n
+= lim (£(p,„) - £(pc„)) = E(ß) - Eia).
+We have £(p,„+1)-£(p.J 
+^£(p,m+1), 
+therefore 
+(vii)' (for a-pt.,^ 
+and
+Lemma 1.2.3 give £(p,m+1) -£(p,J 
+2: P£(p,m+J) ^£(/3-0). 
+Then Lemma 3.3.6
+gives £(/3)-£(a) 
+2:^(0-0). 
+On the other hand we have £(p,m+l)-£(p<m)
+= 1— Eipim) 
+therefore 
+(vii)' 
+(for a = pim) and Lemma 
+1.2.3 give £(p<„,+,)
+-£(p.J 
+^ p£(p,J ^£(a+0). Then Lemma 3.3.6 gives £((3) -£(a) 
+= P£(a+0).
+Thus we have proved
+£(/?-0) = pEiß) -Eia) 
+=g p£(a+0),
+that is, (vii).
+We have established 
+(i)-(vii) 
+for all O^a^l, 
+and so the proof is com-
+pleted.
+Lemma 3.4.3. Let a,, i = 0, 1, • ■ • , » be a set of numbers suchthat
+0 = ao = ai^ 
+• • • ga„_i^a„ 
+= l and let X,-, i = l, ■ ■ ■ , n be a set of positive
+real numbers. Put (with the E(a), £(a) of Lemma 3.4.2)
+g'= 
+£x,(F(a.) 
+-£(a,_i))g,
+i-1
+Ci =    max   X,2£(a,_i + 0);      C2 =    min    X,2£(a,-0).
+i—l.-.-.n 
+i—l,-..,n
+Then for all definite A eM
+CiTrM(A) = (Ag', g') 2: C2TrM(A).
+F. J. MURRAY AND J. von NEUMANN 
+[March
+We have
+(Ag', g') =  ^£Xi(£(a,) 
+- F(a,_i))g,   ¿X,(£(a,) 
+- F(a,_i))g)
+\    i-1 
+i-i 
+/
+= ÍlY,\i\j(A(E(a,) 
+- £(a,_,))g, (Eia,) - £(a,-i))g)
+1=1 
+j-i
+= £ £ X,X,((F(a,) - E(a^i))A(E(ai) 
+- E(ai_i))g, g).
+i-1   J—1
+As every E(ak) —E(ak-X) reduces g (by Lemma 3.4.2, (vi), and Lemma 3.3.3)
+and as (£(a,)— £(a,_i))-(£(a,) 
+— £(ai_i)) 
+=0 forjVi, 
+Lemma 3.3.4 permits
+us to drop all terms with i^j 
+from the above sum £t. fmi. Therefore 
+it be-
+comes£LXi2((£(a.)-E(ai-0)A(E(at)-£(«<-i))i, 
+g)."
+Now £(a,)—£(ai_i)gp£(a,_i+0) 
+by Lemma 3.4.2, (vii). Therefore 
+it is
+evident from Lemma 1.4.1 that ((£(<*<)-£(a,-_i))4 (£(<*<) -£(«,■_,))£, g)
+g£(a,_i+0)rrii((£(a.) 
+-£(a,_i))^(£(«,) 
+-£(a,_,))). 
+So
+(Ag', g') Ú £x,i£(ai_i 
++ 0)rrM((£(a.) 
+- £(a,_,)M(£(a,) 
+- F(a,_i)))
+1-1
+n
+Ú Ci £ 
+7>M((£(a,-) - E(at^)A(E(ai) 
+- £(a«-i)))
+i-1
+= CtTntiA)
+(use Lemma 3.3.5). Similarly £(a,) — £(a,_i) è^a,— 
+0) by Lemma 3.4.2,
+(vii). Therefore Lemma 1.4.1 gives ((£(a<)-£(a<_1))^(£(«<) 
+-£(a,_i))g,g)
+= £(arf - 0) Z>M((£(a.) -£(a,-i)).4 
+(£(<*.) -£(a,-i))) 
+» So
+(Ag', g') 2: £X,^£(ai 
+- 0)2>*((£(«<) - Eiai-i))AiEiai) 
+- £(«,_,)))
+i-1
+2: C2£ 
+TrMiiEiai) 
+- E(a^)A(E(ai) 
+- F(a,_i))) 
+= C27YM(,4)
+i-1
+(use Lemma 3.3.5). Thus the proof is completed.
+3.5. We can now take the decisive step.
+Lemma 3.5.1. Let g and K be as in Theorem I. LetK' be any number such
+that 1 <£' 
+= £. Then there is a g' which is related to K' as g is to K in The-
+orem I, and such that
+\\g' - f|| ¿ iK - l)Kx>2.
+Let » be the smallest 
+positive 
+integer 
+with (2sT')n2:2iT. Put 6 = Kx,n, so
+1937]
+ON RINGS OF OPERATORS. II
+KO^K'. 
+Choose the at, i = 0, 1, • • ■ , ra with 0 = a0^ai^ 
+■ ■ • £=a„_i
+t%a„ = l, so that 
+£(a,+0) ^o"-2i^£(a¿-0). 
+(For i = 0, 6n~2i = en=K; 
+for
+i = n, dn-2i = e-n = K-\) Put Xi = 0!'-<»+»/2. Now apply Lemma 3.4.3. We have
+X¿2£(a¿_i+0) 
+^c?2i-Ci+1'Ö"-2<i-1> = öa£' 
+and 
+X,-2£(a,-0) 
+^c?2i-("+1'ö'-2i^c7-1
+^iK')-\ 
+so Ci^£' 
+and C2^iK')-\ 
+Therefore the g' of that lemma
+gives for every definite AeM: K'TrMiA) ^ iAg', g') ^ iK^TmiA) 
+; that is,
+K'(Ag', g') ^ TrM(A) ^ (K'yi(Ag', 
+g'). So it is related to K' as g and K are in
+Theorem I.
+Compute now ||g' —g||. The projections 
+£(a.) —£(a,_i), i = 1, • • • , ra, are
+mutually 
+orthogonal, 
+therefore 
+the (£(a.) — £(a<_i))g, i=l, 
+■ ■ ■ , n are mu-
+tually orthogonal 
+too. Now we have
+- 
+g\\2 
+=
+Z Xi(Eiai) - Eiai_x))g ~ Z (£(«<) - £(«i-i))«
+¿-i 
+<-i
+Z i\i - 1) (£(«,) - £(a,-i))g
+«•-l
+:  ± 
+iXi - l)2\\iEiai) 
+- Eiai-i))g\\i
+;g    .max    (X,- - 1)2Z ||(£(«i) 
+- £(«.--i))g||2
+=     max    (X,- — l)2-
+i—1, --.n
+Now clearly
+max    (X< - 
+l)2 = (XB - 
+l)2 = (0C+D/2 - 
+I)2 ^ id" - 
+I)2 = iK - 
+I)2
+sothat||g'-g||^(£-l)||g||.
+But A = 1 in Theorem I gives
+||g||2 = (g, g)=KTrMii)=K, 
+\\g\\^K"2.
+Therefore \\g'-g\\ ^ (K-l)K1/2. 
+Thus the proof is completed.
+Let £"i = l-r-2_(i+2), i = 0, 1, 2, • • • . We define inductively 
+a sequence of
+elements gi, i = 0, 1, 2, • • • . Let go be related to Ko as g is to A in Theorem I.
+Suppose gi has been defined and is related to K( as in Theorem 
+I. Then in
+Lemma 3.5.1 let g = gi, £ = £,, K' = Ki+i. We then define g,-+i as g'. Then
+gi+i and £i+i are related as g and K in Theorem I and we also have
+Iki+i - g,|| ^ iKi - QKf = -r^r K¿>* ^
+2i+2
+2i+i
+Then for p>0
+F. J. MURRAY AND J. von NEUMANN
+[March
+\gn+p 
+ —  gn
+n+V-1
+Z    (gi+1  -  gi)
+< z—= -■
+•      2*+l       2n
+n+p—1 
+n+p— 1        1
+^ Z lk.-+1 
+- g.-N Z —r
+t'=n 
+i=n 
+       ¿
+This implies that the g/s satisfy the Cauchy condition. Let g he their limit,
+and let A again be definite and eAf. Then, since A is bounded,
+(Ag, g) = lim Ki(Agi,gi) ^ TrM(A) è Um KrHAto i<) = (AS, g) ■
+Thus, if ¿eAf is definite, (Ag, g) = TrM(A).
+For AeM, Hermitian, 
+we have as in §2.1, under Property 
+II, A=Ai—A2,
+Ai and A2, eM and positive definite. Property 
+I of §2.1 then yields
+(■Ag, g) = TrM(A). If A is merely eAf, then Definition 2.2.1 now implies that
+(Ag, g) = TrM(A). We have thus demonstrated
+Theorem 
+II. Let M be a factor in case II, with a^ 1. (7ra ZAe normalization
+of §1.1. 7» ZAc normalization of R.O., Theorem VIII this means Af, Af' are
+either in case IL, II«, or in case IL, IL with C^ 1, standard normalization.)
+Then there exists a ge§ such that
+(Ag,g) = TrM(A).
+We now drop the restriction 
+that otsSl. Let M, M' be in case IL, IL,
+a < 1, and let m he an integer such that ma è 1 or in the standard normaliza-
+tion of R.O., Theorem 
+X, C/mSl- 
+Let £i, £2, ■ ■• , Em he m projections
+each of which is eAf, 77m(£.) = l/m, EiEj = 0 if i ¿¿j. Let the range of Ei be SDÎ,-.
+Let us recall R.O., §11.3 using 9fl, for SDÎ.
+Consider the M^.^ = Mi and Af'^^ = M, of Definition 11.3.1. By
+Lemma 11.3.2, these constitute 
+a factorization 
+in 5DÎ,. Now we can take for
+¿eAf and such that EiA=AEi=A, 
+DMi(AEi) =Dm(A) and for A'eM',
+Dm'í(Ae,)=Dm'(A'), 
+Dm¡ and DM'. are dimension 
+functions 
+for M, and
+Mi respectively (Lemma 11.3.6).
+The ranges of DM(^) and DM'($jd are by Lemma 11.3.7, the intervals
+(0, l/m), 
+(0, a) respectively. 
+So we can obtain the standard 
+normalization 
+of
+R.O., Theorem 
+X by multiplying 
+by m and 1/a respectively. 
+But in this
+latter normalization, by Lemma 11.4.3, C = (ZV(£i)/ZV(l))Co 
+= Co/*ra^l,
+where DM and DM> refer to the standard 
+normalization 
+for M and M' as in
+R.O., Theorem X.
+By Theorem 
+II above this implies that 
+there is a gi°e5Dc,- such that,
+if A0eMi, then 
+TrM'(Ao) = (Aogi", gi"). But now if AeM is such that
+EiA=AEi 
+= A, let A0 = AEi. From the above it will be seen that TrM(A)
+1937] 
+ON RINGS OF OPERATORS. II 
+- il/m)TrMiiAo) = (l/m)(Aogt>,  g?) = (l/m)(Ag.°,  g?) = (Agi,  g,),  if
+gi = ií/m)x'2gt>.
+Now if AeM, we have by Lemma 3.2.6
+m 
+m
+TrMiA) = £ TrMiEiAEi) =  £ (£,v4Fig,-, g,)
+i-1 
+i-1
+m 
+m
+= 'L(AEigi,Eigi) = Z(Agi,gi).
+i—1 
+i=l
+If M, M' is in case Im, Im», m< », we may proceed as follows. By R.O.,
+Lemma 8.6.1, §=£m®§2, 
+where £m is an w-dimensional 
+euclidean 
+space.
+Let 0i, • • • , 0m be a complete orthonormal 
+set in Em and/e§2 
+with ||/|| = 1.
+Then if we let gi=fa®f, 
+we easily verify that the above formula for TrM
+holds. Thus we have
+Theorem 
+III. If M is a factor in a finite case, then there exists a finite
+number of elements g,e^ such that
+m
+TrM(A) = £ 
+iAgt, gi).
+i-1
+Suppose that A eM is held fixed. Then consider the weak neighborhood
+U = UiA;gi, ■ ■ ■ ,gm;gi, ■ ■ ■ ,gm;e/m).XeUxmriiies 
+\HX-A)gi, 
+g,)\ <e/m
+for i = l, ■ • • , m. Hence if X is also eM, Theorem III implies | TrMiX)
+— TrMiA)\ <e. This proves
+Theorem 
+IV. If M is a factor in a finite case, TrMiA) is weakly continuous.
+Chapter 
+IV. The isomorphism of M, M' and § (for a = 1)
+4.1. We assume that M, M' is in case IL, IL and a = l or what is the
+same thing that C = 1 and we have the standard normalization. 
+We know by
+the discussion of R.O., §§11.3 and 11.4 how all other cases II can be reduced
+to this case.
+As a = 1, Theorem II holds. We define
+Definition 
+4.1.1. A g which satisfies Theorem II is uniformly distributed
+with respect to M; abbreviated g u.d.r. M.
+Lemma 4.1.1. 7/g is u.d.r. M, then (i) ||g|| = l, (ii) EgM' = l, (iii) £*i = l
+(cf. R.O., Definition 5.1.1).
+To prove (i), in Theorem II take A as 1. Then 1 = TrM(l) = (g, g) =||g||2.
+To prove (ii), in Theorem II take A as Ef. 
+Then
+1 = ||g||2 = iEMe'g, g) = TrMiEM0) = Dm(eT)
+or DM(E^') = 1 which in our normalization 
+implies Ef = 1.
+F. J. MURRAY AND J. von NEUMANN
+[March
+Consider 
+(iii). Since we have the standard 
+normalization 
+and C = l,
+DwiE?) =DMiEf) = 1. This implies £f = 1.
+Definition 
+4.1.2. Let g be e£>. Let Ç»9(Af) consist of all operators ZeC/(M),
+i.e., Z is linear closed yM and with a dense domain (cf. R.O., Definition 4.2.1),
+for which Zg exists.
+Now consider any/e£ 
+such that Ef' = Ef = l. By R.O., Lemma 9.2.1,
+if he&, then h = XYf, where X and F are eU(M). But if M is in case IL by
+R.O., Theorem XV, Z= [XY] is ell(M), and, since ZlXY, 
+Zf exists, and
+we also have A = XYf=Zf; 
+i.e., every Ae§ is in the form Zf, where Z is eU(M).
+Furthermore 
+this Z is uniquely 
+determined 
+by A. For suppose Zi and
+Z2eT7(Af) are such that Zxf=Z2f or (Zx-Z2)f=0. Then [Zi-Zt] is by R.O.,
+Theorem XV, eU(M) and since [Z¡—Z2] 2Zi—Z2[Zi—Z2]f exists and is zero.
+Let A' 
+be eAf'. Then 
+since A'[Zx-Z2] S [Zi-Z2]A', 
+[Zi-Z2]A'f
+= A'[Zi-Z2]f=0. 
+Thus [Zi-Z2] is zero on the set of A'f, A'eM. But since
+EMf = 1, this latter set is everywhere 
+dense in §. Thus [Zx—Z2\ is zero on a
+dense set and since it is closed it must be zero. R.O., Theorem 
+XV, then
+yields
+Zx = [Z, -0] 
+= [Zi - [Zi-Z2]] 
+= [[Zi-Zi] 
++Z2] 
+= [0+Z2] 
+=Z2.
+So we have proved
+Lemma 4.1.2. Iff is such that Ef = Ef* = 1 (in particular, if fis u.d.r. Af),
+ZAera h = Zf defines a one-to-one correspondence of § and the set of all ZeU(M)
+for which Zf exists (i.e., between § and Qf(M)).
+Since our assumptions 
+on / are symmetric 
+in Af and Af', we also have
+Lemma 4.1.3. Letf be as in Lemma 4.1.2. Then h = Z'f defines a one-to-one
+correspondence of S& and the set of all Z'eU(M') 
+for which Z'f exists (i.e.,
+between § and Qf(M')).
+Thus for Ae£> we have three correspondences 
+defined by the equations
+Zf=h = Z'f, if / is u.d.r. Af: (1) the correspondence QM of § and Q/(M),
+(2) the correspondence 
+(W of § and Q(M'), 
+and (3) the correspondence
+3Af,M'OfO/(Af)andÇ/(Af').
+4.2. We now investigate 
+these three correspondences. 
+We know that they
+are one-to-one. 
+They are obviously linear and of course along with § the
+sets Q/(M) and Qf(M') are linear. But inasmuch as ^m.m> is a correspondence
+of operators, 
+we would like to know the algebraic properties 
+of this corre-
+spondence as well as certain properties 
+of Qf(M) and Qf(M'). In particular
+we would like to know:
+1937]
+ON RINGS OF OPERATORS. II
+(i) To what 
+extent 
+can the operation 
+[XY] be performed 
+in Q/(M)
+(or Q,(M'))?
+(ii) To what extent can the operation 
+X* be performed 
+in Q/(M) (or
+QÁM'))?
+(iii) Is the property 
+of being bounded invariant 
+under 3mm>; i.e., since
+McQf(M), M'cQf(M'), is M mapped on M' by 3W?
+(iv) Are the properties of being Hermitian, 
+definite, or unitary invariant
+under 3m .w?
+Lemma 4.2.1. If f is u.d.r. M, then every Uf, UeM and unitary, is u.d.r. M
+also.
+If AeM, then
+(AUf, Uf) = (U~xAUff) = TrM(U~xAU) = TrM(A).
+Lemma 4.2.2. If f and g are each u.d.r. M, then there exists a VeM' 
+and
+unitary with g = U'f.
+If h=Af, AeM, define h* as Ag. The correspondence 
+h+±h* is linear, and,
+since
+||**||i . \\Ag\\2 = (Ag,Ag) = (A*Ag,g) = TrM(A*A) = (A*Af,f)
+= (Af,Af) = \\Af\\2 = \\h\\2,
+it is isometric. 
+Thus the equation 
+Wh = h* defines a linear isometric 
+and
+hence one-valued operator W. Since £J" = E™ = 1, both domain and range of
+W are everywhere dense and hence its closure W is unitary.
+Now if h is in the domain of W, h=Af, AeM. Then, for every 73eM,
+BWh = Bh* = BAg = WBAf=WBh or BWcWB. This implies that [BW]
+c[WB]. 
+But BW = BWc[BW], 
+while since B is bounded [WB] = WB.
+Hence BWçWB. 
+If in particular 
+B is unitary, 
+R.O., Lemma 4.2.2 now
+yields that W is 77M' and R.O., Lemma 4.2.1 implies that W is eM'.
+Letting A = 1 in the definition of W, we get g = Wf= Wf.
+Lemma 4.2.3. Iff and g are u.d.r. M, then there exists a UeM and unitary
+such that g = Uf.
+By Lemma 4.1.2, g=Zf where Z is eU(M). Using the canonical decom-
+position for Z,Z = BW, where 23 is self-adjoint and definite and W is partially
+isometric and as indicated 
+in the proof of Lemma 
+1.4.3 may be taken as
+unitary; that is, g = BWf, where W is unitary and B definite and self-adjoint.
+We must show that 73 = 1.
+By Lemma 4.2.1, fa = Wf is u.d.r. M. Hence we must show that if/o and g
+are u.d.r. M and g = Bf0, where B is definite and self-adjoint, 
+then 23 = 1.
+F. J. MURRAY AND J. von NEUMANN
+[March
+Let £(X) be the resolution 
+of the identity 
+corresponding 
+to B. If £(X)=0
+for X < 1 and £(X) = 1 for X > 1, then B = 1. Thus if B is not 1, either there
+exists a Xi<l 
+for which E(Xx)^0 or a X2>1 for which £(X2)^1. 
+In the
+first case we have ||£(Xi)/0||2 = (£(Xi)/0, £(Xi)/0) = (£(X,)/0, /„) = 7YM(£(Xi))
+= (£(Xi)g,g) 
+= ||£(Xi)g||2 
+= ||£(Xi)£/„||2 
+= ||73£(Xi)/„||2 ^ Xi2||£(Xi)/0||2or
+(l-Xi2)||£(Xi)/o||2áO. 
+This implies 0 = ||£(Xi)/0||2 = (£(X,)/0,/0) = 7YM(£(Xi))
+= Z>M(£(Xi)) or £(Xi) =0, a contradiction. 
+In the second case a similar type of
+calculation yields that ||(l-£(X2))/g||2 
+= ||£(l-£(X2))/o||2^X22||(l-£(X2))/o||2
+which again implies that 1 — £(X2) = 0, a contradiction. 
+Thus B must be 1 and
+our lemma is proved.
+Lemma 4.2.4. If fis u.d.r. M, and U'eM' and unitary, then U'fis u.d.r. M.
+If A is eM,
+iAU'f, U'f) = (U'-iAU'f,f) = (AU'-Wf,f) = (Af,f) = TrM(A).
+Lemma 4.2.5. Unitary 
+operators correspond to unitary 
+operators under
+3m .in-; i.e., iff is u.d.r. M, UeM, U'eM' and Uf= U'f, then if either U or U'
+is unitary the other is too.
+Let UeM he unitary, then by Lemma 4.2.1 Uf is u.d.r. Af. Then Lemma
+4.2.2 yields that there is a unitary 17'eAf, such that U'f= Uf. Thus U~U'
+under 3m,m'. Similarly Lemmas 4.2.4 and 4.2.3 yield that to every unitary
+U'eM, there exists a unitary 
+UeM such that U'f= Uf.
+Lemma 4.2.6./u.d.r. 
+Mis equivalent to f u.d.r. Af'.
+Let/be 
+u.d.r. Af and A'eM. Then consider T0(A ') = (A '/, /). It is linear
+in A'. By Lemma 4.1.1, (i) F0(l) »1. If A' is definite, then T0(A') = Ç4'/„,/„)
+^0. Furthermore we have T0(A '*) = (A '*/, f) = (f,A '/) = (A 'J, f) = ToiA).
+Therefore 
+ToiA ') satisfies (i)-(iv) 
+and (v) of Property 
+III with M' instead
+of Af.
+We would like to verify next (vi)' of the same property 
+for T0(A'). By
+Lemma 4.2.5 we have for any unitary 
+U'eM
+To(U'~lA'U') = (U'^A'U'fJ) 
+= (A'U'f, U'f) = (A'Uf, Uf)
+= (U-WUf,f) = (A'(U-W)f,f) = 04'/,/) = ToiA').
+Thus (vi)' holds. Property IV of §2.2 now implies that To(A') = TrM>(A')
+and hence/is 
+u.d.r. M'.
+Replacing Af by Af ' in the above argument 
+yields the converse.
+We note that the above argument 
+also proves
+Lemma 4.2.7. 7//e§ 
+is such that (i) ||/|| = 1 and (ii) if to every unitary UeM
+there exists a unitary 
+U'eM' such that Uf= U'f, then f is u.d.r. M.
+1937]
+ON RINGS OF OPERATORS. II
+Theorem V. LetfelQ be such that ||/|| = 1 and let M, M' be in case IL, IL
+with C = l. Then the following statements are equivalent:
+(a) / is u.d.r. M.
+iß) f is u.d.r. M'.
+(y) If U is unitary and eM, then there exists a unitary 
+U'eM' such that
+Uf=U'f.
+(5) If U' is unitary and eM', then there exists a unitary 
+UeM such that
+U'f-Uf.
+Furthermore either (a), iß), (y), or (5) implies £/í = £/í' = l.
+(a) is equivalent 
+to iß) by Lemma 4.2.6. (a) and (y) are equivalent 
+by
+Lemmas 4.2.5 and 4.2.7. Replacing 
+M by M', the last mentioned 
+lemmas
+also show iß) and (5) to be equivalent. 
+This and Lemma 4.1.1 prove the last
+statement 
+of the theorem.
+In view of Theorem V, we will say that/is 
+uniformly distributed 
+(abbre-
+viated u.d.) if/is 
+u.d.r. M.
+Corollary. 
+If f is u.d., ^mm- maps MiçQ,iM)) 
+on M'(cQ/(M')); 
+that
+is, the property of being bounded is invariant 
+under 3m,m>-
+By Theorem 
+V, the property 
+of being unitary 
+is invariant 
+under 3W.M'-
+This and the linearity 
+of 3m.m' imply together 
+that the property 
+of having
+the form A =£„_i<z„i7, (» = 1,2, • • • ; a, complex, U, unitary and in Mor M'
+along with A) is invariant 
+under 3m,m'-
+We will show that AeQ/iM) (or Q/iM')) is bounded if and only if it is in
+this form. Now if A is in this form, it is obviously bounded so we must only
+show that every bounded A is in this form. Since A =Ai+iA2, 
+Ai and ^42
+Hermitian, it will be sufficient if this is shown for Hermitian 
+A's. Since if A
+is in this form, cA is also, we may assume that the bound of A is =1. Then
+1-A2 
+is definite 
+and (1-42)1'2 
+exists. Letting 
+i7=^+i(l-^2)1/2, 
+then
+U*=A-iil-A2)x'2 
+and U is unitary. Furthermore 
+A = §(£/+£/*).
+Now since the form£,_ia»C/, 
+is invariant 
+under 3W,m', boundedness must
+be also.
+Theorem 
+VI. Assume thatfo is u.d. Then 3m,m' is an anti-isomorphism 
+of
+M and M'. That is, if A~A', B~B', then (i) aA~aA'; (ii) A*~A'*; (iii)
+A +B~A '+B'; (iv) ;423~73'yl ' ; (v) if A (or A ') is Hermitian, then A ' ior A)
+is also.
+(i) and (iii) are obvious.
+Consider (iv). We have .4 73/0=.4 73'/0 = 73'4/0 = 23'.4'/», so that,423~23'.4'.
+To prove (v), let U be unitary, 
+U~U'. 
+Then U' is unitary also by Theorem
+V. Similarly inasmuch 
+as U~x is unitary, 
+if U~X~V, 
+V is unitary. 
+As
+F. J. MURRAY AND J. von NEUMANN
+[March
+UU-1 = U-'U = 1 by (iv) we have U'V = VU' = 1, and hence V = (U')~l. So
+í/-i~(í/')-i 
+and aiU+U-l)~aiU' 
++ iV)-1) by (iii). If a is >0, the right
+side is Hermitian 
+and the left side is any Hermitian 
+element of M (cf. the
+proof of the corollary of Theorem V). This proves (v).
+We now prove (ii). If A is eM, then A =B+iC, 
+A*=B — iC, B, C are
+Hermitian and eAf. If A~A', 
+B~B', 
+C~C, 
+then B', C are Hermitian and
+A~B'+iC'=A', 
+A*~B'-iC'=A'* 
+proving (ii).
+Corollary. 
+The properties of being Hermitian, 
+being definite, being a pro-
+jection, 
+as well as the numerical 
+quantities 
+|||¿ ||| (ZAe bound of A) and
+Ttm(A) (or TrM-(A')), all within M (or M'), are invariant 
+under 3m,m'.
+A Hermitian 
+means A=A*;A 
+a projection means A=A* = A2;A definite
+means that there exists an Hermitian 
+B with A =B2. So all these properties
+are invariant 
+under 3m,m-. 1 is invariant 
+(leAf and leM', 
+I/o = I/o). |||¿ III
+is the smallest a^O such that a2-1—A*A is definite, so \\\A ||| is invariant.
+If A~A', 
+then Af0=A'f0 and 7YM(¿) = (¿/„, /o) = iA'f0, /o) = TrMiA') by
+Theorem V.
+4.3. In what follows/0 will always be assumed to be u.d. The discussion
+which follows could be based on an extension 
+of the notion 
+of TrMiA)
+(and of TrM'iA ')) to unbounded 
+AyM (or A 'yM') but we prefer an approach
+which avoids this.
+Theorem 
+VII. The sets Q/XM) and Q/0(M') are independent of the choice of
+of u.d. fo. We will therefore denote them by Q(M) and Q(Af'), respectively.
+Furthermore the values of \\Zf0\\, (Xf0, F/0), where X, Y, ZeQ(M), or Q(M') are
+independent 
+of the choice of the u.d. fa.
+Owing to the symmetry 
+between Af and M' it suffices to prove the state-
+ments concerning M; i.e., let/0 and go be u.d., then for AeU(M), 
+Af0 is de-
+fined if and only if Ago is defined and ||¿/o|| = ||¿go||- Owing to the symmetry
+in /o and g0 it will be sufficient 
+to show that Ago is defined if Af0 is and
+IM/olHMso||-
+By Lemma 4.2.2, there exists a unitary 
+U'eM' such that go = U'f0. Since
+A is eU(M), A = U'-lA U'. Hence since Af„ exists AfB = U'~lA U'f o = U'^Ago
+exists. This implies that Ago exists and since Ago = U'Af0, \\Ag0\\ = ||¿/o||. Also
+if BeQfXM), then Bg0 = U'Bfo and (¿go, £go) = (U'Afo, U'Bf0) = (Af0, Bf0).
+So we must have these mappings :
+(I) 
+3m: © ~Q(ilf); 3m-: § -Q(M'); 3m.m-:Q(M) ~ Q(M').
+By the corollary to Theorem V, Sm,m- maps M on M'. So 3m maps M and
+3m- maps M' on the same subset 21 of § and we have the further mappings
+1937]
+ON RINGS OF OPERATORS. II
+(II) 
+3M-.n~M;3M>:%~M';3M.M-:M~M'.
+(II) is part of (I).
+We now prove
+Lemma 4.3.1. ï m a linear set, dense in §.
+Inasmuch 
+as Mis linear, 21 is too.
+Consider an fe§, f=Zf, 
+ZeQiM). Now Z=BU, 
+B self-adjoint and
+definite, 23eZ7(M), U unitary and eM. Write B in its spectral form
+/» oo
+B =   I    Xd£(X),    £(X)iM.
+•7 o
+Then we have
+[Eip)B] =  f\dE(\);
+J 0
+and therefore 
+(i) [£(p)23]eM and (ii) if Bg is defined then we have strong
+limM^o[£(p)23]g=23g. Thus [E(p)B]UeM 
+and strong lim^„[£(p)73]C7/0
+=BUfo = Zfo=f. Since [£(p)23] i7/oí2I,/is a condensation point of 21. As this
+is true for any/e§, 
+21 is dense in §.
+Definition 4.3.1. Iff=Xf = X'/„, g = Yf = Y'f, X and YeQiM), X' and
+Y'eQiM'),let[[X]] = [[X']] = \\f\\, «X, F» = <(*', F'» = (/,g).
+Theorem VII shows that the values of [[X]], [[X']], ((X', Y')), ((X, Y))
+are independent 
+of the choice of the u.d. /0.
+Lemma   4.3.2.   If  X   and   Y   are   eM,   then   [[X]] = (7VM(X*X))1'2
+= iTrMiXX*))x'2, ÜX, Y)) = TrM(Y*X) = TrMÍXY*).
+As [[X]] = (((X, X)))1/2, the second statement 
+implies the first. Now
+clearly
+((X, Y)) = iXfo, Yf) = iY*Xf, fo) = TrMiY*X)
+since/is 
+u.d. We also have TrM(Y*X) = FrM(XF*) by §2.2, Property III,
+(vi). So ((X, Y)) = TrMiY*X)=TrMiXY*).
+Lemma    4.3.3.     If   X',    Y'eM',    then     [[X']] = iTrM-iX'*X'))x'2
+= iTrM-iX'X'*))x'2,iiX', 
+Y')) = TrM'iY'*X') = TrMÍX'Y'*).
+Replace M by M' in the proof of Lemma 4.3.2.
+Theorem VIII. If we use the definitions
+«X, F» - TrMiY*X) = TrMiXY*),
+[[X]] 
+= i((X, X)))"2 
+= iTrMiX*X))x'2 
+= iTrMiXX*))x>2,
+F. J. MURRAY AND J. von NEUMANN
+[March
+then M is an incomplete Hubert space. Its completion in the usual (Cantor)
+way gives a Hubert space M which may be identified with QiM).
+This is clear by the isomorphisms 
+(I) and (II) and Lemmas 4.3.1 and
+4.3.2. M and M, that is, QiM), are isomorphic 
+to 21 and § respectively,
+using the isomorphism 
+3m-
+The corresponding 
+facts hold for M' ; their formulation 
+is obvious.
+Theorem IX. XéQ(M) implies X*eQiM) and [[X]]= [[X*]].
+Assume XeÇ(M), i.e., XeUiM); Xf is defined. Write X = BU, B self-
+adjoint and 77M, U unitary and eM. Thus BUf is defined. Now Ufo is u.d.
+(Lemma 4.2.1), hence the existence of 23£//o implies BeQiM) (Theorem VII).
+This in turn implies the existence of 23/0 and with it X*/0 = U~xBf0. So
+X*eQiM).
+As/o and Uf are both u.d. (Lemma 4.2.1) we have by Definition 4.3.1,
+[[X]] = ||X/„|| = \\BUf\\ = [[73]] = ||73/,|| = \\U~xBfo\\ = ||X*/„|| = [[X*]].
+Corollary. 
+X~X* 
+is an involulory conjugate anti-isomorphism 
+of QiM)
+and isometric.
+X~X* maps QiM) on part of itself by Theorem IX. This and X** = X
+show that X~X* 
+is a one-to-one and involutory mapping of QiM) on itself.
+It is isometric by Theorem IX ; [ [X ] ] = [ [X* ] ] and it is obviously a conjugate
+anti-isomorphism.
+The corresponding facts hold for M' ; the formulation is obvious.
+4.4. We next discuss the algebra of QiM).
+Property 
+Io. A, BeQiM) imply aA, A*, [A+B]eQiM). If also either A
+or B is eM, then [AB] is eQiM).
+aA, [A +73] are eQiM) since QiM) is linear (along with £>). A* is eQiM)
+by Theorem IX.
+Assume 
+now that 
+AeM, 
+BeQiM). 
+Then 
+Bf0 is defined 
+and 
+so is
+¿73/o= [AB]f. Thus [AB]eQiM). If AeQiM), BeM, then 73*€M, A*eQiM),
+so [B*A*]eQiM). Since [B*A*]*= [AB] (R.O., Theorem XV), [¿73] is
+eQiM).
+Property IP. (i) [M]] = |a| • [[A]], (ii) [[A*]]=[[A]],(m) 
+[[A+B]]
+è[[A]] + [[B]},iiy)[[[AB]]]^\\\A\\\-[[B]]and[[A]]-\\\B\\\.
+(i) and (iii) hold because QiM) is isomorphic to §. (ii) holds by The-
+orem IX.
+Consider (iv). We have
+[[[AB]}] = \\[AB]fo\\ = \\ABfo\\ = HI A ||| .||ll/0|| = ||| A ||| • [[73]j
+1937] 
+ON RINGS OF OPERATORS. II 
+proving the first inequality. 
+The second follows from this, by using (ii)
+[[[AB]}] = [[[AB]*)] = [[[B*A*]]] Í HI B*\\\- [[A*]] = \\\ B\\\ ■ [[A]].
+We have §~Q(M). 
+Neither § nor QiM) depends on the choice of the
+u.d. /o but 3m does. This dependence is as follows.
+Property 
+IIIo. Let us replace the u.d. f0 by a u.d. g0 and let %m denote the
+resulting correspondence. Let U be unitary 
+and eM and such that Ufo=go,
+(cf. Lemma 4.2.1). Then if X=YU, X and YeQiM), we have
+3m:/~*; 
+       %m-J~Y
+iff=Xf0.
+This is clear since/=Xf0 = YUfo= Yg0.
+We can now determine 
+another 
+notion which does not depend on the
+choice of the u.d./0.
+Property 
+IVo. The linear set 21 (cf. §4.3, the correspondences 
+(II)) does
+not depend on the choice of the u.d. fa.
+This follows from the definition of 2Í and the fact that if X=YU, 
+U
+unitary and either X or F is bounded, then both X and F are bounded.
+Now Ç(M)~Ç(M') 
+under 3m.m- and while neither QiM) nor QiM') de-
+pends on the choice of the u.d. /0 yet 3m,m' does. We now obtain this de-
+pendence.
+Property 
+Vo. Let the u.d. f0 be replaced by the u.d. g0 and let the resulting
+correspondence between QiM) and QiM') 'be denoted by %m,m'- Then if UeM is
+unitary and such that go = Uf0, and X=U_1YU, 
+X and YeQiM), then
+3m,m-:X'~Z; 
+       %m.m-:X'~Y
+ifX'f0 = Xfo,X'eQiM').
+Let X'fo = Xfo, then X'gQ = X'Ufo = UX'fo = UXf0 = UXU^go.
+Definition 
+4.4.1. The isomorphism ¡Q~QiM) 
+makes correspond to every
+operator P in § an operator P° in QiM).
+Observe that inasmuch 
+as the elements of QiM) are operators 
+in §,
+P° is an operator on the operators of §.
+Theorem X. (i) If AeM, then
+A°Z = [AZ];
+(ii) if A 'eM' and A '~A eM under 3m,m-, then
+A'° = [ZA].
+F. J. MURRAY AND J. von NEUMANN
+[March
+P° is defined as follows. If g = Xf, h = Pg, h=Yf, X and Y eQiM), then
+P°X= Y. Thus to prove (i), we have iA°Z)fo = AiZfa) = [AZ]f0 and to show
+(ii) iA '°Z)f = A 'Zf = ZA '/o = ZAf = [ZA ]f.
+Corollary 
+1. Let M° be the set of all operators LA in QiM), AeM, where
+LAZ=[AZ], 
+and Mo the set of all operators RA in QiM), AeM, where
+RaZ= [ZA]. Then 3m carries M into M° and M' into M0.
+This is obvious by Theorem X.
+Corollary 
+2. M°, M0 are rings and M0' = M0 (all in QiM)). They are
+factors of class (Hi, IL) with C=l.
+Since 3m is a spatial isomorphism 
+of $ and QiM) which takes M, M' into
+M°, Mo respectively, 
+these properties 
+hold.
+We have now characterized 
+§, M, M' by the situation 
+in QiM), M°, M0
+to which they are spatially isomorphic. The spatial isomorphism 
+is 3m which
+depends 
+on an arbitrary 
+u.d. /0, while QiM), 
+M°, M0 themselves 
+do not.
+All the influence of the choice of f0 is however 
+a further 
+transformation
+Ru, X=YU 
+(UeM, 
+U unitary 
+so RveMo). 
+3m always 
+carries 
+the totality
+of u.d. elements g0 of § into the totality 
+of unitary 
+elements 
+UeQiM), /0 be-
+ing that element which corresponds 
+to 1.
+4.5. The following important 
+isomorphism 
+theorem 
+can now be proved.
+Theorem 
+XL Let ÍQX and ¿p2 be two Hubert spaces and Mx, Mi and M2, M2
+respectively be factor pairs in them, both of class (IL, Hi) and with C=l 
+in the
+standard normalization. 
+Then an algebraic ring isomorphism of Mi and M2 is a
+necessary and sufficient condition for the existence of a spatial isomorphism 
+of
+Qi and S¿2 which takes Mi, Mi into M2,M{.
+The necessity 
+is obvious and so we prove the sufficiency. 
+Let ij be the
+algebraic 
+ring isomorphism 
+of Mi and M2. By §2.2, Property 
+IV, TrM,iAx)
+= TrMtiA2) \t-At~Ai 
+under %. So [[At]] = [[A,]], ((At, Bx)) = i(A2, B2)), if
+AX~A2, 232~232 under g. Thus % is an isometric 
+mapping of Mx on M2 and
+therefore 
+extends by .continuity 
+in a unique way to a linear and isometric
+mapping of QiM) on QiM') which we call g again. Ai~A2, 23i~B2 under jj
+imply AxBi~A2B2 under g if Ax, BieMi (and thus A2, B2eM2). By continuity
+this will even hold, if one of Ax, Bx is in Mi and the other merely in QiMx)
+(and one of A2, B2 in M2, and the other merely in Q(M2)). So % is a spatial
+isomorphism 
+of Q(Mi) and QiM2) which carries Mi0, Mx,o into M2°, M2,0
+(by Corollary 1 to Theorem XI). Now (by the same corollary) ^„S^m",1 is a
+spatial isomorphism 
+of $H>X 
+and §2 which carries Mi, M{ into M2, M2 .
+Theorem XI could be extended to cover cases (Hi, IL), where C^ 1 in the
+standard 
+normalization 
+as well as other combinations 
+of Hi and IIM. In all
+1937]
+ON RINGS OF OPERATORS. II
+cases a reduction 
+of the spatial-isomorphism 
+questions 
+of §1 and §2 to
+algebraic-isomorphism 
+questions of £>i and §2 (plus the behavior 
+of C) re-
+sults. We will discuss these questions in detail in later publications.
+Appendix
+1. Consider a ring M of class IL in £>. Then Af' is of class IL or II«,.
+Normalize DM and DM> so as to have DM(&) = 1 and C = l, so DM>(!ç>)=a
+(cf. §1.1). By choosing an ra = l, 2, • • • with 1/raga 
+and then an WyM'
+with Z?M'(2R') =1/«, apply R.O., §11.3, to form M(W), M'(W) in W. Then
+M(aR') is algebraically-ring-isomorphic 
+to Af, and Dm^^CSSI') =7)m(§) =1
+(cf. R.O., Lemmas 11.3.3 and 11.3.6). So if we are interested in the algebraical
+properties 
+of AT only, we may assume without 
+any loss in generality 
+that
+Af, M' are in case IL, IL and that a = l/ra, ra = l, 2, • • • . Or, in standard
+normalization 
+C = ra, ra = l, 2, • ■ • (cf. R.O., Theorem X).
+Now form the direct product of § with an ra-dimensional Euclidean space
+£„©§ 
+as in §2.1, for the case C>1, and consider Af(2) in £„©§. 
+The argu-
+ment used in §2.1 shows that M^' = R(N^, 
+Af<2>') and C<2> = C/ra = l and
+M(2) is ring isomorphic to M.
+So we have for Af<2), Af(2)' in the standard 
+normalization 
+C = 1. If we are
+therefore interested 
+in the algebraical 
+properties 
+of Af only, we may even
+assume without 
+any loss in generality 
+that C = 1 in standard 
+normalization 
+;
+that is, a = 1 in the normalization 
+of §1.1. We will assume this in what follows.
+It may be noticed concerning subrings that the metric of Q(M) (cf. Defini-
+tion 4.3.1) is determined 
+by the algebra of M (cf. §2.2). A subring demands
+closure in the weak operator topology, but it will be shown elsewhere that for
+subrings of Af weak, relative closure in M for the [[X— Y]] metric is equiva-
+lent to closure in the weak topology.
+2. Under 
+these 
+conditions 
+there 
+is an analogy 
+between 
+Af and the
+matrices 
+of a Euclidean 
+space £„, described 
+by an interesting 
+Lebesgue-
+Stieltjes-Radon 
+measure in the plane.
+We can use the results of §§4.2-4.4, and thus we may form the Hilbert-
+space Q(M) which is isomorphic to |), and in which Af, Af ' are located by
+Theorem X.
+Let E(X), a<X<b,hea 
+resolution of unity, all £(X)eAf. Put A =f"„XdE(X)
+(in the well known symbolic sense). For any Borel-set of real numbers 5 form
+Í 1 for XeS
+esiX) =  <I 0 for X tS,
+and
+EiS) = esiA) =   f   eaiX)dEiX) 
+=   f ¿£(X)
+•'-00 
+d S
+F. J. MURRAY AND J. von NEUMANN 
+[March
+(symbolically). 
+As ¡¡(X) =es(X) = (es(X))2, so esiA) =esiA)* = iesiA))2; that
+is, £(5) =e3iA)eM 
+is a projection. 
+(Cf. also Maeda, Journal 
+of Science,
+Hiroshima University, Ser. A, vol. 4 (1934), pp. 57-91.)
+Consider now point sets in the X, p-plane P and in particular 
+sets of the
+form Si®S2:
+(X, p)eSx ® S2   means    XeSi, peS2,
+Si, St being two Borel-sets of real numbers. Define for any XeM (or even
+XeQiM)),
+Xa,xs, = EiSi)XE(S2)
+W(X; 
+Si ® S2) = [[Xs,xSl]]2 
+= TriiXSlXS,)*XSl«sj
+= TriEiS2)X*EiSi)-EiSi)XEiS2))
+= 2>(£(S2)X*-£(Si)X£(S2))
+= TriEiSt)XEiS2) ■ £(52)X*)
+= 7Y(£(Si)X£(S2)X*).
+The first expression for w(X, Si®S2) shows, that it is always 2:0, the
+last one, that it is a totally additive set-function of Si and of St.
+Denote the set of all X by A, then the above facts imply:
+w(X; St ® S2) = w(X; Si <g> S2) + co(X; (A - 5i) ® S2)
+= w(X; A <8> S2)
+^ w(X; A ® S2) + <o(X; A ® (A - S2))
+= o)(X;A®A) 
+= [[XAxA]]2
+= [[1-X-1]]2= 
+[[X]]2.
+So we have
+Lemma A. (i) w(X; Si®S2) is defined for all linear Borel-sets Si,S2. (ii) It is
+totally additive in Si as well as in S2. (iii) We have always
+0 = uiX;Si 
+® S2) =: [[X]]2 = 7Y(X*X).
+3. We can use Lemma A to define a Lebesgue-Stieltjes-Radon 
+measure
+p(X; T) for all plane Borel-sets F(cP) 
+with the help of w(X; Si®S2).
+Definition 
+A. If T is a plane Bor el-set (TcP), 
+then consider all sequences
+of linear Bor el-set Sx(i), S2W , i = 1, 2, • • •  iall Si«>, S2(<) c A) for which
+(*) 
+Fc£51c> 
+®52«>.
+i-1
+1937]
+ON RINGS OF OPERATORS. II
+For every such sequence form the inumerical) sum
+M
+(**) 
+Z<o(*;5i«> ®s2«>).
+i-i
+Denote the g.l.b. of all numbers (* *) by u(X; T).
+We prove now
+Lemma B. (i) uiX; T) is defined for all plane Bor el-sets Z"-c P.
+(ii)   7Z is totally additive in T.
+(iii) We have always
+0 g n(X; T) ^ [[X]]2 = Tr(X*X).
+(iv) 7ra particular
+fiiX; Si ® S2) = uiX; Si ® S2)
+and especially
+ßiX.P) 
+= [[X]]2= 
+TriX*X).
+(i) is obvious. To prove (ii), observe first that our Definition A makes
+uiX; Ti + T, + • • • ) á n(X; Tx) + U(X; T2) + ■ ■ ■
+obvious, so we need to prove
+p(Z; Ti + T, + • • • ) à piX; Ti) + ^X; T2) + ■ ■ ■
+only when F, • T,■ = 0 for i j¿j.
+Even p.(-^; yi + yO^PÍ-X"; î'O+pC-X'-; Tt) suffices. Then finite induction
+gives uiX;Tx + T2 + • • • +Tn) Zp(X; Tx)+uiX; 
+Tt)+ 
+■ ■ ■ +uiX; 
+Tn), and
+soniX; Tx + T2+ ■ ■ -)^ßiX; 
+Ti+ ■ ■ ■ + T„)^uiX; 
+Tx)+ ■ ■ ■ +m(X; T„)
+and as this holds for all ra = l, 2, •• • , it implies uiX; Ti+T2+ 
+■ • • )
+^uiX;Ti)+uiX;T2) 
++
+We will prove
+(§) 
+p(X; T) = n(X; TU) + M(Z; T - TU)
+for all T, U this gives our above inequality if F = Fi + F2, U = Tx. Call a U,
+for which (§) holds for all plane Borel-sets 
+T, following Carathéodory
+(cf. (4), pp. 246-252), measurable. 
+We must show that all U are measurable.
+If U = Sx®S2, then rcE,",^®^' 
+implies TU c}Z" .Sx^Sx^S^Si,
+T-TUçE^R«5i®(52«' 
+-5>St) +Z,"_i(Si(i) -5i<*'>5i)®5,<« 
+. Thus our
+Definition A gives immediately 
+(§) with ^ in it, and as ^ is obvious (cf.
+above) it proves (§). So all U = 5i®52 are measurable, 
+and therefore in par-
+ticular all plane intervals 
+( = rectangles).
+F. J. MURRAY AND J. von NEUMANN
+Now the measurable 
+sets U form a Borel-ring 
+(cf., for instance, 
+(4), loc.
+cit.). These considerations 
+apply literally 
+to the present 
+case. Thus every
+plane Borel-set U is measurable. 
+This completes the proof.
+We now prove (iii). p(X; T) 2:0 because all expressions 
+(* *) in Defini-
+tion A are 2:0. The relation p(X; T) =" [[X]]2 = 7>(X*X) results by putting
+5/1) =52d) =A and all other Si«' =S2« =0.
+To prove (iv), put S/» -Si, S»(1) =S2 and all other S/«' =S2(<) =0. This
+gives p(X; Si®S2) ^w(X; 
+SX®S2). So we must prove = only; that is,
+oo
+Si ® S2 c £ Si« ® Sj<«   implies   «(X; Si ® S2) ^ £ co(X; Si<«> 0 S2«' ).
+i-1 
+i=l
+Considering 
+the properties 
+of w(X; Si®S2) given in Lemma A, this im-
+plication 
+follows literally 
+as in the paper of Lomnicki 
+and Ulam (Funda-
+menta Mathematicae, 
+vol. 23 (1934), pp. 237-278; cf. also the lecture notes
+of the second-named 
+author for the year 1934-1935).
+So we have proved p (X ; Si ® S2) = w (X ; Si ® S2). Put now Si = S2 = A ; then
+PÍX;P) 
+= p.(X;A ® A) = <o(X; A <g> A) = [[X]]2 = 7Y(X*X).
+results.
+4. The plane measure p(X; T) may be used to "locate" 
+the "position"
+of X in the X, p-plane P. It gives the entire plane a total "measure" 
+or
+"weight" 
+[ [X] ]2 (which is >0 if X^0), 
+and any part T of it correspondingly
+a p(X; T) (2:0). It plays the same role, as the sum of the absolute-value-
+squares of all matrix-elements 
+in a certain area T in the matrix-scheme 
+(which
+may be looked at as a region in the plane) for the matrices of a finite-dimen-
+sional Euclidean space £„ (that is, M in a case (I„), « = 1,2, ■ ■ • )•
+We will analyse it more thoroughly 
+in subsequent 
+publications.
+Princeton 
+University 
+and The Institute 
+for Advanced Study,
+Princeton, 
+N. J.

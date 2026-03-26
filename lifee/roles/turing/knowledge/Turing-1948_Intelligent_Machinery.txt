@@ -1,0 +1,2029 @@
+
+
+Intelligent  Machinery  (1948) 
+
+Alan  Turing 
+
+
+Introduction 
+
+Jack  Copeland 
+
+Slow  Progress  on  the  ACE 
+
+By  the  beginning  of  1947  much  effort  had  gone  into  writing  programmes  or 
+‘instruction  tables’  for  the  ACE.  In  ‘Proposed  Electronic  Calculator’,  Turing  had 
+said  that  work  on  instruction  tables  should  start  immediately,  since  the  ‘earlier 
+stages  of  the  making  of  instruction  tables  will  have  serious  repercussions  on  the 
+design  [of  the  machine]’;  moreover,  the  programming  work  should  ‘go  on  whilst 
+the  machine  is  being  built,  in  order  to  avoid  some  of  the  delay  between  the 
+delivery  of  the  machine  and  the  production  of  results’.1 
+
+However,  little  progress  had  been  made  on  the  physical  construction  of  the 
+ACE.  The  actual  engineering  work  was  being  carried  out  not  at  the  National 
+Physical  Laboratory  but  at  the  Post  Office  Research  Station,  under  the  supervi¬ 
+sion  of  Turing’s  wartime  associate  Flowers  (see  the  introductions  to  Chapters  4 
+and  9).  Flowers  was  asked  by  the  NPL  early  in  1946  to  assist  with  the  engineering 
+design  of,  and  to  build,  the  ACE.2  Ominously,  the  letter  of  agreement  from 
+Flowers’s  superior  to  Turing’s  superior  spoke  of  ‘very  considerable  arrears  of 
+work’  and  warned  that  ‘the  manpower  position  is  difficult’.3 
+
+Initial  progress  was  nevertheless  promising,  with  some  early  successes  in  the 
+experimental  work  on  the  delay  line  memory  units.  According  to  an  NPL 
+
+
+1  ‘Proposed  Electronic  Calculator’,  18  (see  n.  6  of  the  introduction  to  Chapter  9).  A  digital  facsimile 
+of  the  original  typescript  of  ‘Proposed  Electronic  Calculator’  is  in  The  Turing  Archive  for  the 
+History  of  Computing  <www.AlanTuring.net/proposed_electronic_calculator>.  Page  references  are  to  this 
+typescript. 
+
+2  Flowers  in  interview  with  Copeland  (July  1996). 
+
+3  Letter  from  W.  G.  Radley  to  Womersley,  25  Feb.  1946  (Public  Record  Office,  Kew,  Richmond,  Surrey 
+(document  reference  DSIR  10/385);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of 
+Computing  <www.AlanTuring.net/ radley_womersley_25feb46 > ) . 
+
+
+396  I  Jack  Copeland 
+
+
+document  dated  March  1946,  ‘Mr.  Flowers  states  that  they  can  have  ready  for 
+N.P.L.  a  minimal  ACE  by  August  or  September.’4  Unfortunately  it  proved  impos¬ 
+sible  to  keep  to  Flowers’s  timetable.  Dollis  Hill  was  occupied  with  a  backlog  of 
+urgent  work  on  the  national  telephone  system  (at  that  time  managed  by  the  Post 
+Office).  Flowers’s  Section  was  ‘too  busy  to  do  other  people’s  work’  (he  said  in 
+1998). 5  Only  two  men  could  be  spared  to  work  on  the  ACE,  Chandler  and 
+Coombs  (both  of  whom  had  played  leading  roles  in  the  wartime  Colossus 
+project). 
+
+Sir  Charles  Darwin,  the  Director  of  the  NPL,  noted  in  August  1946  that  the 
+Post  Office  was  ‘not  in  a  position  to  plunge  very  deep’,  and  by  November 
+was  expressing  concern  to  Post  Office  staff  about  the  slow  rate  of  progress  on 
+the  ACE.6  The  fault  was  not  all  with  the  Post  Office,  however.  In  November 
+1946,  the  NPL  proposed  a  radical  change  in  the  hardware  design,  with  cathode 
+ray  tube  memory  units  taking  the  place  of  mercury  delay  lines.7  Such  a 
+change  would  have  meant  that  most  of  the  work  done  by  Chandler  and  Coombs 
+up  to  that  point  was  wasted.  (In  the  end  CRT  memory  was  used  at  Manchester 
+but  not  in  the  ACE.)  The  logical  design  kept  changing,  too — by  the  end  of  1946 
+Turing  had  reached  Version  VII  of  the  ACE  design.8  Coombs  said: 
+
+One  of  the  problems  was,  I  remember,  that  NPL  kept  on  changing  its  ideas,  and  every  time 
+we  went  down  there  and  said  ‘Right  now!  What  do  you  want  us  to  make?’,  we’d  find  that 
+the  last  idea,  that  they  gave  us  last  week,  was  old  hat  and  they’d  got  a  quite  different  one, 
+and  we  couldn’t  get  a  consolidated  idea  at  all  until  eventually  we  dug  our  toes  in  and  said 
+‘Stop!  Tell  us  what  to  make.’9 
+
+Some  eight  years  later,  Chandler  and  Coombs  finally  completed  a  computer 
+based  on  Version  VII  of  Turing’s  ACE  design,  the  MOSAIC  (see  the  introduction 
+to  Chapter  9). 
+
+
+4  ‘Status  of  the  Delay  Line  Computing  Machine  at  the  P.O.  Research  Station’,  National  Physical  Labora¬ 
+tory,  7  Mar.  1946,  anon.  (Woodger  Papers,  National  Museum  of  Science  and  Industry,  Kensington,  London 
+(catalogue  reference  Ml 2/ 105);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing 
+<www.AlanTuring.net/ delay_line_status> ). 
+
+5  Flowers  in  interview  with  Copeland  (July  1998). 
+
+6  Letter  from  Darwin  to  Sir  Edward  Appleton,  13  Aug.  1946  (Public  Record  Office  (document 
+reference  DSIR  10/275);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Compu¬ 
+ting  <www.AlanTuring.net/darwin_appleton_13aug46>);  letter  from  Radley  to  Darwin,  1  Nov.  1946 
+(Public  Record  Office  (document  reference  DSIR  10/385);  <www.AlanTuring.net/radley_darwin_lnov 
+46>). 
+
+7  Letter  from  Darwin  to  Radley,  26  Nov.  1946  (Public  Record  Office  (document  reference  DSIR  10/385); 
+a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/ 
+darwin_radley_26nov46  > ) . 
+
+8  See  B.  J.  Copeland  (ed.),  ‘The  Turing-Wilkinson  Lectures  on  the  Automatic  Computing  Engine’, 
+in  K.  Furukawa,  D.  Michie,  and  S.  Muggleton  (eds.),  Machine  Intelligence  15  (Oxford  University  Press, 
+1999). 
+
+9  Coombs  in  interview  with  Christopher  Evans  in  1976  (‘The  Pioneers  of  Computing:  an  Oral  History  of 
+Computing’  (London:  Science  Museum)). 
+
+
+Intelligent  Machinery  I  397 
+
+
+Turing  Proposes  an  ACE  Electronics  Section 
+
+In  January  1947  Turing  had  gone  to  the  United  States,  visiting  several  of  the 
+groups  there  that  were  attempting  to  build  an  electronic  stored-programme 
+computer.  In  his  report  on  his  visit  he  wrote: 
+
+One  point  concerning  the  form  of  organisation  struck  me  very  strongly.  The  engineering 
+development  work  was  in  every  case  being  done  in  the  same  building  with  the  more 
+mathematical  work.  I  am  convinced  that  this  is  the  right  approach.  It  is  not  possible  for 
+the  two  parts  of  the  organisation  to  keep  in  sufficiently  close  touch  otherwise.  They  are  too 
+deeply  interdependent.  We  are  frequently  finding  that  we  are  held  up  due  to  ignorance  of 
+some  point  which  could  be  cleared  up  by  a  conversation  with  the  engineers,  and  the  Post 
+Office  find  similar  difficulty;  a  telephone  conversation  is  seldom  effective  because  we 
+cannot  use  diagrams.  Probably  more  important  are  the  points  which  are  misunderstood, 
+but  which  would  be  cleared  up  if  closer  contact  were  maintained,  because  they  would 
+come  to  light  in  casual  discussion.  It  is  clear  that  we  must  have  an  engineering  section  at 
+the  ACE  site  eventually,  the  sooner  the  better,  I  would  say.10 
+
+Darwin  suggested  to  Dr  Horace  Thomas,  a  member  of  the  NPL’s  Radio 
+Division,  that  he  ‘be  put  in  charge  of  the  work  of  making  by  a  suitable  firm  a 
+prototype  model’  of  the  ACE.11  A  ‘pre-prototype  model’  would  be  started  in- 
+house  at  the  NPL  ‘in  Radio  and  Metrology  workshops  before  approaching  an 
+outside  firm’,  Darwin  said,  and  ‘Metrology  and  Radio  workshops  could  get  on 
+with  the  hardware  part  of  the  job  straight  away’.12  (The  outside  firm  eventually 
+approached  was  English  Electric,  who  subsequently  built  and  marketed  the 
+DEUCE  (see  the  introduction  to  Chapter  9).  In  1949  wiremen  and  engineers 
+from  English  Electric  would  join  the  NPL  team  to  assist  with  the  completion  of 
+Pilot  Model  ACE.13) 
+
+Darwin’s  directive  that  an  in-house  electronics  section  begin  work  on  the 
+hardware  took  several  months  to  implement,  however — the  wheels  of  adminis¬ 
+tration  turned  slowly.  At  the  end  of  April  an  NPL  minute  spoke  of  the  need  for 
+
+
+10  A.  M.  Turing,  ‘Report  on  visit  to  U.S.A.,  January  lst-20th,  1947’,  National  Physical  Laboratory,  3  Feb. 
+1947  (Public  Record  Office  (document  reference  DSIR  10/385);  a  digital  facsimile  is  in  The  Turing  Archive 
+for  the  History  of  Computing  <www.AlanTuring.net/turing_usa_visit>). 
+
+1 1  Report  by  Darwin  to  the  NPL  Executive  Committee  in  the  Minutes  of  the  Executive  Committee  for  1 8 
+Mar.  1947  (NPL  library;  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing 
+<www.AlanTuring.net/ npl_minutes_mar 1 947> ) . 
+
+12  Ibid. 
+
+13  The  placing  of  a  contract  with  English  Electric  ‘[i]n  order  to  expedite  the  construction  of  [the]  pilot 
+assembly  and  to  make  possible  the  construction  of  the  final  machine’  was  proposed  by  Mathematics 
+Division  in  February  1949  and  approved  by  Treasury  in  May  of  that  year  (J.  R.  Womersley,  A.C.E.  Project: 
+Present  Position,  and  request  for  financial  provision  for  a  Study  Contract  to  be  placed  with  the  English 
+Electric  Co.  Ltd.’,  1  Feb.  1949  (Woodger  Papers;  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of 
+Computing  <www.AlanTuring.net/ace_project_position>);  letter  from  Evans  to  Darwin,  28  May  1949 
+(Public  Record  Office  (document  reference  DSIR  10/275);  a  digital  facsimile  is  in  The  Turing  Archive  for 
+the  History  of  Computing  <www.AlanTuring.net/evans_darwin_28may49>)). 
+
+
+398  I  Jack  Copeland 
+
+
+an  electronics  group  working  ‘together  in  one  place  as  a  whole  in  close  contact 
+with  the  planning  staff  in  the  Mathematics  Division’.14  The  minute  emphasized 
+that  the  ‘various  parts’  of  the  ACE  project  were  ‘so  interwoven’  that  it  was  ‘not 
+practicable  at  present  to  farm  out  portions  of  the  work  to  isolated  groups’, 
+adding  ‘Our  experience  with  the  Post  Office  confirms  this.’  Yet  it  was  not  until 
+August  that  suitable  staff  were  seconded  from  elsewhere  in  the  NPL  and  Tho¬ 
+mas’s  electronics  group  finally  came  into  existence.15 
+
+Womersley  proposed  that  the  new  group  should  complete  the  ‘Test  Assembly’, 
+a  pilot  version  of  the  ACE  begun  by  Huskey  in  Mathematics  Division  in  the 
+spring  of  1947  (see  the  introduction  to  Chapter  9). 16  Womersley’s  proposal  was 
+disregarded,  however.  Thomas  was  an  empire-builder.  The  week  before  the 
+official  launch  of  Thomas’s  electronics  group  on  18  August  1947,  E.  S.  Hiscocks, 
+Secretary  to  the  NPL,  had  written: 
+
+Thomas  has  apparently  shown  some  signs  of  behaving  as  if  he  is  starting  up  a  new 
+Division,  and  so  as  to  allay  certain  qualms  which  both  Smith-Rose  and  Womersley 
+have,  I  think  it  would  be  better  for  it  to  be  explained  to  the  whole  team  that  Mathematics 
+Division  is  the  parent  Division,  and  the  one  which  is  to  justify  the  financial  outlay  on  this 
+work;  that  the  work  is  being  put  out  on  contract,  as  it  were,  to  Radio  Division,  and  that 
+Thomas’s  team  is  a  part  of  Radio  Division.  I  think,  even  if  only  for  our  own  peace  of  mind, 
+this  is  desirable,  because  Thomas  has  already  shown  some  signs  of  wanting  to  set  up  a 
+separate  office,  etc.17 
+
+Unfortunately  Thomas  ‘didn’t  like . . .  the  idea  of  this  group  in  Mathematics 
+Division  . . .  working  independently’,  Wilkinson  recalled.18  Rivalry  quickly  sprang 
+up  between  Thomas’s  group  in  Radio  Division  and  the  ACE  Section  in  Math¬ 
+ematics  Division,  and  soon  after  Thomas’s  appointment  the  work  on  the  Test 
+Assembly  was  summarily  stopped  by  Darwin.  This  was  a  dire  turn  of  events — in 
+Huskey’s  words,  ‘morale  in  the  Mathematics  Division  collapsed’.19 
+
+
+14  J.  R.  Womersley  and  R.  L.  Smith-Rose,  A.C.E.  Pilot  Test  Assembly  and  later  Development’,  National 
+Physical  Laboratory,  30  Apr.  1947  (Public  Record  Office  (document  reference  DSIR  10/385);  a  digital 
+facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/pilot_test_ 
+assembly>). 
+
+15  Memorandum  from  Hiscocks  to  Womersley,  National  Physical  Laboratory,  6  Aug.  1947  (Public  Record 
+Office  (document  reference  DSIR  10/385);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of 
+Computing  <www.AlanTuring.net/hiscocks_womersley_6aug47>). 
+
+16  A.C.E.  Project’,  National  Physical  Laboratory,  21  Aug.  1947,  initialled  ‘JWC/JG’  (Public  Record  Office 
+(document  reference  DSIR  10/385);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of 
+Computing  <www.AlanTuring.net/ace_project_meeting>). 
+
+17  Letter  from  Hiscocks  to  Darwin,  12  Aug.  1947  (Public  Record  Office  (document  reference  DSIR  10/ 
+385);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/ 
+hiscocks_darwin_  1 2aug47  > ) . 
+
+18  Wilkinson  in  interview  with  Evans  in  1976  (‘The  Pioneers  of  Computing:  An  Oral  History  of 
+Computing’  (London:  Science  Museum)). 
+
+19  H.  D.  Huskey,  ‘From  ACE  to  the  G-15’,  Annals  of  the  History  of  Computing,  6  (1984),  350-71  (361). 
+
+
+Intelligent  Machinery  I  399 
+
+
+The  Test  Assembly — based  on  Version  V  of  Turing’s  design  for  the  ACE20 — was 
+in  fact  a  highly  promising  project  and  considerable  progress  had  been  made 
+during  the  course  of  1947.  By  August  1947  the  NPL  workshops  were  fabricating  a 
+mercury  delay  line  to  Huskey’s  specifications,  valve  types  had  been  chosen  and 
+circuit  block  diagrams  made,  source  and  destination  decisions  had  been  taken, 
+and  programmes  were  being  written  to  check  these  decisions.21  In  October, 
+Womersley  and  E.  C.  Fieller  (who  became  Superintendent  of  Mathematics 
+Division  when  Womersley  left  in  1950)  expected,  optimistically,  that  the  Test 
+Assembly  would  ‘be  ready  by  the  end  of  November’.22 
+
+Work  on  building  the  ACE  drew  nearly  to  a  standstill  after  Thomas  persuaded 
+Darwin  to  shut  down  the  Test  Assembly.  Only  two  members  of  Thomas’s  group 
+were  skilled  in  digital  electronics  and  they  knew  little  about  computers.  Thomas’s 
+own  background  was  not  in  digital  electronics  at  all  but  in  radio  and  industrial 
+electronics.  The  group  ‘began  to  develop  their  knowledge  of  pulse  techniques’, 
+said  Wilkinson,  and  ‘for  a  while  they  just  did  basic  things  and  became  more 
+familiar  with  the  electronics  they  needed  to  learn  to  build  a  computer’.  Then,  in 
+February  1948,  Thomas  resigned  from  the  NPL  to  join  Unilever  Ltd.  (the 
+manufacturers  of  ‘Sunlight’  soap).  As  Womersley  summed  up  the  situation  in 
+April  1948,  hardware  development  was  ‘probably  as  far  advanced  18  months 
+ago’.23 
+
+Given  only  slightly  better  management  on  the  NPL’s  part,  a  minimal  computer 
+based  on  Turing’s  Version  V  of  the  ACE  design  could  probably  have  been  working 
+at  the  NPL  during  1948.  By  September  1947  the  NPL  had  an  electronics  group 
+which,  by  joining  forces  with  Huskey  and  the  ACE  Section,  would  have  been 
+capable  of  carrying  Huskey’s  Test  Assembly  to  completion.  (Huskey  said:  ‘I  never 
+hoped  to  have  the  Test  Assembly  working  before  I  left  [the  NPL  for  the  USA]  in 
+December.  I  certainly  hoped  the  group  would  have  it  working  in  1948.’)  Womers¬ 
+ley  had  advocated  this  course  of  action  but  Thomas  threw  a  spanner  in  the 
+works.24  The  Test  Assembly  could  easily  have  been  the  world’s  first  electronic 
+
+
+20  M.  Woodger,  ‘ACE  Test  Assembly,  Sept./Oct.  1947’,  National  Physical  Laboratory,  n.d.  (Woodger 
+Papers  (catalogue  reference  M15/84);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of 
+Computing  < www. AlanTuring. net/ test_assembly > ) . 
+
+21  Letter  from  Huskey  to  Copeland  (3  June  2003). 
+
+22  E.  C.  Fieller,  ‘Hollerith  Equipment  for  A.C.E.  Work  -  Immediate  Requirements’,  National  Physical 
+Laboratory,  16  Oct.  1947  (Public  Record  Office  (document  reference  DSIR  10/385);  a  digital  facsimile  is  in 
+The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/hollerith_equipment>). 
+
+23  Minutes  of  the  Executive  Committee  of  the  National  Physical  Laboratory  for  20  Apr.  1948  (NPL 
+library;  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/ 
+npl_minutes_apr 1 948 > ) . 
+
+24  J.  R.  Womersley,  A.C.E.  Project’,  National  Physical  Laboratory,  n.d.,  attached  to  a  letter  from  Womers¬ 
+ley  to  the  Secretary  of  the  NPL  dated  21  Aug.  1947  (Public  Record  Office  (document  reference  DSIR  10/ 
+385);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/ 
+womersley_ace_project> ) . 
+
+
+400  I  Jack  Copeland 
+
+
+stored-programme  digital  computer  to  run  a  trial  calculation  (a  title  that  in  the 
+event  went  to  the  Manchester  ‘Baby’  in  June  1948). 
+
+Following  Thomas’s  replacement  by  Francis  Colebrook  in  March  1948  the 
+fortunes  of  the  ACE  did  at  last  begin  to  improve.  Colebrook  drew  the  ACE 
+Section  and  the  Electronics  Section  together  to  work  harmoniously  on  what 
+became  the  Pilot  Model  ACE  (see  the  introduction  to  Chapter  9).25  But  Turing 
+did  not  wait. 
+
+
+Turing  Leaves  the  National  Physical  Laboratory 
+
+In  the  middle  of  1947  a  thoroughly  disheartened  Turing  applied  for  a  twelve- 
+month  period  of  sabbatical  leave  to  be  spent  in  Cambridge.  The  purpose  of  the 
+leave,  as  described  by  Darwin  in  July  1947,  was  to  enable  Turing 
+
+to  extend  his  work  on  the  machine  [the  ACE]  still  further  towards  the  biological  side.  I  can 
+best  describe  it  by  saying  that  hitherto  the  machine  has  been  planned  for  work  equivalent 
+to  that  of  the  lower  parts  of  the  brain,  and  he  [Turing]  wants  to  see  how  much  a  machine 
+can  do  for  the  higher  ones;  for  example,  could  a  machine  be  made  that  could  learn  by 
+experience?  This  will  be  theoretical  work,  and  better  done  away  from  here.26 
+
+Turing  left  the  NPL  for  Cambridge  in  the  autumn  of  1947.27  Then  in  May  1948 
+he  gave  up  his  position  at  the  NPL  altogether,  breaking  what  Darwin  referred  to 
+as  ‘a  gentleman’s  agreement  to  return  here  for  at  least  two  years  after  the  year’s 
+absence’.28  Newman’s  offer  of  a  job  lured  a  ‘very  fed  up’  Turing — Robin  Gandy’s 
+description29 — to  Manchester  University,  where  in  May  1948  he  was  appointed 
+Deputy  Director  of  the  Computing  Machine  Laboratory  (there  being  no  dir¬ 
+ector).30 
+
+
+25  The  Thomas  era  and  the  ACE’s  change  in  fortunes  under  Colebrook  are  described  in  B.  J.  Copeland, 
+‘The  Origins  and  Development  of  the  ACE  Project’,  in  B.  J.  Copeland  (ed.),  Alan  Turing's  Automatic 
+Computing  Engine  (Oxford:  Oxford  University  Press,  2004). 
+
+26  Letter  from  Darwin  to  Appleton,  23  July  1947  (Public  Record  Office  (document  reference  DSIR  10/ 
+385);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/ 
+darwin_appleton_23jul47  > ) . 
+
+27  Probably  at  the  end  of  September.  Turing  was  still  at  the  NPL  when  Geoff  Hayes  arrived  in  Maths 
+Division  on  23  Sept.  1947  (communication  from  Hayes  to  Woodger,  Nov.  1979).  Turing  was  on  half-pay 
+during  his  sabbatical  (Minutes  of  the  Executive  Committee  of  the  National  Physical  Laboratory  for  28  Sept. 
+1948  (NPL  library;  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.Alan 
+Turing.net/npl_minutes_septl948>)).  Darwin  was  in  favour  of  paying  Turing  his  full  salary,  but  Turing 
+preferred  not,  ‘because  if  he  were  earning  full  pay,  he  would  feel  that  “I  ought  not  to  play  tennis  in  the 
+morning,  when  I  want  to’”  (Darwin  to  Appleton,  23  July  1947  (see  n.  26)). 
+
+28  Darwin  to  Appleton,  23  July  1947  (see  n.  26). 
+
+29  Gandy  in  interview  with  Copeland  (Oct.  1995). 
+
+30  Turing’s  salary  was  paid  wholly  from  a  Royal  Society  grant  to  Newman  for  the  purpose  of  developing  a 
+stored-programme  electronic  computer  (letter  from  Newman  to  D.  Brunt  at  the  Royal  Society,  22  Dec.  1948; 
+a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/newman_ 
+brunt_22dec48  > ) . 
+
+
+Intelligent  Machinery  I  401 
+
+
+At  Manchester,  Turing  designed  the  input  mechanism  and  program¬ 
+ming  system  for  an  expanded  version  of  Kilburn  and  William’s  ‘Baby’  (see 
+the  introduction  to  Chapter  9)  and  wrote  a  programming  manual  for 
+the  new  machine.31  At  last  Turing  had  his  hands  on  a  functioning  stored- 
+programme  computer.  He  was  soon  using  it  to  model  biological  growth — 
+pioneering  work  in  the  field  now  known  as  Artificial  Life  (see  Chapter  15  and 
+‘Artifical  Life’). 
+
+
+The  First  Manifesto  of  Artificial  Intelligence 
+
+In  the  summer  of  1948  Turing  completed  a  report  for  Darwin  describing 
+the  outcomes  of  his  research  into  ‘how  much  a  machine  can  do  for  the  higher’ 
+parts  of  the  brain.32  It  was  entitled  ‘Intelligent  Machinery’.  Donald  Michie 
+recalls  that  Turing  ‘was  in  a  state  of  some  agitation  about  its  reception  by  his 
+superiors  at  NPL:  “A  bit  thin  for  a  year’s  time  off!”’33  The  headmasterly 
+Darwin — who  once  complained  about  the  ‘smudgy’  appearance  of  Turing’s 
+work34 — was,  as  Turing  predicted,  displeased  with  the  report,  describing  it  as  a 
+‘schoolboy’s  essay’  and  ‘not  suitable  for  publication’.35  In  reality  this  far-sighted 
+paper  was  the  first  manifesto  of  AI;  sadly  Turing  never  published  it. 
+
+‘Intelligent  Machinery’  is  a  wide-ranging  and  strikingly  original  survey  of  the 
+prospects  for  Artificial  Intelligence.  In  it  Turing  brilliantly  introduced  many  of 
+the  concepts  that  were  later  to  become  central  in  the  field,  in  some  cases  after 
+reinvention  by  others.  These  included  the  logic-based  approach  to  problem¬ 
+solving,  and  the  idea,  subsequently  made  popular  by  Newell  and  Simon,  that 
+(as  Turing  put  it)  ‘intellectual  activity  consists  mainly  of  various  kinds  of  search’ 
+(p.  431).  Turing  anticipated  the  concept  of  a  genetic  algorithm  (GA),  in  a  brief 
+passage  concerning  what  he  calls  ‘genetical  or  evolutionary  search’  (see  further 
+Chapter  11,  p.  463,  and  ‘Artificial  Life’).  ‘Intelligent  Machinery’  also  contains  the 
+earliest  description  of  (a  restricted  form  of)  what  Turing  was  later  to  call  the 
+‘imitation  game’  and  is  now  known  simply  as  the  Turing  test  (see  further  Chapter 
+
+31  Letter  from  Williams  to  Brain  Randell  (1972);  printed  on  p.  9  of  B.  Randell,  ‘On  Alan  Turing  and  the 
+Origins  of  Digital  Computers’,  in  B.  Meltzer  and  D.  Michie  (eds.),  Machine  Intelligence  5  (Edinburgh: 
+Edinburgh  University  Press,  1972);  Turing,  Programmers'  Handbook  for  Manchester  Electronic  Computer 
+(University  of  Manchester  Computing  Machine  Laboratory,  1950;  a  digital  facsimile  is  in  The  Turing 
+Archive  for  the  History  of  Computing  <www.AlanTuring.net/programmers_handbook>). 
+
+32  During  his  sabbatical  year  Turing  also  proved  that  the  word  problem  for  semi-groups  with  cancellation 
+is  unsolvable  (A.  M.  Turing,  ‘The  Word  Problem  in  Semi-Groups  with  Cancellation’,  Annals  of  Mathematics, 
+52  (1950),  491-505). 
+
+33  Michie,  unpublished  note  (in  the  Woodger  papers). 
+
+34  Letter  from  Darwin  to  Turing,  11  Nov.  1947  (in  the  Modern  Archive  Centre,  King’s  College,  Cam¬ 
+bridge  (catalogue  reference  D  5);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing 
+<www.AlanTuring.net/ darwin_turing_  1 1  nov47  > ) . 
+
+35  Gandy  in  interview  with  Copeland  (Oct.  1995);  Minutes  of  the  Executive  Committee  of  the  National 
+Physical  Laboratory  for  28  Sept.  1948. 
+
+
+402  I  Jack  Copeland 
+
+
+11).  The  major  part  of ‘Intelligent  Machinery’,  however,  consists  of  an  exquisite 
+discussion  of  machine  learning,  in  which  Turing  anticipated  the  modern  ap¬ 
+proach  to  AI  known  as  connectionism. 
+
+
+Expert  Systems 
+
+Search  and  the  logic-based  approach  are  both  used  in  modern  ‘expert  systems’. 
+An  expert  system  is  an  AI  programme  for  solving  problems  and  giving  advice 
+within  a  specialized  field  of  knowledge,  such  as  medical  diagnosis  or  corporate 
+planning.  The  area  of  expert  systems  is  one  of  the  most  successful  in  modern  AI. 
+
+The  basic  components  of  an  expert  system  are  a  knowledge  base  (KB),  an 
+inference  engine,  and  a  search  engine  for  searching  the  KB.  The  KB  is  built  up  by 
+interviewing  (human)  experts  in  the  area  in  question.  A  ‘knowledge  engineer’ 
+organizes  the  information  elicited  from  the  experts  into  a  system  of  propositions, 
+typically  of  ‘if-then’  form. 
+
+The  inference  engine  enables  the  expert  system  to  draw  deductions  from 
+propositions  in  the  KB.  For  example,  from  two  propositions  ‘if  x  then  /  and 
+‘if  y  then  z’,  the  inference  engine  is  able  to  deduce  ‘if  x  then  z’.  The  expert  system 
+might  then  query  its  user  ‘Is  x  true  in  the  situation  that  we  are  considering?’  (e.g. 
+‘Does  the  patient  have  a  rash?’),  and  if  the  answer  is  affirmative,  the  system  will 
+proceed  to  infer  z. 
+
+Modern  systems  using  search  and  inference  can  produce  impressive  results. 
+For  example,  Douglas  Lenat’s  common-sense  reasoning  system  CYC  is  able  to 
+conclude  ‘Garcia  is  wet’  from  the  statement  ‘Garcia  is  finishing  a  marathon  run’, 
+by  means  of  searching  for  and  using  such  items  of  common-sense  knowledge  as 
+that  running  a  marathon  entails  high  exertion,  that  people  sweat  at  high  levels  of 
+exertion,  and  that  when  something  sweats  it  is  wet. 
+
+
+Connectionism 
+
+Connectionism — still  in  its  infancy — is  the  science  of  computing  with  networks 
+of  artificial  neurons.  This  approach  came  to  widespread  attention  in  the  mid- 
+1980s  when  a  group  based  at  the  University  of  California  at  San  Diego  reported 
+some  striking  experiments.  In  one,  an  artificial  neural  network  learned  to  form 
+the  past  tenses  of  English  verbs,  responding  correctly  to  irregular  verbs  not 
+previously  encountered  (such  as  ‘weep’  and  ‘cling’).36 
+
+
+36  D.  E.  Rumelhart  and  J.  L.  McClelland,  ‘On  Learning  the  Past  Tenses  of  English  Verbs’,  in  J.  L. 
+McClelland,  D.  E.  Rumelhart,  and  the  PDP  Research  Group,  Parallel  Distributed  Processing:  Explorations 
+in  the  Microstructure  of  Cognition,  ii:  Psychological  and  Biological  Models  (Cambridge,  Mass.:  MIT  Press, 
+1986). 
+
+
+Intelligent  Machinery  I  403 
+
+
+Modern  connectionists  regard  Donald  Hebb37  and  Frank  Rosenblatt38  as  the 
+founding  figures  of  their  approach  and  it  is  not  widely  realized  that  Turing  wrote  a 
+blueprint  for  much  of  the  connectionist  project  as  early  as  1948. 39  In  ‘Intelligent 
+Machinery’  he  introduced  what  he  called  ‘unorganised  machines’,  giving  as 
+examples  networks  of  neuron-like  elements  connected  together  in  a  largely  random 
+manner.  He  described  a  certain  type  of  network  as  ‘the  simplest  model  of  a  nervous 
+system’  (p.  418).  From  a  historical  point  of  view,  his  idea  that  an  initially  unorgan¬ 
+ized  neural  network  can  be  organized  by  means  of  ‘interfering  training’  is  of 
+considerable  significance,  since  it  did  not  appear  in  the  earlier  work  of  McCulloch 
+and  Pitts  (see  below).40  In  Turing’s  model,  the  training  process  renders  certain 
+neural  pathways  effective  and  others  ineffective.  So  far  as  is  known,  he  was  the  first 
+person  to  consider  building  computing  machines  out  of  trainable  networks  of 
+randomly  arranged  neuron-like  elements. 
+
+
+B-Type  Unorganized  Machines 
+
+In  ‘Intelligent  Machinery’  Turing  introduced  the  type  of  neural  network  that  he 
+called  a  ‘B-type  unorganised  machine’.  A  B-type  consists  of  interconnected 
+artificial  neurons,  depicted  in  Figure  10.1  as  circles,  and  connection-modifiers, 
+depicted  as  squares.  A  B-type  may  contain  any  number  of  neurons  connected 
+together  in  any  pattern,  but  subject  always  to  the  restriction  that  each  neuron-to- 
+neuron  connection  passes  through  a  connection-modifier  (Figure  10.2).  The 
+connection-modifiers  are  used  in  training  the  network. 
+
+Turing’s  model  neurons  work  as  follows.  Each  neuron  has  two  input  fibres, 
+and  the  output  of  a  neuron  is  a  simple  logical  function  of  its  two  inputs.  Every 
+neuron  in  the  network  performs  the  same  logical  operation,  ‘nand’  (Table  1). 
+
+: 
+
+Figure  10.1.  Two  neurons  from  a  B-type  network.  The  two  fibres  on  the  connection- 
+modifier  between  the  neurons  enable  training  by  an  external  agent. 
+
+
+37  D.  O.  Hebb,  The  Organization  of  Behavior:  A  Neuropsychological  Theory  (New  York:  John  Wiley,  1949). 
+
+38  F.  Rosenblatt,  Principles  of  Neurodynamics  (Washington,  DC:  Spartan,  1962). 
+
+39  See  further  B.  J.  Copeland  and  D.  Proudfoot,  ‘On  Alan  Turing’s  Anticipation  of  Connectionism’ 
+( Synthese ,  108  (1996),  361-77)  and  ‘Alan  Turing’s  Forgotten  Ideas  in  Computer  Science’  (Scientific  Ameri¬ 
+can,  280  (1999),  99-103). 
+
+40  W.  S.  McCulloch  and  W.  Pitts,  ‘A  Logical  Calculus  of  the  Ideas  Immanent  in  Nervous  Activity’,  Bulletin 
+of  Mathematical  Biophysics,  5  (1943),  115-33. 
+
+
+404  I  Jack  Copeland 
+
+
+Figure  10.2.  A  fragment  of  a  large,  intially  random  B-type  neural  network 
+
+
+Table  1  Behaviour  of  a  nand-neuron 
+
+
+Input- 1 
+
+Input-2 
+
+Output 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Turing  chose  nand  as  the  basic  operation  of  his  model  neurons  because  every 
+other  boolean  operation  can  be  carried  out  by  groups  of  nand-neurons.  Turing 
+showed  that  even  the  connection-modifier  itself  can  be  built  out  of  nand- 
+neurons.  So  each  B-type  network  consists  of  nothing  more  than  nand-neurons 
+and  their  connecting  fibres.  This  is  about  the  simplest  possible  model  of  the 
+cortex. 
+
+
+Training  a  B-Type 
+
+Each  connection-modifier  has  two  training  fibres  (Figure  10.1).  Applying  a  pulse 
+to  one  fibre  sets  the  modifier  to  interchange  mode.  When  the  modifier  is  in 
+interchange  mode  and  the  input  into  the  modifier  is  1,  the  modifier’s  output  is  0; 
+and  when  the  input  is  0,  the  output  is  1. 
+
+
+Intelligent  Machinery  I  405 
+
+
+The  effect  of  a  pulse  on  the  other  training  fibre  is  to  place  the  modifier  in 
+interrupt  mode.  In  this  mode,  the  output  of  the  modifier  is  always  1,  no  matter 
+what  its  input.  When  in  interrupt  mode,  the  modifier  destroys  all  information 
+attempting  to  pass  along  the  connection  to  which  the  modifier  is  attached.  Once 
+set,  a  modifier  will  maintain  its  function  unless  it  receives  a  pulse  on  the  other 
+training  fibre. 
+
+The  presence  of  these  connection-modifiers  enables  a  B-type  unorganized 
+machine  to  be  trained,  by  means  of  what  Turing  called  ‘appropriate  interference, 
+mimicking  education’  (p.  422).  Turing  theorized  that  ‘the  cortex  of  an  infant  is 
+an  unorganised  machine,  which  can  be  organised  by  suitable  interfering  training’ 
+(p.  424). 
+
+Initially  a  network  that  is  to  be  trained  contains  random  inter-neural  connec¬ 
+tions,  and  the  modifiers  on  these  connections  are  also  set  randomly  (Figure 
+10.2).  Unwanted  connections  are  destroyed  by  switching  their  attached  modifiers 
+to  interrupt  mode.  The  output  of  the  neuron  immediately  upstream  of  the 
+modifier  no  longer  finds  its  way  along  the  connection  to  the  neuron  on  the 
+downstream  end  (see  Table  1).  Conversely,  switching  the  setting  of  the  modifier 
+on  an  initially  interrupted  connection  to  the  other  mode  is  in  effect  to  create  a 
+new  connection.  This  selective  culling  and  enlivening  of  connections  hones  the 
+initially  random  network  into  one  organized  for  a  given  task. 
+
+
+Neural  Simulation 
+
+Turing  wished  to  investigate  other  types  of  ‘unorganised  machine’,  and  he 
+envisaged  the  procedure — nowadays  used  extensively  by  connectionists — of 
+simulating  a  neural  network  and  its  training  regimen  using  an  ordinary  digital 
+computer  (just  as  an  engineer  may  use  a  computer  to  simulate  an  aircraft  wing 
+or  a  weather  analyst  to  simulate  a  storm  system).  He  would,  he  said,  ‘allow  the 
+whole  system  to  run  for  an  appreciable  period,  and  then  break  in  as  a  kind  of 
+“inspector  of  schools”  and  see  what  progress  had  been  made’  (p.  428). 
+
+However,  Turing’s  research  on  neural  networks  was  carried  out  shortly  before 
+the  first  general-purpose  electronic  computers  were  up  and  running,  and  he  used 
+only  paper  and  pencil.  Once  he  did  have  access  to  a  computer  in  the  Manchester 
+Computing  Machine  Laboratory,  Turing  turned  his  attention  to  research  in 
+Artificial  Life,  and  he  seems  never  to  have  used  computer  simulation  to  explore 
+the  behaviour  of  neural  networks. 
+
+In  the  year  of  Turing’s  death  (1954),  two  researchers  at  MIT,  Wesley  Clark 
+and  Belmont  Farley,  succeeded  in  running  the  first  computer  simulations  of 
+neural  networks.  Clark  and  Farley  were  unaware  of  Turing’s  earlier  work  and 
+their  neural  architecture  was  quite  different  from  his,  using  inter-neural  connec¬ 
+tions  of  variable  ‘weight’  (or  ‘strength’).  Clark  and  Farley  were  able  to  train  their 
+
+
+406  I  Jack  Copeland 
+
+
+networks — which  contained  a  maximum  of  128  neurons — to  recognize  simple 
+patterns.41  (In  addition,  they  discovered  that  the  random  destruction  of  up  to  10 
+per  cent  of  the  neurons  in  a  trained  network  does  not  affect  the  network’s 
+performance  at  its  task.)  The  work  begun  by  Clark  and  Farley  was  considerably 
+developed  by  Rosenblatt,  in  whose  theory  of  ‘perceptions’  modern  connection- 
+ism  took  shape.42  Meanwhile,  Turing’s  pioneering  work  on  a  distinctively  differ¬ 
+ent  type  of  connectionist  architecture  was  forgotten. 
+
+
+B-Types  Redefined 
+
+There  appears  to  be  an  inconsistency  in  Turing’s  presentation  of  B-types.  He 
+claimed  that  B-types  are  able,  with  appropriate  modifier  settings,  to  ‘do  any 
+required  job,  given  sufficient  time  and  provided  the  number  of  units  [i.e. 
+neurons]  is  sufficient’  (p.  422).  This  claim  is  false.43  The  problem  lies  with  the 
+connection-modifiers.  If  each  modifier  must  either  interrupt  or  interchange, 
+then  there  are  simple  logical  operations  that  no  B-type  can  perform.  For 
+example,  no  B-type  can  produce  the  exclusive  disjunction  of  a  pair  of  inputs 
+(Table  2).  Nor  can  a  B-type  compute  the  identity  function  (i.e.  produce  outputs 
+identical  to  its  inputs).  In  effect  the  difficulty  is  one  that  Turing  mentions  in  a 
+different  connection.  In  Chapter  17  he  points  out  that  ‘an  odd  number  of... 
+interchanges . . .  can  never  bring  one  back  to  where  one  started’  (p.  589). 
+
+A  simple  remedy  is  to  use  connection-modifiers  that,  when  not  in  interrupt 
+mode,  are  in  pass  mode  rather  than  interchange  mode.44  In  pass  mode  the 
+modifier’s  output  is  identical  to  its  input.  Turing’s  claim  that  B-types  can  ‘do 
+any  required  job...’  is  true  if  the  two  available  modes  of  each  modifier  are 
+interrupt  and  pass. 
+
+The  required  interrupt/pass  modifiers  can  in  fact  be  built  out  of  pairs  of 
+interrupt/interchange  modifiers.  A  pair  of  modifiers  both  in  interchange  mode 
+amounts  to  a  single  modifier  in  pass  mode.  Similarly,  a  pair  of  modifiers  whose 
+downstream  member  is  in  interrupt  mode  functions  indistinguishably  from  a 
+single  modifier  in  interrupt  mode. 
+
+
+41  B.  G.  Farley  and  W.  A.  Clark,  ‘Simulation  of  Self- Organising  Systems  by  Digital  Computer’,  Institute  of 
+Radio  Engineers  Transactions  on  Information  Theory,  4  (1954),  76-84;  W.  A.  Clark  and  B.  G.  Farley, 
+‘Generalisation  of  Pattern  Recognition  in  a  Self- Organising  System’,  in  Proceedings  of  the  Western  Joint 
+Computer  Conference  (1955). 
+
+42  F.  Rosenblatt,  ‘The  Perceptron,  a  Perceiving  and  Recognizing  Automaton’,  Cornell  Aeronautical 
+Laboratory  Report  No.  85-460- 1  ( 1957);  ‘The  Perceptron:  a  Theory  of  Statistical  Separability  in  Cognitive  Sys¬ 
+tems’,  Cornell  Aeronautical  Laboratory  Report  No.  VG-1196-G-1  (1958);  ‘The  Perception:  a  Probabilistic 
+Model  for  Information  Storage  and  Organisation  in  the  Brain’,  Psychological  Review,  65  (1958),  386-408. 
+
+43  Copeland  and  Proudfoot,  ‘On  Alan  Turing’s  Anticipation  of  Connectionism’,  367. 
+
+44  Ibid.  367-8. 
+
+
+Intelligent  Machinery  I  407 
+
+
+Table  2  Exclusive  disjunction  (XOR) 
+
+
+Input- 1 
+
+Input-2 
+
+Output 
+
+
+
+
+
+
+
+
+
+
+
+
+
+B-Types  and  the  Universal  Turing  Machine 
+
+Turing  claimed  a  proof  (not  given  in  ‘Intelligent  Machinery’  and  now  lost)  of  the 
+proposition  that  an  initially  unorganized  B-type  network  with  sufficient  neurons 
+can  be  organized  (via  its  connection-modifiers)  to  become  ‘a  universal  Turing 
+machine  with  a  given  storage  capacity’  (p.  422) — i.e.  to  become  equivalent  to  a 
+universal  Turing  machine  with  a  truncated  tape. 
+
+This  feature  of  neural  networks  may  shed  light  on  one  of  the  most  fundamental 
+problems  concerning  human  cognition.  Examining  cognition  from  a  top-down 
+perspective,  we  find  complex  sequential  processes,  often  involving  language  or 
+other  forms  of  symbolic  representation — for  example,  logical  reasoning,  the 
+planning  out  of  activities,  and  mathematical  calculation.  Yet  from  a  bottom-up 
+perspective,  cognition  is  nothing  but  the  simple  firings  of  neurons.  How  is  the 
+view  from  the  top  to  be  reconciled  with  the  prima  facie  very  different  view  from 
+the  bottom? 
+
+Turing’s  proof  first  opened  up  the  possibility,  noted  in  ‘Intelligent  Machinery’ 
+(p.  424),  that  the  brain  is  in  part  a  universal  computing  machine  (of  a  given  storage 
+capacity)  implemented  in  a  neural  network.  This,  then,  is  a  possible  solution  to  the 
+fundamental  problem:  it  is  by  virtue  of  being  a  neural  network  acting  as  a  universal 
+computing  machine  (of  a  given  storage  capacity)  that  the  cortex  is  able  to  carry  out 
+the  sequential,  symbol-rich  processing  discerned  in  the  view  from  the  top.  In  1948 
+this  hypothesis  was  well  ahead  of  its  time,  and  today  it  remains  one  of  our  best 
+guesses  concerning  the  fundamental  problem  of  cognitive  science. 
+
+
+McCulloch— Pitts  Neural  Nets 
+
+It  is  interesting  that  Turing  makes  no  reference  in  ‘Intelligent  Machinery’  to  the 
+now  famous  work  of  McCulloch  and  Pitts,  itself  influenced  by  his  own  ‘On 
+Computable  Numbers’.  Their  1943  article  represents  the  first  attempt  to  apply 
+what  they  call  ‘the  Turing  definition  of  computability’  to  the  study  of  neuronal 
+function.45  Like  Turing,  McCulloch  and  Pitts  considered  networks  of  simple 
+
+
+45  McCulloch  and  Pitts,  ‘A  Logical  Calculus  of  the  Ideas  Immanent  in  Nervous  Activity’,  129. 
+
+
+408  I  Jack  Copeland 
+
+
+two-state  boolean  ‘neurons’,  although  there  were  important  differences  between 
+McCulloch-Pitts  nets  and  Turing  nets.  For  example,  inhibitory  synapses  are  a 
+fundamental  feature  of  McCulloch-Pitts  nets  but  not  of  Turing  nets.  (An  input 
+of  1  at  an  inhibitory  synapse  at  moment  m  unconditionally  sets  the  output  of  the 
+unit  to  0  at  m  +  1.) 
+
+McCulloch  stressed  the  extent  to  which  his  and  Pitts’s  work  is  indebted  to 
+Turing  in  the  course  of  some  autobiographical  remarks  made  during  the  public 
+discussion  of  a  lecture  given  by  von  Neumann  in  1948: 
+
+I  started  at  entirely  the  wrong  angle... and  it  was  not  until  I  saw  Turing’s  paper  [‘On 
+Computable  Numbers’]  that  I  began  to  get  going  the  right  way  around,  and  with  Pitts’ 
+help  formulated  the  required  logical  calculus.  What  we  thought  we  were  doing  (and  I 
+think  we  succeeded  fairly  well)  was  treating  the  brain  as  a  Turing  machine.46 
+
+Turing  had  undoubtedly  heard  something  of  the  work  of  McCulloch  and  Pitts. 
+Wiener — with  McCulloch  a  founding  member  of  the  cybernetics  movement — 
+would  almost  certainly  have  mentioned  McCulloch  in  the  course  of  his  ‘talk  over 
+the  fundamental  ideas  of  cybernetics  with  Mr  Turing’  at  the  NPL  in  the  spring  of 
+1947.47  Moreover,  von  Neumann  mentioned  the  McCulloch-Pitts  article  of 
+1943 — albeit  very  briefly — in  the  ‘First  Draft  of  a  Report  on  the  ED  VAC’,  which 
+Turing  read  in  1945.  In  order  to  depict  the  EDVAC’s  logic  gates,  von  Neumann 
+employed  a  modified  version  of  the  diagrammatic  notation  for  neural  nets 
+used  by  McCulloch  and  Pitts.  (In  his  ‘Proposed  Electronic  Calculator’  (see 
+Chapter  9)  Turing  considerably  extended  the  notation  that  he  found  in  the 
+‘First  Draft’.48)  Turing  and  McCulloch  seem  not  to  have  met  until  1949.  After 
+their  meeting  Turing  spoke  dismissively  of  McCulloch,  referring  to  him  as  a 
+‘charlatan’.49 
+
+It  is  an  open  question  whether  the  work  of  McCulloch  and  Pitts  had  any 
+influence  at  all  on  the  development  of  the  ideas  presented  in  ‘Intelligent  Ma¬ 
+chinery’.  Probably  not.  As  Newman  once  remarked  of  Turing:  ‘It  was,  perhaps,  a 
+defect  of  his  qualities  that  he  found  it  hard  to  use  the  work  of  others,  preferring 
+to  work  things  out  for  himself.’50 
+
+Whatever  the  influences  were  on  Turing  at  that  time,  there  is  no  doubt  that  his 
+work  on  neural  nets  goes  importantly  beyond  the  earlier  work  of  McCulloch  and 
+Pitts.  The  latter  give  only  a  perfunctory  discussion  of  learning,  saying  no  more 
+than  that  the  mechanisms  supposedly  underlying  learning  in  the  brain — they 
+specifically  mention  the  formation  of  new  connections  and  neuronal  threshold 
+
+46  J.  von  Neumann,  Collected  Works ,  vol.  v,  ed.  A.  H.  Taub  (Oxford:  Pergamon  Press,  1963),  319. 
+
+47  N.  Wiener,  Cybernetics  (New  York:  John  Wiley,  1948),  32. 
+
+48  ‘Proposed  Electronic  Calculator’;  see  also  D.  R.  Hartree,  Calculating  Instruments  and  Machines 
+(Illinois:  University  of  Illinois  Press,  1949),  97,  102,  and  B.  E.  Carpenter  and  R.  W.  Doran  (eds.),  A.  M. 
+Turing’s  ACE  Report  of  1946  and  Other  Papers  (Cambridge,  Mass.:  MIT  Press,  1986),  277 . 
+
+49  Gandy  in  interview  with  Copeland  (Oct.  1995). 
+
+50  Manchester  Guardian,  1 1  June  1954. 
+
+
+Intelligent  Machinery  I  409 
+
+
+change — can  be  mimicked  by  means  of  nets  whose  connections  and  thresholds 
+are  fixed.51  Turing’s  idea  of  using  supervised  interference  to  train  an  initially 
+random  arrangement  of  neurons  to  compute  a  specified  function  is  nowhere 
+prefigured. 
+
+
+Further  reading 
+
+Copeland,  B.  J.,  and  Proudfoot,  D.,  ‘On  Alan  Turing’s  Anticipation  of  Connectionism’, 
+Synthese,  108  (1996),  361-77.  Reprinted  in  R.  Chrisley  (ed.),  Artificial  Intelligence: 
+Critical  Concepts  in  Cognitive  Science ,  ii:  Symbolic  AI  (London:  Routledge,  2000). 
+Jackson,  P.,  Introduction  to  Expert  Systems  (Wokingham:  Addison- Wesley,  1986). 
+Rumelhart,  D.  E.,  McClelland,  J.  L.,  and  the  PDP  Research  Group,  Parallel  Distributed 
+Processing:  Explorations  in  the  Microstructure  of  Cognition ,  i:  Foundations,  (Cambridge, 
+Mass.:  MIT  Press,  1986). 
+
+
+Provenance 
+
+What  follows  is  the  text  of  the  National  Physical  Laboratory  document  ‘Intelli¬ 
+gent  Machinery:  A  Report  by  A.  M.  Turing’  (dated  1948). 52  Symbols  missing 
+from  the  Report  itself  but  present  in  Turing’s  draft  typescript  have  been 
+restored.53 
+
+
+51  McCulloch  and  Pitts,  ‘A  Logical  Calculus  of  the  Ideas  Immanent  in  Nervous  Activity’,  117,  124. 
+
+52  ‘Intelligent  Machinery:  A  Report  by  A.  M.  Turing’  is  in  the  Woodger  Papers;  a  digital  facsimile  is  in  The 
+Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/intelligent_machinery>.  Turing’s  draft 
+typescript  of  the  Report  is  among  the  Turing  Papers  in  the  Modern  Archive  Centre,  King’s  College, 
+Cambridge  (catalogue  reference  C  11);  there  is  a  digital  facsimile  at  <www.turingarchive.org>. 
+
+53  ‘Intelligent  Machinery’  appeared  in  1968  in  a  collection  of  essays  entitled  Key  Papers:  Cybernetics 
+(London:  Butterworths),  ed.  C.  R.  Evans  and  A.  D.  J.  Robertson,  two  members  of  the  Autonomies  Division 
+of  the  National  Physical  Laboratory.  The  following  year  another  edition  of ‘Intelligent  Machinery’  appeared  in 
+the  volume  Machine  Intelligence  5  (ed.  B.  Meltzer  and  D.  Michie,  Edinburgh  University  Press).  Unlike  the  1968 
+and  1969  editions,  the  present  edition  follows  Turing’s  layout  and  his  numbering  of  headings.  Unfortunately 
+the  1969  edition  (which  is  reproduced  in  Collected  Works  of  A.  M.  Turing:  Mechanical  Intelligence,  ed.  D.  C.  Ince 
+(Amsterdam:  Elsevier,  1992))  contained  numerous  departures  from  Turing’s  own  wording,  as  well  as  typo¬ 
+graphical  errors,  and  outright  mistakes.  To  mention  only  the  most  significant  of  these:  (1)  Turing’s  words 
+‘determined  by  that  symbol’  on  p.  413,  below,  were  replaced  by  ‘described  by  that  symbol’;  (2)  Turing’s  words 
+‘we  can  design  a  digital  computer  to  do  it,  but  that  we  stick  to  one,  say  the  ACE,  and  that’  on  p.  415  were 
+omitted,  making  nonsense  of  Turing’s  statement;  (3)  the  words  ‘or  either  form  of  iii)’  on  p.  423  were  omitted; 
+(4)  ‘Tl’  was  omitted  from  Turing’s  list  ‘U,  TO,  Tl,  DO  or  Dl’  on  p.  426;  (5)  the  phrase  ‘replacing  the  Us  of  the 
+character  by  DO’  on  p.  428  was  incorrectly  rendered  ‘replacing  the  Os  of  the  character  by  DO’.  In  their 
+introduction  to  the  1969  edition,  the  editors  state  that  ‘Intelligent  Machinery’  was  ‘written  in  September 
+1947’.  This  statement  has  caused  some  confusion  in  the  literature.  In  fact  ‘Intelligent  Machinery’  was  written  in 
+the  summer  of  1948.  The  phrase  ‘Manchester  machine  (as  actually  working  8/7/48 )’  (p.  413  below)  appears  in 
+both  the  finished  NPL  Report  and  Turing’s  draft  typescript.  In  the  1969  edition  Turing’s  date  ‘8/7/48’  (8  July 
+1948)  has  been  rewritten  ‘8  August  1947’.  The  Manchester  machine  first  operated  on  21  June  1948. 
+
+
+Intelligent  Machinery 
+
+I  propose  to  investigate  the  question  as  to  whether  it  is  possible  for  machinery  to 
+show  intelligent  behaviour.  It  is  usually  assumed  without  argument  that  it  is  not 
+possible.  Common  catch  phrases  such  as  ‘acting  like  a  machine’,  ‘purely  mech¬ 
+anical  behaviour’  reveal  this  common  attitude.  It  is  not  difficult  to  see  why  such 
+an  attitude  should  have  arisen.  Some  of  the  reasons  are: 
+
+(a)  An  unwillingness  to  admit  the  possibility  that  mankind  can  have  any  rivals 
+in  intellectual  power.  This  occurs  as  much  amongst  intellectual  people  as 
+amongst  others:  they  have  more  to  lose.  Those  who  admit  the  possibility 
+all  agree  that  its  realization  would  be  very  disagreeable.  The  same  situation 
+arises  in  connection  with  the  possibility  of  our  being  superseded  by  some 
+other  animal  species.  This  is  almost  as  disagreeable  and  its  theoretical 
+possibility  is  indisputable. 
+
+(b)  A  religious  belief  that  any  attempt  to  construct  such  machines  is  a  sort  of 
+Promethean  irreverence. 
+
+(c)  The  very  limited  character  of  the  machinery  which  has  been  used  until 
+recent  times  (e.g.  up  to  1940).  This  encouraged  the  belief  that  machinery 
+was  necessarily  limited  to  extremely  straightforward,  possibly  even  to  re¬ 
+petitive,  jobs.  This  attitude  is  very  well  expressed  by  Dorothy  Sayers  ( The 
+Mind  of  the  Maker,  p.  46)  ‘. . .  which  imagines  that  God,  having  created  his 
+Universe,  has  now  screwed  the  cap  on  His  pen,  put  His  feet  on  the  mantel¬ 
+piece  and  left  the  work  to  get  on  with  itself.’  This,  however,  rather  comes  into 
+St.  Augustine’s  category  of  figures  of  speech  or  enigmatic  sayings  framed 
+from  things  which  do  not  exist  at  all.  We  simply  do  not  know  of  any  creation 
+which  goes  on  creating  itself  in  variety  when  the  creator  has  withdrawn 
+from  it.  The  idea  is  that  God  simply  created  a  vast  machine  and  has  left  it 
+working  until  it  runs  down  from  lack  of  fuel.  This  is  another  of  those 
+obscure  analogies,  since  we  have  no  experience  of  machines  that  produce 
+variety  of  their  own  accord;  the  nature  of  a  machine  is  to  do  the  same  thing 
+over  and  over  again  so  long  as  it  keeps  going. 
+
+(d)  Recently  the  theorem  of  Godel  and  related  results  (Godel,1  Church,2 
+Turing3)  have  shown  that  if  one  tries  to  use  machines  for  such  purposes 
+as  determining  the  truth  or  falsity  of  mathematical  theorems  and  one  is 
+not  willing  to  tolerate  an  occasional  wrong  result,  then  any  given  machine 
+
+Crown  copyright.  Reproduced  with  permission  of  the  Controller  of  HMSO,  the  National  Physical  Labora¬ 
+tory,  and  the  Estate  of  Alan  Turing. 
+
+1  K.  Godel,  ‘fiber  formal  unentscheidbare  Satze  der  Principia  Mathematica  und  verwandter  Systeme  T, 
+Monatshefte  fur  Mathematik  und  Physik,  38  (1931),  173-98. 
+
+2  A.  Church,  ‘An  Unsolvable  Problem  of  Elementary  Number  Theory’,  American  Journal  of  Mathematics, 
+58  (1936),  345-63. 
+
+3  ‘On  Computable  Numbers,  with  an  Application  to  the  Entscheidungsproblem’  (Chapter  1). 
+
+
+Intelligent  Machinery  I  411 
+
+
+will  in  some  cases  be  unable  to  give  an  answer  at  all.  On  the  other  hand  the 
+human  intelligence  seems  to  be  able  to  find  methods  of  ever  increasing 
+power  for  dealing  with  such  problems  ‘transcending’  the  methods  available 
+to  machines. 
+
+(e)  In  so  far  as  a  machine  can  show  intelligence  this  is  to  be  regarded  as 
+nothing  but  a  reflection  of  the  intelligence  of  its  creator. 
+
+
+2.  Refutation  of  some  objections 
+
+In  this  section  I  propose  to  outline  reasons  why  we  do  not  need  to  be  influenced 
+by  the  above  described  objections.  The  objections  (a)  and  (b),  being  purely 
+emotional,  do  not  really  need  to  be  refuted.  If  one  feels  it  necessary  to  refute 
+them  there  is  little  to  be  said  that  could  hope  to  prevail,  though  the  actual 
+production  of  the  machines  would  probably  have  some  effect.  In  so  far  then  as 
+we  are  influenced  by  such  arguments  we  are  bound  to  be  left  feeling  rather 
+uneasy  about  the  whole  project,  at  any  rate  for  the  present.  These  arguments 
+cannot  be  wholly  ignored,  because  the  idea  of  ‘intelligence’  is  itself  emotional 
+rather  than  mathematical. 
+
+The  objection  (c)  in  its  crudest  form  is  refuted  at  once  by  the  actual  existence 
+of  machinery  (ENIAC  etc.)  which  can  go  on  through  immense  numbers  (e.g. 
+lO60’000  about  for  ACE)  of  operations  without  repetition,  assuming  no  break¬ 
+down.  The  more  subtle  forms  of  this  objection  will  be  considered  at  length  in 
+§  11  and  12. 
+
+The  argument  from  Godel’s  and  other  theorems  (objection  (d) )  rests  essen¬ 
+tially  on  the  condition  that  the  machine  must  not  make  mistakes.  But  this  is  not 
+a  requirement  for  intelligence.  It  is  related  that  the  infant  Gauss  was  asked  at 
+school  to  do  the  addition  15  +  18  +  21  +  . . .  +  54  (or  something  of  the  kind) 
+and  that  he  immediately  wrote  down  483,  presumably  having  calculated  it  as 
+(15  +  54)(54  —  12)/2.3.  One  can  imagine  circumstances  where  a  foolish  master 
+told  the  child  that  he  ought  instead  to  have  added  18  to  15  obtaining  33,  then 
+added  21  etc.  From  some  points  of  view  this  would  be  a  ‘mistake’,  in  spite  of  the 
+obvious  intelligence  involved.  One  can  also  imagine  a  situation  where  the 
+children  were  given  a  number  of  additions  to  do,  of  which  the  first  5  were  all 
+arithmetic  progressions,  but  the  6th  was  say  23  +  34  +  45  +  . . .  +  100 
++  112  +  122  +  . . .  +  199.  Gauss  might  have  given  the  answer  to  this  as  if  it 
+were  an  arithmetic  progression,  not  having  noticed  that  the  9th  term  was  112 
+instead  of  111.  This  would  be  a  definite  mistake,  which  the  less  intelligent 
+children  would  not  have  been  likely  to  make. 
+
+The  view  (e)  that  intelligence  in  machinery  is  merely  a  reflection  of  that  of  its 
+creator  is  rather  similar  to  the  view  that  the  credit  for  the  discoveries  of  a  pupil 
+should  be  given  to  his  teacher.  In  such  a  case  the  teacher  would  be  pleased  with 
+
+
+412  I  Alan  Turing 
+
+the  success  of  his  methods  of  education,  but  would  not  claim  the  results 
+themselves  unless  he  had  actually  communicated  them  to  his  pupil.  He  would 
+certainly  have  envisaged  in  very  broad  outline  the  sort  of  thing  his  pupil  might  be 
+expected  to  do,  but  would  not  expect  to  foresee  any  sort  of  detail.  It  is  already 
+possible  to  produce  machines  where  this  sort  of  situation  arises  in  a  small  degree. 
+One  can  produce  ‘paper  machines’  for  playing  chess.  Playing  against  such  a 
+machine  gives  a  definite  feeling  that  one  is  pitting  one’s  wits  against  something 
+alive. 
+
+These  views  will  all  be  developed  more  completely  below. 
+
+
+3.  Varieties  of  machinery 
+
+
+It  will  not  be  possible  to  discuss  possible  means  of  producing  intelligent  ma¬ 
+chinery  without  introducing  a  number  of  technical  terms  to  describe  different 
+kinds  of  existent  machinery. 
+
+‘Discrete  and  ‘ Continuous ’  machinery.  We  may  call  a  machine  ‘discrete’  when  it 
+is  natural  to  describe  its  possible  states  as  a  discrete  set,  the  motion  of  the 
+machine  occurring  by  jumping  from  one  state  to  another.  The  states  of  ‘continu¬ 
+ous’  machinery  on  the  other  hand  form  a  continuous  manifold,  and  the  behav¬ 
+iour  of  the  machine  is  described  by  a  curve  on  this  manifold.  All  machinery  can 
+be  regarded  as  continuous,  but  when  it  is  possible  to  regard  it  as  discrete  it  is 
+usually  best  to  do  so.  The  states  of  discrete  machinery  will  be  described  as 
+‘configurations’. 
+
+‘ Controlling ’  and  ‘ Active ’  machinery.  Machinery  may  be  described  as  ‘control¬ 
+ling’  if  it  only  deals  with  information.  In  practice  this  condition  is  much  the  same 
+as  saying  that  the  magnitude  of  the  machine’s  effects  may  be  as  small  as  we 
+please,  so  long  as  we  do  not  introduce  confusion  through  Brownian  movement 
+etc.  ‘Active’  machinery  is  intended  to  produce  some  definite  physical  effect. 
+
+
+Examples  A  Bulldozer  is 
+A  Telephone  is 
+A  Brunsviga4  is 
+A  Brain  is  probably 
+
+The  ENIAC,  ACE  etc. 
+A  Differential  Analyser 
+
+
+Continuous  Active 
+Continuous  Controlling 
+Discrete  Controlling 
+Continuous  Controlling,  but  is  very 
+similar  to  much  discrete  machinery 
+Discrete  Controlling 
+Continuous  Controlling 
+
+
+We  shall  mainly  be  concerned  with  discrete  controlling  machinery.  As  we  have 
+mentioned,  brains  very  nearly  fall  into  this  class,  and  there  seems  every  reason  to 
+believe  that  they  could  have  been  made  to  fall  genuinely  into  it  without  any 
+change  in  their  essential  properties.  However,  the  property  of  being  ‘discrete’  is 
+
+
+4  Editor’s  note.  The  Brunsviga  was  a  popular  desk  calculating  machine. 
+
+
+Intelligent  Machinery  I  413 
+
+
+only  an  advantage  for  the  theoretical  investigator,  and  serves  no  evolutionary 
+purpose,  so  we  could  not  expect  Nature  to  assist  us  by  producing  truly  ‘discrete’ 
+brains. 
+
+Given  any  discrete  machine  the  first  thing  we  wish  to  find  out  about  it  is  the 
+number  of  states  (configurations)  it  can  have.  This  number  may  be  infinite  (but 
+enumerable)  in  which  case  we  say  that  the  machine  has  infinite  memory  (or 
+storage)  capacity.  If  the  machine  has  a  finite  number  N  of  possible  states  then  we 
+say  that  it  has  a  memory  capacity  of  (or  equivalent  to)  log,  N  binary  digits. 
+According  to  this  definition  we  have  the  following  table  of  capacities,  very  roughly 
+
+Brunsviga  90 
+
+ENIAC  without  cards  and  with  fixed  programme  600 
+
+ENIAC  with  cards  oo5 
+
+ACE  as  proposed  60,000 
+
+Manchester  machine  (as  actually  working  8/7/48)  1,100 
+
+The  memory  capacity  of  a  machine  more  than  anything  else  determines  the 
+complexity  of  its  possible  behaviour. 
+
+The  behaviour  of  a  discrete  machine  is  completely  described  when  we  are 
+given  the  state  (configuration)  of  the  machine  as  a  function  of  the  immediately 
+preceding  state  and  the  relevant  external  data. 
+
+Logical  Computing  Machines  (L.C.M.s) 
+
+In  [Chapter  1]  a  certain  type  of  discrete  machine  was  described.  It  had  an  infinite 
+memory  capacity  obtained  in  the  form  of  an  infinite  tape  marked  out  into 
+squares  on  each  of  which  a  symbol  could  be  printed.  At  any  moment  there  is 
+one  symbol  in  the  machine;  it  is  called  the  scanned  symbol.  The  machine  can 
+alter  the  scanned  symbol  and  its  behaviour  is  in  part  determined  by  that  symbol, 
+but  the  symbols  on  the  tape  elsewhere  do  not  affect  the  behaviour  of  the 
+machine.  However  the  tape  can  be  moved  back  and  forth  through  the  machine, 
+this  being  one  of  the  elementary  operations  of  the  machine.  Any  symbol  on  the 
+tape  may  therefore  eventually  have  an  innings. 
+
+These  machines  will  here  be  called  ‘Logical  Computing  Machines’.  They  are 
+chiefly  of  interest  when  we  wish  to  consider  what  a  machine  could  in  principle  be 
+designed  to  do,  when  we  are  willing  to  allow  it  both  unlimited  time  and 
+unlimited  storage  capacity. 
+
+Universal  Logical  Computing  Machines.  It  is  possible  to  describe  L.C.M.s  in  a 
+very  standard  way,  and  to  put  the  description  into  a  form  which  can  be 
+‘understood’  (i.e.  applied  by)  a  special  machine.  In  particular  it  is  possible  to 
+design  a  ‘universal  machine’  which  is  an  L.C.M.  such  that  if  the  standard 
+
+
+5  Editor’s  note.  The  symbol  ‘oo’  is  omitted  from  the  original  1948  NPL  Report  and  from  the  1968  and 
+1969  editions.  It  is  present  in  Turing’s  draft  typescript. 
+
+
+414  I  Alan  Turing 
+
+
+description  of  some  other  L.C.M.  is  imposed  on  the  otherwise  blank  tape  from 
+outside,  and  the  (universal)  machine  then  set  going  it  will  carry  out  the  oper¬ 
+ations  of  the  particular  machine  whose  description  it  was  given.  For  details  the 
+reader  must  refer  to  [Chapter  1], 
+
+The  importance  of  the  universal  machine  is  clear.  We  do  not  need  to  have  an 
+infinity  of  different  machines  doing  different  jobs.  A  single  one  will  suffice.  The 
+engineering  problem  of  producing  various  machines  for  various  jobs  is  replaced 
+by  the  office  work  of  ‘programming’  the  universal  machine  to  do  these  jobs. 
+
+It  is  found  in  practice  that  L.C.M. s  can  do  anything  that  could  be  described  as 
+‘rule  of  thumb’  or  ‘purely  mechanical’.  This  is  sufficiently  well  established  that  it 
+is  now  agreed  amongst  logicians  that  ‘calculable  by  means  of  an  L.C.M.’  is  the 
+correct  accurate  rendering  of  such  phrases.  There  are  several  mathematically 
+equivalent  but  superficially  very  different  renderings. 
+
+Practical  Computing  Machines  (P.C.M.s) 
+
+Although  the  operations  which  can  be  performed  by  L.C.M. s  include  every  rule 
+of  thumb  process,  the  number  of  steps  involved  tends  to  be  enormous.  This  is 
+mainly  due  to  the  arrangement  of  the  memory  along  the  tape.  Two  facts  which 
+need  to  be  used  together  may  be  stored  very  far  apart  on  the  tape.  There  is  also 
+rather  little  encouragement,  when  dealing  with  these  machines,  to  condense  the 
+stored  expressions  at  all.  For  instance  the  number  of  symbols  required  in  order  to 
+express  a  number  in  Arabic  form  (e.g.  149056)  cannot  be  given  any  definite 
+bound,  any  more  than  if  the  numbers  are  expressed  in  the  ‘simplified  Roman’ 
+form  (IIIII ...  I,  with  149056  occurrences  of  I).  As  the  simplified  Roman  system 
+obeys  very  much  simpler  laws  one  uses  it  instead  of  the  Arabic  system. 
+
+In  practice  however  one  can  assign  finite  bounds  to  the  numbers  that  one  will 
+deal  with.  For  instance  we  can  assign  a  bound  to  the  number  of  steps  that  we  will 
+admit  in  a  calculation  performed  with  a  real  machine  in  the  following  sort  of 
+way.  Suppose  that  the  storage  system  depends  on  charging  condensers  of  cap¬ 
+acity  C  =  1  /if,6 7  and  that  we  use  two  states  of  charging,  E  =  100  volts  and 
+— E  =  —100  volts.  When  we  wish  to  use  the  information  carried  by  the  con¬ 
+denser  we  have  to  observe  its  voltage.  Owing  to  thermal  agitation  the  voltage 
+observed  will  always  be  slightly  wrong,  and  the  probability  of  an  error  between  V 
+and  V  —  dV  volts  is 
+
+V  7 rC 
+
+where  k  is  Boltzmann’s  constant.  Taking  the  values  suggested  we  find  that  the 
+probability  of  reading  the  sign  of  the  voltage  wrong  is  about  io_1'2xl°16.  If  then  a 
+
+
+6  Editor’s  note.  |xf  =  micro-farad. 
+
+7  Editor’s  note.  This  formula  is  taken  from  Turing’s  draft  typescript. 
+
+
+Intelligent  Machinery  I  415 
+
+
+job  took  more  than  lO10*7  steps  we  should  be  virtually  certain  of  getting  the 
+wrong  answer,  and  we  may  therefore  restrict  ourselves  to  jobs  with  fewer  steps. 
+Even  a  bound  of  this  order  might  have  useful  simplifying  effects.  More  practical 
+bounds  are  obtained  by  assuming  that  a  light  wave  must  travel  at  least  1  cm 
+between  steps  (this  would  only  be  false  with  a  very  small  machine)  and  that  we 
+could  not  wait  more  than  100  years  for  an  answer.  This  would  give  a  limit  of  1020 
+steps.  The  storage  capacity  will  probably  have  a  rather  similar  bound,  so  that  we 
+could  use  sequences  of  20  decimal  digits  for  describing  the  position  in  which 
+a  given  piece  of  data  was  to  be  found,  and  this  would  be  a  really  valuable 
+possibility. 
+
+Machines  of  the  type  generally  known  as  ‘Automatic  Digital  Computing 
+Machines’  often  make  great  use  of  this  possibility.  They  also  usually  put  a  great 
+deal  of  their  stored  information  in  a  form  very  different  from  the  tape  form.  By 
+means  of  a  system  rather  reminiscent  of  a  telephone  exchange  it  is  made  possible 
+to  obtain  a  piece  of  information  almost  immediately  by  ‘dialling’  the  position 
+of  this  information  in  the  store.  The  delay  may  be  only  a  few  microseconds 
+with  some  systems.  Such  machines  will  be  described  as  ‘Practical  Computing 
+Machines’. 
+
+Universal  Practical  Computing  Machines 
+
+Nearly  all  of  the  P.C.M.s  now  under  construction  have  the  essential  properties  of 
+the  ‘Universal  Logical  Computing’  machines  mentioned  earlier.  In  practice,  given 
+any  job  which  could  have  been  done  on  an  L.C.M.  one  can  also  do  it  on  one  of 
+these  digital  computers.  I  do  not  mean  that  we  can  design  a  digital  computer  to 
+do  it,  but  that  we  stick  to  one,  say  the  ACE,  and  that  we  can  do  any  required  job 
+of  the  type  mentioned  on  it,  by  suitable  programming.  The  programming  is  pure 
+paper  work.  It  naturally  occurs  to  one  to  ask  whether  e.g.  the  ACE  would  be  truly 
+universal  if  its  memory  capacity  were  infinitely  extended.  I  have  investigated  this 
+question,  and  the  answer  appears  to  be  as  follows,  though  I  have  not  proved  any 
+formal  mathematical  theorem  about  it.  As  has  been  explained,  the  ACE  at 
+present  uses  finite  sequences  of  digits  to  describe  positions  in  its  memory:  they 
+are  (Sept  1947)  actually  sequences  of  9  binary  digits.  The  ACE  also  works  largely 
+for  other  purposes  with  sequences  of  32  binary  digits.  If  the  memory  were 
+extended  e.g.  to  1000  times  its  present  capacity  it  would  be  natural  to  arrange 
+the  memory  in  blocks  of  nearly  the  maximum  capacity  which  can  be  handled 
+with  the  9  digits,  and  from  time  to  time  to  switch  from  block  to  block.  A 
+relatively  small  part  would  never  be  switched.  This  would  contain  some  of  the 
+more  fundamental  instruction  tables  and  those  concerned  with  switching.  This 
+part  might  be  called  the  ‘central  part’.  One  would  then  need  to  have  a  number 
+which  described  which  block  was  in  action  at  any  moment.  This  number  might 
+however  be  as  large  as  one  pleased.  Eventually  the  point  would  be  reached  where 
+it  could  not  be  stored  in  a  word  (32  digits),  or  even  in  the  central  part.  One 
+
+
+416  I  Alan  Turing 
+
+
+would  then  have  to  set  aside  a  block  for  storing  the  number,  or  even  a  sequence 
+of  blocks,  say  blocks  1,  2, ...  n.  We  should  then  have  to  store  «,  and  in  theory  it 
+would  be  of  indefinite  size.  This  sort  of  process  can  be  extended  in  all  sorts  of 
+ways,  but  we  shall  always  be  left  with  a  positive  integer  which  is  of  indefinite  size 
+and  which  needs  to  be  stored  somewhere,  and  there  seems  to  be  no  way  out  of 
+the  difficulty  but  to  introduce  a  ‘tape’.  But  once  this  has  been  done,  and  since  we 
+are  only  trying  to  prove  a  theoretical  result,  one  might  as  well,  whilst  proving  the 
+theorem,  ignore  all  the  other  forms  of  storage.  One  will  in  fact  have  a  U.L.C.M. 
+with  some  complications.  This  in  effect  means  that  one  will  not  be  able  to  prove 
+any  result  of  the  required  kind  which  gives  any  intellectual  satisfaction. 
+
+Paper  machines 
+
+It  is  possible  to  produce  the  effect  of  a  computing  machine  by  writing  down  a 
+set  of  rules  of  procedure  and  asking  a  man  to  carry  them  out.  Such  a  combin¬ 
+ation  of  a  man  with  written  instructions  will  be  called  a  ‘Paper  Machine’.  A  man 
+provided  with  paper,  pencil,  and  rubber,  and  subject  to  strict  discipline,  is  in 
+effect  a  universal  machine.  The  expression  ‘paper  machine’  will  often  be  used 
+below. 
+
+Partially  random  and  apparently  partially  random  machines 
+It  is  possible  to  modify  the  above  described  types  of  discrete  machines  by 
+allowing  several  alternative  operations  to  be  applied  at  some  points,  the  alterna¬ 
+tives  to  be  chosen  by  a  random  process.  Such  a  machine  will  be  described  as 
+‘partially  random’.  If  we  wish  to  say  definitely  that  a  machine  is  not  of  this  kind 
+we  will  describe  it  as  ‘determined’.  Sometimes  a  machine  may  be  strictly  speaking 
+determined  but  appear  superficially  as  if  it  were  partially  random.  This  would 
+occur  if  for  instance  the  digits  of  the  number  n  were  used  to  determine  the 
+choices  of  a  partially  random  machine,  where  previously  a  dice  thrower  or 
+electronic  equivalent  had  been  used.  These  machines  are  known  as  apparently 
+partially  random. 
+
+4.  Unorganised  machines 
+
+So  far  we  have  been  considering  machines  which  are  designed  for  a  definite 
+purpose  (though  the  universal  machines  are  in  a  sense  an  exception).  We  might 
+instead  consider  what  happens  when  we  make  up  a  machine  in  a  comparatively 
+unsystematic  way  from  some  kind  of  standard  components.  We  could  consider 
+some  particular  machine  of  this  nature  and  find  out  what  sort  of  things  it  is  likely 
+to  do.  Machines  which  are  largely  random  in  their  construction  in  this  way  will 
+be  called  ‘unorganised  machines’.  This  does  not  pretend  to  be  an  accurate  term. 
+It  is  conceivable  that  the  same  machine  might  be  regarded  by  one  man  as 
+organised  and  by  another  as  unorganised. 
+
+
+Intelligent  Machinery  I  417 
+
+
+A  typical  example  of  an  unorganised  machine  would  be  as  follows.  The  machine 
+is  made  up  from  a  rather  large  number  N  of  similar  units.  Each  unit  has  two  input 
+terminals,  and  has  an  output  terminal  which  can  be  connected  to  the  input 
+terminals  of  (0  or  more)  other  units.  We  may  imagine  that  for  each  integer 
+r,  1  =£  r  =£  N,  two  numbers  i(r)  and  j(r)  are  chosen  at  random  from  1 ...  AT  and 
+that  we  connect  the  inputs  of  unit  rto  the  outputs  of  units  i(r)  and  j(r).  All  of  the 
+units  are  connected  to  a  central  synchronising  unit  from  which  synchronising 
+pulses  are  emitted  at  more  or  less  equal  intervals  of  time.  The  times  when  these 
+pulses  arrive  will  be  called  ‘moments’.  Each  unit  is  capable  of  having  two  states  at 
+each  moment.  These  states  may  be  called  0  and  1 .  The  state  is  determined  by  the 
+rule  that  the  states  of  the  units  from  which  the  input  leads  come  are  to  be  taken  at 
+the  previous  moment,  multiplied  together  and  the  result  subtracted  from  1.  An 
+unorganised  machine  of  this  character  is  shown  in  the  diagram  below. 
+
+
+A  sequence  of  six  possible  consecutive  conditions  for  the  whole  machine  is: 
+
+1110  0  10 
+2  1110  10 
+
+3  0  11111 
+
+4  0  10  10  1 
+
+5  10  10  10 
+
+The  behaviour  of  a  machine  with  so  few  units  is  naturally  very  trivial.  However, 
+machines  of  this  character  can  behave  in  a  very  complicated  manner  when  the 
+number  of  units  is  large.  We  may  call  these  A-type  unorganised  machines.  Thus 
+the  machine  in  the  diagram  is  an  A-type  unorganised  machine  of  5  units.  The 
+motion  of  an  A-type  machine  with  N  units  is  of  course  eventually  periodic,  as  is 
+any  determined  machine  with  finite  memory  capacity.  The  period  cannot  exceed 
+2n  moments,  nor  can  the  length  of  time  before  the  periodic  motion  begins.  In 
+
+
+418  I  Alan  Turing 
+
+
+the  example  above  the  period  is  2  moments  and  there  are  3  moments  before  the 
+periodic  motion  begins.  2N  is  32. 
+
+The  A-type  unorganised  machines  are  of  interest  as  being  about  the  simplest 
+model  of  a  nervous  system  with  a  random  arrangement  of  neurons.  It  would 
+therefore  be  of  very  great  interest  to  find  out  something  about  their  behaviour. 
+A  second  type  of  unorganised  machine  will  now  be  described,  not  because  it  is  of 
+any  great  intrinsic  importance,  but  because  it  will  be  useful  later  for  illustrative 
+purposes.  Let  us  denote  the  circuit 
+
+
+by 
+
+
+Figure  10.2. 
+
+
+HU 
+
+
+as  an  abbreviation.  Then  for  each  A-type  unorganised  machine  we  can  construct 
+another  machine  by  replacing  each  connection  — ►—  in  it  by  — Q — ►.  The 
+resulting  machines  will  be  called  B-type  unorganised  machines.  It  may  be  said 
+that  the  B-type  machines  are  all  A-type.  To  this  I  would  reply  that  the  above 
+definitions  if  correctly  (but  drily!)  set  out  would  take  the  form  of  describing  the 
+probability  of  an  A-  (or  B-)  type  machine  belonging  to  a  given  set;  it  is  not 
+merely  a  definition  of  which  are  the  A-type  machines  and  which  are  the  B-type 
+machines.  If  one  chooses  an  A-type  machine,  with  a  given  number  of  units,  at 
+random,  it  will  be  extremely  unlikely  that  one  will  get  a  B-type  machine. 
+
+It  is  easily  seen  that  the  connection  — *—□ — ►  can  have  three  conditions. 
+It  may  i)  pass  all  signals  through  with  interchange  of  0  and  1,  or  ii)  it  may 
+convert  all  signals  into  1,  or  again  iii)  it  may  act  as  in  i)  and  ii)  in  alternate 
+moments.  (Alternative  iii)  has  two  sub-cases.)  Which  of  these  cases  applies 
+depends  on  the  initial  conditions.  There  is  a  delay  of  two  moments  in  going 
+through  — *HZI — 
+
+
+5.  Interference  with  machinery.  Modifiable  and 
+self-modifying  machinery 
+
+The  types  of  machine  that  we  have  considered  so  far  are  mainly  ones  that  are 
+allowed  to  continue  in  their  own  way  for  indefinite  periods  without  interference 
+from  outside.  The  universal  machines  were  an  exception  to  this,  in  that  from 
+
+
+Intelligent  Machinery  I  419 
+
+
+time  to  time  one  might  change  the  description  of  the  machine  which  is  being 
+imitated.  We  shall  now  consider  machines  in  which  such  interference  is  the  rule 
+rather  than  the  exception. 
+
+We  may  distinguish  two  kinds  of  interference.  There  is  the  extreme  form 
+in  which  parts  of  the  machine  are  removed  and  replaced  by  others.  This 
+may  be  described  as  ‘screwdriver  interference’.  At  the  other  end  of  the  scale 
+is  ‘paper  interference’,  which  consists  in  the  mere  communication  of  information 
+to  the  machine,  which  alters  its  behaviour.  In  view  of  the  properties  of 
+the  universal  machine  we  do  not  need  to  consider  the  difference  between 
+these  two  kinds  of  machine  as  being  so  very  radical  after  all.  Paper  interference 
+when  applied  to  the  universal  machine  can  be  as  useful  as  screwdriver  inter¬ 
+ference. 
+
+We  shall  mainly  be  interested  in  paper  interference.  Since  screwdriver  interfer¬ 
+ence  can  produce  a  completely  new  machine  without  difficulty  there  is  rather 
+little  to  be  said  about  it.  In  future  ‘interference’  will  normally  mean  ‘paper 
+interference’. 
+
+When  it  is  possible  to  alter  the  behaviour  of  a  machine  very  radically  we  may 
+speak  of  the  machine  as  being  ‘modifiable’.  This  is  a  relative  term.  One  machine 
+may  be  spoken  of  as  being  more  modifiable  than  another. 
+
+One  may  also  sometimes  speak  of  a  machine  modifying  itself,  or  of  a  machine 
+changing  its  own  instructions.  This  is  really  a  nonsensical  form  of  phraseology, 
+but  is  convenient.  Of  course,  according  to  our  conventions  the  ‘machine’  is 
+completely  described  by  the  relation  between  its  possible  configurations  at  con¬ 
+secutive  moments.  It  is  an  abstraction  which  by  the  form  of  its  definition  cannot 
+change  in  time.  If  we  consider  the  machine  as  starting  in  a  particular  configura¬ 
+tion,  however,  we  may  be  tempted  to  ignore  those  configurations  which  cannot 
+be  reached  without  interference  from  it.  If  we  do  this  we  should  get  a  ‘successor 
+relation’  for  the  configurations  with  different  properties  from  the  original  one 
+and  so  a  different  ‘machine’. 
+
+If  we  now  consider  interference,  we  should  say  that  each  time  interference 
+occurs  the  machine  is  probably  changed.  It  is  in  this  sense  that  interference 
+‘modifies’  a  machine.  The  sense  in  which  a  machine  can  modify  itself  is  even 
+more  remote.  We  may  if  we  wish  divide  the  operations  of  the  machine  into  two 
+classes,  normal  and  self-modifying  operations.  So  long  as  only  normal  oper¬ 
+ations  are  performed  we  regard  the  machine  as  unaltered.  Clearly  the  idea  of 
+‘self-modification’  will  not  be  of  much  interest  except  where  the  division  of 
+operations  into  the  two  classes  is  very  carefully  made.  The  sort  of  case  I  have  in 
+mind  is  a  computing  machine  like  the  ACE  where  large  parts  of  the  storage  are 
+normally  occupied  in  holding  instruction  tables.  (Instruction  tables  are  the 
+equivalent  in  U.P.C.M.s  of  descriptions  of  machines  in  U.L.C.M.s).  Whenever 
+the  content  of  this  storage  was  altered  by  the  internal  operations  of  the  machine, 
+one  would  naturally  speak  of  the  machine  ‘modifying  itself’. 
+
+
+420  I  Alan  Turing 
+
+
+6.  Man  as  a  machine 
+
+A  great  positive  reason  for  believing  in  the  possibility  of  making  thinking  machin¬ 
+ery  is  the  fact  that  it  is  possible  to  make  machinery  to  imitate  any  small  part  of  a 
+man.  That  the  microphone  does  this  for  the  ear,  and  the  television  camera  for  the 
+eye,  are  commonplaces.  One  can  also  produce  remote  controlled  Robots  whose 
+limbs  balance  the  body  with  the  aid  of  servo-mechanisms.  Here  we  are  chiefly 
+interested  in  the  nervous  system.  We  could  produce  fairly  accurate  electrical 
+models  to  copy  the  behaviour  of  nerves,  but  there  seems  very  little  point  in 
+doing  so.  It  would  be  rather  like  putting  a  lot  of  work  into  cars  which  walked  on 
+legs  instead  of  continuing  to  use  wheels.  The  electrical  circuits  which  are  used  in 
+electronic  computing  machinery  seem  to  have  the  essential  properties  of  nerves. 
+They  are  able  to  transmit  information  from  place  to  place,  and  also  to  store  it. 
+Certainly  the  nerve  has  many  advantages.  It  is  extremely  compact,  does  not  wear 
+out  (probably  for  hundreds  of  years  if  kept  in  a  suitable  medium!)  and  has  a  very 
+low  energy  consumption.  Against  these  advantages  the  electronic  circuits  have 
+only  one  counter  attraction,  that  of  speed.  This  advantage  is  however  on  such  a 
+scale  that  it  may  possibly  outweigh  the  advantages  of  the  nerve. 
+
+One  way  of  setting  about  our  task  of  building  a  ‘thinking  machine’  would  be 
+to  take  a  man  as  a  whole  and  to  try  to  replace  all  the  parts  of  him  by  machinery. 
+He  would  include  television  cameras,  microphones,  loudspeakers,  wheels  and 
+‘handling  servo-mechanisms’  as  well  as  some  sort  of  ‘electronic  brain’.  This 
+would  of  course  be  a  tremendous  undertaking.  The  object  if  produced  by  present 
+techniques  would  be  of  immense  size,  even  if  the  ‘brain’  part  were  stationary  and 
+controlled  the  body  from  a  distance.  In  order  that  the  machine  should  have  a 
+chance  of  finding  things  out  for  itself  it  should  be  allowed  to  roam  the  country¬ 
+side,  and  the  danger  to  the  ordinary  citizen  would  be  serious.  Moreover  even 
+when  the  facilities  mentioned  above  were  provided,  the  creature  would  still  have 
+no  contact  with  food,  sex,  sport  and  many  other  things  of  interest  to  the  human 
+being.  Thus  although  this  method  is  probably  the  ‘sure’  way  of  producing  a 
+thinking  machine  it  seems  to  be  altogether  too  slow  and  impracticable. 
+
+Instead  we  propose  to  try  and  see  what  can  be  done  with  a  ‘brain’  which  is 
+more  or  less  without  a  body,  providing  at  most  organs  of  sight,  speech  and 
+hearing.  We  are  then  faced  with  the  problem  of  finding  suitable  branches  of 
+thought  for  the  machine  to  exercise  its  powers  in.  The  following  fields  appear  to 
+me  to  have  advantages: 
+
+(i)  Various  games  e.g.  chess,  noughts  and  crosses,  bridge,  poker 
+
+(ii)  The  learning  of  languages 
+
+(iii)  Translation  of  languages 
+
+(iv)  Cryptography 
+
+(v)  Mathematics. 
+
+
+Intelligent  Machinery  I  421 
+
+
+Of  these  (i),  (iv),  and  to  a  lesser  extent  (iii)  and  (v)  are  good  in  that  they  require 
+little  contact  with  the  outside  world.  For  instance  in  order  that  the  machine 
+should  be  able  to  play  chess  its  only  organs  need  be  ‘eyes’  capable  of  distinguish¬ 
+ing  the  various  positions  on  a  specially  made  board,  and  means  for  announcing 
+its  own  moves.  Mathematics  should  preferably  be  restricted  to  branches  where 
+diagrams  are  not  much  used.  Of  the  above  possible  fields  the  learning  of 
+languages  would  be  the  most  impressive,  since  it  is  the  most  human  of  these 
+activities.  This  field  seems  however  to  depend  rather  too  much  on  sense  organs 
+and  locomotion  to  be  feasible. 
+
+The  field  of  cryptography  will  perhaps  be  the  most  rewarding.  There  is  a 
+remarkably  close  parallel  between  the  problems  of  the  physicist  and  those  of  the 
+cryptographer.  The  system  on  which  a  message  is  enciphered  corresponds  to  the 
+laws  of  the  universe,  the  intercepted  messages  to  the  evidence  available,  the  keys 
+for  a  day  or  a  message  to  important  constants  which  have  to  be  determined.  The 
+correspondence  is  very  close,  but  the  subject  matter  of  cryptography  is  very  easily 
+dealt  with  by  discrete  machinery,  physics  not  so  easily. 
+
+
+7.  Education  of  machinery 
+
+Although  we  have  abandoned  the  plan  to  make  a  ‘whole  man’,  we  should  be  wise 
+to  sometimes  compare  the  circumstances  of  our  machine  with  those  of  a  man.  It 
+would  be  quite  unfair  to  expect  a  machine  straight  from  the  factory  to  compete 
+on  equal  terms  with  a  university  graduate.  The  graduate  has  had  contact  with 
+human  beings  for  twenty  years  or  more.  This  contact  has  throughout  that  period 
+been  modifying  his  behaviour  pattern.  His  teachers  have  been  intentionally 
+trying  to  modify  it.  At  the  end  of  the  period  a  large  number  of  standard  routines 
+will  have  been  superimposed  on  the  original  pattern  of  his  brain.  These  routines 
+will  be  known  to  the  community  as  a  whole.  He  is  then  in  a  position  to  try  out 
+new  combinations  of  these  routines,  to  make  slight  variations  on  them,  and  to 
+apply  them  in  new  ways. 
+
+We  may  say  then  that  in  so  far  as  a  man  is  a  machine  he  is  one  that  is  subject  to  very 
+much  interference.  In  fact  interference  will  be  the  rule  rather  than  the  exception.  He 
+is  in  frequent  communication  with  other  men,  and  is  continually  receiving  visual 
+and  other  stimuli  which  themselves  constitute  a  form  of  interference.  It  will  only  be 
+when  the  man  is  ‘concentrating’  with  a  view  to  eliminating  these  stimuli  or 
+‘distractions’  that  he  approximates  a  machine  without  interference. 
+
+We  are  chiefly  interested  in  machines  with  comparatively  little  interference,  for 
+reasons  given  in  the  last  section,  but  it  is  important  to  remember  that  although  a 
+man  when  concentrating  may  behave  like  a  machine  without  interference,  his 
+behaviour  when  concentrating  is  largely  determined  by  the  way  he  has  been 
+conditioned  by  previous  interference. 
+
+
+422  I  Alan  Turing 
+
+
+If  we  are  trying  to  produce  an  intelligent  machine,  and  are  following  the  human 
+model  as  closely  as  we  can,  we  should  begin  with  a  machine  with  very  little  capacity 
+to  carry  out  elaborate  operations  or  to  react  in  a  disciplined  manner  to  orders 
+(taking  the  form  of  interference).  Then  by  applying  appropriate  interference, 
+mimicking  education,  we  should  hope  to  modify  the  machine  until  it  could  be 
+relied  on  to  produce  definite  reactions  to  certain  commands.  This  would  be  the 
+beginning  of  the  process.  I  will  not  attempt  to  follow  it  further  now. 
+
+
+8.  Organising  unorganised  machinery 
+
+Many  unorganised  machines  have  configurations  such  that  if  once  that  con¬ 
+figuration  is  reached,  and  if  the  interference  thereafter  is  appropriately  restricted, 
+the  machine  behaves  as  one  organised  for  some  definite  purpose.  For  instance 
+the  B-type  machine  shown  below  was  chosen  at  random. 
+
+
+If  the  connections  numbered  1,  3,  6,  4  are  in  condition  ii)  initially  and  connec¬ 
+tions  2,  5,  7  are  in  condition  i),  then  the  machine  may  be  considered  to  be  one 
+for  the  purpose  of  passing  on  signals  with  a  delay  of  4  moments.  This  is  a 
+particular  case  of  a  very  general  property  of  B-type  machines  (and  many  other 
+types),  viz.  that  with  suitable  initial  conditions  they  will  do  any  required  job, 
+given  sufficient  time  and  provided  the  number  of  units  is  sufficient.  In  particular 
+with  a  B-type  unorganised  machine  with  sufficient  units  one  can  find  initial 
+conditions  which  will  make  it  into  a  universal  machine  with  a  given  storage 
+capacity.  (A  formal  proof  to  this  effect  might  be  of  some  interest,  or  even  a 
+demonstration  of  it  starting  with  a  particular  unorganised  B-type  machine,  but  I 
+am  not  giving  it  as  it  lies  rather  too  far  outside  the  main  argument.) 
+
+With  these  B-type  machines  the  possibility  of  interference  which  could  set  in 
+appropriate  initial  conditions  has  not  been  arranged  for.  It  is  however  not 
+difficult  to  think  of  appropriate  methods  by  which  this  could  be  done.  For 
+instance  instead  of  the  connection 
+
+
+Intelligent  Machinery  I  423 
+
+
+one  might  use 
+
+
+Figure  10.4. 
+
+
+Figure  10.5. 
+
+Here  A,  B  are  interfering  inputs,  normally  giving  the  signal  ‘1’.  By  supplying 
+appropriate  other  signals  at  A,  B  we  can  get  the  connection  into  condition  i)  or 
+ii)  or  either  form  of  iii),  as  desired.  However,  this  requires  two  special  interfering 
+inputs  for  each  connection. 
+
+We  shall  be  mainly  interested  in  cases  where  there  are  only  quite  few  inde¬ 
+pendent  inputs  altogether,  so  that  all  the  interference  which  sets  up  the  ‘initial 
+conditions’  of  the  machine  has  to  be  provided  through  one  or  two  inputs.  The 
+process  of  setting  up  these  initial  conditions  so  that  the  machine  will  carry  out 
+some  particular  useful  task  may  be  called  ‘organising  the  machine’.  ‘Organising’ 
+is  thus  a  form  of  ‘modification’. 
+
+
+9.  The  cortex  as  an  unorganised  machine 
+
+Many  parts  of  a  man’s  brain  are  definite  nerve  circuits  required  for  quite  definite 
+purposes.  Examples  of  these  are  the  ‘centres’  which  control  respiration,  sneezing, 
+following  moving  objects  with  the  eyes,  etc.:  all  the  reflexes  proper  (not  ‘condi¬ 
+tioned’)  are  due  to  the  activities  of  these  definite  structures  in  the  brain.  Likewise 
+the  apparatus  for  the  more  elementary  analysis  of  shapes  and  sounds  probably 
+comes  into  this  category.  But  the  more  intellectual  activities  of  the  brain  are  too 
+
+
+424  I  Alan  Turing 
+
+
+varied  to  be  managed  on  this  basis.  The  difference  between  the  languages  spoken 
+on  the  two  sides  of  the  Channel  is  not  due  to  differences  in  development  of  the 
+French-speaking  and  English-speaking  parts  of  the  brain.  It  is  due  to  the  linguis¬ 
+tic  parts  having  been  subjected  to  different  training.  We  believe  then  that  there 
+are  large  parts  of  the  brain,  chiefly  in  the  cortex,  whose  function  is  largely 
+indeterminate.  In  the  infant  these  parts  do  not  have  much  effect:  the  effect 
+they  have  is  uncoordinated.  In  the  adult  they  have  great  and  purposive  effect: 
+the  form  of  this  effect  depends  on  the  training  in  childhood.  A  large  remnant  of 
+the  random  behaviour  of  infancy  remains  in  the  adult. 
+
+All  of  this  suggests  that  the  cortex  of  the  infant  is  an  unorganised  machine,  which 
+can  be  organised  by  suitable  interfering  training.  The  organising  might  result  in  the 
+modification  of  the  machine  into  a  universal  machine  or  something  like  it.  This 
+would  mean  that  the  adult  will  obey  orders  given  in  appropriate  language,  even  if 
+they  were  very  complicated;  he  would  have  no  common  sense,  and  would  obey  the 
+most  ridiculous  orders  unflinchingly.  When  all  his  orders  had  been  fulfilled  he 
+would  sink  into  a  comatose  state  or  perhaps  obey  some  standing  order,  such  as 
+eating.  Creatures  not  unlike  this  can  really  be  found,  but  most  people  behave  quite 
+differently  under  many  circumstances.  However  the  resemblance  to  a  universal 
+machine  is  still  very  great,  and  suggests  to  us  that  the  step  from  the  unorganised 
+infant  to  a  universal  machine  is  one  which  should  be  understood.  When  this  has 
+been  mastered  we  shall  be  in  a  far  better  position  to  consider  how  the  organising 
+process  might  have  been  modified  to  produce  a  more  normal  type  of  mind. 
+
+This  picture  of  the  cortex  as  an  unorganised  machine  is  very  satisfactory  from 
+the  point  of  view  of  evolution  and  genetics.  It  clearly  would  not  require  any  very 
+complex  system  of  genes  to  produce  something  like  the  A-  or  B-type  unorganised 
+machine.  In  fact  this  should  be  much  easier  than  the  production  of  such  things  as 
+the  respiratory  centre.  This  might  suggest  that  intelligent  races  could  be  pro¬ 
+duced  comparatively  easily.  I  think  this  is  wrong  because  the  possession  of  a 
+human  cortex  (say)  would  be  virtually  useless  if  no  attempt  was  made  to  organise 
+it.  Thus  if  a  wolf  by  a  mutation  acquired  a  human  cortex  there  is  little  reason  to 
+believe  that  he  would  have  any  selective  advantage.  If  however  the  mutation 
+occurred  in  a  milieu  where  speech  had  developed  (parrot-like  wolves),  and  if  the 
+mutation  by  chance  had  well  permeated  a  small  community,  then  some  selective 
+advantage  might  be  felt.  It  would  then  be  possible  to  pass  information  on  from 
+generation  to  generation.  However  this  is  all  rather  speculative. 
+
+
+10.  Experiments  in  organising.  Pleasure-pain  systems 
+
+It  is  interesting  to  experiment  with  unorganised  machines  admitting  definite 
+types  of  interference  and  trying  to  organize  them,  e.g.  to  modify  them  into 
+universal  machines. 
+
+
+Intelligent  Machinery  I  425 
+
+
+The  organisation  of  a  machine  into  a  universal  machine  would  be  most 
+impressive  if  the  arrangements  of  interference  involve  very  few  inputs.  The 
+training  of  the  human  child  depends  largely  on  a  system  of  rewards  and  punish¬ 
+ments,  and  this  suggests  that  it  ought  to  be  possible  to  carry  through  the 
+organising  with  only  two  interfering  inputs,  one  for  ‘pleasure’  or  ‘reward’  (R) 
+and  the  other  for  ‘pain’  or  ‘punishment’  (P).  One  can  devise  a  large  number  of 
+such  ‘pleasure-pain’  systems.  I  will  use  this  term  to  mean  an  unorganised 
+machine  of  the  following  general  character: 
+
+The  configurations  of  the  machine  are  described  by  two  expressions,  which  we 
+may  call  the  character-expression  and  the  situation-expression.  The  character 
+and  situation  at  any  moment,  together  with  the  input  signals,  determine  the 
+character  and  situation  at  the  next  moment.  The  character  may  be  subject  to 
+some  random  variation.  Pleasure  interference  has  a  tendency  to  fix  the  character 
+i.e.  towards  preventing  it  changing,  whereas  pain  stimuli  tend  to  disrupt  the 
+character,  causing  features  which  had  become  fixed  to  change,  or  to  become 
+again  subject  to  random  variation. 
+
+This  definition  is  probably  too  vague  and  general  to  be  very  helpful.  The  idea 
+is  that  when  the  ‘character’  changes  we  like  to  think  of  it  as  a  change  in  the 
+machine,  but  the  ‘situation’  is  merely  the  configuration  of  the  machine  described 
+by  the  character.  It  is  intended  that  pain  stimuli  occur  when  the  machine’s 
+behaviour  is  wrong,  pleasure  stimuli  when  it  is  particularly  right.  With  appro¬ 
+priate  stimuli  on  these  lines,  judiciously  operated  by  the  ‘teacher’,  one  may  hope 
+that  the  ‘character’  will  converge  towards  the  one  desired,  i.e.  that  wrong  behav¬ 
+iour  will  tend  to  become  rare. 
+
+I  have  investigated  a  particular  type  of  pleasure-pain  system,  which  I  will  now 
+describe. 
+
+
+11.  The  P-type  unorganised  machine 
+
+The  P-type  machine  may  be  regarded  as  an  L.C.M.  without  a  tape,  and  whose 
+description  is  largely  incomplete.  When  a  configuration  is  reached  for  which  the 
+action  is  undetermined,  a  random  choice  for  the  missing  data  is  made  and  the 
+appropriate  entry  is  made  in  the  description,  tentatively,  and  is  applied.  When  a 
+pain  stimulus  occurs  all  tentative  entries  are  cancelled,  and  when  a  pleasure 
+stimulus  occurs  they  are  all  made  permanent. 
+
+Specifically.  The  situation  is  a  number  s  =  1,  2,  . . . ,  N  and  corresponds  to 
+the  configuration  of  the  incomplete  machine.  The  character  is  a  table  of  N  entries 
+showing  the  behaviour  of  the  machine  in  each  situation.  Each  entry  has  to  say 
+something  both  about  the  next  situation  and  about  what  action  the  machine  has 
+to  take.  The  action  part  may  be  either 
+
+(i)  To  do  some  externally  visible  act  Ai  or  A2 . . .  A^ 
+
+
+426  I  Alan  Turing 
+
+
+(ii)  To  set  one  of  the  memory  units  Mi  . . .  either  into  the  ‘1’  condition  or 
+into  the  ‘0’  condition. 
+
+The  next  situation  is  always  the  remainder  either  of  2s  or  of  2s  +  1  on  division 
+by  N.  These  may  be  called  alternatives  0  and  1 .  Which  alternative  applies  may  be 
+determined  by  either 
+
+(a)  One  of  the  memory  units 
+
+(b)  A  sense  stimulus 
+
+(c)  The  pleasure-pain  arrangements. 
+
+In  each  situation  it  is  determined  which  of  these  applies  when  the  machine  is 
+made,  i.e.  interference  cannot  alter  which  of  the  three  cases  applies.  Also  in  cases 
+(a)  and  (b)  interference  can  have  no  effect.  In  case  (c)  the  entry  in  the  character 
+table  maybe  either  U  (‘uncertain’),  or  TO  (tentative  0),  Tl,  DO  (definite  0)  or  Dl. 
+When  the  entry  in  the  character  for  the  current  situation  is  U  then  the  alternative 
+is  chosen  at  random,  and  the  entry  in  the  character  is  changed  to  TO  or  Tl 
+according  as  0  or  1  was  chosen.  If  the  character  entry  was  TO  or  DO  then  the 
+alternative  is  0  and  if  it  is  Tl  or  Dl  then  the  alternative  is  1.  The  changes  in 
+character  include  the  above  mentioned  change  from  U  to  TO  or  Tl,  and  a  change 
+of  every  T  to  D  when  a  pleasure  stimulus  occurs,  changes  of  TO  and  Tl  to  U 
+when  a  pain  stimulus  occurs. 
+
+We  may  imagine  the  memory  units  essentially  as  ‘trigger  circuits’  or  switches. 
+The  sense  stimuli  are  means  by  which  the  teacher  communicates  ‘unemotionally’ 
+to  the  machine,  i.e.  otherwise  than  by  pleasure  and  pain  stimuli.  There  are  a 
+finite  number  5  of  sense  stimulus  lines,  and  each  always  carries  either  the  signal  0 
+or  1. 
+
+A  small  P-type  machine  is  described  in  the  table  below 
+
+1  P  A 
+
+2  P  B  Mi  =  1 
+
+3  P  B 
+
+4  Si  A  Mi  =  0 
+
+5  Mi  C 
+
+In  this  machine  there  is  only  one  memory  unit  Mi  and  one  sense  line  Si.  Its 
+behaviour  can  be  described  by  giving  the  successive  situations  together  with  the 
+actions  of  the  teacher:  the  latter  consist  of  the  values  of  Si  and  the  rewards  and 
+punishments.  At  any  moment  the  ‘character’  consists  of  the  above  table  with 
+each  ‘P’  replaced  by  either  U,  TO,  Tl,  DO  or  Dl.  In  working  out  the  behaviour  of 
+the  machine  it  is  convenient  first  of  all  to  make  up  a  sequence  of  random  digits 
+for  use  when  the  U  cases  occur.  Underneath  these  we  may  write  the  sequence  of 
+situations,  and  have  other  rows  for  the  corresponding  entries  from  the  character, 
+and  for  the  actions  of  the  teacher.  The  character  and  the  values  stored  in  the 
+
+
+Intelligent  Machinery  I  427 
+
+
+memory  units  may  be  kept  on  another  sheet.  The  T  entries  may  be  made  in 
+pencil  and  the  D  entries  in  ink.  A  bit  of  the  behaviour  of  the  machine  is  given 
+below: 
+
+
+Random  sequence 
+Situations 
+
+Alternative  given  by 
+
+Visible  action 
+Rew.  &  Pun. 
+Changes  in  Sj 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+U 
+
+T 
+
+T 
+
+T 
+
+T 
+
+T 
+
+U 
+
+U 
+
+S 
+
+S 
+
+S 
+
+U 
+
+T 
+
+
+
+
+
+
+
+
+
+
+B 
+
+A 
+
+B 
+
+A 
+
+B 
+
+A 
+
+B 
+
+A 
+
+B 
+
+A 
+
+A 
+
+A 
+
+B 
+
+B 
+
+P 
+
+
+1  0 
+
+
+0  0  0 
+
+
+It  will  be  noticed  that  the  machine  very  soon  got  into  a  repetitive  cycle.  This 
+became  externally  visible  through  the  repetitive  BABAB ...  By  means  of  a  pain 
+stimulus  this  cycle  was  broken. 
+
+It  is  probably  possible  to  organise  these  P-type  machines  into  universal 
+machines,  but  it  is  not  easy  because  of  the  form  of  memory  available.  It  would 
+be  necessary  to  organise  the  randomly  distributed  ‘memory  units’  to  provide  a 
+systematic  form  of  memory,  and  this  would  not  be  easy.  If,  however,  we  supply 
+the  P-type  machine  with  a  systematic  external  memory  this  organising  becomes 
+quite  feasible.  Such  a  memory  could  be  provided  in  the  form  of  a  tape,  and  the 
+externally  visible  operations  could  include  movement  to  right  and  left  along  the 
+tape,  and  altering  the  symbol  on  the  tape  to  0  or  to  1.  The  sense  lines  could 
+include  one  from  the  symbol  on  the  tape.  Alternatively,  if  the  memory  were  to  be 
+finite,  e.g.  not  more  than  232  binary  digits,  we  could  use  a  dialling  system. 
+(Dialling  systems  can  also  be  used  with  an  infinite  memory,  but  this  is  not  of 
+much  practical  interest.)  I  have  succeeded  in  organising  such  a  (paper)  machine 
+into  a  universal  machine. 
+
+The  details  of  the  machine  involved  were  as  follows.  There  was  a  circular 
+memory  consisting  of  64  squares  of  which  at  any  moment  one  was  in  the 
+machine  (‘scanned’)  and  motion  to  right  or  left  were  among  the  ‘visible  actions’. 
+Changing  the  symbol  on  the  square  was  another  ‘visible  action’,  and  the  symbol 
+was  connected  to  one  of  the  sense  lines  Si.  The  even-numbered  squares  also  had 
+another  function,  they  controlled  the  dialling  of  information  to  or  from  the  main 
+memory.  This  main  memory  consisted  of  232  binary  digits.  At  any  moment 
+one  of  these  digits  was  connected  to  the  sense  line  S2.  The  digit  of  the  main 
+memory  concerned  was  that  indicated  by  the  32  even  positioned  digits  of  the 
+circular  memory.  Another  two  of  the  ‘visible  actions’  were  printing  0  or  1  in 
+this  square  of  the  main  memory.  There  were  also  three  ordinary  memory  units 
+and  three  sense  units  S3,  S4,  S5.  Also  six  other  externally  visible  actions  A,  B,  C, 
+D,  E,  F. 
+
+This  P-type  machine  with  external  memory  has,  it  must  be  admitted,  con¬ 
+siderably  more  ‘organisation’  than  say  the  A-type  unorganised  machine. 
+
+
+428  I  Alan  Turing 
+
+
+Nevertheless  the  fact  that  it  can  be  organised  into  a  universal  machine  still 
+remains  interesting. 
+
+The  actual  technique  by  which  the  ‘organising’  of  the  P-type  machine  was 
+carried  through  is  perhaps  a  little  disappointing.  It  is  not  sufficiently  analogous 
+to  the  kind  of  process  by  which  a  child  would  really  be  taught.  The  process 
+actually  adopted  was  first  to  let  the  machine  run  for  a  long  time  with  continuous 
+application  of  pain,  and  with  various  changes  of  the  sense  data  S3,  S4)  S5. 
+Observation  of  the  sequence  of  externally  visible  actions  for  some  thousands  of 
+moments  made  it  possible  to  set  up  a  scheme  for  identifying  the  situations,  i.e.  by 
+which  one  could  at  any  moment  find  out  what  the  situation  was,  except  that  the 
+situations  as  a  whole  had  been  renamed.  A  similar  investigation,  with  less  use  of 
+punishment,  enables  one  to  find  the  situations  which  are  affected  by  the  sense 
+lines;  the  data  about  the  situations  involving  the  memory  units  can  also  be  found 
+but  with  more  difficulty.  At  this  stage  the  character  has  been  reconstructed.  There 
+are  no  occurrences  of  TO,  Tl,  DO,  Dl.  The  next  stage  is  to  think  up  some  way  of 
+replacing  the  Us  of  the  character  by  DO,  Dl  in  such  a  way  as  to  give  the  desired 
+modification.  This  will  normally  be  possible  with  the  suggested  number  of 
+situations  (1000),  memory  units  etc.  The  final  stage  is  the  conversion  of  the 
+character  into  the  chosen  one.  This  may  be  done  simply  by  allowing  the  machine 
+to  wander  at  random  through  a  sequence  of  situations,  and  applying  pain  stimuli 
+when  the  wrong  choice  is  made,  pleasure  stimuli  when  the  right  one  is  made.  It  is 
+best  also  to  apply  pain  stimuli  when  irrelevant  choices  are  made.  This  is  to 
+prevent  getting  isolated  in  a  ring  of  irrelevant  situations.  The  machine  is  now 
+‘ready  for  use’. 
+
+The  form  of  universal  machine  actually  produced  in  this  process  was  as 
+follows.  Each  instruction  consisted  of  128  digits,  which  we  may  regard  as  forming 
+four  sets  of  32  each  of  which  describes  one  place  in  the  main  memory.  These 
+places  may  be  called  P,  Q,  R,  S.  The  meaning  of  the  instruction  is  that  if  p  is  the 
+digit  at  P  and  q  that  at  Q  then  1  —  is  to  be  transferred  to  position  R  and  that 
+the  next  instruction  will  be  found  in  the  128  digits  beginning  at  S.  This  gives  a 
+U.P.C.M.,  though  with  rather  less  facilities  than  are  available  say  on  the  ACE. 
+
+I  feel  that  more  should  be  done  on  these  lines.  I  would  like  to  investigate  other 
+types  of  unorganised  machine,  and  also  to  try  out  organising  methods  that 
+would  be  more  nearly  analogous  to  our  ‘methods  of  education’.  I  made  a  start 
+on  the  latter  but  found  the  work  altogether  too  laborious  at  present.  When  some 
+electronic  machines  are  in  actual  operation  I  hope  that  they  will  make  this  more 
+feasible.  It  should  be  easy  to  make  a  model  of  any  particular  machine  that  one 
+wishes  to  work  on  within  such  a  U.P.C.M.  instead  of  having  to  work  with  a  paper 
+machine  as  at  present.  If  also  one  decided  on  quite  definite  ‘teaching  policies’ 
+these  could  also  be  programmed  into  the  machine.  One  would  then  allow 
+the  whole  system  to  run  for  an  appreciable  period,  and  then  break  in  as  a  kind 
+of  ‘inspector  of  schools’  and  see  what  progress  had  been  made.  One  might  also  be 
+
+
+Intelligent  Machinery  I  429 
+
+
+able  to  make  some  progress  with  unorganised  machines  more  like  the  A-  and 
+B-types.  The  work  involved  with  these  is  altogether  too  great  for  pure  paper- 
+machine  work. 
+
+One  particular  kind  of  phenomenon  I  had  been  hoping  to  find  in  connection 
+with  the  P-type  machines.  This  was  the  incorporation  of  old  routines  into  new. 
+One  might  have  ‘taught’  (i.e.  modified  or  organised)  a  machine  to  add  (say). 
+Later  one  might  teach  it  to  multiply  by  small  numbers  by  repeated  addition  and 
+so  arrange  matters  that  the  same  set  of  situations  which  formed  the  addition 
+routine,  as  originally  taught,  was  also  used  in  the  additions  involved  in  the 
+multiplication.  Although  I  was  able  to  obtain  a  fairly  detailed  picture  of  how 
+this  might  happen  I  was  not  able  to  do  experiments  on  a  sufficient  scale  for  such 
+phenomena  to  be  seen  as  part  of  a  larger  context. 
+
+I  also  hoped  to  find  something  rather  similar  to  the  ‘irregular  verbs’  which  add 
+variety  to  language.  We  seem  to  be  quite  content  that  things  should  not  obey  too 
+mathematically  regular  rules.  By  long  experience  we  can  pick  up  and  apply  the 
+most  complicated  rules  without  being  able  to  enunciate  them  at  all.  I  rather 
+suspect  that  a  P-type  machine  without  the  systematic  memory  would  behave  in  a 
+rather  similar  manner  because  of  the  randomly  distributed  memory  units. 
+Clearly  this  could  only  be  verified  by  very  painstaking  work;  by  the  very  nature 
+of  the  problem  ‘mass  production’  methods  like  built-in  teaching  procedures 
+could  not  help. 
+
+
+12.  Discipline  and  initiative 
+
+If  the  untrained  infant’s  mind  is  to  become  an  intelligent  one,  it  must  acquire 
+both  discipline  and  initiative.  So  far  we  have  been  considering  only  discipline.  To 
+convert  a  brain  or  machine  into  a  universal  machine  is  the  extremest  form  of 
+discipline.  Without  something  of  this  kind  one  cannot  set  up  proper  communi¬ 
+cation.  But  discipline  is  certainly  not  enough  in  itself  to  produce  intelligence. 
+That  which  is  required  in  addition  we  call  initiative.  This  statement  will  have  to 
+serve  as  a  definition.  Our  task  is  to  discover  the  nature  of  this  residue  as  it  occurs 
+in  man,  and  to  try  and  copy  it  in  machines. 
+
+Two  possible  methods  of  setting  about  this  present  themselves.  On  the  one 
+hand  we  have  fully  disciplined  machines  immediately  available,  or  in  a  matter  of 
+months  or  years,  in  the  form  of  various  U.P.C.M.s.  We  might  try  to  graft  some 
+initiative  onto  these.  This  would  probably  take  the  form  of  programming  the 
+machine  to  do  every  kind  of  job  that  could  be  done,  as  a  matter  of  principle, 
+whether  it  were  economical  to  do  it  by  machine  or  not.  Bit  by  bit  one  would  be 
+able  to  allow  the  machine  to  make  more  and  more  ‘choices’  or  ‘decisions’.  One 
+would  eventually  find  it  possible  to  programme  it  so  as  to  make  its  behaviour  be 
+the  logical  result  of  a  comparatively  small  number  of  general  principles.  When 
+
+
+430  I  Alan  Turing 
+
+
+these  became  sufficiently  general,  interference  would  no  longer  be  necessary,  and 
+the  machine  would  have  ‘grown  up’.  This  may  be  called  the  ‘direct  method’. 
+
+The  other  method  is  to  start  with  an  unorganised  machine  and  to  try  to  bring 
+both  discipline  and  initiative  into  it  at  once,  i.e.  instead  of  trying  to  organise  the 
+machine  to  become  a  universal  machine,  to  organise  it  for  initiative  as  well.  Both 
+methods  should,  I  think,  be  attempted. 
+
+Intellectual,  Genetical,  and  Cultural  Searches 
+
+A  very  typical  sort  of  problem  requiring  some  sort  of  initiative  consists  of  those 
+of  the  form  ‘Find  a  number  n  such  that . . .  ’.  This  form  covers  a  very  great  variety 
+of  problems.  For  instance  problems  of  the  form  ‘See  if  you  can  find  a  way  of 
+calculating  the  function . . .  which  will  enable  us  to  obtain  the  values  for  argu¬ 
+ments  ...  to  accuracy. . .  within  a  time  . . .  using  the  U.P.C.M _ ’  are  reducible  to 
+
+this  form,  for  the  problem  is  clearly  equivalent  to  that  of  finding  a  programme  to 
+put  on  the  machine  in  question,  and  it  is  easy  to  put  the  programmes  into 
+correspondence  with  the  positive  integers  in  such  a  way  that  given  either  the 
+number  or  the  programme  the  other  can  easily  be  found.  We  should  not  go  far 
+wrong  for  the  time  being  if  we  assumed  that  all  problems  were  reducible  to  this 
+form.  It  will  be  time  to  think  again  when  something  turns  up  which  is  obviously 
+not  of  this  form. 
+
+The  crudest  way  of  dealing  with  such  a  problem  is  to  take  the  integers  in  order 
+and  to  test  each  one  to  see  whether  it  has  the  required  property,  and  to  go  on 
+until  one  is  found  which  has  it.  Such  a  method  will  only  be  successful  in  the 
+simplest  cases.  For  instance  in  the  case  of  problems  of  the  kind  mentioned  above, 
+where  one  is  really  searching  for  a  programme,  the  number  required  will 
+normally  be  somewhere  between  21000  and  21’000’000.  For  practical  work  therefore 
+some  more  expeditious  method  is  necessary.  In  a  number  of  cases  the  following 
+method  would  be  successful.  Starting  with  a  U.P.C.M.  we  first  put  a  programme 
+into  it  which  corresponds  to  building  in  a  logical  system  (like  Russell’s  Principia 
+Mathematica).  This  would  not  determine  the  behaviour  of  the  machine  com¬ 
+pletely:  at  various  stages  more  than  one  choice  as  to  the  next  step  would  be 
+possible.  We  might  however  arrange  to  take  all  possible  arrangements  of  choices 
+in  order,  and  go  on  until  the  machine  proved  a  theorem  which,  by  its  form,  could 
+be  verified  to  give  a  solution  of  the  problem.  This  may  be  seen  to  be  a  conversion 
+of  the  original  problem  into  another  of  the  same  form.  Instead  of  searching 
+through  values  of  the  original  variable  n  one  searches  through  values  of  some¬ 
+thing  else.  In  practice  when  solving  problems  of  the  above  kind  one  will  probably 
+apply  some  very  complex  ‘transformation’  of  the  original  problem,  involving 
+searching  through  various  variables,  some  more  analogous  to  the  original  one, 
+some  more  like  a  ‘search  through  all  proofs’.  Further  research  into  intelligence  of 
+machinery  will  probably  be  very  greatly  concerned  with  ‘searches’  of  this  kind. 
+We  may  perhaps  call  such  searches  ‘intellectual  searches’.  They  might  very  briefly 
+
+
+Intelligent  Machinery  I  431 
+
+be  defined  as  ‘searches  carried  out  by  brains  for  combinations  with  particular 
+properties’. 
+
+It  may  be  of  interest  to  mention  two  other  kinds  of  search  in  this  connection. 
+There  is  the  genetical  or  evolutionary  search  by  which  a  combination  of  genes  is 
+looked  for,  the  criterion  being  survival  value.  The  remarkable  success  of  this 
+search  confirms  to  some  extent  the  idea  that  intellectual  activity  consists  mainly 
+of  various  kinds  of  search. 
+
+The  remaining  form  of  search  is  what  I  should  like  to  call  the  ‘cultural  search’. 
+As  I  have  mentioned,  the  isolated  man  does  not  develop  any  intellectual  power.  It 
+is  necessary  for  him  to  be  immersed  in  an  environment  of  other  men,  whose 
+techniques  he  absorbs  during  the  first  20  years  of  his  life.  He  may  then  perhaps 
+do  a  little  research  of  his  own  and  make  a  very  few  discoveries  which  are  passed 
+on  to  other  men.  From  this  point  of  view  the  search  for  new  techniques  must  be 
+regarded  as  carried  out  by  the  human  community  as  a  whole,  rather  than  by 
+individuals. 
+
+
+13.  Intelligence  as  an  emotional  concept 
+
+The  extent  to  which  we  regard  something  as  behaving  in  an  intelligent  manner  is 
+determined  as  much  by  our  own  state  of  mind  and  training  as  by  the  properties 
+of  the  object  under  consideration.  If  we  are  able  to  explain  and  predict  its 
+behaviour  or  if  there  seems  to  be  little  underlying  plan,  we  have  little  temptation 
+to  imagine  intelligence.  With  the  same  object  therefore  it  is  possible  that  one 
+man  would  consider  it  as  intelligent  and  another  would  not;  the  second  man 
+would  have  found  out  the  rules  of  its  behaviour. 
+
+It  is  possible  to  do  a  little  experiment  on  these  lines,  even  at  the  present  stage 
+of  knowledge.  It  is  not  difficult  to  devise  a  paper  machine  which  will  play  a  not 
+very  bad  game  of  chess.  Now  get  three  men  as  subjects  for  the  experiment  A,  B, 
+C.  A  and  C  are  to  be  rather  poor  chess  players,  B  is  the  operator  who  works  the 
+paper  machine.  (In  order  that  he  should  be  able  to  work  it  fairly  fast  it  is 
+advisable  that  he  be  both  mathematician  and  chess  player.)  Two  rooms  are 
+used  with  some  arrangement  for  communicating  moves,  and  a  game  is  played 
+between  C  and  either  A  or  the  paper  machine.  C  may  find  it  quite  difficult  to  tell 
+which  he  is  playing. 
+
+(This  is  a  rather  idealized  form  of  an  experiment  I  have  actually  done.) 
+
+
+Summary 
+
+The  possible  ways  in  which  machinery  might  be  made  to  show  intelligent 
+behaviour  are  discussed.  The  analogy  with  the  human  brain  is  used  as  a  guiding 
+principle.  It  is  pointed  out  that  the  potentialities  of  the  human  intelligence  can 
+
+
+432  I  Alan  Turing 
+
+only  be  realised  if  suitable  education  is  provided.  The  investigation  mainly 
+centres  round  an  analogous  teaching  process  applied  to  machines.  The  idea  of 
+an  unorganised  machine  is  defined,  and  it  is  suggested  that  the  infant  human 
+cortex  is  of  this  nature.  Simple  examples  of  such  machines  are  given,  and  their 
+education  by  means  of  rewards  and  punishments  is  discussed.  In  one  case  the 
+education  process  is  carried  through  until  the  organisation  is  similar  to  that  of  an 
+ACE.

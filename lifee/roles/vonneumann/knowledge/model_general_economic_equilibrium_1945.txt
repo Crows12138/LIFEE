@@ -1,0 +1,640 @@
+A Model of General Economic Equilibrium
+Author(s): J. V. Neumann
+Source: The Review of Economic Studies, Vol. 13, No. 1 (1945 - 1946), pp. 1-9
+Published by: Oxford University Press
+Accessed: 30/06/2011 08:50
+you have obtained prior permission, you may not download an entire issue of a journal or multiple copies of articles, and you
+Please contact the publisher regarding any further use of this work. Publisher contact information may be obtained at .
+page of such transmission.
+content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms
+preserve and extend access to The Review of Economic Studies.
+A 
+Model 
+of 
+General 
+Economic 
+Ecuilibrium1 
+The subject of this paper is the solution of a typical ec-onomic equation system. 
+The system has the following properties: 
+(i) Goods are produced not only from " natural factors of production," but in 
+the first place from each other. These processes of production may be circular, i.e. 
+good G1 is produced with the aid of good G2, and G2 with the aid of G1. 
+(2) There may be more technically possible processes of production than goods 
+and for this reason " counting of equations " is of no avail. The problem is rather 
+to establish which processes will actually be used and which not (being " unprofitable"). 
+In order to be able to discuss (i), 
+(2) quite freely we shall idealise other elements of 
+the situation (see paragraphs I and 2). Most of these idealisations are irrelevant, but 
+this question will not be discussed here. 
+The way in which our questions are put leads of necessity to a system of inequalities 
+(3)-(8') in paragraph 3 the possibility of a solution of which is not evident, i.e. it 
+cannot be proved by any qualitative argument. The mathematical proof is possible only 
+by means of a generalisation of Brouwer's Fix-Point Theorem, i.e. by the use of very 
+fundamental topological facts. This generalised fix-point theorem (the " lemma " of 
+paragraph 7) is also interesting in itself. 
+The connection with topology may be very surprising at first, but the author 
+thinks that it is natural in problems of this kind. The immediate reason for this 
+is the occurrence of a certain " minimum-maximum " problem, familiar from the 
+calculus of variations. In our present question, the minimum-maximum problem 
+has been formulated in paragraph 5. It is closely related to another problem occur- 
+ring in the theory of games (see footnote i in paragraph 6). 
+A direct interpretation of the function 0 (X, Y) would be highly desirable. Its 
+role appears to be similar to that of thermodynamic potentials in phenomenological 
+thermodynamics; it can be surmised that the similarity will persist in its full 
+phenomenological generality (independently of our restrictive idealisations). 
+Another feature of our theory, so far without interpretation, is the remarkable 
+duality (symmetry) of the monetary variables (prices yj, interest factor f) and the 
+technical variables (intensities of production xi, coefficient of expansion of the 
+economy a). This is brought out very clearly in paragraph 3 (3)-(8') as well as in 
+the minimum-maximum formulation of paragraph 5 (7**)-(8**). 
+Lastly, attention is drawn to the results of paragraph ii from which follows, 
+among other things, that the normal price mechanism brings about-if our assump- 
+tions are valid-the technically most efficient intensities of production. This seems 
+not unreasonable since we have eliminated all monetary complications. 
+The present paper was read for the first time in the winter of I932 at the mathe- 
+matical seminar of Princeton University. The reason for its publication was an invita- 
+tion from Mr. K. Menger, to whom the author wishes to express his thanks. 
+i. Consider the following problem: 
+there are n goods G1, . . . , Gn which can 
+be produced by m processes F1, . . ., Pm. Which processes will be used (as 
+"-profitable ") and what prices of the goods will obtain ? The problem is evidently 
+1 This paper was first published in German, under the title Uber ein Okonomisches Gleichungssystem 
+und eine Verallgemeinerung des Brouwerschen Fixpunktsatzes in the volume entitled Ergebuisse eines Mathe- 
+matischen Seminars, edited by K. Menger (Vienna, I938). 
+It was translated into English by G. Morgenstern. 
+A commentary note on this article, by D. G. Champernowne, is printed below. 
+I 
+THE REVIEW OF ECONOMIC STUDIES 
+non-trivial since either of its parts can be answered only after the other one has been 
+answered, i.e. its solution is implicit. We observe in particular: 
+(a) Since it is possible that m> n it cannot be solved through the usual 
+counting of equations. 
+In order to avoid further complications we assume: 
+(b) That there are constant returns (to scale); 
+(c) That the natural factors of production, including labour, can be expanded 
+in unlimited quantities. 
+The essential phenomenon that we wish to grasp is this: goods are produced 
+from each other (see equation (7) below) and we want to determine (i) which processes 
+will be used; (ii) what the relative velocity will be with which the total quantity of 
+goods increases ; (iii) what prices will obtain; (iv) what the rate of interest will be. 
+In order to isolate this phenomenon completely we assume furthermore: 
+(d) Consumption of goods takes place only through the processes of pro- 
+duction which include necessities of life consumed by workers and employees. 
+In other words we assume that all income in excess of necessities of life will be 
+reinvested. 
+It is obvious to what kind of theoretical models the above assumptions correspond. 
+2. In each process Pi (i= 
+i, . . ., m) quantities aij (expressed in some units) 
+are used up, and quantities bij are produced, of the respective goods Gj (j = I, . . ., n). 
+The process can be symbolised in the following way: 
+n 
+n 
+Pi: 
+Saij G - 
+bij Gj .................................... 
+(i) 
+j=i 
+j=-I 
+It is to be noted: 
+(e) Capital goods are to be inserted on both sides of (i); wear and tear of 
+capital goods are to be described by introducing different stages of wear as 
+different goods, using a separate Pi for each of these. 
+(f) Each process to be of unit time duration. Processes of longer duration 
+to be broken down into single processes of unit duration introducing if necessary 
+intermediate products as additional goods. 
+(g) (I) can describe the special case where good Gj can be produced only 
+jointly with certain others, viz. its permanent joint products. 
+In the actual economy, these processes Pi, i = i, 
+. . ., m, will be used with 
+certain intensities xi, i = i, 
+. . ., m. That means that for the total production the 
+quantities of equations (I) must be multiplied by xi. We write symbolically: 
+m 
+E = 
+xi Pi.............................................. 
+(2) 
+i=i 
+xi - o means that process Pi is not used. 
+We are interested in those states where the whole economy expands without 
+change of structure, i.e. where the ratios of the intensities x: 
+.. . .: 
+m remain 
+unchanged, although xl, . . . xm themselves may change. In such a case they are 
+multiplied by a common factor a per unit of time. This factor is the coefficient of 
+expansion of the whole economy. 
+3. The numerical unknowns of our problem are: 
+(i) the intensities x1, . . ., xm 
+of the processes P1, . . ., Pm ; (ii) the coefficient of expansion of the whole economy a; 
+(iii) the prices y, 
+. . ., yn of goods G, . . ., Gn; 
+(iv) the interest 
+factor 
+z 
+iE 
+(= '+ 
+±, 
+z being the rate of interest in % per unit of time. Obviously: 
+xi 
+o,................ 
+,j > o, ............ 
+... (4) 
+A MODEL OF GENERAL ECONOMIC EQUILIBRIUM 
+and since a solution with xl - . . . = xm =o, 
+or yi = .. 
+.-yn= 
+o would be 
+meaningless: 
+m 
+n 
+xi > o, ................ 
+(5) 
+2 yj > o,....... 
+........ 
+(6) 
+i=I 
+j=i 
+The economic equations are now: 
+m 
+m 
+a Zaij xi < 
+bii xi, ........ 
+.............................(7) 
+and if in (7)< applies, yj =o .......................... 
+......... 
+(7) 
+ftZaij yj >= 
+ij yj, . 
+....................... 
+(8) 
+j=i 
+j=I 
+and if in (8) > applies,, xi = o................................. 
+(8') 
+The meaning of (7), (7') is: it is impossible to consume more of a good Gj in the 
+total process (2) than is being produced. If, however, less is consumed, i.e. if there 
+is excess production of Gj, Gj becomes a free good and its price yj = o. 
+The meaning of (8), (8') is: in equilibrium no profit can be made on any process 
+Pi (or else prices or the rate of interest would rise-it is clear how this abstraction 
+is to be understood). If there is a loss, however, i.e. if Pi is unprofitable, then Pi will 
+not be used and its intensity xi = o. 
+The quantities aij, bij are to be taken as given, whereas the xi, yj, a, ft are 
+unknown. There are, then, m + n + 2 unknowns, but since in the case of xi, yj 
+only the ratios xl: . . . Xm, Y : . 
+.: yn are essential, they are reduced to m + n. 
+Against this, there are m + n conditions (7) + (7') and (8) + (8'). As these, 
+however, are not equations, but rather complicated inequalities, the fact that the 
+number of conditions is equal to the number of unknowns does not constitute a 
+guarantee that the system can be solved. 
+The dual symmetry of equations (3), (5), (7), (7') of the variables xi, a and of 
+the concept " unused process " on the one hand, and of equations (4), (6), (8), )8') 
+of the variables yj, Pf and of the concept " free good " on the other hand seems 
+remarkable. 
+4. Our task is to solve (3)-(8'). 
+We shall proceed to show: 
+Solutions of (3)-(8') always exist, although there may be several solutions with 
+different xl: . . .: Xm or with different yx: . . 
+: yn. The first is possible since we 
+have not even excluded the case where several Pi describe the same process or where 
+several Pi combine to form another. The second is possible since some goods Gj may 
+enter into each process Pi only in a fixed ratio with some others. But even apart 
+from these trivial possibilities there may exist-for less obvious reasons-several 
+solutions x, : . . .: Xm, Y : . . . : ym. Against this it is of importance that a, ft 
+should have the same value for all solutions; i.e. a, f are uniquely determined. 
+We shall even find that a and P. can be directly characterised in a simple manner 
+(see paragraphs 10 and ii). 
+To simplify our considerations we shall assume that always: 
+aij + bij > o ............................................ 
+(9) 
+(aij, bij are clearly always > o). Since the aij, bij may be arbitrarily small this 
+restriction is not very far-reaching, although it must be imposed in order to assure 
+uniqueness of a, f as otherwise W might break up into disconnected parts. 
+Consider now a hypothetical solution xi, a, yj, ft of (3)-(8'). 
+If we had in (7) 
+always <, then we should have always yj = o (because of (7')) in contradiction to (6). 
+THE REVIEW OF ECONOMIC STUDIES 
+If we had in (8) always > we should have always xi = o (because of (8')) in contra- 
+diction to (5). Therefore, in (7) < always applies, but = at least once; in (8) 2 
+always applies, but = at least once. 
+In consequence: 
+Z bij xi 
+Min. 
+i=i 
+j 
+I, 
+. 
+...................... 
+(Io), 
+, aij xi 
+n 
+X bij yj 
+Max. 
+j=i 
+pf i= 
+i= , . . ., m 
+I 
+............................. 
+(TI. 
+aij yj 
+j=i 
+Therefore the xi, yj determine uniquely a, ,f. (The right-hand side of (xo), (II) can 
+never assume the meaningless form - because of (3)-(6) and (9)). We can therefore 
+state (7) + (7') and (8) + (8') as conditions for xi, yj only: 
+yj = o for each j- = i, . . .n, 
+for which: 
+m 
+Zbij xi 
+i=i 
+m 
+.Zaij xi' 
+-=I 
+does not assume its minimum value (for all j = i, . . ., n) . . . (7*). 
+xi = o-for each i = i, . . ., m, for which: 
+n 
+Ebij yi 
+j=' 
+n 
+Zaij yi 
+j=I' 
+does not assume its maximum value (for all i =, 
+. . ., m) . . . (8*). 
+The xl, . . ., xm in (7*) and the Yl, . . ., yn in (8*) are to be considered as 
+given. We have, therefore, to solve (3)-(6),. (7) and (8) for xi, yj. 
+5. Let X' be a set of variables (x',, . . ., x'm) fulfilling the analoga of (3), (5): 
+m 
+x'i j_ o,> 
+. 
+......... 
+(3') 
+27x'i > o................(5') 
+i=I 
+and let Y' be a series of variables (y', . . ., y'n) fulfilling the analoga of (4), (6): 
+y.j 
+o 
+. 
+............... 
+(4') 
+.y'j 
+> o,...............(6') 
+j=21 
+Let, furthermore, 
+27 27 bij x'i y'j 
+(X'i, Y') = 
+. 
+.......................(I2) 
+27 aij x'i y'j 
+i=i 
+j=i 
+A MODEL OF GENERAL ECONOMIC EQUILIBRIUM 
+Let X= 
+(xl, . . 
+., xm), 
+Y= 
+(yi, * * . yn) the 
+(hypothetical) 
+solution, 
+X'= 
+(x 
+. . ., x'm), Y' = 
+(Y'1 . . 
+X y'n) to be freely variable, but in such a way that 
+(3)-(6) and (3')-(6') respectively are fulfilled; then it is easy. to verify that (7*) 
+and (8*) can be formulated as follows.: 
++(X, Y') assumes its minimum value for Y' if Y' - Y ......(7**). 
+qb(X', Y) assumes its maximum value for X' if X' =X ...... 
+(8**). 
+The question of a solution of (3)-(8') becomes a question of a solution of (7**), 
+(8**) and can be formulatedas follows: 
+(*) Consider (X', Y') in the domain bounded by (3')-(6'). 
+To find a saddle 
+point X' = X, Y' = Y, i.e. where (X, Y') assumes its minimum value for Y', 
+and at the same time (X', Y) its maximum value for Y'. 
+From (7), (7*), (io) and (8), (8*), (II) respectively, follows: 
+n 
+m 
+-m 
+X 
+[ 
+bij xij 
+X [ 
+bij yj xi 
+a = 
+_ 
+= 
+(x, y) and 
+= 
+m 
+= 
+(Xf Y) 
+3E [. 
+aij xi]yj 
+E [ 
+aij 
+yijxi 
+respectively. 
+Therefore: 
+(**) If our problem can be solved, i.e. if +(X', Y') has a saddle point X' = X, 
+Y= 
+Y (see above), then: 
+a = 
+= 
+(X,Y) = the value at the - saddle point ............ 
+(3) 
+6. Because of the homogeneity of b (X', Y') (in X', Y', i.e. in x', . . ., xr' and 
+yl', 
+. . . ym') our problem remains unaffected if we substitute the normalisations 
+mI 
+n 
+Exi = I) ... X- 
+- 
+(5*) 
+XYj 
+..,.... 
+(6*) 
+for (5'), (6') and.correspondingly for (5), (6). Let S be the X' set described by: 
+xi. > 
+j 
+.(3') 
+xi 
+I .(5*) 
+and let T be the Y' set described by: 
+yj' X0 ........(4 
+) 
+z 
+'yj 
+= 
+. 
+. 
+. ........ 
+(6*) 
+1=' 
+(S, T are simplices of, respectively, m - 
+i and n - 
+i dimensions). 
+In order to solve' we make use of the simpler formulation (7*), (8*) and combine 
+these with (3), (4), (5*), (6*) expressing the fact that X = (xl, . . ., xm) is in S and 
+Y = (Y, * t ., yn) in T. 
+7. We shall prove a slightly more general lemma: Let Rm be the n-dimensional 
+1 The question whether our problem has a solution is oddly connected with that of a problem occurring 
+in the Theory of Games dealt with elsewhere. (Math. Annalen; ioo, I928, pp. 295-320, particularly pp. 305 
+and 307-3II). 
+The problem there is a special case of (*) and is solved here in a new way through our solution 
+m 
+n 
+of (*) (see below). In fact, if aij =, 
+then E 
+E aij x'i y'j = I because of (5*), (6*). Therefore 
+i=31 
+j = 
+m 
+nt 
++ (Xt, Y')-E 
+E bij x' y'j, and thus our (*) coincides with loc. cit., p. 307. (Our 0 (X', Y'), bij, x', y'j, 
+i=T 1=' 
+m, n here correspond to h (e, j), apq,ep, qq, M + I, N + I there). 
+It is, incidentally, remarkable that, (*) does not lead-as usual-to a simple maximum or minimum 
+problem, the possibility of a solution of which would be evident, but to a problem of the saddle point or 
+minimum-maximum type, where the question of a possible solution is far more profound. 
+THE REVIEW OF ECONOMIC STUDIES 
+space of all points X = (xl, . . ., Xm), Rn the n-dimensional space of all points 
+Y = (Y1 . . 
+yn), Rm+n the m + n dimensional space of all points (X, Y)= 
+(xi, 
+. . . X, 
+Yi 
+. 
+., yn). 
+A set (in Rm or Rn or Rm+n) which is not empty, convex closed and bounded we 
+call a set C. 
+Let S°, T° be sets C in Rm and Rn respectively and let S° x T° be the set of all 
+(X, Y) (in Rrn+n) where the range of Xis S°and the range of Yis T0. Let V, Wbe two 
+closed subsets of S° x T°. For every X in S° let the set Q (X) of all Y with (X, Y) 
+in V be a set C; for each Y in T° let the set P (Y) of all X with (X, Y) in W be a 
+set C. Then the following lemma applies. 
+Under the above assumptions, V, W have (at least) one point in common. 
+Our problem follows by putting S° = S, T° = T and V = the set of all 
+(X, Y) = (xi, . . ., Xm, 1, 
+. . 
+yn) fulfilling (7*), W = the set of all (X, Y) = 
+(xl, . . ., yXm, 1, . . ., yn) fulfilling (8*). It can be easily seen that V. W are closed 
+and that the sets S° = S, T° = T, Q (X), P (Y) are all simplices, i.e. sets C. The 
+common points of these V, W are, of course, our required solutions (X, Y) = 
+(x * . ., Xm, Y1, . . ., ym). 
+8. To prove the above lemma let S°, T0, V, W be as described before the lemma. 
+First, consider V. For each X of S° we choose a point Y° (X) out of Q (X) (e.g. 
+the centre of gravity of this set). It will not be possible, generally, to choose Y° (X) 
+as a continuous function of X. Let e > o; we define: 
+we (X, X') = Max. (o, i - 
+distance (X, X')) 
+............ 
+(I4) 
+Now let Ye (X) be the centre of gravity of the Y° (X') with (relative) weight function 
+we (X, X') where the range of X' is S°. I.e. if Y° (X) = (y1° (x), . . ., yn° (x)), 
+Ye (X) = (y31 (x), 
+.., 
+yn (x)), then: 
+ye (X) =f wJ (X, X') yj° (X') dX'/ fJ w (X, 
+') dX',.... 
+(i5) 
+We derive now a number of properties of Ye (X) (valid for all e > o): 
+(i) Ye (X) is in T°. Proof: Y° (X') is in Q (X') and therefore in T°, and since 
+Ye (X) is a centre of gravity of points Y° (X') and T° is convex, Y6 (X) also is in T°. 
+(ii) Ye (X) is a continuous function of X (for the whole range of S°). Proof: it is 
+sufficient to prove this for each yje (X). Now we (X, X') is a continuous function of 
+X, X' throughout; -J we (X, X') dX' is always > o, and all yj0 (X) are bounded (being 
+S° 
+co-ordinates of the bounded set S°). The continuity of the yy6 (X) follows, therefore, 
+from (I5). 
+(iii) For each 8 > o there exists an c0 = c0 (8) > o such that the distance of 
+each point (X, Yeo (X)) from V is < 8. Proof: assume the contrary. Then there rfiust 
+exist a 8 > o and a sequence of e > o with lim E = o such that for every v = 
+, 2, . . . 
+v-+OC 
+there exists a Xv in S° for which the distance (Xv, Yev (Xv)) would be 2 8. A 
+fortiori Yev (Xv) is at a distance  
+- from every Q (X'), with a distance (Xv, X') , 
+All Xv, v = I, 2, . . ., are in S° and have therefore a point of accumulation 
+X* in S°; 
+from which follows that there exists a subsequence of Xv, v = 
+, 2, . .., 
+converging towards X* for which distance (Xv, X*) < - always applies. Substituting 
+2this 
+subsequence 
+for 
+the 
+Xv 
+we 
+see 
+that 
+we 
+are 
+justified 
+in assuming 
+this subsequence for the Ev, Xv, we see that we are justified in assuming: lim X, = X*, 
+A MODEL OF GENERAL ECONOMIC EQUILIBRIUM 
+distance (Xv, X*)  
+- Therefore we may put X' = X* for every v = I, 2, . 
+and in consequence we have always YEV (Xv) at a distance 
+from Q (X*). 
+Q(X*) being convex, the set of all points with a distance < - from (Q(X*) 
+is also convex. Since Y6v (Xv) does not belong to this set, and since it is a centre of 
+gravity of points Y° (X') with distance (Xv, X') < ev (because for distance (Xv, X') >Ev, 
+w^ (Xv, X') = o according to (I4)), not all of these points belong to the set under 
+discussion. Therefore: there exists a X' = Xv for which the distance (Xv, X'v) < ev 
+and where the distance between Y° (X'v) and Q (X*) is 2 2 
+Lim Xv =.X*, lim distance (Xv, X'v) = o, and therefore lim X'v = X*. All 
+Y° (Yv) belong to T° and have therefore a point of accumulation Y*. In consequence, 
+(X*, Y*) is a point of accumulation of the (Xv, Y° (Xv)) and since they all belong 
+to V, (X*, Y*) belongs to V too. Y* is therefore in Q (X*). Now the distance of 
+every Y° (Yv) including from Q (X*) is > - 
+This is a contradiction, and the proof 
+2. 
+is complete. 
+(i)-(iii) 
+together assert: for every 8 > o there exists a continuous mapping 
+Y8 (X) of S° on to a subset of T° where the distance of every point (X, Y8 (X)) from 
+V is < 8. 
+(Put Y8 (X) = YE (X) with e = Eo = c0(8)). 
+9. Interchanging S° and T°, and V and W we obtain now: 
+for every 8 > o 
+there exists a continuous mapping X8 (Y) of T° on to a subset of S° where the distance 
+of every point (X8 (Y), Y) from W is < 8. 
+On putting f8 (X) = X8 (Y8 (X)), f8 (X) is a continuous mapping of S° on to 
+a subset of S°. Since S° is a set C, and therefore topologically a simplex1 we can use 
+L. E. J. Brouwer's Fix-point Theorem2; f8 (X) has a fix-point. I.e., there exists a 
+X8 in S° for which X8 =f8 (X8) = X8 (Y8 (X8)). Let Y8 = Y8 (X8), then we have 
+Xa = X8 (Y8). Consequently, the distances of the point (X8, Y8) in Rm+nboth from 
+V and from W are < 8. The distance of V from W is therefore < 28. Since this is 
+valid for every 8 > o, the distance between V and W is = o. Since V, W are closed 
+and bounded, they must have at least one common point. This proves our lemma 
+completely. 
+IO. We have solved (7*), (8*) of paragraph.4 as well as the equivalent problem 
+(*) of paragraph 5 and the original task of paragraph 3: the solution of (3)-(8'). 
+If the xi, yj (which were called X, Y in paragraphs 7-9) are determined, a, f3 follow 
+from (I3) in (**) of paragraph 5. In particular, a = f. 
+We have emphasised in paragraph 4 already that there may be several solutions 
+xi, yj (i.e. X, Y); we shall proceed to show that there exists only one value of a (i.e. 
+of ,B). In fact, let Xl, Y1, ac, P and X2, Y2, a2,, P2 be two solutions. From (7**), 
+(8**) and (I3) follows: 
+a==l- 
+(X1, Y1) ! # (Xl, Y2), 
+a2= 
+= 
+(X2, Y2) 
+(Xl-, Y2), 
+therefore a1 = 
+ 
+a2 = I2* For reasons of symmetry a2 = <f < a, = p, therefore 
+a, = 
+-. 
+a2 = 
+=2* 
+1 Regarding these as well as other properties of convex sets used in this paper, c.f., e.g. Alexandroff 
+and H. Hopf, Topologie, vol. I, J. Springer, Berlin, 1935, pp. 598-609. 
+2 Cf., e.g. i c, footnote I, p. 480. 
+THE REVIEW 
+OF ECONOMIC STUDIES 
+We have shown: 
+At least one solution X, Y, a, fP exists. For all solutions: 
+a =- -3= 
+(X, Y) ...................................... 
+(I3) 
+and these have the same numerical value for all solutions, in other words : The interest 
+factor and the coefficient of expansion of the economy are equal and uniquely determined 
+by the technically possible processes P1, . . ., Pm. 
+Because of (13), a > o, but may be ~ i. 
+One would expect a > i, but a < i 
+cannot be excluded in view of the generality of our formulation : processes P1 . . ., Pm 
+may really be unproductive. 
+iI. In addition, we shall characterise a in two independent ways. 
+Firstly, let us consider a state of the economy possible on purely technical con- 
+siderations, expanding with factor a' per unit of time. 
+I.e., for the intensities 
+x, . .., 
+Xm applies: 
+m 
+xi 
+o.............. 
+(3') 
+Z xi' > o.............. 
+(5') and 
+==I 
+m 
+m 
+a' Z aij xi' :9 
+bij xi' .................................. 
+(7") 
+i=I 
+i=1 
+We are neglecting prices here altogether. Let Xi, yj, a =3 
+be a solution of our original 
+n 
+problem (3)-(8') 
+in paragraph 3. Multiplying (7") by yj and adding Z we obtain: 
+j=I 
+m 
+n 
+m 
+n 
+a' X ' Z aij xi' yj < 
+Z Z bij xi' yj, 
+i=i 
+j=i 
+i=i 
+j=i 
+and therefore a' < 
+(X', Y). Because of (8**) and (13) in paragraph 5, we have: 
+a' 
+(X', Y) 
+(X, Y)=a= 
+........................ 
+(I5). 
+Secondly, let us consider a system of prices where the interest factor ,B' allows 
+of no more profits. I.e. for prices Y', . . . y'n applies: 
+n 
+y >- o, ............ 
+(4') 
+2 y'j > o, ............ 
+(6') and 
+n 
+n 
+j=I 
+j=I 
+Hereby we are neglecting intensities of production altogether. 
+Let xi, yj, a = f as 
+m 
+above. Multiplying (8") by Xi and adding . we obtain: 
+i=I 
+m 
+n 
+m 
+n 
+8' 
+Z 
+aij xi y'j < Z 
+2X bij xi y'j 
+i=1 j=xI 
+i=I 
+j=-I 
+and therefore ,B' > q (X, Y'). 
+Because of (7**) and (I3) in paragraph 5, we have: 
+pl' 2 # 
+(X, Y') > 
+ 
+(X, Y) = a = 
+......................(i6) 
+These two results can be expressed as follows: 
+The greatest (purely technically possible) factor of expansion a' of the whole economy 
+is a' = a = ,, neglecting prices. 
+The lowest interest factor f' at which a profitless system of prices is possible is 
+,6' = a = 
+-, 
+neglecting intensities of production. 
+A MODEL OF GENERAL ECONOMIC EQUILIBRIUM 
+Note that these characterisations are possible only on the basis of our knowledge 
+that solutions of our original problem exist-without 
+themselves directly referring 
+to this problem. Furthermore, the equality of the maximum in the first form and 
+the minimum in the second can be proved only on the basis of the existence of this 
+solution. 
+Princeton, N.J. 
+J. v. NEUMANN. 

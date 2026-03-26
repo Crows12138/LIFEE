@@ -1,0 +1,1566 @@
+TRE ZERO ERRORCATACITY OF A NOISY CRANNEL
+Claude E. Shannon Bell Telephone Laboratories, Murray Hill, New Jersey Massachusetts Institute of Technolo,qv, Cambridge, Mass.
+
+Abstract
+The zero error capacity Co of a noisy channel is defined as the least upper bound of rates at which it is possible to transmit information with zero probability of error. var 1oue properties of Co are ,studied: upper end lower bounds and methods of evaluation of Co are given. Inequalities are obtained for the Co relating to the @*sumnand "product" of two given channels. The analogous problem of zero error capacity C,F for a channel with a feedback link is considered. It is shown that while the ordinary capacity of a memoryless channel with feedback is equal to that of the same channel without feedback, the zero error capacity may be greater. A solution is given to the problem of eialuating CoF.
+Introduction
+The ordinary capacity C of a noisy channel may be thought of as follows. There exists a sequence of codes for the channel of. increasing block length such that the input rate of transmission approaches C and the probability of error in decoding at the receiving point approaches zero. Furthermore, this is not true for any value higher than C. In some situations it may be of interest to consider. rather than codes with probability of error auproaching zero, codes for which the probability -is zero and to investigate the highest possible rate of transmission (or the least upper bound of these rates) for such codes. This rate, Co, is the main object of investigation of the present Paper. It is interesting that while Co would appear to be a simpler property of a channel then C, it is in fact more difficult to calculate end leads to a number of as yet unsolved problems.
+We shall consider only finite discrete memoryless channels. Such a channel is specified by a finite transition matrix I/pi(j)11 where pi(j) is the probability of input letter i being received as output letter j (i = l,Z,...,a; j = 1,2,..., b) and $ pi(j) = 1. Equivalently, such a channel maybe represented by a line diagram such as Fig. 1.
+The channel being memorylees means that successive operations are independent. If the input letters i and j are used, the probability of output letters k and 1 will be pi(k)Pj(l). A sequence,of input letters will be called an input vord, a sequence of output letters an outwt word. A mapping of M messages (which we
+
+Fig. 1
+
+may take to be the integers l,Z,...,M)
+
+into a
+
+subset of input words of length n will be called
+
+a block code of length n. R = & log M will be
+
+called the inuut rate for this 'model Unless
+
+otherwise specifi=a
+
+code will mean such a
+
+block code. We will, throughout, use natural
+
+logarithms and natural (rather then binary) unite
+
+of information, since this simplifies the
+
+analytical processes that will be employed.
+
+A decoding system for a block code of
+
+length n is a method of associating a unique
+
+input message (integer from 1 to M) with each
+
+possible output word of length n, that is, a
+
+function from outnut words of length n to the
+
+integers 1 to #. *The Probability-of
+
+error for a
+
+code is the,probability
+
+when the M input messages
+
+are used each with Probability l/M that the noise
+
+and the decoding system will lead to an input messege different from the one that actually
+
+occurred.
+
+If we have two given channels, it is possible to form a single channel from them in two natural ways which we call the sum and product of the two channels. The m of two
+
+`8
+
+channels is the channel formed by using inputs
+
+from either of the two given channels with the
+
+same transition probabilities
+
+to the set of out-
+
+put letters consisting of the logical sum of the
+
+two output alphabets. Thus the sum channel is
+
+defined by a transition matrix formed by placing
+
+the matrix of one channel below and to the right
+
+of that for the other channel and filling the
+
+remaining two rectangles with zeros. If p,(j)
+
+and llP;(j)/I are the individual matrices, the
+
+sum has the following matrix:
+
+~~(1) .. p,(l)
+0 .
+b
+
+. . . p,(r) ..
+. . . it(r)
+. ..o ..
+... b
+
+0. . .0
+
+.
+
+..
+
+b. . . b
+
+pi(l) . pi*(l).
+
+. . . Pi(r') ..
+. . pL'(r')
+
+The product of two channels is the channel whose input alphabet consists of all ordered pairs (1.i') where i is a letter from the first
+channel alphabet and 1' from the second, whose output alphabet is the similar set of ordered pairs of letters from the two individual output alphabets and whose transitton probability from (i,il) to Ll,j9 is p,(j) f,'Ll 1.
+
+The sum of channelscorresponds physically
+
+to a situation where either of two channels mey be
+
+used (but not both), a new choice being made for
+
+each transmitted letter. The product channel
+
+corresponds to a situation where both channels
+
+are used each unit of time. It is interesting to
+
+note that multiplication
+
+and addition of channels
+
+are both associative and commutative, and that
+
+the product distributes over a sum. Thus one can
+
+develop a kind of algebra for channels in which
+
+i&isX~ossible
+
+to write, for example, a polynomial
+
+an 9 where the an are non-negative integers a and X is a channel. We shall not, however,
+
+investigate here the algebraic properties of this
+
+system.
+
+The Zero Error Canacity
+
+In a discrete channel we will say that two input letters are adjacent if there is an output letter which can be caused by either of these two. Thus, i and-j are adjacent if there exists a t such that both pi(t) and pj(t) do not vanish. In Fig.'l, a end c are adjacent, while a and d are not.
+If all input letters are adjacent to each other, any code with more than one vord has a probability of error at the receiving point greater than zero. In fact, the probability of error in decoding words satisfies
+
+PeG+
+
+Piin
+
+where pm n is the smallest (non-vanishing) among
+the Pi(J 3 . n is the length of the code and M is the number of words in the code. To prove this,
+
+note that any two words have a possible output word in common, namely the word consisting of the sequence of common output letters when the two input vorde are compared letter by letter. Each of the two input words has a probability at least
+
+l&n of producing this common output word. In using the code, the two particular input words will each occur 1 of the time and will cause the common output b Enpmin of the time. This output
+
+can be decoded in only one way. Hence at least
+
+one of error,
+
+Kltnhepsmein,
+
+situations leads is assigned to
+
+to an error. This this code word, end
+
+from the remaining M - 1 code words another pair is chosen. A source of error to the amount
+
+*
+
+a piin is assigned in similar fashion
+
+these, and this is a disjoint event.
+
+in this manner, we obtain a total of
+
+u Y
+
+pn min
+
+as
+
+probability
+
+of error.
+
+to one of Continuing at least
+
+If it is not true that the input letters are all adjacent to each other, it is possible to transmit at a positive rate with zero probability of error. The least upper'bound of all rates which can be achieved with zero probability of error will be called the zero error cauac1t.X of the channel and denoted by Co. If we let MO(n) be
+the largest number of words in a code of length n, no two of which are adjacent, then Co is the least upper bound of the numbers 4 log M,(n) when n
+
+varies through all positive integers.
+
+One might expect that Co would be equal to
+
+log M,(l), that is, that if we choose the largest
+
+possible set of non-adjacent letters and form all
+
+sequences of these of length n, then this would be
+
+the best error free code of length n. This is not,
+
+in general, true, although it holds in many cases,
+
+particularly when the number of input letters is
+
+small. The first failure occurs with five input
+
+letters vith the channel in Fig. 2. In this
+
+channel, it is possible to choose at most two non-
+
+adjacent letters, for example 0 and 2. Using
+
+sequences of these, 00, 02. 20, and 22 we obtain
+
+four vords in a code of length two. However, it
+
+is possible to construct a code of length two with
+
+five members no two of 'which are adjacent as
+follows: 00, 12, 24, 31. 43. It is readily
+
+verified that no two of these are adjacent. Thus,
+
+Co for this
+
+channel is at least .$ log 5.
+
+Fig. 2
+
+No method has been found for determining Co for the general discrete channel, and this we propose as an interesting unsolved problem in coding theory. We shall develop a number of results which enable one to determine Co in many special cases, for example, in all channelswith five or lees input letters vith the single exception of the channel of Fig. 2 (or channels equivalent in adjacency structure to it). We will also develop some general inequalities enabling one to estimate Co quite closely-in most cases.
+It WV be seen, in the first place, that the value of Co depends only on which input letters are adjacent to each other. Let us define the adjacency matrix for a channel, Aij, as follows.
+
+1 if input letter
+
+Aij =
+
+ifi=j
+
+0 otherwise
+
+i
+
+1 is adjacent to j or
+
+Suppose two channelshave the same adjacency matrix (possibly after renumbering the input letters of one of them). Then it is obvious that a zero error code for one will be a zero error code for the other and..hence, that the zero error capacity Co for one will also apply to the other.
+The adjacency structure contained in the adjacency matrix can also be represented as a linear graph. Construct a graph with as many vertices as there are input letters, and connect two distinct vertices with a line or branch of the graph if the corresponding input letters are adjacent. Two examples are shown in Fig. 3, corresponding to the channels of Figs. 1 and 2.
+
+0 e d
+I
+0 2
+
+
+
+
+Fig. 3
+
+Theorem 1: The zero error capacity Co of a discrete memorylees channel is bounded by the inequalities
+
+- log min > Aij PiPj (Co\< min C
+
+pi
+
+ij
+
+pi(S)
+
+EP, = 1, Pi20 i
+$Z p,(j) = 1, p,(j) 2 0
+
+where C is the capacity transition probabilities adjacency matrix Aij.
+
+of any channel with p,(j) and having the
+
+The upper bound is fairly obvious. The zero error capacity is certainly lees than or equal to the ordinary capacity for any channel with the same adjacency matrix since the former requires codes with zero probability of error vhile the latter requires only codes approaching zero probability of erroi. By minimizing the capacity through variation of the pi(j) we find the lowest upper bound available through this argument. Since the capacity is a continuous function of the pi(j) in the closed region
+defined by pi(j) 2, 0, f p,(j) = 1, we may
+write min instead of greatest lower bound.
+
+It is worth noting that it is only neces-
+
+sary to consider a particular channel in perform-
+
+ing this minimization, although there are an
+
+infinite number with the s&me adjacency matrix.
+
+This one particular channel is obtained as
+
+follows from the adjacency matrix. If Aik = 1
+
+for a pair 1 k, define an output letter
+
+j with
+
+p (j) and p (j) both differing from zero. Now
+
+ih there arf any three input letters, say 1 k 1,
+
+all adjacent to each other, define an output
+
+letter, say m, with pi(m) pk(m) pi(m) all dif-
+
+ferent from zero. In the adjacency graph this
+
+corresponds to a complete sub-graph with three
+
+vertices. Next, subsets of four letters or
+
+complete subgraphs of four vertices, say 1 k 1 m,
+
+are given an output letter, each being connected
+
+to it, end so on. It is evident that any channel
+
+with the same adjacency matrix differs from that
+
+just described only by variation in the number of
+
+output symbols for some of the pairs. triplets,
+
+etc., of adjacent input letters.
+
+If a channel
+
+has more than one output symbol for an adjacent
+
+subset of input letters, then its capacity is
+
+reduced by identifying these. If a channel
+
+contains no element, say for a triplet i k 1 of
+
+adjacent input letters, this will occur as a
+
+special case of our canonical channel which has
+
+output letter m for this triplet when pi(m),
+
+%(m) and p,(m) all vanish.
+
+The lover bound of the theorem will now be
+
+proved. We use the procedure of random codes
+
+based on probabilities
+
+for the letters Pi, these
+
+being chosen to minimize the quadratic form
+
+> AiJ.Pi P.J. Construct en ensemble of codes if
+
+
+each containirg M words. each word n letters long.
+
+The words in a code are chosen by the following
+
+stochastic method. Each letter of each word' is
+
+chosen independently of all others and is the
+
+letter 1 with probability Pi. We now compute the
+
+probability in the ensemble that any particular
+
+word is not adjacent to any other word in its
+
+code. The probability that the first letter of
+
+one word is adjacent to the first letter of a
+
+second word is 5
+
+AijPiPj * since this sums
+
+the cases of adjacency with coefficient 1 end
+
+those of non-adjacency with coefficient 0. The
+
+probability that two vorde are adjacent in all
+
+letters, and therefore adjacent as words, is
+
+( z &,P,P,)n.
+
+The probability of non-adja-
+
+AJ
+
+AJ A J
+
+cency is, therefore 1 - ( 5 AijPiPj)n.
+
+The
+
+probability that all N - 1 other-words in a code are not adjacent to a given word is, since they are chosen independently,
+
+11 ( )
+
+[
+
+ij
+
+AijPiPjP
+
+1M -1
+
+which is, by a well knovn inequality, greater
+
+than 1 - ( H - l)(
+
+AijPiPj )n, which in turn
+
+F;
+
+is greater than 1 - M ( x AijPiPj)n.
+
+If we
+
+ij
+
+set H = (1 -
+
+P P -n, .u 13
+
+we then have,
+
+by taking 5 small, a-rate as close as desired to
+
+- 1% 5
+
+Ai jpipj ' Furthermore,
+
+once c is
+
+chosen, by taking n eu.fficie;tly
+
+large, we can
+
+insure that M( 5 Al jPiPj)
+
+= (1 - cP is as
+
+small as desired, say, less than 6. The
+
+probability in the ensemble of codes of a
+
+particular vord being adjacent to eny other in
+
+its own code is now lees than 6. This implies
+
+that- there are codes in the ensemble for which
+
+the ratio of the number of such undesired words
+
+to the total number in the code is lees than or
+
+equal to 6. For, if not, the ensemble average
+
+would be worse than 6. Select such a code and
+
+delete from it the words having this property.
+
+We have reduced our rate only by at most
+
+log (1 - 6)-l, Since c and 6 were both
+
+arbitrarily
+
+small, we obtain error-free codes
+
+arbitrarily
+
+close. to the rate-log
+
+min pi 5 aijPiPj
+
+as stated in the theorem.
+
+In connection with the upper bound of Theorem 1, the following result is useful in evaluating the minimum C. It is also intereeting in its own right end will prove useful later in connection with channel5having a feedback link.
+Theorem 2: In a discrete memorylees channel with transition probabilitiee pi(j) and input letter probabilitiee Pi the follwing three statements are equivalent.
+1) The rate of tranemi5eion
+R = 5 p,P,(j) log (pi(j)/ f p&(j))
+
+is stationary under variation of all non-vaniehing Pi subject to x Pi = 1 end under varia-
+I
+
+tion of p,(j) for those pi(j)suchthat and subject to f Pi(j) = 1.
+
+Pip,(j)>0
+
+2) The mutual information between input-
+
+output pairs Iij = lw (pi(j)/ f p$&))
+
+ia
+
+constant, Iij = I, for all ij pairs of non-vanishing probability (i.e. pairs for vhich Pipi(j)`>O).
+
+3) We have p,(j) = rj a function of j
+only whenever P,p,(j)>O; and also > Pi = h, i&j
+.a constant independent of j where Sj is the Set of input letters that can produce output letter j with probability greater than zero. We also have I = log h-l.
+
+The pi(j) and Pi corresponding to the maximum and minimum capacity when the pi(j) are varied (keeping, however, any pi(j) that are zero fixed at sero) satisfy l), 2) and 3).
+
+Proof: are equivalent equivalent.
+
+We vi11 show first that 1) and 2) and then that 2) end 3) are
+
+R 15 a bounded continouus function of its arguments Pi and p,(j) in the (bounded) region
+
+of allowed f p,(j)
+
+values defined by = 1, p,(j) 3 0.
+
+B=
+
+haspi
+
+= 1, Pi a finite
+
+80,
+
+partial derivative with respect to any pi(j)>O. In fact, we readily calculate,
+
+Pi log (P,(j)/ G Pdg(j))
+a*=
+
+A necessary and sufficient condition that R be
+
+stationary for small variation-of
+
+the non-
+
+vanishing p,(j) subject to the conditions given
+
+is that
+
+for all I, j, k such that Pi, pi (.I), pi(k) do not vanish. This requires that
+
+Pi log p,(j) I r P,p,(j)
+
+=
+
+m
+
+Pi log pi(k) / x P,p,(k) m
+
+If ve let Q j=
+
+ZE P,p,(j),
+
+the probability
+
+of
+
+m-
+
+output letter j, then this is equivalent to
+
+
+-P;,:(jP) i(k)
+
+.- Qj
+
+Qk
+
+In other words, p,(j)/Q,
+
+is independent of j, 8
+
+function of i only whenever Pi>0 and pi(j)
+
+This function of i we call ui. Thus
+
+p,(j) = uiQj unless Pip,(j) = 0.
+
+Now. taking the partial derivative with respect to Pi we obtain:
+
+of R
+
+$-
+
+F P,(j) log v
+
+-1
+
+i
+
+For R to be stationary subject to we must have aRIaPi = aRpPk. Thus
+xji p (j) log -p=i(j) Qj
+
+Since for Pip,(j)>0 becomes
+
+we have p,(j)/Qj = Qi, this
+
+E P,(j) log (ti = f q&j) log cfk J
+
+1% "i = log ok
+
+Thus "i is independent of i and may be written a. Consequently
+
+-P=,(aj) Qj
+
+P,(j) log -
+Qj
+
+= 1%
+
+whenever Pipi ( j ) > 0.
+
+a= I
+
+The converse result is an easy reversal of the above argument. If
+log -Pi(j) = I, then
+QJ
+aR/aP, = I - 1, by a simple substitution in the
+
+aR/aP, formula. Hence R is stationary variation of Pi constrained by XP, Further, aR/ap%(j) = Pi I = aRbpi(k),
+
+under = 1.
+and hence
+
+the variation of R also vanishes subject to
+
+f pdj) = l* Ye now prove that 2) implies 3). Suppose
+
+log p,.(-jb)
+=j T
+=e a Qjt
+condition. probability
+
+= I whenever PIpi(j)>O.
+
+Then p,(j)
+
+a function of j only under this same
+Also, if q (i) is the conditional of i givenj j, then
+
+Qj QJ qjw pi
+
+= eI
+
+P,(i) = eIPi
+
+1 = > qj(i) id3 5
+
+= e1 )-Pi its J.
+
+To prove that 3) implies 2) we assume
+
+P,(j) = rj
+
+when P,p,(j)>O.
+
+Then
+
+-P=,P,(j) `iQj
+
+
+Q,q,(i) qj (i)
+
+QJ= Aj (say) =-e
+
+-
+
+5 Qj pi
+
+Row, summing the equation P A = q (I) over icS
+
+and using the assumption frfd3) dat F Pi 2h
+
+we obtain
+
+j
+
+so A j
+=logh
+
+is h-1 -1 .
+
+hh =l J
+and independent
+
+of j.
+
+Hence rij = I
+
+The last statement of the theorem concerning minimum and maximum capacity under variation of p,(j) follows from the fact that R at these
+points must be stationary under variation of all non-vanishing Pi and p,(j), and hence the
+corresponding Pi end p,(j) satisfy condition 1)
+of the theorem.
+
+For simple channels it is usually more convenient to apply particular tricks in trying to evaluate Co instead of the bounds given in Theorem 1, which involve maximiting and minimizing processes. The simplest lower bound, as mentioned before, is obtained by merely finding the logarithm of the maximum number of non-adjacent input letters.
+
+A very useful device for determining Co which works in many cases may be described using the notion of an adjacency-reducing maming.
+
+I.2
+
+By this we mean a mapping of letters into other letters, i-u(i), with the property that if i and j are not adjacent in the channel (or graph) then a(i) ,and a(j) are not adjacent. If we have a zero-error code, then we may apply such a mapping letter by letter to the code end obtain a new code which will also be of the' zero-error type, since no adjacencies can be produced by the
+mapping.
+Theorem 2: If all the input letters i can be mapped by en adjacency-reducing mapping i+a(i) into a subset of the letters no two of which are adjacent, then the zero-error capacity Co of the channel is equal to the logarithm of the number of letters in this subset.
+
+For, in the first place, by forming all sequences of these letters we obtain a zero-error code at this rate. Secondly, any zero error code for the channel can be mapped into a code using only t ese letters and containing, therefore, at most elao! n non-adjacent words.
+
+The zero-error capacities, or, more exactly,
+
+the equivalent numbers of input letters for all
+
+adjacency graphs up to five vertices are shown in
+
+Fig. 4. These can all be found readily by the
+
+method of Theorem 3, except for the channel of
+
+Fig. 2 mentioned previously, for which we know
+
+only that the zero-error capacity lies in the
+
+range +10g51c0sog5.
+
+
+All graphs with sXx vertices have been examined and the capacities of all of these can also be found by this theorem, with the exception of four. These four ten be given in terms of the capacity of Fig. 2, so that this case is essentially the only unsolved problem,up to seven vertices. Graphs with seven vertices have not been completely examined but at least one new situation arises, the analog of Fig. 2 with seven input letters.
+
+As examples of how the No values were
+
+computed by the method of adjacency-reducing
+
+l=WPingS, several of the graphs in Fig. 4 have been labelled to show a suitable mapping. The
+
+scheme is as follows. All nodes labelled a are
+
+mapped into node a as well as aitself.
+
+All
+
+nodes labelled b and also $ are mapped into nodeB.
+
+All nodes labelled c and y are mpped into node
+
+Y- It is readily verified that no new adjacenties are produced by the mappings indicated and
+
+that the a, S, Y nodes are non-adjacent.
+
+Cc for Sum and product Channels
+
+Theorem 4:' If two memoryless channels have
+
+zero-error capacities GA = log A ahd Ct = log B,
+
+their sum has a zero-error capacity.greater
+
+than
+
+or equal to log (A + B) and their product a zet;o
+
+error capacity greater than or equal to CA + Co.
+
+If the graph of either of the two channels can
+
+be reduced to non-adjacent points by the mapping
+
+method (Theorem 3). then these inequalities can
+
+be replaced by equalities.
+
+proof: It is clear that in the case of t+e prpduot, the zero error capacity is at least co + co, since we may form a produgt code from two codes with rates close to CA and Co. If these codes are not of the same length, we use for the new code the least common multiple of the indlvidual lengths and form all sequences of the code words of each of the codes up to this length. To prove equality in case one of the graphs, say that for the first channel, can be mapped into A nonadjacent points, suppose we have a code for the product channel. The letters for the product.. code, of course , are ordered pairs of letters corresponding to the original channels.' Replace. the first letter in each pair in all code wJrds. by the letter corresponding to reduction by the mapping method. This reduces or preserves adjacency between words in the code. Wow sort
+the code words into An subsets according to the sequences of first letters in the ordered pairs. Each of these subsets can contain at most Bn
+members, since this is the largest possible number of codes for the second chennel of this length. Thus, in total, there are at most AnBn words in
+the code, giving the desired result.
+
+In the case of the sum of the two channels,
+
+we first show how, from two given codes for the
+
+two channels, to construct a code for the sum
+
+channel with equivalent number of letters equal
+
+to Al - s + B1 -& , where 6 is arbitrarily
+
+small
+
+and A and B are the equivalent number of letters
+
+for the two codes. Let the two codes have
+
+lengths nl and n2. The new code will have length
+
+n where n is the smallest integer greater than
+
+both +nd+
+
+How fo, rm codes for the first
+
+channel and-for the second channel for all lengths k from zero to n as follows. Let k equal *1 + b, where a and b are integers and b <nl. We form all sequences of a words from the given
+
+code for the first channel and fill in the
+
+remaining b letters arbitrarily,
+
+say all with the
+
+first letter in the code alphabet. We achieve
+
+at least Ak - en different words of length k none
+
+of which is adjacent to any other. In the same
+
+way we form codes for the second channel and
+
+achieve Bk - 6n words in this code of length k. We now intermingle the k code for the first channel with the n - k code for the second channel
+
+in all (E)possible ways end do this for each
+
+value of k. This produces a code n letters long
+
+with at least
+
+(El Ak - n 6 Bn- k - nb
+
+&
+
+= (AB)-&(A + B)n different words. It is readily
+
+seen that no two of these different words are
+
+adjacent . The rate is at least log (A + B) - 6
+
+log AB, and since 6 was arbitrarily
+
+small, we can
+
+achieve a rate arbitrarily
+
+close to log (A + B).
+
+To show that it is not possible, when one
+of the graphs reduces by mapping to non-adjacent points, to exceed the rate corresponding to the
+number of letters A + B, consider any given code of length n for the sum channel. The words in
+this consist of sequences of letters each letter corresponding to one or the other of the two
+
+
+ONE NODE 0
+No= I
+
+TWO NODES 00-
+
+
+I
+
+THREE NODES
+
+-- 0
+
+
+-7-v
+
+
+
+
+I
+
+FOUR NODES
+
+FIVE NODES
+
+v
+
+
+pbJ @
+
+
+2O
+
+
+lx!
+
+
+I
+
+Fig. 4 - All graphs with 1, 2, 3, 4, 5 nodes and the corresponding tie for channels with these as adjacency graphs (note Co = log MO)
+
+I.4
+
+channels. The words may be subdivided into
+
+classes corresponding to the pattern of the
+
+choices of letters between the two channels.
+
+There are 2n such classes with (E) classes in
+
+which exactly k of the letters are from the first
+
+channel and n - k from the second. Consider now
+
+a particular class of words of this type. Re-
+
+place the letters from the first channel alphabet
+
+by the corresponding non-adjacent letters.
+
+This
+
+does not harm the adjacency relations between
+
+words in the code. Wow, as in the product case,
+
+partition the code words according to the
+
+sequence of letters involved from the first
+
+channel. This produces at most Ak subsets. Each
+
+of these subsets contains at most Bn - k members,
+
+since this is the greatest possible number of nonadjacent words for the second channel of length
+
+n - k. In total, then, summing over all values of k and taking account of the (bn) classes for
+
+each k, there -we at most r n'.Ak Rn - k k (k)
+
+=(A + B)n words in the code for the sum channel.
+
+This proves the desired result.
+
+Theorem 4, of course, is analogous to known results for ordinary capacity C, where the product channel has the sum of the ordinary capacities and the sum channel has an equivalent number of letters equal to the sum of the equivalent numbers of letters for the individual channels. We conjecture but have not been able to prove that the equalities in Theorem 4 hold in general, not just under the conditions given. We now prove a lower bound for the probability of error when transmitting at a rate greater than Co.
+
+Theorem 5: In any code of length n and rate R> Co, Co > 0, the probability of error P,
+will satisfy Pez(l - e-n(C, - Ii) ) p mnin' where Pmin is the minimum non-vanishing p,(j).
+
+w:
+
+By definition of Co there are not
+
+more than enCo non-ad'acent words of length n. With R> Co, among exl4 words there must, therefore,
+
+be an adjacent pair. The adjacent pair has a
+
+common output word which either can cause with a
+
+probability at least pmyn. This output word can-
+
+not be decoded into both inputs. At least one,
+
+Vcrefore, must cause an error when it leads to
+
+thi.s output word. This gives a contribution at
+
+least eBnR Gin to the probability of error Pe.
+
+NOW omit this word from consideration and apply
+
+the same argument to the remaining enR -1 words
+
+of the code. This will give another adjacent pair
+
+and another contribution of error of at least
+
+e-nR n pmin*
+
+The process may be continued
+
+ztil
+
+the
+
+number of code points remaining is just e O. At
+
+this time, the computed probability of error must
+
+be at least (enR _ enCo)e-nR pn min
+
+= (1 - en(Co - R)) pzin.
+
+Channelswith a Feedback Link
+We now consider the corresponding problem for channels with complete feedback. By this we mean that there exists a return channel sending back from the receiving point to the transmitting point, without error, the letters actually received. It is assumed that this information is received at the transmitting point before the next letter is transmitted, and can be used, therefore, if desired, in choosing the next transmitted letter.
+It is interesting that for a memory-less channel the ordinary forward capacity is the same with or without feedback. This will be shown in Theorem 6. On the other hand, the zero error capacity may, in some cases, be greater witi feedback than without. In the channel shown in Fig. 5, for example, Co = log 2. However, we
+will see as a result of Theorem 7 that with feedback the zero error capacity COP = log 2.5.
+
+p,
+
+p2 p3 z
+p4 Fig. 5
+
+We first define a block code of length n
+
+for a feedback system. This means that at the
+
+transmitting point there is a device with two
+
+inputs. or, mathematically, a function with two
+
+arguments. One argument is the message to be
+
+transmitted, the other. the past received letters
+
+(which have come in over the feedback link). The
+
+value of the function is the next letter to be
+
+transmitted.
+
+Thus, the function may be thought
+
+of as x j+l
+
+= f(k, vj) where x. J+l
+
+is the j + 1
+
+transmitted letter in a block, k is an index
+
+ranging from 1 to M, and represents the
+
+specific message, and v j is a received word of
+
+length j. Thus j ranges from 0 to n - 1 and vj
+
+over all received words of these lengths.
+
+In operation, 'if message mk is to be sent f is evaluated for f(k -) where the - means "no
+
+1.5
+
+word" and this is sent as the first transmitted letter. If the feedback link sends back a, say, as the first received letter, the next transmitted letter will be f(k, o). If this is received as $. the next transmitted letter will be f(k,ap), etc.
+Theorem 6: In a memorylees discrete channel with feedback, the forward capacity is equal to the ordinary capacity C (without feedback). The average change in mutual information Ll between received sequence v end message m for a letter of text is not greater than C.
+Proof: Let v be the received sequence to date of a block, m the message, x the next transmitted letter and y the next received letter, These are all random variables and,. also, x is a function of m and v. This function, namely, is the one which defines the encoding procedure with feedback whereby the next transmitted letter x is determined by the ..Jssege m and the feedback information v from the previous received signals. The channel being memoryless implies that the next operation is independent of the past, in particular, PrCY/Xl = PrCY/X,Vl.
+The average change in mutual information, when a particular v has been received, due to the x,y pair is given by (we are averaging over messages m and next received letters y, for a given v):
+
+PrEv,y,m] log PrCv,YlPr[m]
+
+-c
+
+PrCm/vl*
+
+Since Pr[m/vl = x Pr[y,m/vl, 9
+be rewritten as
+
+the second sum mey
+
+The two suma then combine to give
+
+The sum on m may be thought of as summed first
+
+on the m's which result in the same I (for the
+
+given v), .reoalling that x Is a function of m
+
+and v, and then summing on the different x18. In
+
+the first summation, the term Pr[y/v,ml is
+
+constant at P&T/X] and the coefficient of the
+
+1cgarithm sume to Pr[x,y/v].
+
+Thus we can write
+
+AI=
+
+z
+
+X,Y
+
+Row consider the rate for the channel (in the'
+
+ordinary sense without feedback) if we should
+
+assign to the x18 the probabilities
+
+q(x)
+
+= Pr[x/v] . ,!l!he probabilities
+
+for pairs, r(x,y),
+
+and for the y's alone, w(y), in this situation
+
+would then be
+
+r(x,y) = q (x3 P&/xl =-Pr[x/v] Pr [y/x]
+
+= pr Cx,r/vl w(y) = ) dX.Y)
+
+= ; P.r CX,Y/Vl X
+
+= prcs/vl
+
+Hence the rate would be
+
+R= )
+
+r(x,y) log w
+
+XSY
+
+`= 5XL,
+
+PrCx*Y/vl log PprrC[YY,v/X] l
+
+E
+
+AI
+
+Since Ric C, the channel capacity (C being the no~lrimum possible B for all q(x) assignments), we conclude that
+
+AI CC.
+
+Since the average change in I per letter is not greater than C, the average change in n
+letters is not greater than nC. Hence, in a blodr code of length IL with input rate R, if R > C then
+the equivocation at the end of a block will be at least B - C, just as in the non-feedback case. In other words, it is not possible to approach zero equivocation (or, as easily follows, zero probability of error) at a rate exceeding the
+Channel capacity. It is, of course, possible to do this at rates less than C, since certainly anything that can be done without feedback can be done with feedback.
+
+
+It is interesting that the first sentence
+
+of Theorem 6 can be generalized readily to ohan-
+
+nels with memory provided they are of such a
+
+nature that the internal state of the channel
+
+can be calculated at the transmitting point from
+
+the initial state and the sequence of letters
+
+that have been transmitted.
+
+If this is not the
+
+case, the conclusion of the theorem will not
+
+always be true, that is, there exist channels of
+
+a more complex sort for which the forward
+
+capacity with feedback exceeds that without feed-
+
+back. We shall not,however, give the details of
+
+these generalizations here.
+
+Returning now to the zero-error problem, we define a zero error capacity COP for a
+channel with feedback in the obvious way--the least upper bound of rates for block codes with no errors. The next theorem solves the problem of evaluating COB for memoryless channels with
+feedback, and indicates how rapidly COB may be
+approached as the block length n increases.
+
+aeorem 7: In a memoryless discrete channel with complete feedback of received
+to the transmitting point, the zero error capacity CoF is zero if all pairs of input
+
+lettga
+
+letters are adjacent. Otherwise COP = log Pi'
+
+where
+
+PO = min mex r
+
+pi
+
+j f;sj
+
+pi
+
+Pi being a probability assigned to input letter
+
+1 ( z Pi = 1) and S the set of input letters
+
+
+j
+
+which can cause output letter j with probability
+
+greater than zero. A zero error block code of
+
+length n can be found for such a feedback
+
+channel which transmits at a rate
+
+R;LCoF (1 - 2n log2 2t) where t is the number of input letters.
+
+The PO occuring in this theorem has the
+
+following meaning. For any given assignment of
+
+probabilities
+
+Pi to the input letters one may
+
+calculate, for each output letter j, the total
+
+probability of all input letters that can (with
+
+positive probability)
+
+cause j. This is
+
+pi' Output letters for which this is
+
+large may be thought of as nbadn in that when received there is a large uncertainty as to the cause. To obtain PO one adjusts the Pi so that
+worst output letter in this sense is as good as possible.
+
+We first show that if all letters are
+
+adjacent to each other COF = 6. In fact, in
+
+aqv coding system, any two messages, say m, and
+
+m2 can lead to the same received sequence with
+
+positive probability.
+
+Namely, the first trane-
+
+mitted letters corresponding to m, and m2 have a
+
+possible received letter in common. Assuming this occurs, calculate the next transmitted letters in the coding system for ml and m2. These
+also have a possible received letter in common. Continuing in this manner we establish a received word which could be produced by either ml or m2 and therefore they cannot be distin-
+guished with certainty.
+
+Row consider the case where not all pairs are adjacent. *We will first prove, by induction on the block length n, that the rate log PO-l
+cannot be exceeded with a zero error code. For n = o the result is certainly true. The inductive hypothesis will be that no block code of length n - 1 transmits at a rate greater than log 51, or, in other words, can resolve with
+
+certainty more than
+
+,(n-1) log PO1= ,-(n-1)
+different messages. Row suppose (in contradiction to the desired result) we have a block code of length n resolving M messages with M>qns
+
+The first transmitted letter for the code parti-
+
+tions these M messages among the input letters
+
+for the channel. Let Fi be the fraction of the
+
+messages assigned to letter 1 (that is, for which
+
+1 is the first transmitted letter).
+
+Row these
+
+Fi are like probability assignments to the
+
+different letters and therefore by definition of
+
+Po, there is some output letter, say letter k,
+
+such that ?G'k
+
+Fi )P 0 . Consider the set of
+
+messages for which the first transmitted letter
+
+belongs to Sk. The number of messages in this
+
+set is at least PoN. Any of these can cause
+
+output letter k as first received letter. Men this happens there are n - 1 letters yet to be transmitted and since M >PGn we have PoM>%(n-l).
+
+Thus we have a zero error code of block length n - 1 transmitting at a rate greater than
+log p;? contradicting the inductive assumption.
+Rote that the coding function for this code of length n - 1 is formally defined from the original coding function by fixing the first received letter at k.
+
+We.must now show that the rate log PL1 can
+
+actually be approached as closely as desired with zero error codes. Let Pi be the set of probabili-
+
+ties which, when assigned. to the input letters,
+
+give PO for min max
+
+pi' The general
+
+pi
+
+j G Oj
+
+scheme of the.coae will be to divide the M original messages into t different groups
+
+corresponding to the first transmitted letter.
+
+The number of messages in these groups will be
+
+approximately proportional to Pl, P2,... Pt.
+
+The first transmitted letter, then, will cor-
+
+respond to the group containing the message to
+
+be transmitted.
+
+Whatever letter is received, the
+
+number of possible messages compatible with this
+
+
+received letter will be approximately P,M. This
+subset of possible messages is known both at the receiver and (after the received letter is sent back to the transmitter) at the transmitting point.
+
+The code system next subdivi&ss this sub-
+
+set of messages into t groups, again approximate-
+
+ly in proportion to the probabilities
+
+Pi. The
+
+second letter transmitted is that corresponding to the group containing the actual message. Whatever letter is received, the number of messages compatible with the two received letters is now, roughly, P$K.
+
+This process is continued until only a few
+
+messages (less than t2) are compatible with all
+
+the received letters.
+
+The ambiguity among these
+
+is then resolved by using a pair of non-adjacent
+
+letters in a simple binary code. The code thus
+
+constructed will be a zero error code for the
+
+channel.
+
+Our first concern is to estimate carefully the approximation involved in subdividing the messages into the t groups. We will show that for any M and any set of Pi x Pi = 1, it is
+possible to subdivide the M messages into groups of ml,m2,..,mt such that ml = o whenever Pi = o
+
+and
+
+mi-p IM
+
+1 I "+-
+
+1 = 1,...,t
+
+We assume without loss of generality that P1'P2.... Pa are the non-vanishing Pi. Choose ml
+
+to be the largest integer such that Let P1 - -"T1;T = 6,. Clearly /6#+.
+
+-m- l L-P=. w IText choose
+
+m2 to be the smallest and let P2 - M"2 '8,.
+
+integer such that 2% P2 M
+We have 1 &2i$$. Also
+
+Is1 4'21Gi1 since 6, and 6, are opposite in
+
+sign and each less than i in absolute value.
+
+I?ext ,3
+
+is chosen so that 3 approximates, M
+
+to
+
+within 1M' to P3 . If 61 + 6,%0, then 3 is
+
+chosen less than or equal to P3' If s 1 = s,LO,
+
+then 3 is chosen greater M
+Thus again P3 -2=h3<$-
+
+than or equal to P3' and
+
+I 6, + 6, + "31-'+*
+
+Continuing in this manner
+
+through Pa,1 we obtain approximationsfor
+
+P1, P2,...,Ps,1 with the property that
+
+I S1 + S2 +. ..+6 s-l I'+M, or
+
+I I4 (P1-+ P2 +...+ PSW1)
+
+-by+%+
+
+. ..+msel )I<, 1. If we now define
+
+s-l ma as M - x ml then this inequality can be
+
+written
+
+1 /W(l - Pa) - ( M - me) 1 $ 1. Hence
+
+Am-P IM
+
+.a
+
+I \<MA'
+
+!fhus we have achie:ed
+
+objective of keeping all approximation
+
+the rml to
+
+within i of Pi and having x m1 = H.
+
+Returning now to our main problem note first that if PO = 1 then CoF = 0 and the
+theorem is trivially true. We assume, then, that
+PO <l. We wish to show that PO 4 (,l - 4).
+Consider the set of input letters which have the maximum value of Pi. This maximum is
+certainly greater than or equal to the average -1t. Furthermore. we oan arrange tohave at least one of these input letters not connected to some output letter. For suppose this is not the case. !Chen either there are no other input letters beside this set and we contradict the assumption that Po<l, or there are other input letters
+with smaller values of Pi. In this case, by
+reducing the Pi for one input letter in the
+maximum set and increasing correspondingly that for some input letter which does not connect to all output letters, we do not increase the value of PO (for any Sj ) and create an input letter of the desired type. By consideration of an output letter to which this input letter does not connect we see that PO 61 -$
+
+Now suppose we start with M messages and subdivide into groups approximating proportionality to the Pi as described above. Then when a
+
+letter has been received, the set of possible
+
+messages (compatible with this received letter) will be reduced to those in the groups correspond-
+
+ing to letters which connect to the actual
+
+received letter. Each output letter connects to not more than t - 1 input letters (otherwise we would have PO = 1). For each of the connecting
+
+groups, the error in approximating Pi has been
+
+less than or equal to 1 -Fr
+
+Hence the total
+
+relative number in all connecting groups for any
+
+output letter is less than or equal to PO + t-l.M
+
+The total number of possible messages after
+
+receiving the first letter consequently drops from M to a number less than or equal to PoM +t-1.
+
+In the coding system to be used, this remaining possible subset of messages is sub-
+divided again among the input letters to approximate in the same fashion the probabilities pi- This subdivision can be carried out both at
+
+receiving point and transmitting point using the same standard procedure (say, exactly the one described above) since with the feedback both terminals have available the required data, namely the first received letter.
+
+. The second transmitted letter obtained by this procedure will egain reduce at the receiving point the number of possible messages to a value not greater than PO (P,M + t - 1) + t - 1. This
+same process continues with each transmitted letter. If the upper bound on the number of Dossible remaining messe2es after k letters is 9, then Mk + 1 =-PoMk +-t - 1. The solution of
+
+this difference equation is
+
+Mk=bpi: +e
+
+This may be readily verified by substitution in
+
+the difference equation. To satisfy the initial
+
+conditions MO = M requires A = M - ti
+
+. Thus
+
+the solution becomes
+
+1-P
+
+b$=(M-tio)<
+
++f+,
+
+= M Pok + it---1-- p,(l - Pok)
+
+4 M Pok + t (t - 1)
+
+since we have seen above that 1 - PO>,+.
+
+If the process described is carried out for nl steps, where nl is the smallest integer
+
+>, d where d is the solution of MPod = 1, then the
+number of possible messages left consistent with the received sequence will be not greater than
+
+1+t(t-
+
+1) St2 (since t-1, otherwise we
+
+should have COF = 0). Now the pair of non-
+
+adjacent letters assumed in the theorem may be
+
+used to resolve the ambiguity among these
+
+t2 or less messages. This will require not more than 1 + log2t2 =log22t2 additional letters.
+
+Thus. in total, we have used not more than
+
+d + 1 + log22t2 = d + log24t2 = n say as block
+
+length. We have transmitted in this block
+
+length a choice from M = Td me&ages. zero error rate we have achieved is
+d log P;;' R = $ log Ma
+d + log24t2
+= (1 - Jpg 4t2) log Pi'
+
+Thus the
+
+= (1 - $ 1% 4t2) c,F
+
+Thus we can approximate to COP as closely as desired with zero error codes.
+
+As an example of Theorem 7 consider the channel in Fig. 5. We wish to evaluate PO. It
+is easily seen that we may take P1 = P2 = P3 in
+
+forming the min max of Theorem 7, for if they are
+
+unequal the maximum f- Pi for the correspond-
+
+I& j
+ing three output letters would be reduced by
+
+equalizing.
+
+Also it is evident, then, that
+
+P4 = P1 + P2, since otherwise a shift of
+
+probability one way or the other would reduce the
+
+me2&aum. We conclude, then, that Pl = P2 = P3
+
+= l/5 and P4 = 215. Finally, the zero error capacity with feedback is log Pi1 = log 512.
+
+There is a close connection between the
+
+min max process of Theorem 7 and the process of
+
+finding the minimum capacity for the channel
+
+under variation of the non-vanishing transition
+
+probabilities
+
+p,(j) as in Theorem 2. It was
+
+noted there,that at the minimum capacity each
+
+output letter can be caused by the same total
+
+probability of input letters.
+
+Indeed, it seems
+
+very likely that the probabilities
+
+of input
+
+letters to attain the minimum capacity are
+
+exactly those which solve the min mar problem of
+
+Theorem 7, and, if this is so, the Cmin = log T1.
+
+Acknowledgement
+I am indebted to Peter Elias for first pointing out that a feedback link could increase the zero-error capacity, as well as for several suggestions that were helpful in the proof of Theorem 7.
+
+
+

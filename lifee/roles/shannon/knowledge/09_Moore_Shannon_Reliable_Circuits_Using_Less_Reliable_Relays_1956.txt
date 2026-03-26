@@ -1,0 +1,622 @@
+RELIABLE CIRCUITS USING LESS RELIABLE RELAYS 
+BY 
+E. F. MOORE’ AND C. E. SHANNON’ 
+ABSTRACT 
+An investigation is made of relays whose reliability can be described in simple 
+terms by means of probabilities. It is shown that by using a sufficiently large 
+number of these relays in the proper manner, circuits can be built which are arbitrarily 
+reliable, regardless of how unreliable the original relays are. Various properties of 
+these circuits are elucidated. 
+Part 12 
+INTRODUCTION 
+In an important paper-3 von Neumann considers the problem of con- 
+structing reliable computing circuits by the redundant use of unreliable 
+components. He studies several cases, one of which, for example, in- 
+volves the construction of machines using as a basic component a 
+“Sheffer stroke” organ.4 Von Neumann shows that under certain con- 
+ditions it is possible to combine a number of unreliable Sheffer stroke 
+organs to obtain an element which acts like a Sheffer stroke organ of 
+higher reliability. In fact, under certain conditions one can approach 
+perfect operation by means of a sufficiently redundant circuit. 
+The present paper was inspired by von Neumann’s work and carries 
+out a similar analysis for relay circuits. It appears that relays are 
+basically more adaptable to these error-correcting circuits than the 
+neuron-like components studied by von Neumann. At any rate, our 
+results go further than his in several directions. 
+In the first place, von Neumann needs to assume a certain fairly 
+good reliability in his components in order to get started. With the 
+Sheffer stroke organ, a probability of error less than 1/6 is absolutely 
+necessary, and something like one in a hundred or better is required 
+in the specific error-correcting circuits developed. The methods de- 
+veloped here, on the other hand, wil1 apply to arbitrarily poor relays. 
+Secondly, the amount of redundancy required in our circuits for a 
+’ Murray Hill Laboratory, Bel1 Telephone Laboratories, Inc., Murray Hill, N. J. 
+* Part 11 wil1 appear in this JOURNAL for October, 1956. 
+8 J. VON NEUMANN, “Probabilistic Logies,” California Institute of Technology, 1952. 
+(Also Published in “Automata Studies,” edited by C. E. Shannon and J. McCarthy, Princeton 
+IJniversity Press, 1956.) 
+4 The Sheffer stroke is the logica1 operation on two variables “nat A and not B.” It has 
+the property that al1 logica1 functions can be generated in terms of it. 4 Sheffer stroke organ 
+is a device with two binary inputs and one binary output which performs this logica1 operation. 
+An unreliable component of this sort would give the proper output only with a certain prob- 
+ability. 
+r9r 
+
+192 E. F. MOORE AND C. E. SHANNON [.I. F. 1. 
+given improvement in reliability is considerably different from that 
+required by von Neumann. For example, in one numerical case that 
+he considers, a redundancy of about 60,000 to 1 is required to obtain a 
+certain improvement in operating reliability. The same improvement 
+is obtained in relay circuits with a redundancy of only 100 to 1. We 
+also show that in a certain sense some of our circuits are not far from 
+minimal. Thus, in the numerical case just mentioned, our results show 
+that a redundancy of at least 67 to 1 is necessary in any circuit of the 
+type we consider. Hence, the actual circuits which achieve this im- 
+provement with a redundancy of 100 to 1 are not too inefficient in the 
+use of components. 
+Another differente is that it is not necessary in the case of relays 
+to use what von Neumann calls the “multiplexing system” in order to 
+approach perfect operation on the final output. With his types of 
+elements, the final output (without multiplexing) always has a definite 
+residual unreliability. With the systems described here, this final proh- 
+ability of error can approach zero. 
+This paper is not intended for practica1 design purposes, but rather 
+for theoretical and mathematica1 insight into the problem. There may, 
+however, be some practica1 applications. The reliability of a com- 
+mercial relay is typically very high, for example, one failure in 10; 
+operations. However, there are cases where even this reliability is 
+insufficient. In the first place, in large-scale computing machines an 
+extremely large number of individual relay operations may be involved 
+in one calculation, an error in any one of which could cause an error in 
+the final result. Because of this, the Bel1 Telephone Laboratories’ 
+computers have made extensive use of self-checking and error-detecting 
+schemes. A second type of situation requiring extreme reliability 
+occurs when human safety is dependent on correct operation of a relay- 
+circuit, for example, railway interlocks, safety circuits on automatie 
+elevators and in guided missiles, etc. It is possible that some of thc 
+simpler circuits we describe may be of some use in applications such as 
+these. However, the results of this paper wil1 not be directly applicable 
+to actual relays which wear out with age, but only to idealized relays 
+whose probability of failure are constant in time. 
+IDEALIZED RELAYS 
+We wil1 prove results only for idealized relays whose failures can be 
+described in one specific manner by means of probabilities. Their 
+description allows only intermittent types of failures, and allows these 
+only under the assumption that the probability of failure remains 
+constant as time passes. 
+This idealization does not cover such actually possible cases as 
+relays which wear out with age, relays whose windings burn out, or 
+relays which have been wired into the circuit with an imperfect soldered 
+
+Sept., 1956.1 CIRCUITS USING LES RELIABLE RELAYS 193 
+connection. It is also assumed that the circuit is not improperly de- 
+signed or improperly wired and that there are no bits of solder to 
+produce short circuits between different wires. 
+Since al1 of the above kinds of errors and failures can actually occur 
+in practice, using real relays, the results of this paper do not strictly 
+apply to such real relays. However, the two kinds of failures con- 
+sidered in this paper do actually occur in relays, so the kinds of circuits 
+suggested are of some possible application. 
+The first kind of failure allowed is the failure of a relay contact to 
+close, which in actual relays is often due to a particle of dust preventing 
+electrical closure. 
+The second type of failure is the failure of a contact to open, which 
+in actual relays is usually due to the welding action of the current 
+passing through the contacts. We shall consider relay circuits in which 
+the only causes of errors are of these two types-failure of contacts 
+that should be closed to be actually closed and of contacts that should 
+be open to be actually open. We wil1 assume, in fact, that there are 
+two probabilities associated with a contact on a relay. If the relay is 
+FIG. 1. Schematic represen- 
+tation of the transition prob- FIG. 2. One proposed way of transforming relay circuits 
+abilities. to improve reliability. 
+energized, the contact is closed with probability a, open with prob- 
+ability 1 - a. If the relay is not energized, the contact is closed with 
+probability c and open with probability 1 - c. If a is greater than c, we 
+wil1 cal1 the contact a make contact ; if a is less than c we cal1 it a break 
+contact. We assume that different contacts are statistically indepen- 
+dent. With actual relays this is probably not too far from the truth 
+for contacts on diflerent relays and, indeed, this is al1 that is required 
+for most of the results we wish to establish. In addition, we shall 
+assume that on the successive times that a relay coil is energized its 
+closures are statistically independent. 
+A relay of this type governed by probabilities a and c wil1 be called 
+a crummy6 relay. Its probability operation may be represented sche- 
+matically as in Fig. 1. This wil1 be recognized as similar to diagrams 
+used to represent a simple noisy communication Channel, and indeed 
+such a relay can be thought of as a noisy binary Channel. The capacity 
+of the corresponding Channel wil1 be zero if and only if a = c. We wil1 
+6 “Crummy = crumby, esp. lousy,” Webster’s New International Dictionary. We chose 
+the more modern spelling universally used in comic books. 
+
+194 E. F. MOORE AND C‘. E. SH,\NNON IJ. F. 1. 
+see later that highly reliable computers can be constructed from a 
+sufficient number of crummy relays if and only if u =j= c. 
+THE GENERAL METHOD OF IMPROVING RELIABILITY 
+In a genera1 way the analysis we wil1 give depends on constructing 
+networks of contacts which act like a single contact but with greater 
+reliability than the contacts of which they are composed. For example, 
+in Fig. 2A, we have a crummy relay X with a make contact .L This 
+relay might appear as a part of a large computing circuit. In Fig. 2B 
+we replace this by four crummy relays X1, X?, Xij, X., whose coils in 
+parallel replace the single coil X, and whose contacts are in the series 
+parallel combination shown, this two-terminal circuit replacing the 
+single previous x contact. If each of these four contacts bas the 
+probability p of being closed, it is easily seen that the probability of 
+the four-contact circuit being closed is 
+h(p) = 1 - (1 - P’)” = LP? - p”_ 
+This function is plotted in Fig. 3. It wil1 be seen that it lies above the 
+diagonal line y = p for p greater than 0.618 and lies below the line for 
+FIG. 3. The function describing FIG. 4. .%nother series-parallel circuit and its ;is- 
+the behavior of Fig. 2B. sociated function. 
+p less than 0.618. This means that if 0.618 is between the a and c of 
+Fig. 1, Fig. 2B wil1 act like a relay with better values of a and c, that 
+is, values nearer to zero and one. For example, if the individual relays 
+made errors with probabilities 1 - a = c = 0.01, the circuit of Fig. 2B 
+would make errors when the coils are energized with probability 0.000396, 
+and when the coils are not energized with probability 0.0002. Thus 
+a large improvement in reliability, both when the coil is energized and 
+when it is not energized, is obtained by the use of this circuit. 
+Figure 4 shows another contact arrangement giving rise to a some- 
+what different function 
+h(P) = [l - (1 - p)2]2 = 4p2 - 4p3 + pa. 
+
+Sept., 1956.1 CIRCUITS USING LESS RELIABLE RELAYS 195 
+Here again, h(p) is the probability of the network being closed, when 
+the individual contacts each have probability fi of being closed. The 
+network of Fig. 4 is the dual of that in Fig. 2, and the curve is that 
+obtained by interchanging 0 and 1 in both abscissa and ordinate in 
+Fig. 3. 
+The bridge network of Fig. 5 gives rise to a symmetrical curve 
+crossing the diagonal at p = O.S. For this network we have : 
+h(p) = 2p2 + 2p3 - 5fi4 + 2~5. 
+,411 of these networks tend to accentuate the nearness of p to its 
+values 0 or 1 and thus tend to improve reliability. Many other net- 
+works have similar properties as we shall see. Furthermore, we wil1 
+show that it is possible to find a network whose curve, Fig. 6, crosses 
+the diagonal line for a value of p between any two given numbers a 
+and c (no matter how close together) and in fact is less than 6 at a 
+and greater than 1 - 6 at c, for any positive 6. This means that an 
+arbitrarily good relay can be made from a sufficient number of crummy 
+relays. 
+It may be seen that this genera1 procedure operates to improve the 
+reliability of either make or break contacts. The only differente is 
+the labeling of the points a and c. 
+X, 
+x3 X2 
+G a x5 1 
+Liizl 2p2+ 2p’ 
+- sp4+2p* 
+0 2500 1 , 
+‘a c 
+FIG. 5. A bridge circuit and its associated function. FIG. 6. The genera1 form of 
+curve of attainable functions. 
+PROPERTIRS OF h(p) 
+Consider any two-terminal network made up of contacts each of 
+which has a probability p of being closed. The network wil1 have a 
+probability, say h(p), of being closed. We wish to investigate some 
+of the properties of h(p). 
+In the first place, h(P) is a polynomial and may be written as follows : 
+h(p) = c A,@(l - p),-n 
+7&-0 (1) 
+
+196 E. F. MOORE AND C. E. SHANNON IJ. I;. 1. 
+where m is the total number of contacts in the network and A, is the 
+number of ways we can select a subset of n contacts in the network 
+such that if these n contacts are closed, and the remaining contacts 
+open, then the network wil1 be closed. This is evident since (1) merely 
+sums up the probabilities of the various disjoint ways that the network 
+could be closed. 
+The first non-vanishing term in (l), say A BP8( 1 - P)“-“, is related to 
+the shortest paths through the network from one terminal to the other 
+-~-s is the length of these paths and A, the number of them. This is 
+because in (1) al1 the elements of a subset which contribute to A, must 
+actually be on the path (otherwise A, would not have been the first 
+non-vanishing term). We wil1 cal1 s the Zength of the network. It is 
+evident from (1) that near P = 0 the function h(P) behaves as A PS. 
+In a similar way, one can work with the probahility of the network 
+being open and write 
+1 - it(p) = 5 B,(l - P)np,-,, 
+n-0 12) 
+where B, is the number of subsets of n contacts such that, if al1 contacts 
+in a subset are open and the other contacts closed, the network is open. 
+The first non-vanishing term in this series, say Bt( 1 - P) fP*-t, relates to 
+the smallest cut sets of the network (sets of contacts which, if opened, 
+open the network). Here t is the number of contacts in these minima1 
+cut sets, and Bt the number of such cut sets. The reason is essentially 
+as before. We wil1 cal1 t the width of the network. It is evident that, 
+in the neighborhood of P = 1, h(p) behaves as 1 - Bt( 1 - P) I. 
+The function h(P) may also be calculated by other means. For 
+example, fix attention on a particular contact in the network, N. 
+Calculate the probability function for the network obtained from N 
+by replacing this contact with a short circuit, say f(P), and for the 
+network obtained from N by replacing this contact with an open 
+circuit, say g(P). Then clearly, 
+h(P) = Pf(P) + (1 - P)g(P). 
+Furthermore we wil1 have, whenever 0 5 P I 1, (3) 
+f(P) 2 d#>- (4) 
+This is intuitively evident since closing a connection certainly cannot 
+decrease the probability of the network being closed. Formally, it 
+follows from the relation (l), noting that the cases where the g net- 
+work is closed are a subset of those in whichf is closed, and consequently 
+the terms in the expression forf dominate those in the expression for g. 
+If the network in question is planar, it wil1 have a dual. Let 
+ho(P) be the probability function for this dual network. For each 
+
+Sept., 1956.1 CIRCUITS USING LESS RELIABLE RELAYS 197 
+state of the contacts of the original network let US make correspond 
+in the dual network the state in which corresponding contacts have the 
+opposite value. Then states for which the original network is open 
+correspond to states for which the dual network is closed. If the prob- 
+ability of closure of a contact in the dual network is 1 - P, where P is 
+the probability of closure in the original network, then the probabilities 
+of corresponding states are equal. Consequently we wil1 have 
+1 - hD(1 -p) = h(p). (6) 
+An example of this relation between the h functions for a network 
+and its dual is given in Figs. 3 and 4. Either of these graphs can be 
+obtained from the other by inverting, that is, by interchanging 0 and 1 
+in both abscissa and ordinate. 
+If the network is self-dual (for example the bridge of Fig. S), 
+1 - h(1 - p) = h(p). (7) 
+Substituting P = 1/2, we find h(1/2) = 1/2. 
+COMBINATION OF TWO NETWOBKS 
+Consider now two networks N1 and Nz with functions hl(P) and 
+hz(P). If N1 and Nz are connected in series, Fig. 7, the resulting net- 
+R(P) = f(P)qP) 
+FIG. 7. Connection oftwo FIG. 8. Connection of two networks in 
+networks in series. parallel. 
+work wil1 be closed only if both parts are closed. Hence, the resulting 
+h(P) function wil1 be given by the product hl(P) h*(p). 
+If N1 and Nt are connected in parallel, Fig. 8, the resulting network 
+wil1 be open only if both parts are open, an event with probability 
+(1 - hJ(1 -hz). H ence, the resulting h(p) function for the parallel 
+network wil1 be [l - (1 - hJ(1 - hz)]. 
+A third method of combining the two networks N1 and NP is by 
+“composition.” By this we mean replacing each element of N1 by a 
+copy of Nz, as shown for a typical example by Fig. 9. It is evident 
+that the composite network has an h function given by the composition 
+of the two original h functions: 
+h(P) = hl&(P)). (8) 
+
+198 E. 17. MOORE AND C. E. SHANNON 1.1. F. 1. 
+If N1 and Nz are identical and this process is repeated n - 1 times, we 
+obtain the nth composition of h with itself, which we denote by 
+h(n)(p) = h(h(h. .h(@). . .)). 
+The value of h(n)(p) can be found readily from the h(p) curve bl 
+the staircase construction shown typically in Fig. 10 for hc3) (PI). Thus, 
+by composition, a greater improvement in reliability may be obtained 
+with networks whose h(p) curve crosses the diagonal but once. This 
+effect, and the improvement by iteration relating to the staircase con- 
+struction of Fig. 10, are very similar to situations in von Neumann’s 
+approach. 
+BOUNDS ON h’(p) 
+We wil1 now deduce an interesting inequality concerning the slape 
+of possible functions h(p). As a corollary, we wil1 show that any h(p) 
+function can cross the diagonal at most ome. 
+FIG. 9. Composition of two networks. FIG. 10. The effect of iterated 
+composition. 
+Theorem 1 
+__ h’(P) 1 
+(1 _ h(p)&(p) > (1 _ p)p whenever ’ < p < ‘, (9) 
+provided h(p) is neither identically zero, identically one, nor identically 
+equal to p. 
+This wil1 be proved by an induction on the number of contacts in 
+the network. We expand h(p) as in (3) except that we expand it 
+about some contact which lies on a path through the network, and then 
+we assume that either the inequality holds for the functions f and g, 
+or that they are among the three exceptional functions, and then we 
+
+Sept., 1956.1 CIRCUITS USING LESS RELIABLE RELAYS 199 
+prove the inequality for the function h. But since the contact actually 
+lies on a path, the proof of (4) gives that f(p) < g(p) for al1 p. Also 
+we cannot have 1 -f(p) + g(p) = 0 for any p, for if so, we would 
+have f(#) = 1 and g(p) = 0, which implies there is no path through 
+the network of g, and no cut set through the network of f, and hence 
+f(p) = 1 and g(p) = 0 for al1 p, hence h(p) = p, contradicting the 
+hypotheses of the theorem. 
+It can be seen that 
+(1 - p>p(f - g)(l -f + g) > 0 whenever 0 < p < 1, (10) 
+since each of the terms is positive. Multiplying out, 
+Pf - Pg - Pf2 + 2Pfg - Pg2 - P”f + P2g + PY2 - 2P% + P2g2 > 0. 
+Rearranging and factoring 
+- Pf” + (1 - P)Pf - (1 - P)g’ - (1 - P)Pg > 
+- Wf” + (1 - P)2g2 + (1 - P>2Pfd. 
+Adding pf + (1 - p)g to each side, 
+(1 -f)Pf + (1 - P)Pf + (1 - P)(l - g)g - (1 - P)Pg 
+> pf + (1 - p)g - cpf + (1 - p)g]2 = h - h2 = (1 - lz)12. (11) 
+Now, since by inductive assumption either f’ 
+(1 - f )f ’ (1 _! P)P’ Or 
+we have one of the three exceptional functions, we have in any case that 
+(1 - f)f < (1 - p)pf’ and similarly (1 - g)g < (1 - p)pg’. Using 
+these in the left member of (11) we obtain 
+(1 - P)PY + (1 - P)Pf + (1 - P)“Pg’ - (1 - P)Pg > (1 - JG. 
+Dividing by (1 - p)p, 
+Pf’ + f + (1 - P)g’ - g > ;; 1” > 
+or 
+6 (Pf + (1 - P)g) > [; 1 ;;p > 
+I 
+(1 h h)3t ’ (1 A p)p’ 
+completing the proof. 
+If we replace the inequality (9) in the statement of the theorem 
+
+200 E. F. MOORE AND C. E. SHANNON [J. F. 1. 
+I 
+by an equality, that is if we set 1 (l y y)r = (l _ P)p , we have a dif- 
+ferential equation, the solutions of which form a one-parameter family 
+of curves. The inequality (9) states that the permissible h functions 
+corresponding to contact networks must have slopes greater than these 
+y curves. If we solve this differential equation for the y curves we 
+obtain 
+Y(P) 
+1 - Y(P) = c (1 PP). (12) 
+This family of curves is plotted in Fig. 11 for C = 1/4, 1/3, 1/2, 1, 2, 
+3, 4. Any possible k(p) f unction must cross curves of this family with 
+FIG. ll. The family of curves satis- FIG. 12. A binary Channel used to obtain an 
+fying the equation upper bound on the slape h’(P). 
+Y(P) _ (y P 
+1 -Y(P) (1 -PI' 
+a greater slope. Consequently, any h(p) curve can cross one of these 
+curves at most once in the open interval 0 < p < 1. Since the straight 
+line of slope 1 which goes through the origin is one member of this 
+family, any h(p) curve can cross this line once at most, say at the point 
+p = po. Then applying the staircase construction as shown in Fig. 10, 
+it can be seen that h(n)(p) approaches 0 as a limit for al1 fi < po, and 
+approaches 1 for al1 p > po. Thus any network whose h(p) curve 
+crosses this diagonal straight line can be composed with itself to obtain 
+a network which improves reliability. In fact if we iterate the com- 
+position n times, we wil1 have 
+{ 1 P>Po 
+Lim h(n)(p) = po p = po 
+n-+oo 0 P<Po 
+where po is the (necessarily unique) diagonal crossing point. 
+It is possible to place an upper bound on the slope h’(P) by a curieus 
+
+Sept., x956.1 CIRCUITS USING LESS RELIABLE RELAYS 201 
+argument involving information theory. Consider the binary Channel 
+shown in Fig. 12. The rate of transmission for this Channel wil1 be 
+R = H(Y) - K(Y) 
+= - (P - @) log (P - @) - (a + CQ) log Ca + eQ) 
++ (1 - Q>ww +ab3cd 
++ QC(P - 4 log (P - 4 + (a + 4 log (a + 41. 
+For E approaching zero, (a + e) log (a + e) is approximated by its 
+Taylor series 
+aloga + (1 + log& +; E2+ . ..* 
+Using this in the above for al1 terms containing E, we find that the con- 
+stant terms and first order terms in e vanish. The first non-vanishing 
+terms are given by 
+R = (Q - (3; = [i - (Q - i)‘]f. 
+It is evident from this last expression that R is maximized (when we 
+vary Q) by Q = 1/2. This maximum R is, by definition, the Channel 
+capacity C. Thus as e approaches zero in Fig. 12, the capacity C is 
+. e2 
+asymptotrc to G. 
+Now consider a crummy relay which has probability P of being 
+closed when the relay is energized and P - e of being closed when the 
+coil is not energized. The relay may be thought of as a communication 
+Channel for which the coil is the input and the contact the output. If 
+e is very smal& the capacity wil1 be ?- 
+4Pa * If we have n relays, with the 
+same P and E, the total capacity of this sytem, using the n coils as 
+input and the n contacts as output, is ne2/4pp, since the capacity of a 
+set of independent channels is the sum of the individual capacities. 
+We wish to show from these capacity considerations that the prob- 
+ability function h(P) for our contact networks must satisfy 
+dh n(1 - h)h .- 
+dP ’ (1 - PIP ’ (13) 
+Consider a network iV with n contacts and probability function h(p). 
+Let the individual relays and contacts have probabilities PI and E as 
+in Fig. 12. Then the network as a whole acts like a single relay with 
+
+202 E. F. MOORE AND C. E. SHANNON [J. F. 1. 
+parameters Jz(pl) and hs’(pJ~, (when E is small). As such, it has a 
+capacity (h’~)~/4(1 - h)Jz. This capacity must be less than or equal 
+to that obtained when these n relays are used in the best possible way. 
+Hence, 
+(h’+ 2 
+4(1 - h)h ’ 4(1 yp,)fi, * 
+This being true for any PI, we have, rearranging terms, the desired 
+result 
+h’<dm. 
+If this inequality is changed to an equality, we obtain the differ- 
+ential equation 
+&dp dh 
+m = d(1 - h)h 
+the solution of which is 
+G sin+ (1 - 2p) = sin-‘(1 - 2h) + 0. (14) 
+For a given number of contacts n, a possible h(p) curve must cross the 
+corresponding family of curves (14) always with less or equal slope. 
+Another sort of upper bound on h(p) functions obtained from n 
+contacts can be found by a different argument. A two-terminal net- 
+work corresponds to a Boolean function of the n contacts involved. 
+However, it is not possible to realize al1 Boolean functions using only 
+one make contact for each variable. Suppose we ignore these condi- 
+tions of realizability and consider the class of al1 Boolean functions of 
+n variables. For any such Boolean function there wil1 be an h(p) 
+function, h(p) being the probability that the function is equal to one 
+if each variable has the (independent) probability p of being equal to 
+one. Which Boolean functions have h(p) functions with the greatest 
+slopes and show the greatest sharpening effect on probabilities? 
+A Boolean function of n variables wil1 be called a quorum function 
+if there is some s, 0 5 s 5 n, such that if less than s of the variables 
+are one the function is zero, and if more than s of the variables are 
+one the function is one. 
+Theorem 2 
+If the h curve for any quorum function of n variables, say hu, 
+crosses the h curve of any other Boolean function of n variables, say 
+h(p), then at the point of crossing po we have 
+UPo) < ho’(Po) 
+
+Sept, rgs6.1 CIRCUITS USING LESS RELIABLE RELAYS 203 
+that is, the quorum function has the greater slope. Furthermore, 
+NP) > h(P) o<p<po 
+VP> < ho(P) po < p < 1. 
+This theorem says that, in a certain sense, the quorum functions 
+are the best of al1 Boolean functions for our purposes of increasing 
+reliability. 
+Proof: For any Boolean function of n variables, the h&) polynomial 
+is made up of a sum of terms of the form ppn+, a term of this form for 
+each state of the variables for which the Boolean function has the value 
+one with i of the variables equal to one. A quorum function has the 
+value one for al1 states with i less than s, say, and zero for al1 states 
+with i greater than s. Hence the h*(p) function is of the form 
+8-1 
+h(P) = c i-0 
+Since h is not identical with /ZQ but is equal in value to it at po, it follows 
+that the Jz polynomial must miss some terms before (or at) i equals s 
+and have some extra ones after (or at) i equals S. In other words, 
+we can write 
+Iz(p) = : Bip+y-i 
+i-0 
+withBi< y 
+0 Let C(p) = 5 Bipiqn-i + apapn-a where <y is B, or 
+i-0 
+A, whichever is smaller. Then we wil1 have 
+h*(p) = C(p) + 5 D@q- 
+i=o 
+h(p) = C(p) + 5 Eipipnmi 
+i=r+1 
+where the Di and Ei are non-negative integers and r is s - 1 or s 
+according as B, or A was smaller. 
+Now we note that for an expression of the form u(p) = piqn-i we 
+have 
+u’(p) = ipi-lqn-i _ (n _ ;)piqn-“-1 
+= 
+(’ - - 7 P ‘> u(p) = =$4(p). 
+
+204 E. F. MOORE AND C. E. SHANNON [J. F. 1. 
+Thus; = i-pn. ~ 1s a monotone increasing function of i. 
+P¶ Now al1 the 
+terms in the sum in (15) for ?zQ correspond to smaller values of i than 
+those in the sum for h. If we let u*(p) stand for any term in the sum 
+in h* and u(p) stand for any term in the sum in h, we wil1 have 
+and hence there wil1 exist a constant K such that 
+ancl 
+Summing the first inequality over al1 the different terms ug, and the 
+second over al1 the U, we obtain 
+C UQ’ -c K C UQ, K C u < Cu’. 
+But evaluating at po, we have C UQ = C u, and consequently 
+c uq’ = c ui, 
+G(Po) < h’(Po). 
+The remainder of the theorem follows readily by noting that to con- 
+tradict it, since the h and ho curves are continuous, would require that 
+they cross at a point different from po and in such a way as to con- 
+tradict the first part of the theorem. 
+NETWORKS OF A GNEN LENGTH AND WIDTH 
+We have seen that the orders of flatness of h(p) in the neighbor- 
+hoods of p = 0 and p = 1 are related to the “length” and “width” of 
+the network in question. It is clear that in the case of practica1 im- 
+portance, the values of p of interest wil1 be in these neighborhoods, 
+that is, the relays wil1 be initially quite reliable. In this section we 
+wil1 develop some results relating these orders of flatness with the 
+number of elements in the network. 
+Theorem 3 
+If a network N has length 1 and width w it contains at least lw 
+contacts. Equivalently, if h(p) b h e aves like Ap’ near p = 0, and if 
+1 -h(p) behaves like B (1 - p)“, near p = 1, the corresponding network 
+contains at least Zwicontacts. 
+
+Sept., 1956.1 CIRCUITS USING LESS RELIABLE RELAYS 205 
+Proof: We associate an integer with each contact in N by the fol- 
+lowing process. Contacts directly connected to the left terminal of N 
+are labeled “1,” contacts connected to those labeled 1 but not already 
+labeled are numbered “2,” and so on inductively. In general, a con- 
+tact wil1 be labeled n if it is possible to find a path to the left terminal 
+through n - 1 other contacts but there is no such path through a 
+smaller number. 
+The set of contacts labeled n for any particular n from 1 to Z wil1 
+be shown to form a cut set of the network. This is true since every 
+path through the network starts at the left terminal with a contact 
+labeled 1 and ends at the right terminal with a contact labeled Z or 
+more (if any of the contacts touching the right terminal were labeled 
+with numbers less than Z the length of N would be less than Z). Along 
+any path, the numbering changes by 0 or &l in going from one con- 
+tact to the next. Hence every path in going from contacts numbered 
+-a- 
+t _-- @ E t W 
+I _ __ 
+R(p) = (l-(l-p)VO 
+FIG. 13. A series-parallel network of length 2 
+and width w. FIG. 14. Another series-parallel 
+network of length Z and width w. 
+1 to those with numbers 21 must pass through every intermediate 
+value. Consequently if al1 contacts labeled n (for 1 5 n I 1) are de- 
+leted from N, al1 paths are broken and these contacts thus form a 
+cut set. 
+Since the network is of width w, every cut set contains at least w 
+contacts. Thus there are at least w contacts labeled 1, at least w 
+labeled2, ma., and at least w labeled 1. The network therefore contains 
+at least WZ contacts. 
+The alternative statement of Theorem 3 follows from remarks made 
+in connection with Eqs. 1 and 2. 
+It is possible to achieve the “dimensions” Z and w with exadly Zw 
+contacts in a wide variety of ways. For example, we can make a 
+series chain of Z contacts and parallel w copies of this (Fig. 13). Dually, 
+w contacts can be paralleled and Z copies of this placed in series (Fig. 14). 
+
+206 E. F. MOORE AND C. E. SHANNON [J. F. 1. 
+Theorem 4 
+A complete characterization of minima1 networks with dimensions 
+.Z and w is the following. Let Y and 2 be the terminal nodes, s. be the 
+set consisting of Y alone, and sz be the set consisting of 2 alone. In 
+addition to s. and s1 there wil1 be Z - 1 subsets of nodes sl, s-, . . . > SI-1. 
+There wil1 be precisely w elements connecting nodes in S% to nodes in 
+s,+1 (n = 0, 1, . . .> z - 1). Finally, if any node in sj has m elements 
+connecting it to nodes in ~i_~, then it has m elements connected to nodes . in sj+l (j = 1, 2, . . ., Z - 1). 
+This means that any such minima1 network with dimensions Z and 
+w can be obtained from the network of Fig. 13 by making appropriate 
+connections among nodes in the same vertical line. When al1 the nodes 
+in each vertical line are connected together, for example, the result is 
+Fig. 14. Another possibility is shown in Fig. 1.5. 
+FIG. 15. A hammock network of length 1 and width W. 
+To show that any minima1 Zw network is of the form described in 
+Theorem 4, first note that in our preceding proof, each of the numbered 
+cut sets must contain precisely w elements, and these elements must run 
+between elements of lower numbers and higher numbers. The nodes 
+between elements numbered j - 1 and j wil1 belong to subset sj in the 
+above characterization. Now suppose that some node in sj has m 
+elements going to nodes in sj_1 and m + p going to nodes in sj+l(p > 0). 
+The elements numbered j + 1 form a cut set of w elements. It is 
+easily seen that if the m + p members of this, going from the node in 
+question, are replaced by the m elements going to nodes in sj-1, then 
+we wil1 stil1 have a cut set but one with less than w elements, a contra- 
+diction. Consequently any minima1 network of dimensions Z and w is 
+of the type described in our characterization. 
+To show the converse, that any network of the type characterized 
+has dimensions Z and w, note first that to go from one terminal to the 
+other the path must pass through nodes belonging to sl, s2, . - . , SL-~. 
+Hence any path is of length at least Z and the network is of length 1. 
+Now consider any cut set c. We wil1 show that c contains at least w 
+
+Sept., 1956.1 CIRCUITS USING LESS RELIABLE RELAYS 207 
+elements. Consider the smallest-numbered contacts of c. Suppose one 
+of these is connected from node A in S+~ to node 23 in si. Then either 
+al1 elements from B to nodes in si-1 are in the cut set or the one in 
+question is not essential to the cut set and may be eliminated, giving a 
+stil1 smaller cut set. In the former case, this group of elements can 
+be replaced by an equal number, those going from node B to members 
+of s. 3+1, preserving the cut set property. Proceeding in this way, the 
+cut set is gradually worked over toward the right-hand terminal, either 
+reducing or keeping constant the number of elements in the cut set. 
+3 4 5 
+FIG. 16. Hammock networks of various lengths and widths. 
+When al1 the elements of the cut set are adjacent to the right-hand 
+terminal there are exactly w members. Consequently there were at 
+least that many in the original cut set, as we wished to prove. 
+An interesting type of minima1 Zw network is obtained by putting 
+alternate connections in Fig. 13, leading to the brick-wal1 appearance 
+of Fig. 54. When redrawn, pulling together the vertical connections, 
+the network appears as in Fig. SB, and we wil1 cal1 networks of this 
+type hammock networks. Figure 16 shows some of the simple cases 
+
+208 E. F. MOORE AND C. E. SHANNON [J. F. 1. 
+of hammock networks. It wil1 be seen that if both Z and w are 
+even, there are two possible hammock networks with these dimensions. 
+If either or both are odd, there is only one. Furthermore, the dual of 
+a hammock network with length Z and width w is a hammock network 
+with length w and width 1. These hammock networks are, in a sense, 
+midway between the extreme minima1 Zw networks of Figs. 13 and 14, 
+having half of the connections required to go from Fig. 13 to Fig. 14. 
+In the case where Z and w are equal and odd the (unique) hammock 
+network is self-dual. 
+(To be continued) 
+

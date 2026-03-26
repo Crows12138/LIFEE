@@ -1,0 +1,1597 @@
+Coding Theorems for a Discrete Source
+With a Fidelity Criterion-
+Claude E. Shannon**
+Abstract
+Consider a discrete source producing a sequence of message letters from a finite alphabet.
+A single-letter distortion measure is given by a non-negative matrix (d ij).
+The entry d ij
+measures the "cost" or "distortion" if letter i is reproduced at the receiver as letter j.
+The
+average distortion of a communications system (source-coder-noisy channel-decoder) is taken
+to be d = L P;jd ij where P ij is the probability of i being reproduced as j.
+It is shown that
+i.]
+there is a function R (d) that measures the "equivalent rate" of the source for a given level of
+distortion. For coding purposes where a level d of distortion can be tolerated, the source acts
+like one with information rate R(d).
+Methods are given for calculating R(d), and various
+properties discussed. Finally, generalizations to ergodic sources, to continuous sources, and to
+distortion measures involving blocks of letters are developed.
+In this paper a study is made of the problem of coding a discrete source of information,
+given a fidelity criterion or a measure of the distortion of the final recovered message at the
+receiving point relative to the actual transmitted message. In a particular case there might be a
+certain tolerable level of distortion as determined by this measure. It is desired to so encode the
+information that the maximum possible signaling rate is obtained without exceeding the
+tolerable distortion level. This work is an expansion and detailed elaboration of ideas presented
+earlier [I}, with particular reference to the discrete case.
+We shall show that for a wide class of distortion measures and discrete sources of
+information there exists a function R(d) (depending on the particular distortion measure and
+source) which measures, in a sense, the equivalent rate R of the source (in bits per letter
+produced) when d is the allowed distortion level. Methods will be given for evaluating R(d)
+explicitly in certain simple cases and for evaluating R(d) by a limiting process in more
+complex cases. The basic results are roughly that it is impossible to signal at a rate faster than
+C / R(d) (source letters per second) over a memoryless channel of capacity C (bits per second)
+with a distortion measure less than or equal to d. On the other hand, by sufficiently long block
+codes it is possible to approach as closely as desired the rate C / R(d) with distortion level d.
+Finally, some particular examples, using error probability per letter of message and other
+simple distortion measures, are worked out in detail.
+The Single-Letter Distortion Measure. Suppose that we have a discrete information source
+producing a sequence of letters or "word'
+m = m I , m 2, m 3 , .•• , m t» each chosen from a
+finite alphabet.
+These are
+to be transmitted over a channel and
+reproduced, at least
+*
+Institute of Radio Engineers, International Convention Record, vol. 7, 1959.
+** This
+work
+was
+supported
+in
+part
+by
+the
+U.S.
+Army
+(Signal
+Corps),
+the
+U.S.
+Air
+Force
+(Office
+of
+Scientific
+Research,
+Air
+Reserve
+and
+Development
+Command),
+and
+the
+U.S. Navy (Office of Naval Research).
+C. E. Shannon
+approximately, at a receiving point. Let the reproduced word be Z = ZI, Z2,.'"
+z,. The z,
+letters may be from the same alphabet as the m, letters or from an enlarged alphabet including,
+perhaps, special symbols for unknown or semi-unknown letters. In a noisy telegraph situation
+m and Z might be as follows:
+m = I HAVE HEARDTHE MERMAIDS SINGING...
+?
+Z =
+I H?VT HEA?D TSE B?RMAIDZ ??NGING...
+In this case, the Z alphabet consists of the ordinary letters and space of the m alphabet, together
+?
+?
+with additional symbols "T", "A", "B", etc., indicating less certain identification. Even
+more generally, the Z alphabet might be entirely different from the m alphabet.
+Consider a situation in which there is a measure of the fidelity of transmission or the
+"distortion" between the original and final words. We shall assume first that this distortion
+measure is of a very simple and special type, and later we shall generalize considerably on the
+basis of the special case.
+A single-letter distortion measure is defined as follows. There is given a matrix d ij with
+dij
+~ O. Here i ranges over the letters of the m alphabet of, say, a letters (assumed given a
+numerical ordering), whilej ranges over the Z alphabet. The quantity d ti may be thought of as
+a "cost" if letter i is reproduced as letterj.
+If the Z alphabet includes the »1 alphabet, we will assume the distortion between an m letter
+and its correct reproduction to be zero and all incorrect reproductions to have positive
+distortion. It is convenient in this case to assume that the alphabets are arranged in the same
+indexing order so that d ii = 0, d ij > 0 (i ~ j).
+The distortion d, if word m is reproduced as word Z, is to be measured by
+'
+d(m, Z) = -
+~
+dm~ z, .
+t
+k=l
+If, in a communication system, word m occurs with probability P(m) and the conditional
+probability, if m is transmitted, that word Z will be reproduced, is P(ZI m), then we assume that
+the over-all distortion ofthe system is given by
+d =
+~ P(m) P(Zlm) d(m, Z) .
+m,l
+Here we are supposing that all messages and reproduced words are of the same length t. In
+variable-length coding systems the analogous measure is merely the over-all probability that
+letter i reproduced as}, multiplied by d ij and summed on i and}. Note that d = 0 if and only if
+each word is correctly reproduced with probability 1, otherwise d > 0 (in cases where the Z
+alphabet includes the »1 alphabet).
+Some Simple Examples. A distortion measure may be represented by giving the matrix of its
+elements, all terms of which are non-negative. An alternative representation is in terms of a
+line diagram similar to those used for representing a memoryless noisy channel. The lines are
+now labeled, however, with the values d ij rather than probabilities.
+A simple example of a distortion measure, with identical m and Z alphabets, is the error
+probability per letter. In this case, if the alphabets are ordered similarly, d ij = 1 - 0ij: If
+there were three letters in the m and and Z alphabets, the line diagram would be that shown in
+Fig. I(a). Such a distortion measure might be appropriate in measuring the fidelity of a teletype
+or a remote typesetting system.
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+d ..IJ
+o
+( a )
+EMERGENCY....----....EMERGENCY
+. ALL'S WELL &.-
+---A ALL'S WELL
+( b)
+Fig. 1.
+Another example is that of transmitting the quantized position of a wheel or shaft. Suppose
+that the circumference is divided into five equal arcs. It might be only half as costly to have an
+error of plus or minus one segment as larger errors. Thus the distortion measure might be
+o
+i =J
+Ii - JI
+Ii - jl >
+(mod 5),
+(mod 5).
+A third example might be a binary system sending information each second, either "all's
+well"
+or "emergency,"
+for some situation.
+Generally, it would be considerably more
+important that the "emergency" signal be correctly received than that the "all's well" signal
+be correctly received. Thus if these were weighted 10 to 1, the diagram would be as shown in
+Fig. l(b).
+A fourth example with entirely distinct m and Z alphabets is a case in which the m alphabet
+consists of three possible readings, - 1, 0 and + 1. Perhaps, for some reasons of economy, it is
+desired to work with a reproduced alphabet of two letters, -
+~ and + Y2. One might then have
+the matrix that is shown in Fig. 2.
+I
+I
+--+-
+-I
+I
+I
+I
+I
+2 ,
+Fig. 2.
+The Rate-Distortion Function Rid). Now suppose that successive letters of the message are
+statistically independent but chosen with the same probabilities, Pi being the probability of
+letter i from the alphabet. This type of source we call an independent letter source.
+C. E. Shannon
+Given such a set of probabilities P i and a distortion measure d ij» we define a rate-distortion
+curve as follows. Assign an arbitrary set of transition probabilities q i (j) for transitions from i
+to j. (Of course, q i (j)
+~ 0 and L q i (j) = 1.) One could calculate for this assignment two
+j
+things: first, the distortion measure d(q i (j»
+= L Pi q i (j) dij jf letter i were reproduced as j
+ij
+with conditional probability q; (j), and, second, the average mutual information between i and j
+if this were the case, namely
+«, (j)
+R(qi(j»
+= E Jog ----
+L r, qk(j)
+k
+= L Pi qi(j) log L
+~i(j) ( 0)
+i.i
+k q k J
+k
+The rate-distortion function R(d*) is defined as the greatest lower bound ofR(q i (j»
+when the
+q, (j) are varied subject to their probability limitations and subject to the average distortion d
+being less than or equal to d*.
+Note that R(q i (j»
+is a continuous function of the q i (j) in the allowed region of variation
+of q i (j) which is closed. Consequently, the greatest lower bound ofR is actually attained as a
+minimum for each value of R that can occur at all. Further, from its definition it is clear that
+Rt d) is a monotonically decreasing function of d.
+Convexity of the Rid) Curve. Suppose that two points on the R(d) curve are (R, d) obtained
+with assignment q i (j) and (R', d') attained with assignment q; (j). Consider a mixture of
+these assignments 'Aq i (j) + (1 - A) q~ (j). This produces a d" (because of the linearity of d)
+not greater than Ad + (1 - A) d':
+On the other hand, R(qi(j»
+is known to be a convex
+downward function (the rate for a channel as a function of its transition probabilities). Hence
+R" $ AR + (] - A) R'. The minimizing q;' (j) for d" must give at least this Iowa value of
+R". Hence the curve R as a function ofd (or conversely) is convex downward.
+The minimum possible d value clearly occurs if, for each i, q i (j) is assigned the value I for
+the j having the minimum d ij : Thus the lowest possible d is given by
+d min = L Pi min dij .
+i
+J
+If the m alphabet is imaged in the Z alphabet, then d min = 0, and the corresponding R value is
+the ordinary entropy or rate for the source.
+In the more general situation, R(dmin ) may be
+readily evaluated if there is a unique min d ij by evaluating R for the assignment mentioned.
+J
+Otherwise the evaluation of R(dmin ) is a bit more complex.
+On the other hand, R = 0 is obtained if and only if q i (j) = Qj' a function of j only. This
+is because an average mutual information is positive unless the events are independent. For a
+given Qj giving R = 0, the d is then ~ Pi Qj dij = L o, L Pi dij. The inner sum is
+ij
+j
+i
+non-negative. If we wish the minimum d for R = 0, this would result by finding aj that gives a
+minimum L P;dij(sayj*)andmakingQr = 1. This can be done by assigning c.I j ") = 1
+(all other q i (j) are made 0).
+Summarizing, then, R(d) is a convex downward function as shown in Fig. 3 running from
+R(d min ) at d min = L Pi min d.. to zero at d max = min L Pi dij.
+It is continuous both
+J
+J
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+ways (R as a function of d or d as a function of R) in the interior of this interval because of its
+convexity. For d ~ d max' we have R = O. The curve is strictly monotonically decreasing from
+d min to d max.
+Also it is easily seen that in this interval the assignment of q i (j) to obtain any
+point R(d *) must give a d satisfying the equality d = d* (not the inequality d < d "), For
+d" > d max the inequality will occur for the minimizing q i (j). Thus the minimizing problem
+can be limited to a consideration of minima in the subspace where d = d"; except in the range
+d" > d max (whereR(d*) = 0).
+The convex downward nature of R as a function of the assigned q i (j) is helpful in
+evaluating the Rt d) in specific cases. It implies that any local minimum (in the subspace for a
+fixed d) is the absolute minimum in this subspace. For otherwise we could connect the local
+and absolute minima by a straight line and find a continuous series of points lower than the
+local minimum along this line. This would contradict its being a local minimum.
+Furthermore, the functions R(q i (j»
+and d( q i (j»
+have continuous derivatives interior to
+the allowed q i (j) set. Hence ordinary calculus methods (e.g., Lagrangian multipliers) may be
+used to locate the minimum. In general, however, this still involves the solution of a set of
+simultaneous equations.
+Solution for Rid) in Certain Simple Cases. One special type of situation leads to a simple
+explicit solution for the R (d) curve.
+Suppose that all a input letters are equiprobable:
+P i = 1/a. Suppose further that the d ij matrix is square and is such that each row has the same
+set of entries and each column also has the same set of entries, although, of course, in different
+order.
+R(dl
+d
+. =IR min d iJ·
+min
+i
+I
+j
+d
+An example of this type is the positioning of a wheel mentioned earlier if all positions are
+equally likely. Another example is the simple error probability distortion measure if all letters
+are equally likely.
+In general, let the entries in any row or column be d I , d 2, d 3 ' ... , d a.
+Then we shall
+show that the minimizing R for a given d occurs when all lines with distortion assignment d k
+are given the probability assignment
+C. E. Shannon
+~
+-Ad
+~ e
+I
+d=
+Here A is a parameter ranging from 0 to
+00 which determines the value of d.
+With this
+minimizing assignment, d and R are given parametricaIly in terms of A:
+~ d, e- Ad,
+i
+R = log
+a
+- Ad .
+~ e-Ad,
+i
+When A = 0 it can be seen that d = -
+~ d, and R = O. When A ~ 00, d ~ d min and
+a
+i
+R ~ log
+~ where k is the number of d i with value d min'
+This solution is proved as follows. Suppose that we have an assignment q i (j) giving a
+certain d" and a certain R *. Consider now a new assignment where each line with d ij value d I
+is assigned the average of the assignments for these lines in the original assignment. Similarly,
+each line labeled d 2 is given the average of alJ the d 2 original assignments, and so on. Because
+of the linearity of d, this new assignment has the same d value, namely d": The new R is the
+same as or smaller than R", This is shown as follows. R may be written H(m) - H(m 'Z).
+H(m) is not changed, and H(mIZ) can only be increased by this averaging. The latter fact can
+be seen by observing that because of the convexity of -
+~ x i log x i we have
+- ~ f!j ~ xjl) log xj!) ~ - ~ [~ f!jX;t)] log ~
+Clj x5t) ,
+}
+t
+t
+J
+}
+where for a given t, xJt} is a set of probabilities, and
+Clj is a set of weighting factors.
+In
+particular
+~ qjS)
+qjO
+qJO
+~
+s
+~
+log
+-
+j
+~
+q~S)
+t
+~ qjS)
+~ qjS)
+s.i
+~ q)T}
+~ qjO
+~ -
+~
+j
+log
+j
+~
+q~s)
+~
+q~S)
+,
+I
+s.i
+s.i
+where qjs) is the original assignment to the line of value d , from letter s. But this inequality
+can be interpreted on the left as Him JZ) after the averaging process, while the right-hand side
+is H (mIZ) before the averaging. The desired result then follows.
+Hence, for the minimizing assignment, all lines with the same d value will have equal
+probability assignments. We denote these by q,. corresponding to a line labeled die The rate R
+and distortion d can now be written
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+d=
+~q·d·
+k
+I
+I'
+R = Jog a + L q i log q i
+,
+since all z's are now equiprobable, and H(m) = log a, H(mIZ) = - L q; log qi' We wish,
+i
+by proper choice of the q i» to minimize R for a given d and subject to ~ q i = 1. Consider
+then, using Lagrange multipliers,
+U = log a + ~ q i log q i + A L q i d , + JlL q i ,
+au
+~ = 1 + log q i + Adi + ~ = 0 ,
+oq,
+qi = A e-Ad,
+.
+If we choose A =
+1_Ad
+we satisfy L q ; = I. This then gives a stationary point and by
+L e
+'
+i
+the
+convexity
+properties
+mentioned
+above
+it
+must
+be
+the
+absolute rmrurnum
+for
+the
+corresponding value of d. By substituting this probability assignment in the formulas for d and
+R we obtain the results stated above.
+Rate for a Product Source with a Sum Distortion Measure.
+Suppose that we have two
+independent sources each with its own distortion measure, d ij and d;' /' and resulting in rate
+distortion functions R I (d I ) and R 2(d 2)' Suppose that each source produces one letter each
+second.
+Considering ordered pairs of letters as single letters the combined system may be
+called the product source. If the total distortion is to be measured by the sum of the individual
+distortions, d = d I + d-; then there is a simple method of determining the function Rt d) for
+the product source. In fact, we shall show that R(d) is obtained by adding both coordinates of
+the curves R 1(d 1) and R2(d 2) at points on the two curves having the same slope. The set of
+points obtained in this manner is the curve R(d).
+Furthermore, a probability assignment to
+obtain any point of R(d) is the product of the assignments for the component points.
+We shall first show that given any assignment qu' (j, j') for the product source, we can do
+at least as well In the minimizing process using an assignment of the form q i (j) q;' (j') where
+q and «' are derived from the given q i,/ (j, j'). Namely, let
+q,.(j)
+~, p;, q,..;, si.i'')
+i ,j
+q;'(j') = ~ Pi qi,;'(j,j') .
+i,j
+We see that these are non-negative and, summed on j and t' respectively, give 1, so they are
+satisfactory transition probabilities.
+Also the assignment q i (j) q;' (j') gives the same total
+distortion as the assignment q i,;' (j ,j'). The former is
+~
+I P i P~' q i (i)
+q~' (i') [d ij +
+d~'/ ]
+i,i ,j,j
+= !, Piqi(i)dij +
+~, P~ q;(j') d;'/
+i,j
+i ,j
+= ~ Pi P:' qi,i'(i,i')[dij + d:',/] .
+i,i
+j,j
+C. E. Shannon
+This last may be recognized as the distortion with q i ,;' (j.i' ).
+On the other hand, the mutual information R is decreased or left constant if we use
+q i (j) q;" (j) instead of q I,;' (j ,j'). In fact, this average mutual information can be written in
+terms of entropies as follows (using asterisks for entropies with the assignment q i (i) q:'(j')
+and none for the assignment qi,;' (),}'». We have
+r = Ht i , i') - Ht i, i' Ij, j')
+~ H(i ,i') - H(i1j) - uu' Ij')
+= H(i,i') - H* (if}) - H* (i' fi') .
+Here we use the fact that with our definition of qi(j) and q;' (j') we have r,: (ilj) = Pr(ilj)
+and n: (i' Ij') = prti' Ii').
+(This follows immediately on writing out these probabilities.)
+Now,
+using
+the
+fact
+that
+the
+sources
+are
+independent,
+H(i,i') = H(i) + nir,
+= H* (i) + H* (I').
+Hence our last reduction above is equal to R *.
+This is the desired
+conclusion.
+It follows that any point on the R(d) curve for the product source is obtained by an
+independent or product assignment q i (j) q;' (j'), and consequently is the sum in both
+coordinates of a pair of points on the two curves. The best choice for a given distortion d is
+clearly given by
+R(d) = min [R I (I) + R 2(d -
+I)] ,
+t
+and this minimum will occur when
+d
+d
+-R)(t) = -
+R 2(d - t) .
+dt
+dt
+Thus the component points to be added are points where the component curves have the same
+slope. The convexity of these curves insures the uniqueness of this pair for any particular d.
+The Lower Bound on Distortion for a Given Channel Capacity. The importance of the
+R(d) function is that it determines the channel capacity required to send at a certain rate and
+with a certain minimum distortion.
+Consider the following situation.
+We have given an
+independent letter source with probabilities Pi for the different possible letters. We have given
+a single-letter distortion measure d ij which leads to the rate distortion function R(d). Finally,
+there is a memoryless discrete channel K of capacity C bits per second (we assume that this
+channel may be used once each second). We wish to transmit words of length 1 from the source
+over the channel with a block code. The length of the code words in the channel is n. What is
+the lowest distortion d that might be obtained with a code and a decoding system of this sort?
+Theorem 1. Under the assumptions given above it is not possible to have a code with
+distortion d smaller than the (minimum) d" satisfying
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+R(d*) = !!.- C ,
+t
+or, equivalently, in any code, d ~ cl> [ ; c], where cl> is the function inverse to R(d).
+This theorem, and a converse positive result to be given later, show that R(d) may be
+thought of as the equivalent rate of the source for a given distortion d. Theorem I asserts that
+for the distortion d and t letters of text, one must supply in the channel at least t R(d) total bits
+of capacity spread over the n uses of the channel in the code. The converse theorem will show
+that by taking nand t sufficiently large and with suitable codes it is possible to approach this
+limiting curve.
+To prove Theorem 1, suppose that we have given a block code which encodes all message
+words of length t into channel words of length n and a decoding procedure for interpreting
+channel output words of length n into Z words of length t. Let a message word be represented
+by m = m 1, m 2 , ••• , m 1.
+A channel input word is X = Xl, X 2 , ••• , X n• A channel output
+wordisY = YI,Y2, ... ,Ynandareproduced,orZ,wordisZ = ZI,Z2, ••• ,Z1. By the given
+code and decoding system, X is a function of m and Z is a function of Y. The m, are chosen
+independently according to the letter probabilities, and the channel transition probabilities give
+a set of conditional probabilities P(YIx) applying to each X; , Y; pair.
+Finally, the source and
+channel are independent in the sense that P(Yfm, X) = P(YIX).
+We wish first to show that H(mIZ)
+~ H(m) - nt', We have that H(mIZ)
+~ H(mIY)
+(since Z is a function of Y) and also that H(ml Y)
+~ H(X' Y) - H(X) + H(m). This last is
+because,
+from
+the
+independence
+condition
+above,
+H(Ylm, X) = H(YIX),
+so
+H(Y, m .. X) - H(m, X) = H(X, Y) - H(X). But H(m, X) = H(m), since X is a function of
+m, and for the same reason H(m, X, Y) = Htm, Y). Hence, rearranging, we have
+H(X, Y) = H(m, Y) + H(X) - H(m, X)
+= H(m, Y) + H(X) - H(m) ,
+H(XIY)
+~ H(mIY) + H(X) - H(m) .
+Here
+we
+used
+H(m, x) = H(m)
+and
+then
+subtracted
+H(Y)
+from
+each
+side.
+Hence
+H(mIZ)
+~ H(XIY) - H(X) + H(m).
+Now we show that H(X\Y) ~ nC. This follows from a method we have used in other
+similar situations, by considering the change in H(XI Y) with each received letter. Thus (using
+Yk for the first k of the Y letters, etc.),
+.1H(XIY) = H(XIYl,Y2"··,Yk) -H(XIYI,Y2,···,Yk+1)
+= H(X,Xk) -H(Y k ) -H(X,Yk,Yk+l) +H(Yk,Yk+l)
+= H(Yk+IIYk) - H(Yk+II X, Yk )
+= H(Yk+IIYk) - H(Yk+ll xk+l)
+~ H(Yk+ I) - H(Yk+ 1IXk+ 1)
+s C.
+Here we used the fact that the channel is memoryless, so P(y k + 1IX, Yk) = P(y k + I Ixk + 1 ) and
+therefore
+H(Yk + I IX, Yk) = H(Yk + I 'x k + I ).
+Finally,
+C
+is
+the
+maximum
+possible
+H(y) - H(yIX), giving the last inequality.
+C. E. Shannon
+Since the incremental change in H(XI Yk) is bounded by C, the total change after n steps is
+bounded by nCo
+Consequently, the final H(XI Y) is at least the initial value H(X) less nC.
+Therefore
+H(mIZ)
+~ H(XI Y) - H(X) + H(m)
+~ H(X) - nC - H(X) + H(m) ,
+H(mIZ)
+~ H(m) - nC .
+We now wish to overbound H(mIZ) in terms of the distortion d. We have
+H(mIZ) = Him , m2 ... mtlz} z2 ... zr)
+1: H(m;) - 1: (H(m;) - H(mtlz;»
+(1)
+The quantity H(m.) - H(m i , z;) is the average mutual information between original message
+letter m, and the reproduced letter Zi : If we let d, be the distortion between these letters, then
+R(d, ) (the rate-distortion function evaluated for this d i) satisfies
+R(d;)
+$; H(m;) - H(milz;) ,
+since R(d;) is the minimum mutual information for the distortion d i- Hence our inequality
+may be written
+r
+t
+H(mlZ) s 1: H(m;) - 1: R(d;) .
+;=1
+;= 1
+Using now the fact that R(d) is a convex downward function, we have
+H(m/Z) s ~ H(m;) - tR[~ ~;] .
+d i
+But 1:
+= d, the overall distortion of the system, so
+H(mIZ) s 1: H(m;) - t R(d) .
+Combining this with our previous inequality (1) and using the independent letter assumption,
+wehaveH(m) = 1: H(mj),so
+H(m) - nC ~ H(m) -
+t R(d) ,
+nC ~ tR(d) .
+This is essentially the result stated in Theorem 1.
+It should be noted that the result in the theorem is an assertion about the minimum
+distortion after any finite number n of uses of the channel. It is not an asymptotic result for
+large n. Also, as seen by the method of proof, it applies to any code, block or variable length,
+provided only that after n uses of the channel, t (or more) letters are reproduced at the receiving
+point, whatever the received sequence may be.
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+The Coding Theorem for a Single-Letter Distortion Measure. We now prove a positive
+coding theorem corresponding to the negative statements of Theorem 1; namely, that it is
+possible to approach the lower bound of distortion for a given ratio of number n of channel
+letters to t message letters.
+We consider then a source of message letters and single-letter
+distortion measure dij. More generally than Theorem 1, however, this source may be ergodic;
+it is not necessarily an independent letter source. This more general situation will be helpful in
+a later generalization of the theorem. For an ergodic source there will still, of course, be letter
+probabilities Pi, and we could determine the rate distortion function R(d) based on these
+probabilities as though it were an independent letter source.
+We first establish the following result.
+Lemma 1. Suppose that we have an ergodic source with letter probabilities Pi» a single-
+letter distortion measure dij' and a set of assigned transition probabilities q i (j) such that
+~ Pi q,.(j) dij = d" ,
+i.]
+~ P
+( ') 1
+qi(j)
+= R .
+~
+i q i J
+og
+~ P
+( ')
+i,l
+~
+k qk J
+k
+Let Q(Z) be the probability measure of a sequence Z in the space of reproduced sequences if
+successive source letters had independent transition probabilities q; (j) into the Z alphabet.
+Then, given e > 0, for all sufficiently large block lengths t. there exists a set a of messages of
+length t from the source with total source probability P(a)
+~ 1 -
+E, and for each m belonging
+to a a set of Z blocks of length t, say ~ m» such that
+1)
+d(m, Z)
+~ d" + E
+for
+m e ti and Z E
+~m ,
+2)
+Q(Pm)
+~ e-t(R + E)
+for any m e si: .
+In other words, and somewhat roughly, long messages will, with high probability, fall in a
+certain subset a. Each member m of this subset has an associated set of Z sequences ~ m : The
+members of ~m have only (at most) slightly more than d" distortion with m and the logarithm
+of the total probability of ~m in the Q measure is underbounded by e-t(R + E).
+To prove the lemma, consider source blocks of length t and the Z blocks of length t.
+Consider the two random variables, the distortion d between an m block and a Z block and the
+(unaveraged) mutual information type of expression below:
+d = -
+1: d m .,
+,
+t
+i
+'-I
+lt m; Z) = ~ log Pr(Zlm) = ~ 1: log Pr(z;jmj)
+.
+,
+t
+Q(Z)
+t
+i
+Q(z i )
+Here m i is the i th letter of a source block m, and Zi is the ;th letter of a Z block. Both Rand d
+are random variables, taking on different values corresponding to different choices of m and Z.
+They are both the sum of t random variables which are identical functions of the joint (m, Z)
+process except for shifting along over t positions.
+Since the joint process is ergodic, we may apply the ergodic theorem and assert that when t
+is large, d and R will, with probability nearly 1, be close to their expected values. In particular,
+for any given E I and 0, if t is sufficiently large, we will have with probability ~ 1 - 02/ 2 that
+d$LPiqi(})dij+EI =d*+Elo
+i,}
+Also, with probability at least 1 - 02/2 we will have
+o
+q;(j)
+l~ LP;qi(J)log-- +£, =R(d*)+£1
+i.]
+Qj
+c. E. Shannon
+Let y be the set of (m, Z) pairs for which both inequalities hold. Then Pr(y) ~ 1 - 02 because
+each of the conditions can exclude, at most, a set of probability 02/2. Now for any m I define
+~ml as the set of Z such that (m I, Z) belongs to y.
+We have
+on a set of ex of m whose total probability satisfies Pr( n)
+~ 1 - o. This is true, since if it were
+not we would have a total probability in the set complementary to 'Y of at least 0 . 0 = 02, a
+contradiction. The first 0 would be the probability of m not being in c, and the second 0 the
+conditional probability for such m's of Z not being in 13m. The product gives a lower bound on
+the probability of the complementary set to y.
+IfZ E
+~ml' then
+Pr(Zlml)
+-
+log
+Z
+~ R(d*) + E I
+,
+t
+Q(
+)
+Pr(Zlml)
+~ Q(Z) et(R(d·) +(1)
+,
+Q(Z)
+~Pr(Z'ml)e-t(R(d·)+£,)
+Sum this inequality over all Z E
+~ml:
+Q(f3m) =
+L
+Q(Z)
+Ze Pml
+~ e-t(R+E ,)
+L
+Pr(Zlml)
+z « flm,
+If m I E
+(X then
+L
+Pr(ZJ mI)
+~ 1 - 0 as seen above.
+Hence the inequality can be
+z e
+~m,
+continued to give
+R
+~
+-feR + E)
+Q(Pm,)2(I-u)e
+,
+m c e ti ,
+We have now established that for any e I > 0 and 0 > 0 there exists a set (X of m's and sets
+~m of Z's defined for each m with the three properties
+I)
+Pr(a)
+~ 1 - 0,
+2)
+d(Z,m)$d*+EI'
+ifZef3m.
+3)
+Q(f3m)~(I-O)e-t(R+EI),
+ifmeu,
+provided that the block length t is sufficiently large.
+Clearly, this implies that for any E > 0
+and sufficiently large t we will have
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+1)
+Pr( a)
+~ 1 -
+E,
+2)
+d(Z,m)sd*+E,
+ifZEllm'
+3)
+Q(~m)
+~ e-t(R + E),
+since we may take the E I and 0 sufficiently small to satisfy these simplified conditions in which
+we use the same E. This concludes the proof of the lemma.
+Before
+attacking
+the
+general
+coding
+problem,
+we consider the
+problem
+indicated
+schematically in Fig. 4. We have an ergodic source and a single-letter distortion measure that
+gives the rate distortion function R(d). It is desired to encode this by a coder into sequences u
+in such a way that the original messages can be reproduced by the reproducer with an average
+distortion that does not exceed d" (d' being some fixed tolerable distortion level).
+We are
+considering here block coding devices for both boxes. Thus the coder takes as input successive
+blocks of length t produced by the source and has, as output, corresponding to each possible m
+block, a block from a u alphabet.
+riON
+WITH m 'S ~ d •
+ERGODIC
+SOURCE ~ CODER
+REPRODUCER
+R{d)
+m
+u
+Z
+H(u)~ R(d·) +E
+AVERAGE DISTOR
+Fig. 4.
+The aim is to do the coding in such a way as to keep the entropy of the u sequences as low
+as possible, subject to this requirement of reproducibility with distortion d * or less. Here the
+entropy to which we are referring is the entropy per letter of the original source. Alternatively,
+we might think of the source as producing one letter per second and we are then interested in
+the u entropy per second.
+We shall show that, for any d* and any E > 0, coders and reproducers can be found that are
+such that H (It)
+~ R(d *) + E.
+As E ~ °the block length involved in the code in general
+increases.
+This result, of course, is closely related to our interpretation of R(d*) as the
+equivalent rate of the source for distortion d ".
+It will follow readily from the following
+theorem.
+Theorem 2. Given an ergodic source, a distortion measure d tt: and rate distortion function
+R(d) (based on the single-letter frequencies of the source), given d"
+~ d min and 0 > 0, for any
+sufficiently large t there exists a set A containing M words of length t in the Z alphabet with the
+following properties:
+l) llog M $ R(d*) + 0 ,
+t
+2) the average distortion between an m word of length t and its nearest (i.e., least distortion)
+word in the set A is less than or equal to d * + o.
+This theorem implies (except for the () in property (2) which will later be eliminated) the
+results mentioned above.
+Namely, for the coder, one merely uses a device that maps any m
+word into its nearest member of A. The reproducer is then merely an identity transformation.
+Co E. Shannon
+The entropy per source letter of the coded sequence cannot exceed R(d *) + b, since this would
+be maximized at !
+log M if all of the M members of A were equally probable and 1- log Mis,
+t
+t
+by the theorem, less than or equal to R(d *) + O.
+This theorem will be proved by a random coding argument. We shall consider an ensemble
+of ways of selecting the members of A and estimate the average distortion for this ensemble.
+From the bounds on the average it will follow that at least one code exists in the ensemble with
+the desired properties.
+The ensemble of codes is defined as follows.
+For the given d" there will be a set of
+transition probabilities q;(j) that result in the minimum R, that is, Rtd"). The set of letter
+probabilities, together with these transition probabilities, induce a measure Q(Z) in the space of
+reproduced words. The Q measure for a single Z letter, say letter j, is I: P; q; (j).
+The Q
+;
+measureforaZwordconsistingoflettersj(,h,··· .i, is Q(Z) = rr [I: PiqiUd).
+k= I
+i
+In the ensemble of codes of length t, the integers from I to M are mapped into Z words of
+length t in all possible ways.
+An integer is mapped into a particular word Z 1, say, with
+probability Q (Z 1), and the probabilities for different integers are statistically independent.
+This is exactly the same process as that of constructing a random code ensemble for a
+memoryless channel, except that here the integers are mapped into the Z space by using the
+Q(Z) measure. Thus we arrive at a set of codes (if there are f letters in the Z alphabet there will
+bef 1M different codes in the ensemble) and each code will have an associated probability. The
+M
+code in which integer i is mapped into Z i has probability n Q(Z i ).
+;=1
+We now use Lemma 1 to bound the average distortion for this ensemble of codes (using the
+probabilities associated with the codes in calculating the average).
+Note, first, that in the
+ensemble of codes if Q(~) is the Q measure of a set ~ of Z words, then the probability that this
+set contains no code words is [1 - Q(~)] M, that is, the product of the probability that code
+word 1 is not in ~, that for code word 2, etc. Hence the probability that f3 contains at least one
+code word is 1 -
+[1 -
+Q(~)JM.
+Now, referring to Lemma 1, the average distortion may be
+bounded by
+Here d max is the largest possible distortion between an M letter and a Z letter. The first term,
+ed max' arises from message words m which are not in the set a. These have total probability
+less than or equal to E and, when they occur, average distortion Jess than or equal to d max. The
+second term overbounds the contribution that is due to cases in which the set
+~ m for the
+message m does not contain at least one code word. The probability in the ensemble of this is
+certainly bounded by [I - Q( ~ m)] M, and the distortion is necessarily bounded by d max'
+Finally, if the message is in a and there is at least one code word in
+~ m» the distortion is
+bounded
+by
+d" + E,
+according
+to
+Lemma 1.
+Now, Q<Pm) ~ e-/(R(d
+O
+) + E).
+Also,
+for
+o < x ~ I,
+(1 - x) x
+~ log (I - x)
+= e'
+I
+[
+x
+]
+-
+-x+-
+x
+::; e
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+(using the alternating and monotonically decreasing nature of the terms of the logarithmic
+expansion). Hence
+and replacing the exponent by
+we see that this is
+~ exp (- ~ e-t(R(d·) + e) M} .
+If we choose for M, the number of points, the value et(R(d·) + 2£) (or, if this is not an integer, the
+smallest integer exceeding this quantity), then the expression given above is bounded by
+exp {- 1'2 e'"}. Thus the average distortion is bounded with this choice of M by
+d ~ £dmax + exp {- Y2 e t£} d max + d* + E
+~ d" + 0 ,
+provided that e in Lemma I is chosen small enough to make (£dmax + 1)
+~ '0/2 and then t is
+chosen large enough to make exp {- ~ e"] d max ~ '0/2.
+We also require that E be small
+enough and t large enough to make M , the integer just greater than or equal to e t(R(d·) + 2£) ,
+less than or equal to et(R(d·) + 0) .
+Since Lemma 1 holds for all sufficiently large t and any
+positive E, these can all be simultaneously satisfied.
+We have shown, then, that the conditions of the theorem are satisfied by the average
+distortion of the ensemble of codes. It follows that there exists at least one specific code in the
+ensemble whose average distortion is bounded by d" + E. This concludes the proof.
+Corollary: Theorem 2 remains true if 0 is replaced by 0 in property (1). It also remains true
+if the 0 in property (1) is retained and the 0 in property (2) is replaced by 0, provided in this
+case that d * > d min' the smallest d for which R(d) is defined.
+This corollary asserts that we can attain (or do better than) one coordinate of the R(d) curve
+and approximate, as closely as desired, the other, except possibly for the d min point. To prove
+the first statement of the corollary, note first tha!..it is true for d * ~ d I, the value for which
+R(d-1 ) = o. Indeed, we may achieve the point d = d I with M = 1 and a code of length 1,
+using only the Z word consisting of the single Z letter which gives this point of the curve. For
+d min ~ d" < d 1, apply Theorem 2 to approximate d'" = d* + 0/2. Since the curve is strictly
+decreasing, this approximation will lead to codes with d s d" + 0 and 1- log M s R(d*), if
+t
+the 0 in Theorem 2 is made sufficiently small.
+The second simplification in the corollary is carried out in a similar fashion, by choosing a
+d'" slightly smaller than the desired d' that is such that R(d**) = R(d*) + 0/2, and by using
+Theorem 2 to approximate this point of the curve.
+Now suppose we have a memoryless channel of capacity C.
+By the coding theorem for
+such channels it is possible to construct codes and decoding systems with rate approximating C
+(per use of the channel) and error probability ~ E 1 for any E 1 > O. We may combine such a
+code for a channel with a code of the type mentioned above for a source at a given distortion
+level d * and obtain the following result.
+Theorem 3. Given a source characterized by R(d) and a memoryless channel with capacity
+C > 0, given E > 0 and d * > d min' there exists, for sufficiently large t and n, a block code that
+C. E. Shannon
+maps source words of length t into channel words of length n and a decoding system that maps
+channel output words of length n into reproduced words of length t which satisfy
+I) d ~ d" ,
+2) nC s R(d *) + e .
+t
+Thus we may attain a desired distortion level d' (greater than d min ) and at the same time
+approximate using the channel at a rate corresponding to R(d*).
+This is done, as in the
+corollary stated above, by approximating the J.?(d) curve slightly to the left of d", say, at
+R(d*) - b. Such a code will have M = e,
+(R ( d
+- 0) + 0,) words, where b1 can be made small
+by taking t large.
+A code for the channel is constructed with M words and of length n, the
+largest integer satisfying nC S R(d* - 0) + 0I. By choosing t sufficiently large, this will
+t
+approach zero error probability, since it corresponds to a rate less than channel capacity. If
+these two codes are combined, it produces an over-all code with average distortion at most d":
+Numerical Results for Some Simple Channels. In this section some numerical results will be
+given for certain simple channels and sources. Consider, first, the binary independent letter
+source with equiprobable letters and suppose that the distortion measure is the error probability
+(per digit). This falls into the class for which a simple explicit solution can be given. The R(d)
+curve, in fact, is
+R(d)
+== 1 + d log2 d + (1 - d) log2 (1 - d) .
+This, of course, is the capacity of a symmetric binary channel with probabilities d and (1 - d),
+the reason being that this is the probability assignment q i (j) which solves the minimizing
+problem.
+This R(d) curve is shown in Fig. 5. Also plotted are a number of points corresponding to
+specific simple codes, with the assumption of a noiseless binary channel. These will give some
+idea of how well the lower bound may be approximated by simple means. One point, d = 0, is
+obtained at rate R = 1 simply by sending the binary digits through the channel. Other simple
+codes which encode 2, 3, 4 and 5 message letters into one channel letter are the following. For
+the ratio 3 or 5, encode message sequences of three or five digits into 0 or I accordingly as the
+sequence contains more than half zeros or more than half ones. For the ratios 2 and 4, the same
+procedure is followed, while sequences with half zeros and half ones are encoded into O.
+At the receiving point, a 0 is decoded into a sequence of zeros of the appropriate length and
+a 1 into a sequence of ones. These rather degenerate codes are plotted in Fig. 5 with crosses.
+Simple though they are, with block length of the channel sequences only one, they still
+approximate to some extent the lower bound.
+Plotted on the same curve are square points corresponding to the well-known single-error
+correcting codes with block lengths 3, 7, 15 and 31. These codes are used backwards here -
+any message in the I5-dimensional cube, for example, is transmitted over the channel as the
+eleven message digits of its nearest code point.
+At the receiving point, the corresponding
+fifteen-digit message is reconstructed. This can differ at most in one place from the original
+message.
+Thus for this case the ratio of channel to message letters is ..!!., and the error
+probability is easily found to be _1_. This series of points gives a closer approximation to the
+lower bound.
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+It is possible to fill in densely between points of these discrete series by a technique of
+mixing codes. For example, one may alternate in using two codes. More generally, one may
+mix them in proportions Aand 1 - A, where Ais any rational number. Such a mixture gives a
+d
+. h
+.
+R
+f
+h
+II
+.
+b
+I
+A
+(1 - A)
+h
+co e Wit
+a new ratto
+message to c anne
+etters, given
+y -
+= -
++
+R
+,were
+R
+R}
+R I and R 2 are the ratios for the given codes, and with new error probability
+p
+_
+ARtP e1 + (I - A)R 2 Pe2
+e
+-
+AR I + (1 - A) R2
+This interpolation gives a convex upward curve between any two code points. When applied to
+the series of simple codes and single-error correcting codes in Fig. 5, it produces the dotted-line
+interpolations indicated.
+Another channel was also considered in this connection, namely, the binary symmetric
+channel of capacity C =
+Y2. This has probabilities 0.89 that a digit is received correctly and
+0.11 incorrectly. Here the series of points (Fig. 6) for simple codes actually touches the lower
+bound at the point R = Yi. This is because the channel itself, without coding, produces just this
+error probability.
+Any symmetric binary channel will have one point that can be attained
+exactly by means of straight transmission.
+Figure 7 shows the R(d) curve for another simple situation, a binary independent letter
+source but with the reproduced Z alphabet consisting of three letters, 0, I, and?
+The distortion
+measure is zero for a correct digit, one for an incorrect digit, and 0.25 for?
+In the same figure
+is shown, for comparison, the R (d) curve without the? option.
+Figure 8 shows the R(d) curves for independent letter sources with various numbers of
+equiprobable letters in the alphabet (2, 3, 4, 5, 10, 100). Here again the distortion measure is
+taken to be error probability (per digit). With b letters in the alphabet the R(d, b) curve is
+given by
+l-d
+Rt d, b) = log2 b + d log , d + (1 - d) log2 -- .
+b -1
+Generalization to Continuous Cases. We will now sketch briefly a generalization of the
+single-letter distortion measure to cases where the input and output alphabets are not restricted
+to finite sets but vary over arbitrary spaces.
+Assume a message alphabet A = {m} and a reproduced letter alphabet B = {z}. For each
+pair (m, z) in these alphabets let d(m, z) be a non-negative number, the distortion if m is
+reproduced as z. Further, we assume a probability measure P defined over a Borel field of
+subsets of the A space.
+Finally, we require that, for each z belonging to B, d(m, z) is a
+measurable function with finite expectation.
+Consider a finite
+selection of points zi (i = 1, 2, ... ,I) from the
+B space, and
+a
+measurable assignment of transition probabilities q(z d m). (That is, for each i, q(z i 1m) is a
+measurable function in the A space.} For such a choice of Z i and assignment q(z i 1m), a mutual
+information and an average distortion are determined:
+f
+q(zilm)
+R = L
+qt z, 1m) log f
+dP(nl) ,
+i
+q(zilm)dP(nl)
+d = L f d (m, Zi) q(z i 1m) dP (m) .
+C. E. Shannon
+1.1
+\
+\
+INDEPENDENT alNARY
+BINARY INDEPENDENT SOURCE
+\
+DIGITS INTO A NOISY
+\
+CODED INTO A NOISELESS BINARY
+\
+BINARY CHANNEL
+1.0
+\
+CHANNEL. DISTORTION MEASURE
+\
+0.11
+\
+IS ERROR PROBABILITY PER DIGIT.
+\
+O.8~
+0.9
+,
+\,
+\
+~
+\
+0.1
+\
+0.11
+~3"
+\
+0.8
+\
+~
+\
+\
+\
+0.8
+\
+\.15 \
+I
+\
+0.7
+\
+\
+CODES OF LENGTH I
+\
+\
+\0""---AND THEIR MIXTURES
+0.7
+\
+\
+\
+a:
+\
+\
+\
+~ 0.6 -
+\ ..1--S1NGLE ERROR
+\
+\
+<:{
+7~
+\
+CORRECTING
+0::
+\
+\
+,
+.-
+\ \ \
+Q:
+,
+Z
+,
+lLJ 0.5
+\\
+....J
+0.5
+c::l
+\ \
+>
+-,
+\\
+-,
+\\
+\.
+w 0.4
+\~
+0.4
+-,
+\\
+-,-,
+3\
+\.
+\
+R(d)
+\
+\.
+0.3
+\.
+\.
+-,
+0.3
+\.
+~
+,
+'-
+~
+'" <,
+0.2
+"x
+0.2
+0.1
+0.1
+0 0
+0.1
+0.2
+0.5
+0.1
+0.2
+0.3
+0.4
+d=P
+d
+e
+FIg:. 5.
+Fig. 6.
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+We define the rate distortion function R(d * ) for such a case as the greatest lower bound of
+R when the set of points zi is varied (both in choice and number) and the q(zi'm) is varied over
+measurable transition probabilities, subject to keeping the distortion at the level d * or less.
+Most of the results we have found for the finite alphabet case carry through easily under this
+generalization. In particular, the convexity property of the R(d) curve still holds.
+In fact, if
+R(d) can be approximated to within E by a choice Z i and q(z i 1m,) and R(d' ) by a choice of z;
+and q' (z;1m), then one considers the choice z;' consisting of the union of the points zi and z;,
+together with q"(z;'lm) =
+~[q(z;'tm) + q'(z;'lm)] (using zero if q(z"Im) or q'(z"lm)
+is undefined). This leads, by the convexity of R and by the linearity of d, to an assignment for
+d" =
+~ d + Y; d", giving an R" within
+E of the midpoint of the line joining d R(d) and
+d' R(d').
+It follows, since E can be made arbitrarily small, that the greatest lower bound of
+R(d") is on or below this midpoint.
+In the general case it is, however, not necessarily true that the R(d) curve approaches a
+finite end-point when d decreases toward its minimum possible value. The behavior may be as
+indicated in Fig. 9 with R(d) going to infinity as d goes to d min' On the other hand, under the
+conditions we have stated, there is a finite d max for which R(d max) = O. This value of d is
+given by
+d m ax = g./.b. E[d(m, z)J .
+The negative part of the coding theorem goes through in a manner essentially the same as
+the finite alphabet case, it being assumed that the only allowed coding functions from the
+source sequences to channel inputs correspond to measurable subsets of the source space.
+(If
+this assumption were not made, the average distortion would not, in general, even be defined.)
+The various inequalities may be followed through, changing the appropriate sums in the A
+space to integrals and resulting in the corresponding negative theorem.
+For the positive coding theorem also, substantially the same argument may be used with an
+additional E involved to account for the approximation to the greatest lower bound of R(d) with
+a finite selection of Z i points. Thus one chooses a set of zi to approximate the R (d) curve to
+within E, and then proceeds with the random coding method. The only point to be noted is that
+the d max term must now be handled in a slightly different fashion.
+To each code in the
+ensemble one may add a particular point, say zo, and replace d max by E(d(m, zo), a finite
+quantity. The results of the theorem then follow.
+Difference Distortion Measure. A special class of distortion measures for certain continuous
+cases of some importance and for which more explicit results can be obtained will now be
+considered. For these the m and z spaces are both the sets of all real numbers. The distortion
+measure d(m, z) will be called a difference distortion measure if it is a function only of the
+difference m - z, thus d(m, z) = d(m -
+z). A common example is the squared error measure,
+dt m, z) = (m - z)2 or, again, the absolute error criterion dtm, z) = 'm - z ~
+We will develop a lower bound on R(d) for a difference distortion measure. First we define
+a function <Il(d) for a given difference measure d(u) as follows.
+Consider an arbitrary
+distribution function G(u) and let H be its entropy and d the average distortion between a
+random variable with a given distribution and zero. Thus
+H = - t: log dG(u) dG(u) ,
+d = t: d(u) dG(u) .
+1.0
+P =...!...
+d=O
+o
+0.8
+d: 0.25
+p =.L
+I
+d=O
+0.6
+R
+0.4
+"?"
+C. E. Shannon
+o
+0.1
+0.2
+d
+Fig. 7.
+0.3
+0.4
+0.5
+We wish to vary the distribution G(u), keeping d ~ d", and seek the maximum H. The least
+upper bound, if finite, is clearly actually attained as a maximum for some distribution. This
+maximum H for a given d" we call <J>(d*), and a corresponding distribution function is called a
+maximizing distribution for this d*.
+Now
+suppose we
+have a distribution function
+for
+the m space (generalized letter
+probabilities) P(m), with entropy H(m). We wish to show that
+R(d)
+~ H(m) -
+<t>(d) .
+Let
+Z i be a set of z points and q(z i J m) an assignment of transition probabilities. Then the
+mutual information between m and z may be written
+R = H(m) -
+~ Q; H(mlz;) ,
+where Q; is the resulting probability of zi- If we let d j be the average distortion between m and
+Zi» then
+This is because <t>(d) was the maximum H for a given average distortion and also because the
+distortion is a function only of the difference between m and z, so that this maximizing value
+applies for any Zi. Thus
+R ~ H(m) -
+~ Qi q>(di )
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+5.0
+4.0
+0.1
+0.2
+0.3
+0.4
+0.5
+d(Pe )
+Fig. 8.
+0.6
+0.7
+O.B
+0.9
+Now <t>(d) is a concave function.
+This is a consequence of the concavity of entropy
+considered as a function of a distribution function and the linearity of d in the same space of
+distribution
+functions,
+by
+an
+argument
+identical
+with
+that
+used
+previously.
+Hence
+L Qi $( d i)
+~
+<t>(L Qi d i) = <p(d), where d is the average distortion with the choice Zi and
+i
+i
+the assigned transition probabilities. It follows that
+,. ~ H(m) - <t>(d) .
+This is true for any assignment Zi and q( Zi 1m), and proves the desired result.
+If, for a particular P(m) and d(u), assignments can be made which approach this lower
+bound, then, of course, this is the R(d) function. Such is the case, for example, if P(m) is
+Gaussian and d( u) =
+U 2 (mean square error measure of distortion). Suppose that the message
+has variance 0 2, and consider a Gaussian distribution of mean zero and variance 0 2 - d in the
+z space. (If this is zero or negative, clearly R(d) = 0 by using only the z point zero.) Let the
+R(d)
+3.0
+2.0
+1.0
+R(d) FOR GAUSSIAN SOURCE OF
+UNIT VARIANCE, MEAN SQUARED
+ERROR DISTORTION MEASURE.
+C. E. Shannon
+o
+0.2
+0.4
+d
+Fig. 9.
+0.6
+0.8
+1.0
+conditional probabilities q(mlz) be Gaussian with variance d. This is consistent with the
+Gaussian character of P(m), since normal distributions convolve to give normal distributions
+with the sum of the individual variances.
+These assignments determine the conditional
+probability measure q(zlm), also then normal.
+A simple calculation shows that this assignment attains the lower bound given above. The
+resulting R(d) curve is
+R(d) =
+This is shown for 0 2 = 1 in Fig. 9.
+o
+log-
+~
+o
+Definition of a Local Distortion Measure. Thus far we have considered only a distortion
+measure do
+(or d(m, z)
+which depends upon comparison of a message letter with the
+corresponding reproduced letter, this letter-to-Ietter distortion to be averaged over the length of
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+message and over the set of possible messages and possible reproduced messages.
+In many
+practical cases, however, this type of measure is not sufficiently general. The seriousness of a
+particular type of error often depends on the context.
+Thus in transmitting a stock market quotation, say: "A.T.&T. 5900 shares, closing 194,"
+an error in the 9 of 5900 shares would normally be much less serious than an error in the 9 of
+the closing price.
+We shall now consider a distortion measure that depends upon local context and, in fact,
+compares blocks of g message letters with the corresponding blocks of g letters of the
+reproduced message.
+A local distortion measure of span g is a function d(m 1, m2' ... , mg; Z 1,22, .•• , Zg) of
+message sequences of length g and reproduced message sequences of length g (from a possibly
+different
+or
+larger
+alphabet)
+with
+the
+property
+that
+d ~ O.
+The
+distortion
+between
+m = m I , m2 , ... , mt and 2 =
+2 I , Z2, .•• , 2 t (t ~ g) is defined by
+t-g+J
+d(m,Z) = --
+~
+d(mk,mk+l, ... ,mk+g-l; Zk,Zk+l"",Zk+g-l)'
+t - g
+k= I
+The distortion of a block code in which message m and reproduced version Z occur with
+probability P(m, Z) is defined by
+d = ~ P(m,Z) d(m,Z) .
+m,l
+In other words, we assume, with a local distortion measure, that the evaluation of an entire
+system is obtained by averaging the distortions for all block comparisons of length g each with
+its probability of occurrence a weighting factor.
+The Functions R n (d) and R(d) for a Local Distortion Measure and Ergodic Source.
+Assume that we have given an ergodic message source and a local distortion measure,
+Consider blocks of m message letters with their associated probabilities (as determined by the
+source) together with possible blocks Z of reproduced message of length n. Let an arbitrary
+assignment of transition probabilities from the m blocks to the Z blocks, q(Zf m), be made. For
+this assignment we can calculate two quantities: 1) the average mutual information per letter
+R = 1.- E [lOg q(Zlm)] and 2) the average distortion if the m's were reproduced as Z's with
+n
+Q(z)
+the probabilities q(Zlm). This is d = 1: P(m, Z) d(m, Z).
+By variation of q(Zlm), while
+m,Z
+holding d ~ d"; we can, in principle, find the minimum R for each d", This we call R n (d*).
+The minimizing problem here is identical with that discussed previously if we think of m
+and Z as individual letters in a (large) alphabet, and various results relating to this minimum can
+be applied. In particular, R n (d) is a convex downward function.
+We now define the rate distortion function for the given source relative to the distortion
+measure as
+R(d) = lim inf Rn(d) .
+n~oo
+It can be shown, by a direct but tedious argument that we shall omit, that the' 'inf"
+may be
+deleted from this definition. In other words, R n (d) approaches a limit as n ~ 00.
+c. E. Shannon
+We are now in a position to prove coding theorems for a general ergodic source with a local
+distortion measure.
+The Positive Coding Theorem for a Local Distortion Measure.
+Theorem 4. Suppose that we are given an ergodic source and a local distortion measure
+with rate distortion function R(d). Let K be a memoryless discrete channel with capacity C, let
+d" be a value of distortion, and let E be a positive number. Then there exists a block code with
+distortion less than or equal to d * + e, and a signaling rate at least [~ - e1message letters
+per channel letter.
+Proof.
+Choose
+an
+nl
+so
+that
+R; (d*) - R(d*) < ~
+and,
+also,
+so
+large
+that
+I
+~ d max < ~.
+Now consider blocks of length n I and "letters"
+of an enlarged alphabet.
+nl
+Using Theorem 3 we can construct a block code using sufficiently long sequences of these
+"letters" signaling at a rate close to (say within £/3 of) R n , (d* )/e (in terms of original
+message letters) and with distortion less than d* +
+~.
+It must be remembered that this
+distortion is based on a single "letter" comparison. However, the distortion by the given local
+distortion measure will differ from this only because of overlap comparisons (g for each n I
+letters of message) and hence the discrepancy is, at most, ~ d max < ~. It follows that this
+nl
+code signals at a rate within e of R(d*) and at a distortion within E of d",
+The Converse Coding Theorem.
+Theorem 5. Suppose that we are given an ergodic source and a local distortion measure
+with rate distortion function R(d). Let K be a memoryless discrete channel with capacity C, let
+d" be a value of distortion, and let E be a positive number. Then there exists to which is such
+that any code transmitting t ~ to message letters with n uses of the channel at distortion d *, or
+less, satisfies
+.!!.. c ~ R(d*) -
+E .
+t
+That is, the channel capacity bits used per message letter must be nearly R(d*) for long
+transmissions.
+Proof. Choose to so that for t ~ to we have Rt (d)
+~ R(d) -
+E. Since R(d) was defined
+as lim inf R1(d), this is possible. Suppose that we have a code for such a f ~ to which maps
+t ~ 00
+sequences m consisting of t message letters into sequences X of n channel letters and decodes
+sequences Y of n channel output letters into sequences Z of reproduced messages. The channel
+will have, from its transition probabilities, some P( YIX). Furthermore, from the encoding and
+decoding functions, we shall have X = f(m) and Z = g(Y). Finally there will be, from the
+source, probabilities for the message sequences P(m). By the encoding function j'(m) this will
+induce a set of probabilities P(X) for input sequences. If the channel capacity is C, the average
+mutual information R(X, Y) between input and output sequences must satisfy
+R(X, Y) = E log P(XI Y) s nC ,
+P(X)
+since nC is the maximum possible value of this quantity when P(X) is varied. Also, since X is
+Coding Theorems for a Discrete Source With a Fidelity Criterion
+a function of rn and Z is a function of Y, we have
+R(m Z) = E 10
+P(mIZ)
+R X Y)
+C
+,
+g
+P(m)
+$
+(,
+$ n
+.
+The coding system in question amounts, overall, to a set of conditional probabilities from m
+sequences to Z sequences as determined by the two coding functions and the transition
+probabilities.
+If the distortion of the overall system is less than or equal to d *, then
+t R t (d*) = min
+Rtm, Z) is certainly less than or equal to the particular R(m, Z) obtained
+P(Z/m)
+with the probabilities given by the channel and coding system. (The t factor is present because
+R t (d) is measured on a per message letter basis, while the R(m, Z) quantities are for sequences
+of length t.) Thus
+tRt(d*)
+~ R(m, Z) ~ nC ,
+t(R (d *) - E) $ nC ,
+!!.- c ~ R(d*) -
+E .
+t
+This is the conclusion of the theorem.
+Notice from the method of proof that again the code used need not be a block code,
+provided only that, after n uses of the channel, t recovered letters are written down. If one has
+some kind of variable-length code and, starting at time zero, uses this code continually, the
+inequality of the theorem will hold for any finite time after to message letters have been
+recovered; and of course as longer and longer blocks are compared, E ~ O. It is even possible
+to generalize this to variable-length codes in which, after n uses of the channel, the number of
+recovered message letters is a random variable depending, perhaps, on the particular message
+and the particular chance operation of the channel. If, as is usually the case in such codes, there
+exists an average signaling rate with the properties that after n uses of the channel then, with
+probability nearly one, t letters will be written down, with t lying between t I (1 - 0) and
+t I (1 + B) (the b ~ 0 as n ~ (0), then essentially the same theorem applies, using the mean t]
+for t.
+Channels with Memory. Finally we mention that while we have, in the above discussion,
+assumed the channel to be mernoryless, very similar results, both of positive and negative type,
+can be obtained for channels with memory.
+For a channel with memory one may define a capacity C n for the first 11 use of the channel
+starting at state So.
+This en is l.- times the maximum average mutual information between
+input sequences of length 11 and resulting output sequences when the probabilities assigned the
+input sequences of length
+11 are varied.
+The lower bound on distortion after n uses of the
+channel is that given by Theorem 1 using C n for C.
+We can also define the capacity e for such a channel as e = lim sup en' The positive
+n~oo
+parts of the theorem then state that one can find arbitrarily long block codes satisfying
+Theorem 3. In most channels of interest, of course, historical influences die out in such a way
+as to make C n ~ C as 11 ~
+00. For memoryless channels, en = C for all 11.
+Duality of a Source and a Channel. There is a curious and provocative duality between the
+properties of a source with a distortion measure and those of a channel.
+This duality is
+enhanced if we consider channels in which there is a "cost" associated with the different input
+C. E. Shannon
+letters, and it is desired to find the capacity subject to the constraint that the expected cost not
+exceed a certain quantity.
+Thus input letter i might have cost a i and we wish to find the
+capacity with the side condition ~ Pia ; ~ a, say, where Pi is the probability of using input
+i
+letter i. This problem amounts, mathematically, to maximizing a mutual information under
+variation of the Pi with a linear inequality as constraint. The solution of this problem leads to a
+capacity cost function C(a) for the channel.
+It can be shown readily that this function is
+concave downward. Solving this problem corresponds, in a sense, to finding a source that is
+just right for the channel and the desired cost.
+In a somewhat dual way, evaluating the rate distortion function R(d) for a source amounts,
+mathematically, to minimizing a mutual information under variation of the q i (j), again with a
+linear inequality as constraint.
+The solution leads to a function R(d)
+which is convex
+downward.
+Solving this problem corresponds to finding a channel that is just right for the
+source and allowed distortion level. This duality can be pursued further and is related to a
+duality between past and future and the notions of control and knowledge. Thus we may have
+knowledge of the past but cannot control it; we may control the future but have no knowledge
+of it.
+BIBLIOGRAPHY
+[1]
+C. E. Shannon and W. Weaver, The Mathematical Theory ofCommunication, University
+of Illinois Press, 1949.
+[2]
+R. W. Hamming, "Error-Detecting and Error-Correcting Codes," Bell System Technical
+Journal, Vol. 29, 1950, p. 147.

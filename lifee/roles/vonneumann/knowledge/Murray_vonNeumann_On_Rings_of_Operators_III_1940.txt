@@ -1,0 +1,5162 @@
+
+
+
+
+ON RINGS OF OPERATORS. III 
+
+
+By J. v. NEUMANN 
+
+
+(Received June 14, 1939) 
+
+
+INTRODUCTION 
+
+
+ahaa: 1. In two earlier papers ((1), (2)), F. J. Murray and the author investigated 
+i certain operator rings, called factors. (Cf. (1), p. 188, Definition 3.1.2. For an 
+ne introduction into the theory of operator rings ef. (5) particularly pp. 372-376, 
+te 388-398.) The motives which led to those investigations are described in (1), 
+pp. 116-123. 
+
+The main principle of classification for factors, which was found in (1), is 
+based on the ranges of their relative dimension functions. (Cf. ibid., p. 165, 
+Definition 8.2.1; p. 168, Theorem VII; and p. 172, Theorem VIII.) Thus all 
+| factors were found to belong to classes called (In) (n = 1, 2, ---), (I,), (Ih), 
+| | (II,,), (II1,,). It was shown that factors in each one of these classes actually do 
+exist—with the exception of (III,,), which had to be left undecided. (Cf. (1), 
+p. 208, Theorem XII.) 
+
+The main result of this paper is that factors of class (III,,) also exist. (Cf. 
+Theorem IX, and Examples (a), (8) in §4.4.) Thus the above classification of 
+factors is fully justified. 
+
+
+2. This result is obtained by the simultaneous use of two devices: The no- 
+tions of norm and normedness, which form the subject of Chapter I; and the 
+| process A'*'!*?!"" which is the analogue of the process of taking the diagonal 
+| part of a finite matrix, and is discussed in Chapter II. 
+t Both notions have an interest of their own, and we think that they deserve 
+| to be studied for their own sake. In this paper their analysis is restricted to the 
+amount which is necessary for our immediate purposes, although we permitted 
+ourselves a certain leeway in some cases where a little more generality than 
+absolutely necessary seemed to make things clearer and easier. But we propose 
+to discuss both of them independently and more fully at some other occasion. 
+Chapter III gives some explicit constructions of factors, generalizing those of 
+(1), pp. 192-204. And then, with the help of the above-mentioned tools of 
+Chapters I, II, it is shown in Chapter IV, to which classes the factors of Chapter 
+III belong. At this stage examples of factors of class (III,,) are also obtained. 
+
+
+3. The main questions concerning factors were stated in (1) as Problems 1-11. 
+Of these, Problems 1, 2, 5, and parts of 3, 4, 6, 7, 8, 9, 10 were answered in (1); 
+Problem 11 was answered in (2). Our present result will settle the remainder of 
+Problems 3, 4. Important parts of 6, 7, 8, 9, 10 remain unsettled. Especially 
+
+
+In 
+
+
+| 
+the 
+che 
+We 
+of 
+| 
+| 
+| 
+in 1 
+Le! 
+anc 
+dif 
+IT 
+the 
+in 
+onl 
+she 
+a4 
+we 
+the 
+to 
+obt 
+pay 
+( 
+des 
+| 
+| 
+ai 
+| 
+
+
+— 
+
+
+ON RINGS OF OPERATORS, III 95 
+
+
+the following question is still open, and it is in our opinion of a quite decisive 
+character: Are all factors of class (II,) isomorphic to each other? (Part of 6.) 
+We think that the answer to this question will greatly affect the applicability 
+of the theory to factors, especially to quantum mechanics. 
+
+F. J. Murray and the author believe that the answer is negative, and that 
+further invari.nts—probably of an algebraical and group theoretical nature— 
+exist. 
+
+Certain partial results have been obtained, and they will be discussed else- 
+where. But the main question (cf. above) is still unanswered. 
+
+
+4. The work (7) of the author also led to factors. The parts of the ring @*' 
+in the various incomplete direct products TTee~as.-:- (Den, ® DHn,2)) ((7), p. 71 ’ 
+Lemma 7.3.1) were found to be in certain cases factors of classes (I,), (II:), 
+and (II,,). (Cf. ibid., pp. 71-77, in particular Lemmas 7.4.1, 7.5.1.) It is not 
+difficult to show that the above-mentioned parts are always (that is, in every 
+
+Application of our present results, namely of our Theorem IX, shows that 
+these factors are of class (III,,) in certain cases. 
+
+More precisely: It was shown in (7), p. 71, Lemma 7.3.1, that the part of C*? 
+in @ depended essentially (that is, up to isomorphisms) 
+only upon a certain sequence a, a2,--- of constants 20, $1. It was also 
+
+
+shown ibid., pp. 71-77, that its class was (I,,) for a1 = ag = --- = 1, (Ij) for 
+a, = a = --- = 0, and stated that it was (II,) for a. = a3 = --- = 0, a = 
+a; = ++» = 1. Now we can show this: The class is (III,,), if for some 6 > 0 
+
+
+we have for infinitely many n = 1, 2,---,6 Sa, 21 — 6. 
+
+The factors obtained by the above process have various instructive aspects, 
+and will be discussed (together with the above-stated results) elsewhere. 
+
+The surmises stated at the end of (7) have to be modified in accordance with 
+the results stated above. 
+
+
+5. For an account of modern operator theory in general, the reader is referred 
+to (3) or (4). For the other topics touched, a general orientation may be 
+obtained from (5), (1). A familiarity with the methods and results of these 
+papers will be assumed. 
+
+Our notations are the same as in the papers enumerated above, for a detailed 
+description ef. (1), pp. 126-127. 
+
+A detailed table of contents and a bibliography follow. 
+
+
+CONTENTS 
+INTRODUCTION 
+
+
+| 
+| | 
+), 
+| 
+i, 
+| 
+| | 
+| | 
+f 
+
+
+J. V. NEUMANN 
+
+
+4. Relation with (7) 
+5. Literature and notations 
+
+
+BIBLIOGRAPHY 
+
+
+Cuapter I. Toe RELATIVE TRACE IN AN ARBITRARY FACTOR 
+
+1.1. Generalities 
+
+1.2. Definition and properties of Toy(A). (A of finite rank)— 
+Theorem I 
+
+1.3. Definition and properties of [[A]]. (A of finite rank)—Theorem II. 101 
+
+1.4. Fundamental sequences, normed A’s, [[A]] for normed A’s— 
+Theorem IIT 
+
+1.5. Properties of normed A’s, of [[A]] for normed A’s. Projections— 
+Theorems IV-V 
+
+1.6. Meaning of normedness and norm in each class (I,)—(III,,) 
+
+
+Cuaprer II. Maximum ABELIAN RINGS AND THE OpERATION A!™!! 
+2.1. Construction and properties of A!*!!#!".—Theorem VI 
+2.2. Criterion of D1 being of class (III,) 
+
+
+III. ConstrRucTION oF THE RINGS 
+3.1. Generalities 
+3.2. 8, T, u, Ss = The “differentiation-theorem’—Theorem 
+
+
+3.3. Relation of agroupG to S,1T,y. Being free, ergodic, measurable.. 131 
+
+
+3.4. 9°, 69 = 
+3.5. Constructions in 
+
+
+3.6. Constructions in 99: ; 
+3.7. First discussion of 91, 91/—Theorem VIII 
+
+
+CHAPTER IV. DETERMINATION OF THE CLASSES OF 9M, 
+4.1. Generalities 
+4.2. S measurable: Cases (I), (II) 
+4.3. G non-measurable: Case (II])—Theorem IX.................-. 
+4.4. Examples of Case (III). Not coupled factors.................. 
+
+
+BIBLIOGRAPHY 
+
+
+(1) F. J. Murray anp J. v. Neumann: “On rings of operators,” Annals of 
+Mathematics, vol. 37 (1936), pp. 116-229. 
+
+(2) F. J. Murray anp J. v. Neumann: “On rings of operators, II,” Transac- 
+tions Amer. Math. Soc., vol. 41 (1937), pp. 208-248. 
+
+(3) M. H. Stone: Linear transformations in Hilbert space, Amer. Math. Soc. 
+Colloquium Publications, vol. XV (1932). 
+
+(4) J. v. Neumann: “Allgemeine Eigenwerttheorie Hermitescher Funktional- 
+operatoren,”’ Math. Annalen, vol. 102 (1929), pp. 49-131. 
+
+
+| 
+| 
+( 
+153 | 
+158 i 
+| 
+i 
+| 
+| 
+
+
+al- 
+
+
+ON RINGS OF OPERATORS, III 97 
+
+
+(5) J. v. Neumann: “Zur Algebra der Funktionaloperatoren,” Math. Annalen, 
+vol. 102 (1929), pp. 370-427. 
+
+(6) J. v. Neumann: “Uber Funktionen von Funktionaloperatoren,” Annals 
+of Math., vol. 32 (1931), pp. 191-226. 
+
+(7) J. v. Neumann: “On infinite direct products,” Compositio Mathematica, 
+vol. 6 (1938), pp. 1-77. 
+
+(0) F. Hausporrr: Mengenlehre. (III™ Edition.) W. de Gruyter, Berlin 
+
+
+(1935). 
+
+
+CuapTer I. THe RevatTiveE TRACE IN AN ARBITRARY FACTOR 
+
+
+1.1. Let S be a Hilbert space, and 9il a factor in §. The notation of the 
+relative trace Toy (A) was defined for all Hermitean A ¢ 9M in (1), pp. 212-213, 
+Definition 15.1.1, and for all A ¢ 9 without restriction in (2), p. 218, Definition 
+2.2.1, provided that DN belongs to one of the finite classes: (I,) (n = 1, 2, --- ), 
+(II,). We shall now extend this definition to all factors 9X but (when 9M is 
+infinite) not all A «9. We shall see, in particular, that when MM is purely 
+infinite, ie. of class (III,), our definition covers A = 0 only. Hence the 
+factors ON for which we really achieve something, are those in the not purely 
+infinite classes: (I,,), (II,,). (For (I,,) in particular, we get the usual notion of 
+the trace and the E. Schmidt class of operators in DN cf. the discussion (B) in 
+§1.6 below. Nevertheless, we shall use this extended notion of the relative 
+trace in this paper for a factor 9M of unknown class, with the purpose of showing 
+that OM is just of class (III,).) 
+
+
+1.2. Let SN be an arbitrary factor, D(M) its relative dimension function, in 
+any normalization. ((1), p. 165, Definition 8.2.1, and p. 168, Theorem VII.) 
+For any A eM the closed, linear set [Range A] can be formed, and is » DM. 
+(This notion is defined in (1), p. 141, Definition 4.2.1. If a proof of the state- 
+ment is wanted, cf. (1), pp. 151-152, Lemmas 6.1.1, 6.2.1.) 
+
+DEFINITION 1.2.1. For every A ¢M we define a “rank’’ as follows: 
+
+
+Rank (A) = D({Range A)). 
+
+
+(The reader will easily verify that if i = & = the ring of all bounded operators 
+in §—which is of class (I,,)—and if D(M) is chosen in the standard normaliza- 
+tion—(1), p. 173, Lemma 8.6.1—then this is the matrix-rank in its usual sense.) 
+Together with D(9M), Rank (A) can assume finite or infinite numerical values. 
+When the former is the case, we say that A has finite rank. 
+Lemma 1.2.1. Rank (A) has the following properties: 
+(i) Rank (A) = 0, it is = 0 if and only if A = 0. 
+(ii) Rank (A) = Rank (A*). 
+(iii) Rank (aA) = Rank (A) for every complex number a # 0. 
+(iv) Rank (A + B) S Rank (A) + Rank (B). 
+(v) Rank (AB) S Rank (A), Rank (B). 
+(vi) Rank (E) = D(E) for every projection E « MM. 
+
+
+% 
+112 | 
+22 | 
+| 24 
+24 | 
+34 3 
+39 | 
+50 | 
+rm 
+if i 
+oC. | 
+| 
+
+
+98 J. V. NEUMANN 
+
+
+PROOF: 
+Ad (i): Rank (A) = D({Range A]) is clearly 2 0, and = 0 if and only if 
+[Range A] = (0), ie. Range A = (0), which means A = 0. 
+
+Ad (ii): Coincides with (1), p. 152, Lemma 6.2.1. 
+
+Ad (iii): Since A is linear, already Range (aA) = Range (A) if a ¥ 0. 
+
+Ad (iv): Clearly Range (A + B) C [Range A, Range B], hence [Range 
+(A + B)| C [[Range A], [Range B]], whence (1), p. 210, Lemma 14.2.3, 
+gives the desired result. 
+
+Ad (v): Clearly Range (AB) C Range A, hence [Range (AB)] C [Range 4], 
+and so Rank (AB) < Rank (A). Combining this with (ii), we obtain: 
+Rank (AB) = Rank ((AB)*) = Rank (B*A*) S Rank (B*) = 
+Rank (B). 
+
+This completes the proof. 
+
+Ad (vi): If E is the projection of the closed linear set IN, then Range E = M, 
+hence [Range E] = M. 
+
+Lemma 1.2.2. The finiteness of rank has the following properties: 
+
+(i) 0 has finite rank. 
+
+(ii) A has a finite rank if and only if A* has a finite rank. 
+
+(iii) A has a finite rank if and only if aA has a finite rank, a being any fixed 
+
+complex number 0. 
+
+(iv) A + B has a finite rank, if the same is true for both A and B. 
+
+(v) AB has a finite rank, if the same is true for either A or B. 
+
+(vi) E has a finite rank if and only if it is finite in the sense of (1), p. 155, Defini- 
+
+tion 7.1.1, E being any fixed projection ¢ M. 
+Proor: These (i)-(vi) are immediate consequences of the corresponding 
+
+(i)—(vi) in Lemma 1.2.1.— 
+
+Throughout what follows we will make use of the results of these Lemmas 
+
+1.2.1, 1.2.2, without referring to them explicitly. 
+
+DeriniTIon 1.2.2. A closed, linear set M—or its projection E M ((1), 
+
+p. 141, Lemma 4.2.1)—‘“‘contains” an A ¢€ 9M if 
+
+
+[Range A], [Range A*] C M. 
+Lemma 1.2.3. E contains A if and only if 
+EA =AE= 4A. 
+
+
+Proor: [Range A] C M is equivalent to Range A C M, that is, to Af eM 
+for every f « , that is to HAf = Af. In other words: To EA = A. 
+
+Similarly [Range A*] C I means HA* = A*, that is (applying * to both 
+sides) AE = A. 
+
+Hence both together amount to HA = AE = A. 
+
+Lemma 1.2.4. A (e 9M) is of finite rank, if and only if it is contained in a 
+finite M (n 
+
+Proor: Sufficiency: [Range A] C M, M is finite, hence [Range A] is finite, 
+that is, Rank (A) = D([Range A]) is a finite number. 
+
+
+| 
+| 
+| 
+) 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+
+
+ON RINGS OF OPERATORS, III 99 
+
+
+Necessity: A has finite rank, hence A* has also finite rank, so [Range Aj, 
+|Range A*] are finite, and with them 92 = [[Range A],-|Range A*]] ((1), p. 160, 
+Lemma 7.3.5). This 2% meets all requirements._— 
+
+Given a finite 9i)—and its projection E (e9i)—then those A 
+which are contained in Yt are by Lemma 1.2.3 precisely the elements which 
+the correspondence X = Xm) (discussed in (1), pp. 186-187, Definition 11.3.1, 
+Lemmas 11.3.2-11.3.4) maps on the factor Mic) in M (instead of H!). So we 
+see: If A runs over all elements of 9M which are contained in IM, then A (gq) runs 
+over all elements of Miia) . 
+
+The factor 9m) necessarily belongs to one of the finite classes: (I,) (n = 
+1, 2,--- ), (Ili) (2), p. 188, Lemma 11.3.7, or p. 189, Lemma 11.4.3). Hence 
+there exists a unique relative trace in Sym) defined for all A gmeMy : 
+THM yy (Ac). (For the definition of ef. the beginning of §1.1, 
+above.) We now define: 
+
+Derinition 1.2.3. If A eM and of finite rank, then define for every finite, 
+closed, linear set MOM which contains A (such M exist by Lemma 1.2.4) 
+
+
+(A) D(M)T May) (A cy). 
+
+
+(This TH ay (A) depends also on the normalization of D(M), but we do not 
+need to indicate this explicitly.) 
+
+Lema 1.2.5. The TOiuq(A) of Definition 1.2.3 depends on A only, and not 
+on M (as long as A, Mt are related as described there). 
+
+Proor: In other words: If MM, MN are both finite, closed linear sets, both » ON 
+and both containing A, then we claim that 
+
+
+(1) TH (A) = (A). 
+
+
+Consider first the case where I C NR. Consider the operators Aw € Mim . 
+Form the operator Ag x in R, which is reduced by 2 and which coincides with 
+Ay» in M and with 0 in NR — Mt. We claim that Agjx eM. Indeed: 
+Ay implies Am = Ag for an As = Pye M, we have 
+(EAE), = Aw, EAE € 9M, so we may replace A by EAE, which coincides 
+with 0 in § — MM. That is: We may assume that A itself coincides with 0 
+in § — M. Hence = Aw € Mua 
+
+Observe further: 
+
+(i)* Em) is the unit in M, hence for Man) . And Tim 2 Ew 
+(ii)* (a-Am)\x = a-Agin 
+(ii)* (Am + Ba)in = Amn + - 
+(iv)* If Am is definite, then Amy is also definite. 
+(v)* (Am) ix = Anis 
+(vi)* = . 
+Now put for every Ag € Man) 
+
+
+(2) = 
+
+
+DO) 
+DM) 
+
+
+TI (A 
+
+
+i 
+f 
+| 
+| | 
+| 
+h 
+| 
+| 
+| 
+
+
+100 J. ¥. NEUMANN 
+
+
+Comparing (2) and (i)*-(vi)* with (i)-(vi) in “Property IIT” in (2), pp. 
+218-219, we see immediately that ¢(As) fulfills (ii)-(vi), including (iv)’, men- 
+tioned there (for Mim , Pin place of M, H). (vi)’ is also fulfilled, since it is a 
+consequence of (vi). (Put U-"A, U for A, B.) Let us finally check (i). Con- 
+sidering (2) and (i)*, it becomes 
+
+
+1 = TM») (Eon), that is 
+
+
+Now we know from “Property III,” (*), in (2), pp. 218-219, together with 
+(1), p. 219 (end of the first paragraph), that we have for every idempotent 
+
+
+F = Px $C N, TN xy) (Fo) D'(F ay) D'(§), 
+
+
+where D’($) is the relative dimension function of 9M) in its standard nor- 
+malization—that is, with D’(9t) = 1. By (1), p. 188, Lemma 11.3.7, D(¥) 
+is also a relative dimension function of 9i.») , but in order to make its normaliza- 
+tion the standard one, we must divide it by D(Jt). So D’($) = D(P)/DM), 
+and consequently = Now putting $B = M, F = 
+gives (3). Thus (i) is also established. 
+
+We have thus shown that ¢(A) fulfills all conditions (i)-(vi)’ in “Property 
+III” in (2), pp. 218-219. Hence by “Property IV” in (2), p. 219, we have 
+TM) (Am) = Or, if we substitute this in (2): 
+
+
+(4) D(M)T (Am) = (Amz), 
+
+
+Consider now our original A. Since it is contained in Jt, so HA = AE = A 
+by Lemma 1.2.3, therefore it coincides with 0 in © — Mt. Therefore we have 
+for Am = Am also Amjx = Aq. By this substitution, however, (4) become 
+
+
+D(M)TM = (Ac), 
+
+
+which, by Definition 1.2.3, is precisely (1). 
+
+This completes the proof for the case where It C MN. 
+
+Consider next the case where Jt, Jt are arbitrary. Then form PB = [Me, Nl. 
+Along with M, N this $ will also be 7 ON, and it will also be finite ((1), p. 160, 
+Lemma 7.3.5). We have C and contains A since M, do. So 
+we have (1) for Mt, $ and for MN, B (in place of Mt, M), and hence for Mt, MN too. 
+
+Thus the proof is completed. 
+
+1.2.4. Considering Lemma 1.2.5 we can drop the It fromthe 
+TH) (A) of Definition 1.2.3. We shall therefore write for every A «MM of finite 
+
+
+rank (in the sense of Definition 1.2.3): 
+To (A) = Tip) (A). 
+
+
+i 
+
+1} 
+
+t] 
+| } 
+
+| 
+
+| al 
+
+Pp 
+
+r 
+
+| 
+fir 
+A 
+
+
+ON RINGS OF OPERATORS, III 101 
+
+
+We obtain now with ease: 
+
+TueoreM I. Toq(A) has the properties (ii)-(vi) in “Property III” in (2), 
+pp. 218-219). That is: 
+
+(ii) Toy(aA) = aToy(A), a a complex number. 
+
+(iii) Ton(A + B) = Toy (A) + Ton(B). 
+
+(iv) Toy(A) = 0 of A ts definite. 
+
+(iv)’ Tay(A) > 0 if A is definite and ¥ 0. 
+
+(v) Toy(A*) = 
+
+(vi) Toy(AB) = Toy (BA) if either A or B has a finite rank, and both are « M. 
+(vi)’ Tay(U" AU) = Toy (A) if U (e MN) is unitary. 
+
+We have also: 
+
+(vii) Toy (E) = D(B) if E (eM) is a finite projection. 
+
+(Throughout (i)—(vii) remember Lemma 1.2.2.) 
+
+Proor: Ad (ii), (iv), (iv)’, (v): They follow immediately from the corre- 
+sponding statements in “Property III” in (2), pp. 218-219. We must only 
+observe for (ii), (v), that 9% contains aA, A* along with A. And for (iv)’, 
+that if M contains A, then Aim) = 0 implies A = 0. 
+
+. Ad (iii) and (vi), when A, B have both finite rank: In order to deduce them 
+
+from the corresponding statements of “Property III,’ as above, we only need a 
+finite My Oi which contains both A, B. Let M, Rn OM be finite and contain 
+A, B respectively. Then $ = [M, I] meets all requirements. (For the finite- 
+ness by (1), p. 160, Lemma 7.3.5.) 
+
+Ad (vi): Since (vi) is symmetric in A, B, we may assume that A has a finite 
+rank. So has BA, choose a finite Jt 79 which contains both A, BA (ef. 
+above). So we have for EH = P» by Lemma 1.2.3, AE = A, EBA = BA. 
+Consequently 
+
+
+AB = AE-B = A-EB, 
+BA = EBA = EB.A. 
+
+Now A has a finite rank, and EB has also a finite rank along with E. So our 
+previous result gives Toy (A-EB) = Toy(EB-A), and consequently Toy (AB) 
+= Toy (BA). 
+
+Ad (vi)’: Put UA, U for A, Bin (vi). U~*A has a finite rank along with A. 
+
+Ad (vii): Put EF = Pg, M is finite along with E, it is 7 MM, and obviously 
+contains E. Ey, = I is the unit in M, hence for Mim). So we obtain 
+from Definition 1.2.3, considering (i) in “Property III,” as above: 
+
+
+= DM)TIH = DM). 
+
+
+1.3. Our new relative trace Toy (A) was only defined for the A «9 with a 
+finite rank. We now wish to extend its definition to a wider domain of operators 
+A €Ol, with the help of a suitable limiting process. 
+
+
+\ 
+i 
+i 
+“4 
+ij 
+By 
+
+
+102 J. V. NEUMANN 
+
+
+We first introduce a norm in the space of all A ¢ OM of finite rank, to be 
+denoted by [[A]], which is analogous to the notion of (2), p..241, Definition 4.3.1, 
+and Lemma 4.3.2 (especially the latter). 
+
+Derinition 1.3.1. If A € 9M has a finite rank, then we define the “norm” of A, 
+
+
+a number [[A]] = 0, by 
+= (Ton(A*A))’ = (Ton (AA*))*. 
+
+
+(Remember Theorem I, (iv), (vi). A*A, AA* are obviously definite.) 
+
+TueoreM II. [[A]] has the characteristic properties of a norm in a linear 
+space. That is: 
+(i) Always [[A]] 2 0, and = 0 ¢f and only if A = 0. 
+(ii) [[aA]] = | a|-[[A]] for every complex a. 
+(iii) + B]] [[A]] + 
+[[A]] also possesses the following further properties: 
+(iv) [[A*]] = [[A]l. 
+(v) {(AB]] (2 ||| A |||-[[B]], where only B need be of finite rank, 
+
+< ||| B|||-[[A]], where only A need be of finite rank. 
+
+(vi) | Toq(AB) | S [[A]]-[[B]], where A, B must both be of finite rank. 
+(vii) [[Z]] = (D(B))', where E is a finite projection. 
+
+Proor: We prove these statements in a somewhat changed order: 
+Ad (i) : Immediately by Theorem I, (iv), (iv)’ if we recall that A*A = 0 implies 
+A=0. 
+Ad (ii): Immediately by Theorem I, (ii). 
+Ad (iv): Immediately by the form of Definition 1.3.1. 
+Ad (vii): Immediately by Theorem I, (vii), since E*E = E’ = E. 
+Ad (v), first inequality: Put ||| A ||| = a, then a’J — A*A is definite,’ hence 
+B*(a@I — A*A)B is definite.’ Now 
+
+
+B*(a’I — A*A)B = a’B*B — B*A*AB = a’B*B — (AB)*(AB), 
+
+
+and so this expression is definite too. Therefore Theorem I, (iv), gives, together 
+with (ii), (iii), eod.: 
+
+
+0 < Toy(a’B*B — (AB)*(AB)) 
+= Toy (B*B) — Toy ((AB)*(AB)) = — [[ABIl, 
+[[AB]] a[[B]] = ||| A ||| 
+Ad (v), second inequality: Combine the above result with (iv): 
+[[AB]] = [[(AB)*]] = [[B*A*] ||| B* = B 
+
+
+1 || Af ||? = (Af, Af) = (A*Af, f) = 0, || Af || = 0, hence A = 0. 
+((a*l — = f) — (A*AJ,f) = f) (Af, Af) = a2 || f |] Af 
+3 B*CB is always definite along with C: 
+
+(B*CBf, f) = (CBf, Bf) = 0. 
+4 ||| B* ||| = ||| Bll, ef. (5), p. 384, footnote 36. 
+
+
+( 
+
+| | 
+
+| 
+| T 
+
+| 
+
+T 
+
+| A 
+
+an 
+th 
+CO 
+
+| cle 
+| 
+
+
+ON RINGS OF OPERATORS, UI 103 
+
+
+Ad (vi): Considering (iv), we might as well prove 
+(5) | Toy (A*B) | S 
+
+
+In what follows we shall make use continuously of Theorem I, (ii), (iii), (v), 
+and of (ii) above: 
+
+
+0 < [[A — = Toy((A — B)*(A — B)) 
+= Toy (A*A + B*B — A*B — B*A) 
+= Toy(A*A) + Toy (B*B) — Toy (A*B) — Ton (B*A) 
+= + — To(A*B) — Toy(A*B) 
+= [[A]P + [IB]? — 
+Replace A, B by aA, ‘B, where a > 0; then this becomes 
+
+
+The greatest lower bound of the right side for all a > 0 is [[A]]-[[B]], hence 
+RT Q(A*B) 
+Now replace B by e'“B, & real, then this becomes 
+R(e"*Toy(A*B)) < 
+
+
+The maximum of the left side for all real a is | Tay(A*B) |, hence (5) results. 
+Ad (ili): Use Theorem I, (iii), and (iv), (vi) above: 
+
+
++ = Toy((A + B)*(A + B)) = Toy (A*A + B*B + A*B 4+ B*A) 
+Toy(A*A) + Toy(B*B) + Toy(A*B) + Toy(B*A) 
+
+
+< + + =- + 
+[[A + B]] [{A}] + 
+
+
+Throughout what follows we shall make use of the results of these Theorems I 
+and IT without referring to them explicitly. Theorem II, (i)-(iii), give us also 
+the right to use [[A]] as a norm and [[A — B]] as a distance, without any further 
+comment. 
+
+In ||| A ||| and [[A]] we have two different numerical evaluations for the 
+size of A. It is therefore desirable to evaluate each one in terms of the other. 
+This is only feasible to a very limited extent, and is expressed by the Lemmas 
+1.3.1, 1.3.2, which follow. (Cf., however, B.3 in (B) in §1.6, when 9 is in 
+class (I,).) 
+
+
+| | 
+| | 
+| 
+
+
+104 J. Vv. NEUMANN 
+
+
+Lema 1.3.1. [[A]] S$ (Rank (A))’- || A ||]. 
+
+Proor: Put M@ = [Range A], EH = Pm. Then A eM implies M Mi, 
+E €M (ef. Definition 1.2.2), and D(E) = D(M) = D({Range A]) = Rank (4A), 
+[[E]] = (D(B))' = (Rank (A))'. Every Af belongs to M so HAf = Af, that is 
+EA = A. Hence 
+
+
+([A]] = 4 ||| = (Rank 4 
+
+
+Lema 1.3.2. If [[A]] S de with 6, « > 0, then there exists an EF eM with 
+D(E) 80 that ||| AZ — £) ||| 
+Proor: A*A is Hermitean and bounded, so it has a spectral form 
+
+
+6) (A*Aj, 9) = [rd BOY, 
+
+
+(This is an application of the well-known spectral theorem for bounded oper- 
+ators, cf. e.g. (5), pp. 389-390, footnote 42, and p. 418, or (1), p. 212, Definition 
+15.1.1. The Stieltjes integral converges, cf. eod.) E(A), —-7 <A < +>, 
+is a resolution of unity (cf. eod.). Put f = g in (6), since (A*Af, f) = 
+(Af, Af) = || Af |, (BOOS, = |), we then obtain 
+
+
+For \> < 0 put f = E(Ao)g. Then the right side in (7) becomes 
+
+
+The left side of (7) is = 0, hence Ay < 0 gives || E(A0)g ||? < 0, so ||H(Ao)g || = 0, 
+E(\o)g = 0. That is: 
+(8) 4 <0 implies E(A) = 0. 
+
+
+Now (7), (8) give for f = E(é*)g: 
+
+
+that is 
+(9) ||| AZ@) ||| 6. 
+On the other hand we have by (7), (8) 
+
+
+q 
+| 
+| 
+{| | 
+| (i 
+| 
+fi | 
+| 
+li 
+(i 
+| 
+
+
+ON RINGS OF OPERATORS, III 105 
+
+
+= [0 - 0. 
+
+
+So A*A — &(I — E(6’)) is definite, hence 
+= Toy(A*A) = — = — E()). 
+But [[A]? < consequently 
+(10) DI — &. 
+So (9), (10) state that E = I — E(é) meets all our requirements. 
+
+
+1.4. DeriniTION 1.4.1. A sequence of operators A;, As, --~ is called “regular” 
+if it possesses the following properties: 
+(i) 
+(ii) All A, have finite ranks. (But their ranks need not be bounded.) 
+(iii) The numbers ||| A: |||, ||| Ae |||, --- are bounded. 
+Derinition 1.4.2. A regular sequence A; , Ac, --- is “fundamental” if 
+
+
+lim [[An — A,]] = 0. 
+
+
+DeFINITION 1.4.3. Two regular sequences A,, Az, --- and B,, Bz, are 
+“equi I af 
+
+
+lim [[An B,]] = 0. 
+no 
+In all our considerations about operator-convergence which will follow, we 
+shall use strong convergence. This is the definition (cf. (5), pp. 381-382): 
+
+
+DEFINITION 1.4.4. A sequence Ao,--- is “strongly convergent” to the 
+limit A, in symbols 
+
+
+lim str A, = A, 
+if these conditions are fulfilled 
+
+
+(i) The numbers ||| Ax |||, ||| As |||, --- are bounded. 
+(ii) For every f e S 
+
+
+|| Aaf — Af || = 0. 
+
+
+t 
+
+
+106 J. Vv. NEUMANN 
+
+
+We shall use only the most obvious properties of strong convergence. (Cf. (5), 
+pp. 382-384. In Definition 1.4.4 above, (i) is a consequence of (ii)—ef. (5), 
+p. 382, footnote 35—but we do not need this fact.) 
+
+We proceed now to establish connections between fundamental sequences 
+and equivalence on one hand, and strong convergence on the other. 
+
+
+Lemma 1.4.1. Let Ai, Ao, --- be a regular sequence with 
+lim [[A,]] = 0. 
+
+
+Then it possesses a subsequence A;,, Ai,, +++ (in > ©) with 
+lim str A;, = 0. 
+
+
+Proor: For every m = 1, 2, --- there exists an m = o(m), such that n = m 
+implies [[A,]] S$ 1/4”. Choose i; < % < --+ witht, 2 mo(m). Then we have 
+
+
+(sll S$ 
+
+
+Apply Lemma 1.3.2 with 6 = « = 1/2”, then an E£,, e Mi obtains, with 
+
+
+(11) D(En) < 
+
+
+Put En = Pm,,, Nm = [Mm, Mmii,-::], Fm = Px,,. Then we have also 
+F, €M, and (1), p. 168, Lemma 8.3.2 gives 
+
+
+< DM), 
+
+
+1 1 
+D(F») < 
+
+13 < 
+(13) Da) 
+Also, by construction of the Im, Mm D Nir, Pm 2 Fmii, that is 
+(14) 
+
+
+Hence by (4), p. 77, Theorem 19, we have lim strnio Fm = F = Py,.2. ...- 
+and by (1), p. 169, Lemma 8.3.4, 
+
+
+---) = lim D(®%,),  _D(F) = lim D(F,). 
+
+
+This is = 0 by (13), so F = 0, that is 
+(15) lim str F,, = 0. 
+
+
+(16 
+
+By 
+
+hol 
+
+giv 
+
+of 
+
+are 
+
+(i) 
+
+it ext. 
+
+Th 
+
+| lim 
+
+| 
+
+= n=m (19 
+
+I 
+
+que 
+
+| (20 
+
+| 
+
+I 
+
+A, 
+
+— lim, 
+
+
+ON RINGS OF OPERATORS, III 107 
+(12) states || — Em)f || S 1/2” ||f ||, hence for fe — Mn 
+
+
+By construction of Im Mm C Mm, hence H — Mn D H — Mn, and so (16) 
+holds for all fe  — Nn. Assume finally fe H — N,, m = p. Then (14) 
+gives Ny D Nn so H — Ny © H — Nn, and so (16) holds again. 
+
+So if fe & — N,, then (16) holds for all m = p. That is: Then 
+
+
+As (17) holds in every § — %, and considering (15), we see that the domain 
+of validity of (17) is an everywhere dense set in §.° 
+
+But the domain of validity of (17) is a closed set, because the A;, As, --- 
+are uniformly continuous by (iii) in Definition 1.4.1. Hence it comprises all ©. 
+Thus (ii) in Definition 1.4.4 is established for the sequence A;,, Ai, , --- 
+(i) eod. follows from (iii) in Definition 1.4.1. 
+
+Lemma 1.4.2. Let Ai, Ae, --- be afundamental sequence. Thenlimstrn.. An 
+exists. 
+
+Proor: Since (i) in Definition 1.4.4 follows from (iii) in Definition 1.4.1, 
+we must only prove the validity .of (ii) in Definition 1.4.4 for a suitable A. 
+That is: For every f « S the existence of a g e S (which then is to be Af) with 
+limnso || Anf —g|| = 0. And since is complete, this is certainly the case if 
+(18 lim || — || = 0. 
+
+
+Therefore assume the opposite: That (18) is not true for a suitable f « §. 
+So we have an fo e and a 6 > 0, such that 
+
+
+(19) || — Aj 26 for n=1,2,---, where 
+
+
+From the fact that A,;, Az, --- is a fundamental sequence, we conclude 
+immediately that A;, — Aj,, Ai, — Aj,, +++ is a regular sequence with 
+lim» +x [[Ai, — A;,]] = 0. Therefore we may apply Lemma 1.4.1 to Ai, — Aj, , 
+Ai, — Aj,,--+ (in place of A;, Az,---). This sequence possesses a subse- 
+quence A;,, — Ax, , Aig, A ing) (kn ©), with lim (Ai, — A ix,) 
+= 0. Thus in particular lim,., || (Ai, — Ai,,)fo|| = 0, that is 
+
+
+(20) lim || As,,fo — Aj,,fo || = 0, 
+(19) and (20) contradict each other, and this completes the proof. 
+
+
+Lemma 1.4.3. Let Ai, Ac,--- be a fundamental sequence with lim sttn. 
+A, = 0. Then it possesses a subsequence Ai,, Ai,,--+ (in > ©) with 
+
+
+lim [[A;,]] = 0. 
+
+
+_ Consider an aribtrary f ©. Then fp = (I — F,)f — Np, and limy.,,, || f — fr || = 
+limp. || || = 0 by (15). 
+
+
+lim || Af || = 0. | 
+| 
+™ 
+| 
+
+
+108 J. V. NEUMANN 
+
+
+Proor: Since A,, Az,--- is a fundamental sequence, we have lim,, ,_., 
+[[4m — An]l] = 0. Hence there exists for every p = 1, 2,--- an m = m(p) 
+such that m, n = m imply [[A» — A,]] S 1/4’. Choose 1 < tz < --+ with 
+ip = no(p). Then we have 
+
+
+| 1 
+
+
+Apply Lemma 1.3.2 with 6 = « = 1/2”, then an EZ, ¢ Dil obtains, with 
+
+
+RE 1 
+(21) 
+
+
+Let us now proceed as in the proof of Lemma 1.4.1. Put Ep, = Pm,, N, = 
+Mou, ---], Fp = Px,. Then we have again F,, «9, and as there 
+
+
+D(®,) < x D(Mz), 
+
+
+
+
+By the construction of the Mir, so Ni D Me D --- , and 
+H-MCH-Mc---. 
+
+
+(24) 
+
+
+Consider now anf e $ — N,. Then we have for every p = qalsofe H — N, 
+by (24), hence (I — E,)f = f. So (22) gives for such an f 
+
+
+— Aga ll SAIS 
+
+
+If r > s 2 q, then the above inequality may be applied to p = s,s + 1, ---, 
+r- 
+
+
+Adding gives 
+s SA sis 
+
+
+| 
+| ‘i 
+d 
+(25) 
+
+
+ON RINGS OF OPERATORS, III 109 
+
+
+Now lim An = O implies limy.. || A,f || = 0, and a fortiori lim,.., 
+|Ai,f || =0. Soifs2q is fixed, and we let r ~ with r > s then (25) gives: 
+
+
+(26 Il S IIS if's 
+
+
+This is true for every fe H — MN, that is for every f = (I — F,)g. Substi- 
+tuting this into (26) gives: 
+
+
+Fog S ll @ - Fog ll ll. 
+
+
+That is: 
+(27 Il 4, — Fe) S 
+Having obtained (27), we can now proceed to a general evaluation of the A, . " 
+
+
+Since the numbers ||| A; |||, ||| Ae |||, --- are bounded, by (iii) in Definition 
+1.4.1, there exists a fixed number a with 
+
+
+(28) Aa ||| for n = 1, 2, --- 
+Hence (23), (28) give: 
+
+
+Consider now any finite ae GeM. Then (27), (29) yield: 
+([GA;,]] S [[G@A;, + — F,)]] 
+S ||| @ - (4s, Fel] + — F,) - 
+
+
+S1- t 
+(D(@)' 
++ 
+(D(@) 
+
+
+Put = [Range A;], G, = Again OM, G,e And always 
+Aif By, = Af, that is G,A;, = Ai. So (I — = 0, and 
+consequently 
+
+(I — G,)(Ai, — Au) = — G)Ai,. 
+
+
+| 
+| 
+
+| 
+
+| 
+
+
+= 
+
+
+110 J. Vv. NEUMANN 
+
+
+Hence, by using our original construction of thet, %, --- , 
+— = — G,)(Ai, — 
+
+
+1 1 
+
+
+(31) (U- GAM 
+
+
+Now combine (30) with G = G, and (31), remembering that D(G,) = D($,) = 
+Rank (A;,). So we obtain: 
+
+
+a +4 (Rank (A;,))' 
+
+
+ifs => q. 
+(3-4) 
+
+
+Let finally an e > 0 be given. Choose aq = q(e) so that 
+
+
+nk (4i)) Then (32) 
+
+
+280-1 
+
+
+gives immediately for all s => s that [[A;,]] < «. In other words: 
+lim [[A;,]l = 0. 
+
+
+and then an s = g) so, that 2 and 
+
+
+Thus the proof is completed.— 
+
+Before we go on, we observe this: Both Lemmata 1.4.1, 1.4.3 could have been 
+easily strengthened by replacing the subsequence A;, , Ai, , --- by the sequence 
+A,, Az, --- itself. But they suffice as they stand for our immediate purposes, 
+and our ultimate results (Theorem III) yield those strengthened forms im- 
+mediately. 
+
+THEoREM III. (i) For every fundamental sequence A, , Az, --+ lim An 
+exists, and belongs to SM. 
+
+(ii) For two fundamental sequences A; , Az, --- and B,, By, --- the equation 
+
+
+lim str A, = lim str B, 
+holds if and only if the two sequences are equivalent. 
+(iii) For every fundamental sequence A,, Az, --+ limn.,,, [[An]] (numerical!) exists, 
+and it depends on lim str,..,, An only (and not on the sequence A, , Az, --- ttself!). 
+
+Proor: We prove these statements in a somewhat changed order: 
+
+Ad (i): Existence of lim strnz.,, An : Identical with Lemma 1.4.2. 
+Ad (i): lim str,.,, An e MM: Clear, since Ai, Az, --- € MM, and MM being a ring, 
+is closed in the strong topology. 
+Ad (ii): Sufficiency: Let Az,--- and B,,Bz,--- be two equivalent 
+fundamental sequences. Then A;, B,, Az, Bo, --- is also a fundamental 
+sequence; denote it by C;, C:,---. By (i) above lim str,_,,, C, exists. Hence 
+lim = lim strn.,, Con , that is lim str,.,, An = lim str», Bn. 
+
+
+an 
+
+
+| he 
+Ac 
+Le 
+| 
+do 
+ar 
+| | lin 
+i 
+| lin 
+| ne 
+ex 
+| H 
+} i 
+
+
+ON RINGS OF OPERATORS, III lll 
+
+
+Ad (iii): Existence of limy.,, [[An]]: Since Ai , Az, --- is a fundamental sequence, 
+we have limmne [[4m — Aa]l] = 0. Now| [[Am]] — [[Aa]] | — A,l],” 
+hence limMm,no ({[Aml] — [[Anl]) = 0. Therefore the (numerical) limit 
+lim,» [[An]] exists. 
+Ad (ii): Necessity: We may replace A;, --- and B,, Be, --- by Ai — Bi, 
+A, — Bz, --- and0,0,---. Thatis: We may assume, that B,; = B, = --- = 0. 
+So A,, As, --- is fundamental, and we assume that lim str,.,, A, = 0. Then 
+Lemma 1.4.3 excludes that lim,.,, [[A,]] should exist and at the same time 
+be 0. But we proved just now that part of (iii) which states that lim,.,, [[A »]] 
+does exist. Hence lim,.,,[[A»]] = 0. Inother words: A;, --- and0, 0, --- 
+are equivalent. 
+Ad (iii): lim str,.,, An determines lim,..,, [[A,»]]: We have two fundamental 
+sequences A,, Az, --- and B,, By, --- with lim str,.,, A, = lim str,.,, Bn, 
+and we want to prove that lim,.,, [[A,]] = lim,.., [[B,]]. We proved just now 
+the necessity of the criterion of (ii), hence A; , Az, --- and B,, By, --- are at 
+any rate equivalent. That is: lim,.,, [[A. — B,]] = 0. But | [[A,]] — [[B,]] | 
+< [[A, — (ef.® above), hence lim,.,, (([An]] — [[Bnl]) = 0. Consequently 
+lima [[An]] = [[Ba]]. 
+
+We can now define: 
+
+DertniTion 1.4.5. The fact that Ai, Az,--- is a fundamental sequence 
+
+
+and that lim str;.,, An = A, will be denoted by 
+(Ai, As, WA, 
+
+
+DEFINITION 1.4.6. We shall say that an operator A is “normed” if a sequence 
+A, Ao, with (Ai, Ae, ---) ~ A exists. By (iii) in Theorem LUI, lim,., 
+[[A,]] exists for every such sequence, and it depends on A only (not on the sequence 
+A,, Ao, +++ itself!). We shall define the “norm” of A, the number [[A]], as this 
+limit: [[A]] = lim,.,, [[Aal]. 
+
+Remarks: (i) Every A of finite rank is normed, since we then have 
+(A, A,--+) ~ A. This makes clear also that in this case—i.e., when the old 
+[[A]] is also defined—the new [[A]] coincides with the old one. 
+
+(ii) By (i) in Theorem III every normed A is ¢ DM. 
+(iii) By (i), (ii) in Theorem III the relation 
+
+
+(Ai, A2,---)~ A 
+
+
+establishes a one-to-one correspondence between all equivalence-classes of 
+mutually equivalent fundamental sequences Ai, Az, --- on one hand, and all 
+normed A on the other.— . 
+
+Throughout what follows we shall make use of the results of Theorem III. 
+Definitions 1.4.5, 1.4.6, and of the above Remarks, without referring to them 
+explicitly. 
+
+"Always | ([A]] — [[B]]| [[A — B]]. Proof: = [[B +(A — B)]] + 
+
+
+— B}], — [{B]] [[A — B]].  Interchanging A, B gives — [[A]] < [[A — B]]. 
+Hence + ({[A]] — [[B]]) < {{A — that is | — | — 
+
+
+w 
+
+
+112 J. V. NEUMANN 
+
+
+1.5. Lemma 1.5.1. (i) (Ai, Ag, ~ A implies (aA,, aAz,---) ~ ad 
+for every complex a. 
+
+(ii) (Ai, As, ~A, (Bi, Be, ~ B imply (Ai + Bi, Ar + Be, 
+A+B 
+
+(iii) (Ay, ---) ~ A implies (A1B, A2B, ---) ~ AB and BA2, ---) ~ 
+BA for every B e M. 
+
+(iv) (A1, Ao, ~ A is equivalent to (AT, Az, ---) ~ A* 
+
+Proor: Ad (i): a@A;, @Az2, --- is fundamental along with Ai, As, --- because 
+[[aAm — aAp]] = [[a(Am — Ax)]] = | a|-[[A» — A.J]. And lim str,.,, A, = A 
+implies lim str,.,, dA, = @A. 
+
+Ad (ii): A; + Bi, Ao + Be, --- is fundamental along with Ai, Ae, --- and 
+B,, Bz, --- because [[(Am + Bm) — (An + Ba)]] = [[(Am — An) + (Bu - 
+B,)]] [[Am — + [[Bx — B,J]. And lim str,.,, A, = A, lim str,.,, B, = 
+B imply lim str,.,, (An + Bn) = A+B. 
+
+Ad (iii): AiB, AoB, --- and BA,, BAg, --- are fundamental along with A;, 
+Ag, --+ because 
+
+
+[[BAm — BA,]] = [[B(Am — Ax)]] S ||| — Anal]. 
+
+
+And lim strnz.,, An = A implies lim str,.,, A.B = AB, lim str,.,, BA, = BA. 
+Ad (iv): Since ** is identity, it suffices to prove the forward implication. Now 
+a. --+ is fundamental along with A;, Az, --- because [[Ax = 
+[[(Am — An)*]] = [[Am — Anal]. Hence a B with lim str,.,, A, = B exists, and 
+we know that we have lim strz.,.4n = A.’ Hence we have for every fe 
+limn+. || Anf — Af || = 0, || Anf — Bf || = 0. So for all f, g © lim,..,, 
+(Aaf,g) = (Af, 9), lime. (Ans, 9) = (Bf, 9). 
+Replacing f, g in the first relation by g, f and application of © gives lim,.,, 
+(Axf, g) = (A*f, g). Hence (A*f, g) = (Bf, g) for allf,g«$. Thus A* = B, 
+and consequently lim str,.,, A, = A*. This completes the proof.— 
+
+It is now easy to prove the fundamental properties of the class of the normed A 
+and of their norm [[A]]. 
+
+THEOREM IV. [[A]] (for normed A) has the characteristic properties of a norm 
+inalinear space. Thatis: 
+(i) Always [[A]] = 0, and = 07f and only if A = 0. 
+(ii) aA is normed along with A, and [[aA]] = | a |-[[A]] for every complex a. 
+(iii) A + Bis normed along with A, B and [[A + B]] s [[A]] + [[B]]. 
+The following further statements are true: 
+(iv) A* is normed if and only if A is normed, and {[A*]] = [[A]]. 
+(v) AB is normed if either A or B is normed (but both « MM), and 
+
+
+S ||| A ||| B ts normed, 
+
+
+[[AB]] 
+||| B|||-[[A]] A ts normed. 
+
+
+7 lim stra.(Ax) = (lim str,.,An)* is not a generally valid equation in the sense that 
+the existence of either side implies that one of the other side also, (Cf. (5), p. 382.) 
+
+
+i) 
+P 
+| Sint 
+| is, t 
+| 0, 
+Ad 
+| resy 
+Ad 
+The 
+fun 
+| hav 
+| A 
+asst 
+[[AmB — A,B]] = [[(Am — An)B]] S ||| B || |-[[4m — Anal], 
+Her 
+lim, 
+fore 
+| L 
+and 
+the 
+| i | We 
+— 
+
+
+ON RINGS OF OPERATORS, III 113 
+
+
+(vi) If Ar, As, 8 regular sequence and A is normed, then (A; , Az, ~ A 
+is equivalent to lity. — A]] = 0. 
+
+Proor: Ad (i): Choose an (Ai, A2,---) ~ A. Then [[A]] = lim,., [[Aal]. 
+since all [[4a]] 2 0, so [[AJ] 2 0. And = 0 means [[Aal] = 0, that 
+is, the equivalence of Ai, Az, --- and 0,0,---. But as (Ai, As, ---) ~ A, 
+(0,0, ---) ~ 0, therefore this means A = 0. 
+
+Ad (ii), (iii), (iv), (v): Immediately by (ii), (iii), (iv), (iii) in Theorem III, 
+respectively. (In the second part of (v) interchange A and B.) 
+
+Ad (vi): Sufficiency: Assume (Ai, ---) ~ A. Clearly (—A,, ---) 
+~ —A,,, hence by (ii) in Lemma 1.5.1. (Ai — An, A2 — An, --:) ~A— An. 
+Therefore limm.,, [[Am — An]] = [[A — Aal]]. Now A;, As, --- must be 
+fundamental, so limm,n—ro [[Am — An]] = 0. Since limm.,, [[Am — Anl] exists, we 
+have a fortiori lim,.,, (limn—,, — A,]]) = 0, limy.,, [[A — = 0, that is 
+lima [[An — A]] = 0. 
+
+Necessity: Assume lim,.,, [[An — A]] = 0. By (iii) above, [[Am — Aal] = 
+[[(Am — A) — (An — A)]] S [[Am — A]] + [[A. — Al]. Hence the above 
+assumption implies limm,»,, [[Am — An]] = 0. So Ai, As, --- being regular, 
+is even fundamental. Therefore a normed A’ with (A;, Az, ---) ~ A’ exists. 
+Hence by our above result lim,.,, [[A. — A’]] = 0. Now again by (iii) above 
+— A] = [[(An — A’) — (An — A)]] S — A] + — Al]. As 
+lity [[An — A’]] = lim,.,, [[An — A]] = 0, this proves [[A — A’]] = 0. There- 
+fore by (i) above, A — A’ = 0,A = A’. Hence (Ai, Az, ---) ~ A. 
+
+Lemma 1.5.2. If (Ai, Ag,---) ~ A, (Bi, Be,---) ~ B, then lim,., 
+To(AnBx) exists, and it depends on A, B only (not on the sequences Aj, Aa, --- 
+and B,, Bz, --- themselves!). 
+
+Proor: It suffices to prove thisforlim,..,, R79, (ABs) andlim,..,, 
+separately. And since the latter obtains from the former by replacing A and 
+the A, by 7A and the 7A, , so we need to consider lim,..,, RTO (A,B>) only. 
+
+Now 
+
+
+([[A, + B,J) — — 
+= + Bn)(An + Ba)*) — An) — Ton(BaBa)) 
+= (Toy (AnBr) + Ton(BnA;)) 
+= (Ton + = 
+(33) R Toy(AnBr) = + Ball’ — — 
+
+
+We have (A;, Ae, ---) ~ A,(Bi, Be, ---) ~ B, hence by (iii) in Lemma 1.5.1, 
+also (A, + By, As + Be,---) ~ A+B. So lim,., [[A.]] = [[A]], lim... 
+([B.]] = lim,..., [An + Bul] = [[A + Consequently (33) gives 
+
+
+lim RTO (AnBs) = + — — 
+
+
+| 
+| | 
+| 
+e 
+
+
+
+
+This completes the proof. 
+DeFiniTIon 1.5.1. Let A, B be normed. By Lemma 1.5.2 lim,.,, 
+exists for any two sequences A, , Az, --- and Bz, --- with (Ai, A2,---) ~A, 
+(B,, Bz, ---) ~ B, and it depends on A, B only (not on the sequences A; , Ao, --- 
+and B,, Bz, --- themselves!). We shall define the “inner product” of A, B, the 
+number KA, B>, as this limit: KA, B> = limy..,, T9y(AnBa).— 
+
+i Throughout what follows we shall make use of the results of Theorem IV 
+4 and Definition 1.5.1, without referring to them explicitly. 
+
+Be Taxorem V. (i) «A, B>> is linear in A, conjugate-linear in B, and of 
+Hermitean symmetry in A, B. That is 
+
+
+«aA, B> = B>, 
+
+
+B>, 
+
+
+KA' + A", B> = + 
+
+
+«A, aB> = B>, 
+
+
+<A, B’ + B’> = «A, + «A, B’>, 
+
+
+KA, B> = KB, A>. 
+
+
+«KA, A> = 
+
+
+«KAD, B> = «A, BD*>, 
+
+
+«DA, B> = «A, D*B>, 
+
+
+where A, B are normed and D ¢ M. 
+Proor: All these statements are immediate by Definition 1.5.1, and the 
+
+properties of T_(X) for X of finite rank. (Remember, in particular, that 
+
+Toy(XY) = Toy (YX) if either X or Y has a finite rank, and both are ¢ 9il.)— 
+We are now in a position to prove: 
+
+Lemma 1.5.3. A projection E is normed if and only if it is finite. 
+
+| Proor: Sufficiency: If E is finite, then it is of finite rank, hence it is normed. 
+
+; Necessity: Assume that EZ is normed. We want to prove that it is finite, 
+
+that is: If F e Mis a projection < H, with F ~ E ( --- MM) ((1), p. 151, Defini- 
+
+4 tion 6.1.1), then F = E ((1), p. 155, Definition 7.1.1). So we assume that F 
+
+has the above properties (excepting of course F = E). 
+
+
+F ~ E(--- ON) means F = U*U, E = UU* for a partially isometric U ¢ ML 
+
+
+e ((1), p. 151, Definition 6.1.1), that is a U with UU*U = U, U*UU* = U* 
+: ((1), p. 142, Lemma 4.3.2). Then U = UU*U = EU and F = U*U are 
+both normed, along with E. F < E means FE = F. 
+
+
+N 
+
+
+J. v. NEUMANN 
+(34) 
+Alsc 
+| (35) 
+sper 
+r\< 
+| 1 
+| 
+
+
+ON RINGS OF OPERATORS, III 115 
+
+
+Now we obtain, with the help of (i)-(iii) in Theorem V: 
+KE, F> = «BE, F*F> = «FE, F> = «F, F> = (IFIF, 
+
+
+«F, E> = «KE, F> = [IFIP = (IFIP, 
+- = KE F, E- F> | 
+E> + «F, F> — «E, F> — E> = [[E]) — 
+(34) — = — (FIP. 
+Also: 
+(EI? = <E, E> = «KUU*, UU*> = KUU*U, U> = «KU, U>, 
+
+
+(FI! = «F, F> = «KU*U, U*U> = KUU*U, U> = «KU, U>, 
+
+
+(35) = [[FIP. 
+
+
+Combining (34), (35) gives [[Z — FJ’ = 0, [[Z — F]] = 0, and consequently 
+E=F., 
+
+Thus the proof is completed.— 
+
+After this we could determine the normed A completely by investigating the 
+spectral form of A*A and the projections of its resolution of unity E(A), —° < 
+4<-+2. Weshall not do this here, however, because for our further purposes 
+(especially for Lemma 2.2.1) Lemma 1.5.3 is sufficient. 
+
+
+1.6. We want to say a few words about the meaning of our above notions of 
+normedness and norm in factors 9 of various classes. The contents of this 
+section, however, are not needed for the understanding of our subsequent 
+deductions. 
+
+(A) MM cs of class (I,) (n = 1, 2, --- ) or (Ili): MM is in this case of a finite 
+class, hence every IN OM is finite, every A ¢ OM has finite rank. To(A) is 
+defined for all A ¢ 9M and coincides with the relative trace TQy(A). (We can 
+choose M@ = H in Definitions 1.2.3, 1.2.4, and D(M) in the standard normaliza- 
+tion.) Hence every A is normed, and [[A]], «A, B> mean the same thing as 
+in (2), p. 241, Definition 4.3.1, and Lemma 4.3.2. 
+
+(B) OM is of class (I,,): We might as well take DM as the ring 8 of all bounded 
+operators in §. (Cf. (1), p. 173, Lemma 8.6.1.) Let gi, --- be a complete, 
+normalized, orthogonal set in and represent every A « Dl = & by its matriz: 
+
+
+A = {aj;}, i,j = 1,2,---, 
+
+
+ai; = (Agi, 
+
+
+t 
+| 
+Be 
+_ 
+j 
+i 
+‘> 
+| 
+
+
+Choose D(Q) in the standard normalizations; then it is the common notion of 
+
+
+116 J. Vv. NEUMANN 
+
+
+dimension. (Cf. loc. cit. above.) Hence Rank (A) has its usual meaning too. 
+
+
+We show now: 
+
+B.1. (i) If Rank (A) is finite, then ><? ai is absolutely convergent, and 
+TRA) = aii. 
+(ii) If Rank (A) is finite, then ai; |? is absolutely convergent, and 
+
+PRroor: ‘Ad (i): If Rank (A) is finite, then Rank (A) = D ([Range A]) = k = 
+0, 1, 2,---, hence [Range A] = --- , where --- , are a nor- 
+malized orthogonal set. Put = 1 = 1,---,k, then Prrange a) = 
+Ei + --- + Ex, 80 A = Pirange = + --- + Each has at 
+most rank | so it suffices to prove (i) when the rank is at most 1. In this case 
+clearly A= {a:;}, aij = a8; . If all a; = 0 or all B; = 0, then all ai; = 0 
+in which case our statement is trivially true. Hence we may assume that some 
+a; ~ 0 and some ~ 0. As every aj; |? and every | ai; |* must 
+be finite,® this implies that both }°?., | a; |’ and >°3-1 | 6; |’ are finite. So we 
+have: 
+
+
+0< Ja P, < +o. 
+
+
+This proves in the first place that }°7.1 ai: = 071 a8; is absolutely con- 
+vergent (by Schwarz’s well-known inequality). Now put B = {b;;},C = {c,;}, 
+where 
+
+
+7\=0 otherwise 
+
+
+0 otherwise 
+
+
+Then BC = A, CB = {d;;}, where 
+
+
+aB; for i,j = 1) 
+dj; 1=1 
+= 0 otherwise 
+
+
+So CB = where Pi,,;. B, C are clearly of finite rank (= 1). 
+Now we have (remember D(F;) = 1, hence Toy (£1) = 1): 
+
+
+Ton(A) = Pon (BC) = = ( a6.) Tom (ts) = 
+
+
+Thus the proof is completed. 
+
+Ad (ii): Immediately by (i), since A*A = {giz}, giz = , hence 
+gu = | Ji = Dis | ax; | 
+
+B.2. A is normed if and only if ai; |’ is finite. Again [[A]P = 
+
+
+| 
+
+
+= | Aes, = Age IP, 80 | ai; |? is finite. The same 
+results for | |* by considering A* in place of mn = {aj;}. 
+
+
+He 
+
+
+| 
+has 
+| anc 
+the 
+| | He 
+| 
+: 
+Th 
+| | kn 
+: 
+| _ bor 
+wh 
+
+
+ON RINGS OF OPERATORS, III 117 
+
+
+Proor: Necessity: Assume that A is normed. Put E, = Pig,,....)- Then 
+|| = 1, hence Z,AZ, is normed, and [[A]]. Now £,AE, 
+has even finite rank, along with E,, and A ~ {a,;} implies E,AE, ~ {aj}?}, 
+where | 
+
+(n) ) = for 1,++-,n 
+{= 0 otherwise 
+
+
+Hence by (ii) in B.1: 
+
+
+and consequently >-}je1 | as; |’ < [[A]]’ for every n = 1,2,---. This proves 
+the finiteness of | aj 
+Sufficiency, and value of {[A]J’: Assume that 7; | a;; |’ is finite. Form E, 
+as above, put A, = E,AE,. Each A, has finite rank, and ||| A, ||| = 
+||| ||| < ||| A |||. Hemee the sequence Ai, Az, --- is regular. It is 
+
+
+also fundamental: If m = n, then Am — A, = {as7” — a{}?}, and 
+
+
+al” — as” = aij for i,j = 1, ---,m, but not 7,7 = 1, ---,m 
+i \=0 otherwise 
+
+
+and consequently (using (ii) in B.1) 
+
+
+— Aal? = las? af P= - | af 
+
+
+i,7=1 
+
+
+= 
+So for m = n 
+
+
+and so the finiteness of | |’ implies [[Am — Anl] = 0. 
+Finally lim str,..Z, = I, hence lim sttn.An = lim stf.E,AE, = A. 
+Thus we have 
+(A;, Ae, ) ~A. 
+
+
+Therefore A is normed, and (using (ii) in B.1) 
+
+
+= lim [[A, J = lim >> = lim = 
+ne i,j=1 i,j=l 
+
+Thus the proof is completed.— 
+
+B.2 shows that in this case the class of all normed A coincides with the well- 
+known class of E. Schmidt. 
+
+We finally observe that in this case the condition limm,n+« [[Am — Anl] = 0 
+of Definition 1.4.2 (which implies the existence of limn.. [[An]] hence the 
+boundedness of the sequence [[A1]], [[As]], --- ) implies (iii) in Definition 1.4.1. 
+So in the present case (I,,) condition (iii) in Definition 1.4.1 is superfluous— ; 
+which is not true in the case (II,,), as will be seen in C.1 below. i 
+
+
+fi 
+| 
+| 
+P 
+ag 
+; 
+F 
+
+
+SSE 
+
+
+118 J. V. NEUMANN 
+
+
+Indeed we have: 
+
+B.3 ||| A ||| < [[A]] of A ts normed. 
+
+Proor: That is: || Af || < [[A]]-||f|| for every fe. We may obviously 
+assume || f || = 1, and then we can choose the complete, normalized orthogonal 
+set g1, ¢2,--- so that g: = f. So we want to prove || Ag; || < [[A]] that is, 
+|| Ag: ||’ [[A]?. This, however, is obvious.” 
+
+(C) ON is of class (II,,): In this case our notions are genuinely new. We 
+only wish to observe that the opposite of B.3 is true, which justifies our formula- 
+tion of Definitions 1.4.1, 1.4.2. (Cf. the above discussion before B.3.) Indeed 
+we have: 
+
+C.1. Even for an A of finite rank ||| A |||/[[A]] can be arbitrarily great. 
+
+Proor: Given any C > 0, choose a projection E e 9 with D(Z) > 0, < 1/C”. 
+Then E is finite, hence of finite rank. ||| Z ||| = 1, [[Z]] = (D(2))' s 1/C, 
+and consequently ||| |||/{[Z]] = C. 
+
+(D) ON is of class (III,): If A is of finite rank, then [Range A] is finite, 
+hence (since 9 is of class (III,,)!) [Range A] = 0, A = 0. Hence for every 
+regular, and a fortiori for every fundamental sequence A;, Az, --- necessarily 
+A; = Az = --- = 0. Thus the only normed A is A = 0. 
+
+In this case, therefore, all the notions we have defined are vacuous.— 
+
+In spite of this, just these notions will help us to prove that the examples of 
+factors which we shall construct in §§4.3-4.4, belong in certain cases to class 
+(III,,). (Cf. in particular §4.3, Theorem IX.) The procedure will be essen- 
+tially the reverse of (C) above: We shall succeed in showing that in those 
+factors Dil every finite projection Z must be = 0, the proof being mainly based 
+on the properties of the notion of normedness. From this we then conclude 
+that such an 9 must be of class (III,,). Any direct attempt to prove such a 
+thing will show that of all possibilities alternative to (III,,) the case (II,,) is the 
+hardest one to exclude. It is therefore very appropriate that our notions of 
+normedness and norm are in this case genuinely new. 
+
+We also want to point out, that Theorems IV, V show, that the normed 
+operators in 9 form a (possibly) incomplete Hilbert space. This space is 
+actually complete in the following cases: (I,): Obvious. (I,): Clear by (B) 
+above. (III,,): Clear, since it contains 0 only, cf. (D) above. In the cases 
+(II,), (II,,) it is not complete, but can be completed to a space Q(ON), by 
+adjoining to MN certain (but not all) unbounded operators 7 9. This process 
+was carried out in detail for (II,) in (2), pp. 236-242. In this connection C.1 
+above is significant. We will not go here any further into this subject. 
+
+
+Cuaprer II. Maximum Rincs THE Operations 
+
+
+2.1, DEFINITION 2.1.1. For any bounded operator A and any projection E 
+we define : 
+A'* = EAE + (I — E)A(I — EB). 
+
+
+9 || Ag: ||? = | ai; |? by footnote 8, [[A]]* = | ai; |? by B. 2. 
+
+
+t,j=1 
+
+
+Con 
+
+L 
+
+(ii) 
+
+L 
+
+L 
+
+| isa 
+
+P 
+
+iy just 
+
+The 
+
+| Em+ 
+
+to s 
+mul 
+P 
+(1, 
+
+this 
+
+>) L 
+
+In 
+af (a! 
+i He 
+
+(37 
+
+
+ON RINGS OF OPERATORS, III 119 
+
+
+Consequently 
+A —A'* = (I — E)AE + EA(I EB). 
+
+
+Lemma 2.1.1. (i) If A, Ee 9M then eM. 
+(ii) If A, EM and A is of finite rank, then A'* is also of finite rank. 
+
+Proor: Both statements are obvious. 
+
+Lemma 2.1.2. A!” commutes with E. 
+
+Proor: Results by an obvious computation. 
+
+LemMA 2.1.3. If Ei, ---, EH, commute with each other, and if (m, +++ , mn) 
+is a permutation of (1, --- , ), then 
+
+
+Proor: It is obviously sufficient to consider the case where (m, --- , tn) is 
+just a transposition of two neighbors, say of m, m + 1 (m = 1,---,n — 1). 
+Then we must prove nut B= and apply 
+i¥m+2l--"l¥m to the result. Writing A, E, F for B, Em, Ems: we see: We have 
+to show 
+
+Alsi? — 
+
+
+if Z, F commute. This, however, results by an obvious computation. 
+
+Corottary. If Ey, ---, En commute with each other, then com- 
+mutes with all of them. 
+
+Proor: Consider ani = 1,---,n. Let (am, ---, mn) be a permutation of 
+with = 7. Then by Lemma 2.1.3, and 
+this commutes with Z,, = EH; by Lemma 2.1.2. 
+
+Lemma 2.1.4. ||| = A 
+
+Proor: We shall prove ||| < ||| From this 
+the desired result obtains by putting m = 1,---,n. Write in the above 
+inequality A, E for #, Then we obtain ||| A!” ||| < ||| A ||. 
+In other words: We want to prove 
+
+
+Now clearly ; 
+(A'"f, 9) = (EAEf, g) + (I — E)A(I E)f, 9) 
+
+= (AEf, Eg) + (AU — Bf, (I — E)g). 
+Hence 
+87) | (ANY 9) SNA Bo + @ — |). 
+By Schwarz’s well-known inequality 
+
+
+Bf\|-|| Eo || + || @ — @ Bg || 
+
+
+t 
+j 
+{ 
+ty 
+_ 
+i 
+= 
+a 
+§ 
+| 
+
+
+120 J. ¥. NEUMANN 
+
+
+But 
+= (Ef, f) + (2 — Ef, f) = = Ils if, 
+similarly 
+|| Zg |? + || — Bgl? = 
+Therefore 
+
+
+And this carries (37) over into (36), and thereby completes the proof. 
+Lemma 2.1.5. Assume that A, E,,--- €M, A of finite rank, the E,, 
+E,, --- commute with each other. Then 
+
+
+ifm Sn, m,n = 1, 2,---. 
+
+
+Proor: All A!”!!*?!"" are of finite rank by Lemma 2.1.1, (ii), so all quantities 
+which occur in the above equation are defined. We want to prove 
+
+
+(38) (LX + Y]P = + (VIF 
+Now 
+
+
+(xX | 
+= KX, X>+ «<Y, YO + «X, YO + X» 
+= [[XIP + + 2R«xX, Y>, 
+
+hence (38) is certainly a consequence of 
+
+(39) KX, YO = 0. 
+
+We shall prove (39) for the above X, Y. And since 
+
+
+, 
+so we may prove (39) for X = yp — _ 
+withp <np+1 sn. 
+
+Let (m,---,mn,) be a permutation of (1,---,n) with mm = p + 1. 
+Write B, C, E for then we see: We need to 
+prove (39) for X = B'*, Y = C — C'* only. By Definition 2.1.1, B'® = 
+EBE + (I — E)B(I — E),C — C'* = (I — E)CE + EC(I — E). Hence we 
+need to prove (39) only for the following combinations of X, Y: 
+
+
+ir = EBE or (I — E)B(I — B), 
+Y=(W-H)CE or EC(I — 
+
+
+(40) 
+
+
+ex 
+
+
+(i 
+
+
+| 
+| 
+Ow 
+] 
+Ad 
+Ad 
+| Ad 
+tio 
+ii 
+(4: 
+(4 
+| 
+
+| 
+
+
+ON RINGS OF OPERATORS, III 121 
+
+
+Now we have for the various alternatives of (40) 
+
+
+a1) FX = X,FY=0 for F=E or I-E, 
+
+
+Owing to (41) we now have: 
+
+
+Either «X, Y> = «FX, Y> = «KX, FY> = 0, 
+or «X, Y> = «XF, Y> = «X, YF> = 0. 
+
+
+Hence (39) holds in any case. 
+
+Thus the proof is completed. 
+
+Lemma 2.1.6. Let A, Hi, Es, --- be asin Lemma2.1.5. Put A, = 
+forn = 1, 2,---. Then Ay, Ae, --- a fundamental sequence. 
+
+Proor: Ai, Az, --- is a regular sequence: We must verify the conditions 
+(i)-(iii) in Definition 1.4.1. 
+Ad (i): Obvious. 
+
+
+Ad (ii): Immediate by repeated application of Lemma 2.1.1, (ii). Ay 
+
+
+Ad (iii): Immediate by Lemma 2.1.4. 
+A,, Az, --- is a fundamental sequence: We must verify further the condi- 
+tion of Definition 1.4.2, that is 
+
+
+(42) lim [[An — Aal}’ = 0. 
+
+
+Now Lemma 2.1.5 gives [[Am]]° = [[Aal]’ for m S n, 
+
+
+= = --- = 0. 
+Therefore lim,_..» [[A,]]° exists. Hence 
+
+
+(43) im | [[Aal} | = 0. 
+But 
+
+
+Indeed: By symmetry in m, n we need only to prove (44) for m < n, and then 
+it follows from Lemma 2.1.5. 
+
+Now (48), (44) give together (42). : 
+
+DurinitTion 2.1.2. Let A, Ei, E2,+-- be as in Lemma 2.1.5. Then there 
+exists by Lemma 2.1.6 a unique A, so that 
+
+
+(A,, As, +--+) ~ A, where Aq = 
+We shall write 
+A = 
+
+
+Tazorem VI. Let A, E,, E2,--- be as in Lemma 2.1.5. Then we have: 
+(i) normed. 
+(ii) commutes with E,, Es, 
+
+
+or XF =X,YF=0 for F=F or I[-E. | 
+
+
+| 
+
+m,n 
+
+‘ 
+
+if 
+; 
+
+& all 
+i 
+| 
+
+az 
+
+
+122 J. V. NEUMANN 
+
+
+Proor: Ad (i): Obvious by Definition 2.1.2. 
+Ad (ii): Consider a fixed i = 1,2,---. Forn 2% A, = A!™!'"''*= commutes 
+with E; by the Corollary to Lemma 2.1.3. But A!™!!*'"" = lim strs.,, A, by 
+Definition 2.1.2, hence A'*''”*'"* commutes also with E; . 
+
+
+1 | 2.2. DerIniTion 2.2.1. A ring 2C OM will be said to be “purely infinite” 
+: ; uf every projection E ¢ & is either = 0 or infinite (with respect to M, ef. (1), p. 155, 
+Definition 7.1.1).— 
+
+| ( Observe that the following terms: finite, infinite (ef. loc. cit. above) of finite 
+M rank (Definition 1.2.1) normed (Definition 1.4.6) are always to be understood 
+; with respect to MN. Being purely infinite, however, is defined in Definition 
+2.2.1 above for any ring 2C Ml. But it has, of course, for L = Mi the old 
+meaning of 9 being purely infinite ((1), p. 172, Theorem VIII): That 9 
+belongs to class (III,,). 
+
+We prove now: 
+
+Lemna 2.2.1. A ring 2£C OM is purely infinite, if and only if the only normed 
+AceLisA = 0. 
+
+Proor: Sufficiency: Assume that the only normed A e£ is A = 0. Apply 
+this to projections He &. They must be = 0 or infinite. Hence £ is purely 
+infinite. 
+
+Necessity: Assume that £ is purely infinite. Considera normed A e&. Then 
+A*A is also normed and also ¢ & along with A. 
+
+We now proceed as in the proof of Lemma 1.3.2, and obtain the spectral 
+form of A*A, in particular the equations 
+
+
+6) (Aaj, 0) = 0) 
+@ = [radi Boor 
+(8) 4 <0 implies E(A) = 0 
+
+
+where E(A), ~2 <A < +~, is a resolution of unity. (Cf. loc. cit. above.) 
+Consider now a \» > 0. Form the bounded function 
+
+
+We can form the operator B = a(A*A) which is characterized by 
+
+
+(45) (Bf, g) = a(n) d(EQ)f, g) 
+
+
+((6 
+((6 
+((é 
+B, 
+be 
+(4 
+A 
+pr 
+of 
+Sc 
+(i 
+| (i 
+m 
+F 
+= 0 otherwise 
+| 
+
+
+ON RINGS OF OPERATORS, III 123 
+
+
+((6), pp. 202-205), and which belongs to £ along with A*A ((6), p. 213, Theorem 
+§—only the easy, sufficiency part of this theorem is needed). Now B-A*A = 
+
+
+g(A*A), where 
+
+
+=1 for 
+= 0 otherwise 
+
+
+= ra(n) 
+((6), pp. 205-206, property e) on p. 205); hence 
+(B-A*As, = BO) = EOI), 0 
+
+
+((6), pp. 202-205), and so 
+B.A*A =I — 
+
+
+B, A*A belong both to £ and A*A is normed; hence B.A*A = I — E(Xo) 
+belongs also to £ and is also normed. So we have shown: 
+
+
+(46) implies E(A) = I. 
+
+
+(8), (46) and (7) give together || Af ||’ = 0, Af = 0 for all fe. Hence 
+A=0. 
+
+This completes the proof. 
+
+Lemma 2.2.2. Consider an Abelian ring @ C OM. There exists a sequence of 
+projections E, , E,,--- eQwith@ = R(E,, Ee, ---). (Cf. (5), 401, lower part 
+of the page.) Since ct is Abelian, these E,, Ez, --- commute with each other. 
+So we can form A'**!*2|""- for every A of finite rank (Definition 2.1.2)."° We con- 
+sider and E,, Ex, --- as given. 
+
+We make the following assumptions: 
+
+(i) The ring M-A’'(C M) ts purely infinite. 
+(ii) For every finite projection F(¢e MM) 
+
+
+Q implies F = 0. 
+
+
+Then M is of class (III,). 
+
+Proor: Let F(e 9M) be a finite projection. Then we can form F'*!¥#!""-, 
+PII": 3s normed ((i) in Theorem VI), and so in particular «9M. Further- 
+more F'*!!*:|"-- commutes with E,, Es, --- ((ii) in Theorem VI), hence with 
+all of @ = R(E,, Ez, --- ) and so it is Thus Now 
+F'*|*:I--- ig normed and ON-@’ is purely infinite by (i), hence Lemma 2.2.1 
+gives F'*:'*2|" — Q. And (ii) permits us therefore to conclude that F = 0. 
+
+In other words: A projection F ¢ 9M is either = 0 or infinite. Hence 9M is 
+of class (III,,).— 
+
+The above Lemma 2.2.2 is the device by which we are going to establish 
+
+
+We could show that A!#1!#2!--- depends only on A and (@ (and not on the sequence 
+E,, Ez, -+- itself). We omit the proof, because this fact is immaterial for our further 
+purposes. 
+
+
+| 
+| 
+| | 
+? 
+¥ 
+| fe 
+i 
+¥ 
+— 
+| 
+
+
+124 J. v. NEUMANN 
+
+
+i that some of our examples Ii are of class (III,). (Cf. Lemma 4.3.5.) We 
+j shall apply it to rings @ which are = 9-1’, so-called maximum Abelian rings 
+in SM. The general theory of such rings is of some interest, but we do not 
+propose to go into it in this connection. 
+
+
+Cuaprer III. Construction OF THE Rines ON, 
+
+
+3.1. This chapter will be devoted to the construction and investigation of a 
+family of examples of factors 9 in appropriate Hilbert spaces §. Some of 
+these SI will be shown to be of class (III,,). More precisely: We shall succeed 
+in determining the class of each 91 of this family, and we shall see that all 
+classes (I,)—(III,,) occur among them. 
+
+The examples which we shall consider are a generalization of those, of (1), 
+pp. 192-209, which belonged to the classes (I,,)—(II,,). We desire, however, to 
+treat the intervening notion of (generalized) Lebesgue measure in a slightly 
+different way than was done loc. cit. above. Furthermore, this part of our 
+iy discussion will have to be made on a broader basis than was necessary there. 
+For these reasons we begin with a discussion of the properties of (generalized) 
+Lebesgue measure and integration in an arbitrary space S. 
+
+
+3.2. DEFINITION 3.2.1. Let S be a fixed set. A system T of subsets of S will 
+be called a ‘“‘Borel-system’’ if it has the following properties: 
+
+
+(i) © (the empty set) « T. 
+(ii) M eT implies S — M eT. 
+(iii) M,, M2, eT imply M, + Me + er 
+
+
+| : i Lemma 3.2.1. For a Borel system T in S we have further: 
+
+
+(i) 
+(ii) M,N eT imply M — 
+(iii) M,, Me, eee eT imply er. 
+
+
+Proor: We prove these statements in a somewhat changed order: 
+
+
+Ad (i): By (i), (ii) in Definition 3.2.1, since S = S — 0. 
+Ad (iii): By (ii), (iii) in Definition 3.2.1, since 
+
+
+= 8 ((8 — My) + (S — 
+
+
+Ad (ii): By (ii) Definition 3.2.1 and (iii) above, since M — N = M-(S — N). 
+
+
+! ke DEFINITION 3.2.2. Let A be an arbitrary system of subsets of S. Then there 
+f exists a minimum Borel-system T D A in S,” which will be denoted by T'(A). 
+
+
+1 The intersection of all Borel-systems [ > A in S. 
+
+
+I 
+exis 
+(i) 
+| (ii) 
+(iii 
+call 
+iid 
+me. 
+(i) 
+(ii) 
+sth! 
+| 
+(iv 
+| be. 
+are 
+| 
+fur 
+val 
+2 cus 
+ab! 
+| (ii 
+(iv 
+
+
+ON RINGS OF OPERATORS, III 125 
+
+
+Deriniti0n 3.2.3. A Borel-system 1 in S will be called “‘separable,” if th 
+exists a system A of subsets of S with the following properties: 
+(i) T= 
+(ii) fs, then x = y. 
+(iii) A is finite or enumerably infinite .— 
+
+
+We can now define our notion of (generalized) Lebesgue measure. (To be 
+called I'-measure, ef. below.) 
+
+Derinition 3.2.4. Let a separable Borel-system T be given in S. A function 
+u(M) will be called a “‘T-measure’’ if it possesses the following properties: 
+
+
+(i) (M) is defined for all M €T and only those. 
+(ii) The values of u(M) are real numbers 2 0, S + ~. 
+(iii) There exists a sequence + 7? + = §, 
+
+
+such that all <+o., 
+(iv) If Mi, M2, --- eT andi ~ j implies M;-M; = then 
+u(M, + Me +---) = w(Mi) + + --- 
+
+
+We shall always consider measures with u(S) = 0. 
+DertNiTION 3.2.5. A complex valued function f(x), defined for all x « S, will 
+be called “‘T-measurable,”’ if the sets 
+
+
+(t;Rf(z) >a), (x; Sf(z) > a) 
+
+
+are eT for every real a.— 
+
+It is not necessary to develop the properties of the class of all '-measurable 
+functions in detail since they are the same and obtained in precisely the same 
+manner as those of the class of all Lebesgue-measurable functions of one real 
+variable. (Cf. any standard exposition of that subject. For a systematic dis- 
+cussion of such function classes as ours, cf. e.g. (0), pp. 232-247. Our I'-measur- 
+able functions f(x) are to be characterized in the terminology loc. cit. as follows: 
+K(x), Sf(x) are both functions of class (I, *) or, which is equivalent in this 
+case, of class (T, T).) It may suffice to observe that the following functions in 
+particular are '-measurable: 
+
+(i) The function Ou(zx) { 
+(ii) af(x), f(z) along with f(x), a being any complex constant. 
+
+(iii) f(z) + g(x), f(w)g(x), Max (f(x), g(x)), Min (f(z), g(z)) along with f(z), g(2). 
+(iv) vi = limn.,,fa(x) (if this limit exists for all z¢S) along with f,(z), 
+
+
+For the I-measurable functions f(z) we now define the notion of I’, u-tntegra- 
+bility (with respect to the T-measure yu!) and the numerical value of the I’, u- 
+integral 
+(1) (M eT) 
+
+M 
+
+
+of any M eI. 
+
+
+| 
+| 
+t 
+| 
+| 
+| 
+id 
+
+
+~ 2 
+
+
+~ 
+
+
+126 J. V. NEUMANN 
+
+
+in the usual way. (Cf. any standard exposition of Lebesgue-integration. The 
+observations of (1), p. 194, top of that page, apply to the present situation.) 
+There is again no need to enumerate the well-known details. Let us mention 
+this, however: For a general, complex valued, f(x) we restrict, as usual, (47) 
+
+
+to the case where f(z) is even T, u-summable over M that is, where il | f(x) | dye 
+M 
+
+
+exists and is finite. In such situations, however, where f(z) is restricted to real 
+and = 0 functions, we shall consider (47) as meaningful for all I'-measurable 
+f(x), expressly permitting in this case the value + © also for the integral. This 
+convention too agrees with the general usage. 
+
+Throughout the rest of this section, as well as in §§3.3-3.7 which follow, we 
+assume that S, I w are given, and also that [is a separable Borel-system. 
+Other I'-measures », »’, v’’ and groups §, which will be considered, may vary. 
+
+We construct next a functional Hilbert space over S. 
+
+DEFINITION 3.2.6. Let Ss = ODs,r,u be the set of all (complex) valued | T'-measur 
+
+
+able functions f(x) (a € S) with a finite [ | f(x) |? dyx. Consider f, g as identical 
+
+
+if f(x) = g(x), except for an x-set of u-measure 0. Define 
+
+
+Lemma 3.2.2. The space sz fulfills the postulates A, B, C, E of (4), pp. 64-66. 
+(This includes the existence and finiteness of the integral which defines (f, g)s for 
+f,g€9s.) Thus Os is a finite-dimensional Euclidean or a Hilbert space. 
+
+
+Proor: Existence and finiteness of [ f(x) g(x) d,x: Literally as in (4), 
+
+
+p. 109. 
+
+Ad A, B, E: Literally as in (4), pp. 109, 111. 
+Ad C: Same as in (4), pp. 109-111, except that the system of neighborhoods in 
+which occurs there (Q is a metric space which plays the réle of our S), is to be 
+replaced by the following sets in S (all ef): T°7;, i, 7 = 1, 2, ---, where the 
+T”, T®,... are the sets from (iii) in Definition 3. 2.4, saa the 7,, T2,--: 
+are all sets which obtain by any (finite) number of Nanloations of the operations 
+M —N,M +N, M-N to the elements of a finite or enumerably infinite basis 
+A of I in the sense of Definitions 3.2.2, 3.2.3.— 
+
+It may be well to recall at this stage the examples a) and .b) of (1), p. 193. 
+(The sets T°, T®, ... given there serve both for (iii) in Definition 3.2.4, and 
+to construct A, bi A = (T°, T®,...), = T(A). T turns out to be in 
+the example a) ‘the system of all sub-sets of S and in the example b) the system 
+of all relative Borel sets in S in the usual topological sense.) The example a), 
+with a finite set S = (2, ---,2%,) shows in particular that 6s may actually 
+be a finite-dimensional Euclidean space. 
+
+We conclude this section by proving the “differentiation-theorem” of 
+Lebesgue-Nikodym (Theorem VII below). It would be possible to carry out 
+
+
+ne 
+th 
+| 
+| 
+q (i 
+| | 
+| (i 
+
+fc 
+| ir 
+| if 
+| 
+ry 
+
+‘ 
+a 
+e 
+| 
+
+
+ON RINGS OF OPERATORS, III 127 
+
+
+most of what we want also without this theorem, but such a procedure would 
+necessitate qualifications and restrictions in the hypotheses of the lemmas and 
+theorems which follow. 
+Lemma 3.2.3. Consider two T-measures u, v in S. Then we have: 
+(i) If »(M) = 0 implies v(M) = 0 then there exists a T-measurable function 
+x(t) 2 0, such that for all T-measurable (complex) functions f(x) and all sets M «T 
+
+
+(This is meant to include that if either side is defined and finite, then both are.) 
+(ii) The x(a) of (i) ts unique, up to x-sets of u-measure 0. This is even the case 
+if (i) is restricted to f(x) = 1, M eT. 
+
+(iii) The equivalence of u(M ) = 0 to o(M) = 0 is equivalent to having always 
+x(x) > 0 in (i), except for an x-set of u-measure 0. 
+
+Proor: Ad (i): Consider the T”, T®, .-. of (iii) in Definition 3.2.4 first 
+for p: T, TP, --- and then for »: T3”,---. Let Te”, Ts”, --- be the 
+oF, i j = 1, 2,---, arranged as a sequence. They will then do for’ the 
+T-measure defined by 
+
+
+(48) p(M) = + »(M) (M eT) 
+in the sense of (iii) in Definition 3.2.4. The same is true for 7'§0’, TS, --- 
+
+
+if we define Ty = Ts? — (To? +--- + To”), i = 1,2,---. And these 
+have the further property that + j implies = 0. 
+Let us form 
+
+
+(49) Lif) = f(x) d,x for any fe Ds,r,p- 
+(Observe: v in the integral, but p in Os,r,,!) Since 
+and 
+/ Pda = ro(Tii) 
+
+
+are both finite, the integral in (49) is (by Schwarz’s well-known inequality) 
+
+
+existing and finite, and even 
+| Lf) | = f(z) | f(x) | 
+< 
+
+
+(50) | Lif) |S (C; = (Too). 
+
+
+= 
+
+
+he | | 
+n.) | 
+on 
+7) | 
+“al 
+dle 
+
+¥ 
+ve 
+n. 
+
+| 
+
+= 
+’ 
+| | 
+| 
+
+
+128 J. V. NEUMANN 
+
+
+Li(f) is by (49) a conjugate linear functional in $s,r,, , and by (50) a continuous 
+one. Hence a lemma of F. Riesz applies to it (cf. e.g. (4), p. 94, footnote 52): 
+There exists a x; € Hs,r,, , such that Li(f) = (x; , f) that is 
+
+
+| i Consider now a I'-measurable f(z) = 0, which is = 0 for x ¢ 1's0’, and bounded 
+in S. Then f  Ss,r,, (because is finite!), and the above equation may 
+be written 
+
+
+Since it does not matter in (51), what f(x) does for x ¢ Ts we can drop the 
+requirement of f(x) = 0 for x ¢ Tv. 
+Taking the real part of both sides of (51) replaces (since f(x) is real) «;(z) 
+
+
+( by 9x;(z). Hence we can assume that «;(x) is real. Now put 
+= 1 forxzeM 
+
+
+i first with M = M; = T§)-(a; xi(z) < 0), and then with M = MY = 
+! Too - (x; x:(t) = 1). In both cases f(x) meets the requirements of (51). The 
+left side of (51) becomes = 0 and S 0 respectively, and so we obtain 
+
+
+k(x) d,x = 0, / k(t) <0. 
+Mt 
+
+
+But «’(z) < 0 for all x and x’(x) > 0 for all x M7; hence necessarily 
+
+«| u(M;) = u(M7) = 0. This also implies »(M;) = »(M?) = 0. Hence we can 
+Li change «;(z) arbitrarily in M; + M; without affecting the validity of (51). 
+We redefine «;(x) = 0 for re M; + M7. So we have 
+
+
+(52) 0S x(x) <1 (xe TW). 
+
+
+So the integrands on both sides of (51) are = 0. Therefore if f(x) is merely 
+I'-measurable and = 0, we can put 
+
+
+fale) f(z) for f(a) sn 
+
+
+= 0 otherwise 
+
+
+replace f(x) by f(x) in (51), and apply lim,.,,,: Then (51) for the original f(x) 
+
+
+— 
+
+
+fe results. In other words: (51) holds for all T-measurable f(z) = 0. (Of course 
+‘ a then both sides of (51) may be infinite.) 
+Now put «(z) = Then (52) gives 
+1 — x;(z) 
+
+
+(53) 2 0 (x Too). 
+
+
+W 
+f(x) d,z = d,x = x(x) dyx + 
+| 8 8 8 
+| Ar 
+th 
+is 
+fol 
+th 
+
+Al 
+re 
+an 
+
+ma an 
+
+ij 
+Si 
+B 
+so 
+
+‘ 
+
+| 
+
+| 
+
+
+ON RINGS OF OPERATORS, III 129 
+
+
+We can replace f(x) in (51) by res ; then (51) becomes: 
+
+
+(54) f(x) d,x = f(z) ki(x) d,z, 
+
+
+Too 
+
+
+again for all T'-measurable f(z) 2 0. Now define «(z) = «,(x) for xe Te, 
+
+
+i=1,2,---. Then (53) gives 
+
+
+(55) k(x) 2 0 (x 8). 
+And adding (54) over all 7 = 1, 2, --- gives 
+(56) [ ax = f fle) dye. 
+
+
+Consider now any I'-measurable (complex) f(z). Apply (56) to | f(x) | (which 
+is 2 0): It shows that if either of i | f(a) | dear, [ | f(x) | x(z)dx is Ginite, 
+
+
+then both are, That is (f(x) is complex!): If either of [ [ (2)d,2 
+
+
+is defined and finite, then both are. Combining this with the validity of (56) 
+for T'-measurable f(z) = 0 shows: (56) holds for all [-measurable (complex) 
+f(z), this being meant to include, that if either side of (56) is defined and finite, 
+then both are. 
+Now define f’(x) Then (56) becomes (in the 
+same sense as above) 
+
+
+And (55), (57) complete the proof of (i). 
+
+Ad (ii): Assume that x«’(x), «’’(z) both meet the requirements of (i), with the 
+restriction made in (ii). Consider T°, T, --- of (iii) in Definition 3.2.4 for », 
+and put Mj, = T.(x; «’(4) < x(x) Sn). Consider the function f(z) = 1 
+and M = M;,,. Then we have »(Mj.,) = = K(x) dye. 
+
+M 
+
+
+Since (Mi) is finite, we can infer — = 0. 
+
+
+But «’’(x) — «’(z) > 0 for hence we have u(M;,,) = 0. Put M’ = 
+Mi = (a; < «’’(x)), then this gives 4(M’) = 0. By symmetry in 
+x'(x), we have similarly for M” = (x; «’(z) > «’’(x)) = 0. And 
+sofor M = M’ + M” = (a; «'(a) ¥ «’’(x)) again u(M) = 0. Thatis: «’(z) = 
+«(x), except for an x-set of u-measure 0 (namely: M). 
+
+Ad (iii): Sufficiency: Assume «(x) > 0, except for an x-set of u-measure 0. 
+
+
+»(M) = 0 implies [ x(x)d,2 = 0, and since «(x) > 0 for x « M (except for an 
+M 
+
+
+| i 
+): 
+| 
+| 
+y | 
+it 
+ul 
+
+
+‘measure 0 (namely: M). 
+
+
+130 J. V. NEUMANN 
+
+
+z-set of u-measure 0), so u(M) = 0. Hence u(M) = 0 and »o(M) = 0 are 
+equivalent. 
+Necessity: Assume that u(M) = 0 is equivalent tox(M) = 0. Put 
+
+
+= lforre M 
+= Ou(z) 0 otherwise |’ 
+
+
+= (x; x(x) = 0). Then we obtain »(M) = x(x)d,x = 0, hence u(M) = 0 
+
+
+(by the above assumption). So we have x(x) > 0, except for an 2-set of u- 
+
+
+DEFINITION 3.2.7. We oe the unique (up to x-sets of u-measure 0!) x(z) 
+of (i), (ii) in Lemma 3.2.3 by & “ (x): 
+TuHroreM VII. Letybea T-measure in S. Then the relation 
+
+
+x(x) 
+
+
+= 
+
+
+establishes a one-to-one correspondence between all T-measurable functions x(x) = 0 
+(up to x-sets of u-measure 0!) on one hand, and all T-measures v, for which u(M) = 0 
+implies v(M) = 0, on the other. The inverse relation is 
+
+
+»(M) = 
+
+
+Proor: Given »(M), as described above, the existence and uniqueness of this 
+x(x) was already stated in (i), (ii) in Lemma 3.2.3 and in Definition 3.2.7. So 
+we must only consider the case where x(x), as described above, is given. 
+
+Consider the T°, T®, .-- of (iii) in Definition 3.2.4, and let T§?, T”, --- 
+be the 7. (x; x(x) < n), i, n = 1, 2, --- , arranged as a sequence. They will 
+then do for the !'-measure defined by 
+
+
+(58) vy(M) = k(x) d,x (M 
+
+
+in the sense of (iii) in Definition 3. 2. 4. It is also clear by (58) that u(M) = 0 
+
+
+implies y(M) = 0. Hence we can form Z (x). 
+
+
+Put f(z) = 1, then we have »(M) = / d,z = [. . (x) dx. So (58) gives 
+
+
+(x) d,x = x(x) dx (M eT). 
+
+
+Hence by (ii) in Lemma 3.2. 3g = «(z), except for an x-set of u-measure 0. 
+
+
+This, together with (58), aS. the proof. 
+
+
+(i 
+
+
+ir 
+
+
+j 
+} 
+| (il 
+d, 
+| 
+a (i 
+a 
+(i 
+i 
+| 
+i 
+( 
+| | 
+
+
+ON RINGS OF OPERATORS, III 131 
+
+
+(i) = 1, 
+(i) (x) of = 0 implies = 0, and v(M) = 0 implies 
+
+
+p(M) = 0. 
+Proor: (i), (ii) are both immediate on the basis of the characterization of the 
+
+
+‘ (x) in (i), (ii) in Lemma 3.2.3. 
+
+
+3.3. Let S, T, » be as in the preceding section. We now describe a certain 
+relationship between S and a group §. 
+
+DeFINITION 3.3.1. ts an S-group if it has the following properties: 
+(i) $ is a “group,” that is, a “composition” aB, an “inverse” a‘, and a “unit” 1 
+are defined in § with these properties: 
+
+
+(aB)y = a(By), aa! = = 1, al = la =a. 
+
+
+(So § is “associative,” but not necessarily ““commutative.”’) 
+(ii) Every a ¢ S defines a certain one-to-one mapping of S on itself: 
+
+
+(x, ra 8). 
+These mappings “represent’”’ G, that is 
+= (x eS, a, 
+
+
+(iii) is finite or enumerably infinite — 
+
+One sees immediately (by (ii) above) that 21 = zx and that x @ za‘" is the 
+inverse mapping to x = za. 
+
+We shall, as usual, denote by Ma the set (ra;x «M) (M, Mac S). 
+
+DEFINITION 3.3.2. An S-group is an “S, T-group” if for everyaeS M eV 
+implies Hence if aT-measure in S, then the defined by 
+
+
+Ha(M) = 
+
+is also a T-measure in S. 
+
+DEFINITION 3.3.3. An S,T-group an ‘“‘S,T, u-group” (u aT-measure in 8), 
+if for everyaeS p(M) = 0 implies u(Ma) = 0. 
+
+Lemma 3.3.1. Let Gbean u-group. Then we have: 
+(i) u«(M) = 0 and u.(M) = 0 (that is: u(Ma) = 0) are equivalent. Hence we 
+can form (zx). 
+
+(ii) Each one of the following formulae holds, except for x-sets of u-measure 0: 
+
+
+(zx) > 0, 
+
+
+dy, d, 
+a,” = =1, 
+
+
+(ea) = (x) 
+
+
+) 
+
+
+132 J. v. NEUMANN 
+
+
+(iii) Soe (x) is uniquely characterized, up to an x-set of u-measure 0, by this property 
+
+
+(f(x) is any T-measurable function, M «1, everything in the same sense as in (i) 
+in Lemma 3.2.3). 
+
+Proor: We prove these statements in a somewhat changed order. 
+
+Ad (i): = 0 implies = 0, and 4(Ma) = O implies = 0, 
+u(M) = 0. Hence p(M) = 0 is equivalent to u(Ma) = 0, that is to ua(M) = 0. 
+
+Ad (ii), first formula: Immediate by (i) above and (iii) in Lemma 3.2.3. 
+
+
+Ad (iii): According to Definition 3.2.7, dg (x) is characterized, up to an z-set of 
+
+
+u-measure 0, by 
+
+
+(59) = @ aye 
+
+
+(f(x) l-measurable, M 1). Now obviously / = 
+So (59) becomes 
+
+
+(60) dy = ste) (0) dye 
+
+
+Replacement of M, f(z) by Ma", f(za) in (60) gives the desired formula. 
+Ad (ii), second formula: Coincides with (i) in the Corollary after Theorem VII. 
+
+
+Ad (iii), third formula: Two applications of (iii) above show, that ore (xa) = (z) 
+
+
+satisfies the characterization of fee (x) by (iii) above. 
+
+
+Derinition 3.3.4. An S,T, u-group is “free” if it has this property: 
+
+If aeGis # 1 then xa = x holds only for an x-set of u-measure 0. 
+
+Dertnition 3.3.5. An S,T, u-group G is “ergodic” if it has this property: 
+
+If M «TY is such that for every a €G the difference of the sets M, Ma (i.e. the set 
+(M + Ma) — (M-Ma)) has u-measure 0, then either u(M) = 0 or pn(S — M) = 0.— 
+
+Cf. the comment in (1), p. 195, bottom of the page, concerning this notion of 
+ergodicity. 
+
+Lemma 3.3.2. An S,T, u-group S is ergodic if and only if it has the following 
+property: 
+
+If f(x) is a T-measurable function such that for every a eS f(xa) = f(x) (except 
+for x-sets ofu-measure 0), then f(x) = a (constant!, except for an x-set of u-measure 0). 
+
+Proor: Sufficiency: If f(x) runs only over characteristic functions 
+
+
+fiz) = { 1 M 
+
+
+= 0 otherwise |’ 
+then this coincides with Definition 3.3.5. 
+
+
+} 
+(( 
+st 
+( 
+| ( 
+i 
+( 
+
+
+ON RINGS OF OPERATORS, III 133 
+
+
+Necessity: Since we may consider Rf(x), 3f(x) instead of f(x) we may assume 
+that f(x) is real. And since we may consider aes instead of f(z), we may 
+
+
+even assume that 
+(61) < f(z) < 1. 
+
+
+For any real a the set M, = (x; f(x) < a) has clearly the property used in 
+Definition 3.3.5; hence either u(M,) = 0 or n(S — M,) = 0. Let 2 be the set 
+of all a with = 0. By (61) —le2,1¢2, and asforasb 
+so in this case b ¢ 2 implies ae Z. Hence = possesses a least upper bound, say 
+
+
+ay and a €2, ay + = ¢2forn = 1,2,---. 
+
+
+Hence the sets (x; f(z) < ao) = and f(t) > aw) = 
+(§ — Ma,41/) have w-measure 0, and so has their sum, the set (x; f(x) # a). 
+That is: f(x) = a , except for an z-set of u-measure 0.— 
+
+Our present notion of a free, ergodic, S, T, u-group corresponds to what was 
+called an ergodic m-group (for S, ) in (1), page 195, Definition 12.1.5, but there 
+the stronger requirement u(M) = u(Ma) replaced our present requirement that 
+u(M) = imply = 0. 
+
+This situation motivates the following definition: 
+
+Derinition 3.3.6. An S,T, u-group G is “measurable” if there exists a Y- 
+measure v with the following properties: 
+
+(i) u(M) = 0 is equivalent to v(M) = 0. 
+(ii) Always »(M) = »(Ma).— 
+
+We conclude this section by proving two properties of the above notions. 
+
+LemMa 3.3.3. The properties of the T-measure v given in Definition 3.3.6, are 
+equivalent to the following properties of its «(z) = : (2) (remember Theorem VII), 
+
+
+always except for x-sets of u-measure 0: 
+
+
+(i) x(x) > 0. 
+k(x) _ dy, 
+(ii) = (x). 
+
+
+Proor: (i) is equivalent to (i) in Definition 3.3.6: Coincides with (iii) in 
+Lemma 3.2.3. 
+
+
+(ii) is equivalent to (ii) in Definition 3.3.6: i (x) = x(x), hence clearly os (x) = 
+Ka 
+
+
+x(ta). So (ii) in the Corollary to Theorem VII gives (by evaluating os (x) in 
+
+
+two ways): 
+
+
+ty 
+i) 
+). 
+| 
+| 
+
+
+134 J. V. NEUMANN 
+
+
+Now (ii) in Definition 3.3.6 means vy = vq, that is, by (i) in the Corollary to 
+
+
+Theorem VII > (x) = 1. Hence (62) becomes the desired equation ae es 
+
+
+(z). 
+
+
+3.3.4. Let be an ergodic S, u-group. Then the V-measure v of 
+Definition 3.3.6 is uniquely determined, up to a constant factor a > 0. 
+
+
+Proor: Let »’, v’’ be twosuchT’-measures. Form their x’(x) = (x), = 
+
+
+7 in accordance with Lemma 3.3.3. Then (ii) in Lemma 3.3.3 gives 
+
+
+(ea )= = Put f(x) = 
+
+x’(x)/«’"(a) and replace « by a’, then we have: f(z) = f(za). All this, of course, 
+holds with the exception of z-sets of u-measure 0. Now Lemma 3.3.2 gives 
+f(x) = a, x'(x) = ax’’(x)(in the same sense) with a constant a. Hence v’(M) = 
+av’’(M), and clearly a > 0. 
+
+
+3.4. Derinition 3.4.1. (i) Let ©9 be the set of all (complex-valued) functions 
+f(a) (a €§) with a finite Lag | f(a) |. (Remember that § is finite or enumer- 
+
+
+ably infinite!) Define 
+
+
+(f, 9)3 = fla)g(a). 
+(ii) Let 98 = 9 | be the set of all (complex-valued) functions F(x, «) (x €S, 
+a €$) which are Pintewelles in x for every a €G and with a finite 
+
+
+Deeg [| FG, a) 
+
+
+Consider F, H as identical if F(x, a) = K(x, a) except for an x-set of u-measure 
+0 for everyaeS. Define 
+
+
+= Fle, \HG, dys. 
+
+
+= (F, 
+
+
+SU 
+
+
+Lemma 3.4.1. (i) The spaces $8, $8 fulfill the postulates A, B, C, E of (4), 
+pp. 64-66. (This includes the existence and finiteness of the sums and integrals 
+which define (f, 9), (F, H)8.) Thus $8, 8 are finite dimensional Euclidean or 
+
+
+Hilbert spaces. 
+(ii) Using the complete, normalized, orthogonal set of all functions 
+
+
+=1 for a= a 
+0 otherwise |’ ane 8, 
+
+
+
+
+Bae 
+| i 
+te 
+| | ( 
+is 
+| 2 
+| if 
+A 
+A a 
+| ; 
+a 
+} f 
+i 
+| 
+veel 
+
+
+ON RINGS OF OPERATORS, III 135 
+
+
+in 99 and setting up the correspondence 
+F(a, a) ~ < F(a, a), F(x, > 
+(a1, an enumeration of G, so that the above ao runs over , 9° is 
+isomorphic with ©2 ® Hs in the sense of (1), p. 135, Definition 2.4.1 and Lemma 
+" what follows we use the more symmetric notation 
+F(z,a) ~ < F(a, a); aeG>. 
+
+
+Proor: We prove these statements in a somewhat changed order. 
+
+
+Ad (i): Character of 99: Put f(an) = f&,n = 1, 2,--- (G1, a2, --- an enumer- 
+ation of 9!), and f(a) ~ {&, &, +--+} then our definitions coincide with the 
+original definition of a finite dimensional Euclidean or a Hilbert space ((1), 
+
+
+p. 69, lower part of the page). 
+
+Ad (ii): Immediate, by comparing our Definition 3.4.1 with (1), p. 135, 
+Definition 2.4.1 and Lemma 2.4.1. 
+
+Ad (i): Character of 9°: Considering what we showed about 99 above, and 
+about $s in Lemma 3.2.2, this follows from (ii) 4h since 99 i is isomorphic to 
+® Gs .— 
+
+We are now in a position to begin a systematic investigation of certain oper- 
+ators in Hs and 98. 
+
+
+3.5. Throughout what follows, § will be a fixed S,I’, u-group. We assume 
+from now on throughout §§3.5-3.7, that G is free and ergodic, but not that it is 
+measurable. 
+
+We begin by constructions in Qs . 
+
+Lema 3.5.1. Define the operators: 
+
+
+(i) Usfla) = i+ @) | flea) for any a «8. 
+
+
+(ii) Lea f(x) = g(x)f(x) for any (complex-valued) l-measurable, bounded function 
+These operators are bounded, U _ is even unitary. 
+
+Proor: U. is bounded and unitary: By (iii) in Lemma 3.3.1 
+
+
+J vaste) = f | = ff |e) 
+So f « Ss implies Gs and || Uaf lls = lls- 
+
+
+ee is bounded: We have | g(x) | S C for all z eS and a suitable C > 0. 
+ence 
+
+
+[ | Low f(x) = [ | | f(a) < C’ [ | f(x) |? 
+So Ss implies Lyra) f € Gs, and || Lyre f lls C Ils. 
+
+
+= } 
+j 
+) ‘ 
+i 
+, a 
+| 
+
+
+
+
+Lemma 3.5.2. (i) U; = 1 
+(i) = = Us. 
+| (iii) Uses = 
+‘ Proor: We prove these statements in a somewhat changed order: 
+i Ad (i), (iii): Immediate by (ii) in Lemma 3.3.1. 
+fi Ad (ii): (i), (iii) above give Ue-1 = Uz". And since U, is unitary, so U;' = U* 
+Hi Lema 3.5.3. Let & be the set of all operators Lz) from (ii) in Lemma 3.5.1, 
+Then & is a ring, and & = &. 
+i Proor: As £’ is necessarily a ring it suffices to prove = L’. As LyyayLye) = 
+
+
+80 Loca) commutes with every Ly. AS Lye = Lye, 80 Lye) also 
+
+
+| commutes with every Lj;2). Thus Ly ¢ £’, that is, LCL’. So we must only 
+prove £’C &. 
+Consider therefore an A Then A commutes with every Ly 2) , that is 
+ALyawf = Ly Af. That is 
+(63) A(o(x)f(x)) = o(x)Af(z). 
+The assumptions are: g(x), f(z) T'-measurable, g(x) bounded, | f(a) ( 
+a4 finite. (63), as well as all subsequent relations in this proof, holds with the ( 
+| p exception of an x-set of u-measure 0. 
+d Consider the 7,7, ... of (iii) in Definition 3.2.4; we can replace them by 8 
+TS, TS, where T§? = — (T® +... + T*”), and then we have also 
+that i j implies 75”, = ©. Define 
+; fe 
+=1 for reT 
+e;(x) = (zx) 0 otherwise d 
+Then [ | ex(x) |’ = is finite, and so we can put f(x) = in (63). 
+Bei We obtain: 
+(64) = (Aes(x))¢(z). 
+As e,(z) is bounded, we can also put g(x) = e,(r) in (64), and so we obtain 
+= (Aes(x))e.(x) that is: 
+(65) Ae(z) =0 for 
+Now define p(x) = Ae,(x) for ze 7§”, i = 1,2,---. Then (65) means ( 
+(66) Aes(t) = p(z)-ed(2), 
+and consequently (64) becomes: 
+Summing (67) over i = 1, ---, n, and writing f(x) for g(x) e:(x), we obtain 
+(68) Af(z) = 
+if f(x) is bounded and = 0 for ¢ + + T§”, for any n = 1,2, 
+
+
+| 
+
+il 
+| 
+
+
+ON RINGS OF OPERATORS, III 137 
+
+
+A is bounded; so || Af ||s S C-||f||s for a suitable C > 0. Put M, = (2; 
+2 +7”), n =1,2,---. We may use 
+
+
+=1 for 
+f(z) = 0 otherwise 
+
+
+‘ in (68). Then we have: 
+ly 2 [C+ = C+ 
+So || A@w, Ox, gives «(M,) = 0. Consequently for M = M, = 
+x (x; | p(x) | = C +1) also u(M) = 0. Hence we have (with the usual exception) 
+le (69) le(z)|SC+1. 
+y So p(x) is bounded, and we may form L,,2). And (68) becomes: 
+
+
+for all f(z) of (68). But these f(z) form an everywhere dense set in Hs. In- . 
+deed, if any f ¢ Ss is given, then define | 
+
+
+| fl) for |f(z)| <n, + + 7” 
+
+
+Then all f,(z), n = 1, 2, ---, satisfy the requirements stated after (68), and 
+clearly limps || fn — f = 0. 
+
+n As A, L,,2 are both bounded, this means that (70) extends by continuity to all 
+feDs. Hence A = Lj) €&. So we have established £’ C £& too, thus com- 
+pleting the proof. 
+
+Lema 3.5.4. Loz) = Lye) Ua holds if and only if either = 1, o(x) = ¥(z) 
+(except for an x-set of u-measure 0), or a ~ 1, o(xz) = (x) = 0 (except for an x-set 
+of u-measure 0). 
+
+Proor: Sufficiency: Obvious. 
+
+N ecessity : Assume Lgtz) = LyayU a: That is 
+
+
+(1 ola) fla) = ki | see), 
+
+
+whenever / | f(z) |’d,x is finite, (71), as well as all subsequent relations in this 
+
+
+proof, holds with the exception of an 2-set of u-measure 0. Ae 
+
+
+| 
+| 
+— 
+
+
+138 NEUMANN 
+
+
+Consider the T”, 7, .-- of (iii) in Definition 3.2.4... We may put 
+
+
+=1 for zeT? +...4+ 7” 
+= 0 otherwise 
+
+
+f(x) = 
+
+
+in (71), since u(T + --- +7) is finite. Then (71) implies 
+
+
+(72) ola) = v(a) 
+
+
+for those x for which z, rae T° +... +7. And summing over n = 1, 2, ... 
+gives (72) for all z. 
+
+(72) settles the case a = 1, owing to (ii) in Lemma 3.3.1. Assume therefore 
+a £1. Substituting from (72) into (71) gives g(x) f(x) = ¢(x)f(xa), that is 
+
+
+(73) Piste) flea) = 0. 
+
+
+Now consider the system A of Definition 3.2.3. We have A = (Mi, Mp, ---) 
+by (iii) eod. We may put 
+
+
+(i) 
+1 for zeT 
+
+
+= 0 otherwise 
+i,j = 1,2, ---, since n(7-M,) < u(T™) is finite. Now clearly 
+
+
+= 0 if neither or both 2, rae T.-M; 
+= 1 otherwise 
+
+
+|f@) 
+and the latter 2-set is 
+Ky = ((7°-M) + (T°-M)o*) 
+Hence (73) becomes 
+
+
+(74) \e@ = 0. 
+
+
+Consider now K = )o7j1 Ki;. If 2 = xa, then never x K;;, and hence 
+not eK. Ifz # za then we know from (ii) in Definition 3.2.3 that for some 
+j = 1, 2,--- one, but not the other of z, za is e M;. The one ¢ M; is also 
+e 7 for some i = 1, 2, --- , hence one, but not the other of.2, za is ¢ 7 -M;. 
+This means x e K;;._ Consequently x eK. So we see 
+
+
+(75) K = ¥ za). 
+
+
+Since G is free, and as a ¥ 1, so we have by Definition 3.3.4, x ¥ za, except for 
+an z-set of u-measure 0. That is 
+
+
+(76) u(S — K) =0. 
+
+
+| 
+| 
+| 
+—— ‘ 
+pl 
+Qa 
+i) 
+{ 
+(c 
+(i 
+( 
+a 
++ 
+| 
+
+
+ON RINGS OF OPERATORS, III 139 
+
+
+Summing over i,j = 1, 2, +++ converts (74) into [ | 0, and 80, 
+by 76) Pde = 0. That is 
+
+
+(77) e(z) = 0. 
+
+
+So we have for a # 1 by (72), (77), o(x) = ¥(x) = 0, and the proof is com- 
+
+leted. 
+ieee 0 Let & be as in Lemma 3.5.3, and let U be the set of all U., 
+aeS. Then £-W = (al) (a any complex number). 
+
+Proor: al belongs obviously to WU’, and as al = Lae&, so ale &-WU, 
+e.WD (al). So we need only to prove £-WU’ C (al). 
+
+Assume therefore A Then A so for everyaeS = 
+= A. Also ACL A = Low, U,AUs = Lge), hence Leea) = 
+Ly. By Lemma 3.5.4 this means g(ta) = g(x), except for an z-set of 
+u-measure 0. Since G is ergodic, this implies by Lemma 3.3.2 that g(x) = a 
+(constant!) except for an z-set of u-measure 0. Hence A = L, = ai. Thus 
+£.U C (al), completing the proof. 
+
+
+3.6. We now pass to constructions in 99. 
+Lemma 3.6.1. Define the 
+
+
+(i) Ua F(x, a) = “° (x) 
+(i) V.,F(z, a) = F(a, ao 
+
+(iii) WF(x, a) = (x) | Flra a’). 
+
+
+(iv) a) = = oe) Fe, a) for any bounded and T-measurable 
+
+(v) MeaFla, «) = F(x, a)) which is defined for all x¢ 8. 
+These operators are bounded, Ua, Vay, W are even unitary. 
+Proor: U.,, V«,, W are bounded and unitary: By (iii) in Lemma 3.3.1 
+
+
+for any a € 
+
+
+[\0..50, «) Paye = p> (a) dye 
+
+
+ae 
+
+
+and 
+
+
+z «) Page [ \ (a) dye 
+
+
+| 
+il 
+| 
+| 
+
+
+At 
+
+
+140 J. V. NEUMANN 
+And obviously 
+ae 
+
+
+So Fe implies U.,F, Va,F, WFe H%, and || = || = 
+|| = || FIP. 
+
+
+Liz), are bounded: We have | | C for all ze S and a suitable 
+C > 0. Hence 
+
+
+aeG 
+
+
+aeG 
+and 
+
+
+se [ | F(a, 
+
+
+So Fe implies Lo F, Meco) F $8, and || Loy || Moco F < C || FIP. 
+3.6.2. (i) = I. (i)’ VY, = I. 
+
+Gi) = = = = Vi,. 
+
+(iii) = (iii)”’ = V assy 
+
+(iv) W = W = W. 
+
+(v) WU.,W = 
+
+(vi) = Myz. 
+Proor: We prove these statements in a somewhat changed order: 
+Ad (iv): We aes? W’. One verifies immediately: 
+
+
+W F(x, x) = (x) (va F(a, By (ii) in Lemma 3.3.1 (with a”, 
+
+
+a in place of a, 8) (2) = (2) = 1, so a) = Fz, a), 
+
+
+that is: W? = I. 
+Hence W = Wand since W is unitary, so W = W*. : 
+Ad (v): Owing to (iv) we may as well prove WV,,W = U.,. Now 
+
+
+a) = ‘(x ) eee , aco). By (iii) in Lemma 3.3.1 
+
+
+(with a’, aap in place of a, 8) 
+
+
+Ww 
+§ 
+
+
+S 
+
+
+| 
+| 
+| 
+| | 
+i) 
+| ( 
+| 
+| t! 
+| 
+| 
+
+
+Pi RINGS OF OPERATORS, III 141 
+tee = (2), 00 WV a) 
+= @| F(xao, = F(x, a), 
+
+
+d, 
+that is: WV = 
+
+Ad (vi): Owing to (iv) we may as well prove WL, 2) = M,W. This, how- 
+ever, is obviously true, since a) are both = 
+
+Ad (i)’, (iii)’: Obvious. 
+
+Ad (ji)': (i)’, (iii)’ above give Vaz: = Vz). And since V,, is unitary, so 
+Va = Vi, 
+
+Ad (i)- (iii); Considering (iv), (v) above, they result from (i)'—(iii)’ above, re- 
+
+
+spectively. 
+Lemma 3.6.3. Let 9 be the set of all Ua, and all Lez) , and § the set of all Va, 
+
+
+and all Mg. (Cf. Lemma 3.6.1.) Form for each bounded operator A in $9 
+the decomposition from (1), p. 136, Definition 2.4.2: A ~ <Aag>, a, B 9, 
+where every Aa,s is a bounded operator in Ss. (Cf. the decomposition $9 = 
+9° @ Gs from Lemma 3.4.1. As described there, we replace the indices t, s = 
+- by indices a, B €%, as already the complete, normalized, orthogonal set 
+Ga, , «0 €9, cf. loc. cit. above, in G8 has been indexed this way.) Then we have: 
+(i) A eS of and only tf Aap = Lxag-1@6-). 
+(ii) J’ of and only tf Aa = 
+
+
+Here x(x) must be a (complex valued) T'-measurable, bounded function of x for | 
+
+
+every 
+We do not determine for which systems x,(x), y «8, a bounded A satisfying (i) or 
+
+
+(ii) actually exist. This, however, is true: 
+
+(iii) The systems x(x), y €9, obtained from all A « J’ by (i), and those obtained 
+
+from all A ¢ J’ by (ii), are identical. 
+
+(iv) An Aye I’ and an Aze J’ which have the same x,(x), y €G, by (i) or (ii) 
+
+respectively, obtain from each other by the involutory automorphism F = WS 
+
+of 
+
+Proor: Remember the definition of the Aa, ((1), p. 136, Definition 2.4.2, 
+using our present notations) : A<f(x)ga(a); = <Aaaf(x); BeES>; 
+that is (if we replace a’, a by a, 6 so that now z ¢ S and 8 «§ are the variables, 
+andaeGisa parameter) : Af(x)ea(8) = Aaaf(x). Then the definitions of U.,, 
+Ly, W give: If A ~ <Aas>, a, BG, then 
+
+
+(79) WAW ~ a>, a, B eS, 
+(80) LewA ~ <LywAas>, a, B eS, 
+
+
+(81) AL ge) ~ a, B eS. 
+
+
+= 
+
+
+| 
+| 
+
+
+142 J. V. NEUMANN 
+
+
+We now proceed to prove the statements (i)-(iv) in a somewhat changed 
+
+
+order: 
+Ad (i): AeJ means that A commutes with all Love) 
+Since = Lew , U2, = it suffices to consider the Lyi), Ugiz). That is 
+
+
+(83) = A 
+
+
+(82) means owing to (80), (81), that all Aas «¢&’, that is, by Lemma 3.5.3, 
+Aage&. So 
+
+
+Wa,g(x) a (complex-valued) I'-measurable, bounded function of z. 
+(83) means, owing to (78), that 
+
+
+(85) Aap = a, - 
+Substituting (84) into (85) transforms it into Ly, = paz that is 
+(86) Wag(X) = Waas! par 
+
+
+except for an z-set of u-measure 0. 
+If we put ap = 8B, and write x,(x) for w,,:(x), then (86) specializes to 
+
+
+(87) Waa(t) = Xas-1(28 
+
+
+except for an x-set of u-measure 0. 
+Again (87) obviously implies (86). 
+So A eI’ is equivalent to (84), (87), that is, to 
+
+
+(88) Aas Ly (28-1) 
+
+
+This completes the proof of (i). 
+
+Ad (ii), (iv): Since W is unitary, 2 WF is an automorphism of 9%, since 
+
+W = W"”, W’ =I (by (iv) in Lemma 3.6.2), this automorphism is involutory. 
+This automorphism carries an operator A in 9° into the operator WAW. 
+Hence it carries Lez) into Mera) (by (iv)—(vi) in Lemma 3.6.2), and 
+so Jinto J. Hence it carries J’ into J’. 
+_So the general A: J’ obtains by forming A, = WA,W for the general 
+A,eJ. Or (by (iv) in Lemma 3.6.2) equivalently by forming WA,W. Now 
+(88) gives the Aas of the general A; ¢ J’, hence (79) permits us to find the Aas 
+of the general Az, e J’. We obtain in this way for the latter Aa g : 
+
+
+(89) Aes = Us 
+
+
+| 
+} 
+( 
+| 
+| 
+| i 
+i; 
+
+
+ON RINGS OF OPERATORS, III 143 
+
+
+But since Ue = = Uphy,-i,(2) , (89) can also be written 
+(90) Aap = 
+
+
+This completes the proof of (ii). 
+And we have also established all properties of = W£ claimed by (iv). 
+Ad (iii): Immediate by (iv). 
+Remark: We have also seen (in the proof of (ii), (iv) above), that f= WF 
+carries J into J. And since it is involutory (cf. (iv) above), it also carries 
+
+
+Jinto J. 
+DerFINITION 3.6.1. (i) We denote the set of all systems x,(x), y € 9, which 
+
+
+occur in (i) or in (ii) in Lemma 3.6.3 (both are the same, cf. (iii) eod.) by Xo. 
+(ii) We denote the relation between an Ae SJ’ or an Ac J’ and a system x,(z), 
+7 €9, from Xo , as described in (i) or in oe) in Lemma 3.6.3, respectively, in both 
+
+
+cases by 
+A= [xo(z); 7 € 9}. 
+
+
+Lemma 3.6.4. = J, = J. 
+Proor: Since the involutory automorphism 2 WF of 98 interchanges J 
+
+
+and g (ef. (iv) in Lemma 3.6.3 and the remark after this lemma), and conse- 
+
+
+quently also R(J), J and R(J), J’, it suffices to prove R(J) = J. 
+Proof of R(9) € J: Oné verifies immediately, for A = Ua, 
+
+
+p(x) that 
+
+
+= fora = B 
+Acs 0” otherwise |” So we have Aag = Ly,-19(2)Us-14, 
+
+
+g(x) fory = 1 
+{= 0 otherwise |’ 
+
+
+respectively. So A ¢ J’ by (ii) in Lemma 3.6.3. 
+We have thus proved JC J’. Since J’ is a ring, this implies R(J) C J’. 
+Proof of R(J) D J’: Consider any A « I’, Be J’, then we have by Lemma 
+3.6.3, Aas Ly 5 Bas = Put = AB, D = BA, 
+then (1), pp. 136-137, (iv) in Lemma 2.4.3, gives: 
+
+
+= Ay,pBa,, Ly. -1(28-1) Log-14(2) U,-14 
+
+
+= lfory=a 
+= 0 otherwise 
+
+
+where { 
+
+
+ve 
+
+
+71«G 
+
+
+| 
+
+
+144 J. Vv. NEUMANN 
+
+
+(we replaced the summation index y by ay), and 
+
+
+1€G 
+
+
+(we replaced the summation index 7 by By). Remembering that the order of 
+summation does not matter in the above >),. g (cf. loc. cit. above), we see from 
+
+
+the above equation that Cas = Da, for all a, Be. That is:C = D, or in 
+other words: AB = BA. Since J is a ring, and A eS’ arbitrary, this means 
+that Be J’. And as Be J’ was arbitrary, so we have J’ C J”. 
+
+As Ie I(I = U;), so = JI” by (5), p. 397, Theorem 7. Hence we have 
+J CRI). 
+
+The proof is thereby completed. 
+
+Lemma 3.6.5. Put M = R(J) = SF. ThenOW = K(J) = I, and M, MW 
+are factors (in the sense of (1), p. 1388, Definition 3.1.2). 
+
+Proor: Clearly Dl’ = R(J)’ = JI, this and Lemma 3.6.4 prove all our equa- 
+tions. It remains for us to prove that 9, OM’ are factors, that is that 
+A implies A = aJ. 
+
+Consider an A Then A eM = J’ and A eM’ = J’, hence Lemma 
+3.6.3 gives that 
+
+
+(91) Aas = Ly 
+and 
+
+
+simultaneously. Comparing (91), (92), and using Lemma 3.5.4 gives: 
+
+For 1, that isa ¥ B: = = 0, except for an z-set 
+of u-measure 0. That is: In this case (91) gives Aas = 0. 
+
+For Ba = 1, thatis a = B: xi(z8') = w(z), except for an x-set of u-measure 
+0. Comparing herein 8 = 1 with the general Be gives x4(x6") = xi(2), 
+with the same exceptions. Since G is ergodic, this gives, by Lemma 3.3.2 (with 
+xi(z), 8’ in place of f(x), a): x(x) = a, except for an x-set of y-measure 0. 
+Hence (91) gives Aaa = La = al. 
+
+So we see: 
+
+
+A = al fora = 8, 
+| — otherwise 
+
+
+that is: A = aJ. Thus the proof is completed. 
+
+
+| 
+| 
+| 
+i 
+| 
+a 
+i 
+\ 
+; 
+| 
+| 
+i 
+| 
+: 
+
+
+ON RINGS OF OPERATORS, III 145 
+
+
+3.7. We derive now the basic rules of algebraica! computation in the factors 
+mM, OW. 
+
+Lema 3.7.1. Both in M and in MW’ the following rules of computation hold: 
+If A = 9}, B = 7 = 7 9} (all of them eM, 
+or all of them « M'!), then we have: 
+
+(i) If C = aA, then n,(x) = ax,(z). 
+
+Gi) = A*, then = 
+
+(iii) =A+ B, then = xy(x) + &,(z). 
+
+(iv) = AB, then n,(t) = The converges 
+“en mesure’”’ (cf. the precise description of this notion at the end of the proof), irre- 
+spective of the order in which the a €G are gone through. 
+
+Proor: Considering (iv) in Lemma 3.6.3, it suffices to consider the case 
+where A, B,C «9. We prove the statements (i)-(iv) for this case in a some- 
+what changed order: 
+
+Ad (i), (iii): Immediate by (i), (iii) in (1), pp. 1386-137, Lemma 2.4.3. 
+
+Ad (ii): This follows from (ii), loc. cit. above, by the following consideration: 
+Cas = » Cas = Apa » = that 
+is ny(2) = 
+
+Ad (iv): Apply (iv), loc. cit. above. We have Cag = Ly,5-1(28-1), Cap = 
+the sense of strong convergence, irrespective of the order of theye%. So we 
+have = Dove Putting 6 = 1 and writing a, 7 
+in place of y, a this becomes: 
+
+
+(93) Ly) = 
+
+
+in the sense of strong convergence, irrespective of the order of the a e%. 
+Consider now an M eT with a finite u(M), and form 
+
+
+= lforreM 
+Ou(2) {= 0 otherwise 
+
+
+Then 0% € Ss , and so (93) implies: If a: ,  , --- is an enumeration of §, then 
+
+
+lim | Ou — 3 = 0. 
+That is 
+[ ny(x)Ou(x) — Xa; "(waz )Ou(x) | = 0, 
+(94) lim ny(x) mg Xa, d,x = 0 
+
+
+a | 
+{ 
+
+— | 
+
+
+146 J. Vv. NEUMANN 
+
+
+So we have for every « > 0 and M eT with a finite u(M), owing to (94): 
+
+
+That is: converges “en mesure” to 7,(x). As &, 
+a, --- was an arbitrary enumeration of § this proves (iv). (Of course, if § 
+is finite, the convergence considerations are unnecessary, the finite sum i 
+being simply equal to 7,(z).)— 
+
+We sum up the results obtained so far. 
+
+TueoreM VIII. Let S be a fixed set, T a separable Borel-system in S (Defini- 
+tions 3.2.1, 3.2.3), » a T'-measure in S (Definition 3.2.4) and S an S, T, u-group 
+(Definitions 3.3.1-3.3.3; hence G is, in particular, finite or enumerably infinite), 
+which is free and ergodic (Definitions 3.3.4, 3.3.5). Form the unitary (finite 
+
+
+dimensional Euclidean or Hilbert) spaces Ss, ©°, $2 (Definitions 3.2.6, 3.4.1). 
+In 9% form the operators Ua, , Va,, W, Lez); (Lemma 3.6.1). Let 9 be 
+the set of all Ua, Lez and § the set of all Va, , Mew. Then we have: 
+
+
+M = R(I) = JS isaring, its’ is WM = KR(J) = I. 
+
+
+F <= WEF is an involutory automorphism of 99 which interchanges J, R(9), JI’, 
+M and J, R(J), J’, M’. MM, MU are factors. The general element A ¢€ OM or 
+A has a representation A = {x,(x); y 9} (Definition 3.6.1), for which the 
+rules of algebraical computation are known (Lemma 3.7.1). 
+
+Proor: This is merely a restatement of the essential results of various Defini- 
+tions and Lemmas in §§3.2-3.7. Besides those mentioned in the text, cf. also 
+Lemmas 3.6.4, 3.6.5, (iv) in Lemma 3.6.3, and finally (i), (ii) in Lemma 3.6.3.— 
+
+The results and notions enumerated in Theorem VIII will be made use of 
+throughout what follows, without being referred to explicitly. 
+
+We conclude this section by two lemmata on certain special operators in Il 
+and 9’. (All -relations in both of them are to be understood to hold with 
+the exception of z-sets of u-measure 0 only.) 
+
+Lemna 3.7.2. Assume A eM or M’, A = {x(z);y eG}. Then we have: 
+(i) A is Hermitean if and only if x(x) = x,-1(ay") for all y «. This implies 
+
+that xi(x) is real. 
+(ii) If A is definite, then x4(x) = 0. 
+(iii) If A is definite and x(x) = 0, then A = 0. 
+
+Proor: Considering the isomorphism F 2 WF of MM, MN’ (ef. in particular 
+(iv) in Lemma 3.6.3), it suffices to consider the case A ¢ DW. 
+
+Ad (i): A = {x,(z); y€9}, A* = {x,-1(ey"); y A Hermitean means 
+A = A*, that is = x,-1(zy"). For y = 1 this becomes xi(z) = (2); 
+sO must be real. 
+
+
+| 
+| 
+| 
+ay 
+ts 
+f 
+j 
+
+
+ON RINGS OF OPERATORS, III 147 
+
+
+Ad (ii): Consider an f ¢ $s and define 
+
+
+‘= f(x) fora =1 
+F(a, a) 0 otherwise 
+
+
+Then Fe 98 , and as A is definite, (AF, F)/8 = 0. Now one verifies easily that 
+(AF, = [ | f(x) | dy. So we see: 
+
+
+(96) [ xi(x) | f(x) |’ 20 forevery fe Ss. 
+If M eT, »(M) finite, we can put 
+
+
+fla) = { 
+then f € Hs , and (96) becomes 
+
+
+= lforreM 
+= 0 otherwise 
+
+
+(97) [ x(x) 2 0. 
+
+
+Now x(x) is real by (i) above. Consider the 7, 7, .-- of (iii) in Defini- 
+tion 3.2.4, and put M = (x; x(x) < 0)-T. Then u(M) S u(T), hence it 
+is finite, so (97) holds. And as x(x) < 0 for all ze M, so u(M) = 0. Thus 
+x(x) 2 0 for all x « 7 (exceptions as above!). Summing over i = 1, 2, --- 
+gives xi(x) = 0, unrestrictedly. 
+
+Ad (iii): Consider an ap € §, a9 ¥ 1, and twof,ges. Define 
+
+
+= f(x) fora =1 
+F(x, a) 4 = g(x) for a = a}. 
+= 0 otherwise 
+
+
+Then Fe 98 and, as A is definite, (AF, F)8 =0. Now one verifies easily, con- 
+sidering x:(r) = 0 that 
+
+
+(98) = dy + dy (2). 
+
+
+Now by (i), xa,(2) = xXez1(za0"), so the second term in (98) is the complex 
+conjugate of the first one. Hence (98) becomes 
+
+
+(99) (AF, AS = 
+
+
+By (99), (AF, F)8 = 0 states that 
+
+
+(100) [ dyx = 0. 
+
+
+| 
+| | | 
+| 
+’ 
+j 
+a 
+| 
+j 
+Pe 
+
+
+148 J. Vv. NEUMANN 
+
+
+If M «eI, u(M) finite, we can put 
+
+
+= 1forreM 
+f(z) 0 otherwise 
+
+
+? 
+
+
+= —sgn for eM” 
+g(z) 0 otherwise 
+
+
+then f, g € Hs , and (100) becomes 
+
+
+(101) [| | dye 
+
+Thus xa,(z) = 0 for all ze M (exceptions as above!). Now with the 7”, 
+T®, ..+ of (iii) in Definition 3.2.4 we may put M = 7 and sum over i = 
+2, 5 this gives xa,(x) = 0 unrestrictedly. 
+
+
+_ So we hae Xe(t) = Ofora #1. Fora = 1it holds by assumption. Thus 
+A = 0.— 
+
+The statements which follow will be made for 9 only, but the automorphism 
+Fa Win 98 (cf. in particular (iv) in Lemma 3.6.3) extends them immediately 
+to IN’ too 
+
+DeFIniTION 3.7.1. (i) We denote the set of all Lez) by &. 
+
+
+(ii) For every M eT put E(M) = , where {= 
+
+
+Lemma 3.7.3. (i) is an Abelian ring we have 
+L= M-L. 
+(ii) The projections in £ coincide with the E(M ). 
+
+Proor: Ad (i): It suffices to prove £= OM- ‘©’: Since M- Lis is clearly a ring, 
+it proves that © is also a ring, and implies ec OM, and also ec £&, that is, 
+that £ is Abelian. 
+
+Proof of CM-L’: La eI C = M, so LCM. Every com- 
+mutes with every , and Li, = Ly , hence it is so Hence 
+M-L. 
+
+Proof of > M.-L’: Consider an A Since A eM, s0 A {x,(z); 
+Since A £’, so A commutes with every Lye). Now Lye) ~ {o(x)5y; 
+where 
+
+
+lfory = 1 
+= 0 otherwise | 
+
+
+for oxo 
+. So always | sgna <1 and 
+
+
+2 For any complex a sgn a | | | 
+=0 for a=0 
+
+
+asgna = |al}. 
+
+
+| 
+H 
+i 
+| 
+i 
+i 
+| | 
+| 
+— 
+| 
+
+
+_ ON RINGS OF OPERATORS, Itt 149 
+So Led = € 9}, AL ge = € 9}. That is 
+
+
+Put 
+
+
+= {= 
+
+
+= 0 otherwise |’ 
+for an M eT, then (102) becomes 
+(103) x(t) = 0 for or 
+
+
+Now let M run over all elements of the finite or enumerably infinite system A 
+in Definition 3.2.3; owing to (ii) eod. (103) becomes, if we sum over all M ¢€ A: 
+
+
+(104) Xr(xz) = 0 
+if zy ¥ x that is, if x ~ vy. Now if y ¥ 1, then since § is free, this means 
+that (104) holds without any further So x,(r) = (6, as 
+above), and hence A = Ly,;2) (see above), and therefore Ae&. 
+Thus we have shown that 9N-L’ C L, and thereby completed the proof. 
+Ad (ii): That an A ¢ & is a projection, means this: A = Ly) and A = A*, 
+A =A’. But A* A’ = Lye): , so it means g(x) = = o(z)’. 
+That is: g(x) = 0,1. But these g(x) are precisely the 
+
+
+{= lforzeM 
+
+
+= 0 otherwise 
+for all M € I, and so the A are the L,,.2) = E(M) for all M eT 
+
+
+CuapTeR IV. DETERMINATION OF THE CLASSES OF 9, ON’ 
+
+
+4.1. The essential distinction which has to be made when determining the 
+classes of MN, MU, is whether the S, I, u-group % is measurable or not. (Cf. 
+Definition 3.3.6.) 
+
+Consider first the case when $ is measurable. This means that a I'-measure 
+v as described in Definition 3.3.6 exists, or, equivalently, that a function «(zx) 
+as described in Lemma 3.3.3 exists. 
+
+In this case it is possible to replace u by v altogether: § is an S, I’, »-group 
+as well as an S, I’, u-group, and its being free and ergodic depends only on the 
+
+
+sets of measure 0—which are the same for u and forv. s,r,, and 9%. 2 become 
+Ds,r,, and 92. if we replace f(x) and F(x, a) by (x(x))* f(x) and («(x))*F(x, «) 
+respectively. That is: This replacement compensates for the changes brought 
+about by substituting v for » in s and 98. And finally (ii) in Lemma 3.3.3 
+
+
+shows that this replacement has also the right effect in the definitions of U b's 
+W, Lote) ; Mow . 
+
+
+1 forzeM | 
+| f 
+| 
+
+
+150 J. ¥. NEUMANN 
+
+
+In other words: If § is measurable at all, then we may even assume that 1 
+itself has the properties required for v, especially (ii) in Definition 3.3.6. That is: 
+
+
+(105) = u(Ma) = = 1. 
+
+
+This means, however, that for a measurable § our DN, MI’ coincide essentially 
+with those of (1), pp. 192-204, and so the exhaustive discussion given loc. cit. 
+disposes of our ON, M1 also in this case. Indeed, it is for the sake of the not 
+measurable %, to be discussed in §§4.3-4.4 below, that this work was under- 
+taken. (They correspond to case (III,,), cf. Theorem IX.) 
+
+We shall nevertheless, for the sake of completeness, discuss the measurable % 
+also, and that without bothering about replacing » by v. We shall, however, 
+keep this discussion as short as possible, and not enter into questions which 
+could also be answered now: Find criteria for normedness, expressions for 
+Toy (A), [[A]], KA, ete. 
+
+
+4.2. We assume throughout this section that § is measurable, and make use 
+of the (essentially unique) v, x(x) of Definition 3.3.6 and Lemma 3.3.3. 
+All our results, throughout §§4.2-4.4, will be stated and proved for 9M only: 
+
+
+The automorphism f= WF of 98 (cf. in particular (iv) in Lemma 3.6.6) extends 
+
+
+them immediately to SI’ too. 5 
+DerinitIon 4.2.1. If A ¢€ MM is definite, then we have for A =~ {x,(x); y €9} 
+(by (ii) in Lemma 3.7.2) x(x) 2 0. Hence we can certainly form the integral 
+
+
+[ (ee) dr. 
+
+
+Its sg value is = 0, but it may be finite or infinite. We denote this value 
+
+by T'(A). 
+Lemma 4.2.1. We have for A, B, C eM, A, B definite: 
+
+(i) 05 7T°(A) +e. 
+
+(ii) T°(A) > Oif A ¥ O. 
+
+(iii) T°(A + B) = T°(A) + T°(B). 
+
+(iv) C = {x,(x); 7 eS}. C*C, CC* are both eM and definite, and 
+
+
+= T'(CC*) = dye. 
+
+
+(Since all terms in this ye <Q are 2 0, tt ts clear what it means.) 
+Proor: Ad (i): Immediate by (ii) in Lemma 3.7.2. 
+
+Ad (ii): Immediate by (ii), (iii) in Lemma 3.7.2 
+
+Ad (iii): Obvious 
+
+
+| 
+{ 
+i 
+ie 
+j 
+lig 
+j 
+i 
+= 
+i 
+
+
+ON RINGS OF OPERATORS, III 151 
+
+
+Ad (iv): O*€, CC* € MM along with ¢ MM, their definiteness is obvious. We have 
+C = € 9}, C* = €G}, hence CC* = {p,(x);y € 9} with 
+p(x) Hence for y = 1 
+
+
+(106) p(x) = | xa(x) 
+
+
+These Doae g converge “en mesure” in the sense of (iv) in Lemma 3.7.1. But in 
+the oa. g of (106) all terms are 2 0, hence it converges numerically (to finite or 
+
+
+infinite values). Hence both limits agree, and (106) holds in the sense of 
+numerical convergence. 
+
+
+Now = [ hence (106) gives: 
+(107) T*(CC*) = [ | xa(x) |? x(x) 
+
+
+We replace C by C*, that is x(x) by xa-1(za"). Then (107) becomes, if we 
+also replace the summation index a by a’: 
+
+
+(108) T(C*C) = [ | x(x) dy 
+
+
+Now by (iii) in Lemma 3.3.1 and (ii) in Lemma 3.3.3 we have always [ flea) 
+
+
+a) de [ f(x)«(z) dye, hence the right sides of (107) and (108) are equal. 
+
+
+Therefore they combine to 
+
+
+(109) T(C*C) = T°(CC*) = | | x0(x) dz, 
+g 8 
+
+
+which completes our proof. 2 
+Lemma 4.2.2. (i) If E runs over all projections « MN, then T°(E) is always 
+defined, and it is a relative dimension function in the sense of (1), p. 165, Definition 
+8.2.1. Wenow assign to the relative dimension function Day (E) this normalization: 
+= T*(E). 
+
+
+(ii) We have for the E(M) of (ii) in Definition 3.7.1., M «T: 
+
+
+= f(a) = 
+
+
+(ili) There exists an M €T with v(M) ¥ 0, ~. 
+
+
++3 
+i ul 
+| 
+
+
+152 J. V. NEUMANN 
+
+
+Proor: We prove these statements in a somewhat changed order: 
+Ad (ii): We have E(M) = Loy 2) , where 
+
+
+{ lforze M 
+
+
+= 0 otherwise | 
+Now this means (cf. also the proof of (i) in Lemma 3.7.3) E(M) = Lp, = 
+{Ou(x)6, ; y where 
+
+
+lfory =1 
+7 | = 0 otherwise |" 
+
+
+So by Definition 4.2.1. 
+(110) 1(E(M)) = [ = [ een = 
+
+
+As soon as we shall have proven (i) and thereby established Doy(E(M)) = 
+T° (E(M)), (110) will go over into the formula we want to prove. 
+
+Ad (iii): Consider the T®, T®, -- - of (iii) in Definition 3.2.4. If all »(7) = 
+0, then summation over all 7 = 1, 2, --- would give »(S) = 0, hence equiva- 
+lently u(S) = 0, which is not the case. Hence there exists anz = 1, 2, --- with 
+»(T) #0. Since we have also »(7”) # «, this completes the proof. 
+
+Ad (i): Since every projection is definite, therefore for every projection 
+E «M T(E) is defined (Definition 4.2.1) and = 0, S$ + © ((i) in Lemma 4.2.1). 
+And T°(E) # 0, ~ does occur: Put FE = E(M) for an M from (iii) above, and 
+use the already established part of (ii) above, (110): T°(E(M)) = »(M) + 0, . 
+
+Therefore the character of T°(Z) as a relative dimension function can be 
+established by (1), p. 170, Lemma 8.3.5: It suffices to show that T°(Z) fulfills 
+the conditions (ii), (iii) in (1), p. 165, Definition 8.2.1. 
+
+Proof of (ii) eod.: We must show that E ~ F(... ON) implies 7°(Z) = 
+T°(F). By (4), p. 151, Definition 6.1.1, and p. 141, Lemma 4.3.1, it implies 
+E = U*U, F = UU*. Hence T°(£) = T°(F) by (iv) in Lemma 4.2.1. 
+
+_ Proof of (iii) eod.: We must show T°(E + F) = T°(£) + T°(F) for orthogonal 
+E, F. Now this is immediate by (iii) in Lemma 4.2.1. 
+
+This completes the proof. 
+
+Coro.uary: SM belongs to the classes (I) or (II). (G is assumed to be meas- 
+urable!) 
+
+Proor: (ii), (iii) above together show that a projection M with Day (EL) 
+~ 0, ~ exists. So 9 is not of class (III).— 
+
+A precise determination of the class to which Sil belongs, when $ is measurable, 
+could now be carried out. Owing to the above Corollary the possibilities are 
+these: (In) (n = 1, 2, ---), (I,), (Il), (II,,). But since this discussion would 
+coincide in all details with that one of (1), pp. 204-208, we omit it. The reader 
+is referred to that work, and especially to the complete enumeration of the 
+results in (1), p. 208, Theorem XII. (The réle of u there is played by our ».) 
+That theorem shows in particular that all the cases enumerated above do actually 
+arise when S, %, u are chosen suitably. 
+
+
+| 
+| 
+a: 
+| 
+; 
+U 
+. 
+ie j 
+
+
+ON RINGS OF OPERATORS, III 153 
+
+
+4.3. Later in this section we shall make the assumption that 9 is not meas- 
+
+
+urable. 
+Without knowing what the class of 9 is, we shall nevertheless use its relative 
+
+
+dimension function Doy(#). (Cf. (1), p. 165, Definition 8.2.1, and p. 168, 
+Theorem VII—it does not matter now in which normalization.) We shall see 
+ultimately, in Lemma 4.3.5, that the class is (III,,), and hence the range of 
+Do (EB) consists of 0, «& only—but this need not concern us now. 
+We begin by investigating the Day(H#(M)), M « I (ef. (ii) in Definition 3.7.1). 
+Lemma 4.3.1. (i) If Mi, Me, --- andi j implies = 9, then 
+
+
+Doy(E(M, + M2 + ---)) = Dog (E(Mi)) + Don(E(M2)) 
+(ii) If M eI, then for all aeG 
+(E(M)) = Doy(E(Ma)). 
+
+
+Proor: Ad (i): One concludes immediately from (ii) in Definition 3.7.1 that 
+E(M) is the projection of the following closed, linear set I2(M): 
+
+
+(111) E(M) = Pray, = (F;F(a,a) =0 if 
+
+
+Now it is clear that under the above assumptions on M,, M2, --- Dt(M; + 
+M. + ---) = [Mt(Mi), Mt(Me), ---], and the Mt(M:), --- are mutually 
+orthogonal. Hence (1), p. 168, Lemma 8.3.2. gives Doy(E(Mi + Me+ ---)) = 
+Dg (E(Mi)) + Doy(E(Mz)) + - -- as desired. 
+
+Ad (ii): Ua (ef. (i) in Lemma 3.6.1) is unitary and e JC R(J) = Mi, and it is 
+clear from (111) that VU. maps I(M) on M(Ma). Hence U,E(M) is partially 
+isometric and has the initial set @(M) and the final set Mt(Ma). So M(M) ~ 
+M(Ma) (.-- Ml) andhence Doy(E(M)) = (E(Ma)) by (1), p. 151, Definition 
+6.1.1., and p. 165, (ii) in Definition 8.2.1. 
+
+Lemma 4.3.2. There are only the two following alternatives: 
+
+(a) For no M eT is Day(E(M)) 0, ~. 
+(b) There exists a sequence M,, Mz, --- T,Mi + M2 + --- = S, such that all 
+Dey (E(M,)) ~ 0, ~. 
+
+Proor: Define a subsystem K of I as follows: M « K if and only if there exists 
+asequence M,, Mz, --- el with M; + Mz +--- =M, suchthatall Doy(E(M,)) 
+#0, 
+
+Observe: 
+
+
+(112) M°M®,...¢K imply €K. 
+
+
+Indeed: Form the sequence M{”, M$” , --- for M (i = 1, 2, --- , ef. above), 
+then M$”, i,j = 1,2, --- , written as a simple sequence M;, M2, --- will do for 
+M® +M®4.... Next: 
+
+
+(113) MeK implies MaeK forevery ae¥%. 
+
+
+| 
+j 
+
+
+154 J. V. NEUMANN 
+
+
+Indeed: If M,, Mz, --- do for M, then Mia, Moa, --- will do for Ma con- 
+sidering (ii) in Lemma 4.3.1. And finally: 
+(114) If MeK,MCM’, u(M’ — M)=0, then M’eK. 
+
+
+Indeed: Form the sequence M,, M2, --- for M, then replace M; by M, + 
+(M’ — M) and leave Mz, M;, --- unchanged: This sequence will do for M’. 
+Consider now the T, T®, --- of (iii) in Definition 3.2.4 for u. Define: 
+
+
+(115) a; = Least upper bound of (u(M-7); M € K). 
+
+
+For i, 7 = 1, 2, --- we can choose an M;,; with 
+
+
+(1i8) 
+
+
+Write the M;,;, i, 7 = 1, 2, ---, as a simple sequence M, M®,.--. Then 
+by (112) Mi; = M® +M® + ... €K, thatis 
+(117) M K. 
+
+
+t,j=1 
+
+
+We have u(if-T) = u(Mi;-T®) = a; — Since this holds for all j = 1,2, 
+
+
+., aad w(M-T) does not depend on j, so it implies u(M-T) = a;. By 
+(115), (117) also n(M-T) S a;, so 
+(118) u(M.T”) = a;. 
+
+
+Now consider an M eK with M > M. Then we have M.T° D MT 
+and both sets are C7”, so their u are finite. This, together with (115), (118), 
+gives: 
+
+u((M — M)-T®) = p(M.T® — M-T®) 
+= n(M-T) — a; — a; = 0, 
+
+
+that is: 
+
+
+(119) u((M — M)T) = 0. 
+Summing over 7 = 1, 2, --- and restating our hypothesis, we obtain: 
+(120) If MeK and MDM, then u(M — M =0. 
+
+
+(117), (118) give for every a Mae K. Hence by (112) M + Mae K (put 
+M® = M,M® =M® =...=Ma). SoM = M + Ma fulfills the hypotheses 
+of (120), and therefore 
+
+
+(121) u((M + Ma) — M) = 0. 
+
+
+| 
+= 
+i 
+in 
+| 
+! | 
+al 
+2 ow 
+| 
+| 
+if 
+
+
+ON RINGS OF OPERATORS, III 155 
+
+
+Replacing a by a” in (121) gives n((M + Ma") — M) = 0, hence u(((M + 
+Ma") - M)a) = 0, that is 
+(122) u((M + Ma) — Ma) = 0. 
+
+
+Summing (121), (122) gives: . 
+(123) + Ma) — (if. Ma)) = 0. 
+Since (123) holds for all a eG, and since $ is ergodic, we must either have 
+(124a) u(M) = 0 
+or 
+(124b) u(S — M) = 0. 
+Case (124a): Consider any M eT with Doy(E(M)) ~ 0, ©. Then we see, 
+by replacing the M,, M2, --- of M by M, Mi, Me, +++, that M + McK. ’ 
+M + M fulfills the hypotheses of (120), hence u((M + M) — M) = 0. This | 
+and (124a) give together «(M + M) = 0, hence u(M) = 0. Now (ii) in Defini- 
+tion 3.7.1 shows E(M) = 0 and so Day (E(M)) = 0, which contradicts our as- 
+sumption. 
+So we have never Doy(E(M)) ¥ 0, ~, which is the alternative (a). 
+Case (124b): (117), (124b), and (114) give together S«K, which is the 
+alternative (b). 
+Lemma 4.3.3. If the alternative (b) of Lemma 4.3.2 holds, then $ is measurable. 
+Proor: For every M «¢ T define 
+
+
+= Doy(#(M)). 
+
+
+This vy is a [-measure, because it fulfills the conditions (i)—(iv) of Definition 
+3.2.4. Indeed: 
+Ad (i), (ii): Obvious. 
+Ad (iii): Immediate by (b) in Lemma 4.3.2, if we put M,, Me, --- for T, 
+Ad (iv): Coincides with (i) in Lemma 4.3.1. 
+
+We now prove the measurability of § by showing that this y also fulfills the 
+conditions (i), (ii) of Definition 3.3.6. Indeed: 
+
+Ad (i): »(M) = 0 means Doy(E(M)) = 0, that is E(M) = 0, that is, by (ii) in 
+Definition 3.7.1, L9,,(2) = 0. But this is clearly equivalent to u(M) = 0. 
+
+Ad (ii): Coincides with (ii) in Lemma 4.3.1. 
+
+This completes the proof.— f 
+
+We next derive a property of the operation A'”*!*'" (ef. Definition 2.1.2). h ; 
+
+Lemma 4.3.4. Since L OM is an Abelian ring (by (i) in Lemma 3.7.3), so every 
+sequence of projections BE, , E2, --- ¢ & is commutative and hence for every A «MN | 
+of finite rank A'*1'®*|-~- can be formed and is M (by Definition 2.1.2). : 
+
+Put A = {xy(x);y = € 9}. 
+
+
+q 
+: 
+
+
+156 J. V. NEUMANN 
+
+
+Then 
+xi(t) = x1 (x), except for an x-set of u-measure 0. 
+Proor: All z-relations in this proof are to be understood to hold with the 
+exception of z-sets of u-measure 0 only. 
+We define 
+
+
+(125) = {y™ (2): y € forn = 1,2,..., 
+and proceed in several successive steps: ' 
+Proof of = x{? (x): We have 
+(126) = BAR, + I — 
+Now EB, e &, so by (ii) in Lemma 3.7.3, = E(Mi) for an MieT. Thatis, 
+E, = Ley, , 
+bw, (x) = lforxre M, 
+ms = 0 otherwise |" 
+This means, as we know, EF; ~ €$}, 
+PY lfory =1 
+7 | = 0 otherwise |’ ( 
+This and A = {x,(x); 7 € 9} give, owing to (126): 
+= (ay) + (1 — Ou, (2)) (1 — Ou, € 9}. 
+Hence by (125): 
+(127) = (x) + (1 — Ou, — Ou, 
+Put y = 1 in (127); then, since 6u(x) = 0, 1, it goes over into x{”(x) = xu(z). ( 
+Proof of xi” (x) = (x) (for n = 1, 2,---): We proved x(x) = x{”(2). 
+Replace A, EF, by then this becomes x{"(z) = x{"*? (z). ( 
+Combining the two above results gives: | 
+Proof of x1(x) = xi (x): We have (by Definition 2.1.2) 
+That is: For every 99 || = 0, and hence 
+for all F, H 
+
+
+(129) lim agg, — = 0. 
+
+
+Hi, 
+{ 
+j 
+| 
+ij 
+i ry 
+a 
+Ags 
+
+
+ON RINGS OF OPERATORS, III 157 
+
+
+Choose any f, g ¢ Ss , and define 
+f(z) fora =1 
+Fa, 0 otherwise |’ 
+g(x) fora =1 
+0 otherwise |’ 
+
+
+then F, He SY, and 
+
+
+Hence (129) becomes 
+lim @) — xi f(z)g(z) d,x = 0, 
+
+
+or, considering (128), 
+(130 [ cae) dye = 0. 
+
+
+If M eT, u(M) finite, we can put 
+
+
+=1 for reM 
+f(z) 0 otherwise 
+
+
+sgn (x oy —xi(z)) for teM 
+otherwise 
+
+
+(cf. footnote”), then f, g ¢ Ss , and (130) becomes 
+
+
+(131) xi(z) — | dx = 0. 
+Thus = x1 (zx) for all z M (exceptions as above!). Now with the 7, 
+ae - of (iii) in Definition 3.2.4 we may put M = 7°”, and sum over i = 1, 2, 
+gives xi(x) = xi (zx) unrestrictedly. 
+Thus the proof is completed.— 
+
+
+We are now in the position to take the decisive step. 
+
+Lemma 4.3.5. If G is not measurable, then OM is of class (III,). 
+
+Proor: Assume that $is not measurable. We shall show that 9M is of class 
+(III,,) by applying Lemma 2.2.2. For the @ mentioned there we shall choose the 
+£ of (i) in Definition 3.7.1. So we must only prove the hypotheses of Lemma 
+2.2.2 for @ = 
+
+
+Lis an Abelian ring CON: By (i) in Lemma 3.7.3. 
+
+
+LP, 
+ih 
+| 
+a 
+f 
+
+
+156 J. Vv. NEUMANN 
+
+
+Then 
+xi(t) = xi (2), except for an x-set of u-measure 0. 
+Proor: All z-relations in this proof are to be understood to hold with the 
+
+
+exception of z-sets of u-measure 0 only. 
+We define 
+
+
+(125) = (x); € 8} form = 1,2,-.-, 
+
+
+and proceed in several successive steps: 
+Proof of x:(x) = x{?(x): We have 
+
+
+(126) A'® = + (I — — EB). 
+
+
+Now BE, e &, so by (ii) in Lemma 3.7.3, E, = E(M;) for an MieT. That is, 
+= Loy, (2) 
+
+
+= lforre M, 
+(x) = 0 otherwise |° 
+
+
+This means, as we know, E; ~ {6u,(x)6, ;y € 9}, 
+
+
+lfory =1 
+Y | = 0 otherwise |" 
+
+
+This and A = {x,(zx); vy € 9} give, owing to (126): 
+
+= + (1 — (1 — € 9}. 
+Hence by (125): 
+(127) = Om, + (1 — Ou, (2) (1 — Om, 
+
+
+Put y = 1 in (127); then, since 0u(x) = 0, 1, it goes over into x} (xz) = x1(z). 
+Proof of xi" (x) = xi"*? (x) (for n = 1, 2, ---): We proved = x{?(z). 
+
+Replace A, by then this becomes x{" (xz) = x{"*?(z). 
+Combining the two above results gives: 
+
+
+(128) x(x) = xi? (a) xi” (a) 
+Proof of x1(x) = xi (x): We have (by Definition 2.1.2) 
+
+
+lim str len 
+
+
+That is: For every Fe 99 = 0, and hence 
+for all F, KH 98 
+
+
+(129) lim — = 0. 
+
+
+ti 
+or 
+T= 
+f 
+; 
+
+
+ON RINGS OF OPERATORS, III 157 
+
+
+Choose any f, g € Ds , and define 
+
+
+f(z) fora = 1 
+Fa, 0 otherwise |’ 
+
+
+g(x) fora =1 
+{= 0 otherwise |’ 
+
+
+then He 9%, and 
+
+
+Hence (129) becomes 
+lim Ga @) — xi (z)) f(a)g(x) d,x = 0, 
+
+
+or, considering (128), 
+(130 [ Gal) @)4@)9@) dye = 0. 
+
+
+If M eT, u(M) finite, we can put 
+
+
+=1 for reM 
+f(z) 0 otherwise 
+
+
+Guz) —xi(x)) for reM 
+
+
+otherwise 
+
+
+(cf. footnote”), then f, g € Ss , and (130) becomes 
+
+
+(131) [ - | ae = 0. 
+
+
+Thus mle) = xi(z) for all x eM (exceptions as above!). Now with the 7, 
+rap - of (iii) i in Definition 3.2.4 we may put M = 7°”, and sum over i = 1, 2, 
+this gives = xi (zx) unrestrictedly. 
+
+Thus the proof is completed.— _ 
+
+We are now in the position to take the decisive step. 
+
+Lema 4.3.5. If § is not measurable, then OM is of class (III,,). 
+
+Proor: Assume that Gis not measurable. We shall show that OM is of class 
+(III ») by applying Lemma 2.2.2. For the @ mentioned there we shall choose the 
+£ of (i) in Definition 3.7.1. So we must only prove the hypotheses of Lemma 
+2.2.2 for@ = & 
+
+
+Lis an Abelian ring CON: By (i) in Lemma 3.7.3. 
+
+
+' 
+| 
+| 
+
+
+158 J. V. NEUMANN 
+
+
+Ad (i): Thé ring MN-L’(CM) is purely infinite: By Lemmata 4.3.2, 4.3.3 
+since is not measurable, the alternative (a) of Lemma 4.3.2 holds. But this 
+means, considering (ii) in Lemma 3.7.3 and Definition 2.2.1, that £ is purely 
+infinite. 
+
+Now by (i) in Lemma 3.7.3, £ = Mi-L’, hence we have shown that M.-L’ is 
+purely infinite. 
+
+Ad (ii): For every finite projection P(e) F'*:'*2'" = 0 implies F = 0: 
+Assume F as described. Put F ~ {xy(x); y = {x} (x); 
+Then F'#:!#:!--- — Q implies xi(z) =0. (All z-relations are to be understood to 
+hold with the exception of z-sets of u-measure 0 only.) By Lemma 4.3.4, 
+xi(x) = xi (ax), hence x:(z) = 0. Now F being a projection, is definite. Hence 
+x:(x) = 0 implies, by (iii) in Lemma 3.7.2, that F = 0. 
+
+Thus the proof is completed.— 
+
+We may sum up our results as follows: 
+
+
+Tuzorem IX. Let S, I’, u be as in Theorem VIII, and form Ss, S° and 
+
+
+OM, MU’ as described there. Then we have: 
+
+If S is measurable (cf. Definition 3.3.6), then the factors MN, MW’ belong to the classes 
+(I) or (II). The precise determination of their classes is given in (1), p. 204, 
+Lemma 13.1.1, and p. 206, Lemma 13.2.1. (Cf. the end of our §4.2.) If S is not 
+measurable, then the factors N,N’ belong to the class (III) (that is, (III,,)). 
+
+
+Proor: It suffices to consider only: The automorphism of 
+
+
+(ef. Theorem VIII) extends our results from ON to MW. 
+
+Our statements concerning a measurable G result from the Corollary to Lemma 
+4.2.2, and the discussion which follows, at the end of §4.2. Those concerning a 
+non-measurable $ result from Lemma 4.3.5. 
+
+
+4.4. Examples of S, I’, 1 and G as required by Theorems VIII, IX for any one 
+of the classes (I)-(II)—that is, of free, ergodic, and measurable groups S$—were 
+given in (1), pp. 206-208, Lemma 13.2.1, and the specific examples (a) — (7). 
+So there is only one more thing left for us to do: To give examples of S, I’, » and 
+§ as required by Theorems VIII, IX for the class (III)—that is: of free, ergodic, 
+and non-measurable goups 9. 
+
+A certain class of examples was mentioned in the Introduction, §4, but we 
+shall not investigate it here. Our examples will be based on the following lemma: 
+
+Lemna 4.4.1. Let S,T, and be as described in Theorem VIII. Denote the 
+set of those a €G, for which always u(M) = p(Ma), by 8. Gp is a subgroup of § 
+and a free 8,1, u-group along with S. It is also measurable, with u for v. (Cf. 
+Definitions 3.3.3, 3.3.4, and 3.3.6.) Now we assume: 
+
+(i) Gois ergodic. (Cf. Definition 3.3.5.) 
+(ii) ¥ G. 
+Then S is not measurable. 
+
+Proor: The statements about % which precede (i), (ii) are obvious on the 
+
+basis of the definitions referred to. 
+
+
+| 
+the 
+| an 
+ae 
+ae 
+set 
+| 
+| 
+| Th 
+| On 
+| | me 
+20! 
+| 
+the 
+the 
+Le 
+fol 
+| 
+| (13 
+g} 
+| g. 
+| 
+(12 
+i 
+
+
+ON RINGS OF OPERATORS, III 159 
+
+
+Assume now (i), (ii), and, per absurdum, the measurability of §. Consider 
+the vy of Definition 3.3.6 for §. This v will also do for %. So u, v both do for 
+G. Now {% is ergodic by (i), hence Lemma 3.3.4 applies for % in place of 9, 
+and gives 4(M) = av(M) for a constant factor a > 0. Since we have for every 
+ae9 v(M) = »(Ma) by the definition of v, so this gives u(M) = »(Ma), that is 
+ae%. Hence % = 9%, which contradicts (ii). 
+
+This completes the proof.— 
+
+We can now give specific examples. 
+
+EXAMPLE (a). Let S be the set of all real numbers, I the system of all Borel 
+sets in S (in the usual sense), and » the common Lebesgue measure (for Borel 
+sets). Consider the following one-to-one mappings of S on itself: 
+
+
+(132) a(p,o):xeprta, p > 0, p, o rational. 
+
+
+These a;(p, c) form an obviously enumerably infinite group. Let $ be this group- 
+One verifies immediately that § is an S, I’, u-group, and also that it is free. 
+
+Clearly u(Ma) = pyu(M) ‘for a = a(p, «), hence the set % of all « € with 
+
+u(Ma) = »(M) consists of alla = a1, (p,c) withp = 1. So%& 
+
+G is also an S, I, u-group, and ergodic by (1), p. 206, Lemma 13.2.1, and p. 
+208, example (8). Hence % is a fortiori ergodic. 
+
+So S, I’, w and & fulfill the requirements of Theorems VIII, [X, and % fulfills 
+the conditions of Lemma 4.4.1. Hence $ is not measurable. 
+
+Observe that in this case u(S) = @. 
+
+EXxAmpLe (8): Let S be the set of all complex numbers z with | z | = 
+the system of all Borel sets in S (in the usual sense). Let » be the common 
+Lebesgue measure to be applied after S has been mapped by the mapping 
+z = e*” on the set S, of all real numbers g = 0, < 1 which can be (and in what 
+follows will be) looked at as the set of all real numbers (mod 1). 
+
+Consider the following one-to-one mappings of S on itself: 
+
+
+(133) ax(0, u) ja] =1, |u| <1. 
+These a2(@, uw) form an obviously continuous group. Denote this group by 
+8." Consider the following elements of $: The a = a2(6, u) with @ = e”, p 
+rational, uv = 0, and that one with @ = 1, wu = 3. They form an enumerably 
+infinite set, and consequently they generate an enumerably infinite subgroup of 
+Let be this subgroup. 
+
+In combining two a = a2(@, u) of (133), their 6 simply multiply. Hence the 
+9 of alla = a2(6, u) eG are the products of the 6 of those a = a2(6, u) with which 
+we started, that is: the @ = e”"”, prational. Therefore we have: 
+
+
+(134) a = a2(0, 0) 9 if and only if 6 = ¢**, p rational. 
+One verifies immediately that 9 is an S, I’, z-group, and also that it is free. 
+
+
+'’ G plays a well-known and important réle in the theory of conformal mappings. 
+
+
+; 
+F 
+: 
+
+
+160 J. V. NEUMANN 
+
+
+Let us now determine %%, a € % means that u(Ma) = u(M). Since a = a2(6, uv) 
+maps arcs on arcs, this requires that it conserve their lengths, hence, that it bea 
+rotation or a reflection. That is: 
+
+
+or 2 |@| =1. 
+
+
+(133) excludes the second alternative, and the first one means u = 0 for a = 
+a2(0, u). So Gp is characterized by u = 0, and consequently by (134). So 
+§ since a = a2(1, is but not &. 
+
+Now map S by z = e””*” on the g-set S, (cf. above). Then the mappings of 
+GY» go over from z @ ¢*”z (in (134)) into g = ¢ + p, p rational. This proves 
+that %» is ergodic (in S,, and hence also in S), by (1), p. 206, Lemma 13.2.1, and 
+p. 208, example (8). Hence $ is a fortiori ergodic. 
+
+So S, I, u and G fulfill all requirements of Theorems VIII, [X, and % fulfills 
+the conditions of Lemma 4.4.1. Hence $ is not measurable. 
+
+Observe that in this case u(S) = 1.— 
+
+Besides establishing the existence of factors 9 of class (III), the above 
+examples can also be used to determine all existing types of factorizations Mu , 
+M.. To this end we need the lemma which follows. 
+
+Lemna 4.4.2. Consider the S, T, u, $, Go and MM, MN’ of Lemma 4.4.1. Every 
+Ae W is A = {x,(x); € 9}; consider those for which = 0 whenever ¢ 
+Denote their set by MN. Then we have: 
+
+(i) Disa ring. 
+
+(ii) OW-OV = (al) (a runs over all complex numbers). 
+
+(iii) ON, Yl ts a factorization, but M, M1 are not coupled factors. (Cf. (1), p. 138, 
+Definition 3.1.3.) 
+
+(iv) The class of the factor 2 is (Il) or (II,,) according to whether u(S) is finite 
+or not. 
+
+Proor: Ad (i), (ii): Literally the same as the proof of (1), pp. 208-209, 
+Lemma 13.4.1. 
+
+Ad (iii): Literally the same as the proof of (1), p. 209, Lemma 13.4.2. 
+
+Ad (iv): For A ¢ 9%, A definite, we have also A eM, A = {x,(zx); 7 € 9} (but 
+
+
+= 0 for y ¢G!), and we define again T,(A) = d,x. Then the 
+considerations of Lemmas 4.2.1., 4.2.2, apply literally in 91 (because for a €%b 
+
+
+u(M) = u(Ma), and for all other a we have xa(z) = 0). Hence Dey (EF) = 
+
+
+To(£) for all projections E «9. Hence we see, as in the Corollary after Lemma 
+4.2.2, that 91 belongs to the classes (I) or (II). 
+
+If MN were of class (1), then MU would be a normal factor by (1), p. 184, Lemma 
+11.2.2, and hence Sl, 9 would be a coupled factorization by (1), p. 183, Lemma 
+11.1.2. This contradicts (iii) above, hence 9 is of class (II). 
+
+
+Now = To(Z) = [ 1-d,x = u(S), hence Mis of class (II;) or (1I,); 
+according to whether yu(S) is finite or not.— 
+
+
+a 
+ex! 
+col 
+re 
+(b: 
+4.4 
+(I 
+Weer 
+
+
+ON RINGS OF OPERATORS, LI 161 
+
+
+Thus Lemma 4.4.2 shows, if we avail ourselves of the above Examples (a), 
+(8), that non-coupled factorizations of the classes (II,), (III,,) and (III,) 
+exist. This shows that no analogue of (1), p. 182, Theorem X (which holds for 
+coupled factorizations) holds for non-coupled factorizations. Indeed, the only 
+restriction on non-coupled factorizations is that no factor can be of class (I) 
+(by (1), pp. 183-184, Lemmas 11.1.2, 11.2.2, cf. the above proof of (iv) in Lemma 
+4.4.2). We could also show the existence of non-coupled factorization of class 
+(III,,), (III,,), but we shall not discuss this now. 
+
+
+INSTITUTE FOR ADVANCED Stupy. 
+
+
+¥ 
+
+
+i 

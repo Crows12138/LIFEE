@@ -1,0 +1,1102 @@
+RecentContributionsto
+TheMathematicalTheoryofCommunication
+Warren Weaver
+September, 1949
+ClaudeShannon WarrenWeaver
+Abstract
+This paper is written in three main sections. In the ﬁrst and t hird, W. W. is responsible both for the ideas and the
+form. The middle section, namely “2) Communication Problem s at Level A” is an interpretation of mathematical
+papers by Dr. Claude E. Shannon of the Bell Telephone Laborat ories. Dr. Shannon’s work roots back, as von Neu-
+mann has pointed out, to Boltzmann’s observation, in some of his work on statistical physics (1894), that entropy
+is related to “missing information,” inasmuch as it is relat ed to the number of alternatives which remain possible to
+a physical system after all the macroscopically observable information concerning it has been recorded. L. Szilard
+(Zsch.f. Phys. Vol. 53, 1925) extended this idea toa general discussion of i nformation inphysics, and von Neumann
+(Math. Foundation of Quantum Mechanics , Berlin, 1932, Chap. V) treated information in quantum mech anics and
+particle physics. Dr. Shannon’s work connects more directl y with certain ideas developed some twenty years ago
+by H. Nyquist and R. V. L. Hartley, both of the Bell Laboratori es; and Dr. Shannon has himself emphasized that
+communication theory owes a great debt to Professor Norbert Wiener for much of its basic philosophy. Professor
+Wiener, on the other hand, points out that Shannon’s early wo rk on switching and mathematical logic antedated his
+own interest in this ﬁeld; and generously adds that Shannon c ertainly deserves credit for independent development
+of such fundamental aspects of the theory as the introductio n of entropic ideas. Shannon has naturally been spe-
+ciallyconcernedtopushtheapplicationstoengineeringco mmunication,whileWienerhasbeenmoreconcernedwith
+biological application (central nervous system phenomena , etc.).
+WARRENWEAVER 1 TheMathematicalTheoryof Communication
+
+1 Introductory Note on the General Setting of the Analytical Communica-
+tion Studies
+1.1 Communication
+THE WORD communication will be used here in a
+verybroadsensetoincludealloftheproceduresby
+which one mind may affect another. This, of course, in-
+volves not only written and oral speech, but also music,
+thepictorialarts,thetheatre,theballet,andinfactallh u-
+manbehavior. Insomeconnectionsitmaybedesirableto
+use a still broader deﬁnition of communication, namely,
+one which would include the procedures by means of
+whichonemechanism(sayautomaticequipmenttotrack
+anairplaneandtocomputeitsprobablefuturepositions)
+affectsanothermechanism(sayaguidedmissilechasing
+thisairplane).
+Thelanguageof this memorandumwill oftenappear
+torefertothe special,butstill verybroadandimportant,
+ﬁeldofthecommunicationofspeech;butpracticallyev-
+erything said applies equally well to music of any sort,
+andtostill ormovingpictures,asintelevision.
+1.2 Three Levelsof
+Communications Problems
+Relative to the broad subject of communication, there
+seem to be problems at three levels. Thus it seems rea-
+sonableto ask,serially:
+LEVELA. How accurately can the symbols of communica-
+tionbe transmitted? (The technical problem.)
+LEVELB. How precisely do the transmitted symbols convey
+the desiredmeaning? (Thesemantic problem.)
+LEVELC. How effectively does the received meaning affect
+conduct in the desired way? (The effectiveness prob-
+lem.)
+Thetechnical problems are concerned with the ac-
+curacy of transference from sender to receiver of sets of
+symbols (written speech), or of a continuously varying
+signal (telephonic or radio transmission of voice or mu-
+sic), or of a continuously varying two-dimensional pat-
+tern (television), etc. Mathematically, the ﬁrst involves
+transmission of a ﬁnite set of discrete symbols, the sec-
+ondthetransmissionofonecontinuousfunctionoftime,
+and the third the transmission of many continuousfunc-
+tions of time or of one continuous function of time and
+oftwospace coordinates.Thesemantic problems are concernedwith the iden-
+tity,orsatisfactorilycloseapproximation,intheinterp re-
+tation of meaning by the receiver, as compared with the
+intendedmeaning of the sender. This is a very deep and
+involved situation, even when one deals only with the
+relatively simpler problems of communicating through
+speech.
+One essential complication is illustrated by the re-
+mark that if Mr. X is suspected not to understand what
+Mr. Y says, then it is theoretically not possible, by hav-
+ing Mr. Y do nothing but talk further with Mr. X, com-
+pletelytoclarifythissituationinanyﬁnitetime. IfMr.Y
+says“Doyounowunderstandme?”andMr.Xsays“Cer-
+tainly,Ido,”thisisnotnecessarilyacertiﬁcationthatun -
+derstandinghasbeenachieved. Itmayjust bethat Mr.X
+did not understand the question. If this sounds silly, try
+it again as “Czy paﬁ mnie rozumie?” with the answer
+“Haiwakkateimasu.”Ithinkthatthisbasicdifﬁculty1is,
+at least in the restricted ﬁeld of speech communication,
+reduced to a tolerable size (but never completely elimi-
+nated)by“explanations”which(a)arepresumablynever
+more than approximations to the ideas being explained,
+but which (b) are understandable since they are phrased
+in languagewhichhas previouslybeen madereasonably
+clearbyoperationalmeans. Forexample,itdoesnottake
+longtomakethesymbolfor“yes”inanylanguageoper-
+ationallyunderstandable.
+The semantic problem has wide ramiﬁcations if one
+thinksofcommunicationingeneral. Consider,forexam-
+ple,themeaningtoaRussian ofaU.S.newsreelpicture.
+Theeffectiveness problems are concerned with the
+successwithwhichthemeaningconveyedtothereceiver
+leads to the desired conduct on his part. It may seem
+at ﬁrst glance undesirably narrow to imply that the pur-
+pose of all communicationis to inﬂuencethe conductof
+the receiver. But with any reasonably broad deﬁnition
+of conduct, it is clear that communication either affects
+conductoriswithoutanydiscernibleandprobableeffect
+atall.
+The problem of effectiveness involves æsthetic con-
+siderations in the case of the ﬁne arts. In the case of
+speech, written or oral, it involves considerations which
+range all the way from the mere mechanics of style,
+through all the psychological and emotional aspects of
+1“WhenPfungst(1911)demonstrated thatthehorsesofElberf eld,whowereshowingmarvelouslinguisticandmathematica l ability,weremerely
+reacting to movementsofthetrainer’s head, Mr.Krall(1911 ),their owner, metthecriticism inthemostdirect manner. H easked thehorseswhether
+they could see such small movements and in answer they spelle d out an emphatic ‘No.’ Unfortunately we cannot all be so sure that our questions
+are understood or obtain such clear answers.” See Lashley, K . S., “Persistent Problems in the Evolution of Mind” in Quarterly Review of Biology ,
+v.24, March, 1949, p. 28.
+WARRENWEAVER 2 TheMathematicalTheoryof Communication
+
+propaganda theory, to those value judgments which are
+necessarytogiveusefulmeaningto thewords“success”
+and “desired” in the opening sentence of this section on
+effectiveness.
+Theeffectivenessproblemiscloselyinterrelatedwith
+the semantic problem, and overlaps it in a rather vague
+way; and there is in fact overlap between all of the sug-
+gestedcategoriesofproblems.
+1.3 Comments
+Sostated,onewouldbeinclinedtothinkthatLevelAisa
+relativelysuperﬁcialone,involvingonlytheengineering
+detailsofgooddesignofacommunicationsystem;while
+BandCseemtocontainmostifnotallofthephilosoph-
+ical contentofthegeneralproblemofcommunication.
+The mathematical theory of the engineering aspects
+ofcommunication,asdevelopedchieﬂybyClaudeShan-non at the Bell Telephone Laboratories, admittedly ap-
+plies in the ﬁrst instance onlyto problemA, namely, the
+technicalproblemofaccuracyoftransferenceof various
+types of signals from sender to receiver. But the theory
+has, I think, a deep signiﬁcance which proves that the
+preceding paragraph is seriously inaccurate. Part of the
+signiﬁcance of the new theory comes from the fact that
+levelsBandC,above,canmakeuseonlyofthosesignal
+accuracies which turn out to be possible when analyzed
+at Level A. Thus any limitations discovered in the the-
+ory at Level A necessarily apply to levels B and C. But
+a larger part of the signiﬁcance comes from the fact that
+the analysis at Level A discloses that this level overlaps
+theotherlevelsmorethanonecouldpossiblynaivelysus-
+pect. Thus the theory of Level A is, at least to a signiﬁ-
+cant degree, also a theory of levels B and C. I hope that
+thesucceedingpartsofthismemorandumwillilluminate
+andjustifythese last remarks.
+2 Communication Problemsat LevelA
+2.1 A CommunicationSystem and
+Its Problems
+THEcommunicationsystemconsideredmaybesym-
+bolicallyrepresentedasfollows:
+Information
+Source
+Message Message
+Noise
+SourceTransmitter
+Signal Received
+SignalReceiver Destination
+Theinformation source , selects a desired message
+out of a set of possible messages (this is a particularly
+important remark, which requires considerable explana-
+tion later). The selected message may consist of written
+orspokenwords,orofpictures,music,etc.
+Thetransmitter changes this message into thesig-
+nalwhichisactuallysent overthe communicationchan-
+nelfrom the transmitter to the receiver. In the case of
+telephony, the channel is a wire, the signal a varying
+electrical current on this wire; the transmitter is the set
+of devices (telephone transmitter, etc.) which change
+the sound pressure of the voice into the varying electri-
+cal current. In telegraphy, the transmitter codes written
+words into sequences of interrupted currents of varying
+lengths (dots, dashes, spaces). In oral speech, the infor-
+mation source is the brain, the transmitter is the voice
+mechanism producing the varying sound pressure (thesignal)whichistransmittedthroughtheair(thechannel).
+Inradio,thechannelissimplyspace(ortheæther,ifany
+one still prefers that antiquated and misleading word),
+andthesignalistheelectromagneticwavewhichistrans-
+mitted.
+Thereceiverisasortofinversetransmitter,changing
+the transmitted signal back into a message, and handing
+this message on to the destination. When I talk to you,
+mybrainistheinformationsource,yoursthedestination;
+my vocal system is the transmitter, and your ear and the
+associatedeighthnerveisthereceiver.
+Intheprocessofbeingtransmitted,itisunfortunately
+characteristic that certain things are added to the sig-
+nal which were not intended by the information source.
+These unwanted additions may be distortions of sound
+(in telephony,for example)or static (in radio),or distor-
+tions in shape or shading of picture (television), or er-
+rorsintransmission(telegraphyorfacsimile),etc. All of
+thesechangesin thetransmittedsignalarecalled noise.
+The kind of questions which one seeks to ask con-
+cerningsucha communicationsystem are:
+a. How does one measure amount of information ?
+b. How does one measure the capacityof a communication
+channel?
+c. The action of the transmitter in changing the message into
+the signal often involves a coding process . What are the
+characteristicsofanefﬁcientcodingprocess? Andwhen
+thecodingisasefﬁcientaspossible,atwhatratecanthe
+channel convey information?
+d. What are the general characteristics of noise? How does
+noiseaffecttheaccuracyofthemessage ﬁnallyreceived
+WARRENWEAVER 3 TheMathematicalTheoryof Communication
+
+at the destination? How can one minimize the unde-
+sirable effects of noise, and to what extent can they be
+eliminated?
+e. If the signal being transmitted is continuous (as in oral
+speech or music) rather than being formed of discrete
+symbols (as in written speech, telegraphy, etc.), how
+does this fact affect the problem?
+We will now state, without any proofs and with a
+minimumofmathematicalterminology,the main results
+whichShannonhasobtained.
+2.2 Information
+The word information , in this theory, is used in a spe-
+cial sense that must not be confused with its ordinary
+usage. In particular, information must not be confused
+withmeaning.
+Infact,twomessages,oneofwhichisheavilyloaded
+with meaning and the other of which is pure nonsense,
+canbeexactlyequivalent,fromthepresentviewpoint,as
+regardsinformation. Itisthis,undoubtedly,thatShannon
+means when he says that “the semantic aspects of com-
+municationareirrelevanttotheengineeringaspects.”But
+this does not mean that the engineeringaspects are nec-
+essarilyirrelevanttothe semanticaspects.
+To be sure, this word information in communication
+theoryrelatesnotsomuchtowhatyou dosay,astowhat
+youcouldsay. Thatis,informationisameasureofone’s
+freedom of choice when one selects a message. If one
+is confrontedwith a very elementary situation where he
+has to choose one of two alternative messages, then it is
+arbitrarily said that the information,associated with thi s
+situation, is unity. Note that it is misleading (although
+often convenient) to say that one or the other message,
+conveys unit information. The concept of information
+appliesnotto the individualmessages(asthe conceptof
+meaning would), but rather to the situation as a whole,
+the unit information indicating that in this situation one
+has an amount of freedomof choice, in selecting a mes-
+sage, which it is convenient to regard as a standard or
+unitamount.
+The two messages between which one must choose,
+insuchaselection,canbeanythingonelikes. Onemight
+be the text of the King James Version of the Bible, and
+the other might be “Yes.” The transmitter might code
+these two messages so that “zero” is the signal for the
+ﬁrst, and “one” the signal for the second; or so that a
+closed circuit (current ﬂowing) is the signal for the ﬁrst,
+and an open circuit (no current ﬂowing) the signal for
+the second. Thus the two positions, closed and open, of
+a simplerelay,mightcorrespondtothe twomessages.To be somewhat more deﬁnite, the amount of infor-
+mation is deﬁned, in the simplest cases, to be measured
+by the logarithm of the number of available choices. It
+beingconvenientto use logarithms2to the base 2, rather
+than common or Briggs’ logarithm to the base 10, the
+information,whenthere areonlytwo choices,is propor-
+tional to the logarithm of 2 to the base 2. But this is
+unity; so that a two-choice situation is characterized by
+information of unity, as has already been stated above.
+This unit of informationis called a “bit,” this word, ﬁrst
+suggested by John W. Tukey, being a condensation of
+“binary digit.” When numbers are expressed in the bi-
+nary system there are only two digits, namely 0 and 1;
+just as ten digits, 0 to 9 inclusive, are used in the deci-
+mal number system which employs 10 as a base. Zero
+andone maybe taken symbolicallyto representanytwo
+choices,asnotedabove;so that “binarydigit”or“bit” is
+natural to associate with the two-choice situation which
+hasunitinformation.
+If one has available say 16 alternative messages
+among which he is equally free to choose, then since
+16=24so thatlog216=4, one says that this situation
+ischaracterizedby4bitsofinformation.
+Itdoubtlessseemsqueer,whenoneﬁrstmeetsit,that
+informationis deﬁnedasthe logarithm of the numberof
+choices. But in the unfolding of the theory, it becomes
+moreandmoreobviousthat logarithmicmeasuresarein
+fact the natural ones. At the moment, only one indica-
+tion of this will be given. It was mentioned above that
+onesimpleon-or-offrelay,withitstwopositionslabeled,
+say, 0 and 1 respectively, can handle a unit information
+situation,in whichthere are buttwo messagechoices. If
+onerelaycan handleunit information,howmuchcan be
+handled by say three relays? It seems very reasonable
+to want to say that three relays could handle three times
+as much informationas one. And this indeed is the way
+it works out if one uses the logarithmic deﬁnition of in-
+formation. For three relays are capable of respondingto
+23or 8 choices, which symbolically might be written as
+000, 001, 011, 010, 100, 110, 101, 111, in the ﬁrst of
+which all three relays are open, and in the last of which
+all threerelaysare closed. Andthe logarithmtothebase
+2of23is3,sothatthelogarithmicmeasureassignsthree
+units of information to this situation, just as one would
+wish. Similarly, doubling the available time squares the
+numberofpossiblemessages,anddoublesthelogarithm;
+and hence doublesthe informationif it is measured log-
+arithmically.
+Theremarksthusfarrelatetoartiﬁciallysimplesitua-
+tionswheretheinformationsourceisfreetochooseonly
+between several deﬁnite messages—like a man pick-
+2Whenmx=y, thenxis said to bethe logarithm of yto the base m.
+WARRENWEAVER 4 TheMathematicalTheoryof Communication
+
+ing out one of a set of standard birthday greeting tele-
+grams. A more natural and more important situation is
+that in which the information source makes a sequence
+of choicesfromsome set of elementarysymbols,the se-
+lected sequence then forming the message. Thus a man
+may pick out one word after another, these individually
+selectedwordsthenaddingupto formthemessage.
+At this point an important consideration which has
+beeninthebackground,sofar,comestothefrontforma-
+jor attention. Namely, the role which probability plays
+in the generation of the message. For as the successive
+symbols are chosen, these choices are, at least from the
+point of view of the communication system, governed
+by probabilities; and in fact by probabilities which are
+not independent, but which, at any stage of the process,
+dependupontheprecedingchoices. Thus,ifwearecon-
+cerned with English speech, and if the last symbol cho-
+senis“the,”thentheprobabilitythatthenextwordbean
+article, or a verb form other than a verbal, is very small.
+Thisprobabilisticinﬂuencestretchesovermorethantwo
+words, in fact. After the three words “in the event” the
+probabilityfor“that” asthe nextwordis fairlyhigh,and
+for“elephant”asthenextwordis verylow.
+That there are probabilitieswhich exert a certain de-
+gree of control over the English language also becomes
+obvious if one thinks, for example, of the fact that in
+our language the dictionary contains no words whatso-
+ever in which the initial letter jis followed by b,c,d,
+f,g,j,k,l,q,r,t,v,w,x, orz; so that the probabil-
+ity is actually zero that an initial jbe followed by any
+of these letters. Similarly, anyone would agree that the
+probabilityislowforsuchasequenceofwordsas“Con-
+stantinopleﬁshingnastypink.”Incidentally,itislow,bu t
+not zero; for it is perfectly possible to think of a pas-
+sage in which one sentence closes with “Constantinople
+ﬁshing,” and the next beginswith “Nasty pink.” And we
+might observein passing that the unlikely four-wordse-
+quence under discussion hasoccurred in a single good
+Englishsentence,namelytheoneabove.
+A system which produces a sequence of symbols
+(which may, of course, be letters or musical notes, say,
+rather than words) according to certain probabilities is
+called astochastic process , and the special case of a
+stochastic process in which the probabilities depend on
+the previous events, is called a Markoff process or a
+Markoff chain. Of the Markoff processes which might
+conceivably generate messages, there is a special class
+which is of primary importance for communication the-
+ory, these being what are called ergodic processes . The
+analyticaldetailsherearecomplicatedandthereasoning
+sodeepandinvolvedthatithastakensomeofthebestef-
+forts of the best mathematicians to create the associatedtheory;buttheroughnatureofanergodicprocessiseasy
+to understand. It is one which produces a sequence of
+symbols which would be a poll-taker’s dream, because
+any reasonably large sample tends to be representative
+of the sequence as a whole. Suppose that two persons
+choosesamplesin differentways, andstudy what trends
+theirstatisticalpropertieswouldshowasthesamplesbe-
+come larger. If the situation is ergodic, then those two
+persons, however they may have chosen their samples,
+agree in their estimates of the properties of the whole.
+Ergodic systems, in other words, exhibit a particularly
+safeandcomfortingsort ofstatistical regularity.
+Now let us return to the idea of information . When
+wehaveaninformationsourcewhichisproducingames-
+sage by successively selecting discrete symbols (letters,
+words, musical notes, spots of a certain size, etc.), the
+probabilityofchoiceofthevarioussymbolsat onestage
+of the process being dependent on the previous choices
+(i.e., a Markoffprocess), what about the informationas-
+sociatedwiththisprocedure?
+The quantity which uniquely meets the natural re-
+quirements that one sets up for “information” turns out
+to be exactly that which is knownin thermodynamicsas
+entropy. It is expressedin terms of the variousprobabil-
+ities involved—those of getting to certain stages in the
+process of forming messages, and the probabilities that,
+when in those stages, certain symbols be chosen next.
+Theformula,moreover,involvesthe logarithm ofproba-
+bilities, so that it is a natural generalization of the loga-
+rithmicmeasurespokenofaboveinconnectionwithsim-
+plecases.
+Tothosewhohavestudiedthephysicalsciences,itis
+most signiﬁcant that an entropy-like expression appears
+inthetheoryasa measureofinformation. Introducedby
+Clausius nearly one hundred years ago, closely associ-
+atedwith thenameofBoltzmann,andgivendeepmean-
+ing by Gibbs in his classic work on statistical mechan-
+ics,entropyhasbecomesobasicandpervasiveaconcept
+that Eddington1remarks “The law that entropy always
+increases—thesecondlaw ofthermodynamics—holds,I
+think,thesupremepositionamongthelawsofNature.”
+In the physical sciences, the entropy associated with
+a situation is a measure of the degree of randomness, or
+of “shufﬂedness” if you will, in the situation; and the
+tendencyofphysicalsystemstobecomelessandlessor-
+ganized,to becomemore and moreperfectlyshufﬂed, is
+so basic that Eddington argues that it is primarily this
+tendency which gives time its arrow—which would re-
+veal to us, for example, whether a movieof the physical
+worldisbeingrunforwardorbackward.
+Thuswhenonemeetstheconceptofentropyincom-
+munication theory, he has a right to be rather excited—
+WARRENWEAVER 5 TheMathematicalTheoryof Communication
+
+a right to suspect that one has hold of something that
+may turn out to be basic and important. That informa-
+tion be measured by entropy is, after all, natural when
+we remember that information, in communication the-
+ory, is associated with the amount of freedom of choice
+we have in constructing messages. Thus for a commu-
+nication source one can say, just as he would also say it
+of a thermodynamic ensemble, “This situation is highly
+organized,itisnotcharacterizedbyalargedegreeofran-
+domnessorofchoice—thatistosay,theinformation(or
+theentropy)islow.”Wewillreturntothispointlater,for
+unless I am quite mistaken, it is an important aspect of
+themoregeneralsigniﬁcanceofthistheory.
+Havingcalculatedtheentropy(ortheinformation,or
+the freedom of choice) of a certain information source,
+onecancomparethistothemaximumvaluethisentropy
+could have, subject only to the condition that the source
+continue to employ the same symbols. The ratio of the
+actual to the maximum entropy is called the relative en-
+tropyof the source. If the relative entropy of a certain
+source is, say .8, this roughly means that this source is,
+in itschoiceofsymbolstoforma message,about80per
+centasfreeasit couldpossiblybewiththese samesym-
+bols. One minusthe relative entropyis called the redun-
+dancy. Thisisthefractionofthestructureofthemessage
+whichisdeterminednotbythefreechoiceofthesender,
+but rather by the accepted statistical rules governingthe
+use of the symbols in question. It is sensibly called re-
+dundancy, for this fraction of the message is in fact re-
+dundantin somethingclose to the ordinarysense; that is
+to say, this fraction of the message is unnecessary (and
+hencerepetitiveorredundant)in the sense that if it were
+missing themessage wouldstill beessentially complete,
+orat least couldbecompleted.
+It is most interesting to note that the redundancy of
+English is just about 50 per cent,3so that about half of
+thelettersorwordswe chooseinwritingorspeakingare
+under our free choice, and about half (although we are
+not ordinarily aware of it) are really controlled by the
+statisticalstructureofthelanguage. Apartfrommorese-
+rious implications, which again we will postpone to our
+ﬁnal discussion, it is interesting to note that a language
+musthaveatleast50percentofrealfreedom(orrelative
+entropy)inthechoiceoflettersifoneistobeabletocon-
+struct satisfactory crossword puzzles. If it has complete
+freedom, then every array of letters is a crossword puz-
+zle. Ifithasonly20percentoffreedom,thenitwouldbe
+impossible to construct crossword puzzles in such com-
+plexity and number as would make the game popular.Shannon has estimated that if the English language had
+onlyabout30percentredundancy,thenitwouldbepos-
+sibleto constructthree-dimensionalcrosswordpuzzles.
+Before closing this section on information, it should
+be noted that the real reason that Level A analysis deals
+with a concept of information which characterizes the
+whole statistical nature of the informationsource, and is
+not concerned with the individual messages (and not at
+alldirectlyconcernedwiththemeaningoftheindividual
+messages) is that from the point of view of engineering,
+a communication system must face the problem of han-
+dling any message that the source can produce. If it is
+not possible or practicableto design a system which can
+handle everything perfectly, then the system should be
+designed to handle well the jobs it is most likely to be
+asked to do, and should resign itself to be less efﬁcient
+fortherare task. Thissort ofconsiderationleadsat once
+to the necessity of characterizingthe statistical natureo f
+the whole ensemble of messages which a given kind of
+source can and will produce. And information , as used
+incommunicationtheory,doesjustthis.
+Although it is not at all the purpose of this paper to
+be concerned with mathematical details, it nevertheless
+seemsessentialtohaveasgoodanunderstandingaspos-
+sible of the entropy-like expression which measures in-
+formation. If one is concerned,as in a simple case, with
+asetofnindependentsymbols,orasetof nindependent
+complete messages for that matter, whose probabilities
+of choice are p1,p2...pn, then the actual expression for
+theinformationis
+H=−[p1log p1+p2log p2+...+pnlog pn]
+or
+H=−∑pilog pi
+where4the symbol ∑, indicates, as is usual in mathe-
+matics, that one is to sum all terms like the typical one,
+pilog piwrittenasa deﬁningsample.
+Thislooksalittlecomplicated;butletusseehowthis
+expressionbehavesinsomesimplecases.
+Supposeﬁrst that we are choosingonlybetweentwo
+possible messages, whose probabilities are then p1for
+theﬁrstand p2=1−p1fortheother. Ifonereckons,for
+thiscase,thenumericalvalueof H,itturnsoutthat Hhas
+itslargestvalue,namelyone,whenthetwomessagesare
+equally probable; that is to say when p1=p2=1
+2that
+istosay,whenoneiscompletelyfreetochoosebetween
+the two messages. Just assoon asone message becomes
+more probable than the other ( p1greater than p2, say),
+thevalueof Hdecreases. Andwhenonemessageisvery
+3The50 per cent estimate accounts only for statistical struc ture out to about eight letters, so that the ultimate value is presumably a little higher.
+4Do not worry about the minus sign. Any probability is a number less than or equal to one, and the logarithms of numbers less t han one are
+themselves negative. Thusthe minus sign isnecessary in ord er thatHbein fact positive.
+WARRENWEAVER 6 TheMathematicalTheoryof Communication
+
+probable ( p1almost one and p2almost zero, say), the
+valueofHisverysmall (almostzero).
+In the limiting case where one probability is unity
+(certainty)andalltheotherszero(impossibility),then H
+iszero(nouncertaintyatall—nofreedomofchoice—no
+information).
+ThusHis largest when the two probabilities are
+equal (i.e., when one is completely free and unbiased in
+the choice), and reduces to zero when one’s freedom of
+choiceis gone.
+Thesituationjustdescribedisinfacttypical. Ifthere
+aremany,ratherthantwo,choices,then Hislargestwhen
+the probabilities of the various choices are as nearly
+equal as circumstances permit—when one has as much
+freedom as possible in making a choice, being as little
+as possible driven toward some certain choices which
+have more than their share of probability. Suppose, on
+theotherhand,thatonechoicehasaprobabilitynearone
+so that all the otherchoiceshave probabilitiesnear zero.
+This is clearly a situation in which one is heavily inﬂu-
+enced toward one particular choice, and hence has little
+freedom of choice. And Hin such a case does calculate
+tohaveaverysmallvalue—theinformation(thefreedom
+ofchoice,theuncertainty)islow.
+Whenthenumberofcasesisﬁxed,wehavejustseen
+that then the information is the greater, the more nearly
+equal are the probabilitiesof the various cases. There is
+another important way of increasing H, namely by in-
+creasing the number of cases. More accurately, if all
+choices are equally likely, the more choices there are,
+the larger Hwill be; There is more “information”if you
+select freely out of a set of ﬁfty standardmessages, than
+ifyouselect freelyoutofaset oftwenty-ﬁve.
+2.3 Capacity ofa Communication
+Channel
+After the discussion of the preceding section, one is not
+surprisedthatthecapacityofachannelistobedescribed
+notintermsofthenumberof symbolsitcantransmit,but
+rather in termsof the informationit transmits. Or better,
+since this last phrase lends itself particularly well to a
+misinterpretation of the word information, the capacity
+of a channel is to be described in terms of its ability to
+transmitwhat isproducedoutof sourceof a giveninfor-
+mation.
+If the source is of a simple sort in which all symbols
+are of the same time duration (which is the case, for ex-
+ample,withteletype),ifthesourceissuchthateachsym-
+bol chosen represents sbits of information(being freelychosen from among 2ssymbols), and if the channel can
+transmit, say nsymbolsper second, then the capacity of
+Cofthe channelisdeﬁnedtobe nsbitspersecond.
+Inamoregeneralcase,onehastotakeaccountofthe
+varyinglengthsofthevarioussymbols. Thusthegeneral
+expression for capacity of a channel involves the loga-
+rithmofthenumbersofsymbolsofcertaintimeduration
+(whichintroduces,ofcourse,theideaof information and
+correspondsto the factor sin the simple case of the pre-
+cedingparagraph);andalsoinvolvesthe numberofsuch
+symbols handled (which corresponds to the factor nof
+the preceding paragraph). Thus in the general case, ca-
+pacity measures not the number of symbols transmitted
+per second, but rather the amount of information trans-
+mittedpersecond,usingbitspersecondasitsunit.
+2.4 Coding
+At the outset it was pointed out that the transmitter ac-
+cepts the messageand turns it into something called the
+signal, the latter being what actually passes over the
+channeltothe receiver.
+The transmitter, in such a case as telephony, merely
+changestheaudiblevoicesignaloverintosomething(the
+varying electrical current on the telephone wire) which
+isatonceclearlydifferentbutclearlyequivalent. Butthe
+transmitter may carry out a much more complex opera-
+tion on the message to produce the signal. It could, for
+example, take a written message and use some code to
+encipher this message into, say a sequence of numbers;
+these numbers then being sent over the channel as the
+signal.
+Thus one says, in general, that the function of the
+transmitter is to encode, and that of the receiver to de-
+code, the message. The theoryprovidesfor verysophis-
+ticatedtransmittersandreceivers—such,forexample,as
+possess “memories,” so that the way they encode a cer-
+tain symbol of the message depends not only upon this
+onesymbol,but also uponprevioussymbolsof the mes-
+sageandthewaytheyhavebeenencoded.
+We are now in a position to state the fundamental
+theorem,producedin thistheory,fora noiselesschannel
+transmitting discrete symbols. This theorem relates to a
+communication channel which has a capacity of Cbits
+per second, accepting signals from a source of entropy
+(orinformation)of Hbitspersecond. Thetheoremstates
+that by devising proper coding proceduresfor the trans-
+mitteritispossibletotransmitsymbolsoverthechannel
+at an average rate5which is nearly C/H, but which, no
+matter how clever the coding, can never be made to ex-
+5Weremember that thecapacity Cinvolves theidea ofinformation transmitted per second, an d isthus measured in bits persecond. Theentropy
+Hhere measures information per symbol, so that the ratio of CtoHmeasures symbols per second.
+WARRENWEAVER 7 TheMathematicalTheoryof Communication
+
+ceedC/H.
+The signiﬁcance of this theorem is to be discussed
+more usefully a little later, when we have the more gen-
+eralcasewhennoiseispresent. Forthemoment,though,
+it is important to notice the critical role which coding
+plays.
+Remember that the entropy (or information) asso-
+ciated with the process which generates messages or
+signals is determined by the statistical character of the
+process—bythevariousprobabilitiesforarrivingatmes-
+sagesituationsandforchoosing,wheninthosesituations
+the next symbols. The statistical nature of messages is
+entirely determined by the character of the source. But
+thestatisticalcharacterofthe signalasactuallytransmit-
+ted by a channel, and hence the entropy in the channel,
+is determinedbothby whatone attemptsto feedinto the
+channel and by the capabilities of the channel to handle
+different signal situations. For example, in telegraphy,
+there have to be spaces between dots and dots, between
+dots and dashes, and between dashes and dashes, or the
+dotsanddasheswouldnotberecognizable.
+Now it turns out that when a channel does have cer-
+tain constraints of this sort, which limit complete signal
+freedom, there are certain statistical signal characteris -
+ticswhichleadto asignalentropywhichislargerthanit
+would be forany otherstatistical signal structure,and in
+thisimportantcase,thesignalentropyisexactlyequalto
+thechannelcapacity.
+Intermsoftheseideas,itisnowpossiblepreciselyto
+characterize the most efﬁcient kind of coding, The best
+transmitter, in fact, is that which codes the message in
+such a way that the signal has just those optimumstatis-
+tical characteristics which are best suited to the channel
+to be used—which in fact maximize the signal (or one
+may say, the channel) entropy and make it equal to the
+capacityCofthechannel.
+This kind of coding leads, by the fundamental theo-
+rem above, to the maximum rate C/Hfor the transmis-
+sion of symbols. But for this gain in transmission rate,
+onepaysa price. Forratherperverselyit happensthatas
+one makes the coding more and more nearly ideal, one
+is forced to longer and longer delays in the process of
+coding. Part of this dilemma is met by the fact that in
+electronic equipment “long” may mean an exceedingly
+small fraction of a second, and part by the fact that one
+makesa compromise,balancingthegainin transmission
+rateagainstlossofcodingtime.
+2.5 Noise
+How does noise affect information? Information is, we
+must steadily remember, a measure of one’s freedom ofchoice in selecting a message. The greater this free-
+dom of choice, and hence the greater the information,
+the greater is the uncertainty that the message actually
+selectedis some particularone. Thusgreaterfreedomof
+choice, greater uncertainty, greater information go hand
+inhand.
+Ifnoiseisintroduced,thenthereceivedmessagecon-
+tains certain distortions, certain errors, certain extran e-
+ousmaterial,thatwouldcertainlyleadonetosaythatthe
+received message exhibits, because of the effects of the
+noise, an increased uncertainty. But if the uncertainty is
+increased, the information is increased, and this sounds
+asthoughthenoisewerebeneﬁcial!
+It is generally true that when there is noise, the re-
+ceivedsignalexhibitsgreaterinformation—orbetter,the
+received signal is selected out of a more varied set than
+is the transmitted signal. This is a situation which beau-
+tifully illustrates the semantic trap into which one can
+fall if he does not remember that “information” is used
+here with a special meaning that measures freedom of
+choiceandhenceuncertaintyasto what choicehasbeen
+made. Itisthereforepossibleforthewordinformationto
+haveeithergoodorbadconnotations. Uncertaintywhich
+arises by virtue of freedom of choice on the part of the
+senderis desirableuncertainty. Uncertaintywhicharises
+because of errors or because of the inﬂuence of noise is
+undesirableuncertainty.
+It is thus clear where the joker is in saying that the
+received signal has more information. Some of this in-
+formationisspuriousandundesirableandhasbeenintro-
+ducedvia the noise. To get the useful informationin the
+received signal we must subtract out this spurious por-
+tion.
+Before we can clear up this point we have to stop
+for a little detour. Suppose one has two sets of symbols,
+such as the message symbols generated by the informa-
+tion source, and the signal symbols which are actually
+received. The probabilities of these two sets of symbols
+are interrelated, for clearly the probability of receiving
+a certain symbol depends upon what symbol was sent.
+With no errors from noise or from other causes, the re-
+ceived signals would correspond precisely to the mes-
+sage symbolssent; and in the presenceof possible error,
+the probabilities for received symbols would obviously
+be loaded heavily on those which correspond,or closely
+correspond,tothe messagesymbolssent.
+Now in such a situation one can calculate what is
+called the entropy of one set of symbols relative to the
+other. Let us, for example, consider the entropy of the
+message relative to the signal. It is unfortunate that we
+cannot understand the issues involved here without go-
+ing into some detail. Suppose for the moment that one
+WARRENWEAVER 8 TheMathematicalTheoryof Communication
+
+knows that a certain signal symbol has actually been
+received. Then each message symbol takes on a cer-
+tain probability—relatively large for the symbol identi-
+cal with or the symbols similar to the one received, and
+relativelysmall forall others. Using thisset of probabil-
+ities, onecalculatesa tentativeentropyvalue. Thisisthe
+message entropy on the assumption of a deﬁnite known
+received or signal symbol. Under any good conditions
+its value is low, since the probabilities involved are not
+spreadaroundratherevenlyonthe variouscases, butare
+heavily loaded on one or a few cases. Its value would
+be zero (see page 6) in any case where noise was com-
+pletely absent, for then, the signal symbol being known,
+all message probabilities would be zero except for one
+symbol (namely the one received), which would have a
+probabilityofunity.
+Foreachassumptionastothesignalsymbolreceived,
+one can calculate one of these tentative message en-
+tropies. Calculate all of them, and then average them,
+weightingeachoneinaccordancewiththeprobabilityof
+the signal symbol assumed in calculating it. Entropies
+calculated in this way, when there are two sets of sym-
+bols to consider, are called relative entropies . The par-
+ticular one just described is the entropy of the message
+relative to the signal, and Shannon has named this also
+theequivocation .
+Fromthewaythisequivocationiscalculated,wecan
+see what its signiﬁcance is. It measures the average un-
+certainty in the message when the signal is known . If
+there were no noise, then there would be no uncertainty
+concerningthe message if the signal is known. If the in-
+formation source has any residual uncertainty after the
+signal is known, then this must be undesirable uncer-
+taintyduetonoise.
+The discussion of the last few paragraphs centers
+aroundthe quantity“the averageuncertaintyin the mes-
+sage source when the received signal is known.” It can
+equally well be phrased in terms of the similar quantity
+“the average uncertainty concerning the received signal
+whenthemessagesentisknown.”Thislatteruncertainty
+would,ofcourse,also bezeroiftherewerenonoise.
+As to the interrelationship of these quantities, it is
+easyto provethat
+H(x)−Hy(x) =H(y)−Hx(y)
+whereH(x)is the entropy or information of the source
+ofmessages; H(y)theentropyorinformationofreceived
+signals;Hy(x)the equivocation,or the uncertaintyin the
+message source if the signal be known; Hx(y)the un-
+certainty in the received signals if the messages sent be
+known, or the spurious part of the received signal in-
+formation which is due to noise. The right side of thisequation is the useful information which is transmitted
+inspite ofthebadeffectofthenoise.
+It is now possible to explain what one means by the
+capacityCof anoisychannel. Itis, infact, deﬁnedto be
+equal to the maximum rate (in bits per second) at which
+usefulinformation( i.e.,totaluncertaintyminusnoiseun-
+certainty)canbetransmittedoverthechannel.
+Why does one speak, here, of a “maximum” rate?
+What can one do, that is, to make this rate larger or
+smaller? The answer is that one can affect this rate by
+choosing a source whose statistical characteristics are
+suitably related to the restraints imposed by the nature
+of the channel. That is, one can maximize the rate of
+transmitting useful information by using proper coding
+(seepages7to 8).
+Andnow,ﬁnally,letusconsiderthefundamentalthe-
+orem for a noisy channel. Suppose that this noisy chan-
+nelhas,inthesensejustdescribed,acapacity C,suppose
+it is accepting from an informationsource characterized
+by an entropy of H(x)bits per second, the entropy of
+the received signals being H(y)bits per second. If the
+channel capacity Cis equal to or larger than H(x), then
+bydevisingappropriatecodingsystems,theoutputofthe
+source can be transmitted over the channel with as little
+error as one pleases. However small a frequency of er-
+roryouspecify,thereisacodewhichmeetsthedemand.
+But if the channel capacity Cis less than H(x), the en-
+tropyofthesourcefromwhichitacceptsmessages,then
+it is impossible to devise codes which reduce the error
+frequencyaslowasonemayplease.
+Howevercleveroneiswiththecodingprocess,itwill
+always be true that after the signal is received there re-
+mains some undesirable (noise) uncertainty about what
+the message was; and this undesirable uncertainty—this
+equivocation—will always be equal to or greater than
+H(x)−C. Furthermore,thereisalwaysat least onecode
+whichiscapableofreducingthisundesirableuncertainty,
+concerningthe message, downto a value whichexceeds
+H(x)−Cbyanarbitrarilysmall amount.
+Themostimportantaspect,ofcourse,isthatthemin-
+imumundesirableorspuriousuncertaintiescannotbere-
+ducedfurther,nomatterhowcomplicatedorappropriate
+the coding process. This powerful theorem gives a pre-
+cise and almost startlingly simple description of the ut-
+most dependability one can ever obtain from a commu-
+nicationchannelwhichoperatesinthepresenceofnoise.
+One practicalconsequence,pointedout by Shannon,
+should be noted. Since English is about 50 per cent re-
+dundant, it would be possible to save about one-half the
+time of ordinary telegraphy by a proper encoding pro-
+cess, provided one were going to transmit over a noise-
+less channel. When there is noise on a channel, how-
+WARRENWEAVER 9 TheMathematicalTheoryof Communication
+
+ever, there is some real advantage in not using a coding
+process that eliminates all of the redundancy. For the
+remaining redundancy helps combat the noise. This is
+very easy to see, for just because of the fact that the re-
+dundancyof English is high, one has, for example, little
+or no hesitation about correcting errors in spelling that
+havearisenduringtransmission.
+2.6 Continuous Messages
+Up to this point we have been concernedwith messages
+formed out of discrete symbols, as words are formed of
+letters, sentences of words, a melodyof notes, or a half-
+tone picture of a ﬁnite number of discrete spots. What
+happens to the theory if one considers continuous mes-
+sages, such as the speaking voice with its continuous
+variationofpitchandenergy?
+Very roughly one may say that the extended theory
+is somewhat more difﬁcult and complicated mathemat-
+ically, but not essentially different. Many of the above
+statements for the discrete case require no modiﬁcation,
+andothersrequireonlyminorchange.
+Onecircumstancewhichhelpsagooddealisthefol-
+lowing. Asapracticalmatter,oneisalwaysinterestedin
+acontinuoussignalwhichisbuiltupofsimpleharmonic
+constituents of not all frequencies ,but ratheroffrequen-
+cieswhichliewhollywithina bandfromzerofrequency
+to, say, a frequency of Wcycles per second. Thus al-
+thoughthehumanvoicedoescontainhigherfrequencies,
+very satisfactory communicationcan be achieved over a
+telephone channel that handles frequencies only up to,
+say four thousand. With frequenciesup to ten or twelve
+thousand, high ﬁdelity radio transmission of symphonic
+musicispossible,etc.
+There is a very convenient mathematical theorem
+which states that a continuous signal, Tseconds in du-
+rationandband-limitedinfrequencyto therangefrom0
+toW, can becompletely speciﬁed by stating 2 TWnum-
+bers. This is really a remarkable theorem. Ordinarily
+acontinuouscurvecanbeonlyapproximatelycharacter-
+izedbystatinganyﬁnitenumberofpointsthroughwhich
+it passes, and an inﬁnite numberwould in general be re-
+quired for complete information about the curve. But if
+the curveis built up out ofsimple harmonicconstituentsof a limited number of frequencies, as a complex sound
+is built up out of a limited number of pure tones, then a
+ﬁnite number of parametersis all that is necessary. This
+has the powerful advantage of reducing the character of
+thecommunicationproblemforcontinuoussignalsfrom
+a complicated situation where one would have to deal
+with an inﬁnite number of variables to a considerably
+simpler situation where one deals with a ﬁnite (though
+large)numberofvariables.
+In thetheoryforthecontinuouscase thereare devel-
+oped formulas which describe the maximum capacity C
+of a channel of frequency bandwidth W, when the aver-
+age power used in transmitting is P, the channel being
+subject to a noise of power N, this noise being “white
+thermalnoise” of a special kind whichShannondeﬁnes.
+This white thermal noise is itself band limited in fre-
+quency,andtheamplitudesofthevariousfrequencycon-
+stituents are subject to a normal (Gaussian) probability
+distribution. Under these circumstances, Shannon ob-
+tains the theorem, again really quite remarkable in its
+simplicity and its scope, that it is possible, by the best
+coding,to transmitbinarydigitsatthe rateof
+W log2P+N
+N
+bits per second and have an arbitrarily low frequencyof
+error. But thisratecannotpossiblybe exceeded,nomat-
+terhowcleverthecoding,withoutgivingrisetoadeﬁnite
+frequencyoferrors. Forthecaseofarbitrarynoise,rather
+than the special “white thermal” noise assumed above,
+Shannon does not succeed in deriving one explicit for-
+mula for channel capacity, but does obtain useful upper
+and lower limits for channel capacity. And he also de-
+rives limits for channel capacity when one speciﬁes not
+the average power of the transmitter, but rather the peak
+instantaneouspower.
+Finally it should be stated that Shannon obtains re-
+sults which are necessarily somewhat less speciﬁc, but
+which are of obviously deep and sweeping signiﬁcance,
+which,forageneralsortofcontinuousmessageorsignal,
+characterizethe ﬁdelityofthe receivedmessage,andthe
+conceptsofrateatwhichasourcegeneratesinformation,
+rate of transmission, and channel capacity, all of these
+beingrelativeto certainﬁdelityrequirements.
+WARRENWEAVER 10 TheMathematicalTheoryof Communication
+
+3 The Interrelationshipof the Three Levels ofCommunicatio nProblems
+3.1 Introductory
+IN THEFIRST SECTIONof this paper it was sug-
+gested that there are three levels at which one may
+consider the general communication problem. Namely,
+onemayask:
+LEVELA. How accurately can the symbols of communica-
+tionbe transmitted?
+LEVELB. How precisely do the transmitted symbols convey
+the desiredmeaning?
+LEVELC. How effectively does the received meaning affect
+conduct inthe desiredway?
+It was suggested that the mathematical theory of
+communication, as developed by Shannon, Wiener, and
+others, and particularly the more deﬁnitely engineering
+theory treated by Shannon, although ostensibly applica-
+bleonlytoLevelAproblems,actuallyishelpfulandsug-
+gestiveforthelevelBandCproblems.
+Wethentookalook,insection2,atwhatthismathe-
+maticaltheoryis,whatconceptsitdevelops,whatresults
+it has obtained. It is the purpose of this concluding sec-
+tion to review the situation, and see to what extent and
+in what terms the original section was justiﬁed in indi-
+cating that the progress made at Level A is capable of
+contributingtolevelsBandC,wasjustiﬁedinindicating
+thattheinterrelationofthethreelevelsissoconsiderabl e
+thatone’sﬁnalconclusionmaybethattheseparationinto
+thethreelevelsisreallyartiﬁcialandundesirable.
+3.2 Generality oftheTheory at
+Level A
+Theobviousﬁrstremark,andindeedtheremarkthatcar-
+riesthe major burdenof the argument,is that the mathe-
+maticaltheoryisexceedinglygeneralinitsscope,funda-
+mentalintheproblemsit treats,andofclassic simplicity
+andpowerintheresultsit reaches.
+This is a theory so general that one does not need
+to say what kinds of symbols are being considered—
+whether written letters or words, or musical notes, or
+spokenwords,orsymphonicmusic,orpictures. Thethe-
+oryis deepenoughso that the relationshipsit revealsin-
+discriminately apply to all these and to other forms of
+communication. Thismeans,ofcourse,thatthetheoryis
+sufﬁciently imaginatively motivated so that it is dealing
+withtherealinnercoreofthecommunicationproblem—
+with those basic relationships which hold in general, no
+matterwhatspecialformthe actualcasemaytake.It is an evidence of this generality that the theory
+contributes importantly to, and in fact is really the ba-
+sic theory of cryptography which is, of course, a form
+of coding. In a similar way, the theory contributes to
+theproblemoftranslationfromonelanguageto another,
+althoughthecompletestoryhereclearlyrequiresconsid-
+erationof meaning,as well as of information. Similarly,
+the ideasdevelopedin this work connectso closely with
+theproblemofthelogicaldesignofgreatcomputersthat
+it is no surprise that Shannon has just written a paper
+on the design of a computer which would be capable of
+playing a skillful game of chess. And it is of further di-
+rect pertinence to the present contention that this paper
+closeswiththeremarkthateitheronemustsay thatsuch
+a computer “thinks,” or one must substantially modify
+theconventionalimplicationoftheverb“tothink.”
+As a second point, it seems clear that an important
+contribution has been made to any possible general the-
+oryofcommunicationbytheformalizationonwhichthe
+present theory is based. It seems at ﬁrst obvious to dia-
+gram a communicationsystem as it is done at the outset
+of this theory; but this breakdown of the situation must
+beverydeeplysensibleandappropriate,asonebecomes
+convincedwhenheseeshowsmoothlyandgenerallythis
+viewpoint leads to central issues. It is almost certainly
+true that a consideration of communication on levels B
+andCwillrequireadditionstotheschematicdiagramon
+page 3, but it seems equally likely that what is required
+areminoradditions,andnoreal revision.
+ThuswhenonemovestolevelsBandC,itmayprove
+to be essential to take account of the statistical charac-
+teristics of the destination. One can imagine, as an ad-
+dition to the diagram, another box labeled “Semantic
+Receiver” interposed between the engineering receiver
+(which changes signals to messages) and the destina-
+tion. This semantic receiver subjects the message to a
+second decoding, the demand on this one being that it
+must match the statistical semantic characteristicsof the
+message to the statistical semantic capacities of the to-
+tality of receivers, or of that subset of receivers which
+constitutethe audienceonewishestoaffect.
+Similarlyonecanimagineanotherboxinthediagram
+which, inserted between the information source and the
+transmitter, would be labeled “semantic noise,” the box
+previously labeled as simply “noise” now being labeled
+“engineeringnoise.”Fromthissourceisimposedintothe
+signal the perturbationsor distortionsof meaning which
+arenotintendedbythe sourcebut whichinescapablyaf-
+fect the destination. And the problem of semantic de-
+coding must take this semantic noise into account. It is
+WARRENWEAVER 11 TheMathematicalTheoryof Communication
+
+also possible to think of an adjustment of original mes-
+sage so that the sum of message meaning plus semantic
+noiseisequaltothedesiredtotalmessagemeaningatthe
+destination.
+Thirdly, it seems highly suggestive for the problem
+atalllevelsthaterrorandconfusionariseandﬁdelityde-
+creases, when, no matter how goodthe coding,one tries
+to crowd too much over a channel ( i.e.,H>C). Here
+again a general theory at all levels will surely have to
+take into account not only the capacity of the channel
+but also (even the words are right!) the capacity of the
+audience. If one tries to overcrowd the capacity of the
+audience, it is probablytrue, by direct analogy, that you
+do not, so to speak, ﬁll the audience up and then waste
+only the remainder by spilling. More likely, and again
+by direct analogy, if you overcrowd the capacity of the
+audience you force a general and inescapable error and
+confusion.
+Fourthly, it is hard to believe that levels B and C do
+not have much to learn from, and do not have the ap-
+proachto their problemsusefully oriented by, the devel-
+opment in this theory of the entropic ideas in relation to
+theconceptofinformation.
+The concept of information developed in this theory
+at ﬁrst seems disappointing and bizarre—disappointing
+because it has nothing to do with meaning, and bizarre
+because it deals not with a single message but rather
+withthestatisticalcharacterofawholeensembleofmes-
+sages, bizarre also because in these statistical terms the
+two words information anduncertainty ﬁnd themselves
+tobepartners.
+Ithink,however,thattheseshouldbeonlytemporary
+reactions; and that one should say, at the end that this
+analysis has so penetratingly cleared the air that one is
+now,perhapsfor the ﬁrst time, readyfor a real theoryof
+meaning. An engineering communication theory is just
+like a very proper and discreet girl accepting your tele-
+gram. She pays no attention to the meaning, whether it
+be sad,or joyous,or embarrassing. But she must be pre-
+pared to deal with all that come to her desk. This idea
+thatacommunicationsystemoughttotrytodealwithall
+possible messages, and that the intelligent way to try is
+to base design on the statistical character of the source,
+is surely not without signiﬁcance for communication in
+general. Languagemustbedesigned(ordeveloped)withaviewtothetotalityofthingsthatmanmaywishtosay;
+butnotbeingabletoaccomplisheverything,ittooshould
+doaswellaspossibleasoftenaspossible. Thatistosay,
+it tooshoulddealwithitstask statistically.
+Theconceptofthe informationto beassociatedwith
+asourceleadsdirectly,aswehaveseen,toastudyofthe
+statistical structure of language; and this study reveals
+about the English language, as an example, information
+whichseemssurelysigniﬁcanttostudentsofeveryphase
+of language and communication. The idea of utilizing
+the powerful body of theory concerning Markoff pro-
+cesses seems particularly promising for semantic stud-
+ies, since this theory is speciﬁcally adapted to handle
+oneof the most signiﬁcantbut difﬁcultaspects of mean-
+ing, namely the inﬂuence of context. One has the vague
+feeling that information and meaning may prove to be
+something like a pair of canonically conjugate variables
+in quantum theory, they being subject to some joint re-
+striction that condemns a person to the sacriﬁce of the
+oneasheinsists onhavingmuchoftheother.
+Or perhaps meaning may be shown to be analogous
+to one of the quantities on which the entropy of a ther-
+modynamic ensemble depends. The appearance of en-
+tropy in the theory, as was remarked earlier, is surely
+most interesting and signiﬁcant. Eddington has already
+been quoted in this connection, but there is another pas-
+sagein“TheNatureofthePhysicalWorld”whichseems
+particularlyaptandsuggestive:
+Suppose that we were asked to arrange the following
+in two categories— distance, mass, electric force, entropy,
+beauty, melody.
+I think there are the strongest grounds for placing en-
+tropy alongside beauty and melody, and not with the ﬁrst
+three. Entropy is only found when the parts are viewed
+in association, and it is by viewing or hearing the parts
+in association that beauty and melody are discerned. All
+three are features of arrangement. It is a pregnant thought
+that one of these three associates should be able to ﬁgure
+as a commonplace quantity of science. The reason why
+this stranger can pass itself off among the aborigines of
+thephysical worldisthatitisabletospeaktheirlanguage,
+viz.,the language of arithmetic.
+IfeelsurethatEddingtonwouldhavebeenwillingto
+includethewordmeaningalongwithbeautyandmelody;
+and I suspect he would have been thrilled to see, in this
+theory,thatentropynotonlyspeaksthelanguageofarith-
+metic;it alsospeaksthelanguageoflanguage.
+WARRENWEAVER 12 TheMathematicalTheoryof Communication
+

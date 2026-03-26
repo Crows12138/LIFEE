@@ -1,0 +1,1454 @@
+Communication in the Presence of Noise*
+CLAUDE E. SHANNONt, MEMBER, IRE
+Summary-A method is developed for representing any com-
+munication system geometrically. Messages and the corresponding
+signals are points in two "function spaces," and the modulation
+process is a mapping of one space into the other. Using this repre-
+sentation, a number of results in communication theory are deduced
+concerning expansion and compression
+of bandwidth and the
+threshold effect. Formulas are found for the maxmum rate of trans-
+mission of binary digits over a system when the signal is perturbed
+by various types of noise. Some of the properties of "ideal" systems
+which transmit at this maxmum rate are discussed. The equivalent
+number of binary digits per second for certain information sources
+is calculated.
+* Decimal classification: 621.38. Original manuscript received by
+the Institute, July 23, 1940. Presented, 1948 IRE National Conven-
+tion, New York, N. Y., March 24, 1948; and IRE New York Section,
+New York, N. Y., November 12, 1947.
+t Bell Telephone Laboratories, Murray Hill, N. J.
+I. INTRODUCTION
+A
+GENERAL COMMUNICATIONS
+system
+is
+shown schematically in Fig. 1. It consists essen-
+tially of five elements.
+1. An information source. The source selects one mes-
+sage from a set of possible messages to be transmitted to
+the receiving terminal. The message may be of various
+types; for example, a sequence of letters or numbers, as
+in telegraphy or teletype, or a continuous function of
+timef(t), as in radio or telephony.
+2. The transmitter. This operates on the message in
+some way and produces a signal suitable for transmis-
+sion to the receiving point over the channel. In teleph-
+January
+Shannon: Commiunication in the Presence of Noise
+ony, this operation consists of merely changing sound
+pressure into a proportional electrical current. In teleg-
+the channel capacity may be defined as
+C9g2 M
+T
+,=
+-oo
+T
+T--a
+T
+Fig. 1-General communications system.
+raphy, we have an encoding operation which produces a
+sequence of dots, dashes, and spaces corresponding to
+the letters of the message. To take a more complex
+example, in the case of multiplex PCM telephony the
+different speech functions must be sampled, compressed,
+quantized and encoded, and finally interleaved properly
+to construct the signal.
+3. The channel. This is merely the medium used to
+transmit the signal from the transmitting to the receiv-
+ing point. It may be a pair of wires, a coaxial cable, a
+band of radio frequencies, etc. During transmission, or
+at the receiving terminal, the signal may be perturbed
+by noise or distortion. Noise and distortion may be dif-
+ferentiated on the basis that distortion is a fixed opera-
+tion applied to the signal, while noise involves statistical
+and unpredictable
+perturbations.
+Distortion
+can,
+in
+principle, be corrected by applying the inverse opera-
+tion, while a perturbation due to noise cannot always be
+removed, since the signal does not always undergo the
+same change during transmission.
+4. The receiver. This operates on the received signal
+and attempts to reproduce, from it, the original mes--
+sage. Ordinarily it will perform approximately the math-
+ematical inverse of the operations of the transmitter, al-
+though they may differ somewhat with best design in
+order to combat noise.
+5. The destination.
+This is the person or thing for
+whom the message is intended.
+Following Nyquist' and Hartley,2 it is convenient to
+use a logarithmic measure of information. If a device has
+n possible positions it can, by definition, store logbn units
+of information. The choice of the base b amounts to a
+choice of unit, since logb n = logb c log, n. We will use the
+base 2 and call the resulting units binary digits or bits.
+A group of m relays or flip-flop circuits has 2'" possible
+sets of positions, and can therefore store log2 2m = m bits.
+If it is possible to distinguish reliably M different sig-
+nal functions of duration T on a channel, we can say
+that the channel can transmit log2 M bits in time T. The
+rate of transmission is then log2 M/T. More precisely,
+1 H. Nyquist,
+"Certain factors affecting telegraph speed," Bell
+Syst. Tech. Jour., vol. 3, p. 324; April, 1924.
+2 R. V. L. Hartley, "The transmission of information," Bell Sys.
+Tech. Jour., vol. 3, p. 535-564; July, 1928.
+A precise meaning will be given later to the requirement
+of reliable resolution of the M signals.
+II. THE SAMPLING THEOREM
+Let us suppose that the channel has a certain band-
+width W in cps starting at zero frequency, and that we
+are allowed to use this channel for a certain period of
+time T. Without any further restrictions this would
+mean that we can use as signal functions any functions
+of time whose spectra lie entirely within the band W,
+and whose time functions lie within the interval T. Al-
+though it is not possible to fulfill both of these condi-
+tions exactly, it is possible to keep the spectrum within
+the band W, and to have the time function very small
+outside the interval T. Can we describe in a more useful
+way the functions which satisfy these conditions? One
+answer is the following:
+THEOREM 1: If a function f(t) contains no frequencies
+higher than W cps, it is completely determined by giving
+its ordinates at a series of points spaced 1/2W seconds
+apart.
+This is a fact which is common knowledge in the com-
+munication art. The intuitive justification is that, if f(t)
+contains
+no
+frequencies
+higher than
+W,
+it
+cannot
+change to a substantially new value in a time less than
+one-half cycle of the highest frequency, that is, 1/2 W. A
+mathematical proof showing that this is not onily ap-
+proximately, but exactly, true can be given as follows.
+Let F(w) be the spectrum of f(t). Then
+a00
+f(t) =
+2f7(
+)eF(w,)eitdw
++29rW
+=
+F(w)ewtodco,
+-1_2iW
+(2)
+(3)
+since F(c) is assumed zero outside the band W. If we
+let
+n
+t=-2W
+(4)
+where n is any positive or negative integer, we obtain
+f(2T) = 27r 2W7F(w)ei-2W do.
+(5)
+On the left are the values of f(t) at the sampling points.
+The integral on the right will be recognized as essen-
+tially the nth coefficient in a Fourier-series expansion of
+the function F(w), taking the interval
+- W to + W as a
+fundamental period. This means that the values of the
+samples f(n2W) determine the Fourier coefficients in
+the series expansion of F(w). Thus they determine F(w,),
+since F(w) is zero for frequencies greater than W, and for
+(1)
+1949
+lower frequencies F(c) is determined if its Fourier co-
+efficients are determined. But F(w) determines the origi-
+nal function f(t) completely, since a function is deter-
+mined if its spectrum is known. Therefore the original
+samples determine the function f(t) completely. There
+is one and only one function whose spectrum is limited
+to a band W, and which passes through given values at
+sampling points'separated 1/2W seconds apart. The
+function can be simply reconstructed from the samples
+by using a pulse of the type
+sin 2irWt
+2irWt
+(6)
+This function is unity at t = 0 and zero at t = n/2 W, i.e.,
+at all other sample points. Furthermore, its spectrum is
+constant in the band W and zero outside. At each sam-
+ple point a pulse of this type is placed whose amplitude
+is adjusted to equal that of the sample. The sum of these
+pulses is the required function, since it satisfies the con-
+ditions on the spectrum and passes through the sampled
+values.
+Mathematically, this process can be described as fol-
+lows. Let x. be the nth sample. Then the function f(t)
+is represented by
+f(t) =E
+n=-oo
+sin 7r(2Wt - n)
+X7r(2Wt - n)
+(7)
+A similar result is true if the band W does not start at
+zero frequency but at some higher value, and can be
+proved by a linear translation (corresponding physically
+to single-sideband modulation) of the zero-frequency
+case. In this case the elementary pulse is obtained from
+sin x/x by single-side-band modulation.
+If the function is limited to the time interval T and
+the samples are spaced 1/2W seconds apart, there will
+be a total of 2TW samples in the interval. All samples
+outside will be substantially zero. To be more precise,
+we can define a function to be limited to the time inter-
+val T if, and only if, all the samples outside this interval
+are exactly zero. Then we can say that any function lim-
+ited to the bandwidth W and the time interval T can be
+specified by giving 2TW numbers.
+Theorem 1 has been given previously in other forms
+by mathematicians' but in spite of its evident impor-
+tance seems not to have appeared explicitly in the litera-
+ture of communication theory. Nyquist,4'5 however, and
+more recently Gabor,6 have pointed out that approxi-
+mately 2TW numbers are sufficient, basing their argu-
+I J. M. Whittaker, "Interpolatory Function Theory," Cambridge
+Tracts in Mathematics and Mathematical Physics, No. 33, Cam-
+bridge University Press, Chapt. IV; 1935.
+4 H. Nyquist, 'Certain topics in telegraph transmission theory,"
+A.I.E.E. Transactions, p. 617; April, 1928.
+6 W. R. Bennett,
+"Time division multiplex systems," Bell Sys.
+Tech. Jour., vol. 20, p. 199; April, 1941, where a result similar to
+Theorem 1 is established, but on a steady-state basis.
+6 D. Gabor, "Theory of communication," Jour. I.E.E. (London),
+vol. 93; part 3, no. 26, p. 429; 1946.
+ments on a Fourier series expansion of the function over
+the time interval T. This gives TW sine and (TW+ 1)
+cosine terms up to frequency W. The slight discrepancy
+is due to the fact that the functions obtained in this way
+will not be strictly limited to the band W but, because
+of the sudden starting and stopping of the sine and co-
+sine components, contain some frequency content out-
+side the band. Nyquist pointed out the fundamental
+importance of the time interval 1/2W seconds in con-
+nection with telegraphy, and we will call this the Ny-
+quist interval corresponding to the band W.
+The 2TW numbers used to specify the function need
+not be the equally spaced samples used above. For ex-
+ample, the samples can be unevenly spaced, although, if
+there is considerable bunching, the samples must be
+known very accurately to give a good reconstruction of
+the function. The reconstruction process is also more
+involved with unequal spacing. One can further show
+that the value of the function and its derivative at every
+other sample point are sufficient. The value and first and
+second derivatives at every third sample point give a
+still different set of parameters which uniquely deter-
+mine the function. Generally speaking, any set of 2TW
+independent numbers associated with the function can
+be used to describe it.
+III. GEOMETRICAL REPRESENTATION OF
+THE SIGNALS
+A set of three numbers x1, X2, x3, regardless of their
+source, can always be thought of as co-ordinates of a
+point in three-dimensional space. Similarly, the 2TW
+evenly spaced samples of a signal can be thought of as
+co-ordinates of a point in a space of 2TW dimensions.
+Each particular selection of these numbers corresponds
+to a particular point in this space. Thus there is exactly
+one point corresponding to each signal in the band W
+and with duration T.
+The number of dimensions 2TW will be, in general,
+very high. A 5-Mc television signal lasting for an hour
+would be represented by a point in a space with 2 X5
+X 106X602=3.6X101
+dimensions.
+Needless
+to
+say,
+such a space cannot be visualized. It is possible, how-
+ever, to study analytically the properties of n-dimen-
+sional space. To a considerable extent, these properties
+are a simple generalization of the properties of two- and
+three-dimensional space, and can often be arrived at
+by inductive reasoning from these cases. The advantage
+of this geometrical representation of the signals is that
+we can use the vocabulary and the results of geometry
+in the communication problem. Essentially, we have re-
+placed a complex entity (say, a television signal) in a
+simple environment (the signal requires only a plane for
+its representation as f(t)) by a simple entity (a point) in
+a complex environment (2TW dimensional space).
+If we imagine the 2TW co-ordinate axes to be at right
+angles to each other, then distances in the space have a
+simple interpretation. The distance from the origin to a
+January
+Shannon: Communication in the Presence of Noise
+point is analogous to the two- and three-dimensional
+cases
+2TW
+d
+E X 2
+(8)
+n=1
+where x,, is the nth sample. Now, since
+2TW
+sin ir(2Wt - n)
+f(t)1:
+x,
+~~~~~~~(9)
+n=1
+r(2 Wt - n)
+we have
+00f(t)2dt
+W E X 2
+(10)
+using the fact that
+X sin ir(2Wt-m)
+sin ir(2Wt-n)
+,
+-~~~~~~~~dt
+co
+r(2Wt- m)
+7r(Wt-n)
+0 m
+n
+= d 1
+(11)
+d-m= n.
+,2W
+Hence, the square of the distance to a point is 2W times
+the energy (more precisely, the energy into a unit resist-
+ance) of the corresponding signal
+d2= 2WE
+= 2WTP
+(12)
+where P is the average power over the time T. Similarly,
+the distance between two points is
+;2W] times the
+rms discrepancy between the two corresponding signals.
+If we consider only signals whose average power is less
+than P, these will correspond to points within a sphere
+of radius
+r = V/2WTP.
+(13)
+If noise is added to the signal in transmission,
+it
+means that the point corresponding to the signal has
+been moved a certain distance in the space proportional
+to the rms value of the noise. Thus noise produces a
+small region of uncertainty about each point in the
+space. A fixed distortion in the channel corresponds to
+a warping of the space, so that each point is moved, but
+in a definite fixed way.
+In ordinary three-dimensional space it is possible to
+set up many different co-ordinate systems. This is also
+possible in the signal space of 2TW dimensions that we
+are considering. A different co-ordinate system
+cor-
+responds to a different way of describing the same sig-
+nal function. The various ways of specifying a function
+given above are special cases of this. One other way of
+particular importance in communication is in terms of
+frequency components. The function f(t) can be ex-
+panded as a sum of sines and cosines of frequencies I/T
+apart, and the coefficients used as a different set of co-
+ordinates. It can be shown that these-co-ordinates are
+all perpendicular to each other and are obtained by
+what is essentially a rotation of the original co-ordinate
+system.
+Passing a signal through an ideal filter corresponds to
+projecting the corresponding point onto a certain region
+in the space. In fact, in the frequency-co-ordinate sys-
+tem those components lying in the pass band of the filter
+are retained and those outside are eliminated, so that
+the projection is on one of the co-ordinate lines, planes,
+or hyperplanes. Any filter performs a linear operation on
+the vectors of the space, producing a new vector lin-
+early related to the old one.
+IV. GEOMETRICAL REPRESENTATION
+OF MESSAGES
+We have associated a space of 2TW dimensions with
+the set of possible signals. In a similar way one can as-
+sociate a space with the set of possible messages. Sup-
+pose we are considering a speech system and that the
+messages consist of all possible sounds which contain no
+frequencies over a certain limit W1 and last for a time
+T1.
+Just as for the case of the signals, these messages can
+be represented in a one-to-one way in a space of 27T7W1
+dimensions. There are several points to be noted, how-
+ever. In the first place, various different points may rep-
+resent the same message, insofar as the final destination
+is concerned. For example, in the case of speech, the ear
+is insensitive to a certain amount of phase distortion.
+Messages differing only in the phases of their compon-
+ents (to a limited extent) sound the same. This may have
+the effect of reducing the number of essential dimensions
+in the message space. All the points which are equivalent
+for the destination can be grouped together and treated
+as one point. It may then require fewer numbers to
+specify one of these "equivalence classes" than to spec-
+ify an arbitrary point. For example, in Fig. 2 we have a
+two-dimensional space, the set of points in a square. If
+all points on a circle are regarded as equivalent, it re-
+duces to a one-dimensional space-a point can now be
+Fig. 2-Reduction of dimensionality through
+equivalence classes.
+specified by one number, the radius of the circle. In the
+case of sounds, if the ear were completely insensitive to
+phase, then the number of dimensions would be reduced
+by one-half due to this cause alone. The sine and cosine
+components an and b, for a given frequency would not
+need to be specified independently, but only Van2+bn2;
+that is, the total amplitude for this frequency. The re-
+1949
+duction in frequency discrimination of the ear as fre-
+quency increases indicates that a further reduction in
+dimensionality occurs. The vocoder makes use to a con-
+siderable extent of these equivalences among speech
+sounds, in the first place by eliminating, to a large de-
+gree, phase information, and in the second place by
+lumping groups of frequencies together, particularly at
+the higher frequencies.
+In other types of communication there may not be
+any equivalence classes of this type. The final destina-
+tion is sensitive to any change in the message within the
+full message space of 2T1Wi dimensions. This appears
+to be the case in television transmission.
+A second point to be noted is that the information
+source may put certain restrictions on the actual mes-
+sages. The space of 2TI14
+dimensions contains a point
+for every function of time f(t) limited to the band WI and
+of duration T1. The class of messages we wish to trans-
+mit may be only a small subset of these functions. For
+example, speech sounds must be produced by the human
+vocal system. If we are willing to forego the transmission
+of any other sounds, the effective dimensionality may be
+considerably
+decreased. A
+similar
+effect can
+occur
+through probability considerations. Certain, messages
+may be possible, but so improbable relative to the oth-
+ers that we can, in a certain sense, neglect them. In a
+television image, for example, successive frames are
+likely to be very nearly identical. There is a fair proba-
+bility of a particular picture element having the same
+light intensity in successive frames. If this is analyzed
+mathematically, it results in an effective reduction of
+dimensionality of the message space when T1 is large.
+We will not go further into these two effects at pres-
+ent, but let us suppose that, when they are taken into
+account, the resulting message space has a dimensional-
+ity D, which will, of course, be less than or equal to
+2T1W1. In many cases, even though the effects are pres-
+ent, their utilization involves too much complication in
+the way of equipment. The system is then designed on
+the basis that all functions are different and that there
+are no limitations on the information source. In this
+case, the message space is considered to have the full
+2 T1W1 dimensions.
+V. GEOMETRICAL REPRESENTATION OF THE
+TRANSMITTER AND RECEIVER
+We now consider the function of the transmitter from
+this geometrical standpoint. The input to the transmit-
+ter is a message; that is, one point in the message space.
+Its output is a signal-one point in the signal space.
+Whatever form of encoding or modulation is performed,
+the transmitter must establish some correspondence be-
+tween the points in the two spaces. Every point in the
+message space must correspond to a point in the signal
+space, and no two messages can correspond to the same
+signal. If they did, there would be no way to determine
+at the receiver which of the two messages was intended.
+The geometrical name for such a correspondence is a
+mapping. The transmitter maps the message space into
+the signal space.
+In a similar way, the receiver maps the signal space
+back into the message space. Here, however, it is possi-
+ble to have more than one point mapped into the same
+point. This means that several different signals are de-
+modulated or decoded into the same message. In AM,
+for example, the phase of the carrier is lost in demodula-
+tion. Different signals which differ only in the phase of
+the carrier are demodulated into the same message. In
+FM the shape of the signal wave above the limiting
+value of the limiter does not affect the recovered mes-
+sage. In PCM considerable distortion of the received
+pulses is possible, with no effect on the output of the re-
+ceiver.
+We have so far established a correspondence between
+a communication system and certain geometrical ideas.
+The correspondence is summarized in Table I.
+TABLE I
+Communication System
+The set of possible signals
+A particular signal
+Distortion in the channel
+Noise in the channel
+The average power of the
+signal
+The set of signals of power
+p
+The set of possible messages
+The set of actual messages
+distinguishable
+by
+the
+destination
+A message
+The transmitter
+The receiver
+Geometrical Entity
+A space of 2TW dimensions
+A point in the space
+A warping of the space
+A region of uncertainty about each
+point
+(2TW)-I times the square of the dis-
+tance from the origin to the point
+The set of points in a sphere of radius
+'V2TW P
+A space of 2T1W1 dimensions
+A space of D dimensions obtained by
+regarding all equivalent messages
+as one point, and deleting messages
+which the source could not produce
+A point in this space
+A mapping of the message space into
+the signal space
+A mapping of the signal space into
+the message space
+VI. MAPPING CONSIDERATIONS
+It is possible to draw certain conclusions of a general
+nature regarding modulation methods from the geo-
+metrical picture alone. Mathematically, the simplest
+types of mappings are those in which the two spaces
+have the same number of dimensions. Single-sideband
+amplitude modulation is an example of this type and an
+especially simple one, since the co-ordinates in the sig-
+nal space are proportional to the corresponding co-ordi-
+nates in the message space. In double-sideband trans-
+mission the signal space has twice the number of co-
+ordinates, but they occur in pairs with equal values. If
+there were only one dimension in the message space and
+two in the signal space, it would correspond to mapping
+a line onto a square so that the point x on the line is rep-
+resented by (x, x) in the square. Thus no significant use
+is made of the extra dimensions. All the messages go into
+a subspace having only 2 T1 WI1 dimensions.
+In frequency modulation the mapping is more in-
+volved. The signal space has a much larger dimensional-
+January
+Shannon: Communication in the Presence of Noise
+ity than the message space. The type of mapping can be
+suggested by Fig. 3, where a line is mapped into a three-
+dimensional space. The line starts at unit distance from
+TO NEXT COORDINATE
+3-
+Fig. 3-Mapping similar to frequency modulation.
+the origin on the first co-ordinate axis, stays at this dis-
+tance from the origin on a circle to the next co-ordinate
+axis, and then goes to the third. It can be seen that the
+line is lengthened in this mapping in proportion to the
+total number of co-ordinates. It is not, however, nearly
+as long as it could be if it wound back and forth through
+the space, filling up the internal volume of the sphere it
+traverses.
+This expansion of the line is related to the improved
+signal-to-noise ratio obtainable with increased band-
+width. Since the noise produces a small region of uncer-
+tainty about each point, the effect of this on the recov-
+UNCERTAINTY
+DUE
+TO NOISE
+Fig. 4-Efficient mapping of a line into a square.
+ered message will be less if the map is in a large scale. To
+obtain as large a scale as possible requires that the line
+wander back and forth through the higher-dimensional
+region as indicated in Fig. 4, where we have mapped a
+line into a square. It will be noticed that when this is
+done the effect of noise is small relative to the length of
+the line, provided the noise is less than a certain critical
+value. At this value it becomes uncertain at the receiver
+as to which portion of the line contains the message.
+This holds generally, and it shows that any system which
+attempts to use the capacities of a wider band to the full ex-
+tent possible will suffer from a threshold effect when there
+is noise. If the noise is small, very little distortion will
+occur, but at some critical noise amplitude the message
+will become very badly distorted. This effect is well
+known in PCM.
+Suppose, on the other hand, we wish to reduce di-
+mensionality, i.e., to compress bandwidth or time or
+both. That is, we wish to send messages of band W1 and
+duration T1 over a channel with TW<T1 W1. It has al-
+ready been indicated that the effective dimensionality D
+of the message space may be less than 2T1WI due to the
+properties of the source and of the destination. Hence we
+certainly need no more than D dimension in the signal
+space for a good mapping. To make this saving it is nec-
+essary, of course, to isolate the effective co-ordinates in
+the message space, and to send these only. The reduced
+bandwidth transmission of speech by the vocoder is a
+case of this kind.
+The question arises, however, as to whether further
+reduction is possible. In our geometrical analogy, is it
+possible to map a space of high dimensionality onto one
+of lower dimensionality? The answer is that it is pos i-
+ble, with certain reservations. For example, the points of
+a square can be described by their two co-ordinates
+which could be written in decimal notation
+x = .a1a2a3
+. . .1
+y = .b1b2b3
+*
+* .
+From these two numbers we can construct one number
+by taking digits alternately from x and y:
+z =
+. alb1a2b2a3b3
+*
+-
+-
+(15)
+A knowledge of x and y determines z, and z determines
+both x and y. Thus there is a one-to-one correspondence
+between the points of a square and the points of a line.
+This type of mapping, due to the mathematician
+Cantor, can easily be extended as far as we wish in the
+direction of reducing dimensionality. A space of n di-
+mensions can be mapped in a one-to-one way into a
+space of one dimension. Physically, this means that the
+frequency-time product can be reduced as far as we wish
+when there is no noise, with exact recovery of the origi-
+nal messages.
+In a less exact sense, a mapping of the type shown in
+Fig. 4 maps a square into a line, provided we are not too
+particular about recovering exactly the starting point,
+but are satisfied with a near-by one. The sensitivity we
+noticed before when increasing dimensionality now takes
+a different form. In such a mapping, to reduce TW, there
+will be a certain threshold effect when we perturb the
+message. As we change the message a small amount, the
+corresponding signal will change a small amount, until
+some critical value is reached. At this point the signal
+will undergo a considerable change. In topology it is
+shown7 that it is not possible to map a region of higher
+dimension into a region of lower dimension continuously.
+It is the necessary discontinuity which produces the
+threshold effects we have been describing for communi-
+cation systems.
+7W. Hurewitz and H. Waltman, 'Dimemion Theory,n Prinpeton
+University Press, Prinr,ton, N. 1.; 1941,
+1949
+This discussion is relevant to the well-known "Hartley
+Law," which states that
+"
+.
+.
+. an upper limit to the
+amount of information which may be transmitted is set
+by the sum for the various available lines of the product
+of the line-frequency range of each by the tifie during
+which it is available for use."2 There is a sense in which
+this statement is true, and another sense in which it is
+false. It is not possible to map the message space into
+the signal space in a one-to-one, continuous manner
+(this is known mathematically as a topological mapping)
+unless the two spaces have the same dimensionality;
+i.e., unless D =2TW. Hence, if we limit the transmitter
+and receiver to continuous one-to-one operations, there
+is a lower bound to the product TW in the channel.
+This lower bound is determined, not by the product
+W1Tj of message bandwidth and time, but by the num-
+ber of essential dimension D, as indicated in Section IV.
+There is, however, no good reason for limiting the trans-
+mitter and receiver to topological mappings. In fact,
+PCM and similar modulation systems are highly dis-
+continuous and come very close to the type of mapping
+given by (14) and (15).
+It is desirable, then, to find
+limits for what can be done with no restrictions on the
+type
+of transmitter and
+receiver
+operations.
+These
+limits, which will be derived in the following sections,
+depend on the amount and nature of the noise in the
+channel, and on the transmitter power, as well as on
+the bandwidth-time product.
+It is evident that any system, either to compress TW,
+or to expand it and make full use of the additional vol-
+ume, must be highly nonlinear in character and fairly
+complex because of the peculiar nature of the mappings
+involved.
+VII. THE CAPACITY OF A CHANNEL IN THE
+PRESENCE OF WHITE THERMAL NOISE
+It is not difficult to set up certain quantitative rela-
+tions that must hold when we change the product TW.
+Let us assume, for the present, that the noise in the sys-
+tem is a white thermal-noise band limited to the band
+W, and that it is added to the transmitted signal to pro-
+duce the received signal. A white thermal noise has the
+property that each sample is perturbed independently of
+all the others, and the distribution of each amplitude is
+Gaussian with standard deviation o =,\N where N is
+the average noise power. How many different signals can
+be distinguished at the receiving point in spite of the
+perturbations due to noise? A crude estimate can be ob-
+tained as follows. If the signal has a power P, then the
+perturbed signal will have a power P+N. The number
+of amplitudes that can be reasonably well distinguished
+is
+K
+/+N
+(16)
+where K is a small constant in the neighborhood of unity
+depending on how the phrase "reasonably well" is inter-
+preted. If we require very good separation, K will be
+small, while toleration of occasional errors allows K to
+be larger. Since in time T there are 2TW independent
+amplitudes, the total number of reasonably distinct sig-
+nals is
+_P +N
+yn2TW
+M=
+K
+(17)
+The number of bits that can be sent in this time is
+log2 M, and the rate of transmission is
+log2 M _P±Nl
+= W log2 K2
+(bits per second).
+(18)
+The difficulty with this argument, apart from
+its
+general approximate character, lies in the tacit assump-
+tion that for two signals to be distinguishable they must
+differ at some sampling point by more than the expected
+noise. The argument presupposes that PCM, or some-
+thing very similar to PCM, is the best method of en-
+coding binary digits into signals. Actually, two signals
+can be reliably distinguished if they differ by only a
+small amount, provided this difference is sustained over
+a long period of time. Each sample of the received signal
+then gives a small amount of statistical information
+concerning
+the
+transmitted
+signal;
+in combination,
+these statistical indications result in near certainty.
+This possibility allows an improvement of about 8 db
+in power over (18) with a reasonable definition of re-
+liable resolution of signals, as will appear later. We will
+now make use of the geometrical representation to de-
+termine the exact capacity of a noisy channel.
+THEOREM 2: Let P be the average transmitter power, and
+suppose the noise is white thermal noise of power N in the
+band W. By sufficiently complicated encoding systems it is
+possible to transmit binary digits at a rate
+P+N
+C = Wlog21N9(
+N
+with as small afrequency of errors as desired. It is not pos-
+sible by any encoding method to send at a higher rate and
+have an arbitrarily low frequency of errors.
+This shows that the rate W log (P+N)/N measures in
+a sharply defined way the capacity of the channel for
+transmitting information. It is a rather surprising result,
+since one would expect that reducing the frequency of
+errors would require reducing the rate of transmission,
+and that the rate must approach zero as the error fre-
+quency does. Actually, we can send at the rate C but
+reduce errors byusing more involvedencoding and longer
+delays at the transmitter and receiver. The transmitter
+will take long sequences of binary digits and represent
+this entire sequence by a particular signal function of
+long duration. The delay is required because the trans-
+mitter must wait for the full sequence before the signal
+is determined. Similarly, the receiver must wait for the
+full signal function before decoding into binary digits.
+We new prove Theorem 2. In the geometrical repre-
+sentation each signal point is surrounded by a small re-
+gion of uncertainty due to noise. With white thermal
+noise, the perturbations of the different samples (or co-
+January
+(19)
+Shannon: Communication in the Presence of Noise
+ordinates) are all Gaussian and independent. Thus the
+probability
+of
+a
+perturbation
+having
+co-ordinates
+X1, X2,
+*
+*
+, xn (these are the differences between the
+original and received signal co-ordinates) is the product
+of the individual probabilities for the different co-ordi-
+nates:
+2TW
+1X2
+II
+exp-
+n=1 V27r2TWN
+2TWN
+-1
+2TW
+-
+~~~~exp
+Xn
+(2ir2TWN)TW
+2TW
+Since this depends only on
+2TW
+EXn2
+the probability of a given perturbation depends only on
+the distance from the original signal and not on the direc-
+tion. In other words, the region of uncertainty is spheri-
+cal in nature. Although the limits of this region are not
+sharply defined
+for a small number
+of dimensions
+(2TW), the limits become more and more definite as the
+dimensionality increases. This is because the square of
+the distance a signal is perturbed is equal to 2TW times
+the average noise power during the time T. As T in-
+creases, this average noise power must approach N.
+Thus, for large T, the perturbation will almost certainly
+be to some point near the surface of a sphere of radius
+,\2TWN centered at the original signal point. More
+precisely, by taking T sufficiently large we can insure
+(with probability as near to 1 as we wish) that the per-
+turbation will lie within a sphere of radius V\2TW(N+e)
+where e is arbitrarily small. The noise regions can there-
+fore be thought of roughly as sharply defined billiard
+balls, when 2TW is very large. The received signals have
+an average power P+N, and in the same sense must al-
+most
+all
+lie on the surface
+of a sphere
+of radius
+/2TW(P+N). How many different transmitted signals
+can be found which will be distinguishable? Certainly
+not more than the volume of the sphere of radius
+V\2TW(P+N) divided by the volume of a sphere of
+radius V12TWN, since overlap of the noise spheres re-
+sults in confusion as to the message at the receiving
+point. The volume of an n-dimensional sphere8 of radius
+r is
+This proves the last statement in the theorem.
+To prove the first part of the theorem, we must show
+that there exists a system of encoding which transmits
+W log2 (P+N)/N binary digits per second with a fre-
+quency of errors less than e when e is arbitrarily small.
+The system to be considered operates as follows. A long
+sequence of, say, m binary digits is taken in at the trans-
+mitter. There are 2m such sequences, and each corre-
+sponds to a particular signal function of duration T.
+Thus there are M= 2m different signal functions. When
+the sequence of m is completed, the transmitter starts
+sending the corresponding signal. At the receiver a per-
+turbed signal is received. The receiver compares this
+signal with each of the M possible transmitted signals
+and selects the one which is nearest the perturbed signal
+(in the sense of rms error) as the one actually sent. The
+receiver then constructs, as its output, the correspond-
+ing sequence of binary digits. There will be, therefore,
+an over-all delay of 2 T seconds.
+To insure a frequency of errors less than E, the M sig-
+nal functions must be reasonably well separated from
+each other. In fact, we must choose them in such a way
+that, when a perturbed signal is received, the nearest
+signal point (in the geometrical representation) is, with
+probability greater than 1 - E, the actual original signal.
+It turns out, rather surprisingly, that it is possible to
+choose our M signal functions at random from the points
+inside the sphere of radius V12TWP, and achieve the
+most that is possible. Physically, this corresponds very
+nearly to using M different samples of band-limited
+white noise with power P as signal functions.
+A particular selection of M points in the sphere corre-
+sponds to a particular encoding system. The general
+scheme of the proof is to consider all such selections, and
+to show that the frequency of errors averaged over all
+the particular selections is less than e. This will show
+that there are particular selections in the set with fre-
+quency of errors less than e. Of course, there will be
+other particular selections with a high frequency of er-
+rors.
+The geometry is shown in Fig.
+5. This is a plane
+cross section through the high-dimensional sphere de-
+fined by a typical transmitted signal B, received signal
+A, and the origin 0. The transmitted signal will lie very
+(20)
+1rn/2
+V =
+rn
+n
+r -2+1,
+Hence, an upper limit for the number M of distinguish-
+able signals is
+M<(VP +N)2TW
+(21)
+Consequently, the channel capacity is bounded by:
+10g2M
+P+N
+T
+1N
+(22)
+8 D. M. Y. Sommerville, "An Introduction to the Geometry of N
+Dimensions," E. P. Dutton, Inc., New York, N. Y., 1929; p. 135.
+Fig. 5-The geQmetry involved in Theorem 2.
+1949
+close to the surface of the sphere of radius /2T
+since in a high-dimensional sphere nearly all the vol
+is very close to the surface. The received signal
+<
+larly will lie on the surface of the sphere of ra
+V\2TW(P+N). The high-dimensional lens-shapec
+gion L is the region of possible signals that might I
+caused A, since the distance between the transm
+and received signal is almost certainly very clos
+V12 TWN. L is of smaller volume than a sphere of ra
+h. We can determine h by equating the area of th(
+angle OAB, calculated two different ways:
+2hV/2TW(P + N) -2/2TWPV\2TWN
+/PN
+h = V2TW
+VP+ N
+The probability of any particular signal point (c
+than the actual cause of A) lying in L is, therefore,
+than the ratio
+of the volumes of spheres
+of
+V/2TW PN/P+N and \V2 TWP, since in our ensei
+of coding systems we chose the signal points at ran
+from the points in the sphere of radius \V2TWP.
+ratio is
+2WPN
+2TW
+(2TW-
+,\/2TWP
+N
+)T
+KP + N,
+We have M signal points. Hence the probability p
+all except the actual cause of A are outside L is grE
+than
+[
+N
+)
+M-1
+When these points are outside L, the signal is
+i]
+preted correctly. Therefore, if we make P greater
+1- e, the frequency of errors will be less than e. This
+be true if
+[
+N
+T
+( +M-1)
+I~+
+> 1-e.
+'WP,
+lume
+simi-
+idius
+I re-
+have
+ittprl
+tain an arbitrarily small frequency of errors and trans-
+mit at a rate arbitrarily close to the rate C. We can also
+send at the rate C with arbitrarily small e, since the ex-
+tra binary digits need not be sent at all, but can be filled
+in at random at the receiver. This only adds another
+arbitrarily small quantity to e. This completes the proof.
+'
+L-;
+VI I I. DISCUSSION
+;e to
+Ldius
+We will call a system that transmits without errors at
+e tri-
+the rate C an ideal system. Such a system cannot be
+achieved with any finite encoding process but can be
+approximated as closely as desired. As we approximate
+more closely to the ideal, the following effects occur: (1)
+The rate of transmission of binary digits approaches
+C= W log2 (1±P/N). (2) The frequency of errors ap-
+proaches zero. (3) The transmitted signal approaches a
+)ther
+white noise in statistical properties. This is true, roughly
+, less
+speaking, because the various signal functions used
+radii
+must be distributed at random in the sphere of radius
+mble
+V12TWP. (4). The threshold effect becomes very sharp.
+dom
+If the noise is increased over the value for which the sys-
+This
+tem was designed, the frequency of errors increases very
+rapidly. (5) The required delays at transmitter and re-
+ceiver increase indefinitely. Of course, in a wide-band
+system a millisecond may be substantially an infinite
+delay.
+(23)
+In Fig. 6 the function C/W= log (1 +P/N) is plotted
+with P/N in db horizontal and C! W the number of bits
+that
+per cycle of band vertical. The circles represent PCM
+-ater
+systems of the binary, ternary, etc., types, using posi-
+tive and negative pulses and adjusted to give one error
+in about 10O binary digits. The dots are for a PPM sys-
+(24)
+tem with two, three, etc., discrete positions for the pulse.9
+nter-
+than
+s wilI
+(25)
+Now (1 -x)
+is always greater than 1-nx when n is pos-
+itive. Consequently, (25) will be true if
+(26)
+or if
+or
+(P+N) Tw
+(M-13 <Cet
+N
+log (M-1)
+P + N
+loge
+loTM
+< W log
++-
+T'
+N
+T
+(27)
+(28)
+-20
+-10
+NLdb
+cv
+N
+Fig. 6-Comparison of PCM and PPM
+with ideal performance.
+For any fixed
+e, we can satisfy this by taking T suffi-
+ciently large, and also have log (M- 1)/T or log M/T as
+close as desired to W log P+N/N. This shows that,
+with a random selection of points for signals, we can ob-
+I The PCM points are calculated from formulas given in 'The
+philosophy of PCM," by B. M. Oliver, J. R. Pierce, and C. E. Shan-
+non, PROC. I.R.E., vol. 36, pp. 1324-1332; November, 1948. The
+PPM points are from unpublished calculations of B. McMillan, who
+points out that, for very small P/N, the points approach to within
+3 db of the ideal curve.
+January
+N
+TW
+I
+- (m
+- 1)
+p + N
+> 1
+- e
+Shannon: Communication in the Presence of Noise
+The difference between the series of points and the ideal
+curve corresponds to the gain that could be obtained by
+more involved coding systems. It amounts to about 8
+db in power over most of the practical range. The series
+of points and circles is about the best that can be done
+without delay. Whether it is worth while to use more
+complex types of modulation to obtain some of this
+possible saving is, of course, a question of relative costs
+and valuations.
+The quantity TW log (1 +P/N\) is, for large T, the
+number of bits that can be transmitted in time T. It can
+be regarded as an exchange relation between the differ-
+ent parameters. The individual quantities T, W, P, and
+N can be altered at will without changing the amount
+of information we can
+transmit, provided TW log
+(1 +P/N) is held constant. If TW is reduced, P/N must
+be increased, etc.
+Ordinarily, as we increase W, the noise power N in the
+band will increase proportionally; N = N0W where No is
+the noise power per cycle. In this case, we have
+C = W log
+Q+-)N
+(29)
+If we let Wo=P/No, i.e., Wo is the band for which the
+noise power is equal to the signal power, this can be
+written
+-=-
+log (1+-)
+(30)
+In Fig. 7, C/Wo is plotted as a function of W/Wo. As we
+increase the band, the capacity increases rapidly until
+the total noise power accepted is about equal to the
+ASYMPTOTIC
+VALUE = 1.443
+z0
+hiI.C.
+Wo= BAND FOR
+WHICH
+P= N
+0.
+O
+w/wo
+Fig. 7-Channel capacity as a function of bandwidth.
+signal power; after this, the increase is slow, and it ap-
+proaches an asymptotic value log2 e times the capacity
+for W=Wo.
+IX. ARBITRARY GAUSSIAN NOISE
+If a white thermal noise is passed through a filter
+whose transfer function is Y(f), the resulting noise has
+a power spectrum N(f) = K Y(f) 12 and
+is known as
+Gaussian noise. We can calculate the capacity of a chan-
+nel perturbed by any Gaussian noise from the white-
+noise result. Suppose our total transmitter power is P
+and it is distributed among the various frequencies ac-
+cording to P(f). Then
+fw
+P(f)df = P.
+(31)
+We can divide the band into a large number of small
+bands, with N(f) approximately constant in each. The
+total capacity for a given distribution P(f) will then be
+given by
+C1 = f
+log (1 +
+df,
+(32)
+since, for each elementary band, the white-noise result
+applies. The maximum rate of transmission will be found
+by maximizing C1 subject to condition (31). This re-
+quires that we maximize
+(
+P(f)\
+0 log
++ N())+ XP(f)Jdf.
+(33)
+The condition for this is, by the calculus of variations,
+or merely from the convex nature of the curve log
+(I+X),
+N(f) ± P(f) + x = o
+(34)
+or N(f) +P(f) must be constant. The constant is ad-
+justed to make the total signal power equal to P. For
+frequencieswhere the noise power is low,the signal power
+should be high, and vice versa, as we would expect.
+The situation
+is shown graphically in Fig.
+8. The
+curve is the assumed noise spectrum, and the three lines
+correspond to different choices of P. If P is small, we
+cannot make P(f) +N(f) constant, since this would re-
+quire negative power at some frequencies. It is easily
+shown, however, that in this case the best P(f) is ob-
+tained by making P(f) +N(f) constant whenever possi-
+ble, and making P(f) zero at other frequencies. With
+low values of P, some of the frequencies will not be used
+at all.
+Fig. 8-Best distribution of transmitter power.
+If we now vary the noise spectrum N(f), keeping the
+total noise power constant and always adjusting the
+signal spectrum P(f) to give the maximum transmission,
+we can determine the worst spectrum for the noise. This
+1949
+,19
+turns out to be the white-noise case. Although this only
+shows it to be worst among the Gaussian noises, it will
+be shown later to be the worst among all possible noises
+with the given power N in the band.
+X. THE CHANNEL CAPACITY WITH AN ARBI-
+TRARY TYPE OF NOISE
+Of course, there are many kinds of noise which are not
+Gaussian; for example, impulse noise, or white noise
+that has passed through a nonlinear device. If the signal
+is perturbed by one of these types of noise, there will
+still be a definite channel capacity C, the maximum rate
+of transmission of binary digits. We will merely outline
+the general theory here.'0
+Let xi, X2,
+, x, be the amplitudes of the noise at
+successive sample points, and let
+p(Xb X2,
+-
+,xn)dxl
+..
+dxn,
+(35)
+be the probability that these amplitudes lie between xi
+and xi+dxl, X2 and x2+dx2, etc. Then the function p
+describes the statistical structure of the noise, insofar
+as n successive samples are concerned. The entropy, H, of
+the noise is defined as follows. Let
+1r
+r
+Hn =- .J
+.
+p(x'
+X,,
+n
+loge p(x,,
+x
+*
+*
+)
+*
+*,
+dXr.
+(36)
+Then
+H = lim Hn.
+(37)
+This limit exists in all cases of practical interest, and can
+be determined in many of them. H is a measure of the
+randomness of the noise. In the case of white Gaussian
+noise of power N, the entropy is
+H = loge
+V/2ireN.
+(38)
+It is convenient to measure the randomness of an arbi-
+trary type of noise not directly by its entropy, but by
+comparison with white Gaussian noise. We can calculate
+the power in a white noise having the same entropy as
+the given noise. This power, namely,
+N =-exp 2H
+(39)
+2re
+where H is the entropy of the given noise, will be called
+the entropy power of the noise.
+A noise of entropy power N acts very much like a
+white noise of power N, insofar as perturbing the mes-
+sage is concerned. It can be shown that the region of
+uncertainty about each signal point will have the same
+volume as the region associated with the white noise. Of
+course, it will no longer be a spherical region. In proving
+Theorem
+1 this volume of uncertainty was the chief
+10 C. E. Shannon, "A mathematical theory of communication,"
+Bell Sys. Tech. Jour., vol. 27, pp. 379-424 and 623-657; July and
+October, 1948.
+property of the noise used. Essentially the same argu-
+ment may be applied for any kind of noise with minor
+modifications. The result is summarized in the follow-
+ing:
+THEOREM 3: Let a noise limited to the band W have
+power N and entropy power N1. The capacity C is then
+bounded by
+W 02P + N,lVl
+W19 P + N
+Wlog2
+-<C_NWlog
+N,
+(40)
+where P is the average signal power and W the bandwidth.
+If the noise is a white Gaussian noise, N, = N, and the
+two limits are equal. The result then reduces to the
+theorem in Section VII.
+For any noise, N, <N. This is why white Gaussian
+noise is the worst among all possible noises. If the noise
+is Gaussian with spectrum N(f), then
+rw
+N, = W exp W j
+log N(f)df.
+The upper limit in Theorem 3 is then reached when we
+are above the highest noise power in Fig. 8. This is easily
+verified by substitution.
+In the cases of most interest, P/N is fairly large. The
+two limits are then nearly the same, and we can use
+HW log (P+N)/N, as the capacity. The upper limit is the
+best choice, since it can be shown that as P/N increases,
+C approaches the upper limit.
+XI. DISCRETE SOURCES OF INFORMATION
+Up to now we have been chiefly concerned with the
+channel. The capacity C measures the maximum rate at
+which a random series of binary digits can be transmit-
+ted when they are encoded in the best possible way. In
+general, the information to be transmitted will not be
+in this form. It may, for example, be a sequence of let-
+ters as in telegraphy,
+a speech wave, or a television
+signal. Can we find an equivalent number of bits per
+second for information sources of this type? Consider
+first the discrete case; i.e., the message consists of a se-
+quence of discrete symbols. In general, there may be
+correlation of various sorts between the different sym-
+bols. If the message is English text, the letter E is the
+most frequent, T is often followed by H, etc. These cor-
+relations allow
+a certain compression of the text by
+proper encoding. We may define the entropy of a dis-
+crete source in a way analogous to that for a noise;
+namely, let
+Hn= -
+p(i, j,
+*
+,s) 10g2 P(i, j,
+*
+,s)
+(42)
+n
+i
+where p(i, j,
+*
+* *, s) is the probability of the sequence
+of symbols i, j,
+*
+* *, s, and the sum is over all sequences
+of n symbols. Then the entropy is
+H = lim Hn.
+n-4 oo
+(43)
+(41)
+J7anuary
+Shannon: Communication in the Presence of Noise
+It turns out that H is the number of bits produced by
+the source for each symbol of message. In fact, the fol-
+lowing result is proved in the Appendix.
+THEOREM 4. It is possible to encode all sequences of n
+message symbols into sequences of binary digits in such a
+way that the average number of binary digits per message
+symbol is approximately H, the approximation approach-
+ing equality as n increases.
+It follows that, if we have a channel of capacity C and
+a discrete source of entropy H, it is possible to encode
+the messages via binary digits into signals and transmit
+at the rate C/H of the original message symbols per
+second.
+For example, if the source produces a sequence of let-
+ters A, B, or C with probabilities PA=0.6, PB=0.3,
+Pc =0.1, and successive letters are
+chosen independ-
+ently,
+then Hn=H1=-[0.6
+log2
+0.6+0.3
+10g2
+0.3
++0.1 log2 0.1] = 1.294 and the information produced is
+equivalent to 1.294 bits for each letter of the message.
+A channel with a capacity of 100 bits per second could
+transmit with best encoding 100/1.294=77.3 message
+letters per second.
+THEOREM 5: If the message source has power Q, en-
+tropy power Q, and bandwidth W1, the rate R of generating
+information in bits per second is bounded by
+Q
+~~~Q
+W log2 Q-< R < Wl log2
+-
+(44)
+N,
+~~~N1
+where N1 is the maximum tolerable mean square error
+in reproduction. If we have a channel with capacity C
+and a source whose rate of generating information R is
+less than or equal to C, it is possible to encode the source
+in such a way as to transmit over this channel with the
+fidelity measured by N1. If R > C, this is impossible.
+In the case where the message source is producing
+white thermal noise, Q= Q. Hence the two bounds are
+equal and R =-W log Q/N1. We can, therefore, transmit
+white noise of power Q and band W1 over a channel of
+band W perturbed by a white noise of power N and re-
+cover the original message with mean square error N1
+if, and only if,
+Q
+P+N
+W log
+-< W log
+N
+(45)
+N1
+N
+XII. CONTINUOUS SOURCES
+If the source is producing a continuous function of
+time, then without further data we must ascribe it an
+infinite rate of generating information. In fact, merely
+to specify exactly one quantity which has a continuous
+range of possibilities requires an infinite number of
+binary digits. We cannot send continuous information
+exactly over a channel of finite capacity.
+Fortunately, we do not need
+to send continuous
+messages exactly. A certain amount of discrepancy be-
+tween the original and the recovered messages can al-
+ways be tolerated. If a certain tolerance is allowed, then
+a definite finite rate in binary digits per second can be
+assigned to a continuous source. It must be remembered
+that this rate depends on the nature and magnitude of
+the allowed error between original and final messages.
+The rate may be described as the rate of generating in-
+formation relative to the criterion offidelity.
+Suppose the criterion of fidelity is the rms discrep-
+ancy between the original and recovered signals, and
+that we can tolerate a value VIN,. Then each point in
+the message space is surrounded by a small sphere of
+radius V211 W1N1. If the system is such that the re-
+covered message lies within this sphere, the transmission
+will be satisfactory. Hence, the number of different mes-
+sages which' must be capable of distinct transmission is
+of the order of the volume V1 of the region of possible
+messages divided by the volume of the small spheres.
+Carrying out this argument in detail along lines similar
+to those used in Sections VII and IX leads to the fol-
+lowing result:
+APPENDIX
+Consider the possible sequences of n symbols. Let
+them be arranged in order of decreasing probability,
+PI.- P2 >P3 ** * > P8. Let Pi =
+i Ipj. The ith message
+is encoded by expanding Pj as a binary fraction and us-
+ing only the first ti places where ti is determined from
+log2 -
+< ti <
+1 + 10g2 -.
+Pi
+pi
+(46)
+Probable sequences have short codes and improbable
+ones long codes. We have
+- < pi <
+2'i=
+-2ti-
+(47)
+The codes for different sequences will all be different.
+Pi+1, for example, differs by pi from Pi, and therefore
+its binary expansion will differ in one or more of the
+first ti places, and similarly for all others. The average
+length of the encoded message will be EPiti. Using
+(46),
+or
+pi log pi
+piti < E pi(l-log pi)
+(48)
+or
+nHn< E piti < 1 + nHn.
+(49)
+The average number of binary digits used per message
+symbol is 1/n IpPt4 and
+Hn
+<- Z pPti <- + Hn.
+n
+n
+(50)
+As n-- oo, H.--H and 1/n-0O, so the average number of
+bits per message symbol approaches H.
+1949

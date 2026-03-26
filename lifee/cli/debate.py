@@ -460,11 +460,28 @@ async def show_suggestion_menu(
     # 截断建议文本，防止换行导致重绘错位
     import shutil
     term_width = shutil.get_terminal_size().columns
-    max_opt_len = term_width - 8  # "    N. " 前缀占 ~7 字符
+
+    def _char_w(ch):
+        return 2 if unicodedata.east_asian_width(ch) in ('F', 'W') else 1
+
+    def _str_w(s):
+        return sum(_char_w(c) for c in s)
+
+    def _truncate_by_width(s, max_w):
+        """按显示宽度截断字符串"""
+        w = 0
+        for i, ch in enumerate(s):
+            cw = _char_w(ch)
+            if w + cw > max_w:
+                return s[:i]
+            w += cw
+        return s
+
+    max_opt_w = term_width - 8  # "  > N. " 前缀最宽 ~8 列
     display_suggestions = []
     for s in suggestions:
-        if len(s) > max_opt_len:
-            display_suggestions.append(s[: max_opt_len - 3] + "...")
+        if _str_w(s) > max_opt_w:
+            display_suggestions.append(_truncate_by_width(s, max_opt_w - 2) + "..")
         else:
             display_suggestions.append(s)
 
@@ -478,32 +495,84 @@ async def show_suggestion_menu(
     cursor_pos = 0  # 输入光标位置
     sel_cursor = 0  # 选择模式光标
     input_prefix = t("input_prompt")  # "你: "
-    # 总行数 = 提示行 + 输入行 + 建议行数
+    # 固定行数 = 提示行 + 输入行 + 建议行数（输入行不换行，所以行数恒定）
     total_lines = 1 + 1 + len(select_options)
+
+    # 输入行可用的最大显示宽度（减去前缀和光标）
+    prefix_str = f"  {input_prefix}"
+    prefix_w = _str_w(prefix_str)
+    max_input_w = term_width - prefix_w - 1  # -1 给光标方块留位置
+
+    def _visible_slice(text, cursor_pos):
+        """计算应该显示的文本范围，确保光标可见且不超过终端宽度。
+        返回 (visible_before, visible_after)，都是字符串。"""
+        before = text[:cursor_pos]
+        after = text[cursor_pos:]
+        before_w = _str_w(before)
+        after_w = _str_w(after)
+
+        if before_w + after_w <= max_input_w:
+            return before, after
+
+        # 优先显示光标左侧，剩余空间给右侧
+        if before_w <= max_input_w:
+            remaining = max_input_w - before_w
+            vis_after = []
+            w = 0
+            for ch in after:
+                cw = _char_w(ch)
+                if w + cw > remaining:
+                    break
+                vis_after.append(ch)
+                w += cw
+            return before, "".join(vis_after)
+        else:
+            # 左侧也放不下，从光标往左截取能放下的部分
+            vis_before = []
+            w = 0
+            for ch in reversed(before):
+                cw = _char_w(ch)
+                if w + cw > max_input_w:
+                    break
+                vis_before.append(ch)
+                w += cw
+            vis_before.reverse()
+            return "".join(vis_before), ""
+
+    # 截断提示行防止换行
+    prompt_text = t('suggestion_prompt')
+    if _str_w(prompt_text) >= term_width:
+        prompt_text = _truncate_by_width(prompt_text, term_width - 2)
 
     def render(first_time=False):
         if not first_time:
-            sys.stdout.write(f"\033[{total_lines}A")
-        # 提示行
-        sys.stdout.write(f"\033[2K{t('suggestion_prompt')}\n")
-        # 输入行
+            # \r 先回到当前行首，再往上跳 total_lines-1 行到菜单起始行
+            # 关键：最后一行不写 \n，光标停在非零列，这样即使终端 echo 了
+            # backspace（左移一列），光标仍在同一行，不会跳到上一行导致错位
+            sys.stdout.write(f"\r\033[{total_lines - 1}A")
+        sys.stdout.write(f"\033[2K{prompt_text}\n")
+        # 输入行（单行，长文本滚动显示）
         text = "".join(buf)
         if mode == "input":
-            # 显示光标：在 cursor_pos 位置插入可见光标
-            before = text[:cursor_pos]
-            after = text[cursor_pos:]
-            sys.stdout.write(f"\033[2K  {input_prefix}{before}\033[7m \033[27m{after}\n")
+            vis_before, vis_after = _visible_slice(text, cursor_pos)
+            sys.stdout.write(f"\033[2K  {input_prefix}{vis_before}\033[7m \033[27m{vis_after}\n")
         else:
+            if _str_w(text) > max_input_w + 1:
+                text = _truncate_by_width(text, max_input_w + 1)
             sys.stdout.write(f"\033[2K  {input_prefix}{text}\n")
-        # 建议列表
         for i, opt in enumerate(display_select):
             if mode == "select" and i == sel_cursor:
-                sys.stdout.write(f"\033[2K  > {i + 1}. {opt}\n")
+                line = f"\033[2K  > {i + 1}. {opt}"
             else:
-                sys.stdout.write(f"\033[2K    {i + 1}. {opt}\n")
+                line = f"\033[2K    {i + 1}. {opt}"
+            # 最后一行不加 \n —— 光标留在行末非零列
+            sys.stdout.write(line + ("\n" if i < len(display_select) - 1 else ""))
         sys.stdout.flush()
 
-    sys.stdout.write("\033[?25l")  # 隐藏终端光标，用反色方块做视觉光标
+    # 预分配菜单空间（不含最后一行的 \n，所以是 total_lines - 1）
+    sys.stdout.write("\n" * (total_lines - 1))
+    sys.stdout.write(f"\033[{total_lines - 1}A")
+    sys.stdout.write("\033[?25l")  # 隐藏终端光标
     render(first_time=True)
 
     result = ("", False)
@@ -553,20 +622,19 @@ async def show_suggestion_menu(
                         cursor_pos += 1
                         render()
 
-            elif ch == "\x08":  # Backspace
+            elif ch == "\x08" or ch == "\x7f":  # Backspace 或 DEL
                 if mode == "input" and buf and cursor_pos > 0:
                     buf.pop(cursor_pos - 1)
                     cursor_pos -= 1
-                    render()
                 elif mode == "select":
-                    # 退格切回输入模式
                     mode = "input"
                     if buf and cursor_pos > 0:
                         buf.pop(cursor_pos - 1)
                         cursor_pos -= 1
-                    render()
+                # 无论是否删除了字符，都重绘（防止终端 echo 破坏显示）
+                render()
 
-            elif ch not in ("\x00", "\xe0") and ord(ch) >= 32:
+            elif ch not in ("\x00", "\xe0") and ord(ch) >= 32 and ch != "\x7f":
                 # 可打印字符（包括中文）
                 if mode == "select":
                     mode = "input"
@@ -574,8 +642,8 @@ async def show_suggestion_menu(
                 cursor_pos += 1
                 render()
     finally:
-        # 清理菜单区域，只保留最终结果
-        sys.stdout.write(f"\033[{total_lines}A\033[J")
+        # 清理菜单区域，恢复终端光标
+        sys.stdout.write(f"\r\033[{total_lines - 1}A\033[J\033[?25h")
         sys.stdout.flush()
 
     return result
@@ -615,6 +683,31 @@ def collect_user_input_nonblocking() -> str:
                 sys.stdout.flush()
 
     return ''.join(chars)
+
+
+async def _memory_search(km_participants, query):
+    """在所有参与者的知识库中搜索并显示结果"""
+    max_per_role = 5 if len(km_participants) == 1 else 3
+    print(f"\n{t('searching').format(query=query)}")
+    any_results = False
+    for p in km_participants:
+        results = await p.knowledge_manager.search(query, max_results=max_per_role)
+        if results:
+            any_results = True
+            if len(km_participants) > 1:
+                print(f"\n{t('knowledge_label').format(emoji=p.info.emoji, name=p.info.display_name)}")
+                indent = "  "
+            else:
+                print()
+                indent = ""
+            for i, r in enumerate(results, 1):
+                print(f"{indent}[{i}] {Path(r.path).name}:{r.start_line}-{r.end_line} (score: {r.score:.2f})")
+                for line in r.text.strip().splitlines():
+                    print(f"{indent}    {line}")
+                print()
+    if not any_results:
+        print(f"{t('no_results')}")
+    print()
 
 
 async def debate_loop(
@@ -761,50 +854,35 @@ async def debate_loop(
                                 print(f"\n[{name}] {msg.content}")
                         print(f"\n{t('message_count').format(count=len(session.history))}\n")
                 elif cmd == "/memory" or cmd.startswith("/memory "):
-                    if len(participants) == 1:
-                        km = participants[0].knowledge_manager
-                        if not km:
-                            print(f"\n{t('no_knowledge')}")
+                    # 收集所有有知识库的参与者
+                    km_participants = [p for p in participants if p.knowledge_manager]
+                    if not km_participants:
+                        print(f"\n{t('no_knowledge')}")
+                        if len(participants) == 1:
                             print(f"{t('knowledge_create_hint')}\n")
-                        elif cmd == "/memory":
-                            stats = km.get_stats()
-                            print(f"\n{t('knowledge_status')}")
-                            print(t("file_count").format(count=stats['file_count']))
-                            print(t("chunk_count").format(count=stats['chunk_count']))
-                            print(t("embedding_model").format(model=f"{stats['embedding_provider']}/{stats['embedding_model']}"))
-                            print()
-                        elif cmd.startswith("/memory search "):
-                            query = user_input[15:].strip()
-                            if not query:
-                                print(f"\n{t('memory_search_usage')}\n")
-                            else:
-                                print(f"\n{t('searching').format(query=query)}")
-                                results = await km.search(query, max_results=5)
-                                if not results:
-                                    print(f"{t('no_results')}\n")
-                                else:
-                                    print(f"{t('result_count').format(count=len(results))}\n")
-                                    for i, r in enumerate(results, 1):
-                                        print(f"[{i}] {Path(r.path).name}:{r.start_line}-{r.end_line} (score: {r.score:.2f})")
-                                        preview = r.text[:100].replace("\n", " ")
-                                        print(f"    {preview}...")
-                                        print()
                         else:
-                            print(t("memory_usage"))
-                            print(t("memory_usage_status"))
-                            print(f"{t('memory_usage_search')}\n")
+                            print()
+                    elif cmd.startswith("/memory search "):
+                        # 一次性搜索: /memory search <query>
+                        query = user_input[15:].strip()
+                        if query:
+                            await _memory_search(km_participants, query)
                     else:
-                        has_any = False
-                        for p in participants:
-                            if p.knowledge_manager:
-                                has_any = True
-                                stats = p.knowledge_manager.get_stats()
-                                print(f"\n{t('knowledge_label').format(emoji=p.info.emoji, name=p.info.display_name)}")
-                                print(t("file_chunk_count").format(files=stats['file_count'], chunks=stats['chunk_count']))
-                        if not has_any:
-                            print(f"\n{t('no_knowledge_all')}\n")
-                        else:
-                            print()
+                        # /memory: 显示状态 + 进入交互搜索
+                        for p in km_participants:
+                            stats = p.knowledge_manager.get_stats()
+                            print(f"\n{t('knowledge_label').format(emoji=p.info.emoji, name=p.info.display_name)}")
+                            print(t("file_chunk_count").format(files=stats['file_count'], chunks=stats['chunk_count']))
+                        print()
+                        # 交互式搜索循环
+                        while True:
+                            try:
+                                query = input(t("memory_search_prompt")).strip()
+                            except (EOFError, KeyboardInterrupt):
+                                break
+                            if not query:
+                                break
+                            await _memory_search(km_participants, query)
                 elif cmd == "/sessions":
                     history_sessions = session_store.list_history()
                     if not history_sessions:

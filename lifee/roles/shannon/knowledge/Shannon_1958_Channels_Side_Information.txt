@@ -1,0 +1,315 @@
+Channels with Side Information at the Transmitter 
+Abstract: In certain communication systems where information is to be transmitted from one point to another, 
+additional side information is available  at the transmitting point. This side information relates to the state of 
+the transmission channel and can be used to aid in the coding and transmission of  information. In this paper a 
+type of channel with side information is studied and its capacity determined. 
+Introduction 
+Channels  with  feedback1 from  the receiving to  the trans- 
+mitting point are a special case of a situation in which 
+there is additional information available  at  the  transmitter 
+which  may be used as an aid in the  forward transmission 
+system. In Fig. 1 the channel  has an  input x and  an  out- 
+put Y .  
+There is a  second output  from the channel, u, available 
+at the  transmitting  point, which may be used in the coding 
+process. Thus  the  encoder has  as inputs  the message to be 
+transmitted, rn, and the  side information u. The sequence 
+of input letters x to  the channel will be a function of the 
+available part  (that is, the past up to  the  current  time) of 
+these signals. 
+The signal u might be the received signal y ,  it might be 
+a noisy version of this signal, or it might not relate to y 
+but be statistically correlated  with the general state of the 
+channel. As a practical example, a transmitting station 
+might have available a receiver for testing the current 
+noise conditions at different frequencies. 
+These results 
+would be used to choose the  frequency  for transmission. 
+A simple  discrete  channel  with 
+side information is 
+shown  in Fig. 2. In this  channel, x, y and u are all binary 
+variables;  they can be either  zero or one. The channel can 
+be used once  each second.  Immediately after it is used the 
+random device chooses a zero 
+or one independently of 
+previous choices and with probabilities 1/2, 1/2. This 
+value of u then appears at the 
+transmitting point. 
+The 
+next x that is sent is added in the  channel modulo 2 to this 
+value of u to give the received y .  If the side information u 
+were not available at  the  transmitter,  the  channel would 
+be that of Fig. 3, a channel in which input 0 has  proba- 
+bilities 1/ 2 of being received as 0 and 1/ 2 as 1 and 
+similarly for  input 1. 
+Such a channel has capacity zero. However, with 
+the 
+side information available, it is possible to send one bit per 
+second through  the  channel.  The u information is used to 
+compensate for  the noise inside by a  preliminary  reversal 
+of zero  and  one, as in Fig. 4. 
+Figure I 
+I 
+I 
+m 
+e 
+ENCODER 
+I 
+C H A N N E L  
+Figure 2 
+M O D U L O  2 
+I""""""""""""""- 
+Y
+i
+ 
+I 
+4-1 I 
+I I I I 
+I I I I 
+Figure 3 
+Figure 4 
+r"""""""- 
+I 
++ 
+~ 
+X I  
+I ,  
+-
+ 
+I- 
+I 
+U 
+I 
+I I 
+IBM JOURNAL - OCTOBER 1958 
+Without studying the problem of side information in its 
+fullest  generality,  which would involve possible historical 
+effects in  the channel, possibly infinite input  and  output 
+alphabets,  et  cetera, we shall  consider  a  moderately gen- 
+eral case for which a simple  solution has been found. 
+The memoryless discrete channel with 
+side state information 
+Consider a channel which has a finite number of possible 
+states, SI, SZ, . . . , sh. At  each use of the channel a new 
+state is chosen, probability gt for  state st. This choice is 
+statistically independent of previous states and previous 
+input or output letters  in the channel. The  state is avail- 
+able as side information u at  the transmitting  point. When 
+in state st the  channel  acts like  a particular discrete chan- 
+nel Kt. Thus, its operation is defined by a set of transition 
+probabilities Pti( j )  , t= 1, 2,. . . , h, i= 1, 2 , .  . . ,a, j =  1, 2, 
+. . . , 6, where a is the  number of input letters and b the 
+number of output letters. Thus, abstractly, the  channel is 
+described by the set of state probabilities gt and transition 
+probabilities pti( j )  , with gt the probability of state t and 
+p t i ( j )  the conditional probability, 
+if in state t and i is 
+transmitted,  that j will be received. 
+A block code with M messages (the integers 1, 2, . . . , 
+M )  may be defined as follows for such a channel with 
+side information. This definition, incidentally, is analo- 
+gous to that for 
+a channel with 
+feedback given previ- 
+ous1y.l If n is the block length of the code, there are n 
+functions f l ( m ; u l > ,  f2(m;u1, UZ), f3(m;ul, u2, ~ 3 1 , .  . . , 
+f,(m; u1, UZ, . . . ,u,). In these functions m ranges over 
+the set of possible messages. Thus m= 1, 2, . . . , M .  The 
+ui all range over the possible side information alphabet. 
+In  the  particular case here  each ui can take values from 
+1 to g .  Each function fi takes values in the alphabet of 
+input letters x of the channel. The value fi( m; ul, u2, . . . , 
+u t )  is the  input xi to be used in the  code if the message is 
+rn and  the side information  up  to  the time  corresponding 
+to i consisted of ul, u2, . . . , ui. This is the  mathematical 
+equivalent of saying that a code consists of a way of deter- 
+mining, for  each message m and each  history of side in- 
+formation from the 
+beginning of the block up to the 
+present, the next transmitted letter. The  important  feature 
+here is that only the  data available at  the time i, namely 
+m; u1, UZ, . . . , ui, may be used in  deciding the next  trans- 
+mitted  letter xi, not  the side information ~ i + ~ ,  
+. . . , u, yet 
+to  appear. 
+A  decoding system for  such a  code consists of a map- 
+ping or  function h(yl,  y2, . . . , y,) of received blocks of 
+length n into messages m; thus h takes values from 1 to 
+M .  It is a way of deciding on a transmitted message given 
+a complete received block yl,  y2, . . . , yn. 
+For a given set of probabilities of the messages, and  for 
+a given channel and coding and decoding system, there 
+will exist a  calculable  probability of error P,; the  proba- 
+bility of a message being encoded and received in such a 
+way that  the  function h leads to deciding on a different 
+message. We shall be concerned particularly with 
+cases 
+where the messages are equiprobable. each having  uroba- 
+bility 1/M. The rate for  such a code'  is ( l / n )  
+:NAL 
+OCTOBER 1958 
+log M .  We 
+are interested  in 
+the channel  capacity 
+C, that is, the 
+largest rate R such  that  it is possible to  construct codes 
+arbitrarily close to rate R and with probability of error 
+P, arbitrarily  small. 
+It may  be  noted that if the  state  information were not 
+available at  the transmitting point,  the  channel would act 
+like a 
+memoryless channel with transition probabilities 
+given by 
+Thus,  the capacity C1 under this  condition  could  be  cal- 
+culated by the  ordinary means for memoryless  channels. 
+On  the  other  hand, if the  state  information were available 
+both at transmitting and receiving points, it is easily shown 
+that  the capacity is then given by C2 = xgtCt, where Ct is 
+the capacity of the memoryless channel with  transmission 
+probabilities p t i ( j ) .  The situation we are interested  in here 
+is intermediate-the 
+state  information is available at  the 
+transmitting  point  but not  at the receiving point. 
+Theorem: The capacity of a memoryless discrete  channel 
+K with side  state information,  defined  by gt and ptl(j), is 
+equal to  the capacity of the  memoryless  channel K (with- 
+out side information)  with  the  same  output  alphabet and 
+an  input alphabet with ah input letters X =  (XI, x2,. . . ,xh) 
+where each xi= 1, 2, . . . , a.  The transition probabilities 
+rx(y) for  the channel K are given  by 
+Any code and decoding  system  for K' can be translated 
+into  an  equivalent  code and decoding  system for K with 
+the same probability of error. Any code for K has an 
+equivocation of message (conditional  entropy  per letter of 
+the message given  the received sequence) at least R - C, 
+where C is  the capacity of K .  Any code  with rate R>C 
+has  a  probability of error bounded  away  from  zero  (what- 
+ever the block length n) 
+PC 2 
+R-C 
+It  may be noted  that this theorem reduces the analysis 
+of the given channel K with side information  to  that  for a 
+memoryless  channel K' with more  input letters but with- 
+out side information.  One uses known  methods to  deter- 
+mine the capacity of this derived channel K and this 
+gives the capacity of the original channel. Furthermore, 
+codes for the derived channel 
+may be translated into 
+codes for  the original channel with identical probability 
+of error.  (Indeed, all statistical  properties of the codes are 
+identical.) 
+We first show  how  codes for K' may be translated into 
+codes for K. A code word for the derived channel K 
+consists of a sequence of n letters X from the X input 
+alphabet of K'. A particular  input letter X of this  channel 
+may be recognized as a particular function from  the state 
+alphabet  to  the  input alphabet x of channel K .  The full 
+possible alphabet of X consists of the full  set of ah differ- 
+ent possible functions from the state alphabet 
+with h 
+values to  the  input value with a values. Thus, each  letter 
+X =  (x1,  xz, 
+. . . , xh) of a code  word  for K' may  be inter- 
+preted as a function  from  state u to  input  alphabet x. The 
+translation of codes consists merely of using the  input x 
+given by this function of the  state variable. Thus if the 
+state variable u has  the value 1, then x1 is used in  channel 
+K ;  if it were state k, then xk. In  other words, the transla- 
+tion is a  simple  letter-by-letter  translation 
+without memory 
+effects depending on previous  states. 
+The codes for K' are really just another way of describ- 
+ing certain of the codes for K-namely 
+those where  the 
+next input letter x is a  function  only of the message m and 
+the  current  state u, and does not depend on the previous 
+states. 
+It might be pointed out also that a simple physical 
+device could be constructed which, placed ahead of the 
+channel K ,  makes it  look like K .  This device would have 
+the X alphabet  for  one  input  and  the  state  alphabet  for 
+another  (this  input connected to  the u line of Fig. 1). Its 
+output would range over the x alphabet  and be  connected 
+to  the x line of Fig. 1. Its  operation would be to give an x 
+output corresponding to  the X function of the  state u. It is 
+clear that  the statistical  situations for K and K' with the 
+translated  code are identical. The probability of an  input 
+word for K' being received as  a particular  output word is 
+the  same as that  for  the corresponding operation with K. 
+This gives the first part of the theorem. 
+To prove the  second part of the theorem, we  will show 
+that in the original channel K ,  the  change in  conditional 
+entropy  (equivocation)  of  the message m at  the receiving 
+point  when  a  letter is received cannot exceed C (the ca- 
+pacity of the derived channel IC). In Fig. 1, we let m be 
+the message; x, y ,  u be the next input letter, output letter 
+and state letter. Let U be the past sequence of u states 
+from  the beginning of the block code  to  the present (just 
+before u )  , and Y the past  sequence of output letters up to 
+the current y. We are assuming here a given block code 
+for encoding messages. The messages are chosen from a 
+set  with 
+certain probabilities (not necessarily equal). 
+Given  the statistics of the message source, the coding sys- 
+tem,  and  the statistics of the channel, these various  entities 
+m, x ,  y, U ,  Y all belong to a probability space and the 
+various  probabilities involved in the following calculation 
+are meaningful. Thus  the equivocation of message when 
+Y has been received, H(m I Y ) ,  is given by 
+~ ( m l  
+Y )  = - I: P(m, Y )  log ~ ( m l  
+Y )  
+m, Y 
+=-E 
+logP(mlY) . 
+( 
+) 
+(The symbol E ( G )  here  and  later means  the  expectation 
+or average of G over the probability space.)  The change 
+in  equivocation when the next letter y is received is 
+H ( m l Y ) - H ( m l Y , y ) = - E  
+logP(m1Y) 
+The last  reduction is true since the  term E 
+log 
+( ;z3 
+is an average mutual information and therefore non- 
+negative. Now note that 
+by the independence require- 
+ments of our original system 
+P ( y ( x ) = P ( y ( x ,  m, u, U )  =P(ylx, m,u, U, Y ) .  
+Now since x is a strict function of m, u, and U (by  the 
+coding system function) we may omit this in the condi- 
+tioning  variables 
+P(ylm, u, U ) = P ( y I m ,  u, u, Y ) ,  
+P(Y, m, u, U >  - P(Y, m, u, U, 
+Y >  
+P ( m ,  u, U )  
+P ( m ,  u, u, Y )  
+- 
+Since the new state u is independent of the past P(m, u, U )  
+= P ( u ) P ( m ,  U )  and P ( m ,  u, U, Y )  = P ( u ) P ( m ,  U, Y). 
+Substituting and simplifying, 
+P(Y, ulm, U)=P(y, ulm, u, Y ) .  
+Summing  on u gives 
+P ( y I m ,   U ) = P ( y l m ,  u, Y ) .  
+Hence : 
+H(Y I m, U )  = H ( y  I m, u, Y )  I H ( Y  I m, Y )  
+-E 
+logP(yIm, U )  
+( 
+Using this in ( 1 ) , 
+We  now wish to  show  that P ( y  I m, U )  =P(y I X ) .  Here 
+X is a random variable  specifying the function from u to x 
+imposed by the encoding operation  for  the next input x to 
+the channel.  Equivalently, X corresponds to  an  input let- 
+ter in the derived channel K'. We have 
+P(ylx, u )  = 
+P ( y  I x, u, m, U )  . Furthermore,  the coding system used 
+implies a functional relation for determining the next 
+input  letter x, given m, U and u. Thus x = f ( m ,  U, u )  . If 
+f ( m ,  U ,  u )  = f ( m ' ,  U', u )  for two particular pairs (m, U )  
+a n d  (m', U') b u t   f o r   a l l  u ,  t h e n   i t   f o l l o w s   t h a t  
+P ( y l m ,  U,u)=P(ylrn', U , u )  foralluandy;sincem, U 
+and u lead to  the  same x as m', U', and u. From this we 
+IBM JOURNAL 
+OCTOBER 1958 

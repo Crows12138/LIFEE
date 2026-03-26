@@ -1,0 +1,886 @@
+
+
+Chess  (1953) 
+
+Alan  Turing 
+
+
+Introduction 
+
+Jack  Copeland 
+
+Chess  and  Al 
+
+Chess  and  some  other  board  games  are  a  test-bed  for  ideas  in  Artificial  Intelli¬ 
+gence.  Donald  Michie — Turing’s  wartime  colleague  and  subsequently  founder  of 
+the  Department  of  Machine  Intelligence  and  Perception  at  the  University  of 
+Edinburgh — explains  the  relevance  of  chess  to  AI: 
+
+Computer  chess  has  been  described  as  the  Drosophila  melanogaster  of  machine  intelli¬ 
+gence.  Just  as  Thomas  Hunt  Morgan  and  his  colleagues  were  able  to  exploit  the  special 
+limitations  and  conveniences  of  the  Drosophila  fruit  fly  to  develop  a  methodology  of 
+genetic  mapping,  so  the  game  of  chess  holds  special  interest  for  the  study  of  the 
+representation  of  human  knowledge  in  machines.  Its  chief  advantages  are:  (1)  chess 
+constitutes  a  fully  defined  and  well-formalized  domain;  (2)  the  game  challenges  the 
+highest  levels  of  human  intellectual  capacity;  (3)  the  challenge  extends  over  the  full 
+range  of  cognitive  functions  such  as  logical  calculation,  rote  learning,  concept-formation, 
+analogical  thinking,  imagination,  deductive  and  inductive  reasoning;  (4)  a  massive  and 
+detailed  corpus  of  chess  knowledge  has  accumulated  over  the  centuries  in  the  form  of 
+chess  instructional  works  and  commentaries;  (5)  a  generally  accepted  numerical  scale  of 
+performance  is  available  in  the  form  of  the  U.S.  Chess  Federation  and  International  ELO 
+rating  system.1 
+
+
+History  of  Computer  Chess 
+
+In  1945,  in  his  paper  ‘Proposed  Electronic  Calculator’,  Turing  predicted  that 
+computers  would  probably  play  ‘very  good  chess’,  an  opinion  echoed  in  1949  by 
+Claude  Shannon  of  Bell  Telephone  Laboratories,  another  leading  early  theoret- 
+
+
+D.  Michie,  On  Machine  Intelligence  (2nd  edn.  Chichester:  Ellis  Horwood,  1986),  78-9. 
+
+
+Chess  I  563 
+
+
+ician  of  computer  chess.2  By  1958,  Herbert  Simon  and  Allen  Newell  were 
+predicting  that  within  ten  years  the  world  chess  champion  would  be  a  computer, 
+unless  barred  by  the  rules.3  Just  under  forty  years  later,  on  11  May  1997, 
+IBM’s  Deep  Blue  beat  the  reigning  world  champion,  Gary  Kasparov,  in  a 
+six-game  match. 
+
+Turing  was  theorizing  about  the  mechanization  of  chess  as  early  as  1941. 
+Fellow  codebreakers  at  GC  &  CS  remember  him  experimenting  with  two  heuris¬ 
+tics  now  commonly  used  in  computer  chess,  minimax  and  best-first.4  The 
+minimax  heuristic  involves  assuming  that  one’s  opponent  will  move  in  such  a 
+way  as  to  maximize  their  gains;  one  then  makes  one’s  own  move  in  such  a  way  as 
+to  minimize  the  losses  caused  by  the  opponent’s  expected  move.5  The  best-first 
+heuristic  involves  ranking  the  moves  available  to  a  player  by  means  of  a  rule 
+of  thumb  scoring  system  and  examining  the  consequences  of  the  highest- 
+scoring  move  first. 
+
+
+Turochamp 
+
+In  1948  Turing  and  the  mathematical  economist  David  Champernowne  designed 
+a  chess-playing  routine  known  as  ‘Turochamp’. 
+
+Champernowne  later  gave  this  description  of  Turochamp: 
+
+It  was  in  the  late  summer  of  1948  that  Turing  and  I  did  try  out  a  loose  system  of  rules  for 
+deciding  on  the  next  move  in  a  chess  game  which  we  thought  could  be  fairly  easily 
+programmed  for  a  computer.  My  long-suffering  wife,  a  beginner  at  chess,  took  on  the 
+system  and  lost.  . . .  Here  is  what  I  think  I  remember  about  the  system  but  I  may  have 
+been  influenced  by  what  I  have  since  read  about  other  people’s  systems.  There  was  a 
+system  for  estimating  the  effects  of  any  move  on  White’s  estimated  net  advantage  over 
+Black.  This  allowed  for: 
+
+(1)  Captures,  using  the  conventional  scale  of  10  for  pawn,  30  for  knight  or  bishop,  50 
+for  rook,  100  for  queen  and  something  huge,  say  5000,  for  king. 
+
+(2)  Change  in  mobility;  i.e.,  change  in  the  number  of  squares  to  which  any  piece  or 
+pawn  could  immediately  move  legitimately  (1  each). 
+
+(3)  Special  incentives  for:  (a)  Castling  (3  points),  (b)  Advancing  a  passed  pawn  (1  or  2 
+points),  (c)  Getting  a  rook  onto  the  seventh  rank  (4  points  perhaps). 
+
+(I  don’t  think  occupation  of  one  of  the  4  central  squares  gained  any  special  bonus.  We  did 
+not  cater  to  the  end-game.)  Most  of  our  attention  went  to  deciding  which  moves  were  to 
+
+
+2  C.  E.  Shannon,  ‘Programming  a  Computer  for  Playing  Chess’,  Philosophical  Magazine,  41  ( 1950),  256-75. 
+
+3  H.  A.  Simon  and  A.  Newell,  ‘Heuristic  Problem  Solving:  The  Next  Advance  in  Operations  Research) 
+Operations  Research,  6  (1958),  1-10. 
+
+4  Michie  in  interview  with  Copeland  (Oct.  1995). 
+
+5  The  foundations  of  the  minimax  approach  were  laid  in  1928  by  von  Neumann  in  his  fundamental 
+‘minimax  theorem’  (J.  von  Neumann,  ‘Zur  Theorie  der  Gesellschaftsspiele)  Mathematische  Annalen,  100 
+(1928),  295-320). 
+
+
+564  I  Jack  Copeland 
+
+
+be  followed  up.  My  memory  about  this  is  infuriatingly  weak.  Captures  had  to  be  followed 
+up  at  least  to  the  point  where  no  further  capture  was  immediately  possible.  Checks  and 
+forcing  moves  had  to  be  followed  further.  We  were  particularly  keen  on  the  idea  that 
+whereas  certain  moves  would  be  scorned  as  pointless  and  pursued  no  further  others  would 
+be  followed  quite  a  long  way  down  certain  paths.  In  the  actual  experiment  I  suspect  we 
+were  a  bit  slapdash  about  all  this  and  must  have  made  a  number  of  slips  since  the 
+arithmetic  was  extremely  tedious  with  pencil  and  paper.  Our  general  conclusion  was 
+that  a  computer  should  be  fairly  easy  to  programme  to  play  a  game  of  chess  against  a 
+beginner  and  stand  a  fair  chance  of  winning  or  least  reaching  a  winning  position.6 
+
+Turing  started  to  code  the  Turochamp  for  the  Ferranti  Mark  I  computer  at 
+Manchester  University  but  he  never  completed  the  task.7 
+
+
+The  First  Working  Chess  Programme 
+
+Dietrich  Prinz,  who  worked  for  the  engineering  firm  Ferranti  Ltd.,  wrote  the  first 
+chess  programme  to  be  fully  implemented.  It  ran  in  November  1951  on  the 
+University  of  Manchester  Ferranti  Mark  I.8  Prinz,  like  Michie,  Strachey,  and 
+others,  was  influenced  by  an  important  article  published  in  1950  by  Donald 
+Davies,  ‘A  Theory  of  Chess  and  Noughts  and  Crosses’  (see  Further  Reading). 
+Prinz  ‘learned  all  about  programming  the  [Mark  I]  computer  at  seminars  given 
+by  Alan  Turing  and  Cecily  Popplewell’.9  (Like  Turing,  Prinz  wrote  a  program¬ 
+ming  manual  for  the  Mark  I.10) 
+
+Prinz’s  programme  was  for  solving  simple  problems  of  the  mate-in-two 
+variety.11  The  programme  would  examine  every  possible  move  until  a  solution 
+was  found.  On  average,  several  thousand  moves  had  to  be  examined  in  the 
+course  of  solving  a  problem,  and  the  programme  was  considerably  slower  than 
+a  human  player.  Unlike  Prinz’s  programme,  Turochamp  could  in  principle  play  a 
+complete  game  and  operated  not  by  exhaustive  search  but  under  the  guidance  of 
+heuristics. 
+
+Prinz  saw  in  chess  programming  an  ‘indication  of  the  methods  that  might  be 
+used  to  treat  structural  or  logistic  problems  occurring  in  other  fields  by  means  of 
+
+6  Champernowne’s  account  is  from  a  letter  that  he  wrote  to  Computer  Chess  (4  (Jan.  1980),  80-1);  it  is 
+published  here  by  permission  of  W.  and  R.  P.  Champernowne. 
+
+7  D.  Michie,  ‘Game-Playing  and  Game-Learning  Automata’,  in  L.  Fox  (ed.),  Advances  in  Programming 
+and  Non-numerical  Computation  (New  York:  Pergamon,  1966),  189. 
+
+8  B.  V.  Bowden  (ed.),  Faster  Than  Thought  (London:  Pitman,  1953),  295. 
+
+9  C.  GradweU,  ‘Early  Days’,  reminiscences  in  a  Newsletter  ‘For  those  who  worked  on  the  Manchester  Mk 
+I  computers’,  Apr.  1994.  (I  am  grateful  to  Prinz’s  daughter,  Daniela  Derbyshire,  for  sending  me  a  copy  of 
+Grad  well’s  article.) 
+
+10  D.  G.  Prinz,  ‘Introduction  to  Programming  on  the  Manchester  Electronic  Digital  Computer’,  n.d., 
+Ferranti  Ltd.  (a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.Alan 
+Turing.net/prinz> ) . 
+
+11  Prinz’s  programme  is  described  in  Bowden  (ed.),  Faster  Than  Thought,  295-7  and  in  D.  G.  Prinz, 
+‘Robot  Chess’,  Research,  5  (1952),  261-6. 
+
+
+Chess  I  565 
+
+
+electronic  computers’.12  Prinz  used  the  Ferranti  Mark  I  to  solve  logical  problems 
+(as  also  did  Audrey  Bates),  and  in  1949,  1950,  and  1951  Ferranti  built  three  small 
+experimental  special-purpose  computers  for  theorem-proving  and  other  logical 
+work.13  (This  was  several  years  before  the  Logic  Theorist  of  Newell,  Simon, 
+and  Shaw — often  incorrectly  said  to  be  the  first  A1  programme — made  its 
+debut  at  the  Dartmouth  conference  (see  ‘Artificial  Intelligence’,  above).) 
+
+
+Turing’s  Approach  in  ‘Chess’ 
+
+Turing  says  that  the  system  of  rules  set  out  in  ‘Chess’  is  based  on  an  ‘introspective 
+analysis’  of  his  own  thought  processes  when  playing  (but  with  ‘considerable 
+simplifications’).  His  system  anticipates  much  that  has  become  standard  in  chess 
+programming:  the  use  of  heuristics  to  guide  the  search  through  the  ‘tree’  of 
+possible  moves  and  counter-moves;  the  use  of  evaluation  rules  which  assign 
+numerical  values,  indicative  of  strength  or  weakness,  to  board  configurations;  the 
+minimax  strategy;  and  variable  look-ahead  whereby,  instead  of  the  consequences 
+of  every  possible  move  being  followed  equally  far,  the  ‘more  profitable  moves 
+[are]  considered  in  greater  detail  than  the  less’  (p.  571).  Turing  also  realized  the 
+necessity  of  using  ‘an  entirely  different  system  for  the  end-game’  (p.  574). 
+
+The  learning  procedure  that  Turing  proposes  in  ‘Chess’  involves  the  machine 
+trying  out  variations  in  its  method  of  play — e.g.  varying  the  numerical  values 
+that  are  assigned  to  the  various  pieces.  The  machine  adopts  any  variation  that 
+leads  to  more  satisfactory  results.  This  procedure  is  an  early  example  of  a  genetic 
+algorithm  or  GA  (see  ‘Artificial  Life’,  above). 
+
+
+Chess  Bulldozers 
+
+Turing  likened  the  claim  that  no  chess  programme  can  outplay  its  programmer 
+to  the  claim  that  no  animal  can  swallow  an  animal  heavier  than  itself.  Both 
+claims,  he  said,  ‘are,  so  far  as  I  know,  untrue’.  Fie  pointed  out  that  a  programme 
+might  outplay  its  programmer  simply  in  virtue  of  ‘the  speed  of  the  machine, 
+which  might  make  it  feasible  to  carry  the  analysis . . .  farther  than  a  man  could  do 
+in  the  same  time’  (p.  575). 
+
+Critics  question  the  worth  of  research  into  computer  chess.  Noam  Chomsky  has 
+said  famously  that  a  computer  beating  a  grandmaster  at  chess  is  as  interesting  as  a 
+bulldozer  winning  a  weight-lifting  competition.14  Deep  Blue  did  indeed  bulldoze 
+
+12  Prinz,  ‘Robot  Chess’,  266. 
+
+13  D.  G.  Prinz  and  J.  B.  Smith,  ‘Machines  for  the  Solution  of  Logical  Problems’,  in  Bowden  (ed.),  Faster 
+Than  Thought,  ch.  15;  W.  Mays  and  D.  G.  Prinz,  ‘A  Relay  Machine  for  the  Demonstration  of  Symbolic  Logic’, 
+Nature,  165/4188  (4  Feb.  1950),  197-8;  M.  A.  Bates,  ‘On  the  Mechanical  Solution  of  a  Problem  in  Church’s 
+Lambda  Calculus’,  M.Sc.  thesis,  University  of  Manchester. 
+
+14  N.  Chomsky,  Language  and  Thought  (London:  Moyer  Bell,  1993),  93. 
+
+
+566  I  Jack  Copeland 
+
+
+its  way  to  victory — 256  parallel  processors  enabled  it  to  examine  200  million 
+possible  moves  per  second  and  to  look  ahead  as  many  as  fourteen  turns  of  play. 
+
+The  huge  improvement  in  computer  chess  since  Turing’s  day  owes  much  more 
+to  advances  in  hardware  engineering  than  to  advances  in  AI.  Massive  increases  in 
+cpu  speed  and  memory  have  meant  that  successive  generations  of  machines  have 
+been  able  to  examine  increasingly  many  possible  moves.  Turing’s  expectation  was 
+that  chess-programming  would  contribute  to  the  study  of  how  human  beings 
+think.  In  fact,  little  or  nothing  about  human  thought  processes  appears  to  have 
+been  learned  from  the  series  of  projects  that  culminated  in  Deep  Blue. 
+
+
+The  Turing  Test  Again 
+
+In  the  introductory  paragraphs  of  his  essay,  Turing  touches  on  some  philosoph¬ 
+ical  issues  ‘unconnected  with  chess’.  In  a  reference  to  the  imitation  game  (Chap¬ 
+ter  11),  he  again  states  his  belief  that  one  could  ‘make  a  machine  which  would 
+answer  questions  put  to  it,  in  such  a  way  that  it  would  not  be  possible  to 
+distinguish  its  answers  from  those  of  a  man’  (p.  569).  On  the  question  of  what 
+justification  there  is  for  this,  he  says  that  he  knows  of  ‘no  really  convincing 
+argument  to  support  this  belief  and  certainly  of  none  to  disprove  it.’ 
+
+
+Consciousness 
+
+In  ‘Chess’  Turing  is  careful  to  distinguish  the  question  whether  one  could  make  a 
+machine  that  would  play  the  imitation  game  successfully  from  the  question 
+‘Could  one  make  a  machine  which  would  have  feelings  like  you  and  I  do?’ 
+(p.  569).  Examples  of ‘feelings’  are  pleasure,  grief,  misery,  and  anger  (Chapter  1 1, 
+p.  451).  The  assertion  ‘No  mechanism  could  feel’  forms  the  basis  of  the  objection 
+to  the  Turing  test  that  in  Chapter  11  Turing  dubs  the  ‘Argument  from  Con¬ 
+sciousness’.  His  remarks  in  the  present  chapter  clarify  the  discussion  that  he  gives 
+of  this  objection  in  Chapter  11. 
+
+The  answer  that  Turing  gives  in  ‘Chess’  to  his  question  ‘Could  one  make  a 
+machine  which  would  have  feelings’  is  this  (p.  569):  ‘I  shall  never  know,  any  more 
+than  I  shall  ever  be  quite  certain  that  you  feel  as  I  do.’  Thus  his  view  appears  to  be 
+that  the  question  ‘Can  machines  think?’  is  independent  of  the  question  whether 
+machines  can  feel,  and  that  an  affirmative  answer  may  be  given  to  the  former  in 
+the  absence  of  our  having  any  answer  at  all  to  the  latter.  If  he  is  right — and 
+arguably  he  is15 — then  the  assertion  ‘No  mechanism  could  feel’,  even  if  true,  goes 
+wide  of  the  mark  as  an  objection  to  the  Turing  test.  As  Turing  sensibly  says  in 
+Chapter  11  (pp.  452-3): 
+
+15  See  section  3.1  (‘Is  Consciousness  Necessary  for  Thought?’)  of  B.  J.  Copeland,  Artificial  Intelligence:  A 
+Philosophical  Introduction  (Oxford:  Blackwell,  1993). 
+
+
+Chess  I  567 
+
+
+I  do  not  wish  to  give  the  impression  that  I  think  there  is  no  mystery  about  conscious¬ 
+ness.  . . .  But  I  do  not  think  these  mysteries  necessarily  need  to  be  solved  before  we  can 
+answer  the  question  with  which  we  are  concerned  in  this  paper  [i.e.  ‘Can  machines 
+think?’]. 
+
+
+Consciousness  and  Computer  Simulation 
+
+Turing  asserts  (p.  569)  that  in  the  case  of  the  questions  ‘Could  one  make  a 
+machine  to  play  chess,  and  to  improve  its  play?’,  and  ‘Could  one  make  a  machine 
+which  would  answer  questions  put  to  it,  in  such  a  way  that  it  would  not  be 
+possible  to  distinguish  its  answers  from  those  of  a  man?’,  the  phrase  ‘Could  one 
+make  a  machine  to . . .’  might  equally  well  be  replaced  by  ‘Could  one  programme 
+an  electronic  computer  to...’.  On  pp.  569-70  Turing  supports  this  claim 
+with  an  argument  that  also  appears,  in  somewhat  different  forms,  in  Chapters 
+11  and  13: 
+
+if  some  other  machine  had  been  constructed  to  do  the  job  we  could  use  an  electronic 
+computer  (of  sufficient  storage  capacity),  suitably  programmed,  to  calculate  what  this 
+machine  would  do,  and  in  particular  what  answer  it  would  give. 
+
+(If  no  superior  method  presented  itself,  then  the  computer  could  be  supplied  with 
+a  ‘look-up  table’  setting  out  the  behaviour  of  the  other  machine  (see  Chapter  11).) 
+
+In  the  case,  however,  of  the  question  ‘Could  one  make  a  machine  which  would 
+have  feelings  like  you  and  I  do?’,  Turing  indicates  (on  p.  569)  that  replacing  ‘Could 
+one  make  a  machine  to. . .’  by  ‘Could  one  programme  an  electronic  computer 
+to ...  ’  might  possibly  result  in  a  question  that  is  not  equivalent.  Turing  says  in 
+Chapter  13  that  ‘any  machine  of  a  certain  very  wide  class’  can  be  replaced  equiva¬ 
+lently  by  a  digital  computer,  but  notes  that  not  every  machine  can  be  so  replaced, 
+giving  as  examples  of  those  that  cannot  bulldozers,  steam-engines,  and  telescopes 
+(p.  483).  Presumably,  therefore,  Turing  considered  it  an  open  question  whether  a 
+machine  capable  of  feeling  belongs  to  the  first  or  second  of  these  two  classes. 
+
+
+The  Church-Turing  Thesis 
+
+‘Chess’  contains  a  formulation  of  the  Church-Turing  thesis  that  does  not  appear 
+elsewhere  in  Turing’s  writings  (p.  570): 
+
+If  one  can  explain  quite  unambiguously  in  English,  with  the  aid  of  mathematical  symbols 
+if  required,  how  a  calculation  is  to  be  done,  then  it  is  always  possible  to  programme  any 
+digital  computer  to  do  that  calculation,  provided  the  storage  capacity  is  adequate. 
+
+As  elsewhere  (e.g.  in  Chapter  10  (p.  414)  and  Chapter  17  (pp.  588-9)),  Turing 
+emphasizes  here  that  this  thesis  ‘is  not  the  sort  of  thing  that  admits  of  clear  cut 
+
+
+568  I  Jack  Copeland 
+
+
+proof’,  but  nevertheless  ‘amongst  workers  in  the  field  it  is  regarded  as  being  clear 
+as  day’  (p.  570).  (The  phrase  ‘how  a  calculation  is  to  be  done’  should  be 
+understood  as  being  elliptical  for  some  such  phrase  as  ‘how  a  calculation  is  to 
+be  done  by  an  obedient  clerk  working  in  accordance  with  a  systematic  method’.) 
+
+Turing  applies  this  thesis  to  the  question  ‘Could  one  programme  an  electronic 
+computer  to  play  a  reasonably  good  game  of  chess?’  He  points  out  that,  in  view 
+of  the  thesis,  there  is  no  need  to  set  out  an  actual  programme  in  order  to  show 
+that  the  answer  to  the  question  is  affirmative.  It  suffices  to  explain,  ‘unambigu¬ 
+ously  in  English’,  the  rules  by  which  the  machine  is  to  choose  its  move  in  each 
+position.  This  Turing  proceeds  to  do. 
+
+
+Further  reading 
+
+Davies,  D.  W.,  ‘A  Theory  of  Chess  and  Noughts  and  Crosses’,  Science  News,  16  (1950), 
+40-64. 
+
+Newborn,  M.,  Kasparov  Versus  Deep  Blue:  Computer  Chess  Comes  of  Age,  (Springer:  New 
+York,  1997). 
+
+Shannon,  C.  E.  ‘Programming  a  Computer  for  Playing  Chess’,  Philosophical  Magazine,  41 
+(1950),  256-75. 
+
+- ‘A  Chess-Playing  Machine’,  Scientific  American,  182  (1950),  48-51. 
+
+
+Provenance 
+
+Turing’s  essay  ‘Chess’  was  published  in  the  1953  collection  Faster  Than  Thought, 
+where  it  formed  a  section  of  a  chapter  entitled  ‘Digital  Computers  Applied  To 
+Games’.  (Edited  by  Vivian  Bowden,  Faster  Than  Thought  is  a  fascinating  survey  of 
+the  then  state  of  the  art  in  digital  computing.)  The  chapter  was  co-authored  by 
+Audrey  Bates,  Bowden,  and  Christopher  Strachey.  Bowden’s  editorial  remarks  do 
+not  make  it  clear  which  parts  of  ‘Digital  Computers  Applied  To  Games’  were 
+written  by  which  author.16  Fortunately,  Turing’s  typescript  of  his  contribution 
+has  survived.17  It  is  this  which  is  printed  here.18 
+
+
+16  The  whole  article  is  mistakenly  attributed  to  Turing  alone  in  Mechanical  Intelligence:  Collected  Works  of 
+A.  M.  Turing,  ed.  D.  C.  Ince  (Amsterdam:  North-Holland,  1992). 
+
+17  Turing’s  typescript  is  itself  entitled  ‘Digital  Computers  applied  to  Games’.  In  Faster  Than  Thought 
+Turing’s  essay  was  published  under  the  narrower  and  more  accurate  title  ‘Chess’.  The  typescript  is  among  the 
+Turing  Papers  in  the  Modern  Archive  Centre,  King’s  College,  Cambridge  (catalogue  reference  B  7). 
+
+18  Bowden’s  edition  of  the  essay  differs  from  Turing’s  typescript  in  numerous  respects,  many  of  them 
+minor.  The  present  edition  follows  Turing’s  typescript.  Some  obvious  typing  errors  have  been  corrected  and 
+in  one  case  a  conjectured  missing  word  has  been  added  in  square  brackets.  Some  significant  differences 
+between  the  typescript  and  Bowden’s  edition  are  mentioned  in  footnotes.  (Bowden’s  edition  is  reprinted  in 
+Turing,  Mechanical  Intelligence,  ed.  Ince,  288-95.) 
+
+
+Chess 
+
+
+When  one  is  asked  ‘Could  one  make  a  machine  to  play  chess?’,  there  are  several 
+possible  meanings  which  might  be  given  to  the  words.  Here  are  a  few: 
+
+i)  Could  one  make  a  machine  which  would  obey  the  rules  of  chess,  i.e.  one 
+which  would  play  random  legal  moves,  or  which  could  tell  one  whether  a 
+given  move  is  a  legal  one? 
+
+ii)  Could  one  make  a  machine  which  would  solve  chess  problems,  e.g.  tell 
+one  whether,  in  a  given  position,  white  has  a  forced  mate  in  three? 
+
+iii)  Could  one  make  a  machine  which  would  play  a  reasonably  good  game  of 
+chess,  i.e.  which,  confronted  with  an  ordinary  (that  is,  not  particularly 
+unusual)  chess  position,  would  after  two  or  three  minutes  of  calculation, 
+indicate  a  passably  good  legal  move? 
+
+iv)  Could  one  make  a  machine  to  play  chess,  and  to  improve  its  play,  game  by 
+game,  profiting  from  its  experience? 
+
+To  these  we  may  add  two  further  questions,  unconnected  with  chess,  which  are 
+likely  to  be  on  the  tip  of  the  reader’s  tongue. 
+
+v)  Could  one  make  a  machine  which  would  answer  questions  put  to  it,  in 
+such  a  way  that  it  would  not  be  possible  to  distinguish  its  answers  from 
+those  of  a  man? 
+
+vi)  Could  one  make  a  machine  which  would  have  feelings  like  you  and  I  do? 
+
+The  problem  to  be  considered  here  is  iii),  but  to  put  this  problem  into 
+perspective  with  the  others  I  shall  give  the  very  briefest  of  answers  to  each  of 
+them. 
+
+To  i)  and  ii)  I  should  say  ‘This  certainly  can  be  done.  If  it  has  not  been  done 
+already  it  is  merely  because  there  is  something  better  to  do.’ 
+
+Question  iii)  we  are  to  consider  in  greater  detail,  but  the  short  answer  is  ‘Yes, 
+but  the  better  the  standard  of  play  required,  the  more  complex  will  the  machine 
+be,  and  the  more  ingenious  perhaps  the  designer.’ 
+
+To  iv)  and  v)  I  should  answer  ‘I  believe  so.  I  know  of  no  really  convincing 
+argument  to  support  this  belief  and  certainly  of  none  to  disprove  it.’ 
+
+To  vi)  I  should  say  ‘I  shall  never  know,  any  more  than  I  shall  ever  be  quite 
+certain  that  you  feel  as  I  do.’ 
+
+In  each  of  these  problems  except  possibly  the  last,  the  phrase  ‘Could  one  make 
+a  machine  to ...  ’  might  equally  well  be  replaced  by  ‘Could  one  programme  an 
+electronic  computer  to...’.  Clearly  the  electronic  computer  so  programmed 
+would  itself  constitute  a  machine.  And  on  the  other  hand  if  some  other  machine 
+
+
+Printed  with  the  permission  of  Financial  Times  Management  and  the  Estate  of  Alan  Turing. 
+
+
+570  I  Alan  Turing 
+
+
+had  been  constructed  to  do  the  job  we  could  use  an  electronic  computer  (of 
+sufficient  storage  capacity),  suitably  programmed,  to  calculate  what  this  machine 
+would  do,  and  in  particular  what  answer  it  would  give. 
+
+After  these  preliminaries  let  us  give  our  minds  to  the  problem  of  making  a 
+machine,  or  of  programming  a  computer,  to  play  a  tolerable  game  of  chess. 
+In  this  short  discussion  it  is  of  course  out  of  the  question  to  provide  actual 
+programmes,  but  this  does  not  really  matter  on  account  of  the  following 
+principle: 
+
+If  one  can  explain  quite  unambiguously  in  English,  with  the  aid  of  mathemat¬ 
+ical  symbols  if  required,  how  a  calculation  is  to  be  done,  then  it  is  always 
+possible  to  programme  any  digital  computer  to  do  that  calculation,  provided 
+the  storage  capacity  is  adequate. 
+
+This  is  not  the  sort  of  thing  that  admits  of  clear  cut  proof,  but  amongst 
+workers  in  the  field  it  is  regarded  as  being  clear  as  day.  Accepting  this  principle, 
+our  problem  is  reduced  to  explaining  ‘unambiguously  in  English’  the  rules  by 
+which  the  machine  is  to  choose  its  move  in  each  position.  For  definiteness  we 
+will  suppose  the  machine  is  playing  white. 
+
+If  the  machine  could  calculate  at  an  infinite  speed,  and  also  had  unlimited 
+storage  capacity,  a  comparatively  simple  rule  would  suffice,  and  would  give  a 
+result  that  in  a  sense  could  not  be  improved  on.  This  rule  could  be  stated: 
+
+Consider  every  possible  continuation  of  the  game  from  the  given  position. 
+There  is  only  a  finite  number  of  them  (at  any  rate  if  the  fifty-move  rule  makes 
+a  draw  obligatory,  not  merely  permissive).  Work  back  from  the  end  of  these 
+continuations,  marking  a  position  with  white  to  play  as  ‘win’  if  there  is  a  move 
+which  turns  it  into  a  position  previously  marked  as  ‘win’.  If  this  does  not 
+occur,  but  there  is  a  move  which  leads  to  a  position  marked  ‘draw’,  then  mark 
+the  position  ‘draw’.  Failing  this,  mark  it  ‘lose’.  Mark  a  position  with  black  to 
+play  by  a  similar  rule  with  ‘win’  and  ‘lose’  interchanged.  If  after  this  process 
+has  been  completed  it  is  found  that  there  are  moves  which  lead  to  a  position 
+marked  ‘win’,  one  of  these  should  be  chosen.  If  there  is  none  marked  ‘win’ 
+choose  one  marked  ‘draw’  if  such  exists.  If  all  moves  lead  to  a  position  marked 
+‘lose’,  any  move  may  be  chosen. 
+
+Such  a  rule  is  practically  applicable  in  the  game  of  noughts  and  crosses,  but  in 
+chess  is  of  merely  academic  interest. 
+
+Even  when  the  rule  can  be  applied  it  is  not  very  appropriate  for  use  against  a 
+weak  opponent,  who  may  make  mistakes  which  ought  to  be  exploited. 
+
+In  spite  of  the  impracticability  of  this  rule  it  bears  some  resemblance  to  what 
+one  really  does  when  playing  chess.  One  does  not  follow  all  the  continuations  of 
+play,  but  one  follows  some  of  them.  One  does  not  follow  them  until  the  end  of 
+the  game,  but  one  follows  them  a  move  or  two,  perhaps  more.  Eventually  a 
+
+
+Chess  I  571 
+
+
+position  seems,  rightly  or  wrongly,  too  bad  to  be  worth  further  consideration,  or 
+(less  frequently)  too  good  to  hesitate  longer  over.  The  further  a  position  is  from 
+the  one  on  the  board  the  less  likely  is  it  to  occur,  and  therefore  the  shorter  is  the 
+time  which  can  be  assigned  for  its  consideration.  Following  this  idea  we  might 
+have  a  rule  something  like  this: 
+
+Consider  all  continuations  of  the  game  consisting  of  a  move  by  white,  a  reply  by 
+black,  and  another  move  and  reply.  The  value  of  the  position  at  the  end  of  each 
+of  these  sequences  of  moves  is  estimated  according  to  some  suitable  rule.  The 
+values  at  earlier  positions  are  then  calculated  by  working  backwards  move  by 
+move  as  in  the  theoretical  rule  given  before.  The  move  to  be  chosen  is  that  which 
+leads  to  the  position  with  the  greatest  value. 
+
+It  is  possible  to  arrange  that  no  two  positions  have  the  same  value.  The  rule  is 
+then  unambiguous.  A  very  simple  form  of  values,  but  one  not  having  this 
+property,  is  an  ‘evaluation  of  material’,  e.g.  on  the  basis 
+
+
+P=  1 
+Kt  =  3 
+
+
+R  =  5 
+
+
+Q  =  10 
+
+Checkmate  ±  10001 
+
+If  B  is  black’s  total  and  W  is  white’s,  then  W/B  is  quite  a  good  measure  of 
+value.  This  is  better  than  W—B  as  the  latter  does  not  encourage  exchanges  when 
+one  has  the  advantage.  Some  small  extra  arbitrary  function  of  position  may  be 
+added  to  ensure  definiteness  in  the  result. 
+
+The  weakness  of  this  rule  is  that  it  follows  all  combinations  equally  far.  It 
+would  be  much  better  if  the  more  profitable  moves  were  considered  in  greater 
+detail  than  the  less.  It  would  also  be  desirable  to  take  into  account  more  than 
+mere  ‘value  of  material’. 
+
+After  this  introduction  I  shall  describe  a  particular  set  of  rules,  which  could 
+without  difficulty  be  made  into  a  machine  programme.  It  is  understood  that  the 
+machine  is  white  and  white  is  next  to  play.  The  current  position  is  called  the 
+‘position  of  the  board’,  and  the  positions  arising  from  it  by  later  moves  ‘positions 
+in  the  analysis’.2 
+
+
+1  Editor’s  note.  In  the  Bowden  edition.  Turing’s  ‘  +  ’  has  been  replaced  with  ‘=’. 
+
+2  Editor’s  note.  In  the  Bowden  edition,  Turing’s  ‘position  of  the  board’  has  been  replaced  by  ‘position  on 
+the  board’. 
+
+
+572  I  Alan  Turing 
+
+‘Considerable’  Moves,  i.e.  Moves  to  be  considered  in  the  analysis 
+by  the  machine 
+
+Every  possibility  for  white’s  next  move  and  for  black’s  reply  is  ‘considerable’.  If  a 
+capture  is  considerable  then  any  recapture  is  considerable.  The  capture  of  an 
+undefended  piece  or  the  capture  of  a  piece  of  higher  value  by  one  of  lower  value 
+is  always  considerable.  A  move  giving  checkmate  is  considerable. 
+
+Dead  position 
+
+A  position  in  the  analysis  is  dead  if  there  are  no  considerable  moves  in  that 
+position,  i.e.  if  it  is  more  than  two  moves  ahead  of  the  present  position,  and  no 
+capture  or  recapture  or  mate  can  be  made  in  the  next  move. 
+
+Value  of  position 
+
+The  value  of  a  dead  position  is  obtained  by  adding  up  the  piece  values  as  above,  and 
+forming  the  ratio  W/B  of  white’s  total  to  black’s.  In  other  positions  with  white  to 
+play  the  value  is  the  greatest  value  of:  (a)  the  positions  obtained  by  considerable 
+moves,  or  ( b)  the  position  itself  evaluated  as  if  a  dead  position,  the  latter  alternative 
+to  be  omitted  if  all  moves  are  considerable.  The  same  process  is  to  be  undertaken 
+for  one  of  black’s  moves,  but  the  machine  will  then  choose  the  least  value. 
+
+Position-play  value 
+
+Each  white  piece  has  a  certain  position-play  contribution  and  so  has  the  black 
+king.  These  must  all  be  added  up  to  give  the  position-play  value. 
+
+For  a  Q,  R,  B  or  Kt,  count 
+
+i)  The  square  root  of  the  number  of  moves  the  piece  can  make  from  the 
+position,  counting  a  capture  as  two  moves,  and  not  forgetting  that  the 
+king  must  not  be  left  in  check. 
+
+ii)  (If  not  a  Q)  1  •  0  if  it  is  defended,  and  an  additional  0-5  if  twice  defended. 
+For  a  K,  count 
+
+iii)  For  moves  other  than  castling  as  i)  above. 
+
+iv)  It  is  then  necessary  to  make  some  allowance  for  the  vulnerability  of  the 
+K.  This  can  be  done  by  assuming  it  to  be  replaced  by  a  friendly  Q  on  the 
+same  square,  estimating  as  in  i),  but  subtracting  instead  of  adding. 
+
+v)  Count  1  -0  for  the  possibility  of  castling  later  not  being  lost  by  moves  of  K 
+or  rooks,  a  further  1-0  if  castling  could  take  place  on  the  next  move,  and 
+yet  another  10  for  the  actual  performance  of  castling. 
+
+For  a  P,  count 
+
+vi)  0-2  for  each  rank  advanced. 
+
+vii)  0-3  for  being  defended  by  at  least  one  piece  (not  P). 
+
+For  the  black  K,  count 
+
+
+Chess  I  573 
+
+
+viii)  10  for  the  threat  of  checkmate, 
+ix)  0-5  for  check. 
+
+We  can  now  state  the  rule  for  play  as  follows. 
+
+The  move  chosen  must  have  the  greatest  possible  value,  and,  consistent  with 
+this,  the  greatest  possible  position-play  value.  If  this  condition  admits  of 
+several  solutions  a  choice  may  be  made  at  random,  or  according  to  an 
+arbitrary  additional  condition. 
+
+Note  that  no  ‘analysis’  is  involved  in  position-play  evaluation.  This  is  in  order 
+to  reduce  the  amount  of  work  done  on  deciding  the  move. 
+
+The  game  below  was  played  between  this  machine  and  a  weak  player  who  did 
+not  know  the  system.  To  simplify  the  calculations  the  square  roots  were  rounded 
+off  to  one  decimal  place  (i.e.  the  table  below  was  used).  No  ‘random  choices’ 
+actually  arose  in  this  game.  The  increase  of  position-play  value  is  given  after 
+white’s  move  if  relevant.  An  asterisk  indicates  that  every  other  move  had  a  lower 
+position-play  value.  0 — 0  indicates  castling.3 
+
+Number  0  1  2  3  4  5  6  7  8  9  10  11  12  13 
+
+Square  Root  0  1  1-4  1-7  2-0  2-2  2-4  2-6  2-8  3-0  3-2  3-3  3-5  3-6 
+
+
+White  (Machine)  Black 
+
+
+1.  P— k4 
+
+4-2* 
+
+P— k4 
+
+2.  Kt— QB3 
+
+3-1* 
+
+Kt— KB3 
+
+3.  P— Q4 
+
+3-1* 
+
+B— QKt5 
+
+4.  Kt— KB3(1) 
+
+2-0 
+
+P— q3 
+
+5.  B— Q, 
+
+3-6* 
+
+Kt— QB3 
+
+6.  P— Q5 
+
+0-2 
+
+Kt— Q5 
+
+7.  P— KR4<2) 
+
+1-1* 
+
+B— Kts 
+
+0° 
+
+
+o 
+
+£3 
+
+1-0* 
+
+Kt  x  Kt  ch. 
+
+9.  P  x  Kt 
+
+B — KR4 
+
+10.  B — Kt5  ch. 
+
+2-4* 
+
+p— qb3 
+
+11.  P  x  P 
+
+0—0 
+
+12.  P  x  P 
+
+R— Kt! 
+
+13.  B— R6 
+
+-1-5 
+
+Q— R4 
+
+14.  Q— K2 
+
+0-6 
+
+Kt— Q2 
+
+15.  KR— Kt!(3) 
+
+1-2* 
+
+Kt— B4(4) 
+
+16.  R — Kt5<5) 
+
+B — Kt3 
+
+17.  B — Kt5 
+
+0-4 
+
+Kt  x  KtP 
+
+18.  0—0 
+
+3-0* 
+
+Kt— B4 
+
+19.  B— B6 
+
+KR— QB! 
+
+Continued 
+
+
+3  Editor’s  note.  In  the  Bowden  edition  a  different  game  is  to  shown,  diverging  from  the  present  game  at 
+the  21st  move. 
+
+
+574  I  Alan  Turing 
+
+
+White  ( Machine )  Black 
+
+
+20. 
+
+B— Q5 
+
+B  x  Kt 
+
+21. 
+
+P  x  B(2)  -0-7 
+
+Q  x  P 
+
+22. 
+
+B — K3(6) 
+
+Q— R6  ch. 
+
+23. 
+
+K— Q2 
+
+Kt— R5 
+
+24. 
+
+B  x  RP(7) 
+
+R— Kty 
+
+25. 
+
+P— b4 
+
+Q— B6  ch. 
+
+26. 
+
+K— B1 
+
+R— R7 
+
+27. 
+
+B  x  BP  ch. 
+
+B  x  B 
+
+28. 
+
+R  x  KtP  ch.(5) 
+
+K  x  R 
+
+29. 
+
+B— k3(8) 
+
+R — R8  mate 
+
+Notes: 
+
+1.  If  B — Q2  3-6 *  then  P  x  P  is  foreseen. 
+
+2.  Most  inappropriate  moves  from  a  positional  point  of 
+view. 
+
+3.  If  0—0  then  B  x  Kt,  B  x  B,  Q  x  P. 
+
+4.  The  fork  is  unforeseen. 
+
+5.  Heads  in  the  sand! 
+
+6.  Only  this  or  B — K!  can  prevent  Q — R8  mate. 
+
+7.  Fiddling  while  Rome  burns. 
+
+8.  Mate  is  foreseen,  but  ‘business  as  usual’. 
+
+
+Numerous  criticisms  of  the  machine’s  play  may  be  made.  It  is  quite  defenceless 
+against  ‘forks’,  although  it  may  be  able  to  see  certain  other  kinds  of  combination. 
+It  is  of  course  not  difficult  to  devise  improvements  of  the  programme  [so]  that 
+these  simple  forks  are  foreseen.  The  reader  may  be  able  to  think  of  some  such 
+improvements  for  himself.  Since  no  claim  is  made  that  the  above  rule  is  particu¬ 
+larly  good,  I  have  been  content  to  leave  this  flaw  without  remedy;  clearly  a  line 
+has  to  be  drawn  between  the  flaws  which  one  will  attempt  to  eliminate  and  those 
+which  must  be  accepted  as  a  risk.  Another  criticism  is  that  the  scheme  proposed, 
+although  reasonable  in  the  middle  game,  is  futile  in  the  end  game.  The  change¬ 
+over  from  the  middle  game  to  the  end-game  is  usually  sufficiently  clean  cut  for  it 
+to  be  possible  to  have  an  entirely  different  system  for  the  end-game.  This  should 
+of  course  include  quite  definite  programmes  for  the  standard  situations,  such  as 
+mate  with  rook  and  king,  or  king  and  pawn  against  king.  There  is  no  intention  to 
+discuss  the  end-game  further  here. 
+
+If  I  were  to  sum  up  the  weakness  of  the  above  system  in  a  few  words  I  would 
+describe  it  as  a  caricature  of  my  own  play.  It  was  in  fact  based  on  an  introspective 
+analysis  of  my  thought  processes  when  playing,  with  considerable  simplifica¬ 
+tions.  It  makes  oversights  which  are  very  similar  to  those  which  I  make  myself, 
+and  which  may  in  both  cases  be  ascribed  to  the  considerable  moves  being  rather 
+inappropriately  chosen.  This  fact  might  be  regarded  as  supporting  the  rather  glib 
+view  which  is  often  expressed,  to  the  effect  that  ‘one  cannot  programme  a 
+machine  to  play  a  better  game  than  one  plays  oneself’.  This  statement  should  I 
+
+
+Chess  I  575 
+
+
+think  be  compared  with  another  of  rather  similar  form.  ‘No  animal  can  swallow 
+an  animal  heavier  than  himself.’  Both  statements  are,  so  far  as  I  know,  untrue. 
+They  are  also  both  of  a  kind  that  one  is  rather  easily  bluffed  into  accepting,  partly 
+because  one  thinks  that  there  ought  to  be  some  rather  slick  way  of  demonstrating 
+them,  and  one  does  not  like  to  admit  that  one  does  not  see  what  this  argument  is. 
+They  are  also  both  supported  by  normal  experience,  and  need  rather  exceptional 
+cases  to  falsify  them.  The  statement  about  chess  programming  may  be  falsified 
+quite  simply  by  the  speed  of  the  machine,  which  might  make  it  feasible  to  carry 
+the  analysis  a  move  farther  than  a  man  could  do  in  the  same  time.  This  effect  is 
+rather  less  than  might  be  supposed.  Although  electronic  computers  are  very  fast 
+where  conventional  computing  is  concerned,  their  advantage  is  much  reduced 
+where  enumeration  of  cases,  etc.,  is  involved  on  a  large  scale.  Take  for  instance 
+the  problem  of  counting  the  possible  moves  from  a  given  position  in  chess.  If  the 
+number  is  30  a  man  might  do  it  in  45  seconds  and  the  machine  in  1  second.  The 
+machine  has  still  an  advantage,  but  it  is  much  less  overwhelming  than  it  would 
+be  for  instance  where  calculating  cosines. 
+
+In  connection  with  the  question,  numbered  iv)  above,  as  to  the  ability  of  a 
+chess-machine  to  profit  from  experience,  one  can  see  that  it  would  be  quite 
+possible  to  programme  the  machine  to  try  out  variations  in  its  method  of  play 
+(e.g.  variations  in  piece  value)  and  adopt  the  one  giving  the  most  satisfactory 
+results.  This  could  certainly  be  described  as  ‘learning’,  though  it  is  not  quite 
+representative  of  learning  as  we  know  it.  It  might  also  be  possible  to  programme 
+the  machine  to  search  for  new  types  of  combination  in  chess.  If  this  product 
+produced  results  which  were  quite  new,  and  also  interesting  to  the  programmer, 
+who  should  have  the  credit?  Compare  this  with  the  situation  where  the  Defence 
+Minister  has  given  orders  for  research  to  be  done  to  find  a  counter  to  the  bow 
+and  arrow.  Should  the  inventor  of  the  shield  have  the  credit,  or  should  the 
+Defence  Minister?

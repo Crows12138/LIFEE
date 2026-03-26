@@ -1,0 +1,129 @@
+The Lattice Theory ofInformation-
+Claude E.Shannon
+The word' "information' has been given many different meanings byvarious writers in the
+general field ofinformation theory. It is likely that at least anumber ofthese will prove
+sufficiently useful incertain applications todeserve further study andpermanent recognition. It
+ishardly to be expected that a single concept ofinformation would satisfactorily account for the
+numerous possible applications ofthisgeneral field. The present note outlines anew approach
+toinformation theory which is aimed specifically at the analysis ofcertain communication
+problems inwhich there exist anumber ofinformation sources simultaneously inoperation. A
+typical example is that ofasimple communication channel with a feedback path from the
+receiving point to the transmitting point. The problem is to make use ofthe feedback
+information forimproving forward transmission, and to determine theforward channel capacity
+when the best possible use is made ofthis feedback information. Another more general
+problem is that ofacommunication system consisting ofalarge number oftransmitting and
+receiving points with some type ofinterconnecting network between thevarious points. The
+problem here is to formulate the best systems design whereby, insome sense, thebest overalJ
+useoftheavailable facilities is made. While theanalysis sketched here has not yet proceeded
+to the point ofacomplete solution ofthese problems, partial answers have been found and it is
+believed that a complete solution may be possible.
+1. The Nature ofInformation
+Incommunication theory we consider information to be produced by a suitable stochastic
+process. We consider here only the discrete case; thesuccessive symbols ofthemessage are
+chosen from a finite "alphabet", and it is assumed formathematical simplicity that the
+stochastic process producing themessage hasonly a finite number ofpossible internal states.
+The message itself is then a discrete time series which isone sample from theensemble of
+possible messages that might have been produced by the information source. The entropy H(x)
+ofsuch a source is ameasure oftheamount ofinformation produced by the source perJetter of
+message. However, H(x) can hardly be said to represent theactual information. Thus two
+entirely different sources might produce information at the same rate (same H)butcertainly
+they are not producing the same information.
+Todefine aconcept of actual information, consider thefollowing situation. Suppose a
+source isproducing, say, English text. This may be translated orencoded into many other
+forms (e.g. Morse code) in such a way that it is possible todecode and recover theoriginal.
+For most purposes ofcommunication, any ofthese forms isequally good and may be
+considered tocontain the same information. Given any particular encoded form, any ofthe
+others may be obtained (although ofcourse itmay require aninvolved computation to do so).
+Thus we are led to define the actual information ofastochastic process as that which is
+common to all stochastic processes which may be obtained from the original byreversible
+encoding operations. It is desirable from a practical standpoint and mathematically convenient
+tolimit thekind ofallowed encoding operations incertain ways. In particular, it is desirable to
+require that the encoding bedone by a transducer with a finite number ofpossible internal
+*IRE Transactions Information Theory, No.I,Feb. 1950.
+
+The Lattice Theory ofInformation 181
+states. This finite memory condition prevents paradoxical situations inwhich information goes
+into a transducer more rapidly on the average than it comes out.
+Each coded version oftheoriginal process may be called atranslation oftheoriginal
+language. These translations may be viewed asdifferent ways ofdescribing the same
+information, inabout thesame way that a vector may be described by its components invarious
+coordinate systems. The information itself may be regarded as the equivalence class ofall
+translations orways ofdescribing the same information.
+2. The Metric, Topology and Convergent Sequences
+With this definition ofinformation, it is possible to set up a metric satisfying the usual
+requirements. The metric p(x,y)measures thedistance between two information elements x
+andy,and is given interms ofconditional entropies. We define
+p(x,y)=Hx(y) +Hy(x) =2H(x, y)-H(x) -H(y) .
+The symmetry property p(x,y)=p(y, x)isobvious from the definition. Ifp(x,y)=0,
+both Hx(y) andHy(x) must bezero (since both arenecessarily non-negative), and this requires
+that the xsequence becalculable with probability Ifrom the ysequence and vice versa. The
+triangle law for a metric,
+p(x, y)+p(y, z)~p(x, z),
+isreadily shown byexpanding these terms into the various entropies and making useofknown
+inequalities forentropies. It may be noted that p (x,y)isindependent ofthe particular
+translations ofxandyused in its calculation. This is due to the fact that Hx(y)andH;(x)are
+invariant under finite state encoding operations applied toxandy.
+The existence ofanatural metric enables us to define a topology for a set ofinformation
+elements and in particular thenotion ofsequences ofsuch elements which approach alimit. A
+setofinformation elements xJ 'X2 ' ... , Xn, ...will be said to be Cauchy convergent if
+lim p(x nl'xll)=0 .
+m---+ 00
+11~00
+The introduction ofthese sequences as new elements (analogous toirrational numbers)
+completes thespace in a satisfactory way and enables one to simplify thestatement ofvarious
+results.
+3. The Information Lattice
+Arelation ofinclusion, x~y,between two information elements xandycan be defined by
+x~y==Hx(y) =0 .
+This essentially requires that)' can be obtained by a suitable finite state operation (orlimit of
+such operations) onx.Ifx~ywe call yanabstraction of.x.Ifx~y, y~z,then x~z. If
+x~y,then H(x) ~H(y). Also x>ymeans x~y,xt:-y.The information element, oneof
+whose translations is the process which always produces thesame symbol, is the 0 element, and
+x~0 for any x.
+The sum oftwo information elements, z=x+y,is the process oneofwhose translations
+consists oftheordered pairs (xn»Y11)'where xnis the nthsymbol produced by the xsequence
+and similarly forYn' Wehave z~x,z~yand there is no fJ.<z with these properties; z is the
+least upper bound ofxandy.The element zrepresents the total information ofboth xandy.
+
+x
+yx+y
+x
+Fig. 1
+z
+Fig. 2x+z
+y
+o
+xy+z
+z
+ozc.E.Shannon
+The product z=xyisdefined as the largest zsuch that z~x,z~y;that is, there is no
+Jl>Zwhich is an abstraction ofboth xandy.The product isunique. Here zis the common
+information ofxandy.
+With these definitions a set ofinformation elements with all their sums and products form a
+metric lattice. The lattices obtained in this way are not, in general, distributive, nor even
+modular. However they can be made to be relatively complemented by the addition ofsuitable
+elements. Forx~yit is possible toconstruct anelement z with
+z+x=y,
+zx=0 .
+The element zis not in genera) unique.
+The lattices obtained from a finite set ofinformation sources areofarather general type;
+they are at least asgeneral as the class offinite partition lattices. With any finite partition
+lattice it is possible toconstruct aninformation lattice which isabstractly isomorphic to it by a
+simple procedure.
+Some examples ofsimple information lattices areshown inFigs. 1 and 2.
+
+The Lattice Theory ofInformation 183
+In Fig. 1 there are three independent sources. The product of any two of these elements is
+zero, and the conventional lattice diagram is that shown at the right. In Fig. 2 there are two
+independent sources of binary digits, xand y.The sequence zis the sum mod 2 of
+corresponding symbols from xandy.In this case again the product of any two of x,yand z is
+zero, but the sum of any two represents the total information in the system. In this case the
+Jattice is non-distributive, since z y+zx=0+0=0, while z(x+y)=z#-O.
+4. The Delay Free Group GI
+The definition of equality for information based on the group G of all reversible encoding
+operations allows x==ywhen yis for example a delayed version of x:Yn=xn+a•In some
+situations, when one must act on information at a certain time, a delay is not permissible. In
+such a case we may consider the more restricted group G Iofinstantaneously reversible
+translations. One may define inclusion, sum, product, etc., in an analogous way, and this also
+leads to a lattice but of much greater complexity and with many different invariants.
+

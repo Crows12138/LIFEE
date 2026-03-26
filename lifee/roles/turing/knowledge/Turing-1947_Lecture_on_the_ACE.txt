@@ -1,0 +1,1680 @@
+
+
+Lecture  on  the  Automatic 
+Computing  Engine  (1947) 
+
+Alan  Turing 
+
+
+Introduction 
+
+Jack  Copeland 
+
+Electronics  at  Bletchley  Park 
+
+On  8  December  1943  the  world’s  first  large-scale  special-purpose  electronic 
+digital  computer — ‘Colossus’,  as  it  became  known — went  into  operation  at  the 
+Government  Code  and  Cypher  School  (see  ‘Computable  Numbers:  A  Guide’, 
+‘Enigma’,  and  the  introduction  to  Chapter  4).  Colossus  was  built  by  Thomas  H. 
+Flowers  and  his  team  of  engineers  at  the  Post  Office  Research  Station  in  Dollis 
+Hill,  London.  Until  relatively  recently,  few  had  any  idea  that  electronic  digital 
+computation  was  used  successfully  during  the  Second  World  War,  since  those 
+who  built  and  worked  with  Colossus  were  prohibited  by  the  Official  Secrets  Act 
+from  sharing  their  knowledge. 
+
+Colossus  contained  approximately  the  same  number  of  electronic  valves 
+(vacuum  tubes)  as  von  Neumann’s  IAS  computer,  built  at  the  Princeton  Institute 
+of  Advanced  Study  and  dedicated  in  1952.  The  IAS  computer  was  forerunner  of 
+the  IBM  701,  the  company’s  first  mass-produced  stored-programme  electronic 
+computer  (1953).1  The  first  Colossus  had  1,600  electronic  valves  and  Colossus  II, 
+installed  in  mid- 1944,  2,400,  while  the  IAS  computer  had  2, 600. 2 
+
+Colossus  lacked  two  important  features  of  modern  computers.  First,  it  had  no 
+internally  stored  programmes  (see  ‘Computable  Numbers:  A  Guide’).  To  set  up 
+Colossus  for  a  new  task,  the  operators  had  to  alter  the  machine’s  physical  wiring, 
+using  plugs  and  switches.  Second,  Colossus  was  not  a  general-purpose  machine, 
+being  designed  for  a  specific  cryptanalytic  task  (involving  only  logical  operations 
+
+1  C.  C.  Hurd,  ‘Computer  Development  at  IBM’,  in  N.  Metropolis,  J.  Howlett,  and  G.  C.  Rota  (eds.),  A 
+History  of  Computing  in  the  Twentieth  Century  (New  York:  Academic  Press,  1980). 
+
+2  J.  Bigelow,  ‘Computer  Development  at  the  Institute  for  Advanced  Study’,  ibid. 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  363 
+
+
+and  counting).  Nevertheless,  Flowers  had  established  decisively  and  for  the  first 
+time  that  large-scale  electronic  computing  machinery  was  practicable. 
+
+The  implication  of  Flowers’s  racks  of  electronic  equipment  would  have  been 
+obvious  to  Turing.  Once  Turing  had  seen  Colossus  it  was,  Flowers  said,  just  a 
+matter  of  Turing’s  waiting  to  see  what  opportunity  might  arise  to  put  the  idea  of 
+his  universal  computing  machine  into  practice.3 4 
+
+
+Turing  Joins  the  National  Physical  Laboratory 
+
+Precisely  such  an  opportunity  fell  into  Turing’s  lap  in  1945,  when  John  Womers- 
+ley  invited  him  to  join  the  Mathematics  Division  of  the  National  Physical 
+Laboratory  (NPL)  at  Teddington  in  London,  in  order  to  design  and  develop  an 
+electronic  stored-programme  digital  computer — a  concrete  form  of  the  universal 
+Turing  machine  of  1936.  Womersley  named  the  proposed  computer  the  Auto¬ 
+matic  Computing  Engine,  or  ACE,  in  homage  to  Babbage  and  his  planned 
+calculating  machines,  the  Difference  Engine  and  the  Analytical  Engine  (see 
+‘Computable  Numbers:  A  Guide’). 
+
+The  formal  date  of  Turing’s  appointment  was  1  October  1945. 4  Womersley 
+reviewed  the  events  leading  up  to  the  appointment  in  an  NPL  document  entitled 
+‘A.C.E.  Project  -  Origin  and  Early  History’  (26  November  1946). 5 
+
+1936- 37  Publication  of  paper  by  A.M.  Turing  ‘On  Computable  Numbers,  with  an 
+Application  to  the  Entscheidungsproblem’.  . . . 
+
+1937- 38  Paper  seen  by  J.R.W.  [J.  R.  Womersley]  and  read.  J.R.W.  met  C.  L.  Norfolk,  a 
+telephone  engineer  who  had  specialised  in  totalisator  design  and  discussed  with  him  the 
+planning  of  a  ‘Turing  machine’  using  automatic  telephone  equipment.  Rough  schemat¬ 
+ics  prepared,  and  possibility  of  submitting  a  proposal  to  N.P.L.  discussed.  It  was  decided 
+that  machine  would  be  too  slow  to  be  effective. 
+
+June  1938  J.R.W.  purchased  a  uniselector  and  some  relays  on  Petty  Cash  at  R.D.  Woolwich 
+for  spare-time  experiments.  Experiments  abandoned  owing  to  pressure  of  work  on 
+ballistics.  . . . 
+
+Late  1943  J.R.W.  first  heard  of  [the]  American  machines.  [Editor’s  note:  Aiken’s  Se¬ 
+quence-Controlled  Calculator  at  Harvard  University  and  Stibitz’s  Relay  Computer  at 
+Bell  Telephone  Laboratories — these  machines  were  neither  electronic  nor  stored- 
+programme.] 
+
+1944  Interdepartmental  Committee  on  a  Central  Mathematical  Station.  D.  R.  Hartree 
+mentioned  at  one  meeting  the  possible  use  of  automatic  telephone  equipment  in  the 
+
+3  Flowers  in  interview  with  Copeland  (July  1996}. 
+
+4  Minutes  of  the  Executive  Committee  of  the  National  Physical  Laboratory  for  23  Oct.  1945  (National 
+Physical  Laboratory  library;  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing 
+<www.AlanTuring.net/npl_minutes_octl945>). 
+
+5  J.  R.  Womersley,  A.C.E.  Project  -  Origin  and  Early  History’,  National  Physical  Laboratory,  26  Nov.  1946 
+(Public  Record  Office,  Kew,  Richmond,  Surrey  (document  reference  DSIR  10/385);  a  digital  facsimile  is  in 
+The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/ace_early_history>). 
+
+
+364  I  Jack  Copeland 
+
+
+design  of  large  calculating  machines.  J.R.W.  submitted  suggestions  for  a  research 
+programme  to  be  included  in  Committee’s  Report. 
+
+1944  Sept.  J.R.W.  chosen  for  Maths.  Division. 
+
+1944  Oct.  J.R.W.  prepares  research  programme  for  Maths.  Division  which  includes  an 
+item  covering  the  A.C.E. 
+
+1944  Nov.  J.R.W.  addresses  Executive  Committee  of  N.RL.  Quotation  from  M/S  (de¬ 
+livered  verbatim) . . . 
+
+‘Are  we  to  have  a  mixed  team  developing  gadgets  of  many  kinds ...  Or  are  we,  following 
+Cornrie ...  to  rely  on  sheer  virtuosity  in  the  handling  of  the  ordinary  types  of  calculating 
+machines?  1  think  either  attitude  would  be  disastrous . . .  We  can  gain  the  advantages  of  both 
+methods  by  adopting  electronic  counting  and  by  making  the  instructions  to  the  machine 
+automatic 
+
+1945  Feb-May  J.R.W.  sent  to  the  U.S.A.  by  Director.  Sees  Harvard  machine  and  calls  it 
+‘Turing  in  hardware’.  (Can  be  confirmed  by  reference  to  letters  to  wife  during  visit). 
+J.R.W.  sees  ENIAC  and  is  given  information  about  EDVAC  by  Von  Neumann  and 
+Goldstine. 
+
+1945  June  J.R.W.  meets  Professor  M.  H.  A.  Newman.  Tells  Newman  he  wishes  to  meet 
+Turing.  Meets  Turing  same  day  and  invites  him  home.  J.R.W.  shows  Turing  the  first 
+report  on  the  EDVAC  and  persuades  him  to  join  N.P.L.  staff,  arranges  interview  and 
+convinces  Director  and  Secretary. 
+
+
+The  Automatic  Computing  Engine 
+
+During  the  remainder  of  1945  Turing  drafted  his  technical  report  ‘Proposed 
+Electronic  Calculator’.6  According  to  Michael  Woodger — Turing’s  assistant  at  the 
+NPL  from  1946 — an  NPL  file  gave  the  date  of  Turing’s  completed  report  as  1945 
+(unfortunately,  this  file  was  destroyed  in  1952). 7  Woodger  believes  that  Turing 
+probably  wrote  the  report  between  October  and  December  1945.  The  report  was 
+submitted  to  the  Executive  Committee  of  the  NPL  in  February  1946,  under  the 
+title  ‘Proposals  for  the  Development  of  an  Automatic  Computing  Engine  (ACE)’, 
+and  on  19  March  1946  the  ‘Committee  resolved  unanimously  to  support 
+with  enthusiasm  the  proposal  that  Mathematics  Division  should  undertake  the 
+
+
+6  Turing’s  technical  report  was  reprinted  by  the  NPL  in  April  1972  as  Computer  Science  Division  Report  No. 
+57.  The  report  is  reprinted  in  full  in  B.  J.  Copeland  (ed.),  Alan  Turing’s  Automatic  Computing  Engine  (Oxford: 
+Oxford  University  Press,  2004)  under  the  title  ‘Proposed  Electronic  Calculator’;  and  in  B.  E.  Carpenter  and  R.  W. 
+Doran  (eds.),  AM.  Turing’s  ACE  Report  of  1946  and  Other  Papers  (Cambridge,  Mass.:  MIT  Press,  1986)  under 
+the  title  ‘Proposal  for  Development  in  the  Mathematics  Division  of  an  Automatic  Computing  Engine 
+(ACE)’.  A  copy  of  the  original  typewritten  report  is  in  the  Woodger  Papers  (National  Museum  of  Science 
+and  Industry,  Kensington,  London  (catalogue  reference  M15/83));  a  digital  facsimile  is  in  The  Turing 
+Archive  for  the  History  of  Computing  <www.AlanTuring.net/proposed_electronic_calculator>.  Page  refer¬ 
+ences  in  what  follows  are  to  the  original  typescript. 
+
+7  M.  Woodger,  handwritten  note,  undated  (Woodger  Papers  (catalogue  reference  M15/78));  letter  from 
+Woodger  to  Copeland  (27  Nov.  1999). 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  365 
+
+
+Figure  1.  The  Pilot  ACE  in  December  1950.  On  the  left  are  the  control  table  and  the 
+modified  Hollerith  punched  card  unit  (on  the  table  with  contoured  legs).  The  tray  slung 
+below  the  main  frame  contains  the  short  delay  lines  used  for  temporary  storage. 
+
+Source:  Crown  copyright.  Reproduced  by  permission  of  the  National  Physical  Laboratory. 
+
+development  and  construction  of  an  automatic  computing  engine  of  the  type 
+proposed  by  Dr.  A.  M.  Turing’.8 
+
+Turing’s  ‘Proposed  Electronic  Calculator’  gave  the  first  relatively  complete 
+specification  of  an  electronic  stored-programme  digital  computer.  The  earlier 
+‘First  Draft  of  a  Report  on  the  EDVAC’,  written  by  von  Neumann  in  the  USA  in 
+about  May  1945  (see  ‘Computable  Numbers:  A  Guide’),  contained  little  engineer¬ 
+ing  detail,  in  particular  concerning  electronic  hardware.  Harry  Huskey,  the  elec¬ 
+tronic  engineer  who  subsequently  drew  up  the  first  detailed  specifications  of 
+possible  hardware  configurations  for  the  EDVAC,  has  stated  that  the  ‘information 
+in  the  “First  Draft”  was  of  no  help  in  this’  and  that  ‘von  Neumann’s  “First  Draft” 
+provided  no  technical  contribution  to  the  development  of  computers’.9  Turing’s 
+proposal,  on  the  other  hand,  supplied  detailed  specifications  of  hardware  units, 
+including  circuit  designs,  and  specimen  programmes  in  machine  code.  Turing 
+even  gave  an  exact  estimate  of  the  cost  of  building  the  machine  (£1 1,200). 
+
+8  Minutes  of  the  Executive  Committee  of  the  National  Physical  Laboratory  for  19  Mar.  1946  (National 
+Physical  Laboratory  library;  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing 
+<www.AlanTuring.net/npl_minutes_mar  1 946 > ) . 
+
+9  Letter  from  Huskey  to  Copeland  (4  Feb.  2002). 
+
+
+366  I  Jack  Copeland 
+
+
+Turing’s  ACE  and  the  ED  VAC  (which  was  not  fully  working  until  195210) 
+differed  fundamentally  in  design.  The  EDVAC  had  what  is  now  called  a  central 
+processing  unit  or  cpu,  whereas  in  the  ACE  different  memory  locations  had 
+specific  logical  or  numerical  functions  associated  with  them.  For  example,  if  two 
+numbers  were  transferred  to  a  certain  destination  in  memory  their  sum  would  be 
+formed  there,  ready  to  be  transferred  elsewhere  by  a  subsequent  instruction. 
+Programmes  for  the  ACE  were  made  up  entirely  of  instructions  such  as  ‘Transfer 
+the  contents  of  Temporary  Store  27  to  Temporary  Store  6’.  Instead  of  writing 
+mathematically  significant  instructions  like 
+
+MULTIPLY  x  BY  y  AND  STORE  THE  RESULT  IN  z 
+
+the  programmer  composed  a  series  of  transfer  instructions  producing  that  effect. 
+
+Turing  saw  that  size  of  memory  and  speed  were  the  keys  to  computing.  (His 
+assistant  at  the  NPL,  lames  Wilkinson,  observed  that  Turing  ‘was  obsessed  with 
+the  idea  of  speed  on  the  machine’.11)  Turing’s  design  specified  a  high-speed 
+memory  of  roughly  the  same  capacity  as  an  early  Macintosh  computer — enor¬ 
+mous  by  the  standards  of  his  day.  In  order  to  increase  the  speed  of  a  programme’s 
+execution,  he  proposed  that  instructions  be  stored,  not  consecutively,  but  at 
+carefully  chosen  positions  in  memory,  with  each  instruction  containing  a  refer¬ 
+ence  to  the  position  of  the  next.  Also  with  a  view  to  speed,  he  included  a  small 
+fast-access  memory  for  the  temporary  storage  of  whichever  numbers  were  used 
+most  frequently  at  a  given  stage  of  a  computation.  According  to  Wilkinson  in 
+1955,  Turing  ‘was  the  first  to  realise  that  it  was  possible  to  overcome  access  time 
+difficulties  with . . .  mercury  lines ...  or  drum  stores  by  providing  a  comparatively 
+small  amount  of  fast  access  store.  Many  of  the  commercial  machines  in  the  USA 
+and ...  in  this  country  make  great  use  of  this  principle.’12 
+
+Turing’s  philosophy — very  different  from  that  embraced  in  the  EDVAC — was 
+to  dispense  with  additional  hardware  in  favour  of  software:  in  his  design, 
+complex  behaviour  was  to  be  achieved  by  complex  programming  rather  than 
+by  complex  equipment  (such  as  a  hardware  multiplier  and  divider,  and  special 
+hardware  for  floating-point  arithmetic).  The  ACE  therefore  had  much  in 
+common  with  today’s  RISC  (Reduced  Instruction  Set  Computing)  architectures. 
+Turing  spoke  disparagingly  of  the  contrary  ‘American  tradition  of  solving  one’s 
+difficulties  by  means  of  much  equipment  rather  than  thought’.13 
+
+
+10  H.  Huskey,  ‘The  Development  of  Automatic  Computing’,  in  Proceedings  of  the  First  USA-JAPAN 
+Computer  Conference ,  Tokyo  (1972),  698-704  (702). 
+
+11  Wilkinson  in  interview  with  Christopher  Evans  in  1976  (‘The  Pioneers  of  Computing:  An  Oral  History 
+of  Computing’  (London:  Science  Museum)). 
+
+12  Letter  from  Wilkinson  to  Newman,  10  June  1955  (Turing  Papers,  Modern  Archive  Centre,  King’s 
+College,  Cambridge  (catalogue  reference  A  7)).  Quoted  by  permission  of  Heather  Wilkinson. 
+
+13  Memo  from  Turing  to  Womersley,  n.d.  but  c.  Dec.  1946  (Woodger  Papers  (catalogue  reference  M15/ 
+77);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/ 
+turing_womersley_cdec46  > ) . 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  367 
+
+
+Had  Turing’s  ACE  been  built  as  he  planned,  it  would  have  been  in  a  different 
+league  from  the  other  early  computers.  However,  from  early  1947 — for  reasons 
+that  Turing  might  have  regarded  as  amounting  to  ‘cowardly  and  irrational 
+doubts’14 — his  colleagues  in  the  ACE  Section  were  in  favour  of  devoting  their 
+efforts  to  building  a  much  scaled-down  and  simplified  form  of  Turing’s  design, 
+which  they  called  the  ‘Test  Assembly’,  rather  than  pressing  on  ahead  immediately 
+with  the  full-scale  ACE.  It  was  not  in  Turing’s  nature  to  direct  them  otherwise. 
+He  ‘tended  to  ignore  the  Test  Assembly’,  simply  ‘standing  to  one  side’  (Wilkinson 
+said).15  Finally,  in  1948,  a  disenchanted  Turing  left  the  NPL  for  Newman’s 
+Computing  Machine  Laboratory  at  Manchester  University.  The  introduction  to 
+the  next  chapter  tells  the  full  story  of  the  frustrating  delays  at  the  NPL  and  of 
+Turing’s  move  to  Manchester  (and  see  also  the  introduction  to  Chapter  4). 
+
+It  was  not  until  May  1950  that  a  small  ‘pilot  model’  of  the  Automatic 
+Computing  Engine,  built  by  Wilkinson,  David  Clayden,  Donald  Davies,  Edward 
+Newman,  Michael  Woodger,  and  others,  executed  its  first  programme.  With  an 
+operating  speed  of  1  MHz,  the  Pilot  Model  ACE  was  for  some  time  the  fastest 
+computer  in  the  world.  However,  years  of  delays  beyond  Turing’s  control  had 
+cost  the  NPL  the  race  to  build  the  world’s  first  stored-programme  electronic 
+digital  computer — an  honour  that  went  to  the  University  of  Manchester,  where, 
+in  Newman’s  Computing  Machine  Laboratory,  the  ‘Manchester  Baby’  ran  its  first 
+programme  on  21  June  1948. 16  (As  its  name  implies,  the  Baby  was  a  very 
+small  computer,  and  the  news  that  it  had  run  what  was  only  a  tiny  pro¬ 
+gramme — just  seventeen  instructions  long — for  a  mathematically  trivial  task 
+was  ‘greeted  with  hilarity’  by  the  NPL  team  developing  the  much  more  sophisti¬ 
+cated  Pilot  Model  ACE.17)  Turing’s  influence  on  the  Manchester  computer  is 
+described  below. 
+
+The  EDSAC  computer,  built  by  Maurice  Wilkes  at  Cambridge  University, 
+became  operational  in  1949  and  was  the  second  stored-programme  electronic 
+computer  to  run.  The  Pilot  Model  ACE  was  also  preceded  by  the  BINAC  (1949), 
+built  by  Eckert  and  Mauchly  at  their  Electronic  Control  Company,  Philadelphia 
+(although  opinions  differ  over  whether  the  BINAC  ever  actually  worked),  the 
+CSIR  Mark  1  (1949),  built  by  Trevor  Pearcey  at  the  Commonwealth  Scientific 
+and  Industrial  Research  Organization,  Division  of  Radiophysics,  Sydney,  Austra¬ 
+lia,  the  Whirlwind  I  (1949),  built  by  Jay  Forrester  at  the  Digital  Computer 
+Laboratory,  Massachusetts  Institute  of  Technology,  and  the  SEAC  (1950),  built 
+
+
+14  Turing  used  this  phrase  in  a  different  connection  on  p.  42  of  his  ‘Proposed  Electronic  Calculator’. 
+
+15  Wilkinson  in  interview  with  Evans  (see  n.  11). 
+
+16  Williams  described  the  Computing  Machine  Laboratory  on  p.  328  of  his  ‘Early  Computers  at 
+Manchester  University’  ( Radio  and  Electronic  Engineer,  45  (1975),  327-31):  ‘It  was  one  room  in  a  Victorian 
+building  whose  architectural  features  are  best  described  as  “late  lavatorial”.  The  walls  were  of  brown  glazed 
+brick  and  the  door  was  labelled  “Magnetism  Room’.” 
+
+17  Woodger  in  interview  with  Copeland  (June  1998). 
+
+
+368  I  Jack  Copeland 
+
+
+by  Samuel  Alexander  and  Ralph  Slutz  at  the  US  Bureau  of  Standards  Eastern 
+Division,  Washington,  DC.  Huskey’s  SWAC,  built  at  the  US  Bureau  of  Standards 
+Western  Division,  Los  Angeles,  ran  a  few  months  after  the  Pilot  Model  ACE  (in 
+August  1950). 
+
+
+Derivatives  of  Turing’s  ACE  Design 
+
+The  DEUCE,  the  production  version  of  the  Pilot  Model  ACE,  was  built  by  the 
+English  Electric  Company.  The  first  was  delivered  in  March  1955  (to  the  NPL) 
+and  the  last  went  out  of  service  around  1970. 18  Sales  of  this  large  and  expensive 
+machine  exceeded  thirty,  confounding  the  suggestion,  made  in  1946  by  Sir 
+Charles  Darwin,  Director  of  the  NPL,  that  ‘it  is  very  possible  that . . .  one  machine 
+would  suffice  to  solve  all  the  problems  that  are  demanded  of  it  from  the  whole 
+country’.19  (Douglas  Hartee,  a  leading  British  expert  on  automatic  computation, 
+thought  that  a  total  of  three  digital  computers  would  probably  be  adequate  for 
+the  country’s  computing  needs.20)  The  NPL’s  DEUCE  replaced  the  Pilot  Model 
+ACE,  and  in  1956  much  of  the  Pilot  Model  was  transferred  to  the  London 
+Science  Museum  (where  it  is  on  permanent  display).21 
+
+Work  began  on  a  large-scale  ACE  in  the  autumn  of  1954.22  Built  and  housed  at 
+the  NPL,  the  ‘Big  ACE’  was  in  operation  by  late  1958.  Wilkinson,  Clayden,  Davies, 
+(Ted)  Newman,  and  Woodger  all  contributed  to  the  final  design.23  The  Big  ACE 
+filled  a  room  the  size  of  an  auditorium.24  It  remained  in  service  until  1967. 
+
+At  the  Press  Day  held  in  1958  to  announce  the  inauguration  of  the  Big  ACE, 
+A.  M.  Uttley — Superintendent  of  the  NPL’s  Control  Mechanisms  and  Electronics 
+
+
+18  Letter  from  J.  Illingworth  to  Fryer,  6  Nov.  1956  (Woodger  Papers  (catalogue  reference  M15/87);  a 
+digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/illingworth_ 
+fryer_6nov56  > ) . 
+
+19  C.  Darwin,  Automatic  Computing  Engine  (ACE)’,  National  Physical  Laboratory,  17  Apr.  1946  (Public 
+Record  Office  (document  reference  DSIR  10/385);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History 
+of  Computing  <www.AlanTuring.net/darwin_ace>). 
+
+20  Hartree’s  opinion  is  quoted  in  V.  Bowden,  ‘The  25th  Anniversary  of  the  Stored  Program  Computer’, 
+Radio  and  Electronic  Engineer,  45  (1975),  326. 
+
+21  Memorandum  from  Hiscocks  to  the  DSIR,  30  Jan.  1956  (Public  Record  Office  (document  reference 
+DSIR  10/275);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTur- 
+ing.net/hiscocks_dsir_30janl956>);  letter  from  D.  Brunt  to  Sir  Charles  Darwin  (20  July  1956)  (Public 
+Record  Office  (document  reference  DSIR  10/275);  <www.AlanTuring.net/brunt_darwin_20july56>);  ‘Dis¬ 
+posal  of  Pilot  ACE’,  memorandum  from  Hiscocks  to  the  DSIR,  26  July  1956  (Public  Record  Office 
+(document  reference  DSIR  10/275);  <www.AlanTuring.net/hiscocks_disposal_pilot_ace>). 
+
+22  Letter  from  Illingworth  to  Fryer  (see  n.  18). 
+
+23  Letter  from  A.  M.  Uttley  to  Sara  Turing,  19  Dec.  1958  (in  the  Turing  Papers,  the  Modern  Archive 
+Centre,  King’s  College,  Cambridge  (catalogue  reference  A  11) ). 
+
+24  F.  M.  Blake,  D.  O.  Clayden,  D.  W.  Davies,  L.  J.  Page,  and  J.  B.  Stringer,  ‘Some  Features  of  the  ACE 
+Computer’,  National  Physical  Laboratory,  8  May  1957  (Woodger  Papers  (catalogue  reference  N12/102);  a 
+digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/ace_ 
+features>). 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  369 
+
+
+Division — announced:  ‘Today,  Turing’s  dream  has  come  true.’25  If  so,  it  was  a 
+dream  whose  time  had  passed.  Technology  had  moved  ahead  in  the  thirteen  years 
+since  Turing  wrote  ‘Proposed  Electronic  Calculator’.  The  Big  ACE  was  not  the 
+revolutionary  machine  that  it  would  have  been  if  completed  six  or  seven  years 
+earlier.  Not  only  did  the  Big  ACE  use  valves  in  the  era  of  the  transistor;  the 
+designers  also  retained  the  by  then  outmoded  mercury  delay  line  memory 
+proposed  by  Turing  in  1945  (see  below).26 
+
+Nevertheless,  the  Big  ACE  was  a  fast  machine  with  a  large  memory,  and  the 
+decision  to  stick  with  the  principles  used  in  the  Pilot  ACE  and  the  DEUCE  was 
+reasonable  in  the  circumstances.  In  1953  Francis  Colebrook  (Head  of  the  Elec¬ 
+tronics  Section  responsible  for  building  Pilot  ACE)  urged  that  the  proposed 
+large-scale  ACE  should  ‘be  based  on  well  proved  components  and  techniques, 
+even  when  revolutionary  developments  seem  to  be  just  around  the  corner. 
+Otherwise  the  [Mathematics]  Division  will  get  nothing  but  a  succession  of 
+pilot  models.’27 
+
+The  Big  ACE  ran  at  1.5  MHz,  50  per  cent  faster  than  the  Pilot  ACE  and  the 
+DEUCE,  both  1  MHz  machines.  A  1957  report  stated  that  the  Big  ACE  ‘appears 
+in  fact  to  be  about  as  fast  as  present-day  parallel  core-store  computers’.28  ‘Core¬ 
+store’  or  magnetic  core  memory  was  the  most  advanced  high-speed  storage 
+medium  at  that  time. 
+
+The  basic  principles  of  Turing’s  ACE  design  were  used  in  the  G15  computer, 
+built  and  marketed  by  the  Detroit-based  Bendix  Corporation.29  The  G15  was 
+designed  by  Huskey,  who  had  spent  the  year  1947  at  the  NPL  working  in  the  ACE 
+Section.  The  first  G15  ran  in  1954. 30  It  was  arguably  the  first  personal  computer. 
+By  following  Turing’s  philosophy  of  minimizing  hardware  in  favour  of  software, 
+Huskey  was  able  to  make  the  G15  small  enough  (it  was  the  size  of  a  large 
+domestic  refrigerator)  and  cheap  enough  to  be  marketed  as  a  single-user  com¬ 
+puter.  Yet  thanks  to  the  design  of  the  ACE-like  memory  (implemented  in  a 
+magnetic  drum),  the  G15  was  as  fast  as  computers  many  times  its  size.  Over 
+400  were  sold  worldwide  and  the  G15  remained  in  use  until  about  1970. 
+
+Another  computer  deriving  from  Turing’s  ACE  design,  the  MOSAIC  or  Ministry 
+of  Supply  Automatic  Integrator  and  Computer,  played  a  role  in  Britain’s  air 
+defences  during  the  Cold  War  period.  In  1946  Flowers  established  a  small  team  at 
+the  Post  Office  Research  Station  to  build  a  computer  to  Turing’s  logical  design  (see 
+the  introduction  to  the  next  chapter) .  The  team  consisted  of  two  engineers,  William 
+
+25  Letter  from  Uttley  to  Sara  Turing  (see  n.  23). 
+
+26  An  experimental  transistorized  machine  went  into  operation  at  Manchester  University  in  1953;  see 
+S.  H.  Lavington,  Early  British  Computers  (Manchester:  Manchester  University  Press,  1980). 
+
+27  F.  M.  Colebrook,  4  May  1953;  quoted  in  D.  M.  Yates,  Turing’s  Legacy:  A  History  of  Computing  at  the 
+National  Physical  Laboratory  1945-1995  (London:  Science  Museum,  1997),  67. 
+
+28  Blake,  Clayden,  Davies,  Page,  and  Stringer,  ‘Some  Features  of  the  ACE  Computer’,  3. 
+
+29  Huskey  in  interview  with  Copeland  (Feb.  1998). 
+
+30  Letter  from  Huskey  to  Copeland  (20  Dec.  2001). 
+
+
+370  I  Jack  Copeland 
+
+
+Chandler  and  Allen  Coombs,  both  of  whom  had  assisted  Flowers  in  the  construc¬ 
+tion  of  Colossus.  Working  alone,  Coombs  and  Chandler  carried  out  the  enginee¬ 
+ring  design  of  the  MOSAIC,  a  large  computer  based  on  Turing’s  Version  VII  of  the 
+ACE  design  (Version  VII  dated  from  1946). 31  Of  the  various  ACE-type  computers 
+that  were  built,  the  MOSAIC  was  the  closest  to  Turing’s  original  conception. 
+
+The  MOSAIC  consisted  of  some  70  mercury  delay  lines,  2,000  semi-conductors 
+(germanium  diodes),  and  7,000  thermionic  valves.32  It  first  ran  a  programme  in 
+1952  or  early  195  3. 33  Once  completed,  the  MOSAIC  was  installed  at  the  Radar 
+Research  and  Development  Establishment  (RRDE)  in  Malvern.  It  was  used  to 
+calculate  aircraft  trajectories  from  radar  data  in  connection  with  anti-aircraft 
+measures  (the  details  appear  still  to  be  classified).  The  data  was  generated  by 
+two  mobile  data-recorders  working  in  conjunction  with  a  radar  tracking  system.34 
+
+Coombs  has  emphasized:  ‘it  was  just  Chandler  and  I — we  designed  every  scrap 
+of  that  machine.’35  Given,  therefore,  that  two  engineers  working  alone  succeeded 
+in  completing  the  large  MOSAIC,  there  seems  little  doubt  that,  had  the  NPL 
+possessed  the  organizational  capability  and  sufficient  manpower,  a  computer  not 
+too  distant  from  Turing’s  original  conception  could  have  been  up  and  running  by 
+the  early  1950s.  Thanks  to  their  experience  with  Colossus,  Chandler  and  Coombs 
+had  a  substantial  start  on  everyone  else  in  the  field.  Turing  was  unable  to  share 
+his  knowledge  of  their  wartime  work  with  Darwin.  Had  he  been  able  to  do  so,  the 
+NPL  might  have  acted  to  boost  the  resources  available  to  Chandler  and  Coombs, 
+and  so  made  Turing’s  dream  a  reality  much  sooner. 
+
+Other  derivatives  of  the  ACE  included  the  EMI  Business  Machine  and  the 
+Packard-Bell  PB250.36  Designed  for  business  applications  involving  the  shallow 
+processing  of  large  quantities  of  data,  the  EMI  Business  Machine  was  a  relatively 
+
+
+31  Coombs  in  interview  with  Evans  in  1976  (‘The  Pioneers  of  Computing:  An  Oral  History  of  Comput¬ 
+ing’  (London:  Science  Museum));  A.  W.  M.  Coombs,  ‘MOSAIC’,  in  Automatic  Digital  Computation: 
+Proceedings  of  a  Symposium  Held  at  the  National  Physical  Laboratory  (London:  Her  Majesty’s  Stationery 
+Office,  1954);  B.  J.  Copeland  (ed.)>  ‘The  Turing-Wilkinson  Lectures  on  the  Automatic  Computing  Engine’, 
+in  K.  Lurukawa,  D.  Michie,  and  S.  Muggleton  (eds.),  Machine  Intelligence  15  (Oxford:  Oxford  University 
+Press,  1999).  Digital  facsimiles  of  a  series  of  technical  reports  concerning  the  MOSAIC  by  Coombs, 
+Chandler,  and  others  are  available  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTur- 
+ing.net/mosaic>. 
+
+32  ‘Engineer-in-Chief’s  Report  on  the  Work  of  the  Engineering  Department  for  the  Year  1  April  1954  to 
+31  March  1955’,  Post  Office  Engineering  Department  (The  Post  Office  Archive,  London);  Coombs, 
+‘MOSAIC’. 
+
+33  ‘Engineer-in-Chief’s  Report  on  the  Work  of  the  Engineering  Department  for  the  Year  1  April  1952  to 
+31  March  1953’,  Post  Office  Engineering  Department  (The  Post  Office  Archive,  London). 
+
+34  ‘Engineer-in-Chief’s  Report  on  the  Work  of  the  Engineering  Department  for  the  Year  1  April  1951  to 
+31  March  1952’,  Post  Office  Engineering  Department  (The  Post  Office  Archive,  London). 
+
+35  Coombs  in  interview  with  Evans  (see  n.  31). 
+
+36  C.  G.  Bell,  and  A.  Newell,  Computer  Structures:  Readings  and  Examples  (New  York:  McGraw-Hill, 
+1971),  44,  74;  R.  J.  Froggatt,  ‘Logical  Design  of  a  Computer  for  Business  Use’,  Journal  of  the  British  Institution 
+of  Radio  Engineers,  17  (1957),  681-96;  Yates,  Turing’s  Legacy:  A  History  of  Computing  at  the  National  Physical 
+Laboratory  1945-1995,  43-4. 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  371 
+
+slow  electronic  computer  with  a  large  memory.  The  PB250  was  a  low-cost 
+transistorized  computer. 
+
+
+Turing,  Newman,  and  the  Manchester  Computer 
+
+At  the  time  of  the  Manchester  Baby  and  its  successor,  the  Manchester  Mark  I,  the 
+electronic  engineers  Frederic  Williams  and  Thomas  Kilburn,  who  had  translated 
+the  logico -mathematical  idea  of  the  stored-programme  computer  into  hardware, 
+were  given  too  little  credit  by  the  mathematicians  at  Manchester — Williams  and 
+Kilburn  were  regarded  as  excellent  engineers  but  not  as  ‘ideas  men’.37  Nowadays 
+the  tables  have  turned  too  far  and  the  triumph  at  Manchester  is  usually  credited 
+to  Williams  and  Kilburn  alone.  Fortunately  the  words  of  the  late  Williams 
+survive  to  set  the  record  straight: 
+
+Now  let’s  be  clear  before  we  go  any  further  that  neither  Tom  Kilburn  nor  I  knew  the  first 
+thing  about  computers  when  we  arrived  in  Manchester  University. . .  Newman  explained 
+the  whole  business  of  how  a  computer  works  to  us.38 
+
+Tom  Kilburn  and  I  knew  nothing  about  computers . . .  Professor  Newman  and  Mr  A.  M. 
+Turing . . .  knew  a  lot  about  computers . . .  They  took  us  by  the  hand  and  explained  how 
+numbers  could  live  in  houses  with  addresses ... 39 
+
+In  an  address  to  the  Royal  Society  on  4  March  1948,  Newman  presented  this 
+very  explanation: 
+
+In  modern  times  the  idea  of  a  universal  calculating  machine  was  independently  [of 
+Babbage]  introduced  by  Turing . . .  There  is  provision  for  storing  numbers,  say  in  the 
+scale  of  2,  so  that  each  number  appears  as  a  row  of,  say,  forty  0’s  and  l’s  in  certain  places  or 
+‘houses’  in  the  machine.  . . .  Certain  of  these  numbers,  or  ‘words’  are  read,  one  after 
+another,  as  orders.  In  one  possible  type  of  machine  an  order  consists  of  four  numbers,  for 
+example  11,  13,  27,  4.  The  number  4  signifies  ‘add’,  and  when  control  shifts  to  this  word 
+the  ‘houses’  Hll  and  H13  will  be  connected  to  the  adder  as  inputs,  and  H27  as  output. 
+The  numbers  stored  in  Hll  and  H13  pass  through  the  adder,  are  added,  and  the  sum  is 
+passed  on  to  H27.  The  control  then  shifts  to  the  next  order.  In  most  real  machines  the 
+process  just  described  would  be  done  by  three  separate  orders,  the  first  bringing  <H11> 
+(=  content  of  Hll)  to  a  central  accumulator,  the  second  adding  <H13>  into  the 
+accumulator,  and  the  third  sending  the  result  to  H27;  thus  only  one  address  would  be 
+required  in  each  order.  ...  A  machine  with  storage,  with  this  automatic-telephone- 
+exchange  arrangement  and  with  the  necessary  adders,  subtractors  and  so  on,  is,  in  a 
+sense,  already  a  universal  machine.40 
+
+37  Peter  Hilton  in  interview  with  Copeland  (June  2001). 
+
+38  Williams  in  interview  with  Evans  in  1976  (‘The  Pioneers  of  Computing:  An  Oral  History  of  Comput¬ 
+ing’  (London:  Science  Museum)). 
+
+39  Williams,  ‘Early  Computers  at  Manchester  University’,  328. 
+
+40  M.  H.  A.  Newman,  ‘General  Principles  of  the  Design  of  All-Purpose  Computing  Machines’,  Proceedings 
+of  the  Royal  Society  of  London,  Series  A,  195  (1948),  271-74  (271-2). 
+
+
+372  I  Jack  Copeland 
+
+
+Following  this  explanation  of  Turing’s  three-address  concept  (source  1,  source  2, 
+destination,  function)  Newman  went  on  to  describe  programme  storage  (‘the 
+orders  shall  be  in  a  series  of  houses  XI,  X2, . . .’)  and  conditional  branching.  He 
+then  summed  up: 
+
+From  this  highly  simplified  account  it  emerges  that  the  essential  internal  parts  of  the 
+machine  are,  first,  a  storage  for  numbers  (which  may  also  be  orders).  . . .  Secondly, 
+adders,  multipliers,  etc.  Thirdly,  an  ‘automatic  telephone  exchange’  for  selecting  ‘houses’, 
+connecting  them  to  the  arithmetic  organ,  and  writing  the  answers  in  other  prescribed 
+houses.  Finally,  means  of  moving  control  at  any  stage  to  any  chosen  order,  if  a  certain 
+condition  is  satisfied,  otherwise  passing  to  the  next  order  in  the  normal  sequence.  Besides 
+these  there  must  be  ways  of  setting  up  the  machine  at  the  outset,  and  extracting  the  final 
+answer  in  useable  form.41 
+
+In  a  letter  written  in  1972  Williams  described  in  some  detail  what  he  and 
+Kilburn  were  told  by  Newman: 
+
+About  the  middle  of  the  year  [1946]  the  possibility  of  an  appointment  at  Manchester 
+University  arose  and  I  had  a  talk  with  Professor  Newman  who  was  already  interested  in  the 
+possibility  of  developing  computers  and  had  acquired  a  grant  from  the  Royal  Society  of 
+£30,000  for  this  purpose.  Since  he  understood  computers  and  I  understood  electronics 
+the  possibilities  of  fruitful  collaboration  were  obvious.  I  remember  Newman  giving  us  a  few 
+lectures  in  which  he  outlined  the  organisation  of  a  computer  in  terms  of  numbers  being 
+identified  by  the  address  of  the  house  in  which  they  were  placed  and  in  terms  of  numbers 
+being  transferred  from  this  address,  one  at  a  time,  to  an  accumulator  where  each  entering 
+number  was  added  to  what  was  already  there.  At  any  time  the  number  in  the  accumulator 
+could  be  transferred  back  to  an  assigned  address  in  the  store  and  the  accumulator  cleared  for 
+further  use.  The  transfers  were  to  be  effected  by  a  stored  program  in  which  a  list  of 
+instructions  was  obeyed  sequentially.  Ordered  progress  through  the  list  could  be  inter¬ 
+rupted  by  a  test  instruction  which  examined  the  sign  of  the  number  in  the  accumulator. 
+Thereafter  operation  started  from  a  new  point  in  the  list  of  instructions.  This  was  the  first 
+information  I  received  about  the  organisation  of  computers.  . . .  Our  first  computer  was  the 
+simplest  embodiment  of  these  principles,  with  the  sole  difference  that  it  used  a  subtracting 
+rather  than  an  adding  accumulator.42 
+
+Turing’s  early  input  to  the  developments  at  Manchester,  hinted  at  by  Williams 
+in  his  above-quoted  reference  to  Turing,  may  have  been  via  the  lectures  on 
+computer  design  that  Turing  and  Wilkinson  gave  in  London  during  the  period 
+December  1946  to  February  1947.43  The  lectures  were  attended  by  representa¬ 
+tives  of  various  organizations  planning  to  use  or  build  an  electronic  computer. 
+
+
+41  M.  H.  A.  Newman,  ‘General  Principles  of  the  Design  of  All-Purpose  Computing  Machines’,  Proceedings 
+of  the  Royal  Society  of  London,  Series  A,  195  (1948),  271-74  (271-2). 
+
+42  Letter  from  Williams  to  Randell,  1972  (quoted  in  B.  Randell,  ‘On  Alan  Turing  and  the  Origins  of 
+Digital  Computers’,  in  B.  Meltzer  and  D.  Michie  (eds.),  Machine  Intelligence  7  (Edinburgh:  Edinburgh 
+University  Press,  1972),  9). 
+
+43  ‘The  Turing-Wilkinson  Lectures  on  the  Automatic  Computing  Engine’. 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  373 
+
+
+Kilburn  was  in  the  audience.44  (Kilburn  usually  said,  when  asked  where  he 
+obtained  his  basic  knowledge  of  the  computer  from,  that  he  could  not  remem¬ 
+ber;45  for  example,  in  a  1992  interview  he  said:  ‘Between  early  1945  and  early 
+1947,  in  that  period,  somehow  or  other  I  knew  what  a  digital  computer  was . . . 
+Where  I  got  this  knowledge  from  I’ve  no  idea.’46) 
+
+Whatever  role  Turing’s  lectures  may  have  played  in  informing  Kilburn,  there  is 
+little  doubt  that  credit  for  the  Manchester  computer — called  the  ‘Newman- 
+Williams  machine’  by  Huskey  in  a  report  written  shortly  after  a  visit  in  1947  to 
+the  Manchester  project47 — belongs  not  only  to  Williams  and  Kilburn  but  also  to 
+Newman,  and  that  the  influence  on  Newman  of  Turing’s  ‘On  Computable 
+Numbers’  was  crucial,  as  was  the  influence  of  Flowers’s  Colossus  (see  the 
+introduction  to  Chapter  4). 
+
+There  is  more  information  concerning  Turing  and  the  Manchester  computer 
+in  the  chapter  ‘Artificial  Life’. 
+
+The  Manchester  computer  and  the  EDVAC 
+
+The  Baby  and  the  Manchester  Mark  I  are  sometimes  said  to  have  descended 
+from  the  EDVAC.  Newman  was  well  aware  of  von  Neumann’s  ‘First  Draff 
+of  a  Report  on  the  EDVAC’.  In  the  summer  of  1946  he  sent  David  Rees,  a 
+lecturer  in  his  department  at  Manchester  and  an  ex-member  of  the  Newmanry, 
+to  a  series  of  lectures  at  the  Moore  School,  where  Eckert,  Mauchly,  and  other 
+members  of  the  ENIAC-EDVAC  group  publicized  their  ideas  on  computer 
+design.48  In  the  autumn  of  1946  Newman  himself  went  to  Princeton  for  three 
+months.49 
+
+Newman’s  advocacy  of  ‘a  central  accumulator’ — a  characteristic  feature  of 
+the  EDVAC  but  not  of  the  ACE — was  probably  influenced  by  his  knowledge 
+of  the  American  proposals.  However,  von  Neumann’s  ideas  seem  to  have  had 
+little  influence  on  other  members  of  the  Manchester  project.  Kilburn  spoke 
+scathingly  of  the  von  Neumann  ‘dictat’.50  Geoffrey  Tootill  said: 
+
+Williams,  Kilburn  and  I  (the  three  designers  of  the  first  Manchester  machine)  had  all  spent 
+the  1939-1945  war  at  the  Telecommunications  Research  Establishment  doing  R  &  D  on 
+radiolocation  equipments.  The  main  U.S.  ideas  that  we  accepted  in  return  for  our 
+
+
+44  G.  Bowker  and  R.  Giordano,  ‘Interview  with  Tom  Kilburn’,  Annals  of  the  History  of  Computing,  15 
+(1993),  17-32. 
+
+45  Letter  from  Brian  Napper  to  Copeland  (16  June  2002). 
+
+46  Bowker  and  Giordano,  ‘Interview  with  Tom  Kilburn)  19. 
+
+47  H.  D.  Huskey,  untitled  typescript,  National  Physical  Laboratory,  n.d.  but  c.  Mar.  1947  (Woodger 
+Papers  (catalogue  reference  Ml 2/ 105);  a  digital  facsimile  is  in  The  Turing  Archive  for  the  History  of 
+Computing  <www.AlanTuring.net/huskey_1947>). 
+
+48  Letter  from  Rees  to  Copeland  (2  Apr.  2001). 
+
+49  W.  Newman,  ‘Max  Newman:  Mathematician,  Codebreaker  and  Computer  Pioneer)  to  appear  in 
+B.  J.  Copeland  (ed.)  Colossus:  The  First  Electronic  Computer  (Oxford:  Oxford  University  Press). 
+
+50  Kilburn  in  interview  with  Copeland  (July  1997). 
+
+
+374  I  Jack  Copeland 
+
+
+initiatives  on  these  and  later  on  computers  were  the  terms  ‘radar’  and  ‘memory’. .  .We 
+disliked  the  latter  term,  incidentally,  as  encouraging  the  anthropomorphic  concept  of 
+‘machines  that  think’.51 
+
+To  the  best  of  my  recollection  FC  [Williams] ,  Tom  [Kilburn]  and  I  never  discussed . . .  von 
+Neumann’s . . .  ideas  during  the  development  of  the  Small-Scale  Experimental  Machine 
+[the  Baby],  nor  did  I  have  any  knowledge  of  them  when  I  designed  the  Ferranti  Mk  I.  I 
+don’t  think  FC  was  influenced  at  all  by  von  Neumann,  because  I  think  he  was  in  general 
+quite  punctilious  in  acknowledging  other  people’s  ideas.52 
+
+Tootill  added: 
+
+As  well  as  our  own  ideas,  we  incorporated  functions  suggested  by  Turing  and  Newman  in 
+the  improvement  and  extension  of  the  first  machine.  When  I  did  the  logic  design  of  the 
+Ferranti  Mark  1, 1  got  them  to  approve  the  list  of  functions.53 
+
+
+The  ACE  and  Artificial  Intelligence54 
+
+In  designing  the  ACE,  Artificial  Intelligence  was  not  far  from  Turing’s  thoughts 
+— he  described  himself  as  building  ‘a  brain’.55  The  otherwise  austere  ‘Proposed 
+Electronic  Calculator’  contains  a  cameo  discussion  of  computer  intelligence  and 
+chess  (Turing’s  earliest  surviving  remarks  concerning  AI): 
+
+‘Can  the  machine  play  chess?’  It  could  fairly  easily  be  made  to  play  a  rather  bad  game.  It 
+would  be  bad  because  chess  requires  intelligence.  We  stated  at  the  beginning  of  this  section 
+that  the  machine  should  be  treated  as  entirely  without  intelligence.  There  are  indications 
+however  that  it  is  possible  to  make  the  machine  display  intelligence  at  the  risk  of  its 
+making  occasional  serious  mistakes.  By  following  up  this  aspect  the  machine  could 
+probably  be  made  to  play  very  good  chess.56 
+
+What  is  probably  Turing’s  earliest  mention  to  survive  of  his  interest  in  neural 
+simulation  (see  further  Chapter  10)  occurs  in  a  letter  to  the  cyberneticist  W.  Ross 
+Ashby: 
+
+In  working  on  the  ACE  I  am  more  interested  in  the  possibility  of  producing  models  of 
+the  action  of  the  brain  than  in  the  practical  applications  to  computing.  . . .  The  ACE  will 
+be  used,  as  you  suggest,  in  the  first  instance  in  an  entirely  disciplined  manner,  similar  to 
+the  action  of  the  lower  centres,  although  the  reflexes  will  be  extremely  complicated.  The 
+disciplined  action  carries  with  it  the  disagreeable  feature,  which  you  mentioned,  that  it 
+will  be  entirely  uncritical  when  anything  goes  wrong.  It  will  also  be  necessarily  devoid  of 
+
+51  Letter  from  Tootill  to  Copeland  (18  Apr.  2001). 
+
+52  Letter  from  Tootill  to  Copeland  (16  May  2001). 
+
+53  Letter  from  Tootill  to  Copeland  (18  Apr.  2001). 
+
+54  As  explained  in  the  chapter  Artificial  Intelligence’,  the  term  Artificial  Intelligence’  did  not  come  into 
+use  until  after  Turing’s  death. 
+
+55  Don  Bayley  in  interview  with  Copeland  (Dec.  1997). 
+
+56  ‘Proposed  Electronic  Calculator’,  16. 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  375 
+
+
+anything  that  could  be  called  originality.  There  is,  however,  no  reason  why  the  machine 
+should  always  be  used  in  such  a  manner:  there  is  nothing  in  its  construction  which  obliges 
+us  to  do  so.  It  would  be  quite  possible  for  the  machine  to  try  out  variations  of  behaviour 
+and  accept  or  reject  them  in  the  manner  you  describe  and  I  have  been  hoping  to  make  the 
+machine  do  this.  This  is  possible  because,  without  altering  the  design  of  the  machine  itself, 
+it  can,  in  theory  at  any  rate,  be  used  as  a  model  of  any  other  machine,  by  making  it 
+remember  a  suitable  set  of  instructions.  The  ACE  is  in  fact  analogous  to  the  ‘universal 
+machine’  described  in  my  paper  on  computable  numbers.  This  theoretical  possibility  is 
+attainable  in  practice,  in  all  reasonable  cases,  at  worst  at  the  expense  of  operating  slightly 
+slower  than  a  machine  specially  designed  for  the  purpose  in  question.  Thus,  although  the 
+brain  may  in  fact  operate  by  changing  its  neuron  circuits  by  the  growth  of  axons  and 
+dendrites,  we  could  nevertheless  make  a  model,  within  the  ACE,  in  which  this  possibility 
+was  allowed  for,  but  in  which  the  actual  construction  of  the  ACE  did  not  alter,  but  only  the 
+remembered  data,  describing  the  mode  of  behaviour  applicable  at  any  time.  I  feel  that  you 
+would  be  well  advised  to  take  advantage  of  this  principle,  and  do  your  experiments  on  the 
+ACE,  instead  of  building  a  special  machine.  I  should  be  very  glad  to  help  you  over  this.57 
+
+
+The  Lecture 
+
+On  20  February  1947  Turing  lectured  on  the  ACE  to  the  London  Mathematical 
+Society.58  So  far  as  is  known,  this  was  the  earliest  public  lecture  to  mention 
+computer  intelligence,  providing  a  breathtaking  glimpe  of  a  new  field.  Turing 
+discussed  the  prospect  of  machines  acting  intelligently,  learning,  and  beating 
+human  opponents  at  chess,  remarking  that  ‘  [w]  hat  we  want  is  a  machine  that  can 
+learn  from  experience’  and  that  ‘  [t]  he  possibility  of  letting  the  machine  alter  its 
+own  instructions  provides  the  mechanism  for  this’. 
+
+The  lecture  is  also  of  note  for  its  early  discussion  of  computer  programming. 
+By  the  time  of  the  lecture,  Turing  had  been  developing  programmes — then  called 
+‘instruction  tables’  (see  ‘Computable  Numbers:  A  Guide’) — for  the  not- 
+yet-existent  ACE  for  well  over  a  year.  As  Womersley  was  to  remark  in  1948, 
+‘The  planning  of  the  ACE  is  far  ahead  of  the  hardware.’59  During  this  period, 
+Turing  and  the  other  members  of  the  ACE  Section  brought  the  nascent  science  of 
+computer  programming  to  a  state  of  considerable  sophistication. 
+
+Among  Turing’s  many  technical  innovations  was  the  use  of  what  are  now 
+called  subroutines,  or  in  Turing’s  term,  ‘subsidiary  tables’  (see  ‘Computable 
+Numbers:  A  Guide’). 
+
+57  Letter  from  Turing  to  W.  Ross  Ashby,  no  date  (Woodger  Papers  (catalogue  reference  Ml  1/99);  a  digital 
+facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/turing_ashby>). 
+The  letter  was  probably  written  in  1946  and  certainly  prior  to  October  1947. 
+
+58  The  lecture  was  held  at  5  p.m.  in  the  rooms  of  the  Royal  Astronomical  Society  at  Burlington  House  in 
+London  (entry  in  Woodger’s  diary  for  20  Feb.  1947  (Copeland  is  grateful  to  Woodger  for  this  information)). 
+
+59  Minutes  of  the  NPL  Executive  Committee,  20  Apr.  1948  (National  Physical  Laboratory  library;  a 
+digital  facsimile  is  in  The  Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/ 
+npl_minutes_apr 1 948 > ) . 
+
+
+376  I  Jack  Copeland 
+
+
+Turing  devoted  about  a  quarter  of  his  lecture  to  a  discussion  of  computer 
+memory,  saying  (p.  383): 
+
+I  have  spent  a  considerable  time  in  this  lecture  on  this  question  of  memory,  because  I 
+believe  that  the  provision  of  proper  storage  is  the  key  to  the  problem  of  the  digital 
+computer,  and  certainly  if  they  are  to  be  persuaded  to  show  any  sort  of  genuine  intelli¬ 
+gence  much  larger  capacities  than  are  yet  available  must  be  provided. 
+
+It  was  precisely  Turing’s  desire  to  conduct  experiments  in  AI  that  led  him  to 
+propose  such  a  large  memory  in  the  ACE.60 
+
+
+Delay  Line  Memory  and  Optimum  Programming 
+
+The  fundamental  feature  of  the  ACE  design,  which  influenced  virtually  all  other 
+aspects  of  it,  was  Turing’s  adoption  of  acoustic  delay  lines  to  form  the  high-speed 
+memory.  He  remarked  in  the  lecture  that  the  chief  advantage  of  delay  lines  as  a 
+memory  medium — they  were  far  from  ideal — was  that  they  were  ‘already  a  going 
+concern’  (p.  380).  The  acoustic  delay  line  was  pioneered  in  1942  by  W.  B.  Shockley, 
+later  one  of  the  co-inventors  of  the  transistor,  and  in  1943  Presper  Eckert  and 
+others  at  the  Moore  School  (home  of  the  ENIAC)  independently  investigated  a 
+different  type  of  acoustic  delay  line  filled  with  mercury.61  Subsequently,  acoustic 
+delay  lines  were  widely  employed  in  radar.  It  was  Eckert  who  first  proposed  their 
+use  in  digital  computers  (see  ‘Computable  Numbers:  A  Guide’). 
+
+The  following  description  of  a  mercury  delay  line  is  from  Turing’s  ‘Proposed 
+Electronic  Calculator’: 
+
+It  is  proposed  to  build  ‘delay  line’  units  consisting  of  mercury. . .  tubes  about  5'  long  and 
+1"  in  diameter  in  contact  with  a  quartz  crystal  at  each  end.  The  velocity  of  sound 
+in ...  mercury. ..  is  such  that  the  delay  will  be  1.024  ms.  The  information  to  be  stored 
+may  be  considered  to  be  a  sequence  of  1024  ‘digits’  (0  or  1)... These  digits  will  be 
+represented  by  a  corresponding  sequence  of  pulses.  The  digit  0 . . .  will  be  represented  by 
+the  absence  of  a  pulse  at  the  appropriate  time,  the  digit  1 ...  by  its  presence.  This  series  of 
+pulses  is  impressed  on  the  end  of  the  line  by  one  piezo-crystal,  it  is  transmitted  down  the 
+line  in  the  form  of  supersonic  waves,  and  is  reconverted  into  a  varying  voltage  by  the 
+crystal  at  the  far  end.  This  voltage  is  amplified  sufficiently  to  give  an  output  of  the  order  of 
+10  volts  peak  to  peak  and  is  used  to  gate  a  standard  pulse  generated  by  the  clock.  This 
+pulse  may  be  again  fed  into  the  line  by  means  of  the  transmitting  crystal,  or  we  may  feed 
+in  some  altogether  different  signal.  We  also  have  the  possibility  of  leading  the  gated  pulse 
+to  some  other  part  of  the  calculator,  if  we  have  need  of  that  information  at  the  time. 
+Making  use  of  the  information  does  not  of  course  preclude  keeping  it  also.62 
+
+60  Woodger  in  interview  with  Copeland  (June  1998). 
+
+61  A.  G.  Emslie,  H.  B.  Huntington,  H.  Shapiro,  and  A.  E.  Benfield,  ‘Ultrasonic  Delay  Lines  II’,  Journal  of 
+the  Franklin  Institute ,  245  (1948),  101-15  (101-2).  In  Shockley’s  delay  line,  the  transmitting  medium  was 
+not  mercury  but  ethylene  glycol. 
+
+62  ‘Proposed  Electronic  Calculator’,  5. 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  377 
+
+
+As  Turing  noted  in  his  1947  lecture,  the  ACE’s  memory  was  to  consist  of 
+approximately  200  such  delay  lines.  In  the  event,  the  Big  ACE  contained  only  a 
+few  dozen  delay  lines,  supplemented  by  four  magnetic  drums. 
+
+Having  decided  to  use  delay  lines,  Turing  was  determined  to  maximize  their 
+effectiveness.  The  time  taken  for  an  instruction,  or  number,  to  emerge  from  a 
+delay  line  will  depend  on  where  in  the  delay  line  it  happens  to  be.  In  order  to 
+minimize  waiting  time,  Turing  arranged  for  instructions  to  be  stored  not  at 
+regular  intervals  in  a  delay  line,  but  in  irregular  positions.  These  positions  were 
+selected  by  the  programmer  in  such  a  way  that  each  instruction  would  emerge 
+from  its  delay  line  at  precisely  the  time  it  was  required.  This  system  became 
+known  at  the  NPL  as  ‘optimum  coding’  (and  later  ‘optimum  programming’). 
+
+Optimum  coding  made  for  difficult  and  untidy  programming  but  the  advan¬ 
+tage  in  terms  of  speed  was  considerable.  Thanks  to  optimum  coding,  the  Pilot 
+Model  ACE  was  able  to  do  a  floating  point  multiplication  in  3  milliseconds.63 
+The  EDSAC  computer  at  Cambridge  University — a  slower  delay  line  machine 
+lacking  optimum  coding — required  4.5  milliseconds  to  perform  a  single  fixed 
+point  multiplication.64 
+
+
+Further  reading 
+
+Campbell-Kelly,  M.,  ‘Programming  the  Pilot  ACE:  Early  Programming  Activity  at  the 
+National  Physical  Laboratory’,  Annals  of  the  History  of  Computing ,  3  (1981),  133-62. 
+Carpenter,  B.  E.,  and  Doran,  R.  W.  (eds.),  A.  M.  Turing’s  ACE  Report  of  1946  and  Other 
+Papers  (Cambridge,  Mass.:  MIT  Press,  1986). 
+
+Copeland,  B.  J.  (ed.),  Alan  Turing’s  Automatic  Computing  Engine  (Oxford:  Oxford  Univer¬ 
+sity  Press,  2004). 
+
+Yates,  D.  M.,  Turing’s  Legacy:  A  History  of  Computing  at  the  National  Physical  Laboratory 
+1945-1995  (London:  Science  Museum,  1997). 
+
+
+Provenance 
+
+What  follows  is  the  text  of  the  lecture  taken  from  Turing’s  own  typescript 
+(which  is  headed  ‘Lecture  to  L.M.S.  Feb.  20  1947’).65 
+
+63  Wilkinson  in  interview  with  Evans  (see  n.  11). 
+
+64  M.  Campbell-Kelly,  ‘Programming  the  EDSAC:  Early  Programming  Activity  at  the  University  of 
+Cambridge’,  Annals  of  the  History  of  Computing,  2  (1980),  7-36. 
+
+65  Turing’s  typescript  is  among  the  Turing  Papers  in  the  Modern  Archive  Centre,  King’s  College, 
+Cambridge  (catalogue  reference  B  1).  It  was  first  published  in  1986  in  Carpenter  and  Doran,  A.  M.  Turing's 
+ACE  Report  of  1946  and  Other  Papers.  The  present  edition  differs  from  the  1986  edition  in  various  small 
+respects.  A  few  missing  words  have  been  restored  (on  pp.  379  and  381)  and  some  minor  departures  in  the 
+earlier  edition  from  Turing’s  original  text  have  been  rectified.  Many  of  Turing’s  sketch  diagrams  (reproduced 
+in  the  1986  edition)  have  been  redrawn.  Obvious  typing  and  spelling  errors  in  Turing’s  typescript  have  been 
+corrected  without  comment.  Words  or  letters  enclosed  in  square  brackets  have  been  added  by  the  editor. 
+
+
+Lecture  on  the  Automatic  Computing  Engine 
+
+The  automatic  computing  engine  now  being  designed  at  N.P.L.  is  a  typical  large 
+scale  electronic  digital  computing  machine.  In  a  single  lecture  it  will  not  be 
+possible  to  give  much  technical  detail  of  this  machine,  and  most  of  what  I  shall 
+say  will  apply  equally  to  any  other  machine  of  this  type  now  being  planned. 
+
+From  the  point  of  view  of  the  mathematician  the  property  of  being  digital 
+should  be  of  greater  interest  than  that  of  being  electronic.  That  it  is  electronic  is 
+certainly  important  because  these  machines  owe  their  high  speed  to  this,  and 
+without  the  speed  it  is  doubtful  if  financial  support  for  their  construction  would 
+be  forthcoming.  But  this  is  virtually  all  that  there  is  to  be  said  on  that  subject. 
+That  the  machine  is  digital  however  has  more  subtle  significance.  It  means  firstly 
+that  numbers  are  represented  by  sequences  of  digits  which  can  be  as  long  as  one 
+wishes.  One  can  therefore  work  to  any  desired  degree  of  accuracy.  This  accuracy 
+is  not  obtained  by  more  careful  machining  of  parts,  control  of  temperature 
+variations,  and  such  means,  but  by  a  slight  increase  in  the  amount  of  equipment 
+in  the  machine.  To  double  the  number  of  significant  figures  used  would  involve 
+increasing  the  equipment  by  a  factor  definitely  less  than  two,  and  would  also  have 
+some  effect  in  increasing  the  time  taken  over  each  job.  This  is  in  sharp  contrast 
+with  analogue  machines,  and  continuous  variable  machines  such  as  the  differen¬ 
+tial  analyser,  where  each  additional  decimal  digit  required  necessitates  a  complete 
+redesign  of  the  machine,  and  an  increase  in  the  cost  by  perhaps  as  much  as  a 
+factor  of  10.  A  second  advantage  of  digital  computing  machines  is  that  they  are 
+not  restricted  in  their  applications  to  any  particular  type  of  problem.  The 
+differential  analyser  is  by  far  the  most  general  type  of  analogue  machine  yet 
+produced,  but  even  it  is  comparatively  limited  in  its  scope.  It  can  be  made  to  deal 
+with  almost  any  kind  of  ordinary  differential  equation,  but  it  is  hardly  able  to 
+deal  with  partial  differential  equations  at  all,  and  certainly  cannot  manage  large 
+numbers  of  linear  simultaneous  equations,  or  the  zeros  of  polynomials.  With 
+digital  machines  however  it  is  almost  literally  true  that  they  are  able  to  tackle  any 
+computing  problem.  A  good  working  rule  is  that  the  ACE  can  be  made  to  do  any 
+job  that  could  be  done  by  a  human  computer,  and  will  do  it  in  one  ten- 
+thousandth  of  the  time.  This  time  estimate  is  fairly  reliable,  except  in  cases 
+where  the  job  is  too  trivial  to  be  worth  while  giving  to  the  ACE. 
+
+Some  years  ago  I  was  researching  on  what  might  now  be  described  as  an 
+investigation  of  the  theoretical  possibilities  and  limitations  of  digital  computing 
+machines.  I  considered  a  type  of  machine  which  had  a  central  mechanism,  and  an 
+infinite  memory  which  was  contained  on  an  infinite  tape.  This  type  of  machine 
+appeared  to  be  sufficiently  general.  One  of  my  conclusions  was  that  the  idea  of  a 
+‘rule  of  thumb’  process  and  a  ‘machine  process’  were  synonymous.  The  expres- 
+
+Reproduced  with  permission  of  the  Estate  of  Alan  Turing. 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  379 
+
+
+sion  ‘machine  process’  of  course  means  one  which  could  be  carried  out  by  the 
+type  of  machine  I  was  considering.  It  was  essential  in  these  theoretical  arguments 
+that  the  memory  should  be  infinite.  It  can  easily  be  shown  that  otherwise  the 
+machine  can  only  execute  periodic  operations.  Machines  such  as  the  ACE  may  be 
+regarded  as  practical  versions  of  this  same  type  of  machine.  There  is  at  least  a  very 
+close  analogy.  Digital  computing  machines  all  have  a  central  mechanism  or 
+control  and  some  very  extensive  form  of  memory.  The  memory  does  not  have 
+to  be  infinite,  but  it  certainly  needs  to  be  very  large.  In  general  the  arrangement  of 
+the  memory  on  an  infinite  tape  is  unsatisfactory  in  a  practical  machine,  because 
+of  the  large  amount  of  time  which  is  liable  to  be  spent  in  shifting  up  and  down  the 
+tape  to  reach  the  point  at  which  a  particular  piece  of  information  required  at  the 
+moment  is  stored.  Thus  a  problem  might  easily  need  a  storage  of  three  million 
+entries,  and  if  each  entry  was  equally  likely  to  be  the  next  required  the  average 
+journey  up  the  tape  would  be  through  a  million  entries,  and  this  would  be 
+intolerable.  One  needs  some  form  of  memory  with  which  any  required  entry 
+can  be  reached  at  short  notice.  This  difficulty  presumably  used  to  worry  the 
+Egyptians  when  their  books  were  written  on  papyrus  scrolls.  It  must  have  been 
+slow  work  looking  up  references  in  them,  and  the  present  arrangement  of  written 
+matter  in  books  which  can  be  opened  at  any  point  is  greatly  to  be  preferred.  We 
+may  say  that  storage  on  tape  and  papyrus  scrolls  is  somewhat  inaccessible.  It  takes 
+a  considerable  time  to  find  a  given  entry.  Memory  in  book  form  is  a  good  deal 
+better,  and  is  certainly  highly  suitable  when  it  is  to  be  read  by  the  human  eye.  We 
+could  even  imagine  a  computing  machine  that  was  made  to  work  with  a  memory 
+based  on  books.  It  would  not  be  very  easy  but  would  be  immensely  preferable  to 
+the  single  long  tape.  Let  us  for  the  sake  of  argument  suppose  that  the  difficulties 
+involved  in  using  books  as  memory  were  overcome,  that  is  to  say  that  mechanical 
+devices  for  finding  the  right  book  and  opening  it  at  the  right  page,  etc.  etc.  had 
+been  developed,  imitating  the  use  of  human  hands  and  eyes.  The  information 
+contained  in  the  books  would  still  be  rather  inaccessible  because  of  the  time 
+occupied  in  the  mechanical  motions.  One  cannot  turn  a  page  over  very  quickly 
+without  tearing  it,  and  if  one  were  to  do  much  book  transportation,  and  do  it  fast 
+the  energy  involved  would  be  very  great.  Thus  if  we  moved  one  book  every 
+millisecond  and  each  was  moved  ten  metres  and  weighed  200  grams,  and  if  the 
+kinetic  energy  were  wasted  each  time  we  should  consume  1010  watts,  about  half 
+the  country’s  power  consumption.  If  we  are  to  have  a  really  fast  machine  then,  we 
+must  have  our  information,  or  at  any  rate  a  part  of  it,  in  a  more  accessible  form 
+than  can  be  obtained  with  books.  It  seems  that  this  can  only  be  done  at  the 
+expense  of  compactness  and  economy,  e.g.  by  cutting  the  pages  out  of  the  books, 
+and  putting  each  one  into  a  separate  reading  mechanism.  Some  of  the  methods  of 
+storage  which  are  being  developed  at  the  present  time  are  not  unlike  this. 
+
+If  one  wishes  to  go  to  the  extreme  of  accessibility  in  storage  mechanisms  one  is 
+liable  to  find  that  it  is  gained  at  the  price  of  an  intolerable  loss  of  compactness 
+
+
+380  I  Alan  Turing 
+
+
+and  economy.  For  instance  the  most  accessible  known  form  of  storage  is  that 
+provided  by  the  valve  flip-flop  or  Jordan  Eccles  trigger  circuit.  This  enables  us  to 
+store  one  digit,  capable  of  two  values,  and  uses  two  thermionic  valves.  To  store 
+the  content  of  an  ordinary  novel  by  such  means  would  cost  many  millions  of 
+pounds.  We  clearly  need  some  compromise  method  of  storage  which  is  more 
+accessible  than  paper,  film  etc,  but  more  economical  in  space  and  money  than 
+the  straightforward  use  of  valves.  Another  desirable  feature  is  that  it  should  be 
+possible  to  record  into  the  memory  from  within  the  computing  machine,  and 
+this  should  be  possible  whether  or  not  the  storage  already  contains  something, 
+i.e.  the  storage  should  be  erasible. 
+
+There  are  three  main  types  of  storage  which  have  been  developed  recently  and 
+have  these  properties  in  greater  or  less  degree.  Magnetic  wire  is  very  compact,  is 
+erasible,  can  be  recorded  on  from  within  the  machine,  and  is  moderately 
+accessible.  There  is  storage  in  the  form  of  charge  patterns  on  the  screen  of  a 
+cathode  ray  tube.  This  is  probably  the  ultimate  solution.  It  could  eventually  be 
+nearly  as  accessible  as  the  Jordan  Eccles  circuit.  A  third  possibility  is  provided  by 
+acoustic  delay  lines.  They  give  greater  accessibility  than  the  magnetic  wire, 
+though  less  than  the  C.R.T  type.  The  accessibility  is  adequate  for  most  purposes. 
+Their  chief  advantage  is  that  they  are  already  a  going  concern.  It  is  intended  that 
+the  main  memory  of  the  ACE  shall  be  provided  by  acoustic  delay  lines,  consisting 
+of  mercury  tanks. 
+
+The  idea  of  using  acoustic  delay  lines  as  memory  units  is  due  I  believe  to 
+Eckert  of  Philadelphia  University,1  who  was  the  engineer  chiefly  responsible  for 
+the  Eniac.  The  idea  is  to  store  the  information  in  the  form  of  compression  waves 
+travelling  along  a  column  of  mercury.  Liquids  and  solids  will  transmit  sound  of 
+surprisingly  high  frequency,  and  it  is  quite  feasible  to  put  as  many  as  1,000  pulses 
+into  a  single  5'  tube.  The  signals  may  be  conveyed  into  the  mercury  by  a  piezo¬ 
+electric  crystal;  and  also  detected  at  the  far  end  by  another  quartz  crystal.  A  train 
+of  pulses  or  the  information  which  they  represent  may  be  regarded  as  stored  in 
+the  mercury  whilst  it  is  travelling  through  it.  If  the  information  is  not  required 
+when  the  train  emerges  it  can  be  fed  back  into  the  column  again  and  again  until 
+such  time  as  it  is  required.  This  requires  a  ‘recirculating  circuit’  to  read  the  signal 
+
+
+
+r- 
+
+j  ; 
+
+Recirculating 
+
+circuit 
+
+Figure  9.1. 
+
+
+Editor’s  note.  Turing  means  the  University  of  Pennsylvania  in  Philadelphia. 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  381 
+
+
+as  it  emerges  from  the  tank  and  amplify  it  and  feed  it  in  again.  If  this  were  done 
+with  a  simple  amplifier  it  is  clear  that  the  characteristics  of  both  the  tank  and  the 
+amplifier  would  have  to  be  extremely  good  to  permit  the  signal  to  pass  through 
+even  as  many  as  ten  times.  Actually  the  recirculating  circuit  does  something 
+slightly  different.  What  it  does  may  perhaps  be  best  expressed  in  terms  of  point 
+set  topology.  Let  the  plane  of  the  diagram  represent  the  space  of  all  possible 
+signals.  I  do  not  of  course  wish  to  imply  that  this  is  two  dimensional.  Let  the 
+function  /  be  defined  for  arguments  in  this  signal  space  and  have  values  in  it. 
+In  fact  let/(s)  represent  the  effect  on  the  signal  s  when  it  is  passed  through  the  tank 
+and  the  recirculating  mechanism.  We  assume  however  that  owing  to  thermal 
+agitation  the  effect  of  recirculation  may  be  to  give  any  pt  [point]  within  a  circle  of 
+radius  8  of/(s) .  Then  a  necessary  and  sufficient  condition  that  the  tank  can  be  used 
+as  a  storage  which  will  distinguish  between  N different  signals  is  that  there  must  be 
+N  sets  Ei ...  Em  such  that  if  Fr  is  the  set  of  pts  [points]  within  distance  £  of  Er 
+
+s  €  Fr  D  f(s)  G  Er 
+
+and  the  sets  Fr  are  disjoint.  It  is  clearly  sufficient  for  we  have  only  then  to  ensure 
+that  the  signals  initially  fed  in  belong  to  one  or  other  of  the  sets  Fn  and  it  will 
+remain  in  the  set  after  any  number  of  recirculations,  without  any  danger  of 
+confusion.  It  is  necessary  for  suppose  S\ . . .  are  signals  which  have  different 
+meanings  and  which  can  be  fed  into  the  machine  at  any  time  and  read  out  later 
+without  fear  of  confusion. 
+
+Let  Er  be  the  set  of  signals  which  could  be  obtained  for  sr  by  successive 
+applications  of  /  and  shifts  of  distance  not  more  than  £.  Then  the  sets  Er  are 
+disjoint,  [five  or  six  illegible  words],  and  by  applying  a  shift  of  distance  £  or  less  to 
+pts  [points]  of  Er  we  obtain  [line  missing  from  bottom  of  page].  In  the  case  of  a 
+mercury  delay  line  used  for  N  =  16  the  set  would  consist  of  all  continuous 
+signals  within  the  shaded  area. 
+
+
+,  J 
+
+h 
+
+mwxummM 
+
+Figure  9.2. 
+
+
+One  of  the  sets  would  consist  of  all  continuous  signals  lying  in  the  region  below. 
+It  would  represent  the  signal  1001. 
+
+
+Figure  9.3. 
+
+
+382  I  Alan  Turing 
+
+
+In  order  to  put  such  a  recirculation  system  into  effect  it  is  essential  that  a  clock 
+signal  be  supplied  to  the  memory  system  so  that  it  will  be  able  to  distinguish  the 
+times  when  a  pulse  if  any  should  be  present.  It  would  for  instance  be  natural  to 
+supply  a  timing  sine  wave  as  shown  above  to  the  recirculator. 
+
+The  idea  of  a  process  /with  the  properties  we  have  described  is  a  very  common 
+one  in  connection  with  storage  devices.  It  is  known  as  ‘regeneration’  of  storage.  It 
+is  always  present  in  some  form,  but  sometimes  the  regeneration  is  as  it  were 
+naturally  occurring  and  no  precautions  have  to  be  taken.  In  other  cases  special 
+precautions  have  to  be  taken  to  improve  such  an  /process  or  else  the  impression 
+will  fade. 
+
+The  importance  of  a  clock  to  the  regeneration  process  in  delay  lines  may  be 
+illustrated  by  an  interesting  little  theorem.  Suppose  that  instead  of  the  condition 
+s  G  Fr  D  f(s)  G  Er  we  impose  a  stronger  one,  viz  /"(s)  — »  cr  if  s  G  Er,  i.e.  there  are 
+ideal  forms  of  the  distinguishable  signals,  and  each  admissible  signal  converges 
+towards  the  ideal  form  after  recirculating.  Then  we  can  show  that  unless  there  is  a 
+clock  the  ideal  signals  are  all  constants.  For  let  Ua  represent  a  shift  of  origin, 
+i.e.  Uas(t )  =  s(t  +  a).  Then  since  there  is  no  clock  the  properties  of  the  recir¬ 
+culator  are  the  same  at  all  times  and  /  therefore  commutes  with  Ua. 
+Then  fUa(cr )  =  Uaf{cr)  =  Uacr,  for  f(cr )  =  cr  since  cr  is  an  ideal  signal.  But 
+this  means  that  Ua(cr)  is  an  ideal  signal,  and  therefore  for  sufficiently 
+small  a  must  be  cr,  since  the  ideal  signals  are  discrete.  Then  for  any  (3  and  sufficiently 
+large  n,  (3 jn  will  be  sufficiently  small  and  Um„(c)  =  c.  But  then  by  iteration 
+c  =  U^n(c)  =  Up(c)  i.e.  c(t  +  (3)  =  c{t).  This  means  that  the  ideal  signal  c  is  a 
+constant. 
+
+We  might  say  that  the  clock  enables  us  to  introduce  a  discreteness  into  time,  so 
+that  time  can  for  some  purposes  be  regarded  as  a  succession  of  instants  instead 
+of  as  a  continuous  flow.  A  digital  machine  must  essentially  deal  with 
+discrete  objects,  and  in  the  case  of  the  ACE  this  is  made  possible  by  the  use 
+of  a  clock.  All  other  digital  computing  machines  that  I  know  of  except  for 
+human  and  other  brains  do  the  same.  One  can  think  up  ways  of  avoiding 
+it,  but  they  are  very  awkward.  I  should  mention  that  the  use  of  the  clock  in 
+the  ACE  is  not  confined  to  the  recirculation  process,  but  is  used  in  almost 
+every  part. 
+
+It  may  be  as  well  to  mention  some  figures  connected  with  the  mercury  delay 
+line  as  we  shall  use  it.  We  shall  use  five  foot  tubes,  with  a[n]  inside  diameter  of 
+half  an  inch.  Each  of  these  will  enable  us  to  store  1024  binary  digits.  The  unit  I 
+have  used  here  to  describe  storage  capacity  is  self  explanatory.  A  storage  mech¬ 
+anism  has  a  capacity  of  m  binary  digits  if  it  can  remember  any  sequence  of  m 
+digits  each  being  a  0  or  a  1.  The  storage  capacity  is  also  the  logarithm  to  the  base 
+2  of  the  number  of  different  signals  which  can  be  remembered,  i.e.  log2  N.  The 
+digits  will  be  placed  at  a  time  interval  of  one  microsecond,  so  that  the  time  taken 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  383 
+
+
+for  the  waves  to  travel  down  the  tube  is  just  over  a  millisecond.  The  velocity  is 
+about  one  and  a  half  kilometres  per  second.  The  delay  in  accessibility  time  or 
+average  waiting  for  a  given  piece  of  information  is  about  half  a  millisecond.  In 
+practice  this  is  reduced  to  an  effective  150  ps.2  The  full  storage  capacity  of  the 
+ACE  available  on  Hg3  delay  lines  will  be  about  200,000  binary  digits.  This  is 
+probably  comparable  with  the  memory  capacity  of  a  minnow. 
+
+I  have  spent  a  considerable  time  in  this  lecture  on  this  question  of  memory, 
+because  I  believe  that  the  provision  of  proper  storage  is  the  key  to  the  problem  of 
+the  digital  computer,  and  certainly  if  they  are  to  be  persuaded  to  show  any  sort  of 
+genuine  intelligence  much  larger  capacities  than  are  yet  available  must  be 
+provided.  In  my  opinion  this  problem  of  making  a  large  memory  available  at 
+reasonably  short  notice  is  much  more  important  than  that  of  doing  operations 
+such  as  multiplication  at  high  speed.  Speed  is  necessary  if  the  machine  is  to  work 
+fast  enough  for  the  machine  to  be  commercially  valuable,  but  a  large  storage 
+capacity  is  necessary  if  it  is  to  be  capable  of  anything  more  than  rather  trivial 
+operations.  The  storage  capacity  is  therefore  the  more  fundamental  requirement. 
+
+Let  us  now  return  to  the  analogy  of  the  theoretical  computing  machines  with 
+an  infinite  tape.  It  can  be  shown  that  a  single  special  machine  of  that  type  can  be 
+made  to  do  the  work  of  all.  It  could  in  fact  be  made  to  work  as  a  model  of  any 
+other  machine.  The  special  machine  may  be  called  the  universal  machine;  it 
+works  in  the  following  quite  simple  manner.  When  we  have  decided  what 
+machine  we  wish  to  imitate  we  punch  a  description  of  it  on  the  tape  of  the 
+universal  machine.  This  description  explains  what  the  machine  would  do  in 
+every  configuration  in  which  it  might  find  itself.  The  universal  machine  has  only 
+to  keep  looking  at  this  description  in  order  to  find  out  what  it  should  do  at  each 
+stage.  Thus  the  complexity  of  the  machine  to  be  imitated  is  concentrated  in  the 
+tape  and  does  not  appear  in  the  universal  machine  proper  in  any  way. 
+
+If  we  take  the  properties  of  the  universal  machine  in  combination  with  the  fact 
+that  machine  processes  and  rule  of  thumb  processes  are  synonymous  we  may  say 
+that  the  universal  machine  is  one  which,  when  supplied  with  the  appropriate 
+instructions,  can  be  made  to  do  any  rule  of  thumb  process.  This  feature  is  paralleled 
+in  digital  computing  machines  such  as  the  ACE.  They  are  in  fact  practical  versions  of 
+the  universal  machine.  There  is  a  certain  central  pool  of  electronic  equipment,  and  a 
+large  memory.  When  any  particular  problem  has  to  be  handled  the  appropriate 
+instructions  for  the  computing  process  involved  are  stored  in  the  memory  of  the 
+ACE  and  it  is  then  ‘set  up’  for  carrying  out  that  process. 
+
+I  have  indicated  the  main  strategic  ideas  behind  digital  computing  machinery, 
+and  will  now  follow  this  account  up  with  the  very  briefest  description  of  the 
+ACE.  It  may  be  divided  for  the  sake  of  argument  into  the  following  parts 
+
+2  Editor’s  note.  [ iS  =  microseconds. 
+
+3  Editor’s  note.  Hg  =  mercury. 
+
+
+384  I  Alan  Turing 
+
+
+Memory 
+
+Control 
+
+Arithmetic  part 
+Input  and  Output 
+
+I  have  already  said  enough  about  the  memory  and  will  only  repeat  that  in  the 
+ACE  the  memory  will  consist  mainly  of  200  mercury  delay  lines  each  holding 
+1024  binary  digits.  The  purpose  of  the  control  is  to  take  the  right  instructions 
+from  the  memory,  see  what  they  mean,  and  arrange  for  them  to  be  carried  out.  It 
+is  understood  that  a  certain  ‘code  of  instructions’  has  been  laid  down,  whereby 
+each  ‘word’  or  combination  of  say  32  binary  digits  describes  some  particular 
+operation.  The  circuit  of  the  control  is  made  in  accordance  with  the  code,  so  that 
+the  right  effect  is  produced.  To  a  large  extent  we  have  also  allowed  the  circuit  to 
+determine  the  code,  i.e.  we  have  not  just  thought  up  an  imaginary  ‘best  code’  and 
+then  found  a  circuit  to  put  it  into  effect,  but  have  often  simplified  the  circuit  at 
+the  expense  of  the  code.  It  is  also  quite  difficult  to  think  about  the  code  entirely 
+in  abstracto  without  any  kind  of  circuit. 
+
+The  arithmetic  part  of  the  machine  is  the  part  concerned  with  addition, 
+multiplication  and  any  other  operations  which  it  seems  worth  while  to  do  by 
+means  of  special  circuits  rather  than  through  the  simple  facilities  provided  by  the 
+control.  The  distinction  between  control  and  arithmetic  part  is  a  rather  hazy  one, 
+but  at  any  rate  it  is  clear  that  the  machine  should  at  least  have  an  adder  and  a 
+multiplier,  even  if  they  turn  out  in  the  end  to  be  part  of  the  control.  This  is  the 
+point  at  which  I  should  mention  that  the  machine  is  operated  in  the  binary  scale, 
+with  two  qualifications.  Inputs  from  externally  provided  data  are  in  decimal,  and 
+so  are  outputs  intended  for  human  eyes  rather  than  for  later  reconsumption  by 
+the  ACE.  This  is  the  first  qualification.  The  second  is  that,  in  spite  of  the 
+intention  of  binary  working  there  can  be  no  bar  on  decimal  working  of  a  kind, 
+because  of  the  relation  of  the  ACE  to  the  universal  machine.  Binary  working  is 
+the  most  natural  thing  to  do  with  any  large  scale  computer.  It  is  much  easier  to 
+work  in  the  scale  of  two  than  any  other,  because  it  is  so  easy  to  produce 
+mechanisms  which  have  two  positions  of  stability:  the  two  positions  may  then 
+
+
+Figure  9.4. 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  385 
+
+
+Figure  9.5. 
+
+Editor’s  note.  I  am  grateful  to  John  Andreae  and  David  Clayden  for  assistance  with  redrawing  Turing’s 
+original  figure.  The  figure  shows  an  Eccles-Jordan  trigger  circuit,  also  known  as  a  bistable  circuit  or  flip- 
+flop.  The  circuit  has  two  stable  states.  In  one,  current  flows  through  the  left-hand  triode  valve  but  not 
+through  the  right;  in  the  other,  current  flows  through  the  right-hand  triode  but  not  the  left.  The  circuit  can 
+be  switched  from  one  state  to  the  other  by  applying  a  pulse  to  one  of  the  valves. 
+
+
+be  regarded  as  representing  0  and  1.  Examples  are  lever  as  diagram,  Jordan  Eccles 
+circuit,  thyratron.  If  one  is  concerned  with  a  small  scale  calculating  machine  then 
+there  is  at  least  one  serious  objection  to  binary  working.  For  practical  use  it  will 
+be  necessary  to  build  a  converter  to  transform  numbers  from  the  binary  form  to 
+the  decimal  and  back.  This  may  well  be  a  larger  undertaking  than  the  binary 
+calculator.  With  the  large  scale  machines  this  argument  carries  no  weight.  In  the 
+first  place  a  converter  would  become  a  relatively  small  piece  of  apparatus,  and  in 
+the  second  it  would  not  really  be  necessary.  This  last  statement  sounds  quite 
+paradoxical,  but  it  is  a  simple  consequence  of  the  fact  that  these  machines  can  be 
+made  to  do  any  rule  of  thumb  process  by  remembering  suitable  instructions.  In 
+particular  it  can  be  made  to  do  binary  decimal  conversion.  For  example  in  the 
+case  of  the  ACE  the  provision  of  the  converter  involves  no  more  than  adding  two 
+extra  delay  lines  to  the  memory.  This  situation  is  very  typical  of  what  happens 
+with  the  ACE.  There  are  many  fussy  little  details  which  have  to  be  taken  care  of, 
+and  which,  according  to  normal  engineering  practice,  would  require  special 
+circuits.  We  are  able  to  deal  with  these  points  without  modification  of  the 
+machine  itself,  by  pure  paper  work,  eventually  resulting  in  feeding  in  appropriate 
+instructions. 
+
+To  return  to  the  various  parts  of  the  machine.  I  was  saying  that  it  will  work  in 
+the  scale  of  two.  It  is  not  unnatural  to  use  the  convention  that  an  electrical  pulse 
+shall  represent  the  digit  1  and  that  absence  of  a  pulse  shall  represent  a  digit  0. 
+Thus  a  sequence  of  digits  0010110  would  be  represented  by  a  signal  like 
+
+
+386  I  Alan  Turing 
+
+
+.  r\ . 
+
+0  0  10 
+
+Figure  9.6. 
+
+
+
+
+where  the  time  interval  might  be  one  microsecond.  Let  us  now  look  at  what  the 
+process  of  binary  addition  is  like.  In  ordinary  decimal  addition  we  always  begin 
+from  the  right,  and  the  same  naturally  applies  to  binary.  We  have  to  do  this  because 
+we  cannot  tell  whether  to  carry  unless  we  have  already  dealt  with  the  less  signifi¬ 
+cant  columns.  The  same  applies  with  electronic  addition,  and  therefore  it  is 
+convenient  to  use  the  convention  that  if  a  sequence  of  pulses  is  coming  down  a 
+line,  then  the  least  significant  pulse  always  comes  first.  This  has  the  unfortunate 
+result  that  we  must  either  write  the  least  significant  digit  on  the  left  in  our  binary 
+numbers  or  else  make  time  flow  from  right  to  left  in  our  diagrams.  As  the  latter 
+alternative  would  involve  writing  from  right  to  left  as  well  as  adding  in  that  way,  we 
+have  decided  to  put  the  least  significant  digit  on  the  left.  Now  let  us  do  a  typical 
+addition.  Let  us  write  the  carry  digits  above  the  addends. 
+
+Carry  0  111110  0  1  1 
+
+A  0  110  110  0  10  1  ... 
+
+B  0  1  1  1  0  1  0  0  1  1  ... 
+
+
+0  1  0  0  1  1  0  0  0 
+
+
+Note  that  I  can  do  the  addition  only  looking  at  a  small  part  of  the  data.  To  do  the 
+addition  electronically  we  need  to  produce  a  circuit  with  three  inputs  and  two 
+outputs. 
+
+
+Inputs 
+
+Addend  A  a 
+
+Addend  B  (3 
+
+Carry  from  last  column 
+
+
+Outputs 
+
+Sum 
+
+Carry 
+
+
+This  circuit  must  be  such  that 
+
+
+
+e 
+
+
+If  no.  of  Is  on  inputs  a,  P,  y  is 
+
+
+{0  Then  sum  0  and  0 
+
+1  8  1  carry  0 
+
+2  is  0  s  1 
+
+3  1  is  1 
+
+
+It  is  very  easy  to  produce  a  voltage  proportional  to  the  number  of  pulses  on  the 
+inputs,  and  one  then  merely  has  to  provide  a  circuit  which  will  discriminate  between 
+four  different  levels  and  put  out  the  appropriate  sum  and  carry  digits.  I  will  not 
+attempt  to  describe  such  a  circuit;  it  can  be  quite  simple.  When  we  are  given  the 
+circuit  we  merely  have  to  connect  it  up  with  feedback  and  it  is  an  adder.  Thus: 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  387 
+
+
+It  will  be  seen  that  we  have  made  use  of  the  fact  that  the  same  process  is  used  in 
+addition  with  each  digit,  and  also  the  fact  that  the  properties  of  the  electrical 
+circuit  are  invariant  under  time  shifts,  at  any  rate  if  these  are  multiples  of  the 
+clock  period.  It  might  be  said  that  we  have  made  use  of  the  isomorphism 
+between  the  group  of  these  time  shifts  and  the  multiplicative  group  of  real 
+numbers  to  simplify  our  apparatus,  though  I  doubt  if  many  other  applications 
+of  this  principle  could  be  found. 
+
+It  will  be  seen  that  with  such  an  adder  the  addition  is  broken  down  into  the  most 
+elementary  steps  possible,  such  as  adding  one  and  one.  Each  of  these  occupies  a 
+microsecond.  Our  numbers  will  normally  consist  of  32  binary  digits,  so  that  two  of 
+them  can  be  added  in  32  microseconds.  Likewise  we  shall  do  multiplications  in  the 
+form  of  a  number  of  consecutive  additions  of  one  and  one  or  one  and  zero  etc. 
+There  are  1024  such  additions  or  thereabouts  to  be  done  in  a  multiplication  of  one 
+32  digit  number  by  another,  so  that  one  might  expect  a  multiplication  to  take 
+about  a  millisecond.  Actually  the  multiplier  to  be  used  on  ACE  will  take  rather  over 
+two  milliseconds.  This  may  sound  rather  long,  when  the  unit  operation  is  only  a 
+microsecond,  but  it  actually  seems  that  the  machine  is  fairly  well  balanced  in  this 
+respect,  i.e.  the  multiplication  time  is  not  a  serious  bottleneck.  Computers  always 
+spend  just  as  long  in  writing  numbers  down  and  deciding  what  to  do  next  as  they 
+do  in  actual  multiplications,  and  it  is  just  the  same  with  the  ACE.  A  great  deal  of 
+time  is  spent  in  getting  numbers  in  and  out  of  storage  and  deciding  what  to  do 
+next.  To  complete  the  four  elementary  processes,  subtraction  is  done  by  comple¬ 
+mentation  and  addition,  and  division  is  done  by  the  use  of  the  iteration  formula 
+
+Un  —  Ufj  —  l  ~T  tiff  —  i  (  1  ClUji  —  1 ) . 
+
+un  converges  to  a~l  provided  |1  —  awo|  <  1.  The  error  is  squared  at  each  step,  so 
+that  the  convergence  is  very  rapid.  This  process  is  of  course  programmed,  i.e.  the 
+only  extra  apparatus  required  is  the  delay  lines  required  for  storing  the  relevant 
+instructions. 
+
+
+388  I  Alan  Turing 
+
+Passing  on  from  the  arithmetic  part  there  remains  the  input  and  output.  For  this 
+purpose  we  have  chosen  Hollerith  card  equipment.  We  are  able  to  obtain  this 
+without  having  to  do  any  special  development  work.  The  speeds  obtainable  are 
+not  very  impressive  compared  with  the  speeds  at  which  the  electronic  equipment 
+works,  but  they  are  quite  sufficient  in  all  cases  where  the  calculation  is  long  and  the 
+result  concise:  the  interesting  cases  in  fact.  It  might  appear  that  there  would  be  a 
+difficulty  in  converting  the  information  provided  at  the  slow  speeds  appropriate  to 
+the  Hollerith  equipment  to  the  high  speeds  required  with  the  ACE,  but  it  is  really 
+quite  easy.  The  Hollerith  speeds  are  so  slow  as  to  be  counted  zero  or  stop  for  many 
+purposes,  and  the  problem  reduces  to  the  simple  one  of  converting  a  number  of 
+statically  given  digits  into  a  stream  of  pulses.  This  can  be  done  by  means  of  a  form  of 
+electronic  commutator. 
+
+Before  leaving  the  outline  of  the  description  of  the  machine  I  should  mention 
+some  of  the  tactical  situations  that  are  met  with  in  programming.  I  can  illustrate 
+two  of  them  in  connection  with  the  calculation  of  the  reciprocal  described  above. 
+One  of  these  is  the  idea  of  the  iterative  cycle.  Each  time  that  we  go  from  ur  to 
+ur+ 1  we  apply  the  same  sequence  of  operations,  and  it  will  therefore  be  econom¬ 
+ical  in  storage  space  if  we  use  the  same  instructions.  Thus  we  go  round  and 
+round  a  cycle  of  instructions: 
+
+
+Ur 
+
+
+Figure  9.8. 
+
+Editor’s  note.  I  am  grateful  to  Mike  Woodger  for  assistance  with  redrawing  Turing’s  original  diagram. 
+
+
+It  looks  however  as  if  we  were  in  danger  of  getting  stuck  in  this  cycle,  and 
+unable  to  get  out.  The  solution  of  this  difficulty  involves  another  tactical  idea, 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  389 
+
+
+‘discrimination’  i.e.  of  deciding  what  to  do  next  partly  according  to  the  results  of 
+the  machine  itself,  instead  of  according  to  data  available  to  the  programmer.  In 
+that  of  this  case  we  include  a  discrimination  in  each  cycle,  which  takes  us  out  of 
+the  cycle  when  the  value  of  1 1  —  au\  is  sufficiently  small.  It  is  like  an  aeroplane 
+circling  over  an  aerodrome,  and  asking  permission  to  land  after  each  circle.  This 
+is  a  very  simple  idea,  but  is  of  the  utmost  importance.  The  idea  of  the  iterative 
+cycle  of  instructions  will  also  be  seen  to  be  rather  fundamental  when  it  is  realised 
+that  the  majority  of  the  instructions  in  the  memory  must  be  obeyed  a  great 
+number  of  times.  If  the  whole  memory  were  occupied  by  instructions,  none  of  it 
+being  used  for  numbers  or  other  data,  and  if  each  instruction  were  obeyed  once 
+only,  but  took  the  longest  possible  time,  the  machine  could  only  remain  working 
+for  sixteen  seconds. 
+
+Another  important  idea  is  that  of  constructing  an  instruction  and  then 
+obeying  it.  This  can  be  used  amongst  other  things  for  discrimination.  In  the 
+example  I  have  just  taken  for  instance  we  could  calculate  a  quantity  which  was  1  if 
+|1  —  au\  was  less  than  2-31  and  0  otherwise.  By  adding  this  quantity  to  the 
+instruction  that  is  obeyed  at  the  forking  point  that  instruction  can  be  completely 
+altered  in  its  effect  when  finally  1  —  au  is  reduced  to  sufficiently  small  dimen¬ 
+sions. 
+
+Probably  the  most  important  idea  involved  in  instruction  tables  is  that  of 
+standard  subsidiary  tables.  Certain  processes  are  used  repeatedly  in  all  sorts  of 
+different  connections,  and  we  wish  to  use  the  same  instructions,  from  the  same 
+part  of  the  memory  every  time.  Thus  we  may  use  interpolation  for  the  calcula¬ 
+tion  of  a  great  number  of  different  functions,  but  we  shall  always  use  the  same 
+instruction  table  for  interpolation.  We  have  only  to  think  out  how  this  is  to  be 
+done  once,  and  forget  then  how  it  is  done.  Each  time  we  want  to  do  an  inter¬ 
+polation  we  have  only  to  remember  the  memory  position  where  this  table  is  kept, 
+and  make  the  appropriate  reference  in  the  instruction  table  which  is  using  the 
+interpolation.  We  might  for  instance  be  making  up  an  instruction  table  for 
+finding  values  of  Jo(x)  and  use  the  interpolation  table  in  this  way.  We 
+should  then  say  that  the  interpolation  table  was  a  subsidiary  to  the  table  for 
+calculating  /0(x).  There  is  thus  a  sort  of  hierarchy  of  tables.  The  interpolation 
+table  might  be  regarded  as  taking  its  orders  from  the  J0  table,  and  reporting  its 
+answers  back  to  it.  The  master  servant  analogy  is  however  not  a  very  good  one,  as 
+there  are  many  more  masters  than  servants,  and  many  masters  have  to  share  the 
+same  servants. 
+
+Now  let  me  give  a  picture  of  the  operation  of  the  machine.  Let  us  begin  with 
+some  problem  which  has  been  brought  in  by  a  customer.  It  will  first  go  to  the 
+problems  preparation  section  where  it  is  examined  to  see  whether  it  is  in  a 
+suitable  form  and  self-consistent,  and  a  very  rough  computing  procedure  made 
+
+
+390  I  Alan  Turing 
+
+
+out.  It  then  goes  to  the  tables  preparation  section.  Let  us  suppose  for  example 
+that  the  problem  was  to  tabulate  solutions  of  the  equation 
+
+/  +  xy'  =  Jo(x) 
+
+with  initial  conditions  x  =  y  =  0,  /  =  a.  This  would  be  regarded  as  a  particular 
+case  of  solving  the  equation 
+
+/  =  F(x,y,y’) 
+
+for  which  one  would  have  instruction  tables  already  prepared.  One  would  need 
+also  a  table  to  produce  the  function  F(x,  y,  z )  (in  this  case  F(x,  y,  z )  =  Jo{x)  —  xz 
+which  would  mainly  involve  a  table  to  produce  Jo{x),  and  this  we  might  expect  to 
+get  off  the  shelf).  A  few  additional  details  about  the  boundary  conditions  and  the 
+length  of  the  arc  would  have  to  be  dealt  with,  but  much  of  this  detail  would  also 
+be  found  on  the  shelf,  just  like  the  table  for  obtaining  J0(x).  The  instructions  for 
+the  job  would  therefore  consist  of  a  considerable  number  taken  off  the  shelf 
+together  with  a  few  made  up  specially  for  the  job  in  question.  The  instruction 
+cards  for  the  standard  processes  would  have  already  been  punched,  but  the  new 
+ones  would  have  to  be  done  separately.  When  these  had  all  been  assembled  and 
+checked  they  would  be  taken  to  the  input  mechanism,  which  is  simply  a 
+Hollerith  card  feed.  They  would  be  put  into  the  card  hopper  and  a  button 
+pressed  to  start  the  cards  moving  through.  It  must  be  remembered  that  initially 
+there  are  no  instructions  in  the  machine,  and  one’s  normal  facilities  are  therefore 
+not  available.  The  first  few  cards  that  pass  in  have  therefore  to  be  carefully 
+thought  out  to  deal  with  this  situation.  They  are  the  initial  input  cards  and  are 
+always  the  same.  When  they  have  passed  in  a  few  rather  fundamental  instruction 
+tables  will  have  been  set  up  in  the  machine,  including  sufficient  to  enable  the 
+machine  to  read  the  special  pack  of  cards  that  has  been  prepared  for  the  job  we 
+are  doing.  When  this  has  been  done  there  are  various  possibilities  as  to  what 
+happens  next,  depending  on  the  way  the  job  has  been  programmed.  The  machine 
+might  have  been  made  to  go  straight  on  through,  and  carry  out  the  job, 
+punching  or  printing  all  the  answers  required,  and  stopping  when  all  of  this 
+has  been  done.  But  more  probably  it  will  have  been  arranged  that  the  machine 
+stops  as  soon  as  the  instruction  tables  have  been  put  in.  This  allows  for  the 
+possibility  of  checking  that  the  content  of  the  memories  is  correct,  and  for  a 
+number  of  variations  of  procedure.  It  is  clearly  a  suitable  moment  for  a  break.  We 
+might  also  make  a  number  of  other  breaks.  For  instance  we  might  be  interested 
+in  certain  particular  values  of  the  parameter  a,  which  were  experimentally 
+obtained  figures,  and  it  would  then  be  convenient  to  pause  after  each  parameter 
+value,  and  feed  the  next  parameter  value  in  from  another  card.  Or  one  might 
+prefer  to  have  the  cards  all  ready  in  the  hopper  and  let  the  ACE  take  them  in  as  it 
+wanted  them.  One  can  do  as  one  wishes,  but  one  must  make  up  one’s  mind.  Each 
+time  the  machine  pauses  in  this  way  a  ‘word’  or  sequence  of  32  binary  digits  is 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  391 
+
+
+displayed  on  neon  bulbs.  This  word  indicates  the  reason  for  stopping.  I  have 
+already  mentioned  two  possible  reasons.  A  large  class  of  further  possible  reasons 
+is  provided  by  the  checks.  The  programming  should  be  done  in  such  a  way  that 
+the  ACE  is  frequently  investigating  identities  which  should  be  satisfied  if  all  is  as 
+it  should  be.  Whenever  one  of  these  checks  fails  the  machine  stops  and  displays  a 
+word  which  describes  what  check  has  failed. 
+
+It  will  be  seen  that  the  possibilities  as  to  what  one  may  do  are  immense.  One  of 
+our  difficulties  will  be  the  maintenance  of  an  appropriate  discipline,  so  that  we 
+do  not  lose  track  of  what  we  are  doing.  We  shall  need  a  number  of  efficient 
+librarian  types  to  keep  us  in  order. 
+
+Finally  I  should  like  to  make  a  few  conjectures  as  to  the  repercussions  that 
+electronic  digital  computing  machinery  will  have  on  mathematics.  I  have  already 
+mentioned  that  the  ACE  will  do  the  work  of  about  10,000  computers.  It  is  to  be 
+expected  therefore  that  large  scale  hand-computing  will  die  out.  Computers  will 
+still  be  employed  on  small  calculations,  such  as  the  substitution  of  values  in 
+formulae,  but  whenever  a  single  calculation  may  be  expected  to  take  a  human 
+computer  days  of  work,  it  will  presumably  be  done  by  an  electronic  computer 
+instead.  This  will  not  necessitate  everyone  interested  in  such  work  having  an 
+electronic  computer.  It  would  be  quite  possible  to  arrange  to  control  a  distant 
+computer  by  means  of  a  telephone  line.  Special  input  and  output  machinery 
+would  be  developed  for  use  at  these  out  stations,  and  would  cost  a  few  hundred 
+pounds  at  most.  The  main  bulk  of  the  work  done  by  these  computers  will 
+however  consist  of  problems  which  could  not  have  been  tackled  by  hand 
+computing  because  of  the  scale  of  the  undertaking.  In  order  to  supply  the 
+machine  with  these  problems  we  shall  need  a  great  number  of  mathematicians 
+of  ability.  These  mathematicians  will  be  needed  in  order  to  do  the  preliminary 
+research  on  the  problems,  putting  them  into  a  form  for  computation.  There  will 
+be  considerable  scope  for  analysts.  When  a  human  computer  is  working  on  a 
+problem  he  can  usually  apply  some  common  sense  to  give  him  an  idea  of  how 
+accurate  his  answers  are.  With  a  digital  computer  we  can  no  longer  rely  on 
+common  sense,  and  the  bounds  of  error  must  be  based  on  some  proved  inequal¬ 
+ities.  We  need  analysts  to  find  the  appropriate  inequalities  for  us.  The  inequalities 
+need  not  always  be  explicit,  i.e.  one  need  not  have  them  in  such  a  form  that  we 
+can  tell,  before  the  calculation  starts,  and  using  only  pencil  and  paper,  how  big 
+the  error  will  be.  The  error  calculation  may  be  a  serious  part  of  the  ACE’s  duties. 
+To  an  extent  it  may  be  possible  to  replace  the  estimates  of  error  by  statistical 
+estimates  obtained  by  repeating  the  job  several  times,  and  doing  the  rounding  off 
+differently  each  time,  controlling  it  by  some  random  element,  some  electronic 
+roulette  wheel.  Such  statistical  estimates  however  leave  much  in  doubt,  are 
+wasteful  in  machine  time,  and  give  no  indication  of  what  can  be  done  if  it 
+turns  out  that  the  errors  are  intolerably  large.  The  statistical  method  can  only 
+help  the  analyst,  not  replace  him. 
+
+
+392  I  Alan  Turing 
+
+
+Analysis  is  just  one  of  the  purposes  for  which  we  shall  need  good  mathemat¬ 
+icians.  Roughly  speaking  those  who  work  in  connection  with  the  ACE  will  be 
+divided  into  its  masters  and  its  servants.  Its  masters  will  plan  out  instruction 
+tables  for  it,  thinking  up  deeper  and  deeper  ways  of  using  it.  Its  servants  will  feed 
+it  with  cards  as  it  calls  for  them.  They  will  put  right  any  parts  that  go  wrong. 
+They  will  assemble  data  that  it  requires.  In  fact  the  servants  will  take  the  place  of 
+limbs.  As  time  goes  on  the  calculator  itself  will  take  over  the  functions  both  of 
+masters  and  of  servants.  The  servants  will  be  replaced  by  mechanical  and 
+electrical  limbs  and  sense  organs.  One  might  for  instance  provide  curve  followers 
+to  enable  data  to  be  taken  direct  from  curves  instead  of  having  girls  read  off 
+values  and  punch  them  on  cards.  The  masters  are  liable  to  get  replaced  because  as 
+soon  as  any  technique  becomes  at  all  stereotyped  it  becomes  possible  to  devise  a 
+system  of  instruction  tables  which  will  enable  the  electronic  computer  to  do  it  for 
+itself.  It  may  happen  however  that  the  masters  will  refuse  to  do  this.  They  may  be 
+unwilling  to  let  their  jobs  be  stolen  from  them  in  this  way.  In  that  case  they 
+would  surround  the  whole  of  their  work  with  mystery  and  make  excuses, 
+couched  in  well  chosen  gibberish,  whenever  any  dangerous  suggestions  were 
+made.  I  think  that  a  reaction  of  this  kind  is  a  very  real  danger.  This  topic 
+naturally  leads  to  the  question  as  to  how  far  it  is  possible  in  principle  for  a 
+computing  machine  to  simulate  human  activities.  I  will  return  to  this  later,  when 
+I  have  discussed  the  effects  of  these  machines  on  mathematics  a  little  further. 
+
+I  expect  that  digital  computing  machines  will  eventually  stimulate  a  consider¬ 
+able  interest  in  symbolic  logic  and  mathematical  philosophy.  The  language  in 
+which  one  communicates  with  these  machines,  i.e.  the  language  of  instruction 
+tables,  forms  a  sort  of  symbolic  logic.  The  machine  interprets  whatever  it  is  told 
+in  a  quite  definite  manner  without  any  sense  of  humour  or  sense  of  proportion. 
+Unless  in  communicating  with  it  one  says  exactly  what  one  means,  trouble  is 
+bound  to  result.  Actually  one  could  communicate  with  these  machines  in  any 
+language  provided  it  was  an  exact  language,  i.e.  in  principle  one  should  be  able  to 
+communicate  in  any  symbolic  logic,  provided  that  the  machine  were  given 
+instruction  tables  which  would  enable  it  to  interpret  that  logical  system.  This 
+should  mean  that  there  will  be  much  more  practical  scope  for  logical  systems 
+than  there  has  been  in  the  past.  Some  attempts  will  probably  be  made  to  get  the 
+machines  to  do  actual  manipulations  of  mathematical  formulae.  To  do  so  will 
+require  the  development  of  a  special  logical  system  for  the  purpose.  This  system 
+should  resemble  normal  mathematical  procedure  closely,  but  at  the  same  time 
+should  be  as  unambiguous  as  possible.  As  regards  mathematical  philosophy, 
+since  the  machines  will  be  doing  more  and  more  mathematics  themselves,  the 
+centre  of  gravity  of  the  human  interest  will  be  driven  further  and  further  into 
+philosophical  questions  of  what  can  in  principle  be  done  etc. 
+
+It  has  been  said  that  computing  machines  can  only  carry  out  the  processes  that 
+they  are  instructed  to  do.  This  is  certainly  true  in  the  sense  that  if  they  do 
+
+
+Lecture  on  the  Automatic  Computing  Engine  I  393 
+
+
+something  other  than  what  they  were  instructed  then  they  have  just  made  some 
+mistake.  It  is  also  true  that  the  intention  in  constructing  these  machines  in  the 
+first  instance  is  to  treat  them  as  slaves,  giving  them  only  jobs  which  have  been 
+thought  out  in  detail,  jobs  such  that  the  user  of  the  machine  fully  understands 
+what  in  principle  is  going  on  all  the  time.  Up  till  the  present  machines  have  only 
+been  used  in  this  way.  But  is  it  necessary  that  they  should  always  be  used  in  such 
+a  manner?  Let  us  suppose  we  have  set  up  a  machine  with  certain  initial  instruc¬ 
+tion  tables,  so  constructed  that  these  tables  might  on  occasion,  if  good  reason 
+arose,  modify  those  tables.  One  can  imagine  that  after  the  machine  had  been 
+operating  for  some  time,  the  instructions  would  have  altered  out  of  all  recogni¬ 
+tion,  but  nevertheless  still  be  such  that  one  would  have  to  admit  that  the  machine 
+was  still  doing  very  worthwhile  calculations.  Possibly  it  might  still  be  getting 
+results  of  the  type  desired  when  the  machine  was  first  set  up,  but  in  a  much  more 
+efficient  manner.  In  such  a  case  one  would  have  to  admit  that  the  progress  of  the 
+machine  had  not  been  foreseen  when  its  original  instructions  were  put  in.  It 
+would  be  like  a  pupil  who  had  learnt  much  from  his  master,  but  had  added  much 
+more  by  his  own  work.  When  this  happens  I  feel  that  one  is  obliged  to  regard 
+the  machine  as  showing  intelligence.  As  soon  as  one  can  provide  a  reasonably 
+large  memory  capacity  it  should  be  possible  to  begin  to  experiment  on  these 
+lines.  The  memory  capacity  of  the  human  brain  is  probably  of  the  order  of  ten 
+thousand  million  binary  digits.  But  most  of  this  is  probably  used  in  remembering 
+visual  impressions,  and  other  comparatively  wasteful  ways.  One  might  reason¬ 
+ably  hope  to  be  able  to  make  some  real  progress  with  a  few  million  digits, 
+especially  if  one  confined  one’s  investigations  to  some  rather  limited  field  such 
+as  the  game  of  chess.  It  would  probably  be  quite  easy  to  find  instruction  tables 
+which  would  enable  the  ACE  to  win  against  an  average  player.  Indeed  Shannon  of 
+Bell  Telephone  laboratories  tells  me  that  he  has  won  games  playing  by  rule  of 
+thumb:  the  skill  of  his  opponents  is  not  stated.  But  I  would  not  consider  such  a 
+victory  very  significant.  What  we  want  is  a  machine  that  can  learn  from  experi¬ 
+ence.  The  possibility  of  letting  the  machine  alter  its  own  instructions  provides  the 
+mechanism  for  this,  but  this  of  course  does  not  get  us  very  far. 
+
+It  might  be  argued  that  there  is  a  fundamental  contradiction  in  the  idea  of  a 
+machine  with  intelligence.  It  is  certainly  true  that  ‘acting  like  a  machine’  has 
+become  synonymous  with  lack  of  adaptability.  But  the  reason  for  this  is  obvious. 
+Machines  in  the  past  have  had  very  little  storage,  and  there  has  been  no  question 
+of  the  machine  having  any  discretion.  The  argument  might  however  be  put  into  a 
+more  aggressive  form.  It  has  for  instance  been  shown  that  with  certain  logical 
+systems  there  can  be  no  machine  which  will  distinguish  provable  formulae  of  the 
+system  from  unprovable,  i.e.  that  there  is  no  test  that  the  machine  can  apply 
+which  will  divide  propositions  with  certainty  into  these  two  classes.  Thus  if  a 
+machine  is  made  for  this  purpose  it  must  in  some  cases  fail  to  give  an  answer.  On 
+the  other  hand  if  a  mathematician  is  confronted  with  such  a  problem  he  would 
+
+
+394  I  Alan  Turing 
+
+
+search  around  a[nd]  find  new  methods  of  proof,  so  that  he  ought  eventually  to 
+be  able  to  reach  a  decision  about  any  given  formula.  This  would  be  the  argument. 
+Against  it  I  would  say  that  fair  play  must  be  given  to  the  machine.  Instead  of  it 
+sometimes  giving  no  answer  we  could  arrange  that  it  gives  occasional  wrong 
+answers.  But  the  human  mathematician  would  likewise  make  blunders  when 
+trying  out  new  techniques.  It  is  easy  for  us  to  regard  these  blunders  as  not 
+counting  and  give  him  another  chance,  but  the  machine  would  probably  be 
+allowed  no  mercy.  In  other  words  then,  if  a  machine  is  expected  to  be  infallible,  it 
+cannot  also  be  intelligent.  There  are  several  mathematical  theorems  which  say 
+almost  exactly  that.  But  these  theorems  say  nothing  about  how  much  intelligence 
+may  be  displayed  if  a  machine  makes  no  pretence  at  infallibility.  To  continue  my 
+plea  for  ‘fair  play  for  the  machines’  when  testing  their  I.Q.  A  human  mathemat¬ 
+ician  has  always  undergone  an  extensive  training.  This  training  may  be  regarded 
+as  not  unlike  putting  instruction  tables  into  a  machine.  One  must  therefore  not 
+expect  a  machine  to  do  a  very  great  deal  of  building  up  of  instruction  tables  on 
+its  own.  No  man  adds  very  much  to  the  body  of  knowledge,  why  should  we 
+expect  more  of  a  machine?  Putting  the  same  point  differently,  the  machine  must 
+be  allowed  to  have  contact  with  human  beings  in  order  that  it  may  adapt  itself  to 
+their  standards.  The  game  of  chess  may  perhaps  be  rather  suitable  for  this 
+purpose,  as  the  moves  of  the  machine’s  opponent  will  automatically  provide 
+this  contact.

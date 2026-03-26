@@ -1,0 +1,168 @@
+CHECKING A LARGE ROUTINE
+
+A. M. Turing
+
+Paper presented at the Conference on High Speed Automatic Calculating Machines,
+Mathematical Laboratory, Cambridge, 24 June 1949.
+Published in: Report of a Conference on High Speed Automatic Calculating Machines,
+University Mathematical Laboratory, Cambridge, January 1950, pp. 67-69.
+
+Source: Chilton Computing archive transcription
+https://www.chilton-computing.org.uk/acl/literature/othermanuals/cambridge/p014.htm
+
+Note: The original published paper contained several transcription errors.
+A corrected version with commentary was published by F.L. Morris and C.B. Jones
+in "An Early Program Proof by Alan Turing", Annals of the History of Computing,
+
+================================================================================
+
+14 Checking a Large Routine: Dr A Turing
+
+How can one check a routine in the sense of making sure that it is right?
+
+In order that the man who checks may not have too difficult a task the programmer
+should make a number of definite assertions which can be checked individually,
+and from which the correctness of the whole programme easily follows.
+
+Consider the analogy of checking an addition.  If it is given as:
+
+   1374
+   5906
+   6719
+   4337
+   7768
+   ----
+  26104
+
+one must check the whole at one sitting, because of the carries. But if the
+totals for the various columns are given, as below:
+
+   1374
+   5906
+   6719
+   4337
+   7768
+   ----
+   3974
+  2213
+   ----
+  26104
+
+the checker's work is much easier being split up into the checking of the
+various assertions 3 + 9 + 7 + 3 + 7 = 29 etc. and the small addition
+
+   3974
+  2213
+   ----
+  26104
+
+This principle can be applied to the process of checking a large routine but
+we will illustrate the method by means of a small routine viz. one to obtain
+n! without the use of a multiplier, multiplication being carried out by
+repeated addition.
+
+At a typical moment of the process we have recorded r and s r for some r, s.
+We can change s r to (s+1) r by addition of r.  When s = r+1 we can change
+r to r+1 by a transfer. Unfortunately there is no coding system sufficiently
+generally known to justify giving the routine for this process in full, but
+the flow diagram given in fig.1 will be sufficient for illustration.
+
+Fig.1. [Flow Diagram]
+
+    START --> [A: r' = 1, u' = 1] --> [B: v' = u] --> [C: TEST r' - n]
+                                                          |         |
+                                                         (+)       (-)
+                                                          |         |
+                                                          v       STOP (D)
+                                                    [s' = 1] -->
+                                                    [E: u' = u + v] -->
+                                                    [G: s' = s + 1] -->
+                                                    [F: TEST s' - r]
+                                                       |         |
+                                                      (-)        (+)
+                                                       |          |
+                                                  (back to E)  [r' = r + 1]
+                                                               (back to B)
+
+    0 is regarded as positive
+
+Each box of the flow diagram represents a straight sequence of instructions
+without changes of control.  The following convention is used:
+
+(i)  a dashed letter indicates the value at the end of the process represented
+     by the box;
+
+(ii) an undashed letter represents the initial value of a quantity.
+
+One cannot equate similar letters appearing in different boxes, but it is
+intended that the following identifications be valid throughout.
+
+s     contents of line 27 of store
+r     contents of line 28 of store
+n     contents of line 29 of store
+u     contents of line 30 of store
+v     contents of line 31 of store
+
+It is also intended that u be s r or something of the sort e.g. it might be
+(s+1) r or s r-1 but not e.g. s^2 + r^2.
+
+In order to assist the checker, the programmer should make assertions about
+the various states that the machine can reach.  These assertions may be
+tabulated as in fig.2.  Assertions are only made for the states when certain
+particular quantities are in control, corresponding to the ringed letters in
+the flow diagram.  One column of the table is used for each such situation of
+the control.  Other quantities are also needed to specify the condition of the
+machine completely: in our case it is sufficient to give r and s.  The upper
+part of the table gives the various contents of the store lines in the various
+conditions of the machine, and restrictions on the quantities s, r (which we
+may call inductive variables).  The lower part tells us which of the conditions
+will be the next to occur.
+
+Fig.2. [Assertion Table]
+
+Storage   (INITIAL)                        (STOP)
+Location  (A)        (B)    (C)    (D)     (E)      (F)        (G)
+          k=6        k=5    k=4    k=0     k=3      k=1        k=2
+------------------------------------------------------------------------
+27                                         s        s + 1      s
+28                   r      r              r        r           r
+29        n          n      n      n       n        n           n
+30                   r!     r!             s*r!     (s+1)*r!    (s+1)*r!
+31                          r!     n!      r!       r!          r!
+------------------------------------------------------------------------
+          To (B)     To     To (D) if              To (B) with
+          with       (C)    r = n          To (G)  r' = r+1     To (F)
+          r' = 1                                   if s >= r
+          s' = 1            To (E) if              To (E) with
+                            r < n                  r' = s+1
+                                                   if s < r
+
+The checker has to verify that the columns corresponding to the initial
+condition and the stopped condition agree with the claims that are made for the
+routine as a whole.  In this case the claim is that if we start with control in
+condition A and with n in line 29 we shall find a quantity in line 33 when the
+machine stops which is r (provided this is less than 2^40, but this condition
+has been ignored).
+
+He has also to verify that each of the assertions in the lower half of the
+table is correct.  In doing this the columns may be taken in any order and
+quite independently.  Thus for column B the checker would argue. "From the
+flow diagram we see that after B the box v' = u applies.  From the upper part
+of the column for B we have u = r.  Hence v' = r i.e. the entry for v, i.e.
+for line 31 in C should be r.  The other entries are the same as in B".
+
+Finally the checker has to verify that the process comes to an end.  Here
+again he should be assisted by the programmer giving a further definite
+assertion to be verified.  This may take the form of a quantity which is
+asserted to decrease continually and vanish when the machine stops.  To the
+pure mathematician it is natural to give an ordinal number.  In this problem
+the ordinal might be (n - r) w^2 + (r - s) w + k.  A less highbrow form of
+the same thing would be to give the integer 2^80 (n - r) + 2^40 (r - s) + k.
+Taking the latter case and the step from B to C there would be a decrease from
+2^80 (n - r) + 2^40 (r - s) + 5 to 2^80 (n - v) + 2^40 (r - s) + 4.  In the
+step from F to B there is a decrease from 2^80 (n - r) + 2^40 (r - s) + 1 to
+2^80 (n - r - 1) + 2^40 (r + 1 - s) + 5.
+
+In the course of checking that the process comes to an end the time involved
+may also be estimated by arranging that the decreasing quantity represents an
+upper bound to the time till the machine stops.

@@ -60,7 +60,7 @@ STRINGS = {
     "help_history": {"zh": "  /history  - 显示对话历史", "en": "  /history  - Show chat history"},
     "help_clear": {"zh": "  /clear    - 清空对话历史", "en": "  /clear    - Clear chat history"},
     "help_sessions": {"zh": "  /sessions - 历史会话", "en": "  /sessions - Session history"},
-    "help_memory": {"zh": "  /memory   - 知识库状态", "en": "  /memory   - Knowledge base status"},
+    "help_memory": {"zh": "  /memory   - 知识库状态与搜索", "en": "  /memory   - Knowledge base status & search"},
     "help_config": {"zh": "  /config   - 切换 LLM Provider", "en": "  /config   - Switch LLM Provider"},
     "help_model": {"zh": "  /model    - 切换当前 Provider 的模型", "en": "  /model    - Switch model"},
     "help_menu": {"zh": "  /menu     - 返回主菜单", "en": "  /menu     - Back to main menu"},
@@ -110,6 +110,10 @@ STRINGS = {
     "memory_search_usage": {
         "zh": "用法: /memory search <查询内容>",
         "en": "Usage: /memory search <query>",
+    },
+    "memory_search_prompt": {
+        "zh": "搜索知识库（直接输入关键词，空行退出）: ",
+        "en": "Search knowledge base (enter keywords, empty to quit): ",
     },
     "searching": {"zh": "搜索: {query}", "en": "Search: {query}"},
     "no_results": {"zh": "没有找到相关内容", "en": "No results found"},

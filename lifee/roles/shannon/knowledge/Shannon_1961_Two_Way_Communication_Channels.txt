@@ -1,0 +1,1609 @@
+TWO-WAY COMMUNICATION
+CHANNELS
+CLAUDE E. SHANNON
+MASSACHUSETTS INSTITUTE OF TECHNOLOGY
+CAMBRIDGE, MASSACHUSETTS
+1. Introduction
+A two-way communication channel is shown schematically in figure 1. Here xi
+is an input letter to the channel at terminal 1 and yi an output while x2 is an
+xl
+Y2
+CHANNEL
+Y,
+do^
+X2
+TERMINAL
+I
+TERMINAL 2
+FIGURE 1
+input at terminal 2 and Y2 the corresponding output. Once each second, say,
+new inputs xi and x2 may be chosen from corresponding input alphabets and
+put into the channel; outputs yi and Y2 may then be observed. These outputs
+will be related statistically to the inputs and perhaps historically to previous
+inputs and outputs if the channel has memory. The problem is to communicate
+in both directions through the channel as effectively as possible. Particularly, we
+wish to determine what pairs of signalling rates R1 and R2 for the two directions
+can be approached with arbitrarily small error probabilities.
+X'
+NW
+K I
+}
+-
+Y2
+y,
+K 2
+d
+FIGURE 2
+Before making these notions precise, we give some simple examples. In figure 2
+the two-way channel decomposes into two independent one-way noiseless binary
+This work was supported in part by the U.S. Army (Signal Corps), the U.b. Air Force (Office
+of Scientific Research, Air Research and Development Command), and the U.S. Navy (Office
+of Naval Research).
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+channels K1 and K2. Thus xi, x2, y1 and Y2 are all binary variables and the opera-
+tion of the channel is defined by Y2 = xl and y, = x2. We can here transmit in
+each direction at rates up to one bit per second. Thus we can find codes whose
+R2
+RI
+R1
+I
+FIGURE 3
+rates (R1, R2) approximate as closely as desired any point in the square, figure 3,
+with arbitrarily small (in this case, zero) error probability.
+In figure 4 all inputs and outputs are again binary and the operation is defined
+MOD. 2 ADDER
+Y,
+Y2
+FIGURE 4
+by yi = Y2 = xl + X2 (mod 2). Here again it is possible to transmit one bit per
+second in each direction simultaneously, but the method is a bit more sophis-
+ticated. Arbitrary binary digits may be fed in at xi and x2 but, to decode, the
+observed y must be corrected to compensate for the influence of the transmitted
+x. Thus an observed yi should be added to the just transmitted xi (mod 2) to
+determine the transmitted x2. Of course here, too, one may obtain lower rates
+than the (1, 1) pair and again approximate any point in the square, figure 3.
+A third example has inputs xi and x2 each from a ternary alphabet and outputs
+y, and Y2 each from a binary alphabet. Suppose that the probabilities of different
+output pairs (YI, Y2), conditional on various input pairs (xI, x2), are given by
+table I. It may be seen that by using only xl = 0 at terminal 1 it is possible to
+send one bit per second in the 2 - 1 direction using only the input letters 1
+and 2 at terminal 2, which then result with certainty in a and b respectively at
+terminal 1. Similarly, if x2 is held at 0, transmission in the 1 - 2 direction is
+possible at one bit per second. By dividing the time for use of these two strategies
+in the ratio X to
+1 - X it is possible to transmit in the two directions with
+TWO-WAY COMMUNICATION CHANNELS
+6 1.3
+TABLE I
+Y1Y|
+Output Pair
+_
+_
+aa
+ab
+ba
+bh
+1/4
+1/4
+1/4
+1/4
+1/2
+1/2
+1/2
+1/2
+Input
+1/2
+1/2
+Pair
+1/4
+1/4
+1/4
+1/4
+1/4
+1/4
+1/4
+1/4
+1/2
+1/2
+1/4
+1/4
+1/4
+1/4
+1/4
+1/4
+1/4
+1/4
+average rates R1 = 1-X, R2 = X. Thus we can find codes approaching any
+point in the triangular region, figure 5. It is not difficult to see, and will follow
+R2\
+I
+R,
+FIGURE 5
+from later results, that no point outside this trianigle cail be approached with
+codes of arbitrarily low error probability.
+In this channel, communication in the two directions might be called in-
+compatible. Forward communication is possible only if X2 is held at zero. Other-
+wise, all x1 letters are completely noisy. Conversely, backward communication
+is possible only if xi is held at zero. The situation is a kind of discrete analogue
+to a common physical two-way system; a pair of radio telephone stations with
+"push-to-talk" buttons so arraniged that when the button is pushed the local
+receiver is turned off.
+A fourth simple example of a two-wvay channiiel, suggested by Blackwell, is the
+binary multiplying channel. Here all inputs and outputs are binary and the
+operation is defined Yi = Y2 = x1x2. The region of approachable rate pairs for this
+channel is not known exactly, but we shall later find bounds on it.
+In this paper we will study the coding properties of two-way channels. In
+particular, inner and outer bounds on the region of approachable rate pairs
+(R1, R2) will be found, together with bounds relating to the rate at which zero
+error probability can be approached. Certain topological properties of these
+bounds will be discussed and, finally, we will develop an expression describing
+the region of approachable rates in terms of a limiting process.
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+2. Summary of results
+We will summarize here, briefly and somewhat roughly, the main results of
+the paper. It will be shown that for a memoryless discrete channel there exists
+a convex region G of approachable rates. For any point in G, say (R1, R2), there
+exist codes signalling with rates arbitrarily close to the point and with arbitrarily
+small error probability. This region is of the form shown typically in figure 6,
+G
+R2
+G
+RR
+FIGURE 6
+bounded by the middle curve G and the two axis segments. This curve can be
+described by a limiting expression involving mutual informations for long se-
+quences of inputs and outputs.
+In addition, we find an inner and outer bound, GI and Go, which are more
+easily evaluated, involving, as they do, only a maximizing process over single
+letters in the channel. GO is the set of points (R12, R21) that may be obtained by
+assigning probabilities P{x1, x2} to the input letters of the channel (an arbitrary
+joint distribution) and then evaluating
+R12
+E (log
+P{XIX2, Y2r)
+= E
+P{xlx2y2} log P{XlIX2,
+2}
+(1)
+~~~~{XI2}
+XIZ2Y2
+P{X1IX2}
+R= E (log P{x21xI, Y1})
+where E(,U) means expectation of ,u. The inner bound GI is found in a similar way
+but restricting the distribution to an independent one P{xi, x2} = P{xl}P{x2}.
+Then G, is the convex hull of (R12, R21) points found under this restriction.
+It is shown that in certain important cases these bounds are identical so the
+capacity region is then completely determined from the bounds. An example is
+also given (the binary multiplying channel) where there is a discrepancy between
+the bounds.
+The three regions G,, G and Go are all convex and have the same intercepts
+on the axes. These intercepts are the capacities in the two directions when the
+other input letter is fixed at its best value [for example, xi is held at the value
+which maximizes R21 under variation of P {x2} ]. For any point inside G the error
+probabilities approach zero exponentially with the block length n. For any point
+TWO-WAY COMMUNICATION CHANNELS
+outside G at least one of the error probabilities for the two codes will be bounded
+away from zero by a bound independent of the block length.
+Finally, these results may be partially generalized to channels with certain
+types of memory. If there exists an internal state of the channel such that it is
+possible to return to this state in a bounded number of steps (regardless of
+previous transmission) then there will exist again a capacity region G with similar
+properties. A limiting expression is given determining this region.
+3. Basic definitions
+A discrete memoryless two-way channel consists of a set of transition probabil-
+ities P{y1, Y2!x1, x2} where xI, x2, Yl, Y2 all range over finite alphabets (not neces-
+sarily the same).
+A block code pair of length n for such a channel with M1 messages in the for-
+ward direction and M2 in the reverse direction consists of two sets of n functions
+(2)
+fO(Ml), fl(MI, Yll), f2(Ml) Ylly Y12)
+*
+...
+fn-l(Ml) Ylly *.*.* Yl,n-1)
+go(rM2), gl(m2, Y21), 92(m2, Y21, Y2),
+,gXn-(m2 Y21
+* *, Y2,n-l)
+Here the f functions all take values in the xi alphabet and the g functions in
+the x2 alphabet, while ml takes values from 1 to M1 (the forward messages) and
+m2 takes values from 1 to M2 (the backward messages). Finally y1i, for i =
+1, 2,
+- * *, n - 1, takes values from the Yi alphabet and similarly for Y2i. The f
+functions specify how the next input letter at terminal 1 should be chosen as
+determined by the message ml to be transmitted and the observed outputs
+Yll, Y12,
+* * * at terminal 1 up to the current time. Similarly the g functions
+determine how message m2 is encoded as a function of the information available
+at each time in the process.
+A decoding system for a block code pair of length n consists of a pair of func-
+tions O(ml, Ylly Y12,
+* *, yln) and #(m2, Y21, Y22,
+* *
+Y2n). These functions take
+values from 1 to M2 and 1 to M1 respectively.
+The decoding function so represents a way of deciding on the original trans-
+mitted message from terminal 2 given the information available at terminal 1 at
+the end of a block of n received letters, namely, yll, y12,
+* * *, yln together with the
+transmitted message ml at terminal 1. Notice that the transmitted sequence
+xll, x12,
+* * *, xln although known at terminal 1 need not enter as an argument
+in the decoding function since it is determined (via the encoding functions) by
+ml and the received sequence.
+We will assume, except when the contrary is stated, that all messages ml are
+equiprobable (probability 1/Ml), that all messages m2 are equiprobable (prob-
+ability 1/M2), and that these events are statistically independent. We also as-
+sume that the successive operations of the channel are independent,
+(3)
+PfYll, Y12, ***XYln, Y21, Y22,
+YUnlX11, X12 **
+Xln, X21} X22,
+*
+,X2nj
+n
+= II P{Yli, Y2ilXli, X2I}.
+i-i
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+This is the meaning of the memoryless condition. This implies that the probabil-
+ity of a set of outputs from the channel, conditionial on the corresponding in-
+puts, is the same as this probability conditional on these inputs and any previous
+inputs.
+The signalling rates R, and R2 for a block code pair with M1 and M2 messages
+for the two directions are defined by
+R, = I log l1,
+n
+(4)
+R2 = - log M2.
+n
+Given a code pair and a decoding system, together with the conditional prob-
+abilities defining a channel and our assumptions concerning message probability,
+it is possible, in principle, to compute error probabilities for a code. Thus one
+could compute for each message pair the probabilities of the various possible
+received sequences, if these messages were transmitted by the given coding
+functions. Applying the decoding functions, the probability of an incorrect de-
+coding could be computed. This could be averaged over all messages for each
+direction to arrive at final error probabilities Pel and Pe2 for the two directions.
+We will say that a point (R1, R2) belongs to the capacity region G of a given
+memoryless channel K if, given any e > 0, there exists a block code and decoding
+system for the channel with signalling rates R1 and R*2 satisfying JR, - RTI < e
+and 1R2 - R2
+< e and such that the error probabilities satisfy Pel < e and
+Pe2 < E-
+4. Average mutual information rates
+The two-way discrete memoryless channel with finite alphabets has been
+defined by a set of transition probabilities P{yl, Y2Ix1, x2}. Here xi and x2 are the
+input letters at terminals 1 and 2 and Yi and Y2 are the output letters. Each of
+these ranges over its corresponding finite alphabet.
+If a set of probabilities P{xl} is assigned (arbitrarily) to the different letters
+of the input alphabet for xl and another set of probabilities P {x2} to the alphabet
+for x2 (these two taken statistically independent) then there will be definite cor-
+responding probabilities for Yi and Y2 and, in fact, for the set of four random
+variables X1, X2, Yi, Y2, namely,
+P {xI, x2, Yl, Y2} = P {xl}P{x2}P{YI, Y2lX1, x2}
+PJYlY
+= L P{xl, x2, Yi, Y2'f
+Z1,X2,1I2
+and so forth.
+Thinking first intuitively, and in analogue to the one-way channel, we might
+think of the rate of transmission from xi to the terminal 2 as given by H(x1) -
+H(xllx2, Y2), that is, the uncertainty or entropy of xi less its entropy conditional
+on what is available at terminal 2, namely, Y2 and x2. Thus, we might write
+TWO-WAY COMMUNICATION CHANNELS
+(6)
+R= H(XI) - H(xIlx2, y2)
+= H [log P{Xl, X2, Y2}J
+E[log P{xI!X2,Y}2]
+(7)
+R21 = H(x2) - H(x21xI, y1)
+= E [log
+P{XI, X2,Y}
+]
+EH
+log PIX21r,Yl}].
+I
+P {X2}
+I
+These are the average mutual informations with the assigned input probabilities
+between the input at one terminal and the input-output pair at the other ter-
+minal. We might expect, then, that by suitable coding it should be possible to
+send in the two directions simultaneously with arbitrarily small error probabilities
+and at rates arbitrarily close to R12 and R21. The codes would be based on these
+probabilities P{xi} and P{x2} in generalization of the one-way channel. We will
+show that in fact it is possible to find codes based on the probabilities P{xi} and
+P{x2} which do this.
+However the capacity region may be larger than the set of rates available by
+this means. Roughly speaking, the difference comes about because of the prob-
+ability of having xi and X2 dependent random variables. In this case the appropri-
+ate mutual informations are given by H(x2lxl) - H(x2lxl, yi) and H(xIlx2) -
+H(xiIx2, Y2). The above expressions for R21 and R12 of course reduce to these
+when xi and x2 are independent.
+5. The distribution of information
+The method we follow is based on random codes using techniques similar to
+those used in [1] for the one-way channel. Consider a sequence of n uses of the
+channel or, mathematically, the product probability space. The inputs are
+Xl = (x,,, x12, ... , xln) and X2 = (x21, x22,
+-
+*, x-2,) and the outputs Y, =
+(Yll, Y12,
+* * *, Yln) and Y2 = (Y21, Y22,
+, y2n), that is, sequence3 of n choices
+from the corresponding alphabets.
+The conditional probabilities for these blocks are given by
+(8)
+P{Y1, Y2[X1, X2} = TI P{Ylk, Y2kIXlk, X2k}.
+k
+This uses the assumption that the channel is memoryless, or successive operations
+independent. We also associate a probability measure with input blocks Xi
+and X2 given by the product measure of that taken for xi, x2. Thus
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+P{X1} = II P{Xlk}
+k
+(9)
+P{X2} =
+P{X2k4
+k
+It then follows that other probabilities are also the products of those for the
+individual letters. Thus, for example,
+P{X1, X2, Y1, Y2} = H P{Xlk, X2k, Ylk, Y2k}
+k
+(10)
+P{X2IX1, Y1} = H P{X2kIXlk, Ylk}.
+k
+The (unaveraged) mutual information between, say, X1 and the pair X2, Y2
+may be written as a sum, as follows:
+P. {X1,JX2,7YJ}
+I
+P {Xlk, X2k,Y21,
+I(X1; X2, Y2) = log
+X loP{X2,g
+Y2
+P{Xkl} HJ P{X2k, Y2k}
+k
+k
+(11)
+= L log P Xlk, X2k, Y2k}
+k
+P {Xlk} P{X2k, Y2k}
+I(X1; X2, Y2) = E I(Xlk; X2k, Y2k)-
+k
+Thus, the mutual information is, as usual in such independent situations, the
+sum of the individual mutual informations. Also, as usual, we may think of the
+mutual information as a random variable. Here I(XI; X2, Y2) takes on different
+values with probabilities given by P{X1, X2, Y2}. The distribution function for
+I(Xi; X2, Y2) will be denoted by P12(Z) and similarly for I(X2; Xi, Y1)
+(12)
+P12(Z) = P{I(X1; X2, Y2) < Z}
+P21(Z) = P{I(X2; XI, Y1) _ Z'-.
+Since each of the random variables I(Xi; X2, Y2) and I(X2; X1, Y1) is the sum
+of n independent random variables, each with the same distribution, we have
+the familiar statistical sit4ation to which one may apply various central limit
+theorems and laws of large numbers. The mean of the distributions P12 and P21
+will be nR12 and nR21 respectively and the variances n times the corresponding
+variances for one letter. As n -* oo, p12[n(RI2 - e)] -O0 for any fixed e > 0, and
+similarly for P21. In fact, this approach is exponential in n; p12[n(R12 - E)] _
+exp [-A(e)n].
+6. Random codes for the two-way channel
+After these preliminaries we now wish to prove the existence of codes with
+certain error probabilities bounded by expressions involving the distribution
+functions P12 and p2j.
+We will construct an ensemble of codes or, more precisely, of code pairs, one
+TWO-WAY COMMUNICATION CHANNELS
+code for the 1 - 2 direction and another for the 2 - 1 direction. Bounds will
+be established on the error probabilities Pej and Pe2 averaged over the ensemble,
+and from these will be shown the existence of particular codes in the ensemble
+with related bounds on their error probabilities.
+The random ensemble of code pairs for such a two-way channel with M1 words
+in the 1 - 2 code and M2 words in the 2 - 1 code is constructed as follows.
+The M1 integers 1, 2,
+*
+*, M1 (the messages of the first code) are mapped in
+all possible ways into the set of input words X1 of length n. Similarly the integers
+1, 2,
+*
+*, AM2 (the messages of the second code) are mapped in all possible ways
+into the set of input words X2 of length n.
+If there were a, possible input letters at terminal 1 and a2 input letters at ter-
+minal 2, there will be al and a2 input words of length n and a1M' mappings in
+the first code and a2Ma in the second code. We consider all pairs of these codes, a
+total of a4M`aM2' pairs.
+Each code pair is given a weighting, or probability, equal to the probability
+of occurrence of that pair if the two mappings were done independently and an
+integer is mapped into a word with the assigned probability of that word. Thus,
+a code pair is given a weighting equal to the product of the probabilities as-
+sociated with all the input words that the integers are mapped into for both
+codes. This set of code pairs with these associated probabilities we call the
+random ensemble of code pairs based on the assigned probabilities P{X1} and
+P{x2}.
+Any particular code pair of the ensemble could be used to transmit informa-
+tion, if we agreed upon a method of decoding. The method of decoding will here
+consist of two functions +(X1, Y1) and 4,(X2, Y2), a special case of that defined
+above. Here X1 varies over the input words of length n at terminal 1, and Y,
+over the possible received blocks of length n. The function 4 takes values from
+1 to M2 and represents the decoded message for a received Y1 if X1 was trans-
+mitted. (Of course, XI is used in the decoding procedure in general since it may
+influence Y1 and is, therefore, pertinent information for best decoding.)
+Similarly, 4,(X2, Y2) takes values from 1 to M1 and is a way of deciding on
+the transmitted message ml on the basis of information available at terminal 2.
+It should be noted here that the decoding functions, 0 and
+,6, need not be the
+same for all code pairs in the ensemble.
+We also point out that the encoding functions for our random ensemble are
+more specialized than the general case described above. The sequence of input
+letters X1 for a given message m1 do not depend on the received letters at ter-
+minal 1. In any particular code of the ensemble there is a strict mapping from
+messages to input sequences.
+Given an ensemble of code pairs as described above and decoding functions,
+one could compute for each particular code pair two error probabilities for the
+two codes: Pej, the probability of error in decoding the first code, and Pe2 that
+for the second. Here we are assuming that the different messages in the first
+code occur with equal probability 1/Ml, and similarly for the second.
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+By the average error probabilities for the ensemble of code pairs wve mean the
+averages E(P.1) and E(Pe2) where each probability of error for a particular code
+is weighted according to the weighting factor or probability associated with the
+code pair. We wish to describe a particular method of decoding, that is, a choice
+of 0 and iP, and then place upper bounds on these average error probabilities
+for the ensemble.
+7. Error probability for the ensemble of codes
+THEOREM 1.
+Suppose probability assignments P{X1} and P{X2} in a discrete
+memoryless two-way channel produce information distribution functions p12(Z) and
+P21(Z). Let M1 = exp (Rin) and M2 = exp (R2n) be arbitrary integers and 01 and 02
+be arbitrary positive numbers. Then the random ensemble of code pairs with M1
+and M2 messages has (uwth appropriate decoding functions) average error probabil-
+ities bounded as follows:
+E(P6j) < p12[n(Ri + 01)] + e-nal
+E(Pe2) _ P21[n(R2 + 02)] + e
+There will exist in the ensemble at least one code pair whose individual error prob-
+abilities are bounded by two times these expressions, that is, satisfying
+(14)
+Pe.
+5 2p12[n(Rl + 01)] + 2e-n'
+Pe2 . 2p21[n(R2 + 02)] + 2e-n02.
+This theorem is a generalization of theorem 1 in [1] which gives a similar
+bound on Pe for a one-way channel. The proof for the two-way channel is a
+generalization of that proof.
+The statistical situation here is quite complex. There are several statistical
+events involved: the choice of messages ml and M2, the choice of code pair in
+the ensemble of code pairs, and finally the statistics of the channel itself which
+produces the output words Y, and Y2 according to P{Yi, Y2IXi, X2}. The en-
+semble error probabilities we are calculating are averages over all these statistical
+events.
+We first define decoding systems for the various codes in the ensemble. For a
+given 02, define for each pair XI, Y, a corresponding set of words in the X2 space
+denoted by S(X,, Y,) as follows:
+21lgP{fX, X2, Y2}
+R
+(15)
+S(Xi, Y0) = {X2 logP
+>n(R2 +
+2)}.
+That is, S(X,, Y1) is the set of X2 words whose mutual information with the
+particular pair (XI, Y,) exceeds a certain level, n(R2 + 02). In a similar way, we
+define a set S'(X2, Y2) of Xi words for each X2, Y2 pair as follows:
+(16)
+S'(X2, Y2) = 1X11 log P{X},
+y } > n(Rl + 01)1
+TWO-WAY COMMUNICATION CHANNELS
+We will use these sets S and S' to define the decoding procedure and to aid
+in overbounding the error probabilities. The decoding process will be as follows.
+In any particular code pair in the random ensemble, suppose message ml is
+sent and this is mapped into input word X1. Suppose that Y1 is received at ter-
+minal 1 in the corresponding block of n letters. Consider the subset of X2 words,
+S(X1, Y,). Several situations may occur. (1) There is no message m2 mapped into
+the subset S(X1, Y1) for the code pair in question. In this case, Xi, Y, is decoded
+(conventionally) as message number one.
+(2) There is exactly one message
+mapped into the subset. In this case, we decode as this particular message.
+(3) There are more than one such messages. In this case, we decode as the
+smallest numbered such message.
+The error probabilities that we are estimating would normally be thought of
+as calculated in the following manner. For each code pair one would calculate
+the error probabilities for all messages ml and M2, and from their averages get
+the error probabilities for that code pair. Then these error probabilities are
+averaged over the ensemble of code pairs, using the appropriate weights or
+probabilities. We may, however, interchange this order of averaging. We may
+consider the cases where a particular ml and
+i2 are the messages and these are
+mapped into particular X1 and X2, and the received words are Ti and F2.
+There is still, in the statistical picture, the range of possible code pairs, that
+is, mappings of the other M1- 1 messages for one code and M2- 1 for the
+other. We wish to show that, averaged over this subset of codes, the probabil-
+ities of any of these messages being mapped into subsets S'(X2, Y2) and S(X1, Fl)
+respectively do not exceed exp (-nOl) and exp (-nO2).
+Note first that if X1 belongs to the set S'(X2, Y2) then by the definition of
+this set
+log IX
+--2
+> n(R1+ 01)
+(17)
+log
+2}
+P{X1IX2, F2} > P{Xi}en(Ri+00).
+Now sum each side over the set of X1 belonging to S'(X2, F2) to obtain
+(18)
+1 _
+E
+P{X11X2, V2} > en(RI+0)
+E
+P{X1}.
+XI ES'(X%, Y2)
+XlES'(Xi, '2)
+The left inequality here holds since a sum of disjoint probabilities cannot exceed
+one. The sum on the right we may denote by P{S'(X2, F2)}. Combining the
+first and last members of this relation
+(19)
+P{S'(X2, F2)} < en(RI+O1).
+That is, the total probability associated with any set S'(X2, F2) is bounded by
+an expression involving n, R1 and O1 but independent of the particular X2, F2.
+Now recall that the messages were mapped independently into the input
+words using the probabilities P{X1} and P{X2}. The probability of a particular
+message being mapped into S'(X2, V2) in the ensemble of code pairs is just
+P{S'(X2, Y2)}. The probability of being in the complementary set
+is
+1 -
+FO1URTI BERKELEY SYMPOSIUM: SHANNON
+I'{S'(X2, Y2)'
+. 'The probability that all messages other thanT ml wvill b)e ilalplped
+into this complementary set is
+(20)
+[1 - P{S'(X2, Y2)}]AJ11
+_ 1 - (M1-l)I- S'(X2, 12))
+> 1- M1PYS'(X2, Y2)}
+_
+1 - Mle-4l(RL+6l)
+=
+1 - e-n9.
+Ilere we used the inequality (t - )P _ 1 - px, the relationi (19) anld finially
+the fact that M1 = exp (nRl).
+We have established, then, that in the subset of cases being considered (ml
+anid M2 mapped into X1 and X2 and received as F, and F2), with probability
+at least 1 - exp (-nOl), there will be no other messages mapped into S'(X2, Y2).
+A similar calculation shows that with probability exceeding
+I - exp (-0n2)
+there will be no other messages mapped into S(X1, Y1). These bounds, as lioted,
+are independent of the particular X1, Y1 and X2, Y2.
+WVe now bound the probability of the actual message m1 beinig withini the
+subset S'(X2, Y2). Recall that from the definition of P12(Z)
+(21)
+P12[n(Ri + Of)] = P {log
+P{Xl, X2, Y2}
+< n(R + 0,)
+P{x1}P{X2, Y2} =
+In the ensemble of code pairs a message m, say, is mapped into words X1 with
+probabilities just equal to P{X1}. Consequently, the probability in the full en-
+semble of code pairs, message choices and channel statistics, that the actual
+message is mapped into S'(X2, Y2) is precisely 1 -P12[n(Ri + 01)].
+The probability that the actual message is mapped outside S'(X2, F2) is there-
+fore given by p12[n(Ri + 01)] and the probability that there are any other mes-
+sages mapped inito S'(X2, F2) is bounded as shown before by exp (-nOl). The
+probability that either of these events is true is then certainly bounded by
+p12[n(Ri + O1)] + exp (-nO1); but this is then a bound oni E(Pl), sinlce if ineither
+event occurs the decoding process will correctly decode.
+Of course, the same argument with interchanged indices gives the corresponld-
+ing bound for E(Pe2). This proves the first part of the theorem.
+With regard to the last statement of the theorem, we will first prove a simple
+combinatorial lemma which is useful not only here but in other situations in
+coding theory.
+LEMMA.
+Suppose we have a set of objects B1, B2,
+, B,, with associated prob-
+abilities P1, P2,
+* *
+, P,, and a nunmber of numerically valued properties (functions)
+of the objects fl, f2,
+* * *, fd. These are all nonnegative, fi(Bj) _ 0, and we know the
+averages Ai of these properties over the objects,
+(22)
+E Pjfi(Bj) = Ai,
+i = 1, 2,
+,d.
+T'hen there exists an object Bp for which
+(23)
+f1(B,) _ dAi,
+i = 1, 2,
+,d.
+TWO-WAY COMMUNICATION CHANNELS
+More generally, given any set of Ki > 0 satisfying
+_Y=5
+(1/Ki)
+-
+1, then there
+exists an object Bp with
+(24)
+fi(Bp) _ KiAi,
+i = 1, 2,
+*
+, d.
+PROOF.
+The second part implies the first by taking Ki = d. To prove the
+second part let Qi be the total probability of objects B for which fi(B) > KiA i.
+Now the average Ai > QiKiAi since QiKiAi is contributed by the Bi with
+f(B) > KiAi and all the remaining B have fi values _ 0. Hence
+(25)
+Qi <
+i = 1, 2,
+d.
+The total probability Q of objects violating any of the coniditions is less than or
+equal to the sum of the individual Qi, so that
+dlt
+(26)
+Q <
+<
+Hence there is at least one object not violating any of the conditions, conclud-
+ing the proof.
+For example, suppose we know that a room is occupied by a number of people
+whose average age is 40 and average height 5 feet. Here d = 2, and using the
+simpler form of the theorem we can assert that there is someone in the room
+not over 80 years old and not over ten feet tall, even though the room might
+contain aged midgets and youthful basketball players. Again, using K1 = 8/3,
+K2 = 8/5, we can assert the existence of an individual not over 8 feet tall and
+not over 106 2/3 years old.
+Returning to the proof of theorem 1, we can now establish the last sentence.
+We have a set of objects, the code pairs, and two properties of each object, its
+error probability Pe1 for the code from 1 to 2 and its error probability Pe2 for
+the code from 2 to 1. These are nonnegative and their averages are bounded as
+in the first part of theorem 1. It follows from the combinatorial result that there
+exists at least one particular code pair for which simultaneously
+(27)
+Pel _ 2{p12[n(Ri + 01)1 + e-8}
+Pe2 < 2{p21[n(R2 + 02)] + e -'}.
+This concludes the proof of theorem 1.
+It is easily seen that this theorem proves the possibility of code pairs arbitrar-
+ily close in rates R1 and R2 to the mean mutual information per letter R12 and R21
+for any assigned P{xl} and P{x2} and with arbitrarily small probability of
+error. In fact, let R12 -R
+= R21-R2 = e > 0 and in the theorem take 0, =
+02 = e/2. Since p12[n(R12- e/2)] -*0 and, in fact, exponentially fast with n (the
+distribution function en/2 to the left of the mean, of a sum of n random variables)
+the bound on Pel approaches zero with increasing n exponentially fast. In a sim-
+ilar way, so does the bound on Pe2. By choosing, then, a sequence of the Ml
+and M2 for increasing n which approach the desired rates R1 and R2 from below,
+we obtain the desired result, which may be stated as follows.
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+THEOREM 2.
+Suppose in a two-way memoryless channel K an assignment of
+probabilities to the input letters P{x1} and P{x2} gives average mutual informations
+in the two directions
+(28)
+Ri2 = E (log PfXllX2, Y21)
+R21 = E (log PfX21Xb Yi})
+Then given e > 0 there exists a code pair for all sufficiently large block length n
+with signalling rates in the two directions greater than R12 - e and R21 - e respec-
+tively, andwith error probabilities Pei _ exp [-A (e)n], Pe2 < exp [-A (e)n] where
+A (e) is positive and independent of n.
+By trying different assignments of letter probabilities and using this result,
+one obtains various points in the capacity region. Of course, to obtain the best
+rates available from this theorem we should seek to maximize these rates. This
+is most naturally done a la Lagrange by maximizing R12 + XR21 for various
+positive X.
+8. The convex hull G1 as an inner bound of the capacity region
+In addition to the rates obtained this way we may construct codes which are
+mixtures of codes obtained by this process. Suppose one assignment P{xl},
+P{x2} gives mean mutual informations R12, R21 and a second assignment P'{xl},
+P'{x2} gives R12, R21. Then we may find a code of (sufficiently large) length n
+for the first assignment with error probabilities < 5 and rate discrepancy less
+than or equal to e and a second code of length n' based on P'{x1}, P'{x2} with
+the same 5 and e. We now consider the code of length n + n' with MjMl words
+in the forward direction, and M2M2 in the reverse, consisting of all words of the
+first code followed by all words for the same direction in the second code.
+This has signalling rates R1 and R2 equal to the weighted average of rates for
+the original codes [R1 = nR1/(n + n') + n'R1/(n + n'); R2 = nR2/(n + n') +
+n'R2/(n + n')] and consequently its rates are within e of the weighted averages,
+IR, - nR12/(n + n') - n'R12/(n + n') < E and similarly. Furthermore, its error
+probability is bounded by 25, since the probability of either of two events (an
+error in either of the two parts of the code) is bounded by the sum of the original
+probabilities. We can construct such a mixed code for any sufficiently large n
+and n'. Hence by taking these large enough we can approach any weighted
+average of the given rates and simultaneously approach zero error probability
+exponentially fast. It follows that we can annex to the set of points found by the
+assignment of letter probabilities all points in the convex hull of this
+-set. This
+actually does add new points in some cases as our example, of a channel (table I)
+with incompatible transmission in the two directions, shows. By mixing the
+codes for assignments which give the points (0, 1) and (1, 0) in equal proportions,
+TWO-WAY COMMUNICATION CHANNELS
+we obtain the point (1/2, 1/2). There is no single letter assignimelnt givin1g this
+pair of rates. We may summarize as follows.
+THEOREM 3.
+Let GI be the convex h?ll of pointts (RI2, R21)
+(29)
+R
+E (log P{XIIX2,Y2})
+R
+= E (og PX21X1, Yl})
+when P{x,} and P{X2} are given various probability assignments. All points of GI
+are in the capacity region. For any point (R1, R2) in GI and any E > 0 we can find
+codes whose signalling rates are within E of R1 and R2 and whose error probabilities
+in both directions are less than exp [-A (E)n] for all sufficiently large n, and som11e
+positive A(E).
+It may be noted that the conivex hull GI in this theorem is a closed set (con-
+tains all its limit points). This follows from the continlity of R12 and R21 as
+functions of the probability assignments P -xi" and P {X2}. Furthermore if GI
+contains a point (RI, R2) it conltainis the projections (RI, 0) and (0, R2). This will
+nlow be proved.
+It will clearly follow if we canl show that the projection of any point obtained
+by a letter probability assignment is also in GI. To show this, suppose P{xil
+and P{x2} give the point (R12, R21). Now R12 is the average of the various par-
+ticular R12 when x2 is given various particular values. Thus
+(30)
+R12 = E P{x2} E P{xI, y21x2' log P{X1XX2, Y2,-
+Z2
+Zl4
+Y
+P{xil}
+There must exist, then, a particular x2, say x2, for which the inner sum is at
+least as great as the average, that is, for which
+(31)
+E P{xI, Y242} lo,g
+P{x0
+x2, y2}
+X1,Y/2
+P{Xi}
+_ E P{x2} E P{xi, y21x2' log P{XlJX2, Y2}
+x2
+X1,Y2
+Pf1}
+The assignment l' {xiIx*
+for letter probabilities xi and the assignment P{x2} = 1
+if x2 = xA and 0 otherwise, now gives a point on the horizontal axis below or to
+the right of the projection of the given point R12, R21. Similarly, we can find an xl
+such that the assignment P{x21x4} for x2 and P{x*} = 1 gives a point on the
+vertical axis equal to or above the projection of R12, R21. Note also that the as-
+signment P{x} = 1, P {x} = 1 gives the point (0, 0). By suitable mixing of
+codes obtained for these four assignments one can approach any point of the
+quadrilateral defined by the corresponding pairs of rates, and in particular any
+point in the rectangle subtended by R12, R21. It follows from these remarks that
+the convex hull G, is a region of the form shown typically in figure 7 bounded
+by a horizontal segment, a convex curve, a vertical segment, and two segments
+of the axes. Of course, any of these parts may be of zero length.
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+The convex hull GI is, as we have seen, inside the capacity region and we will
+refer to it as the inner bound.
+R2
+R
+FIGURE 7
+It is of some interest to attempt a sharper evaluation of the rate of improve-
+ment of error probability with increasing code length n. This is done in the
+appendix and leads to a generalization of theorem 2 in [1]. The bound we arrive
+at is based on logarithms of moment generating functions.
+9. An outer bound on the capacity region
+While in some cases the convex hull GI, the inner bound defined above, is
+actually the capacity region this is not always the case. By an involved calcu-
+lation R. G. Gallager has shown that in the binary multiplying channel the
+inner bound is strictly interior to the capacity region. However a partial con-
+verse to theorem 3 and an outer bound on the capacity region can be given.
+Suppose we have a code starting at time zero with messages ml and m2 at the
+two terminals. After n operations of the channel, let Y1 and Y2 be the received
+blocks at the two terminals (sequences of n letters), and let xl, x2, Yl, Y2 be the
+next transmitted and received letters. Consider the change in "equivocation" of
+message at the two terminals due to the next received letter. At terminal 2, for
+example, this change is (making some obvious reductions)
+(32)
+A = H(mlIm2, Y2) - H(m1lm2, Y2, Y2)
+= E [log
+P{m2, Y2} 1
+E[log
+P{m2, Y2, Y2}
+]
+P{m1,
+Y2} I
+[
+P{mi,mi2, Y2, Y2}
+= E [log P{Y21m1, M2, Y2}
+P{Y2X2}
+1.
+P{Y2jX2}
+P{y21Y2, m2}J
+Now H(y21ml, M2, Y2) > H(y2IM1, M2, Y1, Y2) = H(y2Ixl, x2) since adding a con-
+ditioning variable cannot increase an entropy and since P{y2jM1, M2, Y1, Y2} =
+P{y21x1, x2}.
+TWO-WAY COMMUNICATION CHANNELS
+Also H(y2lx2) _ H(y21 Y2, M2) since x2 is a function of Y2 and n12 by the coding
+function. Therefore
+(33)
+A _ E (log P{Y2Ixl X2}) + H(y21 Y2, M2) -H(Y2IX2)
+(34)
+A . E (log P{y2IxI, X2}
+= E log PTY2, xI, x2}P{x2}
+P{y2IX2}
+-
+P{x2, y2}P{xl, X2}
+E(log P{XJlx2 Y2})
+This would actually lead to a converse of theorem 1 if we had independence of
+the random variables xi and x2. This last expression would then reduce to
+E[log (P{x11x2, Y2}/P{xl})]. Unfortunately in a general code they are not neces-
+sarily independent. In fact, the next xi and x2 may be functionally related to
+received X and Y and hence dependent.
+We may, however, at least obtain an outer bound on the capacity surface.
+Namely, the above inequality together with the similar inequality for the second
+terminal imply that the vector change in equivocation due to receiving another
+letter must be a vector with components bounded by
+(35)
+E (log P{XlXY2}), E (log P{x2xl1Yl})
+for some P{x1, x2}. Thus the vector change is included in the convex hull of all
+such vectors Go (when P{xi, x2} is varied).
+In a code of length n, the total change in equivocation from beginning to end
+of the block cannot exceed the sum of n vectors from this convex hull. Thus this
+sum will lie in the convex hull nGo, that is, Go expanded by a factor n.
+Suppose now our given code has signalling rates R1 = (1/n) log M1 and R2 =
+(1/n) log M2. Then the initial equivocations of message are nRi and nR2. Sup-
+pose the point (nRi, nR2) is outside the convex hull nGo with nearest distance
+ne1, figure 8. Construct a line L passing through the nearest point of nGo and
+nRI X nR 2
+nG0
+L
+FIGURE 8
+perpendicular to the nearest approach segment with nGo on one side (using the
+fact that nGo is a convex region). It is clear that for any point (nR*, nR*2) on the
+nGo side of L and particularly for any point of nGo, that we have InR - nRI +
+InR2 - nR*2* > ne (since the shortest distance is nE) and furthermore at least
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+one of the nRi - nRl and nR2- nR2* is at least ne/V/2. (In a right triangle at
+least one leg is as great as the hypotenuse divided by V2.)
+Thus after n uses of the channel, if the signalling rate pair R1, R2 is distance e
+outside the convex hull Go, at least one of the two final equivocations is at least
+e/AV2, where all equivocations are on a per second basis. Thus for signalling
+rates e outside of Go the equivocations per second are bounded from below inde-
+pendent of the code length n. This implies that the error probability is also
+bounded from below, that is, at least one of the two codes will have error prob-
+ability _ f(e) > 0 independent of n, as shown in [2], appendix.
+To summarize, the capacity region G is included in the convex hull Go of
+all points R12, R21
+(36)
+~
+~
+~ ~~12= A' [log P{'XlJX2, Y/21
+(36)
+1[1
+\XX
+?J2 I
+Rt21 = E [log PI(X21X ]1
+when arbitrary joint probability assignments P{xI, x2} are made.
+Thus the inner bound GU and the outer bound Go are both found by the same
+process, assigning input probabilities, calculating the resulting average mutual
+informations R12 and R21 and then taking the convex hull. The only difference
+is that for the outer bound a general joint assignment P{xI, x2} is made, while
+for the inner bound the assignments are restricted to independent P{xI} P{X2}.
+We now develop some properties of the outer bound.
+10. The concavity of R12 and R21 as functions of P(xl,x2)
+THEOREM 4.
+Given the transition probabilities P{y1, Y21XI, X2} for a channel K,
+the rates
+R12 = E [log PJY2XX2]
+=E [log PJ{y1Jx1 X2
+are concave downwardfunctions of the assigned input probabilities P{xi, x2}. For ex-
+ample, R12(Pl{x1, x2}/2 + P2{xl, x2}/2) _ R]2(Pl{xl, x2})/2 + R12(P2{xl, x2})/2.
+This concave property is a generalization of that given in [3] for a one-way
+channel. To prove the theorem it suffices, by known results in convex functions,
+to show that
+(38)
+R12 (2 PI{xl, x2} + 2P2{x1, X21)
+2 R12(Pl{xl, X2}) +2 R12(P2{xl, X2}).
+TWO-WAY COMMUNICATION CHANNELS
+But R12(Pl{xl, x2}) and R12(P2{xl, x2}) may be written
+P2{Y21Ix, X2}'
+(39)
+R12(PI{xl, x2}) = : P1{x2} E PI{xI, Y2jX2} log
+xi
+X1,Y2PlY2 }
+P2{Y21Iyi X2}j
+(40)
+R12(P2{xl, x2}) = E P2{x2} E P2{xI, y21x2} log
+p{y10x9}
+X2
+X1,1J2
+2Y X1
+Here the subscripts 1 on probabilities correspond to those produced with the
+probability assignment Pi {xl, x2} to the inputs, and similarly for the subscript 2.
+The inner sum Exv Pl{xl, y21x2} log (P1{y2jx1, x2}/Pi{y2lx2}) maybe recognized
+as the rate for the channel from xi to Y2 conditional on x2 having a particular
+value and with the xi assigned probabilities corresponding to its conditional prob-
+ability according to Pl {x1, x2}.
+The
+corresponding
+inner sum
+with
+assigned
+probabilities
+P2{xl, x2}
+is
+EX1I>P2{xl, y21x2} log (P2{y21xI, x2}/P2{y21x2}), which may be viewed as the rate
+conditional on X2 for the same one-way channel but with the assignment P2 {xl|x2}
+for the input letters.
+Viewed this way, we may apply the concavity result of [2]. In particular, the
+weighted average of these rates with weight assignments Pl{X2}/(Pl{X2} +
+P2{x2}) and P2{x2}/(Pl{x2} + P2{X2}) is dominated by the rate for this one-
+way channel when the probability assignments are the weighted average of the
+two given assignments. This weighted average of the given assignment is
+(41)
+Pg{x1, X2} = P{x } + P {x2} P{XX2} +
+P{x
+}
+P2{XlX2}
+2 (Pl {x2}+
+P2{x2}) 2 (PP{,x2} + P2{xl, x2}).
+Thus the sum of two corresponding terms (the same x2) from (38) above is
+dominated by P1{x2} + P2{x2} multiplied by the rate for this one-way channel
+with these averaged probabilities. This latter rate, on substituting the averaged
+probabilities, is seen to be
+P3 {Y21XIX
+X2}'
+(42)
+E2 P3 {xI, y2Ix2} log P
+{y2jx2}
+where the subscript 3 corresponds to probabilities produced by using P8{xi, x2} =
+(P1{x1, x2} + P2{xl, x2}/2)/2. In other words, the sum of (39) and (40)
+(in-
+cluding the first summation on x2) is dominated by
+(43)
+E (Pl{x2} + P2{x2}) E P8{x1, y2jx2} log P{Y1
+Xl Xj
+X2
+Z1,INSP
+Y
+= 2 L P3{xl, Y2, X2} log Ps{Y21X X2}-
+XIThis
+P3dY2lX2t r
+This is the desired result for the theorem.
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+11. Applications of the concavity property; channels with symmetric
+structure
+Theorem 4 is useful in a number of ways in evaluating the outer bound for
+particular channels. In the first place, we note that R12 + XR21 as a function
+of P{x1, x2} and for positive X is also a concave downward function. Consequently
+any local maximum is the absolute maximum and numerical investigation in
+locating such maxima by the Lagrange multiplier method is thereby simplified.
+In addition, this concavity result is very powerful in helping locate the maxima
+when "symmetries" exist in a channel. Suppose, for example, that in a given
+channel the transition probability array P{yl, y21X1, x2} has the following prop-
+erty. There exists a relabelling of the input letters xi and of the output letters y,
+and Y2 which interchanges, say, the first two letters of the xi alphabet but leaves
+the set of probabilities P{yl, y21x1, x2} the same. Now if some particular assign-
+ment P{x1, x2} gives outer bound rates R12 and R21, then if we apply the same
+permutation to the x alphabet in P{xl, x2} we obtain a new probability assign-
+ment which, however, will give exactly the same outer bound rates R12 and R21.
+By our concavity property, if we average these two probability assignments we
+obtain a new probability assignment which will give at least as large values of R12
+and R21. In this averaged assignment for any particular x2 the first two letters in
+the xi alphabet are assigned equal probability. In other words, in such a case
+an assignment for maximizing R12 + XR21, say P{xi, x2} viewed as a matrix, will
+have its first two rows identical.
+If the channel had sufficiently symmetric structure that any pair of x1 letters
+might be interchanged by relabelling the xi alphabet and the Yi and Y2 alphabets
+while preserving P{y1, y21x1, x2}, then a maximizing assignment P{x1, x2} would
+exist in which all rows are identical. In this case the entries are functions of x2
+only: P {xI, x2} = P{X2}/a where a is the number of letters in the xi alphabet.
+Thus the maximum for a dependent assignment of P{x1, x2} is actually obtained
+with xi and x2 independent. In other words, in this case of a full set of symmetric
+interchanges on the xi alphabet, the inner and outer bounds are identical. This gives
+an important class of channels for which the capacity region can be determined
+with comparative ease.
+An example of this type is the channel with transition probabilities as follows.
+All inputs and outputs are binary, Yl = x2 (that is, there is a noiseless binary
+channel from terminal 2 to terminal 1). If x2 = 0, then Y2 = xl, while if x2 = 1,
+Y2 has probability .5 of being 0 and .5 of being 1. In other words, if x2 is 0 the
+binary channel in the forward direction is noiseless, while if x2 is 1 it is com-
+pletely noisy. We note here that if the labels on the xi alphabet are interchanged
+while we simultaneously interchange the y2 labels, the channel remains unaltered,
+all conditional probabilities being unaffected. Following the analysis above, then,
+the inner and outer bounds will be the same and give the capacity region.
+Furthermore, the surface will be attained with equal rows in the P-'Xl1, x2}
+matrix as shown in table Il.
+TWO-WAY COMMUNICATION CHANNELS
+TABLE II
+X2
+p/2
+q/2
+xI
+p/2
+q/2
+For a particular p this assignment gives the rates
+(44)
+R12 = p,
+R21
+-(p log p + q log q).
+These come from substituting in the formulas or by noting that in the 1 - 2
+direction the channel is acting like an erasure channel, while in the 2 - 1
+direction it is operating like a binary noiseless channel with unequal probabilities
+assigned to the letters. This gives the capacity region of figure 9.
+R21-
+=
+-p log p+ q logq)
+R211
+R12
+I BIT
+FIGURE 9
+There are many variants and applications of these interchange and symmetry
+tricks for aid in the evaluation of capacity surfaces. For example, if both the xi
+and x2 alphabets have a full set of interchanges leaving the transition prob-
+abilities the same, then the maximizing distribution must be identical both in
+rows and columns and hence all entries are the same, P{x1, x2} = 1/Cac where a
+and c are the number of letters in the xi and x2 alphabets. In this case, then, all
+attainable R12R21 points are dominated by the particular point obtained from
+this uniform probability assignment. In other words, the capacity region is a
+rectangle in the case of a full set of symmetric interchanges for both xi and X2.
+An example of this type is the channel of figure 2 defined by Yi = Y2 = xl GE x2
+where ® means mod 2 addition.
+12. Nature of the region attainable in the outer bound
+We now will use the concavity property to establish some results concerning
+the set r of points (R12, R21) that can be obtained by all possible assignments of
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+probabilities P{xl, x2} in a given channel K, and whose convex hull is Go. We
+will show that the set r is in fact already convex and therefore identical with Go
+and that it consists of all points in or on the boundary of a region of the type
+shown in figure 10 bounded by a horizontal segment L1, an outward convex seg-
+Li
+R21
+R12
+FIGURE 10
+ment L2, a vertical segment L3 and two segments of the coordinate axes. Thus Go
+has a structure similar to Gr.
+Suppose some P{xl, x2} gives a point (R12, R21). Here R12 is, as we have ob-
+served previously, an average of the different R12 which would be obtained by
+fixing x2 at different values, that is, using these with probability 1 and applying
+the conditional probabilities P{xIjx2} to the x1 letters. The weighting is accord-
+ing to factors P{X2}. It follows that some particular x2 will do as well at least as
+this weighted average. If this particular x2 is x2, the set of probabilities P{xix*2}
+gives at least as large a value of R12 and simultaneously makes R21 = 0. In
+Ct
+C'~~
+, R
+,~R21 R 21
+Q
+FIGURE 11
+figure 11 this means we can find a point in F below or to the right of the projec-
+tion of the given point as indicated (point Q).
+Now consider mixtures of these two probability assignments, that is, assign-
+ments of the form XP{x1x2} + (1 - X)P{xlx*}. Here X is to vary continuously
+from 0 to 1. Since R12 and R21 are continuous functions of the assigned prob-
+ability, this produces a continuous curve C running from the given point to the
+point Q. Furthermore, this curve lies entirely to the upper right of the connecting
+line segment. This is because of the concavity property for the R,2 and R21 ex-
+pressions. In a similar way, we construct a curve C', as indicated, of points be-
+TWO-WAY COMMUNICATION CHANNELS
+longing to r and lying on or above the horizontal straight line through the
+given point.
+Now take all points on the curves C and C' and consider mixing the corre-
+sponding probability assignments with the assignment P{xl, x*2} = 1 (all other
+pairs given zero probability). This last assignment gives the point (0, 0). The
+fraction of this (0, 0) assignment is gradually increased for 0 up to 1. As this is
+done the curve of resulting points changes continuously starting at the CC'
+curve and collapsing into the point (0, 0). The end points stay on the axes dur-
+ing this operation. Consequently by known topological results the curve sweeps
+through the entire area bounded by C, C' and the axes and in particular covers
+the rectangle subtended by the original point (R12, R21).
+C
+FIGURE 12
+We will show that the set of points r is a convex set. Suppose Qi and Q2,
+figure 12, are two points which can be obtained by assignments Pl{xl, x2} and
+P2{X1, X2}.
+By taking mixtures of varying proportions one obtains a continuous curve C
+connecting them, lying, by the concavity property, to the upper right of the
+connecting line segment. Since these are points of F all of their subtended rec-
+tangles are, as just shown, points of F. It follows that all points of the connecting
+line segment are points of r. Note that if Qi and Q2 are in the first and third
+quadrants relative to each other the result is trivially true, since then the con-
+necting line segment lies in the rectangle of one of the points.
+These results are sufficient to imply the statements at the beginning of this
+section, namely the set r is convex, identical with Go, and if we take the largest
+attainable R12 and for this R12 the largest R21, then points in the subtended
+rectangle are attainable. Similarly for the largest R21.
+It may be recalled here that the set of points attainable by independent as-
+signments, P {xi, x2} = P {xl}P {x2}, is not necessarily a convex set. This is shown
+by the example of table I.
+It follows also from the results of this section that the end points of the outer
+bound curve (where it reaches the coordinate axes) are the same as the end points
+of the inner bound curve. This is because, as we have seen, the largest R12 can be
+achieved using only one particular x2 with probability 1. When this is done,
+P{xI, x2} reduces to a product of independent probabilities.
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+13. An example where the inner and outer bounds differ
+The inner and outer bounds on the capacity surface that we have derived
+above are not always the same. This was shown by David Blackwell for the
+binary multiplying channel defined by yl =y2` = xx2. The inner and outer
+bounds for this channel have been computed numerically and are plotted in
+figure 13. It may be seen that they differ considerably, particularly in the middle
+1.0
+0.9
+Go
+0.8
+-
+0.7-
+vr0.6
+-
+o0
+HAGELBARGER
+0.4 -
+0.3 -
+INNER AND OUTER
+*O.2 -
+BOUNDS GI AND GO FOR
+cc
+I
+MULTIPLYING
+CHANNEL
+0.O
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+R I
+qH(P)
+FIGURE 13
+of the range. The calculation of the inner bound, in this case, amounts to finding
+the envelope of points
+R2= -P2[PI log pi + (1 - pi) log (1 - pi)]
+(45)
+tR21
+-pl[p2 log P2 + (I - P2) log (1 - P2)].
+These are the rates with independent probability assignments at the two ends:
+TWO-WAY COMMUNICATION CHANNELS
+probability pi for using letter 1 at terminal 1 and probability P2 for using letter 1
+at terminal 2. By evaluating these rates for different pi and P2 the envelope
+shown in the figure was obtained.
+For the outer bounds, the envelope of rates for a general dependent assign-
+ment of probabilities is required. However it is easily seen that any assignment
+in which P{O, O} is positive can be improved by transferring this probability to
+one of the other possible pairs. Hence we again have a two parameter family of
+points (since the sum of the three other probabilities must be unity). If the prob-
+abilities are denoted by pi = P{1, 0}, P2 = P{0, 1}, 1 - Pi - P2 = P{1, 1}, we
+find the rates are
+R12
+-(1-P) [1 P2
+log 1P
++ (1 1- p2lg
+-P2
+(46)
+P'
+i
+I-pi
+i)\p)
+R21P2[1-Pi
+log 1pi
++ (1-I Pi plog(l-
+Pi
+)].
+Here again a numerical evaluation for various values of pi and P2 led to the
+envelope shown in the figure.
+In connection with this channel, D. W. Hagelbarger has devised an interesting
+and simple code (not a block code however) which is error free and transmits at
+average rates R12 = R21 = .571, slightly less than our lower bound. His code
+operates as follows. A 0 or 1 is sent from each end with independent probabilities
+1/2, 1/2. If a 0 is received then the next digit transmitted is the complement of
+what was just sent. This procedure is followed at both ends. If a 1 is received,
+both ends progress to the next binary digit of the message. It may be seen that
+three-fourths of the time on the average the complement procedure is followed
+and one-fourth of the time a new digit is sent. Thus the average number of
+channel uses per message digit is (3/4)(2) + (1/4)(1) = 7/4. The average rate
+is 4/7 = .571 in both directions. Furthermore it is readily seen that the message
+digits can be calculated without error for each communication direction.
+By using message sources at each end with biased probabilities it is possible
+to improve the Hagelbarger scheme slightly. Thus, if l's occur as message digits
+with probability .63 and O's with probability .37, we obtain rates in both direc-
+tions
+(47)
+R12 = R2
+- 63 log .63 - .37 log .37
+"'12"'21 =1 - (.63)2
+We will, in a later section, develop a result which in principle gives for any
+channel the exact capacity region. However, the result involves a limiting process
+over words of increasing length and consequently is difficult to evaluate in most
+cases. In contrast, the upper and lower bounds involve only maximizing opera-
+tions relating to a single transmitted letter in each direction. Although sometimes
+involving considerable calculation, it is possible to actually evaluate them when
+the channel is not too complex.
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+14. Attainment of the outer bound with dependent sources
+With regard to the outer bound there is an interesting interpretation relating
+to a somewhat more general communication system. Suppose that the message
+sources at the two ends of our channel are not independent but statistically
+dependent. Thus, one might be sending weather information from Boston to
+New York and from New York to Boston. The weather at these cities is of
+course not statistically independent. If the dependence were of just the' right
+type for the channel or if the messages could be transformed so that this were
+the case, then it may be possible to attain transmission at the rates given by
+the outer bound. For example, in the multiplying channel just discussed, sup-
+pose that the messages at the two ends consist of streams of binary digits which
+occur with the dependent probabilities given by table III. Successive xi, X2 pairs
+TABLE III
+X2
+.275
+Xl
+.275
+.45
+are assumed independent. Then by merely sending these streams into the channel
+(without processing) the outer bound curve is achieved at its midpoint.
+It is not known whether this is possible in general. Does there always exist a
+suitable pair of dependent sources that can be coded to give rates R1, R2 within e
+of any point in the outer bound? This is at least often possible in the noiseless,
+memoryless case, that is, when y, and Y2 are strict functions of xi and x2 (no
+channel noise). The source pair defined by the assignment P {xi, x2} that produces
+the point in question is often suitable in such a case without coding as in the
+above example.
+The inner bound also has an interesting interpretation. If we artificially limit
+the codes to those where the transmitted sequence at each terminal depends
+only on the message and not on the received sequence at that terminal, then the
+inner bound is indeed the capacity region. This results since in this case we have
+at each stage of the transmission (that is, given the index of the letter being
+transmitted) independence between the two next transmitted letters. It follows
+that the total vector change in equivocation is bounded by the sum of n vectors,
+each corresponding to an independent probability assignment. Details of this
+proof are left to the reader. The independence required would also occur if the
+transmission and reception points at each end were at different places with no
+direct cross communication.
+TWO-WAY COMMUNICATION CHANNELS
+15. General solution for the capacity region in the two-way channel
+For a given memoryless two-way channel K we define a series of derived
+channels K1, K2,
+* * *
+. These will also be memoryless channels and the capacity
+region for K will be evaluated as a limit in terms of the inner bounds for the
+series Kn.
+The channel K1 is identical with K. The derived channel K2 is one whose
+input letters are actually strategies for working with K for a block of two input
+letters. Thus the input letters at terminal 1 for K2 consist of pairs [xl, f(xl, yi)1.
+Here xl is the first transmitted letter of the pair and ranges therefore over the a
+possible input letters of K. Now f(xl, yl) represents any function from the first
+input letter xl and output letter yl to the second input letter x2. Thus this func-
+tion may be thought of as a rule for choosing a second input letter at terminal 1
+depending on the first input letter and the observed first output letter. If xl can
+assume a values and yl can assume b values, then the (x}, yl) pair can assume ab
+values, and since the function f takes values from a possibilities there are aab
+possible functions. Hence there are a-aab possible pairs [xi, f(xl, yl)], or possible
+input letters to K2 at terminal 1.
+In a similar way, at terminal 2 consider pairs [x, g(xl, y2)]. Here g ranges over
+functions from the first received and transmitted letters at terminal 2 and takes
+values from the x2 alphabet. Thus these pairs have C Ccd values, where c and d
+are the sizes of the input and output alphabets at terminal 2.
+The pairs [xl, f(xl, yl)] and [x2, g(2, y2)] may be thought of as strategies for
+using the channel K in two letter sequences, the second letter to be dependent
+on the first letter sent and the first letter received. The technique here is very
+similar to that occurring in the theory of games. There one replaces a sequence
+of moves by a player (whose available information for making a choice is in-
+creasing through the series) by a single move in which he chooses a strategy.
+The strategy describes what the player will do at each stage in each possible
+contingency. Thus a game with many moves is reduced to a game with a single
+move chosen from a larger set.
+The output letters for K2 are, at terminal 1, pairs (yl yO and, at terminal 2,
+pairs (y,2 y2); that is, the pairs of received letters at the two terminals. The
+transition probabilities for K2 are the probabilities, if these strategies for intro-
+ducing a particular pair of letters were used in K, that the output pairs would
+occur. Thus
+(48) PK2{(Y2,Y), (yl, y2)j[Xl,j(X1, Yl)], [XI, g(Xl2 yl)
+=PK{Y1, 82|XI
+y2
+y2P{llf2|(Xl, Yl), g(XI, yl.)}
+In a similar way the channels K3, K4,
+* * * are defined. Thus K. may be thought
+of as a channel corresponding to n uses of K with successive input letters at a
+terminal functions of previous input and output letters at that terminal. There-
+fore the input letters at terminal 1 are n-tuples
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+(49)
+[41, f(4l, yl),
+, fn-1(xl, 4,
+I,
+yi, y2
+*
+a possible alphabet of
+(50)
+aaaba(ab)2 .a(ab)--
+al(ab)_ I]/(ab-I)
+possibilities. The output letters at terminal 1 consist of n-tuples
+(51)
+(1
+*
+,
+and range therefore over an alphabet of bn generalized letters. The transition
+probabilities are defined for K,, in terms of those for K by the generalization of
+equation (39)
+(52)
+PK.{yI, yl,
+I
+,
+I' I(x,fi,f2*
+,f,-1), (X2, g1, g2,
+g,9n-1)}
+n
+= U PK{y1lfi_, gi-l}.
+The channel K,, may be thought of, then, as a memoryless channel whose
+properties are identical with using channel K in blocks of n, allowing transmitted
+and received letters within a block to influence succeeding choices.
+For each of the channels Kn one could, in principle, calculate the lower bound
+on its capacity region. The lower bound for K,, is to be multiplied by a factor 1/n
+to compare with K, since K,, corresponds to n uses of K.
+THEOREM 5.
+Let Bn be the lower bound of the capacity region for the derived
+channel Kn reduced in scale by afactor 1/n. Then as n -* oo the regions Bn approach
+a limit B which includes all the particular regions and is the capacity region of K.
+PROOF.
+We first show the positive assertion that if (R12, R21) is any point in
+some Bn and e is any positive number, then we can construct block codes with
+error probabilities Pe <
+E and rates in the two directions at least R12- e and
+R21- e. This follows readily from previous results if the derived channel Kn
+and its associated inner bound Bn are properly understood. Kn is a memoryless
+channel, and by theorem 3 we can find codes for it transmitting arbitrarily
+close to the rates R12, R21 in Bn with arbitrarily small error probability. These
+codes are sequences of letters from the K,, alphabet. They correspond, then, to
+sequences of strategies for blocks of n for the original channel K.
+Thus these codes can be directly translated into codes for K n times as long,
+preserving all statistical properties, in particular the error probability. These
+codes, then, can be interpreted as codes signalling at rates 1/n as large for the K
+channel with the same error probability. In fact, from theorem 3, it follows that
+for any pair of rates strictly inside Bn we can find codes whose error probability
+decreases at least exponentially with the code length.
+We will now show that the regions Bn approach a limit B as n increases and
+that B includes all the individual Bn. By a limiting region we mean a set of
+points B such that for any point P of B, and e > 0, there exists no such that
+for n > nO there are points of B. within E of P, while for any P not in B there
+exist e and no such that for n > no no points of Bn are within E of P. In the first
+TWO-WAY COMMUNICATION CHANNELS
+place B,n is included in Bk. for any integer k. This is because the strategies for
+Bk. include as special cases strategies where the functional influence only in-
+volves subblocks of n. Hence all points obtainable by independent probability
+assignments with K,n are also obtainable with Kkn and the convex hull of the
+latter set must include the convex hull of the former set.
+It follows that the set Bkn approaches a limit B, the union of all the Bkn plus
+limit points of this set. Also B includes Bn, for any nl. For n and n, have a com-
+mon multiple, for example nni, and B includes Bnn, while B1.,, includes B,..
+Furthermore, any point obtainable with Kkn can be obtained with Kkn+a for
+0 _ a _ n, reduced in both coordinates by a factor of not more than k/(k + 1).
+This is because we may use the strategies for Kkn followed by a series of a of
+the first letters in the xi and X2 alphabets. (That is, fill out the assignments to
+the length kn + a with essentially dummy transmitted letters.) The only dif-
+ference then will be in the normalizing factor, 1/(block length). By making k
+sufficiently large, this discrepancy from a factor of 1, namely 1/(k + 1), can be
+made as small as desired. Thus for any E > 0 and any point P of B there is a
+point of Bm. within e of P for all sufficiently large ni.
+With regard to the converse part of the theorem, suppose we have a block
+code of length n with signalling rates (R1, R2) corresponding to a point outside B,
+closest distance to B equal to e. Then since B includes Bn, the closest distance
+to Bn. is at least e. We may think of this code as a block code of length 1 for the
+channel K,.. As such, the messages ml and m2 are mapped directly into "input
+letters" of Kn without functional dependence on the received letters. We have
+then since mi and m2 are independent the independence of probabilities associated
+with these input letters sufficient to make the inner bound and outer bound the
+same. Hence the code in question has error probability bounded away from zero
+by a quantity dependent on e but not on n.
+16. Two-way channels with memory
+The general discrete two-way channel with memory is defined by a set of
+conditional probabilities
+(53)
+P{Yln, YJ2njX11y X122 ;-.* X Xln; X21, X22 **
+X2n;
+Yll, Y12,
+* * *, Yln-1; Y2l, Y22,
+*
+,Y2n-1}.
+This is the probability of the nth output pair Yin. Y2n conditional on the preced-
+ing history from time t = 0, that is, the input and output sequences from the
+starting time in using the channel. In such a general case, the probabilities might
+change in completely arbitrary fashion as n increases. Without further limita-
+tion, it is too general to be either useful or interesting. What is needed is some
+condition of reasonable generality which, however, ensures a certain stability
+in behavior and allows, thereby, significant coding theorems. For example, one
+might require finite historical influence so that probabilities of letters depend
+only on a bounded past history. (Knowing the past d inputs and outputs, earlier
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+inputs and outputs do not influence the conditional probabilities.) We shall,
+however, use a condition which is, by and large, more general and also more
+realistic for actual applications.
+We will say that a two-way channel has the recoverable state property if it
+satisfies the following condition. There exists an integer d such that for any input
+and output sequences of length n, X1n, X2n, Yin, Y2U, there exist two functions
+f(X1., Yln), g(X2n, Y2u) whose values are sequences of input letters of the same
+length less than d and such that if these sequences f and g are now sent over the
+channel it is returned to its original state. Thus, conditional probabilities after
+this are the same as if the channel were started again at time zero.
+The recoverable state property is common in actual physical communication
+systems where there is often a "zero" input which, if applied for a sufficient
+period, allows historical influences to die out. Note also that the recoverable
+state property may hold even in channels with an infinite set of internal states,
+provided it is possible to return to a "ground" state in a bounded number of
+steps.
+The point of the recoverable state condition is that if we have a block code
+for such a channel, we may annex to the input words of this code the functions f
+and g at the two terminals and then repeat the use of the code. Thus, if such a
+code is of length n and has, for one use of the code, signalling rates R1 and R2
+and error probabilities Pei and Pe2, we may continuously signal at rates R' _
+nRW/(n + d) and R2 2 nR2/(n + d) with error probabilities P', < Pe, and
+Pe2 _ Pe2.
+For a recoverable state channel we may consider strategies for the first n
+letters just as we did in the memoryless case, and find the corresponding inner
+bound B. on the capacity region (with scale reduced by 1/n). We define the
+region B which might be called the limit supremum of the regions Bn. Namely,
+B consists of all points which belong to an infinite number of B,, together with
+limit points of this set.
+THEOREM 6.
+Let (R1, R2) be any point in the region B. Let nO be any integer
+and let el and E2 be any positive numbers. Then there exists a block code of length
+n > nO with signalling rates R', R2 satisfying JR1- R'l < ei, 1R2- R2J < el and
+error probabilities satisfying Pe, < E2, Pe2 < E2. Conversely, if (RI, R2) is not in B
+then there exist nO and a > 0 such that any block code of length exceeding nO has
+either Pa1 > a or Pe2 > a (or both).
+PROOF.
+To show the first part of the theorem choose an n1 > no and also
+large enough to make both dRI/(d + n) and dR2/(d + n) less than ei/2. Since
+the point (RI, R2) is in an infinite sequence of Bn, this is possible. Now construct a
+block code based on n1 uses of the channel as individual "letters," within El/2
+of the rate pair (R1, R2) and with error probabilities less than E2. To each of the
+"letters" of this code annex the functions which return the channel to its original
+state. We thus obtain codes with arbitrarily small error probability < E2 ap-
+proaching the rates R1, R2 and with arbitrarily large block length.
+To show the converse statement, suppose (R1, R2) is not in B. Then for some
+TWO-WAY COMMUNICATION CHANNELS
+no every B., where n > no, is outside a circle of some radius, say E2, centered
+on (R1, R2). Otherwise (R1, R2) would be in a limit point of the Bn. Suppose we
+have a code of length n1> no. Then its error probability is bounded away from
+zero since we again have a situation where the independence of "letters" obtains.
+The region B may be called the capacity region for such a recoverable state
+channel. It is readily shown that B has the same convexity properties as had
+the capacity region G for a memoryless channel. Of course, the actual evalua-
+tion of B in specific channels is even more impractical than in the memoryless
+case.
+17. Generalization to T-terminal channels
+Many of the tricks and techniques used above may be generalized to channels
+with three or more terminals. However, some definitely new phenomena appear
+in these more complex cases. In another paper we will discuss the case of a
+channel with two or more terminals having inputs only and one terminal with
+an output only, a case for which a complete and simple solution of the capacity
+region has been found.
+K
+K
+K
+K
+K
+APPENDIX.
+ERROR PROBABILITY BOUNDS IN TERMS OF
+MOMENT GENERATING FUNCTIONS
+Suppose we assign probabilities P {xi} to input letters at terminal 1 and P{x2}
+to input letters at terminal 2. (Notice that we are here working with letters, not
+with words as in theorem 2.) We can then calculate the log of the moment
+generating functions of the mutual information between input letters at ter-
+minal 1 and input letter-output letter pairs at terminal 2. (This is the log of
+the moment generating function of the distribution Pl2 when n = 1.) The expres-
+sions for this and the similar quantity in the other direction are
+(54)
+Li(s) = log E
+P{x1, X2, Y2} exp ( log P{xl x2,} )
+=log
+F_
+P{xi, X2, 2}+
+X1,X2,M2 P {XI} P {X2, Y2}8
+(55)
+/I2(8) =log E
+P{x1, x2, Yl} +.
+Z,2,y2 P {X2} P {XI,
+l}l8
+These functions .ul and A may be used to bound the tails on the distributions
+P12 and P21 obtained by adding n identically distributed samples together. In
+fact, Chernoff [4] has shown that the tail to the left of a mean may be bounded
+as follows:
+(56)
+p12[nlMi(81)] . exp {n[Mi(si) -s1u.(sD]},
+._ 0,
+P21[njf2(S2)]
+_ exp {n[fI2(82) -S2M2(S2)]},
+82 _ 0.
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+Thus, choosing an arbitrary negative si, this gives a bound on the distribution
+function at the value nju4(si). It can be shown that u'(s) is a monotone increasing
+function and that M'(0) is the mean of the distribution. The minimum Iu'(s) cor-
+responds to the minimum possible value of the random variable in question, in
+this case, the minimum I(xI; x2, y2). Thus, an si may be found to place 1ui(si)
+anywhere between Imin(xi; x2, Y2) and E(I). Of course, to the left of Imin the
+distribution is identically zero and to the right of E(I) the distribution ap-
+proaches one with increasing n.
+We wish to use these results to obtain more explicit bounds on Pei and Pe2,
+using theorem 2. Recalling that in that theorem 01 and 02 are arbitrary, we at-
+tempt to choose them so that the exponentials bounding the two terms are equal.
+This is a good choice of 01 and 02 to keep the total bound as small as possible. The
+first term is bounded by exp {n[lAi(si) - s1/u.L(si)]} where si is such that pI(si) =
+RI + 01, and the second term is equal to exp (- no,). Setting these equal, we have
+(57)
+li(s1) - sl,4(s1) = -01,
+R, + 0A
+Eliminating 01, we have
+(58)
+R, = Ai(s1) - (s, - 1),4(s1)
+and
+(59)
+E(Pei) _ 2 exp {n[jAi(si) -sIA'(sOD
+This
+is because the two terms
+are now equal and each dominated by
+exp {n[Mi(sl) - s1pu(s1)]}. Similarly, for
+(60)
+R2 = /.22(S2) - (S2 -1)2(s2)
+we have
+(61)
+E(Pe2) _ 2 exp {n[A2(S2) -822'(82)]}-
+These might be called parametric bounds in terms of the parameters si and S2.
+One must choose s1 and S2 such as to make the rates R, and R2 have the desired
+values. These si and S2 values, when substituted in the other formulas, give
+bounds on the error probabilities.
+The derivative of R, with respect to s1 is - (s, - 1)14'(si), a quantity always
+positive when si is negative except for the special case where A"(0) = 0. Thus,
+R, is a monotone increasing function of s1 as si goes from -co to 0, with RI going
+from -Ii
+- log P {Imi1} to E(I). The bracketed term in the exponent of
+E(Pei), namely
+i(si) -slwl(s), meanwhile varies from log P{Imin} up to zero.
+The rate corresponding to si = -oo, that is, -In. - log P{Imi}, may be posi-
+tive or negative. If negative (or zero) the entire range of rates is covered from
+zero up to E(I). However, if it is positive, there is a gap from rate R, = 0 up
+to this end point. This means that there is no way to solve the equation for rates
+in this interval to make the exponents of the two terms equal. The best course
+here to give a good bound is to choose 01 in such a way that n(R1 + 0A)
+is just smaller than IminX say Im. - e. Then p12[n(Ri + 0A)] = 0 and only the
+TWO-WAY COMMUNICATION CHANNELS
+second term, exp (Oin), is left in the bound. Thus exp [-n(Imin- R- E)] is a
+bound on Pe. This
+is true for any
+E > 0. Since we can construct such
+codes for any positive e and since there are only a finite number of codes, this
+implies that we can construct a code satisfying this inequality with e = 0. Thus,
+we may say that
+(62)
+E(Pei) _ exp [-n(Imin - R1)],
+R1 _ Imin.
+Of course, exactly similar statements hold for the second code working in the
+reverse direction. Combining and summarizing these results ve have the fol-
+lowing.
+THEOREM 7.
+In a two-way memoryless channel K with finite alphabets,
+let
+P {x1} and P {x2} be assignments of probabilities to the input alphabets, and suppose
+these lead to the logarithms of moment generating functions for mutual information
+lIL(si) and $2(S2),
+p1i(si) = log
+Z_
+P{XI, X2, Y2}8+
+(63)
+XI,Z2XJ2 P{1}1p{PX, Y2}8
+/M2(S2)
+= log
+P{X1, X2, yl}s+I
+( )X2,Y2 P {x2}SP{x1, Yl}'
+Let M1 = exp (Rin), 312 = exp (R2n) be integers, and let SI, S2 be the solutions
+(when they exist) of
+(64)
+RI =
+iu(s5i) - (si + 1)4l(si)
+R2 = (2(S2) - (S2 + 1)A2(s2).
+The solution si will exist if
+(65)
+-Iin(xi; x2, Y2) - log P{Imin(x1; x2, Y2)} < R1 _ E[I(xi; x2, y2)],
+and similarly for S2. If both s, and S2 exist, then there is a code pair for the channel K
+of length n with M1 and M2 messages and error probabilities satisfying
+(66)
+Pe, _ 4 exp {+n[si(sI) -s,y,L(si)]}
+Pe2 < 4 exp {+n[k2(s2) -S2/2(S2)]-
+If either (or both) of the R is so small that the corresponding s does not exist, a code
+pair exists with the corresponding error probability bounded by
+(67)
+Pci _ 2 exp {-n[I(xi; x2, Y2) - R1]}
+or
+(68)
+Pe2 _ 2 exp {-n[I(x2; x, y1) -R2].
+Thus, if si exists and not 82, then inequalities (66) would be used. If neither exists,
+(67) and (68) hold.
+REFERENCES
+[1] C. E. SHANNON, "Certain results in coding theory for noisy channels," Information anld
+Control, Vol. 1 (1957), pp. 6-25.
+FOURTH BERKELEY SYMPOSIUM: SHANNON
+[2]
+, "Channels with side information at the transmitter," IBM J. Res. Develop., Vol. 2
+(1958), pp. 289-293.
+[3]
+, "Ceometrische Deutung einiger Ergebnisse bei der Berechnung der Kanal-
+kapazitat," Nachrtech. Z., Vol. 10 (1957).
+[4] H. CHERNOFF, "A measure of asymptotic efficiency for tests of a hypothesis based on the
+sum of observations," Ann. Math. Statist., Vol. 23 (1952), pp. 493-507.

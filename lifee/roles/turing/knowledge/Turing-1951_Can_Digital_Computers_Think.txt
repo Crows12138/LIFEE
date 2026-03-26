@@ -1,0 +1,509 @@
+
+
+Can  Digital  Computers  Think?  (7957) 
+
+Alan  Turing 
+
+
+Introduction 
+
+Jack  Copeland 
+
+The  lecture  ‘Can  Digital  Computers  Think?’  was  broadcast  on  BBC  Radio  on  15 
+May  1951,  and  was  repeated  on  3  July  of  that  year.1  (Sara  Turing  relates  that 
+Turing  did  not  listen  to  the  first  broadcast  but  did  ‘pluck  up  courage’  to  listen  to 
+the  repeat.2)  Turing’s  was  the  second  lecture  in  a  series  with  the  general  title 
+‘Automatic  Calculating  Machines’.  Other  speakers  in  the  series  included 
+Newman,  D.  R.  Hartree,  M.  V.  Wilkes,  and  F.  C.  Williams.3 
+
+Imitating  the  Brain 
+
+Turing’s  principal  aim  in  this  lecture  is  to  defend  his  view  that  ‘it  is  not  altogether 
+unreasonable  to  describe  digital  computers  as  brains’,  and  he  argues  for  the 
+proposition  that  ‘If  any  machine  can  appropriately  be  described  as  a  brain, 
+then  any  digital  computer  can  be  so  described’. 
+
+The  lecture  casts  light  upon  Turing’s  attitude  towards  talk  of  machines  think¬ 
+ing.  In  Chapter  11  he  says  that  in  his  view  the  question  ‘Can  machines  think?’  is 
+‘too  meaningless  to  deserve  discussion’  (p.  449).  However,  in  the  present  chapter 
+he  makes  liberal  use  of  such  phrases  as  ‘programm[ing]  a  machine. .  .to  think’ 
+and  ‘the  attempt  to  make  a  thinking  machine’.  In  one  passage,  Turing  says 
+(p.  485):  ‘our  main  problem  [is]  how  to  programme  a  machine  to  imitate  a 
+brain,  or  as  we  might  say  more  briefly,  if  less  accurately,  to  think.’  He  shows  the 
+same  willingness  to  discuss  the  question  ‘Can  machines  think?’  in  Chapter  14. 
+
+Turing’s  view  is  that  a  machine  which  imitates  the  intellectual  behaviour  of  a 
+human  brain  can  itself  appropriately  be  described  as  a  brain  or  as  thinking.  In 
+
+
+1  Alan  M.  Turing  (Cambridge:  Heffer,  1959),  102. 
+
+2  Ibid. 
+
+3  Letter  from  Maurice  Wilkes  to  Copeland  (9  July  1997). 
+
+
+Can  Digital  Computers  Think?  I  477 
+
+
+Chapter  14,  Turing  emphasizes  that  it  is  only  the  intellectual  behaviour  of  the 
+brain  that  need  be  considered  (pp.  494-5):  ‘To  take  an  extreme  case,  we  are  not 
+interested  in  the  fact  that  the  brain  has  the  consistency  of  cold  porridge.  We  don’t 
+want  to  say  “This  machine’s  quite  hard,  so  it  isn’t  a  brain,  and  so  it  can’t  think.”  ’ 
+It  is,  of  course,  the  ability  of  the  machine  to  imitate  the  intellectual  behaviour 
+of  a  human  brain  that  is  examined  in  the  Turing  test  (Chapter  11).  Thus:  any 
+machine  that  plays  the  imitation  game  successfully  can  appropriately  be  de¬ 
+scribed  as  a  brain  or  as  thinking. 
+
+
+Freedom  of  the  Will 
+
+This  chapter  contains  one  of  the  two  discussions  of  free  will  occurring  in  Turing’s 
+mature  writings,  both  of  which  are  tantalizingly  brief.  (The  early  essay  entitled 
+‘Nature  of  Spirit,  which  possibly  dates  from  Turing’s  undergraduate  days,  also 
+contains  a  discussion  of  free  will.  There  Turing  wrote:  ‘the  theory  which  held  that 
+as  eclipses  etc.  are  predestined  so  were  all  our  actions  breaks  down  . . .  We  have  a 
+will  which  is  able  to  determine  the  action  of  the  atoms  probably  in  a  small 
+portion  of  the  brain,  or  possibly  all  over  it.’4)  The  other  discussion  occurs  in 
+Chapter  11,  where  Turing  says  (p.  445): 
+
+An  interesting  variant  on  the  idea  of  a  digital  computer  is  a  ‘digital  computer  with  a 
+random  element’.  These  have  instructions  involving  the  throwing  of  a  die  or  some 
+equivalent  electronic  process . . .  Sometimes  such  a  machine  is  described  as  having  free 
+will  (though  I  would  not  use  this  phrase  myself).  It  is  not  normally  possible  to  determine 
+from  observing  a  machine  whether  it  has  a  random  element,  for  a  similar  effect  can  be 
+produced  by  such  devices  as  making  the  choices  depend  on  the  digits  of  the  decimal  for  n. 
+
+Unfortunately,  Turing  does  not  expand  on  the  remark  ‘I  would  not  use  this 
+phrase  myself.’  Possibly  he  means  simply  that  the  addition  of  a  random  element 
+to  a  computer  is  not  in  itself  sufficient  to  warrant  the  attribution  of  free  will. 
+Presumably  one  would  at  least  need  to  add  cognition  and  initiative  as  well  before 
+the  machine  could  reasonably  be  described  as  having  free  will  (compare  Chapter 
+10,  pp.  424,  429-30).  Alternatively,  it  is  possible  that  Turing  is  objecting  to  the 
+term  ‘free  will’  itself,  much  as  he  objects  elsewhere  in  Chapter  11  to  the  word 
+‘think’  (‘too  meaningless  to  deserve  discussion’). 
+
+Turing  introduced  this  idea  of  a  ‘digital  computer  with  a  random  element’ 
+more  fully  in  Chapter  10  (p.  416): 
+
+It  is  possible  to  modify  the  above  described  types  of  discrete  machines  by  allowing  several 
+alternative  operations  to  be  applied  at  some  points,  the  alternatives  to  be  chosen  by  a 
+random  process.  Such  a  machine  will  be  described  as  ‘partially  random’.  If  we  wish  to  say 
+
+
+4  A  copy  of  ‘Nature  of  Spirit’  is  among  the  Turing  Papers  in  the  Modern  Archive  Centre,  King’s  College, 
+Cambridge. 
+
+
+478  I  Jack  Copeland 
+
+
+definitely  that  a  machine  is  not  of  this  kind  we  will  describe  it  as  ‘determined’.  Sometimes  a 
+machine  may  be  strictly  speaking  determined  but  appear  superficially  as  if  it  were  partially 
+random.  This  would  occur  if  for  instance  the  digits  of  the  number  n  were  used  to  determine 
+the  choices  of  a  partially  random  machine  where  previously  a  dice  thrower  or  electronic 
+equivalent  had  been  used.  These  machines  are  known  as  apparently  partially  random. 
+
+Turing  discusses  partially  random  machines  further  in  Chapter  12  and  in 
+Chapter  9,  where  he  mentions  the  possibility  of  including  in  the  ACE  a  ‘random 
+element,  some  electronic  roulette  wheel’  (p.  391). 
+
+In  ‘Can  Digital  Computers  Think?’  Turing  raises  both  the  possibility  that  ‘the 
+feeling  of  free  will  which  we  all  have  is  an  illusion’  and  the  possibility  that  ‘we 
+really  have  got  free  will  but  yet  there  is  no  way  of  telling  from  our  behaviour  that 
+this  is  so’.  In  parallel,  he  raises  the  question  whether  the  behaviour  of  the  brain  ‘is 
+in  principle  predictable  by  calculation’  (i.e.  by  Turing  machine).  In  discussing 
+this  possibility,  he  observes  that  we  ‘certainly  do  not  know  how  any  such 
+calculation  should  be  done’.  He  points  out  that,  furthermore,  some  physicists 
+argue  that  no  such  prediction  is  even  theoretically  possible,  ‘on  account  of  the 
+indeterminacy  principle  in  quantum  mechanics’.  Turing  does  not  state  his  own 
+position  on  these  issues  in  the  course  of  the  lecture.  However,  in  an  interview 
+given  long  after  Turing’s  death,  Max  Newman  stated  that  Turing  ‘had  a  deep- 
+seated  conviction  that  the  real  brain  has  a  “roulette  wheel”  somewhere  in  it.’5 
+This  seems  to  indicate  that  Turing’s  view  was  that  the  brain  is  a  partially  random 
+machine.  Whether  or  not  Turing  would  have  asserted,  on  that  basis,  that  we 
+‘really  have  got  free  will’  is  not  known. 
+
+
+Can  Computers  Think? 
+
+Turing’s  overarching  aim  in  the  lecture  is  to  answer  the  question  posed  by  his 
+title.  His  strategy  is  to  argue  for  the  proposition  mentioned  above: 
+
+If  any  machine  can  appropriately  be  described  as  a  brain,  then  any  digital 
+computer  can  be  so  described. 
+
+His  initial  bald  statement  of  his  argument  is  (p.  483): 
+
+If  now  some  particular  machine  can  be  described  as  a  brain  we  have  only  to  programme 
+our  digital  computer  to  imitate  it  and  it  will  also  be  a  brain.  If  it  is  accepted  that  real 
+brains,  as  found  in  animals,  and  in  particular  in  men,  are  a  sort  of  machine  it  will  follow 
+that  our  digital  computer  suitably  programmed,  will  behave  like  a  brain. 
+
+Turing  goes  on  to  flesh  out  his  argument  in  various  ways,  turning  eventually  to 
+the  problem  of  free  will  (p.  484):  ‘There  are  still  some  difficulties.  To  behave  like  a 
+
+
+5  Newman  in  interview  with  Christopher  Evans  (‘The  Pioneers  of  Computing:  An  Oral  History  of 
+Computing’  (London:  Science  Museum)). 
+
+
+Can  Digital  Computers  Think?  I  479 
+
+
+brain  seems  to  involve  free  will,  but  the  behaviour  of  a  digital  computer,  when  it 
+has  been  programmed,  is  completely  determined.’  Turing  argues  resourcefully 
+that,  even  if  it  is  true  that  brains  have  free  will,  this  in  fact  presents  no  difficulty 
+for  his  claim  that  a  suitably  programmed  computer  can  imitate  the  brain 
+(pp.  484-5): 
+
+a  machine  which  is  to  imitate  a  brain  must  appear  to  behave  as  if  it  had  free  will,  and  it 
+may  well  be  asked  how  this  is  to  be  achieved.  One  possibility  is  to  make  its  behaviour 
+depend  on  something  like  a  roulette  wheel  or  a  supply  of  radium.  ...  It  is,  however,  not 
+really  even  necessary  to  do  this.  It  is  not  difficult  to  design  machines  whose  behaviour 
+appears  quite  random  to  anyone  who  does  not  know  the  details  of  their  construction. 
+
+Such  machines  are  ‘apparently  partially  random’  (p.  416).  Examples  of  appar¬ 
+ently  partially  random  machines  are  the  German  Enigma  machine  and  the 
+Lorenz  SZ  40  cipher  machine  (‘Tunny’).  Since  both  these  machines  can  be 
+simulated  by  a  digital  computer,  an  appropriately  programmed  digital  computer 
+is  apparently  partially  random.  (In  Chapter  1 1  Turing  mentions  having  written  a 
+programme  for  the  Manchester  computer  that  produced  apparently  partially 
+random  behaviour.  When  given  a  number,  the  programme  would  reply  with 
+a  number.  Turing  said  ‘I  would  defy  anyone  to  learn  from  these  replies  sufficient 
+about  the  programme  to  be  able  to  predict  any  replies  to  untried  values’ 
+(p.  457).) 
+
+Apparently  partially  random  machines  imitate  partially  random  machines.  If 
+the  brain  is  a  partially  random  machine,  an  appropriately  programmed  digital 
+computer  may  nevertheless  give  a  convincing  imitation  of  a  brain.  The  appear¬ 
+ance  that  this  deterministic  machine  gives  of  possessing  free  will  may  be  said 
+to  be  mere  sham,  but  this  will  not  affect  the  machine’s  ability  to  play  the 
+imitation  game  successfully.  And  by  Turing’s  principle,  above,  any  machine  that 
+plays  the  imitation  game  successfully  can  appropriately  be  described  as  a  brain. 
+
+
+The  Church-Turing  Thesis  and  Calculating  Machines 
+
+In  ‘Can  Digital  Computers  Think?’  Turing  puts  foward  a  thesis  that,  while  not 
+the  same  as  the  Church-Turing  thesis  (see  Chapter  1  and  ‘Computable  Numbers: 
+A  Guide’),  is  in  effect  the  result  of  replacing  the  term  ‘human  computer’  in  the 
+Church-Turing  thesis  by  ‘calculating  machine’,  and  replacing  ‘universal  Turing 
+machine’  by  ‘digital  computer  of  sufficient  speed  and  storage  capacity’. 
+
+The  Church-Turing  thesis  states  that  any  work  that  can  be  carried  out  by  a 
+human  computer  (i.e.  by  an  obedient  clerk  working  with  pencil  on  paper  in 
+accordance  with  an  effective  procedure)  can  equally  well  be  carried  out  by  the 
+universal  Turing  machine.  The  present  thesis  (pp.  482-3)  states  that  any  work 
+that  can  be  carried  out  by  any  calculating  machine  can  equally  well  be  carried  out 
+by  a  digital  computer  of  sufficient  speed  and  storage  capacity: 
+
+
+480  I  Jack  Copeland 
+
+
+A  digital  computer  is  a  universal  machine  in  the  sense  that  it  can  be  made  to  replace  any 
+machine  of  a  certain  very  wide  class.  It  will  not  replace  a  bulldozer  or  a  steam-engine  or  a 
+telescope,  but  it  will  replace  any  rival  design  of  calculating  machine. 
+
+Newman  wrote  in  the  same  vein  a  few  years  previously: 
+
+A  universal  machine  is  a  single  machine  which,  when  provided  with  suitable  instructions, 
+will  perform  any  calculation  that  could  be  done  by  a  specially  constructed  machine.  No 
+real  machine  can  be  truly  universal  because  its  size  is  limited . . .  but  subject  to  this 
+limitation  of  size,  the  machines  now  being  made  in  America  and  in  this  country  will  be 
+‘universal’ — if  they  work  at  all;  that  is,  they  will  do  every  kind  of  job  that  can  be  done  by 
+special  machines.6 
+
+If  Turing  were  requested  to  clarify  the  notion  of  a  ‘calculating  machine’,  he 
+would  perhaps  offer  paradigm  examples  such  as  the  Brunsviga  (a  popular  desk 
+calculating  machine),  a  differential  analyser  (an  analogue  computing  device), 
+special-purpose  electronic  machines  like  Colossus  and  ENIAC,  and  so  on  (com¬ 
+pare  Chapter  10,  pp.  412-13).  Or  perhaps  he  would  say,  with  greater  generality, 
+that  a  calculating  machine  is  any  machine  that  duplicates  the  abilities  of  a  human 
+mathematician  working  mechanically  with  paper  and  pencil,  i.e.  in  accordance 
+with  an  effective  (‘rule  of  thumb’)  procedure.  It  was  in  this  manner  that  he 
+explained  the  idea  of  an  electronic  computing  machine  in  the  opening  paragraph 
+of  his  Programmers’  Handbook:  ‘Electronic  computers  are  intended  to  carry  out 
+any  definite  rule  of  thumb  process  which  could  have  been  done  by  a  human 
+operator  working  in  a  disciplined  but  unintelligent  manner.’7 
+
+Turing’s  remarks  in  Chapter  17  on  the  status  of  the  Church-Turing  thesis  are 
+also  relevant  here  (and  see  also  the  section  ‘Normal  Forms  and  the  Church- 
+Turing  Thesis’  in  the  introduction  to  Chapter  17). 
+
+
+Other  Notable  Features 
+
+Other  features  of  note  in  the  lecture  include  the  continuation  of  the  discussion  of 
+‘Lady  Lovelace’s  dictum’,  begun  in  Chapter  11,  and  Turing’s  glorious  analogy 
+comparing  trying  to  programme  a  computer  to  behave  like  a  brain  with  trying  to 
+write  a  treatise  about  family  life  on  Mars — and  moreover  with  insufficient  paper. 
+(Newman  once  remarked  on  the  ‘comical  but  brilliantly  apt  analogies  with  which 
+he  [Turing]  explained  his  ideas’.8) 
+
+
+6  M.  H.  A.  Newman,  ‘General  Principles  of  the  Design  of  All-Purpose  Computing  Machines’,  Proceedings 
+of  the  Royal  Society  of  London,  Series  A,  195  (1948),  271-4  (271-2). 
+
+7  A.  M.  Turing,  Programmers’  Handbook  for  Manchester  Electronic  Computer,  University  of  Manchester 
+Computing  Laboratory  (1950),  1.  A  digital  facsimile  of  the  Programmers’  Handbook  is  available  in  The 
+Turing  Archive  for  the  History  of  Computing  <www.AlanTuring.net/  programmers_handbook>. 
+
+8  Newman  writing  in  the  Manchester  Guardian,  11  June  1954. 
+
+
+Can  Digital  Computers  Think?  I  481 
+
+
+Further  reading 
+
+Copeland,  B.  J.,  Artificial  Intelligence:  A  Philosophical  Introduction  (Oxford:  Blackwell, 
+1993).  Chapter  3:  ‘Can  a  Machine  Think?’;  chapter  7:  ‘Freedom’. 
+
+- ‘Narrow  versus  Wide  Mechanism:  Including  a  Re-examination  of  Turing’s  Views  on 
+
+the  Mind-Machine  Issue’,  Journal  of  Philosophy,  97  (2000),  5-32.  Reprinted  in 
+M.  Scheutz,  Computationalism:  New  Directions  (Cambridge,  Mass.:  MIT  Press,  2002). 
+Dennett,  D.  C.,  Elbow  Room:  The  Varieties  of  Freewill  Worth  Wanting  (Oxford:  Clarendon 
+Press,  1984). 
+
+Simons,  G.,  The  Biology  of  Computer  Life  (Brighton:  Harvester,  1985). 
+
+
+Provenance 
+
+The  text  that  follows  is  from  Turing’s  typescript  and  incorporates  corrections 
+made  in  his  hand.9 
+
+
+9  The  typescript  is  in  the  Modern  Archive  Centre,  King’s  College,  Cambridge  (catalogue  reference  B  5). 
+The  present  edition  first  appeared  in  B.  J.  Copeland  (ed.),  ‘A  Lecture  and  Two  Radio  Broadcasts  on  Machine 
+Intelligence  by  Alan  Turing’,  in  K.  Furukawa,  D.  Michie  and  S.  Muggleton  (eds.),  Machine  Intelligence  15 
+(Oxford:  Oxford  University  Press,  1999). 
+
+
+Can  Digital  Computers  Think? 
+
+Digital  computers  have  often  been  described  as  mechanical  brains.  Most  scien¬ 
+tists  probably  regard  this  description  as  a  mere  newspaper  stunt,  but  some  do 
+not.  One  mathematician  has  expressed  the  opposite  point  of  view  to  me  rather 
+forcefully  in  the  words  ‘It  is  commonly  said  that  these  machines  are  not  brains, 
+but  you  and  I  know  that  they  are.’  In  this  talk  I  shall  try  to  explain  the  ideas 
+behind  the  various  possible  points  of  view,  though  not  altogether  impartially. 
+I  shall  give  most  attention  to  the  view  which  I  hold  myself,  that  it  is  not 
+altogether  unreasonable  to  describe  digital  computers  as  brains.  A  different 
+point  of  view  has  already  been  put  by  Professor  Hartree. 
+
+First  we  may  consider  the  naive  point  of  view  of  the  man  in  the  street.  He 
+hears  amazing  accounts  of  what  these  machines  can  do:  most  of  them  apparently 
+involve  intellectual  feats  of  which  he  would  be  quite  incapable.  He  can  only 
+explain  it  by  supposing  that  the  machine  is  a  sort  of  brain,  though  he  may  prefer 
+simply  to  disbelieve  what  he  has  heard. 
+
+The  majority  of  scientists  are  contemptuous  of  this  almost  superstitious  atti¬ 
+tude.  They  know  something  of  the  principles  on  which  the  machines  are  con¬ 
+structed  and  of  the  way  in  which  they  are  used.  Their  outlook  was  well  summed  up 
+by  Lady  Lovelace  over  a  hundred  years  ago,  speaking  of  Babbage’s  Analytical 
+Engine.  She  said,  as  Hartree  has  already  quoted,  ‘The  Analytical  Engine  has  no 
+pretensions  whatever  to  originate  anything.  It  can  do  whatever  we  know  how  to 
+order  it  to  perform.’  This  very  well  describes  the  way  in  which  digital  computers  are 
+actually  used  at  the  present  time,  and  in  which  they  will  probably  mainly  be  used 
+for  many  years  to  come.  For  any  one  calculation  the  whole  procedure  that  the 
+machine  is  to  go  through  is  planned  out  in  advance  by  a  mathematician.  The  less 
+doubt  there  is  about  what  is  going  to  happen  the  better  the  mathematician  is 
+pleased.  It  is  like  planning  a  military  operation.  Under  these  circumstances  it  is  fair 
+to  say  that  the  machine  doesn’t  originate  anything. 
+
+There  is  however  a  third  point  of  view,  which  I  hold  myself.  I  agree  with  Lady 
+Lovelace’s  dictum  as  far  as  it  goes,  but  I  believe  that  its  validity  depends  on 
+considering  how  digital  computers  are  used  rather  than  how  they  could  he  used. 
+In  fact  I  believe  that  they  could  be  used  in  such  a  manner  that  they  could 
+appropriately  be  described  as  brains.  I  should  also  say  that  ‘If  any  machine  can 
+appropriately  be  described  as  a  brain,  then  any  digital  computer  can  be  so 
+described.’ 
+
+This  last  statement  needs  some  explanation.  It  may  appear  rather  startling,  but 
+with  some  reservations  it  appears  to  be  an  inescapable  fact.  It  can  be  shown  to 
+follow  from  a  characteristic  property  of  digital  computers,  which  I  will  call  their 
+universality.  A  digital  computer  is  a  universal  machine  in  the  sense  that  it  can  be 
+
+
+Printed  with  the  permission  of  the  BBC  and  the  Estate  of  Alan  Turing. 
+
+
+Can  Digital  Computers  Think?  I  483 
+
+
+made  to  replace  any  machine  of  a  certain  very  wide  class.  It  will  not  replace  a 
+bulldozer  or  a  steam-engine  or  a  telescope,  but  it  will  replace  any  rival  design  of 
+calculating  machine,  that  is  to  say  any  machine  into  which  one  can  feed  data  and 
+which  will  later  print  out  results.  In  order  to  arrange  for  our  computer  to  imitate 
+a  given  machine  it  is  only  necessary  to  programme  the  computer  to  calculate 
+what  the  machine  in  question  would  do  under  given  circumstances,  and  in 
+particular  what  answers  it  would  print  out.  The  computer  can  then  be  made  to 
+print  out  the  same  answers. 
+
+If  now  some  particular  machine  can  be  described  as  a  brain  we  have  only  to 
+programme  our  digital  computer  to  imitate  it  and  it  will  also  be  a  brain.  If  it  is 
+accepted  that  real  brains,  as  found  in  animals,  and  in  particular  in  men,  are  a  sort 
+of  machine  it  will  follow  that  our  digital  computer,  suitably  programmed,  will 
+behave  like  a  brain. 
+
+This  argument  involves  several  assumptions  which  can  quite  reasonably  be 
+challenged.  I  have  already  explained  that  the  machine  to  be  imitated  must  be 
+more  like  a  calculator  than  a  bulldozer.  This  is  merely  a  reflection  of  the  fact  that 
+we  are  speaking  of  mechanical  analogues  of  brains,  rather  than  of  feet  or  jaws.  It 
+was  also  necessary  that  this  machine  should  be  of  the  sort  whose  behaviour  is  in 
+principle  predictable  by  calculation.  We  certainly  do  not  know  how  any  such 
+calculation  should  be  done,  and  it  was  even  argued  by  Sir  Arthur  Eddington  that 
+on  account  of  the  indeterminacy  principle  in  quantum  mechanics  no  such 
+prediction  is  even  theoretically  possible. 
+
+Another  assumption  was  that  the  storage  capacity  of  the  computer  used 
+should  be  sufficient  to  carry  out  the  prediction  of  the  behaviour  of  the  machine 
+to  be  imitated.  It  should  also  have  sufficient  speed.  Our  present  computers 
+probably  have  not  got  the  necessary  storage  capacity,  though  they  may  well 
+have  the  speed.  This  means  in  effect  that  if  we  wish  to  imitate  anything  so 
+complicated  as  the  human  brain  we  need  a  very  much  larger  machine  than  any 
+of  the  computers  at  present  available.  We  probably  need  something  at  least  a 
+hundred  times  as  large  as  the  Manchester  Computer.  Alternatively  of  course  a 
+machine  of  equal  size  or  smaller  would  do  if  sufficient  progress  were  made  in  the 
+technique  of  storing  information. 
+
+It  should  be  noticed  that  there  is  no  need  for  there  to  be  any  increase  in  the 
+complexity  of  the  computers  used.  If  we  try  to  imitate  ever  more  complicated 
+machines  or  brains  we  must  use  larger  and  larger  computers  to  do  it.  We  do  not 
+need  to  use  successively  more  complicated  ones.  This  may  appear  paradoxical, 
+but  the  explanation  is  not  difficult.  The  imitation  of  a  machine  by  a  computer 
+requires  not  only  that  we  should  have  made  the  computer,  but  that  we  should 
+have  programmed  it  appropriately.  The  more  complicated  the  machine  to  be 
+imitated  the  more  complicated  must  the  programme  be. 
+
+This  may  perhaps  be  made  clearer  by  an  analogy.  Suppose  two  men  both 
+wanted  to  write  their  autobiographies,  and  that  one  had  had  an  eventful  life,  but 
+
+
+484  I  Alan  Turing 
+
+
+very  little  had  happened  to  the  other.  There  would  be  two  difficulties  troubling 
+the  man  with  the  more  eventful  life  more  seriously  than  the  other.  He  would  have 
+to  spend  more  on  paper  and  he  would  have  to  take  more  trouble  over  thinking 
+what  to  say.  The  supply  of  paper  would  not  be  likely  to  be  a  serious  difficulty, 
+unless  for  instance  he  were  on  a  desert  island,  and  in  any  case  it  could  only  be  a 
+technical  or  a  financial  problem.  The  other  difficulty  would  be  more  fundamen¬ 
+tal  and  would  become  more  serious  still  if  he  were  not  writing  his  life  but  a  work 
+on  something  he  knew  nothing  about,  let  us  say  about  family  life  on  Mars.  Our 
+problem  of  programming  a  computer  to  behave  like  a  brain  is  something  like 
+trying  to  write  this  treatise  on  a  desert  island.  We  cannot  get  the  storage  capacity 
+we  need:  in  other  words  we  cannot  get  enough  paper  to  write  the  treatise  on,  and 
+in  any  case  we  don’t  know  what  we  should  write  down  if  we  had  it.  This  is  a  poor 
+state  of  affairs,  but,  to  continue  the  analogy,  it  is  something  to  know  how  to 
+write,  and  to  appreciate  the  fact  that  most  knowledge  can  be  embodied  in  books. 
+
+In  view  of  this  it  seems  that  the  wisest  ground  on  which  to  criticise  the  descrip¬ 
+tion  of  digital  computers  as  ‘mechanical  brains’  or  ‘electronic  brains’  is  that, 
+although  they  might  be  programmed  to  behave  like  brains,  we  do  not  at  present 
+know  how  this  should  be  done.  With  this  outlook  I  am  in  full  agreement.  It  leaves 
+open  the  question  as  to  whether  we  will  or  will  not  eventually  succeed  in  finding 
+such  a  programme.  I,  personally,  am  inclined  to  believe  that  such  a  programme 
+will  be  found.  I  think  it  is  probable  for  instance  that  at  the  end  of  the  century  it  will 
+be  possible  to  programme  a  machine  to  answer  questions  in  such  a  way  that  it  will 
+be  extremely  difficult  to  guess  whether  the  answers  are  being  given  by  a  man  or  by 
+the  machine.  I  am  imagining  something  like  a  viva-voce  examination,  but  with  the 
+questions  and  answers  all  typewritten  in  order  that  we  need  not  consider  such 
+irrelevant  matters  as  the  faithfulness  with  which  the  human  voice  can  be  imitated. 
+This  only  represents  my  opinion;  there  is  plenty  of  room  for  others. 
+
+There  are  still  some  difficulties.  To  behave  like  a  brain  seems  to  involve  free 
+will,  but  the  behaviour  of  a  digital  computer,  when  it  has  been  programmed,  is 
+completely  determined.  These  two  facts  must  somehow  be  reconciled,  but  to  do 
+so  seems  to  involve  us  in  an  age-old  controversy,  that  of  ‘free  will  and  determin¬ 
+ism’.  There  are  two  ways  out.  It  may  be  that  the  feeling  of  free  will  which  we  all 
+have  is  an  illusion.  Or  it  may  be  that  we  really  have  got  free  will,  but  yet  there  is 
+no  way  of  telling  from  our  behaviour  that  this  is  so.  In  the  latter  case,  however 
+well  a  machine  imitates  a  man’s  behaviour  it  is  to  be  regarded  as  a  mere  sham.  I 
+do  not  know  how  we  can  ever  decide  between  these  alternatives  but  whichever  is 
+the  correct  one  it  is  certain  that  a  machine  which  is  to  imitate  a  brain  must 
+appear  to  behave  as  if  it  had  free  will,  and  it  may  well  be  asked  how  this  is  to  be 
+achieved.  One  possibility  is  to  make  its  behaviour  depend  on  something  like  a 
+roulette  wheel  or  a  supply  of  radium.  The  behaviour  of  these  may  perhaps  be 
+predictable,  but  if  so,  we  do  not  know  how  to  do  the  prediction. 
+
+
+Can  Digital  Computers  Think?  I  485 
+
+
+It  is,  however,  not  really  even  necessary  to  do  this.  It  is  not  difficult  to  design 
+machines  whose  behaviour  appears  quite  random  to  anyone  who  does  not  know 
+the  details  of  their  construction.  Naturally  enough  the  inclusion  of  this  random 
+element,  whichever  technique  is  used,  does  not  solve  our  main  problem,  how  to 
+programme  a  machine  to  imitate  a  brain,  or  as  we  might  say  more  briefly,  if  less 
+accurately,  to  think.  But  it  gives  us  some  indication  of  what  the  process  will  be 
+like.  We  must  not  always  expect  to  know  what  the  computer  is  going  to  do.  We 
+should  be  pleased  when  the  machine  surprises  us,  in  rather  the  same  way  as  one 
+is  pleased  when  a  pupil  does  something  which  he  had  not  been  explicitly  taught 
+to  do. 
+
+Let  us  now  reconsider  Lady  Lovelace’s  dictum.  ‘The  machine  can  do  whatever 
+we  know  how  to  order  it  to  perform.’  The  sense  of  the  rest  of  the  passage  is  such 
+that  one  is  tempted  to  say  that  the  machine  can  only  do  what  we  know  how  to 
+order  it  to  perform.  But  I  think  this  would  not  be  true.  Certainly  the  machine  can 
+only  do  what  we  do  order  it  to  perform,  anything  else  would  be  a  mechanical 
+fault.  But  there  is  no  need  to  suppose  that,  when  we  give  it  its  orders  we  know 
+what  we  are  doing,  what  the  consequences  of  these  orders  are  going  to  be.  One 
+does  not  need  to  be  able  to  understand  how  these  orders  lead  to  the  machine’s 
+subsequent  behaviour,  any  more  than  one  needs  to  understand  the  mechanism 
+of  germination  when  one  puts  a  seed  in  the  ground.  The  plant  comes  up  whether 
+one  understands  or  not.  If  we  give  the  machine  a  programme  which  results  in  its 
+doing  something  interesting  which  we  had  not  anticipated  I  should  be  inclined 
+to  say  that  the  machine  had  originated  something,  rather  than  to  claim  that  its 
+behaviour  was  implicit  in  the  programme,  and  therefore  that  the  originality  lies 
+entirely  with  us. 
+
+I  will  not  attempt  to  say  much  about  how  this  process  of  ‘programming  a 
+machine  to  think’  is  to  be  done.  The  fact  is  that  we  know  very  little  about  it,  and 
+very  little  research  has  yet  been  done.  There  are  plentiful  ideas,  but  we  do  not  yet 
+know  which  of  them  are  of  importance.  As  in  the  detective  stories,  at  the 
+beginning  of  the  investigation  any  trifle  may  be  of  importance  to  the  investigator. 
+When  the  problem  has  been  solved,  only  the  essential  facts  need  to  be  told  to  the 
+jury.  But  at  present  we  have  nothing  worth  putting  before  a  jury.  I  will  only  say 
+this,  that  I  believe  the  process  should  bear  a  close  relation  of  that  of  teaching. 
+
+I  have  tried  to  explain  what  are  the  main  rational  arguments  for  and  against 
+the  theory  that  machines  could  be  made  to  think,  but  something  should  also  be 
+said  about  the  irrational  arguments.  Many  people  are  extremely  opposed  to  the 
+idea  of  machine  that  thinks,  but  I  do  not  believe  that  it  is  for  any  of  the  reasons 
+that  I  have  given,  or  any  other  rational  reason,  but  simply  because  they  do  not 
+like  the  idea.  One  can  see  many  features  which  make  it  unpleasant.  If  a  machine 
+can  think,  it  might  think  more  intelligently  than  we  do,  and  then  where  should 
+we  be?  Even  if  we  could  keep  the  machines  in  a  subservient  position,  for  instance 
+by  turning  off  the  power  at  strategic  moments,  we  should,  as  a  species,  feel 
+
+
+486  I  Alan  Turing 
+
+
+greatly  humbled.  A  similar  danger  and  humiliation  threatens  us  from  the  possib¬ 
+ility  that  we  might  be  superseded  by  the  pig  or  the  rat.  This  is  a  theoretical 
+possibility  which  is  hardly  controversial,  but  we  have  lived  with  pigs  and  rats  for 
+so  long  without  their  intelligence  much  increasing,  that  we  no  longer  trouble 
+ourselves  about  this  possibility.  We  feel  that  if  it  is  to  happen  at  all  it  will  not  be 
+for  several  million  years  to  come.  But  this  new  danger  is  much  closer.  If  it  comes 
+at  all  it  will  almost  certainly  be  within  the  next  millennium.  It  is  remote  but  not 
+astronomically  remote,  and  is  certainly  something  which  can  give  us  anxiety. 
+
+It  is  customary,  in  a  talk  or  article  on  this  subject,  to  offer  a  grain  of  comfort, 
+in  the  form  of  a  statement  that  some  particularly  human  characteristic  could 
+never  be  imitated  by  a  machine.  It  might  for  instance  be  said  that  no  machine 
+could  write  good  English,  or  that  it  could  not  be  influenced  by  sex-appeal  or 
+smoke  a  pipe.  I  cannot  offer  any  such  comfort,  for  I  believe  that  no  such  bounds 
+can  be  set.  But  I  certainly  hope  and  believe  that  no  great  efforts  will  be  put  into 
+making  machines  with  the  most  distinctively  human,  but  non-intellectual  char¬ 
+acteristics  such  as  the  shape  of  the  human  body;  it  appears  to  me  to  be  quite 
+futile  to  make  such  attempts  and  their  results  would  have  something  like  the 
+unpleasant  quality  of  artificial  flowers.  Attempts  to  produce  a  thinking  machine 
+seem  to  me  to  be  in  a  different  category.  The  whole  thinking  process  is  still  rather 
+mysterious  to  us,  but  I  believe  that  the  attempt  to  make  a  thinking  machine  will 
+help  us  greatly  in  finding  out  how  we  think  ourselves.
