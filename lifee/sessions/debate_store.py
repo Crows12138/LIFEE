@@ -104,11 +104,39 @@ class DebateSessionStore:
         return session
 
     def archive(self):
-        """归档当前会话到历史目录"""
-        if self._current_path.exists():
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            dest = self._history_dir / f"{timestamp}.json"
-            self._current_path.rename(dest)
+        """归档当前会话到历史目录（自动去重：同 session_id 只保留消息最多的版本）"""
+        if not self._current_path.exists():
+            return
+
+        try:
+            current_data = json.loads(self._current_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, IOError):
+            self._current_path.unlink()
+            return
+
+        current_sid = current_data.get("session_id")
+        current_count = len(current_data.get("history", []))
+
+        # 查找历史中同 session_id 的文件
+        if current_sid:
+            for f in self._history_dir.glob("*.json"):
+                try:
+                    old_data = json.loads(f.read_text(encoding="utf-8"))
+                    if old_data.get("session_id") == current_sid:
+                        old_count = len(old_data.get("history", []))
+                        if current_count >= old_count:
+                            # 当前版本更完整，替换旧文件
+                            f.unlink()
+                        else:
+                            # 旧版本更完整，丢弃当前版本
+                            self._current_path.unlink()
+                            return
+                except (json.JSONDecodeError, IOError):
+                    continue
+
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        dest = self._history_dir / f"{timestamp}.json"
+        self._current_path.rename(dest)
 
     def clear(self):
         """清除当前会话（不归档）"""
