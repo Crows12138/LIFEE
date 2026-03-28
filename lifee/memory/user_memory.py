@@ -72,6 +72,7 @@ class UserMemory:
         MEMORY_DIR.mkdir(parents=True, exist_ok=True)
         self.user_file = MEMORY_DIR / "USER.md"
         self._ensure_user_file()
+        self._last_extracted_msg_count = 0  # 上次提取时的消息数
 
     def _ensure_user_file(self):
         """确保 USER.md 存在"""
@@ -189,8 +190,16 @@ class UserMemory:
         if not messages:
             return False
 
-        # 只分析最近的消息
-        recent = messages[-6:]
+        # 对话没有新消息，跳过
+        if len(messages) <= self._last_extracted_msg_count:
+            return False
+
+        # 只分析上次提取之后新增的消息
+        recent = messages[self._last_extracted_msg_count:]
+        self._last_extracted_msg_count = len(messages)
+
+        if not recent:
+            return False
 
         # 构建对话文本（只取用户消息 + AI 消息前100字）
         conversation_parts = []

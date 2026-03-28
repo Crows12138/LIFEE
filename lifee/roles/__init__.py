@@ -154,6 +154,8 @@ class RoleManager:
                     info["emoji"] = line.split(":**")[1].strip()
                 elif "**Knowledge Language:**" in line:
                     info["knowledge_lang"] = line.split(":**")[1].strip()
+                elif "**Tools:**" in line:
+                    info["tools"] = [t.strip() for t in line.split(":**")[1].split(",")]
 
         # 从 i18n 获取当前语言的显示名（优先级最高）
         from lifee.cli.i18n import t

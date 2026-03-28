@@ -46,16 +46,27 @@ class DebateSessionStore:
         self._history_dir.mkdir(parents=True, exist_ok=True)
         self._migrate_old_chat_sessions()
 
-    def save(self, session: Session, participants: list[str]):
+    def save(self, session: Session, participants: list[str], title: str = ""):
         """自动保存当前会话
 
         Args:
             session: 会话对象
             participants: 参与者名称列表
+            title: 会话标题（可选）
         """
+        # 保留已有标题
+        existing_title = ""
+        if self._current_path.exists():
+            try:
+                old = json.loads(self._current_path.read_text(encoding="utf-8"))
+                existing_title = old.get("title", "")
+            except (json.JSONDecodeError, IOError):
+                pass
+
         data = {
             "session_id": session.id,
             "updated_at": datetime.now().isoformat(),
+            "title": title or existing_title,
             "participants": participants,
             "history": [msg.to_dict() for msg in session.history],
         }
@@ -184,6 +195,7 @@ class DebateSessionStore:
                 sessions.append({
                     "filename": f.name,
                     "updated_at": data.get("updated_at", ""),
+                    "title": data.get("title", ""),
                     "participants": data.get("participants", []),
                     "msg_count": len(data.get("history", [])),
                 })

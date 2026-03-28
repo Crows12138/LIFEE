@@ -172,14 +172,15 @@ def _char_width(c: str) -> int:
     return 2 if w in ('F', 'W') else 1
 
 
-def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
-    """带剪贴板粘贴 + slash 命令菜单的自定义输入函数
+def input_with_clipboard(prompt: str, participants: Optional[list] = None) -> Tuple[str, List[MediaItem]]:
+    """带剪贴板粘贴 + slash 命令菜单 + @mention 菜单的自定义输入函数
 
     功能:
         - Ctrl+V / Alt+V: 粘贴剪贴板图片
         - Backspace: 文本为空时删除最后一张图片
         - /: 触发 slash 命令菜单（方向键导航，继续输入过滤）
-        - ESC: 关闭 slash 菜单
+        - @: 触发角色 mention 菜单（多角色对话时）
+        - ESC: 关闭菜单
 
     Returns:
         (输入文本, 剪贴板媒体列表)
@@ -199,6 +200,14 @@ def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
     in_slash_mode = False
     slash_cursor = 0
     slash_prev_count = 0  # 上次绘制的菜单行数
+
+    # @mention 菜单状态
+    in_mention_mode = False
+    mention_cursor = 0
+    mention_prev_count = 0
+    mention_items = []  # [(display, role_name), ...]
+    if participants and len(participants) > 1:
+        mention_items = [(f"{p.info.emoji} {p.info.display_name}", f"@{p.role_name} ") for p in participants]
 
     def _tail_width():
         """光标右侧字符的显示宽度（用于回移光标）"""
@@ -296,6 +305,44 @@ def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
             sys.stdout.flush()
         slash_prev_count = 0
 
+    def _get_mention_filtered():
+        # @后面输入的文字用于过滤
+        text = "".join(chars)
+        if "@" in text:
+            filter_text = text[text.index("@") + 1:].lower()
+        else:
+            filter_text = ""
+        return [(display, value) for display, value in mention_items
+                if not filter_text or filter_text in display.lower() or filter_text in value.lower()]
+
+    def _draw_mention_menu():
+        """在输入行下方绘制 @mention 菜单。"""
+        nonlocal mention_prev_count
+        filtered = _get_mention_filtered()
+        n = len(filtered)
+        for i, (display, _) in enumerate(filtered):
+            pointer = ">" if i == mention_cursor else " "
+            hi_start = "\033[7m" if i == mention_cursor else ""
+            hi_end   = "\033[0m" if i == mention_cursor else ""
+            sys.stdout.write(f"\n\r\033[2K  {hi_start}{pointer} {display}{hi_end}")
+        for _ in range(mention_prev_count - n):
+            sys.stdout.write("\n\r\033[2K")
+        total = max(n, mention_prev_count)
+        if total > 0:
+            sys.stdout.write(f"\033[{total}A\r{prompt}{''.join(chars)}")
+        sys.stdout.flush()
+        mention_prev_count = n
+
+    def _clear_mention_menu():
+        """清除 @mention 菜单。"""
+        nonlocal mention_prev_count
+        if mention_prev_count > 0:
+            for _ in range(mention_prev_count):
+                sys.stdout.write("\n\r\033[2K")
+            sys.stdout.write(f"\033[{mention_prev_count}A\r{prompt}{''.join(chars)}")
+            sys.stdout.flush()
+        mention_prev_count = 0
+
     while True:
         char = msvcrt.getwch()
 
@@ -318,16 +365,38 @@ def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
                     sys.stdout.write(f"\r\033[K{prompt}{''.join(chars)}\n")
                     sys.stdout.flush()
                     return "".join(chars).strip(), media
+            elif in_mention_mode:
+                filtered = _get_mention_filtered()
+                _clear_mention_menu()
+                in_mention_mode = False
+                if filtered:
+                    idx = min(mention_cursor, len(filtered) - 1)
+                    selected_value = filtered[idx][1]  # e.g. "@turing "
+                    chars.clear()
+                    chars.extend(selected_value)
+                    cursor_pos = len(chars)
+                    sys.stdout.write(f"\r\033[K{prompt}{''.join(chars)}")
+                    rendered_cursor_tw = prompt_width + sum(_char_width(c) for c in chars)
+                    sys.stdout.flush()
+                    continue
+                else:
+                    sys.stdout.write("\n")
+                    sys.stdout.flush()
+                    break
             else:
                 sys.stdout.write("\n")
                 sys.stdout.flush()
                 break
 
-        elif char == "\x1b":  # ESC — 关闭 slash 菜单
+        elif char == "\x1b":  # ESC — 关闭菜单
             if in_slash_mode:
                 _clear_slash_menu()
                 in_slash_mode = False
                 slash_cursor = 0
+            elif in_mention_mode:
+                _clear_mention_menu()
+                in_mention_mode = False
+                mention_cursor = 0
 
         elif char == "\x08":  # Backspace
             if in_slash_mode:
@@ -343,6 +412,19 @@ def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
                 else:
                     _clear_slash_menu()
                     in_slash_mode = False
+            elif in_mention_mode:
+                if chars:
+                    chars.pop()
+                    cursor_pos = len(chars)
+                    if "@" not in "".join(chars):
+                        _clear_mention_menu()
+                        in_mention_mode = False
+                    else:
+                        mention_cursor = 0
+                        _draw_mention_menu()
+                else:
+                    _clear_mention_menu()
+                    in_mention_mode = False
             else:
                 if cursor_pos > 0:
                     chars.pop(cursor_pos - 1)
@@ -382,6 +464,15 @@ def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
                 elif arrow == "\x50":  # 下
                     slash_cursor = (slash_cursor + 1) % n
                     _draw_slash_menu()
+            elif in_mention_mode:
+                filtered = _get_mention_filtered()
+                n = max(1, len(filtered))
+                if arrow == "\x48":  # 上
+                    mention_cursor = (mention_cursor - 1) % n
+                    _draw_mention_menu()
+                elif arrow == "\x50":  # 下
+                    mention_cursor = (mention_cursor + 1) % n
+                    _draw_mention_menu()
             else:
                 if arrow == "\x4b":  # 左
                     if cursor_pos > 0:
@@ -428,6 +519,20 @@ def input_with_clipboard(prompt: str) -> Tuple[str, List[MediaItem]]:
                 else:
                     _clear_slash_menu()
                     in_slash_mode = False
+            elif char == "@" and len(chars) == 1 and mention_items:
+                # 进入 @mention 菜单模式
+                in_mention_mode = True
+                mention_cursor = 0
+                _draw_mention_menu()
+            elif in_mention_mode:
+                # 继续输入 — 更新过滤
+                mention_cursor = 0
+                filtered = _get_mention_filtered()
+                if filtered:
+                    _draw_mention_menu()
+                else:
+                    _clear_mention_menu()
+                    in_mention_mode = False
 
     return "".join(chars).strip(), media
 
@@ -732,6 +837,7 @@ async def debate_loop(
     role_manager = RoleManager()
     roles = role_manager.list_roles()
     user_memory = UserMemory()
+    user_memory._last_extracted_msg_count = len(session.history)  # 跳过已有消息
 
     # 创建主持者（注入用户记忆上下文）
     memory_context = user_memory.get_context()
@@ -779,6 +885,7 @@ async def debate_loop(
         print(f"  ── 继续对话 ──\n")
 
     pending_suggestion = None  # 用于存储用户选择的建议
+    session_title = ""  # 会话标题（只生成一次）
 
     while True:
         try:
@@ -792,7 +899,7 @@ async def debate_loop(
                 else:
                     print(f"{t('input_prompt')}{user_input}")
             else:
-                user_input, clipboard_media = input_with_clipboard(t("input_prompt"))
+                user_input, clipboard_media = input_with_clipboard(t("input_prompt"), participants=participants)
 
             if not user_input and not clipboard_media:
                 continue
@@ -892,7 +999,11 @@ async def debate_loop(
                         for s in history_sessions:
                             time_str = s["updated_at"][:16].replace("T", " ") if s["updated_at"] else t("unknown_time")
                             participants_str = ", ".join(s["participants"])
-                            hist_labels.append(f"{time_str} | {participants_str} | {t('messages_suffix').format(count=s['msg_count'])}")
+                            title = s.get("title", "")
+                            label = f"{time_str} | {participants_str} | {t('messages_suffix').format(count=s['msg_count'])}"
+                            if title:
+                                label = f"{title} | {label}"
+                            hist_labels.append(label)
                         hist_labels.append(t("back"))
 
                         hist_choice = select_menu_interactive(t("history"), hist_labels)
@@ -1048,6 +1159,20 @@ async def debate_loop(
                     print(f"\n{t('unknown_command').format(cmd=cmd)}\n")
                 continue
 
+            # 解析 @mention（@角色名 只让指定角色回复）— 必须在图片解析之前
+            mentioned_only = None
+            if len(participants) > 1 and user_input.startswith("@"):
+                mention_match = re.match(r"^@(\S+)\s*(.*)", user_input)
+                if mention_match:
+                    mention_name = mention_match.group(1)
+                    for p in participants:
+                        if (mention_name.lower() == p.role_name.lower()
+                            or mention_name == p.info.display_name
+                            or mention_name == p.info.emoji):
+                            mentioned_only = p
+                            user_input = mention_match.group(2) or user_input
+                            break
+
             # 解析图片附件（@路径 + Alt+V 剪贴板）
             clean_input, path_media = parse_media_from_input(user_input)
             media = clipboard_media + path_media
@@ -1071,7 +1196,9 @@ async def debate_loop(
 
             _max_spk = max_speakers_per_round or settings.max_speakers_per_round
             _turns = min(_max_spk, len(participants)) if _max_spk > 0 else len(participants)
-            async for participant, chunk, is_skip in moderator.run(user_input, max_turns=_turns, media=media or None):
+            if mentioned_only:
+                _turns = 1  # @mention 时只让一个人说
+            async for participant, chunk, is_skip in moderator.run(user_input, max_turns=_turns, media=media or None, mentioned_only=mentioned_only):
                 if is_skip:
                     # 清除当前角色之前输出的内容
                     if current_output_chars > 0:
@@ -1111,9 +1238,29 @@ async def debate_loop(
             elif not skip_happened:
                 print()
 
+            # 自动生成标题（只在第一轮、有用户消息时生成一次）
+            if not session_title and session.history:
+                first_user_msg = next(
+                    (m.content for m in session.history if m.role == MessageRole.USER), ""
+                )
+                if first_user_msg:
+                    try:
+                        from lifee.providers.base import MessageRole
+                        resp = await provider.chat(
+                            messages=[Message(
+                                role=MessageRole.USER,
+                                content=f"为以下对话生成一个简短标题（10字以内，中文，不要引号）：\n{first_user_msg[:200]}",
+                            )],
+                            max_tokens=30,
+                            temperature=0.3,
+                        )
+                        session_title = resp.content.strip().strip('"\'""')
+                    except Exception:
+                        session_title = first_user_msg[:20]
+
             # 自动保存会话
             participant_names = [p.info.display_name for p in participants]
-            session_store.save(session, participant_names)
+            session_store.save(session, participant_names, title=session_title)
 
             # 一轮结束，显示建议菜单
             print()  # 回答与建议菜单之间的空行

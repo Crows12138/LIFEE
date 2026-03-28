@@ -41,6 +41,7 @@ class Participant:
         self.knowledge_manager = knowledge_manager
         self.skill_set: SkillSet = role_manager.load_skills(role_name)
         self._load_info()
+        self._load_tools()
 
     def _load_info(self):
         """加载角色的显示信息"""
@@ -54,6 +55,18 @@ class Participant:
 
         # 加载 system prompt
         self.system_prompt = self.role_manager.load_role(self.role_name)
+
+    def _load_tools(self):
+        """加载角色配置的工具"""
+        info = self.role_manager.get_role_info(self.role_name)
+        tool_names = info.get("tools", [])
+        if tool_names:
+            from lifee.tools import get_tool_definitions, DefaultToolExecutor
+            self.tools = get_tool_definitions(tool_names)
+            self.tool_executor = DefaultToolExecutor()
+        else:
+            self.tools = []
+            self.tool_executor = None
 
     async def _search_knowledge(
         self, query: str, translated_keywords: str = ""
@@ -135,10 +148,16 @@ class Participant:
         )
 
         # 6. 调用 LLM
+        extra_kwargs = {}
+        if self.tools and self.tool_executor:
+            extra_kwargs["tools"] = self.tools
+            extra_kwargs["tool_executor"] = self.tool_executor
+
         async for chunk in self.provider.stream(
             messages=messages,
             system=system,
             temperature=0.7,
+            **extra_kwargs,
         ):
             yield chunk
 

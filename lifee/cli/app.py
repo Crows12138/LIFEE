@@ -428,7 +428,11 @@ async def main_menu(
         for s in history_sessions:
             time_str = s["updated_at"][:16].replace("T", " ") if s["updated_at"] else t("unknown_time")
             participants_str = ", ".join(s["participants"])
-            hist_labels.append(f"{time_str} | {participants_str} | {t('messages_suffix').format(count=s['msg_count'])}")
+            title = s.get("title", "")
+            label = f"{time_str} | {participants_str} | {t('messages_suffix').format(count=s['msg_count'])}"
+            if title:
+                label = f"{title} | {label}"
+            hist_labels.append(label)
         hist_labels.append(t("back"))
 
         hist_choice = select_menu_interactive(t("history"), hist_labels)

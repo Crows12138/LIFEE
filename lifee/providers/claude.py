@@ -198,17 +198,37 @@ class ClaudeProvider(LLMProvider):
         msg_system, msg_list = self._convert_messages(messages)
         final_system = self._build_system_prompt(system or msg_system)
 
+        # 提取 tool 参数
+        tools = kwargs.pop("tools", None)
+        tool_executor = kwargs.pop("tool_executor", None)
+
         # DEBUG: 设置环境变量 LIFEE_DEBUG=1 可查看 API 调用详情
         import os
         if os.environ.get("LIFEE_DEBUG"):
-            print(f"\n[CLAUDE DEBUG] model={self._model}, messages={len(msg_list)}")
+            print(f"\n[CLAUDE DEBUG] model={self._model}, messages={len(msg_list)}, tools={len(tools) if tools else 0}")
             system_len = sum(len(b["text"]) for b in final_system) if isinstance(final_system, list) else len(final_system or "")
             print(f"[CLAUDE DEBUG] system_prompt_len={system_len}")
             for i, m in enumerate(msg_list):
-                content_len = len(m["content"])
-                preview = m["content"][:80].replace('\n', '\\n')
+                content_len = len(m["content"]) if isinstance(m["content"], str) else len(str(m["content"]))
+                preview = (m["content"][:80].replace('\n', '\\n')) if isinstance(m["content"], str) else str(m["content"])[:80]
                 print(f"[CLAUDE DEBUG] msg[{i}] role={m['role']}, len={content_len}: {preview}...")
 
+        if tools and tool_executor:
+            async for text in self._stream_with_tools(
+                msg_list, final_system, tools, tool_executor,
+                max_tokens, temperature, **kwargs,
+            ):
+                yield text
+        else:
+            async for text in self._stream_simple(
+                msg_list, final_system, max_tokens, temperature, **kwargs,
+            ):
+                yield text
+
+    async def _stream_simple(
+        self, msg_list, final_system, max_tokens, temperature, **kwargs,
+    ) -> AsyncIterator[str]:
+        """普通流式请求（无 tool use）"""
         try:
             async with self._client.messages.stream(
                 model=self._model,
@@ -218,15 +238,110 @@ class ClaudeProvider(LLMProvider):
                 messages=msg_list,
                 **kwargs,
             ) as stream:
-                chunk_count = 0
                 async for text in stream.text_stream:
-                    chunk_count += 1
                     yield text
-
-                # DEBUG: 流结束信息
-                if os.environ.get("LIFEE_DEBUG"):
-                    print(f"\n[CLAUDE DEBUG] stream ended, chunks={chunk_count}")
         except anthropic.RateLimitError as e:
             raise RateLimitError(f"Claude 速率限制: {e}") from e
         except anthropic.InternalServerError as e:
             raise ServiceUnavailableError(f"Claude 服务不可用: {e}") from e
+
+    async def _stream_with_tools(
+        self, msg_list, final_system, tools, tool_executor,
+        max_tokens, temperature, max_rounds=5, **kwargs,
+    ) -> AsyncIterator[str]:
+        """带 tool use 的流式请求"""
+        # 转换 ToolDefinition 为 Claude API 格式
+        api_tools = [
+            {
+                "name": t.name,
+                "description": t.description,
+                "input_schema": t.input_schema,
+            }
+            for t in tools
+        ]
+
+        messages = list(msg_list)
+
+        for _ in range(max_rounds):
+            try:
+                response = await self._client.messages.create(
+                    model=self._model,
+                    max_tokens=max_tokens,
+                    temperature=temperature,
+                    system=final_system,
+                    messages=messages,
+                    tools=api_tools,
+                    stream=True,
+                    **kwargs,
+                )
+            except anthropic.RateLimitError as e:
+                raise RateLimitError(f"Claude 速率限制: {e}") from e
+            except anthropic.InternalServerError as e:
+                raise ServiceUnavailableError(f"Claude 服务不可用: {e}") from e
+
+            # 处理流式事件
+            content_blocks = []
+            current_tool_use = None
+            tool_input_json = ""
+            stop_reason = None
+
+            async for event in response:
+                if event.type == "content_block_start":
+                    if event.content_block.type == "text":
+                        content_blocks.append({"type": "text", "text": ""})
+                    elif event.content_block.type == "tool_use":
+                        current_tool_use = {
+                            "type": "tool_use",
+                            "id": event.content_block.id,
+                            "name": event.content_block.name,
+                            "input": {},
+                        }
+                        tool_input_json = ""
+                        content_blocks.append(current_tool_use)
+
+                elif event.type == "content_block_delta":
+                    if event.delta.type == "text_delta":
+                        yield event.delta.text
+                        if content_blocks and content_blocks[-1]["type"] == "text":
+                            content_blocks[-1]["text"] += event.delta.text
+                    elif event.delta.type == "input_json_delta":
+                        tool_input_json += event.delta.partial_json
+
+                elif event.type == "content_block_stop":
+                    if current_tool_use and tool_input_json:
+                        import json
+                        try:
+                            current_tool_use["input"] = json.loads(tool_input_json)
+                        except json.JSONDecodeError:
+                            current_tool_use["input"] = {}
+                        current_tool_use = None
+                        tool_input_json = ""
+
+                elif event.type == "message_delta":
+                    stop_reason = event.delta.stop_reason
+
+            if stop_reason != "tool_use":
+                break
+
+            # 执行工具调用
+            tool_results = []
+            for block in content_blocks:
+                if block["type"] == "tool_use":
+                    query_display = block["input"].get("query", block["name"])
+                    yield f"\n🔍 搜索: {query_display}\n"
+                    result = await tool_executor.execute(block["name"], block["input"])
+                    # 显示搜索结果摘要（取前 3 条）
+                    preview_lines = result.strip().split("\n\n")[:3]
+                    for line in preview_lines:
+                        first_line = line.split("\n")[0][:80]
+                        yield f"  • {first_line}\n"
+                    yield "\n"
+                    tool_results.append({
+                        "type": "tool_result",
+                        "tool_use_id": block["id"],
+                        "content": result[:2000],  # 截断避免 token 爆炸
+                    })
+
+            # 扩展对话继续生成
+            messages.append({"role": "assistant", "content": content_blocks})
+            messages.append({"role": "user", "content": tool_results})

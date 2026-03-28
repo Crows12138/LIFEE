@@ -127,6 +127,7 @@ class Moderator:
         user_input: str,
         max_turns: int = 10,
         media: Optional[list] = None,
+        mentioned_only: Optional[Participant] = None,
     ) -> AsyncIterator[Tuple[Participant, str, bool]]:
         """
         运行对话 - 统一的对话循环
@@ -177,9 +178,12 @@ class Moderator:
                 await asyncio.sleep(SPEAKER_DELAY)
 
             # 获取下一个发言者
-            participant = self.rotation.next()
+            if mentioned_only:
+                participant = mentioned_only
+            else:
+                participant = self.rotation.next()
             # 上一个发言者（第一个角色时为 None，表示回复用户）
-            prev_participant = self.rotation.previous if turn > 1 else None
+            prev_participant = self.rotation.previous if turn > 1 and not mentioned_only else None
 
             # 构建辩论上下文
             debate_context = DebateContext(
