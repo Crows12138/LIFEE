@@ -91,6 +91,23 @@ async def root():
     return {"status": "ok", "service": "LIFEE API"}
 
 
+@app.get("/test-llm")
+async def test_llm():
+    """测试 LLM provider 是否正常工作"""
+    try:
+        provider = _get_provider()
+        from lifee.providers.base import Message, MessageRole
+        response = await provider.chat(
+            messages=[Message(role=MessageRole.USER, content="Say hello in one word.")],
+            max_tokens=50,
+            temperature=0.5,
+        )
+        return {"provider": provider.name, "model": provider.model, "response": response.content}
+    except Exception as e:
+        import traceback
+        return {"error": str(e), "traceback": traceback.format_exc()}
+
+
 @app.post("/decision")
 async def decision(req: DecisionRequest, request: Request):
     """处理辩论请求 — 兼容前端的 /decision 接口"""
