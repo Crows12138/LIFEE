@@ -1,14 +1,58 @@
-"""命令行工具 — 让 Claude Code 通过 Bash 调用 LIFEE 角色"""
+"""命令行工具 — 让 Claude Code 通过 Bash 调用 LIFEE 角色
+
+每次调用必须指定 --session 名称，用于隔离不同场景的对话历史。
+Session 文件存储在 ~/.lifee/sessions/ask/<name>.json
+"""
 
 import asyncio
+import json
 import sys
 from pathlib import Path
 
 # 确保 lifee 包可导入
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
+# ask 专用 session 目录（与 LIFEE CLI 的 session 隔离）
+ASK_SESSIONS_DIR = Path.home() / ".lifee" / "sessions" / "ask"
 
-async def ask(role: str, question: str):
+
+def _load_ask_session(name: str):
+    """加载指定名称的 ask session"""
+    from lifee.sessions import Session
+    from lifee.providers.base import Message
+
+    ASK_SESSIONS_DIR.mkdir(parents=True, exist_ok=True)
+    session_file = ASK_SESSIONS_DIR / f"{name}.json"
+
+    if session_file.exists():
+        try:
+            data = json.loads(session_file.read_text(encoding="utf-8"))
+            session = Session(id=data.get("session_id"))
+            session.history = [Message.from_dict(m) for m in data.get("history", [])]
+            participants = data.get("participants", [])
+            return session, participants, session_file
+        except (json.JSONDecodeError, IOError):
+            pass
+
+    return Session(), [], session_file
+
+
+def _save_ask_session(session, participants, session_file):
+    """保存 ask session"""
+    from datetime import datetime
+
+    data = {
+        "session_id": session.id,
+        "updated_at": datetime.now().isoformat(),
+        "participants": participants,
+        "history": [msg.to_dict() for msg in session.history],
+    }
+    session_file.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+
+async def ask(role: str, question: str, session_name: str):
     """问单个角色"""
     from dotenv import load_dotenv
     load_dotenv(Path(__file__).parent.parent.parent / ".env")
@@ -18,7 +62,6 @@ async def ask(role: str, question: str):
     from lifee.roles import RoleManager
     from lifee.debate.participant import Participant
     from lifee.debate.moderator import Moderator
-    from lifee.sessions import Session, DebateSessionStore
 
     rm = RoleManager()
     provider = create_provider()
@@ -29,30 +72,19 @@ async def ask(role: str, question: str):
         print(f"角色 '{role}' 不存在。可用: {', '.join(available)}", file=sys.stderr)
         sys.exit(1)
 
-    # 加载当前 session
-    store = DebateSessionStore()
-    data = store.load()
-    if data:
-        full_session = store.restore_session(data)
-        participants_names = data.get("participants", [])
-    else:
-        full_session = Session()
-        participants_names = []
-
-    # 直接用完整 session
-    session = full_session
+    # 加载指定 session
+    session, participants_names, session_file = _load_ask_session(session_name)
 
     # 创建参与者
     google_key = os.getenv("GOOGLE_API_KEY")
     km = await rm.get_knowledge_manager(matched, google_api_key=google_key) if google_key else None
     participant = Participant(matched, provider, rm, knowledge_manager=km)
 
-    # 确保参与者名在列表中
     display_name = participant.info.display_name
     if display_name not in participants_names:
         participants_names.append(display_name)
 
-    # 运行（moderator.run 内部会自动往 session 添加消息）
+    # 运行
     moderator = Moderator([participant], session)
     async for p, chunk, is_skip in moderator.run(question, max_turns=1):
         if not is_skip and chunk:
@@ -60,11 +92,11 @@ async def ask(role: str, question: str):
             sys.stdout.flush()
     print()
 
-    # 保存更新后的 session
-    store.save(full_session, participants_names)
+    # 保存
+    _save_ask_session(session, participants_names, session_file)
 
 
-async def consult(roles: list[str], question: str):
+async def consult(roles: list[str], question: str, session_name: str):
     """多角色讨论"""
     from dotenv import load_dotenv
     load_dotenv(Path(__file__).parent.parent.parent / ".env")
@@ -75,13 +107,11 @@ async def consult(roles: list[str], question: str):
     from lifee.debate.participant import Participant
     from lifee.debate.moderator import Moderator
     from lifee.debate import moderator as mod_module
-    from lifee.sessions import Session, DebateSessionStore
 
     rm = RoleManager()
     provider = create_provider()
     available = rm.list_roles()
 
-    # 验证角色
     valid_roles = []
     for r in roles:
         matched = next((a for a in available if a.lower() == r.lower()), None)
@@ -91,17 +121,8 @@ async def consult(roles: list[str], question: str):
         print(f"没有有效角色。可用: {', '.join(available)}", file=sys.stderr)
         sys.exit(1)
 
-    # 加载当前 session
-    store = DebateSessionStore()
-    data = store.load()
-    if data:
-        full_session = store.restore_session(data)
-        participants_names = data.get("participants", [])
-    else:
-        full_session = Session()
-        participants_names = []
-
-    session = full_session
+    # 加载指定 session
+    session, participants_names, session_file = _load_ask_session(session_name)
 
     # 创建参与者
     participants = []
@@ -134,33 +155,50 @@ async def consult(roles: list[str], question: str):
     finally:
         mod_module.SPEAKER_DELAY = original_delay
 
-    # session 已经被 moderator.run() 更新了（内部 add_user_message + add_assistant_message）
-    # 直接保存
-    store.save(full_session, participants_names)
+    # 保存
+    _save_ask_session(session, participants_names, session_file)
+
+
+def list_sessions():
+    """列出所有 ask sessions"""
+    ASK_SESSIONS_DIR.mkdir(parents=True, exist_ok=True)
+    sessions = []
+    for f in sorted(ASK_SESSIONS_DIR.glob("*.json"), key=lambda x: x.stat().st_mtime, reverse=True):
+        try:
+            data = json.loads(f.read_text(encoding="utf-8"))
+            n = len(data.get("history", []))
+            p = ", ".join(data.get("participants", []))
+            updated = data.get("updated_at", "")[:16].replace("T", " ")
+            sessions.append(f"{f.stem} | {p} | {n} msgs | {updated}")
+        except (json.JSONDecodeError, IOError):
+            continue
+    if sessions:
+        print("\n".join(sessions))
+    else:
+        print("No sessions found.")
 
 
 def main():
-    if len(sys.argv) < 3:
-        print("用法:")
-        print("  python -m lifee.cli.ask <角色> <问题>")
-        print("  python -m lifee.cli.ask --consult <角色1,角色2,...> <问题>")
-        print()
-        print("示例:")
-        print("  python -m lifee.cli.ask turing \"什么是图灵机？\"")
-        print("  python -m lifee.cli.ask --consult turing,shannon \"信息和计算的关系？\"")
-        sys.exit(1)
+    if len(sys.argv) >= 2 and sys.argv[1] == "--list-sessions":
+        list_sessions()
+        return
 
-    if sys.argv[1] == "--consult":
-        if len(sys.argv) < 4:
-            print("用法: python -m lifee.cli.ask --consult <角色1,角色2,...> <问题>", file=sys.stderr)
-            sys.exit(1)
-        roles = sys.argv[2].split(",")
-        question = sys.argv[3]
-        asyncio.run(consult(roles, question))
+    import argparse
+
+    parser = argparse.ArgumentParser(description="LIFEE 角色咨询")
+    parser.add_argument("--session", "-s", required=True, help="Session 名称（隔离不同场景的对话）")
+    parser.add_argument("--consult", "-c", action="store_true", help="多角色讨论模式")
+    parser.add_argument("--list-sessions", action="store_true", help="列出所有 sessions")
+    parser.add_argument("role", help="角色名（多角色用逗号分隔）")
+    parser.add_argument("question", help="问题")
+
+    args = parser.parse_args()
+
+    if args.consult or "," in args.role:
+        roles = args.role.split(",")
+        asyncio.run(consult(roles, args.question, args.session))
     else:
-        role = sys.argv[1]
-        question = sys.argv[2]
-        asyncio.run(ask(role, question))
+        asyncio.run(ask(args.role, args.question, args.session))
 
 
 if __name__ == "__main__":
