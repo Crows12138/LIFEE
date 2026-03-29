@@ -45,8 +45,24 @@ class DecisionRequest(BaseModel):
 
 
 def _get_provider():
-    from lifee.cli.app import create_provider
-    return create_provider()
+    """创建 LLM Provider（不依赖 CLI 模块，避免 msvcrt 导入问题）"""
+    from lifee.config.settings import settings
+    provider_name = (os.getenv("LLM_PROVIDER") or settings.llm_provider).lower()
+
+    if provider_name == "gemini":
+        from lifee.providers import GeminiProvider
+        return GeminiProvider(
+            api_key=os.getenv("GOOGLE_API_KEY") or settings.google_api_key,
+            model=os.getenv("LLM_MODEL") or settings.llm_model or "gemini-2.0-flash",
+        )
+    elif provider_name == "claude":
+        from lifee.providers import ClaudeProvider
+        return ClaudeProvider(
+            api_key=os.getenv("ANTHROPIC_API_KEY") or settings.anthropic_api_key,
+            model=os.getenv("LLM_MODEL") or settings.llm_model or "claude-sonnet-4-20250514",
+        )
+    else:
+        raise ValueError(f"Unsupported provider for API: {provider_name}")
 
 
 def _match_role(persona_id: str, persona_name: str) -> Optional[str]:
