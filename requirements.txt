@@ -22,3 +22,7 @@ yfinance>=0.2.36       # 实时股票数据（美股/港股/A股）
 
 # 工具能力
 ddgs>=7.0.0            # DuckDuckGo 搜索（角色联网）
+
+# API
+fastapi>=0.100.0       # Web 框架
+uvicorn[standard]>=0.23.0  # ASGI 服务器
