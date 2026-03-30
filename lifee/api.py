@@ -147,18 +147,13 @@ async def _handle_decision(req: DecisionRequest, request: Request):
 
     # 映射角色
     participants = []
-    google_key = os.getenv("GOOGLE_API_KEY")
     for persona in req.personas:
         role_name = _match_role(persona.id, persona.name)
         if not role_name:
             continue
-        km = None
-        if google_key:
-            try:
-                km = await rm.get_knowledge_manager(role_name, google_api_key=google_key)
-            except Exception:
-                pass
-        p = Participant(role_name, provider, rm, knowledge_manager=km)
+        # Skip knowledge manager in API mode — knowledge.db doesn't exist on Render
+        # and rebuilding it per-request adds 20+ seconds of Gemini embedding calls
+        p = Participant(role_name, provider, rm, knowledge_manager=None)
         participants.append((persona.id, p))
 
     if not participants:
