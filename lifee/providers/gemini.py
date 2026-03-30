@@ -34,7 +34,7 @@ class GeminiProvider(LLMProvider):
         self._api_key = api_key
         self._model_name = model
         # Set short timeout to prevent tenacity from retrying 429s for 60+ seconds
-        self._client = genai.Client(api_key=api_key, http_options={"timeout": 45})
+        self._client = genai.Client(api_key=api_key, http_options={"timeout": 20})
 
     @property
     def name(self) -> str:
@@ -115,6 +115,8 @@ class GeminiProvider(LLMProvider):
                 raise RateLimitError(f"Gemini 速率限制: {e}") from e
             if "503" in error_str or "unavailable" in error_str or "overloaded" in error_str:
                 raise ServiceUnavailableError(f"Gemini 服务不可用: {e}") from e
+            if "timeout" in error_str or "timed out" in error_str:
+                raise RateLimitError(f"Gemini 连接超时: {e}") from e
             raise
 
         return ChatResponse(
@@ -166,6 +168,8 @@ class GeminiProvider(LLMProvider):
                 raise RateLimitError(f"Gemini 速率限制: {e}") from e
             if "503" in error_str or "unavailable" in error_str or "overloaded" in error_str:
                 raise ServiceUnavailableError(f"Gemini 服务不可用: {e}") from e
+            if "timeout" in error_str or "timed out" in error_str:
+                raise RateLimitError(f"Gemini 连接超时: {e}") from e
             raise
 
         for chunk in chunks:
