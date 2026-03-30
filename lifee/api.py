@@ -91,6 +91,14 @@ async def root():
     return {"status": "ok", "service": "LIFEE API"}
 
 
+@app.get("/debug-env")
+async def debug_env():
+    """显示环境变量（调试用）"""
+    key = os.getenv("GOOGLE_API_KEY", "NOT SET")
+    provider = os.getenv("LLM_PROVIDER", "NOT SET")
+    return {"GOOGLE_API_KEY": key[:10] + "..." if key != "NOT SET" else key, "LLM_PROVIDER": provider}
+
+
 @app.get("/test-llm")
 async def test_llm():
     """测试 LLM provider 是否正常工作"""
