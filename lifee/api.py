@@ -94,9 +94,16 @@ async def root():
 @app.get("/debug-env")
 async def debug_env():
     """显示环境变量（调试用）"""
+    import sys
     key = os.getenv("GOOGLE_API_KEY", "NOT SET")
     provider = os.getenv("LLM_PROVIDER", "NOT SET")
-    return {"GOOGLE_API_KEY": key[:10] + "..." if key != "NOT SET" else key, "LLM_PROVIDER": provider}
+    has_asyncio_timeout = hasattr(__import__("asyncio"), "timeout")
+    return {
+        "GOOGLE_API_KEY": key[:10] + "..." if key != "NOT SET" else key,
+        "LLM_PROVIDER": provider,
+        "python_version": sys.version,
+        "has_asyncio_timeout": has_asyncio_timeout,
+    }
 
 
 @app.get("/test-llm")
