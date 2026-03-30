@@ -32,7 +32,8 @@ class GeminiProvider(LLMProvider):
         """
         self._api_key = api_key
         self._model_name = model
-        self._client = genai.Client(api_key=api_key)
+        # Set short timeout to prevent tenacity from retrying 429s for 60+ seconds
+        self._client = genai.Client(api_key=api_key, http_options={"timeout": 45})
 
     @property
     def name(self) -> str:
