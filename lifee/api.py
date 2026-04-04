@@ -14,6 +14,7 @@ from typing import Optional
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
@@ -264,6 +265,12 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
     finally:
       if mod_module and original_delay is not None:
           mod_module.SPEAKER_DELAY = original_delay
+
+
+# 静态文件：服务前端页面
+_web_ui_dir = Path(__file__).parent.parent / "web" / "ui"
+if _web_ui_dir.exists():
+    app.mount("/", StaticFiles(directory=str(_web_ui_dir), html=True), name="frontend")
 
 
 if __name__ == "__main__":

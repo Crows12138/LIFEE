@@ -399,7 +399,9 @@
         ];
 
         // ✅ LIFEE API (JSON: { messages: [...], options: [...] })
-        const LIFEE_API = "https://lifee-api.guolinn.workers.dev/decision";
+        const LIFEE_API = (location.hostname === "localhost" || location.protocol === "file:")
+            ? "https://lifee-api.guolinn.workers.dev/decision"
+            : "/decision";
         const LIFEE_API_TIMEOUT_MS = 25000;
         const LIFEE_STREAM_TIMEOUT_MS = 40000;
 
