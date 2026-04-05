@@ -26,6 +26,10 @@ app = FastAPI(title="LIFEE API")
 _knowledge_managers: dict = {}
 _km_initialized = False
 
+# 会话缓存：session_id → (Session, Moderator, participants, last_access_time)
+_sessions: dict = {}
+_SESSION_TTL = 3600  # 1小时过期
+
 
 async def _init_knowledge():
     """启动时构建/加载所有角色的知识库索引"""
@@ -115,6 +119,7 @@ class DecisionRequest(BaseModel):
     personas: list[PersonaInput] = []
     context: str = ""
     moderator: bool = True  # 主持人预审开关，默认开启
+    sessionId: str = ""  # 会话 ID，空则新建
 
 
 def _get_provider():
@@ -253,13 +258,31 @@ async def _handle_decision(req: DecisionRequest, request: Request):
     mod_module.SPEAKER_DELAY = 0.5  # API 模式保留短延迟避免 rate limit
 
     try:
-        session = Session()
-        all_participants = [p for _, p in participants]
-        moderator = Moderator(all_participants, session, enable_moderator_check=False)
+        import time
+        # 清理过期会话
+        now = time.time()
+        expired = [k for k, v in _sessions.items() if now - v[3] > _SESSION_TTL]
+        for k in expired:
+            del _sessions[k]
+
+        # 复用或新建会话
+        sid = req.sessionId
+        if sid and sid in _sessions:
+            session, moderator_cached, participants_cached, _ = _sessions[sid]
+            all_participants = [p for _, p in participants]
+            moderator = moderator_cached
+            _sessions[sid] = (session, moderator, participants, now)
+        else:
+            from uuid import uuid4
+            session = Session()
+            all_participants = [p for _, p in participants]
+            moderator = Moderator(all_participants, session, enable_moderator_check=False)
+            sid = sid or str(uuid4())
+            _sessions[sid] = (session, moderator, participants, now)
 
         if stream:
             return StreamingResponse(
-                _stream_sse(moderator, participants, question, mod_module, original_delay),
+                _stream_sse(moderator, participants, question, mod_module, original_delay, sid),
                 media_type="text/event-stream",
                 headers={
                     "Cache-Control": "no-cache",
@@ -295,7 +318,7 @@ async def _handle_decision(req: DecisionRequest, request: Request):
             if not messages:
                 messages.append({"personaId": "system", "text": f"Debug: {chunk_count} chunks, question='{question[:50]}', participants={[p.info.display_name for _, p in participants]}"})
 
-            return {"messages": messages, "options": []}
+            return {"messages": messages, "options": [], "sessionId": sid}
 
     finally:
         mod_module.SPEAKER_DELAY = original_delay
@@ -309,14 +332,15 @@ def _find_persona_id(participant, participants_map):
     return "unknown"
 
 
-async def _stream_sse(moderator, participants, question, mod_module=None, original_delay=None):
+async def _stream_sse(moderator, participants, question, mod_module=None, original_delay=None, session_id=""):
     """生成 SSE 事件流"""
     all_participants = [p for _, p in participants]
     current_pid = ""
     current_text = ""
 
     try:
-      # 立即发送注释保持连接
+      # 立即发送 sessionId 和 keepalive
+      yield f"event: session\ndata: {json.dumps({'sessionId': session_id})}\n\n"
       yield ": keepalive\n\n"
       async for participant, chunk, is_skip in moderator.run(question, max_turns=len(all_participants)):
         if is_skip:

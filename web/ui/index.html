@@ -493,7 +493,10 @@
                 let data = dataStr;
                 try { data = JSON.parse(dataStr); } catch (_) {}
 
-                if (eventName === "message") {
+                if (eventName === "session") {
+                    // 保存 sessionId 用于多轮对话
+                    if (data?.sessionId) window.__lifeeSessionId = data.sessionId;
+                } else if (eventName === "message") {
                     if (data && typeof data === "object") await onMessage?.(data);
                 } else if (eventName === "options") {
                     const opts = (data && typeof data === "object") ? data.options : [];
@@ -1640,6 +1643,7 @@
             const [history, setHistory] = useState([]);
             const [options, setOptions] = useState([]);
             const [isDebating, setIsDebating] = useState(false);
+            const [sessionId, setSessionId] = useState("");
             const [inputValue, setInputValue] = useState('');
             const [tarotDecision, setTarotDecision] = useState('');
             const [tarotModalOpen, setTarotModalOpen] = useState(false);
@@ -1672,7 +1676,8 @@
                         situation: finalSituation,
                         userInput: cleanInput,
                         personas: debatePersonas.map(p => ({ id: p.id, name: p.name, knowledge: p.knowledge || '' })),
-                        context: contextBlock
+                        context: contextBlock,
+                        sessionId: sessionId
                     };
 
                     if (!payload.personas.length) {
@@ -1694,9 +1699,11 @@
                     // Prefer SSE streaming (single request, progressive persona outputs).
                     try {
                         await fetchLifeeDecisionStream(payload, handlers);
+                        if (window.__lifeeSessionId) setSessionId(window.__lifeeSessionId);
                     } catch (streamErr) {
                         console.warn('stream failed; fallback to progressive JSON calls', streamErr);
-                        await fetchLifeeDecisionProgressive(payload, handlers);
+                        const data = await fetchLifeeDecisionProgressive(payload, handlers);
+                        if (data?.sessionId) setSessionId(data.sessionId);
                     }
                 } catch (e) {
                     console.error(e);
