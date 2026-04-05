@@ -183,7 +183,17 @@ class RoleManager:
         return None
 
     def get_knowledge_db_path(self, role_name: str) -> Path:
-        """获取角色的知识库数据库路径"""
+        """获取角色的知识库数据库路径
+
+        如果设置了 KNOWLEDGE_DB_DIR 环境变量（如 Railway Volume），
+        则将 db 存到该目录，避免部署时丢失。
+        """
+        import os
+        db_dir = os.getenv("KNOWLEDGE_DB_DIR")
+        if db_dir:
+            p = Path(db_dir)
+            p.mkdir(parents=True, exist_ok=True)
+            return p / f"{role_name}.knowledge.db"
         role_dir = self.roles_dir / role_name
         return role_dir / "knowledge.db"
 
