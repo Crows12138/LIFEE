@@ -158,10 +158,14 @@ class RoleManager:
                     info["tools"] = [t.strip() for t in line.split(":**")[1].split(",")]
 
         # 从 i18n 获取当前语言的显示名（优先级最高）
-        from lifee.cli.i18n import t
-        i18n_name = t(f"role_{role_name}")
-        if i18n_name != f"role_{role_name}":
-            info["display_name"] = i18n_name
+        # 注意：在 API 模式（Linux）下 cli 模块不可用（依赖 msvcrt），跳过
+        try:
+            from lifee.cli.i18n import t
+            i18n_name = t(f"role_{role_name}")
+            if i18n_name != f"role_{role_name}":
+                info["display_name"] = i18n_name
+        except (ImportError, ModuleNotFoundError):
+            pass
 
         return info
 
