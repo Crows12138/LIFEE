@@ -31,62 +31,77 @@ _sessions: dict = {}
 _SESSION_TTL = 3600  # 1小时过期
 
 
+_RELEASE_URL = "https://github.com/Ruzhenzrose/LIFEE/releases/download/knowledge-v1"
+
+# GitHub Release 上可用的 db 文件
+_RELEASE_DBS = [
+    "drucker", "welch", "buffett", "munger", "audreyhepburn",
+    "krishnamurti", "turing", "shannon", "vonneumann",
+]
+
+
+def _download_db(role_name: str, dest: Path) -> bool:
+    """从 GitHub Release 下载 knowledge.db"""
+    import urllib.request
+    url = f"{_RELEASE_URL}/{role_name}.knowledge.db"
+    try:
+        print(f"[knowledge] Downloading {role_name}...", end=" ", flush=True)
+        urllib.request.urlretrieve(url, str(dest))
+        size_mb = dest.stat().st_size / 1024 / 1024
+        print(f"{size_mb:.0f}MB")
+        return True
+    except Exception as e:
+        print(f"failed ({e})")
+        return False
+
+
 async def _init_knowledge():
-    """启动时构建/加载所有角色的知识库索引"""
+    """启动时从 GitHub Release 下载预构建的知识库"""
     global _km_initialized
     if _km_initialized:
         return
     _km_initialized = True
 
-    google_key = os.getenv("GOOGLE_API_KEY", "")
-    if not google_key:
-        print("[knowledge] No GOOGLE_API_KEY, skipping RAG index")
-        return
-
     from lifee.roles import RoleManager
+    from lifee.memory import MemoryManager, create_embedding_provider
+
     rm = RoleManager()
 
-    # 只索引需要的角色，避免 Gemini embedding 速率限制
-    priority_roles = os.getenv("RAG_ROLES", "drucker,welch").split(",")
+    # 确定要加载哪些角色
+    priority_roles = os.getenv("RAG_ROLES", ",".join(_RELEASE_DBS)).split(",")
     target_roles = [r.strip() for r in priority_roles if r.strip()]
 
-    # 本地完整索引的 chunk 数（达到此数才算完整，跳过重建）
-    # 远端用文件名 key 的实际完整 chunk 数
-    EXPECTED_CHUNKS = {
-        "drucker": 1754, "welch": 1284, "buffett": 4927,
-        "munger": 3236, "audreyhepburn": 1595, "krishnamurti": 3027,
-        "lacan": 4172, "shannon": 1838, "turing": 913,
-        "vonneumann": 1876,
-    }
+    # embedding provider（用于搜索时生成 query embedding）
+    google_key = os.getenv("GOOGLE_API_KEY", "")
+    if not google_key:
+        print("[knowledge] No GOOGLE_API_KEY, skipping RAG")
+        return
+
+    try:
+        embedding = create_embedding_provider(google_api_key=google_key)
+    except Exception as e:
+        print(f"[knowledge] Failed to create embedding provider: {e}")
+        return
 
     for role_name in target_roles:
         try:
-            expected = EXPECTED_CHUNKS.get(role_name, 0)
+            db_path = rm.get_knowledge_db_path(role_name)
 
-            # 先不索引，看 db 是否已完整
-            km = await rm.get_knowledge_manager(
-                role_name, google_api_key=google_key, auto_index=False
-            )
-            if km:
-                stats = km.get_stats()
-                existing = stats.get("chunk_count", 0)
-                if expected > 0 and existing >= expected:
-                    _knowledge_managers[role_name] = km
-                    print(f"[knowledge] {role_name}: {existing} chunks (complete)")
+            # db 不存在且在 Release 上有 → 下载
+            if not db_path.exists() and role_name in _RELEASE_DBS:
+                db_path.parent.mkdir(parents=True, exist_ok=True)
+                if not _download_db(role_name, db_path):
                     continue
-                km.close()
 
-            # 不完整，需要补全
-            km = await rm.get_knowledge_manager(
-                role_name, google_api_key=google_key, auto_index=True
-            )
-            if km:
+            if db_path.exists():
+                role_info = rm.get_role_info(role_name)
+                knowledge_lang = role_info.get("knowledge_lang", "English")
+                km = MemoryManager(db_path, embedding, knowledge_lang=knowledge_lang)
                 stats = km.get_stats()
                 count = stats.get("chunk_count", 0)
                 if count > 0:
                     _knowledge_managers[role_name] = km
-                    status = "complete" if count >= expected else f"partial {count}/{expected}"
-                    print(f"[knowledge] {role_name}: {count} chunks ({status})")
+                    print(f"[knowledge] {role_name}: {count} chunks")
         except Exception as e:
             print(f"[knowledge] {role_name}: failed ({e})")
 
