@@ -42,7 +42,11 @@ async def _init_knowledge():
     from lifee.roles import RoleManager
     rm = RoleManager()
 
-    for role_name in rm.list_roles():
+    # 只索引需要的角色，避免 Gemini embedding 速率限制
+    priority_roles = os.getenv("RAG_ROLES", "drucker,welch").split(",")
+    target_roles = [r.strip() for r in priority_roles if r.strip()]
+
+    for role_name in target_roles:
         try:
             km = await rm.get_knowledge_manager(
                 role_name, google_api_key=google_key, auto_index=True
