@@ -345,20 +345,23 @@ async def _generate_options(provider, question: str, messages: list[dict]) -> li
     from lifee.providers.base import Message, MessageRole
 
     debate_text = "\n".join(f"{m['personaId']}: {m['text'][:200]}" for m in messages)
-    prompt = f"""根据以下辩论内容，生成 3-5 个用户可能想继续探讨的问题或行动建议。
+    prompt = f"""用户刚和几位专家讨论了一个问题。根据讨论内容，生成 3 个用户最可能想追问的后续问题。
 
-用户的问题：{question[:200]}
+用户的原始问题：{question[:200]}
 
-辩论摘要：
+讨论摘要：
 {debate_text[:1500]}
 
 要求：
-- 每个选项 8-20 个中文字（或 4-10 英文单词）
-- 具体、可行动，不要泛泛而谈
+- 只生成 3 个，不要多
+- 站在用户的角度，用"我"开头或口语化表达
+- 每个 8-16 个中文字（或 4-8 英文单词）
+- 要接地气，像用户会真的问出来的话
 - 用用户提问的语言
-- 只输出 JSON 数组，不要其他内容
+- 只输出 JSON 数组
 
-示例：["深入分析薪资差异", "如何评估团队氛围", "两个岗位的成长路径对比"]"""
+好的示例：["那我具体该怎么选？", "这两个哪个风险更大？", "能帮我算算收益差多少？"]
+差的示例：["探讨中游管道运输的影响", "分析成本结构差异", "研究化工企业冲击"]"""
 
     try:
         response = await provider.chat(
