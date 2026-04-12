@@ -1796,6 +1796,7 @@
             const verifyRef = useRef(null);
             const verifyWidgetRef = useRef(null);
             const [redeemCode, setRedeemCode] = useState('');
+            const [language, setLanguage] = useState(() => localStorage.getItem('lifee_lang') || '');
             const scrollRef = useRef(null);
             const inputFieldRef = useRef(null);
             const hasTarotMaster = selectedPersonas.some(p => p.id === 'tarot-master');
@@ -1830,7 +1831,8 @@
                         userInput: cleanInput,
                         personas: debatePersonas.map(p => ({ id: p.id, name: p.name })),
                         sessionId: sessionId,
-                        userId: user?.id || ""
+                        userId: user?.id || "",
+                        language: language
                     };
 
                     if (!payload.personas.length) {
@@ -2035,7 +2037,16 @@
                                     ))}
                                 </div>
                             )}
-                            {credits !== null && <div className="text-center text-xs text-neutral-400 mb-2">Credits: {credits}</div>}
+                            <div className="flex items-center justify-center gap-4 mb-2">
+                                {credits !== null && <span className="text-xs text-neutral-400">Credits: {credits}</span>}
+                                <select value={language} onChange={(e) => { setLanguage(e.target.value); localStorage.setItem('lifee_lang', e.target.value); }} className="text-xs text-neutral-400 bg-transparent border border-neutral-200 rounded px-2 py-1">
+                                    <option value="">Auto</option>
+                                    <option value="Chinese">中文</option>
+                                    <option value="English">English</option>
+                                    <option value="Japanese">日本語</option>
+                                    <option value="French">Français</option>
+                                </select>
+                            </div>
                             <div className="flex gap-3">
                                 <button disabled={isDebating} onClick={() => runRound(null)} className="hidden md:block flex-1 py-5 bg-blue-brand text-white rounded-full font-bold shadow-xl transition-all hover:translate-y-[-2px] disabled:opacity-50 uppercase tracking-widest text-xs">STAY SILENT</button>
                                 {hasTarotMaster && (

@@ -21,6 +21,7 @@ class DebateContext:
     speaking_order: int  # 当前发言顺序（1-based）
     total_speakers: int  # 总发言人数
     reply_to: Optional[ParticipantInfo] = None  # 正在回复谁（None=回复用户）
+    language: str = ""  # 用户偏好语言（空=跟用户语言走）
 
     def build_context_prompt(self) -> str:
         others = [
@@ -54,9 +55,13 @@ In the conversation history:
 
 Read the recent conversation carefully and engage with its actual content.
 
-Always reply in the same language the user is using.
+{lang_instruction}
 
-Note: the system will wrap your reply in message tags automatically — just speak directly, without adding any name, emoji, XML tag, or separator at the start."""
+Note: the system will wrap your reply in message tags automatically — just speak directly, without adding any name, emoji, XML tag, or separator at the start.""".format(lang_instruction=(
+            f"Reply in {self.language}."
+            if self.language else
+            "Always reply in the same language the user is using."
+        ))
 
         # 交互指导：第一个发言者 vs 后续发言者
         if not self.reply_to:

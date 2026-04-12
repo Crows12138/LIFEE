@@ -318,6 +318,7 @@ class DecisionRequest(BaseModel):
     moderator: bool = True  # 主持人预审开关，默认开启
     sessionId: str = ""  # 会话 ID，空则新建
     userId: str = ""     # Supabase user ID（登录用户）
+    language: str = ""   # 偏好语言（Chinese/English/空=自动）
 
 
 def _get_provider():
@@ -582,7 +583,7 @@ async def _handle_decision(req: DecisionRequest, request: Request):
         else:
             session = Session()
             all_participants = [p for _, p in participants]
-            moderator = Moderator(all_participants, session, enable_moderator_check=False)
+            moderator = Moderator(all_participants, session, enable_moderator_check=False, language=req.language)
             sid = sid or str(uuid4())
             _sessions[sid] = (session, moderator, participants, now)
 

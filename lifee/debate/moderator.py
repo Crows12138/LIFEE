@@ -116,6 +116,7 @@ class Moderator:
         session: Session,
         user_memory_context: Optional[str] = None,
         enable_moderator_check: bool = True,
+        language: str = "",
     ):
         self.participants = participants
         self.session = session
@@ -123,6 +124,7 @@ class Moderator:
         self.rotation = SpeakerRotation(participants, randomize_first=True)
         self.user_memory_context = user_memory_context  # 用户记忆上下文
         self.enable_moderator_check = enable_moderator_check  # 主持人预审开关
+        self.language = language  # 用户偏好语言
 
     async def check_clarification(self, user_input: str) -> str | None:
         """主持人预审：判断用户输入是否需要补充信息。
@@ -258,6 +260,7 @@ class Moderator:
                 speaking_order=turn,
                 total_speakers=num_participants,
                 reply_to=prev_participant.info if prev_participant else None,
+                language=self.language,
             )
 
             # 获取当前对话历史
