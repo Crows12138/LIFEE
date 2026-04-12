@@ -36,8 +36,8 @@ _SESSION_TTL = 3600  # 1小时过期
 FREE_CREDITS = 7
 REDEEM_CREDITS = 100
 
-_SUPABASE_URL = os.getenv("SUPABASE_URL", "")
-_SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
+_SUPABASE_URL = os.getenv("SUPABASE_URL", "").strip('"')
+_SUPABASE_KEY = os.getenv("SUPABASE_KEY", "").strip('"')
 _SB_HEADERS = {
     "apikey": _SUPABASE_KEY,
     "Authorization": f"Bearer {_SUPABASE_KEY}",
