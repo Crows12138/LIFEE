@@ -226,7 +226,7 @@ class Participant:
 
         # 知识库上下文
         if knowledge_context:
-            parts.append(f"相关知识：{knowledge_context}")
+            parts.append(f"Reference knowledge (use ONLY if directly relevant to the user's current question — ignore if unrelated):\n{knowledge_context}")
 
         return "\n\n".join(parts)
 
