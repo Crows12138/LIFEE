@@ -1780,7 +1780,8 @@
             ensureSession,
             persistMessage,
             buildContextBlock,
-            userAvatar
+            userAvatar,
+            user
         }) => {
             const [history, setHistory] = useState([]);
             const [options, setOptions] = useState([]);
@@ -1803,12 +1804,13 @@
 
             useEffect(() => { if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight; }, [history]);
 
-            // 页面加载时拉取余额（uid 在 httponly cookie 里，自动带上）
+            // 页面加载时拉取余额
             useEffect(() => {
-                fetch('/credits', { credentials: 'include' }).then(r => r.json()).then(d => {
+                const url = user?.id ? `/credits?userId=${user.id}` : '/credits';
+                fetch(url, { credentials: 'include' }).then(r => r.json()).then(d => {
                     if (typeof d.balance === 'number') setCredits(d.balance);
                 }).catch(() => {});
-            }, []);
+            }, [user]);
 
             const runRound = async (userInput = null) => {
                 setIsDebating(true);
@@ -1827,7 +1829,8 @@
                         situation: situation || "Start the internal debate.",
                         userInput: cleanInput,
                         personas: debatePersonas.map(p => ({ id: p.id, name: p.name })),
-                        sessionId: sessionId
+                        sessionId: sessionId,
+                        userId: user?.id || ""
                     };
 
                     if (!payload.personas.length) {
@@ -2126,7 +2129,7 @@
                                             method: 'POST',
                                             headers: { 'Content-Type': 'application/json' },
                                             credentials: 'include',
-                                            body: JSON.stringify({ code: redeemCode })
+                                            body: JSON.stringify({ code: redeemCode, userId: user?.id || "" })
                                         }).then(r => r.json());
                                         if (res.ok) {
                                             setCredits(res.balance);
@@ -2879,6 +2882,7 @@
                         persistMessage={persistMessage}
                         buildContextBlock={buildContextBlock}
                         userAvatar={userAvatar}
+                        user={user}
                     />
                 );
                 if (view === 'summary') return <div className="text-center py-32 md:py-48 px-4 animate-in space-y-8 md:space-y-10 max-w-2xl mx-auto"><div className="text-5xl md:text-7xl animate-bounce">🌱</div><h2 className="text-3xl md:text-5xl font-serif italic text-[#1A1A1A] tracking-tight">Pattern Observed</h2><button onClick={handleNewChat} className="px-12 md:px-16 py-5 md:py-6 bg-blue-brand text-white rounded-full font-black shadow-xl uppercase tracking-widest text-[9px] md:text-[10px] hover:shadow-2xl transition-all">Start New Chapter</button></div>;

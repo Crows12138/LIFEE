@@ -317,6 +317,7 @@ class DecisionRequest(BaseModel):
     context: str = ""
     moderator: bool = True  # 主持人预审开关，默认开启
     sessionId: str = ""  # 会话 ID，空则新建
+    userId: str = ""     # Supabase user ID（登录用户）
 
 
 def _get_provider():
@@ -455,28 +456,34 @@ async def test_llm():
 # ---- Credits API ----
 
 @app.get("/credits")
-async def get_credits(request: Request, response: Response):
-    """查询余额（从 cookie 读 uid，无 cookie 时用 IP）"""
-    uid = await _resolve_uid(request)
-    if not request.cookies.get(_COOKIE_NAME):
-        # 没有 cookie → 种一个，并迁移 IP 余额
-        new_uid = str(uuid4())
-        await _migrate_balance(uid, new_uid)
-        _set_uid_cookie(response, new_uid)
-        uid = new_uid
+async def get_credits(request: Request, response: Response, userId: str = ""):
+    """查询余额（登录用户 → cookie → IP）"""
+    if userId:
+        uid = f"user:{userId}"
+    else:
+        uid = await _resolve_uid(request)
+        if not request.cookies.get(_COOKIE_NAME):
+            new_uid = str(uuid4())
+            await _migrate_balance(uid, new_uid)
+            _set_uid_cookie(response, new_uid)
+            uid = new_uid
     return {"balance": await _get_balance(uid)}
 
 
 class RedeemRequest(BaseModel):
     code: str
+    userId: str = ""
 
 
 @app.post("/credits/redeem")
 async def redeem(req: RedeemRequest, request: Request):
     """兑换码充值"""
-    uid = await _resolve_uid(request)
-    if not uid:
-        return {"ok": False, "message": "no session", "balance": 0}
+    if req.userId:
+        uid = f"user:{req.userId}"
+    else:
+        uid = await _resolve_uid(request)
+        if not uid:
+            return {"ok": False, "message": "no session", "balance": 0}
     ok, msg = await _redeem(uid, req.code.strip().upper())
     return {"ok": ok, "message": msg, "balance": await _get_balance(uid)}
 
@@ -517,11 +524,13 @@ async def _handle_decision(req: DecisionRequest, request: Request):
     rm = RoleManager()
     provider = _get_provider()
 
-    # ---- Credits 检查（cookie → IP 双重标识） ----
-    uid = await _resolve_uid(request)  # 合法 cookie uid 或 "ip:x.x.x.x"
+    # ---- Credits 检查（登录用户 → cookie → IP） ----
+    if req.userId:
+        uid = f"user:{req.userId}"  # 登录用户：用 Supabase user ID
+    else:
+        uid = await _resolve_uid(request)  # 游客：cookie 或 IP
     _need_set_cookie = not request.cookies.get(_COOKIE_NAME)
     if _need_set_cookie:
-        # 无 cookie → 用 IP uid 查余额，后面种 cookie 时迁移
         _new_cookie_uid = str(uuid4())
     speakers = len([p for p in req.personas if p.id != "tarot-master"])
     balance = await _get_balance(uid)
