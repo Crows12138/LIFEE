@@ -1798,11 +1798,10 @@
             const [redeemCode, setRedeemCode] = useState('');
             const [language, setLanguage] = useState(() => localStorage.getItem('lifee_lang') || '');
             const detectLang = (text) => {
-                if (!text) return 'English';
-                const jp = (text.match(/[\u3040-\u30ff]/g) || []).length;
-                if (jp > 2) return 'Japanese';
-                const cjk = (text.match(/[\u4e00-\u9fff]/g) || []).length;
-                if (cjk / text.length > 0.3) return 'Chinese';
+                const ch = (text || '').trim()[0] || '';
+                if (/[\u3040-\u30ff]/.test(ch)) return 'Japanese';
+                if (/[\uac00-\ud7af]/.test(ch)) return 'Korean';
+                if (/[\u4e00-\u9fff]/.test(ch)) return 'Chinese';
                 return 'English';
             };
             const scrollRef = useRef(null);
