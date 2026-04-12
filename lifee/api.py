@@ -390,9 +390,14 @@ async def debug_env():
     key = os.getenv("GOOGLE_API_KEY", "NOT SET")
     provider = os.getenv("LLM_PROVIDER", "NOT SET")
     has_asyncio_timeout = hasattr(__import__("asyncio"), "timeout")
+    sb_url = os.getenv("SUPABASE_URL", "NOT SET")
     return {
         "GOOGLE_API_KEY": key[:10] + "..." if key != "NOT SET" else key,
         "LLM_PROVIDER": provider,
+        "API_LLM_PROVIDER": os.getenv("API_LLM_PROVIDER", "NOT SET"),
+        "SUPABASE_URL": sb_url,
+        "SUPABASE_URL_len": len(sb_url),
+        "SUPABASE_URL_starts_with_quote": sb_url.startswith('"'),
         "python_version": sys.version,
         "has_asyncio_timeout": has_asyncio_timeout,
     }
