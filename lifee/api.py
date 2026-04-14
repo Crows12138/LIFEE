@@ -34,7 +34,7 @@ _SESSION_TTL = 3600  # 1小时过期
 
 # ---- Credits 系统（Supabase 持久化） ----
 GUEST_CREDITS = 6
-USER_CREDITS = 11
+REGISTER_BONUS = 7   # 注册奖励（叠加在 Guest 剩余余额上）
 REDEEM_CREDITS = 100
 
 _SUPABASE_URL = os.getenv("SUPABASE_URL", "").strip('"')
@@ -48,10 +48,9 @@ _SB_HEADERS = {
 
 
 async def _get_balance(uid: str) -> int:
-    """获取余额，新用户自动创建并给免费额度（注册用户11，游客6）"""
-    initial = USER_CREDITS if uid.startswith("user:") else GUEST_CREDITS
+    """获取余额，新用户自动创建并给免费额度"""
     if not _SUPABASE_URL:
-        return initial
+        return REGISTER_BONUS if uid.startswith("user:") else GUEST_CREDITS
     import httpx
     async with httpx.AsyncClient() as c:
         r = await c.get(
@@ -61,8 +60,9 @@ async def _get_balance(uid: str) -> int:
         rows = r.json()
         if rows:
             return rows[0]["balance"]
-        # 新用户 → 插入
-        r2 = await c.post(
+        # 新用户 → 插入（注册用户只给 bonus，Guest 给完整额度）
+        initial = REGISTER_BONUS if uid.startswith("user:") else GUEST_CREDITS
+        await c.post(
             f"{_SUPABASE_URL}/rest/v1/user_credits",
             headers=_SB_HEADERS,
             json={"uid": uid, "balance": initial},
@@ -644,10 +644,21 @@ async def _handle_decision(req: DecisionRequest, request: Request):
     provider = _get_provider()
 
     # ---- Credits 检查（登录用户 → cookie → IP） ----
+    guest_uid = await _resolve_uid(request)  # Guest 的 cookie/IP uid
     if req.userId:
-        uid = f"user:{req.userId}"  # 登录用户：用 Supabase user ID
+        uid = f"user:{req.userId}"  # 登录用户
+        # Guest→注册 余额合并：首次以注册身份登录时，把 Guest 剩余余额加到注册 bonus 上
+        if _SUPABASE_URL:
+            import httpx
+            async with httpx.AsyncClient() as c:
+                r = await c.get(f"{_SUPABASE_URL}/rest/v1/user_credits?uid=eq.{uid}&select=balance", headers=_SB_HEADERS)
+                if not r.json():
+                    # user:xxx 不存在 → 首次注册，合并 Guest 余额
+                    guest_bal = await _get_balance(guest_uid)
+                    merged = guest_bal + REGISTER_BONUS
+                    await c.post(f"{_SUPABASE_URL}/rest/v1/user_credits", headers=_SB_HEADERS, json={"uid": uid, "balance": merged})
     else:
-        uid = await _resolve_uid(request)  # 游客：cookie 或 IP
+        uid = guest_uid
     _need_set_cookie = not request.cookies.get(_COOKIE_NAME)
     if _need_set_cookie:
         _new_cookie_uid = str(uuid4())
