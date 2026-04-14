@@ -271,10 +271,13 @@ class OpenAICompatProvider(LLMProvider):
             ]}
             msg_list.append(assistant_msg)
 
-            # 执行每个 tool call
+            # 执行每个 tool call，显示状态
             for tc in tool_calls_acc.values():
                 try:
                     args = json.loads(tc["arguments"]) if tc["arguments"] else {}
+                    # 显示搜索提示
+                    query_preview = args.get("query", tc["name"])[:50]
+                    yield f"\n\n🔍 *Searching: {query_preview}...*\n\n"
                     result = await tool_executor.execute(tc["name"], args)
                 except Exception as e:
                     result = f"Tool error: {e}"
