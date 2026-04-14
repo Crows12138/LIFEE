@@ -134,7 +134,7 @@ class Moderator:
         """
         if not self.enable_moderator_check:
             return None
-        if self.round_number > 0:
+        if self.round_number > 3:  # 前3轮可以追问，之后不再追问
             return None
         if not user_input or len(user_input.strip()) < 5:
             return None
@@ -144,23 +144,24 @@ class Moderator:
         provider = self.participants[0].provider
         names = "、".join(p.info.display_name for p in self.participants)
 
-        prompt = f"""你是一场深度讨论的主持人。{names} 即将就用户的问题展开讨论。
-你需要判断：用户提供的信息是否足够让专家们给出有针对性的建议？
+        prompt = f"""You are deciding whether to ask follow-up questions before {names} discuss the user's topic.
 
-用户的问题：
+User said:
 {user_input}
 
-判断规则：
-- 如果问题已经足够具体（包含了关键背景信息），直接输出 PASS
-- 如果缺少关键信息导致专家们只能泛泛而谈，生成 2-3 个温和自然的追问
+Rules:
+- If the question is already specific enough (contains key context), output: PASS
+- If key details are missing that would make the advice generic, ask 2-3 casual follow-up questions
+- ONLY ask when truly needed. Simple greetings, clear questions, or specific scenarios → PASS
 
-如果需要追问：
-- 语气温和、像朋友聊天，不要像问卷调查
-- 每个问题给出 2-3 个选项，让用户轻松选择或自由回答
-- 不要超过 3 个问题
-- 开头用一句话自然过渡
+If follow-up is needed:
+- Sound like a curious friend, NOT a survey or intake form
+- Give 2-3 options per question so the user can quickly pick
+- Max 3 questions
+- Start with a brief, warm transition line
+- Reply in the same language as the user
 
-示例：
+Example:
 想更好地帮你分析，能先聊几个小问题吗？
 
 1. 你目前大概处于什么阶段？
@@ -169,7 +170,7 @@ class Moderator:
 2. 你最在意的是什么？
    A. 收入和稳定  B. 成长和学习  C. 自由和生活质量
 
-如果信息已充分，只输出：PASS"""
+If info is sufficient, just output: PASS"""
 
         try:
             response = await provider.chat(
@@ -218,6 +219,14 @@ class Moderator:
 
         # 1. 添加用户消息到会话
         self.session.add_user_message(user_input, media=media)
+
+        # 1.5 追问检查：信息不够时先追问，暂停角色发言
+        followup = await self._moderator_pre_check(user_input)
+        if followup:
+            # 用第一个角色身份发出追问（更自然）
+            self.session.add_assistant_message(followup, name="moderator")
+            yield (self.participants[0], followup, False)
+            return  # 追问后不继续辩论，等用户回复
 
         # 获取所有参与者信息（用于构建上下文）
         all_participants_info = [p.info for p in self.participants]
