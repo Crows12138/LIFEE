@@ -542,13 +542,12 @@ async def _ensure_chat_session(session_id: str, user_id: str, title: str = "New 
 @app.get("/sessions")
 async def list_sessions(request: Request, userId: str = ""):
     """列出用户的会话"""
-    if not _SUPABASE_URL:
+    if not _SUPABASE_URL or not userId:
         return {"sessions": []}
-    uid = f"user:{userId}" if userId else await _resolve_uid(request)
     import httpx
     async with httpx.AsyncClient() as c:
         r = await c.get(
-            f"{_SUPABASE_URL}/rest/v1/chat_sessions?user_id=eq.{uid}&select=id,title,personas,updated_at&order=updated_at.desc&limit=20",
+            f"{_SUPABASE_URL}/rest/v1/chat_sessions?user_id=eq.{userId}&select=id,title,personas,updated_at&order=updated_at.desc&limit=20",
             headers=_SB_HEADERS,
         )
         return {"sessions": r.json()}
@@ -658,14 +657,16 @@ async def _handle_decision(req: DecisionRequest, request: Request):
             moderator = Moderator(all_participants, session, enable_moderator_check=False, language=req.language)
             sid = sid or str(uuid4())
             _sessions[sid] = (session, moderator, participants, now)
-            # 存档：创建 chat_session
+            # 存档：创建 chat_session（用 Supabase user ID，不是 credits uid）
             persona_names = [p.info.display_name for _, p in participants]
             title = (req.userInput or req.situation or "New Chat")[:50]
-            await _ensure_chat_session(sid, uid, title, persona_names)
+            chat_user_id = req.userId or None  # Supabase UUID
+            if chat_user_id:
+                await _ensure_chat_session(sid, chat_user_id, title, persona_names)
 
         if stream:
             resp = StreamingResponse(
-                _stream_sse(moderator, participants, question, mod_module, original_delay, sid, provider, session, uid),
+                _stream_sse(moderator, participants, question, mod_module, original_delay, sid, provider, session, uid, req.userId),
                 media_type="text/event-stream",
                 headers={
                     "Cache-Control": "no-cache",
@@ -707,14 +708,16 @@ async def _handle_decision(req: DecisionRequest, request: Request):
             # 扣 credits + 存档
             seq = 0
             question_text = req.userInput or req.situation or ""
-            if question_text:
+            chat_user_id = req.userId or None
+            if question_text and chat_user_id:
                 seq += 1
-                await _save_message(sid, uid, "user", question_text, seq=seq)
+                await _save_message(sid, chat_user_id, "user", question_text, seq=seq)
             for msg in messages:
                 if msg.get("personaId") not in ("system", "moderator") and msg.get("text", "").strip():
                     await _deduct(uid)
-                    seq += 1
-                    await _save_message(sid, uid, "assistant", msg["text"], persona_id=msg["personaId"], seq=seq)
+                    if chat_user_id:
+                        seq += 1
+                        await _save_message(sid, chat_user_id, "assistant", msg["text"], persona_id=msg["personaId"], seq=seq)
 
             data = {"messages": messages, "options": options, "sessionId": sid, "balance": await _get_balance(uid)}
             resp = JSONResponse(data)
@@ -742,7 +745,7 @@ def _find_persona_id(participant, participants_map):
     return "unknown"
 
 
-async def _stream_sse(moderator, participants, question, mod_module=None, original_delay=None, session_id="", provider=None, session=None, uid="anonymous"):
+async def _stream_sse(moderator, participants, question, mod_module=None, original_delay=None, session_id="", provider=None, session=None, uid="anonymous", chat_user_id=""):
     """生成 SSE 事件流（逐 chunk 实时推送）"""
     all_participants = [p for _, p in participants]
     current_pid = ""
@@ -755,10 +758,10 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
       current_text = ""  # 收集当前角色的完整回复
       seq = 0
 
-      # 存档用户消息
-      if question:
+      # 存档用户消息（仅登录用户）
+      if question and chat_user_id:
           seq += 1
-          await _save_message(session_id, uid, "user", question, seq=seq)
+          await _save_message(session_id, chat_user_id, "user", question, seq=seq)
 
       async for participant, chunk, is_skip in moderator.run(question, max_turns=len(all_participants)):
         if is_skip:
@@ -768,8 +771,9 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
             if current_pid:
                 if has_content:
                     await _deduct(uid)
-                    seq += 1
-                    await _save_message(session_id, uid, "assistant", current_text.strip(), persona_id=current_pid, seq=seq)
+                    if chat_user_id:
+                        seq += 1
+                        await _save_message(session_id, chat_user_id, "assistant", current_text.strip(), persona_id=current_pid, seq=seq)
                 yield f"event: messageEnd\ndata: {json.dumps({'personaId': current_pid})}\n\n"
             current_pid = pid
             has_content = False
@@ -783,8 +787,9 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
       if current_pid:
           if has_content:
               await _deduct(uid)
-              seq += 1
-              await _save_message(session_id, uid, "assistant", current_text.strip(), persona_id=current_pid, seq=seq)
+              if chat_user_id:
+                  seq += 1
+                  await _save_message(session_id, chat_user_id, "assistant", current_text.strip(), persona_id=current_pid, seq=seq)
           yield f"event: messageEnd\ndata: {json.dumps({'personaId': current_pid})}\n\n"
 
       # 生成后续选项
