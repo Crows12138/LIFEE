@@ -1,7 +1,7 @@
 ﻿const { useState, useEffect, useRef } = React;
 const { Icon } = window;
 
-const AppLayout = ({ children, activeView, setView, user, isAdmin, onOpenAdmin, onLogin, onSignOut, onNewChat, savedSessions = [], setSessionMessages, setSessionId }) => {
+const AppLayout = ({ children, activeView, setView, user, isAdmin, onOpenAdmin, onLogin, onSignOut, onNewChat, savedSessions = [], setSavedSessions, setSessionMessages, setSessionId }) => {
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const scrollContainerRef = useRef(null);
@@ -62,18 +62,28 @@ const AppLayout = ({ children, activeView, setView, user, isAdmin, onOpenAdmin, 
                     <nav className="space-y-1">
                         <div className={`text-[10px] uppercase font-bold tracking-widest opacity-30 px-4 mb-2 ${isCollapsed ? 'md:hidden' : 'block'}`}>Archives</div>
                         {savedSessions.length > 0 ? savedSessions.slice(0, 10).map(s => (
-                            <button key={s.id} onClick={async () => {
-                                const res = await fetch(`/sessions/${s.id}/messages`, { credentials: 'include' }).then(r => r.json());
-                                if (res?.messages) {
-                                    setSessionMessages(res.messages.map(m => ({ personaId: m.persona_id || m.role, text: m.content })));
-                                    setSessionId(s.id);
-                                    setView('debate');
-                                }
-                                setIsMobileMenuOpen(false);
-                            }} className={`w-full text-left rounded-xl hover:bg-white/60 transition-colors flex items-center ${isCollapsed ? 'md:p-3 md:justify-center' : 'px-4 py-2.5 text-xs'}`}>
-                                <Icon name="MessageSquare" size={14} className={isCollapsed ? "md:text-blue-brand" : "mr-2 opacity-40 flex-shrink-0"} />
-                                <span className={`${isCollapsed ? 'md:hidden' : 'block'} truncate opacity-60`}>{s.title || 'Untitled'}</span>
-                            </button>
+                            <div key={s.id} className={`group w-full text-left rounded-xl hover:bg-white/60 transition-colors flex items-center ${isCollapsed ? 'md:p-3 md:justify-center' : 'px-4 py-2.5 text-xs'}`}>
+                                <button onClick={async () => {
+                                    const res = await fetch(`/sessions/${s.id}/messages`, { credentials: 'include' }).then(r => r.json());
+                                    if (res?.messages) {
+                                        setSessionMessages(res.messages.map(m => ({ personaId: m.persona_id || m.role, text: m.content })));
+                                        setSessionId(s.id);
+                                        setView('debate');
+                                    }
+                                    setIsMobileMenuOpen(false);
+                                }} className="flex items-center flex-1 min-w-0">
+                                    <Icon name="MessageSquare" size={14} className={isCollapsed ? "md:text-blue-brand" : "mr-2 opacity-40 flex-shrink-0"} />
+                                    <span className={`${isCollapsed ? 'md:hidden' : 'block'} truncate opacity-60`}>{s.title || 'Untitled'}</span>
+                                </button>
+                                <button onClick={async (e) => {
+                                    e.stopPropagation();
+                                    if (!confirm('Delete this conversation?')) return;
+                                    await fetch(`/sessions/${s.id}`, { method: 'DELETE', credentials: 'include' });
+                                    setSavedSessions(prev => prev.filter(x => x.id !== s.id));
+                                }} className={`opacity-0 group-hover:opacity-40 hover:!opacity-100 hover:text-red-500 transition-all ml-1 flex-shrink-0 ${isCollapsed ? 'md:hidden' : ''}`}>
+                                    <Icon name="Trash2" size={12} />
+                                </button>
+                            </div>
                         )) : (
                             <div className={`px-4 py-2 text-xs opacity-30 italic ${isCollapsed ? 'md:hidden' : 'block'}`}>No conversations yet</div>
                         )}

@@ -599,6 +599,21 @@ async def get_session_messages(session_id: str):
         return {"messages": r.json()}
 
 
+@app.delete("/sessions/{session_id}")
+async def delete_session(session_id: str):
+    """删除会话及其消息"""
+    if not _SUPABASE_URL:
+        return {"ok": False}
+    try:
+        import httpx
+        async with httpx.AsyncClient() as c:
+            await c.delete(f"{_SUPABASE_URL}/rest/v1/chat_messages?session_id=eq.{session_id}", headers=_SB_HEADERS)
+            await c.delete(f"{_SUPABASE_URL}/rest/v1/chat_sessions?id=eq.{session_id}", headers=_SB_HEADERS)
+        return {"ok": True}
+    except Exception:
+        return {"ok": False}
+
+
 # ---- Decision API ----
 
 @app.post("/decision")
