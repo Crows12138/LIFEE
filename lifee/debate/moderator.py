@@ -221,7 +221,7 @@ If info is sufficient, just output: PASS"""
         self.session.add_user_message(user_input, media=media)
 
         # 1.5 追问检查：信息不够时先追问，暂停角色发言
-        followup = await self._moderator_pre_check(user_input)
+        followup = await self.check_clarification(user_input)
         if followup:
             # 用第一个角色身份发出追问（更自然）
             self.session.add_assistant_message(followup, name="moderator")
