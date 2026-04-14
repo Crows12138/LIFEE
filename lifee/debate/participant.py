@@ -188,16 +188,20 @@ class Participant:
         """
         构建包含知识库上下文和辩论上下文的 system prompt
 
-        注入顺序：
+        注入顺序（重要性从低到高，最后的影响力最大）：
         1. 角色定义 (SOUL + IDENTITY + core skills)
-        2. 触发技能 (Tier 2, 基于用户输入)
-        3. 实时市场数据（仅投资技能触发时）
-        4. 用户记忆
-        5. 辩论上下文
+        2. RAG 知识库（参考资料，放前面降低影响力）
+        3. 触发技能 (Tier 2)
+        4. 实时市场数据
+        5. 用户记忆
         6. 最近对话记录
-        7. RAG 知识库
+        7. 辩论上下文（含语言指令等关键规则，放最后）
         """
         parts = [self.system_prompt]
+
+        # 知识库上下文（放前面，降低对模型的影响）
+        if knowledge_context:
+            parts.append(f"<reference_knowledge>\nThe following are excerpts from your books and writings. Use ONLY if directly relevant to the user's current question — ignore if unrelated. These are NOT part of the current conversation.\n\n{knowledge_context}\n</reference_knowledge>")
 
         # 注入触发技能 (Tier 2)
         if triggered_skill_context:
@@ -216,17 +220,13 @@ class Participant:
         if user_memory_context:
             parts.append(f"关于与你对话的用户：\n{user_memory_context}")
 
-        # 注入辩论上下文
-        if debate_context:
-            parts.append(debate_context.build_context_prompt())
-
         # 最近对话记录（让分身明确看到其他人说了什么）
         if dialogue_context:
             parts.append(dialogue_context)
 
-        # 知识库上下文
-        if knowledge_context:
-            parts.append(f"Reference knowledge (use ONLY if directly relevant to the user's current question — ignore if unrelated):\n{knowledge_context}")
+        # 辩论上下文（含语言指令等关键规则，放最后影响力最大）
+        if debate_context:
+            parts.append(debate_context.build_context_prompt())
 
         return "\n\n".join(parts)
 

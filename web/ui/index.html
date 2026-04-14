@@ -61,6 +61,15 @@
             const [userAvatar, setUserAvatar] = useState(() => loadUserAvatar());
             const [sessionId, setSessionId] = useState(null);
             const [sessionMessages, setSessionMessages] = useState([]);
+            const [savedSessions, setSavedSessions] = useState([]);
+
+            // 拉取后端会话列表
+            useEffect(() => {
+                const url = user?.id ? `/sessions?userId=${user.id}` : '/sessions';
+                fetch(url, { credentials: 'include' }).then(r => r.json()).then(d => {
+                    if (Array.isArray(d?.sessions)) setSavedSessions(d.sessions);
+                }).catch(() => {});
+            }, [user]);
             const [sessionSummaries, setSessionSummaries] = useState([]);
             const [summaryEvery, setSummaryEvery] = useState(SUMMARY_EVERY_DEFAULT);
             const [contextWindow, setContextWindow] = useState(CONTEXT_WINDOW_DEFAULT);
@@ -827,6 +836,9 @@
                             setAuthOpen(true);
                         }}
                         onNewChat={handleNewChat}
+                        savedSessions={savedSessions}
+                        setSessionMessages={setSessionMessages}
+                        setSessionId={setSessionId}
                     >
                         {(user || isGuest) ? renderContent() : (
                             <div className="min-h-screen flex items-center justify-center">

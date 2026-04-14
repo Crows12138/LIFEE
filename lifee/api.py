@@ -496,6 +496,77 @@ async def gen_codes(n: int = 10):
     return {"codes": codes}
 
 
+# ---- 会话存档 API ----
+
+async def _save_message(session_id: str, user_id: str, role: str, content: str, persona_id: str = "", seq: int = 0):
+    """存一条消息到 Supabase"""
+    if not _SUPABASE_URL or not content.strip():
+        return
+    import httpx
+    async with httpx.AsyncClient() as c:
+        await c.post(
+            f"{_SUPABASE_URL}/rest/v1/chat_messages",
+            headers=_SB_HEADERS,
+            json={"session_id": session_id, "user_id": user_id, "role": role,
+                  "content": content, "persona_id": persona_id, "seq": seq},
+        )
+
+
+async def _ensure_chat_session(session_id: str, user_id: str, title: str = "New Chat", personas: list = None):
+    """确保 chat_session 存在，不存在则创建"""
+    if not _SUPABASE_URL:
+        return
+    import httpx
+    async with httpx.AsyncClient() as c:
+        r = await c.get(
+            f"{_SUPABASE_URL}/rest/v1/chat_sessions?id=eq.{session_id}&select=id",
+            headers=_SB_HEADERS,
+        )
+        if not r.json():
+            await c.post(
+                f"{_SUPABASE_URL}/rest/v1/chat_sessions",
+                headers=_SB_HEADERS,
+                json={"id": session_id, "user_id": user_id, "title": title,
+                      "personas": personas or []},
+            )
+        else:
+            # 更新 updated_at
+            from datetime import datetime, timezone
+            await c.patch(
+                f"{_SUPABASE_URL}/rest/v1/chat_sessions?id=eq.{session_id}",
+                headers=_SB_HEADERS,
+                json={"updated_at": datetime.now(timezone.utc).isoformat()},
+            )
+
+
+@app.get("/sessions")
+async def list_sessions(request: Request, userId: str = ""):
+    """列出用户的会话"""
+    if not _SUPABASE_URL or not userId:
+        return {"sessions": []}
+    import httpx
+    async with httpx.AsyncClient() as c:
+        r = await c.get(
+            f"{_SUPABASE_URL}/rest/v1/chat_sessions?user_id=eq.{userId}&select=id,title,personas,updated_at&order=updated_at.desc&limit=20",
+            headers=_SB_HEADERS,
+        )
+        return {"sessions": r.json()}
+
+
+@app.get("/sessions/{session_id}/messages")
+async def get_session_messages(session_id: str):
+    """获取会话消息"""
+    if not _SUPABASE_URL:
+        return {"messages": []}
+    import httpx
+    async with httpx.AsyncClient() as c:
+        r = await c.get(
+            f"{_SUPABASE_URL}/rest/v1/chat_messages?session_id=eq.{session_id}&select=role,content,persona_id,seq,created_at&order=seq.asc",
+            headers=_SB_HEADERS,
+        )
+        return {"messages": r.json()}
+
+
 # ---- Decision API ----
 
 @app.post("/decision")
@@ -586,10 +657,16 @@ async def _handle_decision(req: DecisionRequest, request: Request):
             moderator = Moderator(all_participants, session, enable_moderator_check=False, language=req.language)
             sid = sid or str(uuid4())
             _sessions[sid] = (session, moderator, participants, now)
+            # 存档：创建 chat_session（用 Supabase user ID，不是 credits uid）
+            persona_names = [p.info.display_name for _, p in participants]
+            title = (req.userInput or req.situation or "New Chat")[:50]
+            chat_user_id = req.userId or None  # Supabase UUID
+            if chat_user_id:
+                await _ensure_chat_session(sid, chat_user_id, title, persona_names)
 
         if stream:
             resp = StreamingResponse(
-                _stream_sse(moderator, participants, question, mod_module, original_delay, sid, provider, session, uid),
+                _stream_sse(moderator, participants, question, mod_module, original_delay, sid, provider, session, uid, req.userId),
                 media_type="text/event-stream",
                 headers={
                     "Cache-Control": "no-cache",
@@ -628,10 +705,19 @@ async def _handle_decision(req: DecisionRequest, request: Request):
                 messages.append({"personaId": "system", "text": f"Debug: {chunk_count} chunks, question='{question[:50]}', participants={[p.info.display_name for _, p in participants]}"})
 
             options = await _generate_options(provider, session)
-            # 扣 credits（每个有内容的角色回复 1 credit）
+            # 扣 credits + 存档
+            seq = 0
+            question_text = req.userInput or req.situation or ""
+            chat_user_id = req.userId or None
+            if question_text and chat_user_id:
+                seq += 1
+                await _save_message(sid, chat_user_id, "user", question_text, seq=seq)
             for msg in messages:
                 if msg.get("personaId") not in ("system", "moderator") and msg.get("text", "").strip():
                     await _deduct(uid)
+                    if chat_user_id:
+                        seq += 1
+                        await _save_message(sid, chat_user_id, "assistant", msg["text"], persona_id=msg["personaId"], seq=seq)
 
             data = {"messages": messages, "options": options, "sessionId": sid, "balance": await _get_balance(uid)}
             resp = JSONResponse(data)
@@ -659,7 +745,7 @@ def _find_persona_id(participant, participants_map):
     return "unknown"
 
 
-async def _stream_sse(moderator, participants, question, mod_module=None, original_delay=None, session_id="", provider=None, session=None, uid="anonymous"):
+async def _stream_sse(moderator, participants, question, mod_module=None, original_delay=None, session_id="", provider=None, session=None, uid="anonymous", chat_user_id=""):
     """生成 SSE 事件流（逐 chunk 实时推送）"""
     all_participants = [p for _, p in participants]
     current_pid = ""
@@ -668,7 +754,14 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
       yield f"event: session\ndata: {json.dumps({'sessionId': session_id})}\n\n"
       yield ": keepalive\n\n"
 
-      has_content = False  # 当前角色是否有实际内容
+      has_content = False
+      current_text = ""  # 收集当前角色的完整回复
+      seq = 0
+
+      # 存档用户消息（仅登录用户）
+      if question and chat_user_id:
+          seq += 1
+          await _save_message(session_id, chat_user_id, "user", question, seq=seq)
 
       async for participant, chunk, is_skip in moderator.run(question, max_turns=len(all_participants)):
         if is_skip:
@@ -676,20 +769,27 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
         pid = _find_persona_id(participant, participants)
         if pid != current_pid:
             if current_pid:
-                # 上一个角色结束 → 有内容才扣钱
                 if has_content:
                     await _deduct(uid)
+                    if chat_user_id:
+                        seq += 1
+                        await _save_message(session_id, chat_user_id, "assistant", current_text.strip(), persona_id=current_pid, seq=seq)
                 yield f"event: messageEnd\ndata: {json.dumps({'personaId': current_pid})}\n\n"
             current_pid = pid
             has_content = False
+            current_text = ""
             yield f"event: messageStart\ndata: {json.dumps({'personaId': pid})}\n\n"
         if chunk and chunk.strip():
             has_content = True
+        current_text += chunk
         yield f"event: messageChunk\ndata: {json.dumps({'personaId': pid, 'chunk': chunk}, ensure_ascii=False)}\n\n"
 
       if current_pid:
           if has_content:
               await _deduct(uid)
+              if chat_user_id:
+                  seq += 1
+                  await _save_message(session_id, chat_user_id, "assistant", current_text.strip(), persona_id=current_pid, seq=seq)
           yield f"event: messageEnd\ndata: {json.dumps({'personaId': current_pid})}\n\n"
 
       # 生成后续选项
