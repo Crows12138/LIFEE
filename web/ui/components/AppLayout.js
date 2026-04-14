@@ -1,7 +1,7 @@
 ﻿const { useState, useEffect, useRef } = React;
 const { Icon } = window;
 
-const AppLayout = ({ children, activeView, setView, user, isAdmin, onOpenAdmin, onLogin, onSignOut, onNewChat }) => {
+const AppLayout = ({ children, activeView, setView, user, isAdmin, onOpenAdmin, onLogin, onSignOut, onNewChat, savedSessions = [], setSessionMessages, setSessionId }) => {
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const scrollContainerRef = useRef(null);
@@ -61,10 +61,22 @@ const AppLayout = ({ children, activeView, setView, user, isAdmin, onOpenAdmin, 
                     </button>
                     <nav className="space-y-1">
                         <div className={`text-[10px] uppercase font-bold tracking-widest opacity-30 px-4 mb-2 ${isCollapsed ? 'md:hidden' : 'block'}`}>Archives</div>
-                        <button className={`w-full text-left rounded-xl hover:bg-white/60 transition-colors flex items-center ${isCollapsed ? 'md:p-3 md:justify-center' : 'px-4 py-3 text-xs opacity-60 italic truncate'}`}>
-                            <Icon name="MessageSquare" size={14} className={isCollapsed ? "md:text-blue-brand" : "mr-2 opacity-40"} />
-                            <span className={isCollapsed ? 'md:hidden' : 'block'}>"Recent thoughts..."</span>
-                        </button>
+                        {savedSessions.length > 0 ? savedSessions.slice(0, 10).map(s => (
+                            <button key={s.id} onClick={async () => {
+                                const res = await fetch(`/sessions/${s.id}/messages`, { credentials: 'include' }).then(r => r.json());
+                                if (res?.messages) {
+                                    setSessionMessages(res.messages.map(m => ({ personaId: m.persona_id || m.role, text: m.content })));
+                                    setSessionId(s.id);
+                                    setView('debate');
+                                }
+                                setIsMobileMenuOpen(false);
+                            }} className={`w-full text-left rounded-xl hover:bg-white/60 transition-colors flex items-center ${isCollapsed ? 'md:p-3 md:justify-center' : 'px-4 py-2.5 text-xs'}`}>
+                                <Icon name="MessageSquare" size={14} className={isCollapsed ? "md:text-blue-brand" : "mr-2 opacity-40 flex-shrink-0"} />
+                                <span className={`${isCollapsed ? 'md:hidden' : 'block'} truncate opacity-60`}>{s.title || 'Untitled'}</span>
+                            </button>
+                        )) : (
+                            <div className={`px-4 py-2 text-xs opacity-30 italic ${isCollapsed ? 'md:hidden' : 'block'}`}>No conversations yet</div>
+                        )}
 
                         <div className={`text-[10px] uppercase font-bold tracking-widest opacity-30 px-4 mt-6 mb-2 ${isCollapsed ? 'md:hidden' : 'block'}`}>Labs & Tools</div>
                         {labToolItems.map(item => (
