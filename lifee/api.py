@@ -501,7 +501,7 @@ async def gen_codes(n: int = 10):
 # ---- 会话存档 API ----
 
 async def _save_message(session_id: str, user_id: str, role: str, content: str, persona_id: str = "", seq: int = 0):
-    """存一条消息到 Supabase"""
+    """存一条消息到 Supabase（仅登录用户存完整记录）"""
     if not _SUPABASE_URL or not content.strip():
         return
     import httpx
@@ -511,6 +511,20 @@ async def _save_message(session_id: str, user_id: str, role: str, content: str, 
             headers=_SB_HEADERS,
             json={"session_id": session_id, "user_id": user_id, "role": role,
                   "content": content, "persona_id": persona_id, "seq": seq},
+        )
+
+
+async def _log_conversation(uid: str, role: str, persona_id: str, content_preview: str):
+    """简易对话日志（所有用户包括 Guest，存到 credit_transactions）"""
+    if not _SUPABASE_URL:
+        return
+    import httpx
+    preview = content_preview[:100].replace('\n', ' ')
+    async with httpx.AsyncClient() as c:
+        await c.post(
+            f"{_SUPABASE_URL}/rest/v1/credit_transactions",
+            headers=_SB_HEADERS,
+            json={"uid": uid, "amount": 0, "reason": f"msg:{role}:{persona_id}:{preview}"},
         )
 
 
@@ -760,10 +774,12 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
       current_text = ""  # 收集当前角色的完整回复
       seq = 0
 
-      # 存档用户消息（仅登录用户）
-      if question and chat_user_id:
-          seq += 1
-          await _save_message(session_id, chat_user_id, "user", question, seq=seq)
+      # 存档用户消息（仅登录用户） + 日志（所有用户）
+      if question:
+          await _log_conversation(uid, "user", "", question)
+          if chat_user_id:
+              seq += 1
+              await _save_message(session_id, chat_user_id, "user", question, seq=seq)
 
       async for participant, chunk, is_skip in moderator.run(question, max_turns=len(all_participants)):
         if is_skip:
@@ -773,6 +789,7 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
             if current_pid:
                 if has_content:
                     await _deduct(uid)
+                    await _log_conversation(uid, "assistant", current_pid, current_text.strip())
                     if chat_user_id:
                         seq += 1
                         await _save_message(session_id, chat_user_id, "assistant", current_text.strip(), persona_id=current_pid, seq=seq)
@@ -789,6 +806,7 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
       if current_pid:
           if has_content:
               await _deduct(uid)
+              await _log_conversation(uid, "assistant", current_pid, current_text.strip())
               if chat_user_id:
                   seq += 1
                   await _save_message(session_id, chat_user_id, "assistant", current_text.strip(), persona_id=current_pid, seq=seq)
