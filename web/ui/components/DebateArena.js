@@ -614,8 +614,8 @@ const DebateArena = ({
                             }
                             const trimmed = history
                                 .filter(m => m.personaId !== 'user' && m.personaId !== 'system' && m.personaId !== 'lifee-followup')
-                                .slice(-6)
-                                .map(m => ({ personaId: m.personaId, text: (m.text || '').slice(0, 300) }));
+                                .slice(-4)
+                                .map(m => ({ personaId: m.personaId, text: (m.text || '').slice(0, 150) }));
                             const payload = JSON.stringify({ messages: trimmed, language: language || 'Chinese' });
                             setSummaryLoading(true);
                             setSummaryData({});
