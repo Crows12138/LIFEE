@@ -115,7 +115,7 @@ class Moderator:
         participants: list[Participant],
         session: Session,
         user_memory_context: Optional[str] = None,
-        enable_moderator_check: bool = True,
+        enable_moderator_check: bool = False,
         language: str = "",
     ):
         self.participants = participants
