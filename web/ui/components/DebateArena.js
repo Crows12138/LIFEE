@@ -610,28 +610,30 @@ const DebateArena = ({
                     </button>
                     <button
                         disabled={history.length < 2 || summaryLoading}
-                        onClick={async () => {
+                        onClick={() => {
                             setSummaryLoading(true);
                             setSummaryData({});
-                            try {
-                                const r = await fetch('/summarize', {
-                                    method: 'POST',
-                                    headers: { 'Content-Type': 'application/json' },
-                                    credentials: 'include',
-                                    body: JSON.stringify({ messages: history, language: language || 'Chinese' }),
-                                });
-                                const res = await r.json();
-                                if (res?.error) {
-                                    setSummaryData({ _error: res.error });
-                                } else if (res?.summaries && Object.keys(res.summaries).length > 0) {
-                                    setSummaryData(res.summaries);
-                                    setShowCanvas(true);
-                                } else {
-                                    setSummaryData({ _error: 'No summary returned' });
-                                }
-                            } catch (e) {
-                                setSummaryData({ _error: e.message || 'Network error' });
-                            } finally { setSummaryLoading(false); }
+                            const payload = JSON.stringify({ messages: history, language: language || 'Chinese' });
+                            setTimeout(async () => {
+                                try {
+                                    const r = await window.fetch('/summarize', {
+                                        method: 'POST',
+                                        headers: { 'Content-Type': 'application/json' },
+                                        body: payload,
+                                    });
+                                    const res = await r.json();
+                                    if (res?.error) {
+                                        setSummaryData({ _error: res.error });
+                                    } else if (res?.summaries && Object.keys(res.summaries).length > 0) {
+                                        setSummaryData(res.summaries);
+                                        setShowCanvas(true);
+                                    } else {
+                                        setSummaryData({ _error: 'No summary returned' });
+                                    }
+                                } catch (e) {
+                                    setSummaryData({ _error: e.message || 'Network error' });
+                                } finally { setSummaryLoading(false); }
+                            }, 300);
                         }}
                         className="flex items-center gap-2 text-xs font-bold text-blue-brand px-4 py-2 border border-blue-brand rounded-full hover:bg-blue-brand hover:text-white transition-all disabled:opacity-30"
                     >
