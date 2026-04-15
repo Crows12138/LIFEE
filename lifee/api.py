@@ -675,21 +675,37 @@ async def delete_session(session_id: str):
 # ---- 总结 API ----
 
 class SummarizeRequest(BaseModel):
-    messages: list = []  # [{personaId, text}, ...]
+    sessionId: str = ""
+    messages: list = []  # fallback: [{personaId, text}, ...]
     language: str = "Chinese"
 
 
 @app.post("/summarize")
 async def summarize_debate(req: SummarizeRequest):
     """总结每个角色的核心观点"""
-    if not req.messages:
+    # 优先从 Supabase 加载消息（避免大 POST body）
+    msgs = req.messages
+    if req.sessionId and _SUPABASE_URL and not msgs:
+        try:
+            import httpx
+            async with httpx.AsyncClient() as c:
+                r = await c.get(
+                    f"{_SUPABASE_URL}/rest/v1/chat_messages?session_id=eq.{req.sessionId}&select=role,content,persona_id&order=seq.asc",
+                    headers=_SB_HEADERS,
+                )
+                db_msgs = r.json() or []
+                msgs = [{"personaId": m.get("persona_id", ""), "text": m.get("content", "")} for m in db_msgs]
+        except Exception:
+            pass
+
+    if not msgs:
         return {"summaries": {}}
 
     # 按角色分组
     by_persona = {}
-    for m in req.messages:
+    for m in msgs:
         pid = m.get("personaId", "")
-        if pid in ("user", "system", "lifee-followup", "moderator"):
+        if pid in ("user", "system", "lifee-followup", "moderator", ""):
             continue
         if pid not in by_persona:
             by_persona[pid] = []

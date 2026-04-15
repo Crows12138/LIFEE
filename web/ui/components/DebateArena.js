@@ -612,11 +612,16 @@ const DebateArena = ({
                                 setShowCanvas(true);
                                 return;
                             }
-                            const trimmed = history
-                                .filter(m => m.personaId !== 'user' && m.personaId !== 'system' && m.personaId !== 'lifee-followup')
-                                .slice(-4)
-                                .map(m => ({ personaId: m.personaId, text: (m.text || '').slice(0, 150) }));
-                            const payload = JSON.stringify({ messages: trimmed, language: language || 'Chinese' });
+                            // 有 sessionId 时只发 ID（后端从 Supabase 加载），避免 Railway 代理 ~2.5KB body 限制
+                            const payload = sessionId
+                                ? JSON.stringify({ sessionId, language: language || 'Chinese' })
+                                : JSON.stringify({
+                                    messages: history
+                                        .filter(m => m.personaId !== 'user' && m.personaId !== 'system' && m.personaId !== 'lifee-followup')
+                                        .slice(-4)
+                                        .map(m => ({ personaId: m.personaId, text: (m.text || '').slice(0, 150) })),
+                                    language: language || 'Chinese',
+                                });
                             setSummaryLoading(true);
                             setSummaryData({});
                             setTimeout(async () => {
