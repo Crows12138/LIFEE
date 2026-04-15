@@ -842,7 +842,7 @@ async def _handle_decision(req: DecisionRequest, request: Request):
                     from lifee.providers.base import MessageRole
                     async with httpx.AsyncClient() as _c:
                         _r = await _c.get(
-                            f"{_SUPABASE_URL}/rest/v1/chat_messages?session_id=eq.{sid}&select=role,content,persona_id&order=seq.asc&limit=50",
+                            f"{_SUPABASE_URL}/rest/v1/chat_messages?session_id=eq.{sid}&select=role,content,persona_id&order=seq.asc",
                             headers=_SB_HEADERS,
                         )
                         for m in _r.json() or []:
