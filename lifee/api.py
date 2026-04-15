@@ -762,7 +762,7 @@ async def _handle_decision(req: DecisionRequest, request: Request):
 
         if stream:
             resp = StreamingResponse(
-                _stream_sse(moderator, participants, question, mod_module, original_delay, sid, provider, session, uid, req.userId),
+                _stream_sse(moderator, participants, question, mod_module, original_delay, sid, provider, session, uid, req.userId, min(req.maxSpeakers, len(all_participants)) if req.maxSpeakers > 0 else 0),
                 media_type="text/event-stream",
                 headers={
                     "Cache-Control": "no-cache",
@@ -841,7 +841,7 @@ def _find_persona_id(participant, participants_map):
     return "unknown"
 
 
-async def _stream_sse(moderator, participants, question, mod_module=None, original_delay=None, session_id="", provider=None, session=None, uid="anonymous", chat_user_id=""):
+async def _stream_sse(moderator, participants, question, mod_module=None, original_delay=None, session_id="", provider=None, session=None, uid="anonymous", chat_user_id="", max_turns=0):
     """生成 SSE 事件流（逐 chunk 实时推送）"""
     all_participants = [p for _, p in participants]
     current_pid = ""
@@ -861,7 +861,8 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
               seq += 1
               await _save_message(session_id, chat_user_id, "user", question, seq=seq)
 
-      async for participant, chunk, is_skip in moderator.run(question, max_turns=min(req.maxSpeakers, len(all_participants)) if req.maxSpeakers > 0 else len(all_participants)):
+      _turns = max_turns or len(all_participants)
+      async for participant, chunk, is_skip in moderator.run(question, max_turns=_turns):
         if is_skip:
             continue
         pid = _find_persona_id(participant, participants)
