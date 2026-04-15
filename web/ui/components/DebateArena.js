@@ -462,9 +462,28 @@ const DebateArena = ({
                                     <div style={{ fontSize: 9, fontWeight: 900, color: '#1A1A1A', opacity: 0.15, flexShrink: 0 }}>{msgs.length || '—'}</div>
                                 </div>
 
-                                {/* Card body – recent messages */}
+                                {/* Card body – summary or recent messages */}
                                 <div style={{ padding: '12px 16px', minHeight: 72, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                                    {recentMsgs.length === 0 ? (
+                                    {summaryLoading ? (
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                                            <div style={{ width: 12, height: 12, border: '2px solid #98A6D430', borderTopColor: '#98A6D4', borderRadius: '50%', animation: 'spin 1s linear infinite' }}></div>
+                                            <span style={{ fontSize: 9, color: '#1A1A1A', opacity: 0.35 }}>Summarizing…</span>
+                                        </div>
+                                    ) : summaryData[persona.id] ? (
+                                        <div style={{
+                                            fontSize: 10,
+                                            lineHeight: 1.7,
+                                            color: '#1A1A1A',
+                                            opacity: 0.8,
+                                            borderLeft: '2px solid #98A6D4',
+                                            paddingLeft: 8,
+                                            background: '#F8F7FF',
+                                            borderRadius: '0 8px 8px 0',
+                                            padding: '8px 10px 8px 10px',
+                                        }}>
+                                            {summaryData[persona.id]}
+                                        </div>
+                                    ) : recentMsgs.length === 0 ? (
                                         <div style={{ fontSize: 9.5, fontStyle: 'italic', color: '#1A1A1A', opacity: 0.18 }}>Waiting to speak…</div>
                                     ) : (
                                         recentMsgs.map((msg, i) => {
@@ -594,7 +613,7 @@ const DebateArena = ({
                         onClick={async () => {
                             setSummaryLoading(true);
                             setSummaryData({});
-                            setShowSummaryPanel(true);
+                            setShowCanvas(true);
                             try {
                                 const r = await fetch('/summarize', {
                                     method: 'POST',
@@ -791,6 +810,8 @@ const DebateArena = ({
                 <style>{`
                     .resize-handle-root:hover .resize-handle-line { background: #98A6D4 !important; }
                     .resize-handle-root:hover .resize-handle-pill { opacity: 1 !important; transform: scale(1) !important; }
+                    @keyframes spin { to { transform: rotate(360deg); } }
+                    @keyframes slideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
                 `}</style>
 
                 {/* RIGHT: Visual canvas panel – always visible on md+, toggled on mobile */}
@@ -841,37 +862,11 @@ const DebateArena = ({
                     </div>
                 </div>
             )}
-            {showSummaryPanel && (
-                <div className="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl border-l border-[#F0EDEA] z-40 flex flex-col animate-in" style={{animation: 'slideInRight 0.3s ease-out'}}>
-                    <div className="flex items-center justify-between p-4 border-b border-[#F0EDEA]">
-                        <h3 className="text-sm font-bold">Summary</h3>
-                        <button onClick={() => setShowSummaryPanel(false)} className="opacity-40 hover:opacity-100"><Icon name="X" size={16} /></button>
-                    </div>
-                    <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                        {summaryLoading ? (
-                            <div className="flex flex-col items-center justify-center py-12 gap-3">
-                                <div className="w-6 h-6 border-2 border-blue-brand/30 border-t-blue-brand rounded-full animate-spin"></div>
-                                <p className="text-xs opacity-40">Generating summary...</p>
-                            </div>
-                        ) : summaryData._error ? (
-                            <div className="text-xs text-[#C97A7A] bg-[#FDF1F1] border border-[#F7D7D7] px-4 py-3 rounded-2xl">{summaryData._error}</div>
-                        ) : Object.keys(summaryData).length === 0 ? (
-                            <p className="text-xs opacity-40">No summary yet</p>
-                        ) : Object.entries(summaryData).map(([pid, summary]) => {
-                            const persona = selectedPersonas.find(p => p.id === pid) || (window.INITIAL_PERSONAS || []).find(p => p.id === pid) || { name: pid, avatar: '☁️' };
-                            return (
-                                <div key={pid} className="bg-[#FDFBF7] rounded-2xl p-4 border border-[#F0EDEA]">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <div className="w-8 h-8 rounded-full border border-[#F0EDEA] overflow-hidden flex items-center justify-center bg-white">
-                                            <AvatarDisplay avatar={persona.avatar} className="w-full h-full text-lg" />
-                                        </div>
-                                        <span className="text-xs font-bold uppercase tracking-widest opacity-60">{persona.name}</span>
-                                    </div>
-                                    <p className="text-sm leading-relaxed opacity-80">{summary}</p>
-                                </div>
-                            );
-                        })}
-                    </div>
+            {/* Summary error toast */}
+            {summaryData._error && (
+                <div className="fixed top-20 right-4 z-50 text-xs text-[#C97A7A] bg-[#FDF1F1] border border-[#F7D7D7] px-4 py-3 rounded-2xl shadow-lg animate-in" style={{animation: 'slideInRight 0.3s ease-out'}}>
+                    {summaryData._error}
+                    <button onClick={() => setSummaryData({})} className="ml-2 opacity-40 hover:opacity-100">✕</button>
                 </div>
             )}
             {showPaywall && (
