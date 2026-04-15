@@ -41,10 +41,9 @@ class DebateContext:
         if not self.reply_to:
             # === 第一个发言者：直接回应用户 ===
             if others:
-                others_str = ", ".join([f"{p.display_name}" for p in others])
                 context = f"""## Current Conversation
 
-You are {self.current_participant.display_name}. The user is asking for your perspective. After you speak, {others_str} will share theirs.
+You are {self.current_participant.display_name}. The user is asking for your perspective.
 
 {format_lines}
 
