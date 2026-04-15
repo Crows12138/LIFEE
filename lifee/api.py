@@ -317,7 +317,7 @@ class DecisionRequest(BaseModel):
     userInput: str = ""
     personas: list[PersonaInput] = []
     context: str = ""
-    moderator: bool = True  # 主持人预审开关，默认开启
+    moderator: bool = False  # 追问模式，默认关闭，用户开启
     sessionId: str = ""  # 会话 ID，空则新建
     userId: str = ""     # Supabase user ID（登录用户）
     language: str = ""   # 偏好语言（Chinese/English/空=自动）
@@ -753,7 +753,7 @@ async def _handle_decision(req: DecisionRequest, request: Request):
         else:
             session = Session()
             all_participants = [p for _, p in participants]
-            moderator = Moderator(all_participants, session, enable_moderator_check=False, language=req.language)
+            moderator = Moderator(all_participants, session, enable_moderator_check=req.moderator, language=req.language)
             sid = sid or str(uuid4())
             _sessions[sid] = (session, moderator, participants, now)
             # 存档：创建 chat_session（用 Supabase user ID，不是 credits uid）
