@@ -575,10 +575,10 @@ const DebateArena = ({
                     ))}
                 </div>
                 <div className="flex items-center gap-2">
-                    {/* Mobile canvas toggle */}
+                    {/* Canvas toggle */}
                     <button
                         onClick={() => setShowCanvas(v => !v)}
-                        className={`md:hidden flex items-center gap-1.5 text-[10px] font-bold px-3 py-1.5 rounded-full border transition-all ${showCanvas ? 'bg-blue-brand text-white border-blue-brand' : 'border-[#E8E6E0] text-[#5D576B]/60'}`}
+                        className={`flex items-center gap-1.5 text-[10px] font-bold px-3 py-1.5 rounded-full border transition-all ${showCanvas ? 'bg-blue-brand text-white border-blue-brand' : 'border-[#E8E6E0] text-[#5D576B]/60'}`}
                     >
                         <Icon name="LayoutDashboard" size={12} />
                         MAP
@@ -593,20 +593,30 @@ const DebateArena = ({
                         disabled={history.length < 2 || summaryLoading}
                         onClick={async () => {
                             setSummaryLoading(true);
+                            setSummaryData({});
+                            setShowSummaryPanel(true);
                             try {
-                                const res = await fetch('/summarize', {
+                                const r = await fetch('/summarize', {
                                     method: 'POST',
                                     headers: { 'Content-Type': 'application/json' },
                                     credentials: 'include',
                                     body: JSON.stringify({ messages: history, language: language || 'Chinese' }),
-                                }).then(r => r.json());
-                                if (res?.summaries) setSummaryData(res.summaries);
-                                setShowSummaryPanel(true);
-                            } catch {} finally { setSummaryLoading(false); }
+                                });
+                                const res = await r.json();
+                                if (res?.error) {
+                                    setSummaryData({ _error: res.error });
+                                } else if (res?.summaries && Object.keys(res.summaries).length > 0) {
+                                    setSummaryData(res.summaries);
+                                } else {
+                                    setSummaryData({ _error: 'No summary returned' });
+                                }
+                            } catch (e) {
+                                setSummaryData({ _error: e.message || 'Network error' });
+                            } finally { setSummaryLoading(false); }
                         }}
                         className="flex items-center gap-2 text-xs font-bold text-blue-brand px-4 py-2 border border-blue-brand rounded-full hover:bg-blue-brand hover:text-white transition-all disabled:opacity-30"
                     >
-                        <Icon name="FileText" size={14} /> {summaryLoading ? '...' : 'Summary'}
+                        <Icon name="FileText" size={14} /> {summaryLoading ? 'Summarizing...' : 'Summary'}
                     </button>
                 </div>
             </div>
@@ -785,7 +795,7 @@ const DebateArena = ({
 
                 {/* RIGHT: Visual canvas panel – always visible on md+, toggled on mobile */}
                 <div
-                    className={`${showCanvas ? 'flex' : 'hidden md:flex'} shrink-0 flex-col overflow-hidden`}
+                    className={`${showCanvas ? 'flex' : 'hidden'} shrink-0 flex-col overflow-hidden`}
                     style={{ width: showCanvas ? '100%' : canvasWidth }}
                 >
                     <CanvasPanel />
@@ -838,7 +848,14 @@ const DebateArena = ({
                         <button onClick={() => setShowSummaryPanel(false)} className="opacity-40 hover:opacity-100"><Icon name="X" size={16} /></button>
                     </div>
                     <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                        {Object.keys(summaryData).length === 0 ? (
+                        {summaryLoading ? (
+                            <div className="flex flex-col items-center justify-center py-12 gap-3">
+                                <div className="w-6 h-6 border-2 border-blue-brand/30 border-t-blue-brand rounded-full animate-spin"></div>
+                                <p className="text-xs opacity-40">Generating summary...</p>
+                            </div>
+                        ) : summaryData._error ? (
+                            <div className="text-xs text-[#C97A7A] bg-[#FDF1F1] border border-[#F7D7D7] px-4 py-3 rounded-2xl">{summaryData._error}</div>
+                        ) : Object.keys(summaryData).length === 0 ? (
                             <p className="text-xs opacity-40">No summary yet</p>
                         ) : Object.entries(summaryData).map(([pid, summary]) => {
                             const persona = selectedPersonas.find(p => p.id === pid) || (window.INITIAL_PERSONAS || []).find(p => p.id === pid) || { name: pid, avatar: '☁️' };
