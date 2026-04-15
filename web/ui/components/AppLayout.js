@@ -106,6 +106,9 @@ const AppLayout = ({ children, activeView, setView, user, isAdmin, onOpenAdmin, 
                                         if (!confirm('Delete this conversation?')) return;
                                         await fetch(`/sessions/${s.id}`, { method: 'DELETE', credentials: 'include' });
                                         setSavedSessions(prev => prev.filter(x => x.id !== s.id));
+                                        setSessionId(null);
+                                        setSessionMessages([]);
+                                        setView('home');
                                     }} className="opacity-40 hover:!opacity-100 hover:text-red-500 transition-colors">
                                         <Icon name="Trash2" size={12} />
                                     </button>
