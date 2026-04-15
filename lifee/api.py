@@ -203,7 +203,7 @@ def _download_db(role_name: str, dest: Path) -> bool:
 
 
 async def _init_knowledge():
-    """启动时只下载知识库文件并记录路径，不打开连接（懒加载）"""
+    """启动时只初始化 embedding provider 和角色路径，不下载不连接"""
     global _km_initialized, _knowledge_embedding
     if _km_initialized:
         return
@@ -231,32 +231,31 @@ async def _init_knowledge():
     for role_name in target_roles:
         try:
             db_path = rm.get_knowledge_db_path(role_name)
+            role_info = rm.get_role_info(role_name)
+            knowledge_lang = role_info.get("knowledge_lang", "English")
+            _knowledge_paths[role_name] = (db_path, knowledge_lang)
+        except Exception:
+            pass
 
-            if not db_path.exists() and role_name in _RELEASE_DBS:
-                db_path.parent.mkdir(parents=True, exist_ok=True)
-                if not _download_db(role_name, db_path):
-                    continue
-
-            if db_path.exists():
-                role_info = rm.get_role_info(role_name)
-                knowledge_lang = role_info.get("knowledge_lang", "English")
-                _knowledge_paths[role_name] = (db_path, knowledge_lang)
-                print(f"[knowledge] {role_name}: ready (lazy)")
-        except Exception as e:
-            print(f"[knowledge] {role_name}: failed ({e})")
-
-    print(f"[knowledge] {len(_knowledge_paths)} roles with RAG (lazy load)")
+    print(f"[knowledge] {len(_knowledge_paths)} roles registered (fully lazy)")
 
 
 def _get_knowledge_manager(role_name: str):
-    """懒加载：第一次访问时才打开 SQLite 连接"""
+    """懒加载：第一次访问时才下载 + 打开 SQLite 连接"""
     if role_name in _knowledge_managers:
         return _knowledge_managers[role_name]
     if role_name not in _knowledge_paths or not _knowledge_embedding:
         return None
 
-    from lifee.memory import MemoryManager
     db_path, knowledge_lang = _knowledge_paths[role_name]
+
+    # 按需下载
+    if not db_path.exists() and role_name in _RELEASE_DBS:
+        db_path.parent.mkdir(parents=True, exist_ok=True)
+        if not _download_db(role_name, db_path):
+            return None
+
+    from lifee.memory import MemoryManager
     try:
         km = MemoryManager(db_path, _knowledge_embedding, knowledge_lang=knowledge_lang)
         stats = km.get_stats()
