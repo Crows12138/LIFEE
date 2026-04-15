@@ -224,8 +224,11 @@ If info is sufficient, just output: PASS"""
         if self.enable_moderator_check:
             followup = await self.check_clarification(user_input)
             if followup:
-                self.session.add_assistant_message(followup, name=self.participants[0].info.display_name)
-                yield (self.participants[0], followup, False)
+                self.session.add_assistant_message(followup, name="LIFEE")
+                # 用一个虚拟 participant 标识追问，personaId = "lifee-followup"
+                class _FollowUpProxy:
+                    info = ParticipantInfo(name="lifee-followup", display_name="LIFEE", emoji="💬")
+                yield (_FollowUpProxy(), followup, False)
                 return
 
         # 获取所有参与者信息（用于构建上下文）

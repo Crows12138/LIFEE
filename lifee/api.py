@@ -836,8 +836,11 @@ async def _generate_options(provider, session) -> list[str]:
 def _find_persona_id(participant, participants_map):
     """从 participant 找到对应的前端 persona id"""
     for pid, p in participants_map:
-        if p is participant:
+        if p is participant or p.info.name == participant.info.name:
             return pid
+    # 追问模式的虚拟 participant
+    if hasattr(participant, 'info') and participant.info.name == "lifee-followup":
+        return "lifee-followup"
     return "unknown"
 
 

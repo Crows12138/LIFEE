@@ -243,8 +243,11 @@ const DebateArena = ({
             <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 md:p-8 space-y-10 pb-64 no-scrollbar">
                 {history.map((m, idx) => {
                     const isUser = m.personaId === 'user';
+                    const isFollowUp = m.personaId === 'lifee-followup';
                     const p = isUser
                         ? { name: 'YOU', avatar: (userAvatar || loadUserAvatar()) }
+                        : isFollowUp
+                        ? { name: 'LIFEE', avatar: '💬' }
                         : (selectedPersonas.find(x => x.id === m.personaId) || (window.INITIAL_PERSONAS || []).find(x => x.id === m.personaId) || (m.personaId === "system" ? { name: "SYSTEM", avatar: "⚠️" } : { name: m.personaId || 'Voice', avatar: '☁️' }));
                     return (
                         <div key={idx} className={`flex gap-4 md:gap-5 ${isUser ? 'flex-row-reverse' : 'items-start'} animate-in`}>
