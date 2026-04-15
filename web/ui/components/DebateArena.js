@@ -43,6 +43,9 @@ const DebateArena = ({
     const [followUpMode, setFollowUpMode] = useState(false);
     const [webSearchMode, setWebSearchMode] = useState(false);
     const [maxSpeakers, setMaxSpeakers] = useState(0);
+    const [showSummaryPanel, setShowSummaryPanel] = useState(false);
+    const [summaryData, setSummaryData] = useState({});
+    const [summaryLoading, setSummaryLoading] = useState(false);
     const [language, setLanguage] = useState(() => localStorage.getItem('lifee_lang') || '');
 
     // Canvas state
@@ -586,6 +589,25 @@ const DebateArena = ({
                     >
                         <Icon name="PauseCircle" size={14} /> STOP & DECIDE
                     </button>
+                    <button
+                        disabled={history.length < 2 || summaryLoading}
+                        onClick={async () => {
+                            setSummaryLoading(true);
+                            try {
+                                const res = await fetch('/summarize', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    credentials: 'include',
+                                    body: JSON.stringify({ messages: history, language: language || 'Chinese' }),
+                                }).then(r => r.json());
+                                if (res?.summaries) setSummaryData(res.summaries);
+                                setShowSummaryPanel(true);
+                            } catch {} finally { setSummaryLoading(false); }
+                        }}
+                        className="flex items-center gap-2 text-xs font-bold text-blue-brand px-4 py-2 border border-blue-brand rounded-full hover:bg-blue-brand hover:text-white transition-all disabled:opacity-30"
+                    >
+                        <Icon name="FileText" size={14} /> {summaryLoading ? '...' : 'Summary'}
+                    </button>
                 </div>
             </div>
 
@@ -806,6 +828,32 @@ const DebateArena = ({
                         })()}
                         {verifyError && <div className="text-xs text-[#C97A7A] bg-[#FDF1F1] border border-[#F7D7D7] px-4 py-3 rounded-2xl mb-4">{verifyError}</div>}
                         <button onClick={() => setShowVerify(false)} className="text-sm text-neutral-400 hover:text-neutral-600">Cancel</button>
+                    </div>
+                </div>
+            )}
+            {showSummaryPanel && (
+                <div className="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl border-l border-[#F0EDEA] z-40 flex flex-col animate-in" style={{animation: 'slideInRight 0.3s ease-out'}}>
+                    <div className="flex items-center justify-between p-4 border-b border-[#F0EDEA]">
+                        <h3 className="text-sm font-bold">Summary</h3>
+                        <button onClick={() => setShowSummaryPanel(false)} className="opacity-40 hover:opacity-100"><Icon name="X" size={16} /></button>
+                    </div>
+                    <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                        {Object.keys(summaryData).length === 0 ? (
+                            <p className="text-xs opacity-40">No summary yet</p>
+                        ) : Object.entries(summaryData).map(([pid, summary]) => {
+                            const persona = selectedPersonas.find(p => p.id === pid) || (window.INITIAL_PERSONAS || []).find(p => p.id === pid) || { name: pid, avatar: '☁️' };
+                            return (
+                                <div key={pid} className="bg-[#FDFBF7] rounded-2xl p-4 border border-[#F0EDEA]">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <div className="w-8 h-8 rounded-full border border-[#F0EDEA] overflow-hidden flex items-center justify-center bg-white">
+                                            <AvatarDisplay avatar={persona.avatar} className="w-full h-full text-lg" />
+                                        </div>
+                                        <span className="text-xs font-bold uppercase tracking-widest opacity-60">{persona.name}</span>
+                                    </div>
+                                    <p className="text-sm leading-relaxed opacity-80">{summary}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             )}

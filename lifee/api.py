@@ -651,6 +651,65 @@ async def delete_session(session_id: str):
         return {"ok": False}
 
 
+# ---- 总结 API ----
+
+class SummarizeRequest(BaseModel):
+    messages: list = []  # [{personaId, text}, ...]
+    language: str = "Chinese"
+
+
+@app.post("/summarize")
+async def summarize_debate(req: SummarizeRequest):
+    """总结每个角色的核心观点"""
+    if not req.messages:
+        return {"summaries": {}}
+
+    # 按角色分组
+    by_persona = {}
+    for m in req.messages:
+        pid = m.get("personaId", "")
+        if pid in ("user", "system", "lifee-followup", "moderator"):
+            continue
+        if pid not in by_persona:
+            by_persona[pid] = []
+        text = m.get("text", "")[:500]
+        by_persona[pid].append(text)
+
+    if not by_persona:
+        return {"summaries": {}}
+
+    # 构建 prompt
+    parts = []
+    for pid, texts in by_persona.items():
+        combined = "\n".join(texts[-5:])  # 最近 5 条
+        parts.append(f"【{pid}】:\n{combined}")
+
+    prompt = f"""Summarize each participant's core viewpoint in 1-2 sentences. Reply in {req.language}.
+
+Conversation:
+{chr(10).join(parts)}
+
+Reply in JSON format: {{"persona_id": "1-2 sentence summary", ...}}"""
+
+    try:
+        provider = _get_provider()
+        from lifee.providers.base import Message, MessageRole
+        response = await provider.chat(
+            messages=[Message(role=MessageRole.USER, content=prompt)],
+            max_tokens=500,
+            temperature=0.3,
+        )
+        import json as _json
+        text = response.content.strip()
+        # 提取 JSON
+        if '```' in text:
+            text = text.split('```')[1].replace('json', '', 1).strip()
+        summaries = _json.loads(text)
+        return {"summaries": summaries}
+    except Exception as e:
+        return {"summaries": {}, "error": str(e)}
+
+
 # ---- Decision API ----
 
 @app.post("/decision")
