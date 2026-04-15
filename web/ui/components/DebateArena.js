@@ -792,7 +792,7 @@ const DebateArena = ({
 
                 {/* ── Resize handle (desktop only) ── */}
                 <div
-                    className="hidden md:flex shrink-0 items-center justify-center relative resize-handle-root"
+                    className={`${showCanvas ? 'hidden md:flex' : 'hidden'} shrink-0 items-center justify-center relative resize-handle-root`}
                     style={{ width: 8, cursor: 'col-resize', zIndex: 20 }}
                     onMouseDown={startResize}
                 >
@@ -833,7 +833,7 @@ const DebateArena = ({
                 {/* RIGHT: Visual canvas panel – always visible on md+, toggled on mobile */}
                 <div
                     className={`${showCanvas ? 'flex' : 'hidden'} shrink-0 flex-col overflow-hidden`}
-                    style={{ width: showCanvas ? '100%' : canvasWidth }}
+                    style={{ width: canvasWidth }}
                 >
                     <CanvasPanel />
                 </div>
