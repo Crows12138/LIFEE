@@ -220,12 +220,13 @@ If info is sufficient, just output: PASS"""
         # 1. 添加用户消息到会话
         self.session.add_user_message(user_input, media=media)
 
-        # 1.5 追问检查（暂未完成前端交互，先跳过）
-        # TODO: 新 UI 实现追问选项按钮后启用
-        # followup = await self.check_clarification(user_input)
-        # if followup:
-        #     yield (self.participants[0], followup, False)
-        #     return
+        # 1.5 追问检查
+        if self.enable_moderator_check:
+            followup = await self.check_clarification(user_input)
+            if followup:
+                self.session.add_assistant_message(followup, name=self.participants[0].info.display_name)
+                yield (self.participants[0], followup, False)
+                return
 
         # 获取所有参与者信息（用于构建上下文）
         all_participants_info = [p.info for p in self.participants]

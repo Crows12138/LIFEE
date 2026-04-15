@@ -892,9 +892,15 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
                   await _save_message(session_id, chat_user_id, "assistant", current_text.strip(), persona_id=current_pid, seq=seq)
           yield f"event: messageEnd\ndata: {json.dumps({'personaId': current_pid})}\n\n"
 
-      # 生成后续选项
+      # 生成后续选项（追问模式时从文本解析选项，否则用 LLM 生成）
       options = []
-      if provider and session:
+      if current_text:
+          import re
+          # 解析 A. xxx / B. xxx / C. xxx 格式的选项
+          parsed = re.findall(r'[A-D][.、]\s*(.+?)(?=\s+[A-D][.、]|\s*$)', current_text.replace('\n', ' '))
+          if parsed and len(parsed) >= 2:
+              options = [o.strip() for o in parsed if o.strip()]
+      if not options and provider and session:
           options = await _generate_options(provider, session)
 
       yield f"event: options\ndata: {json.dumps({'options': options}, ensure_ascii=False)}\n\n"
