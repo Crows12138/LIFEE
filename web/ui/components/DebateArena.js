@@ -611,17 +611,21 @@ const DebateArena = ({
                     <button
                         disabled={history.length < 2 || summaryLoading}
                         onClick={() => {
+                            const payload = JSON.stringify({ messages: history, language: language || 'Chinese' });
+                            console.log('[Summary] payload size:', payload.length, 'bytes, messages:', history.length);
                             setSummaryLoading(true);
                             setSummaryData({});
-                            const payload = JSON.stringify({ messages: history, language: language || 'Chinese' });
                             setTimeout(async () => {
+                                console.log('[Summary] sending fetch...');
                                 try {
                                     const r = await window.fetch('/summarize', {
                                         method: 'POST',
                                         headers: { 'Content-Type': 'application/json' },
                                         body: payload,
                                     });
+                                    console.log('[Summary] response status:', r.status);
                                     const res = await r.json();
+                                    console.log('[Summary] result:', res);
                                     if (res?.error) {
                                         setSummaryData({ _error: res.error });
                                     } else if (res?.summaries && Object.keys(res.summaries).length > 0) {
@@ -631,6 +635,7 @@ const DebateArena = ({
                                         setSummaryData({ _error: 'No summary returned' });
                                     }
                                 } catch (e) {
+                                    console.error('[Summary] FAILED:', e.name, e.message, e);
                                     setSummaryData({ _error: e.message || 'Network error' });
                                 } finally { setSummaryLoading(false); }
                             }, 300);
