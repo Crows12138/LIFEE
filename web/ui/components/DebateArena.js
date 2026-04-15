@@ -207,7 +207,6 @@ const DebateArena = ({
 
         if (cleanInput) {
             setHistory(prev => [...prev, { personaId: "user", text: cleanInput }]);
-            await persistMessage('user', cleanInput);
             setInputValue('');
         }
 
