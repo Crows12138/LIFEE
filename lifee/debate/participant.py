@@ -40,25 +40,22 @@ class Participant:
         self.role_manager = role_manager
         self.knowledge_manager = knowledge_manager
         self.skill_set: SkillSet = role_manager.load_skills(role_name)
-        self._load_info()
-        self._load_tools()
+        self._load_role_metadata()
 
-    def _load_info(self):
-        """加载角色的显示信息"""
+    def _load_role_metadata(self):
+        """加载角色的显示信息和工具（单次读取 identity.md）"""
         info = self.role_manager.get_role_info(self.role_name)
 
         self.info = ParticipantInfo(
             name=self.role_name,
             display_name=info.get("display_name", self.role_name),
-            emoji=self.role_manager.get_role_emoji(self.role_name),
+            emoji=info.get("emoji", "🤖"),
         )
 
         # 加载 system prompt
         self.system_prompt = self.role_manager.load_role(self.role_name)
 
-    def _load_tools(self):
-        """加载角色配置的工具"""
-        info = self.role_manager.get_role_info(self.role_name)
+        # 加载工具
         tool_names = info.get("tools", [])
         if tool_names:
             from lifee.tools import get_tool_definitions, DefaultToolExecutor

@@ -709,7 +709,7 @@ async def summarize_debate(req: SummarizeRequest):
             continue
         if pid not in by_persona:
             by_persona[pid] = []
-        text = m.get("text", "")[:500]
+        text = m.get("text", "")[:1000]
         by_persona[pid].append(text)
 
     if not by_persona:
