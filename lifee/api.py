@@ -955,12 +955,9 @@ async def _stream_sse(moderator, participants, question, mod_module=None, origin
           except Exception:
               pass
 
-      # 存档用户消息（仅登录用户） + 日志（所有用户）
+      # 日志（所有用户）；用户消息由前端 persistMessage 存档，后端不重复存
       if question:
           await _log_conversation(uid, "user", "", question)
-          if chat_user_id:
-              seq += 1
-              await _save_message(session_id, chat_user_id, "user", question, seq=seq)
 
       _turns = max_turns or len(all_participants)
       async for participant, chunk, is_skip in moderator.run(question, max_turns=_turns):
