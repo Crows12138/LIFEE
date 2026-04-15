@@ -289,47 +289,8 @@
                 return sessionId || null;
             };
 
-            const persistMessage = async (role, text) => {
-                if (!user) return;
-                const activeSessionId = await ensureSession();
-                if (!activeSessionId) return;
-
-                const nextSeq = (sessionMessagesRef.current?.length || 0) + 1;
-                const newMsg = { role, text, seq: nextSeq };
-                const nextMessages = [...sessionMessagesRef.current, newMsg];
-                setSessionMessages(nextMessages);
-
-                await supabaseClient.from('chat_messages').insert({
-                    session_id: activeSessionId,
-                    user_id: user.id,
-                    role,
-                    content: text,
-                    seq: nextSeq
-                });
-
-                await supabaseClient.from('chat_sessions').update({
-                    updated_at: new Date().toISOString(),
-                    latest_message_at: new Date().toISOString()
-                }).eq('id', activeSessionId);
-
-                if (nextMessages.length % summaryEvery === 0) {
-                    const batch = nextMessages.slice(-summaryEvery);
-                    const summaryText = buildRoughSummary(batch);
-                    const startSeq = nextMessages.length - summaryEvery + 1;
-                    const endSeq = nextMessages.length;
-
-                    const summaryRow = {
-                        session_id: activeSessionId,
-                        user_id: user.id,
-                        summary: summaryText,
-                        start_seq: startSeq,
-                        end_seq: endSeq
-                    };
-
-                    await supabaseClient.from('chat_summaries').insert(summaryRow);
-                    setSessionSummaries(prev => [...prev, summaryRow]);
-                }
-            };
+            // persistMessage 已废弃 — 所有消息持久化由后端 _save_message 统一处理
+            const persistMessage = async () => {};
 
             const handleNewChat = async () => {
                 if (!user) {

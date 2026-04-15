@@ -570,7 +570,7 @@ async def _ensure_chat_session(session_id: str, user_id: str, title: str = "New 
         import httpx
         async with httpx.AsyncClient() as c:
             r = await c.get(
-                f"{_SUPABASE_URL}/rest/v1/chat_sessions?id=eq.{session_id}&select=id",
+                f"{_SUPABASE_URL}/rest/v1/chat_sessions?id=eq.{session_id}&deleted=eq.false&select=id",
                 headers=_SB_HEADERS,
             )
             if not r.json():
