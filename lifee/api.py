@@ -726,7 +726,7 @@ async def _handle_decision(req: DecisionRequest, request: Request):
         participants.append((persona.id, p))
 
     if not participants:
-        return {"messages": [{"personaId": "system", "text": "No matching roles found."}], "options": []}
+        return JSONResponse({"messages": [{"personaId": "system", "text": "请先选择角色再开始对话。如需继续旧对话，请重新选择相同的角色。"}], "options": [], "noPersonas": True})
 
     # 去掉角色间延迟
     original_delay = mod_module.SPEAKER_DELAY
