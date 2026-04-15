@@ -73,6 +73,14 @@ def build_fts_query(query: str, use_or: bool = False) -> str:
     return connector.join(terms)
 
 
+def _has_vec_table(db: sqlite3.Connection) -> bool:
+    """检查是否有 chunks_vec 表"""
+    row = db.execute(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name='chunks_vec'"
+    ).fetchone()
+    return row is not None
+
+
 def search_vector(
     db: sqlite3.Connection,
     query_embedding: list[float],
@@ -80,36 +88,37 @@ def search_vector(
     limit: int = 24,
 ) -> list[SearchResult]:
     """
-    向量搜索
-
-    在内存中计算余弦相似度
-
-    Args:
-        db: SQLite 连接
-        query_embedding: 查询向量
-        model: 嵌入模型名称
-        limit: 返回结果数量
-
-    Returns:
-        搜索结果列表（按相似度降序）
+    向量搜索（优先用 sqlite-vec，回退到暴力搜索）
     """
-    # 获取所有 chunks
-    cursor = db.execute(
-        """
-        SELECT id, path, start_line, end_line, text, embedding
-        FROM chunks WHERE model = ?
-        """,
-        (model,),
-    )
+    if _has_vec_table(db):
+        return _search_vector_vec(db, query_embedding, model, limit)
+    return _search_vector_brute(db, query_embedding, model, limit)
+
+
+def _search_vector_vec(
+    db: sqlite3.Connection,
+    query_embedding: list[float],
+    model: str,
+    limit: int = 24,
+) -> list[SearchResult]:
+    """sqlite-vec KNN 搜索 — 不加载全部 embedding 到内存"""
+    import struct
+    query_blob = struct.pack(f"{len(query_embedding)}f", *query_embedding)
+
+    cursor = db.execute("""
+        SELECT v.rowid, v.distance, c.id, c.path, c.start_line, c.end_line, c.text
+        FROM (
+            SELECT rowid, distance FROM chunks_vec
+            WHERE embedding MATCH ? ORDER BY distance LIMIT ?
+        ) v
+        JOIN chunks c ON c.rowid = v.rowid AND c.model = ?
+    """, (query_blob, limit * 2, model))
 
     results = []
     for row in cursor:
-        chunk_id, path, start_line, end_line, text, embedding_json = row
-        embedding = json.loads(embedding_json)
-
-        # 计算余弦相似度
-        similarity = cosine_similarity(query_embedding, embedding)
-
+        _, distance, chunk_id, path, start_line, end_line, text = row
+        # cosine distance → similarity: sim = 1 - dist
+        similarity = max(0.0, 1.0 - distance)
         results.append(SearchResult(
             id=chunk_id,
             path=path,
@@ -119,8 +128,31 @@ def search_vector(
             score=similarity,
             vector_score=similarity,
         ))
+    return results
 
-    # 按相似度降序排序
+
+def _search_vector_brute(
+    db: sqlite3.Connection,
+    query_embedding: list[float],
+    model: str,
+    limit: int = 24,
+) -> list[SearchResult]:
+    """暴力搜索回退（无 sqlite-vec 时使用）"""
+    cursor = db.execute(
+        "SELECT id, path, start_line, end_line, text, embedding FROM chunks WHERE model = ?",
+        (model,),
+    )
+
+    results = []
+    for row in cursor:
+        chunk_id, path, start_line, end_line, text, embedding_json = row
+        embedding = json.loads(embedding_json)
+        similarity = cosine_similarity(query_embedding, embedding)
+        results.append(SearchResult(
+            id=chunk_id, path=path, start_line=start_line, end_line=end_line,
+            text=text, score=similarity, vector_score=similarity,
+        ))
+
     results.sort(key=lambda x: x.score, reverse=True)
     return results[:limit]
 

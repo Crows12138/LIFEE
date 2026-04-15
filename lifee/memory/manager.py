@@ -59,12 +59,69 @@ class MemoryManager:
         self.db = sqlite3.connect(str(self.db_path))
         self.db.execute("PRAGMA cache_size = -1024")  # 1MB per connection
         self.db.execute("PRAGMA mmap_size = 0")        # 禁用 mmap 避免内存映射
+        self._load_vec_extension()
         self._init_schema()
+
+    def _load_vec_extension(self):
+        """加载 sqlite-vec 扩展"""
+        try:
+            import sqlite_vec
+            self.db.enable_load_extension(True)
+            sqlite_vec.load(self.db)
+            self.db.enable_load_extension(False)
+            self._has_vec = True
+        except (ImportError, Exception) as e:
+            print(f"[knowledge] sqlite-vec not available, falling back to brute-force: {e}")
+            self._has_vec = False
 
     def _init_schema(self):
         """初始化数据库表结构"""
         self.db.executescript(SCHEMA_SQL)
         self.db.commit()
+        if self._has_vec:
+            self._ensure_vec_index()
+
+    def _ensure_vec_index(self):
+        """创建 vec0 向量索引表（如果不存在则从 chunks 表迁移）"""
+        # 检查 vec 表是否已存在
+        exists = self.db.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name='chunks_vec'"
+        ).fetchone()
+        if exists:
+            return
+
+        # 获取维度（从第一条 embedding 推断）
+        row = self.db.execute("SELECT embedding FROM chunks LIMIT 1").fetchone()
+        if not row:
+            return
+        dims = len(json.loads(row[0]))
+
+        # 创建 vec0 虚拟表
+        self.db.execute(f"""
+            CREATE VIRTUAL TABLE chunks_vec USING vec0(
+                embedding float[{dims}] distance_metric=cosine
+            )
+        """)
+
+        # 从 chunks 表批量导入 embedding
+        import struct
+        cursor = self.db.execute("SELECT rowid, embedding FROM chunks")
+        batch = []
+        for rowid, emb_json in cursor:
+            emb = json.loads(emb_json)
+            blob = struct.pack(f"{len(emb)}f", *emb)
+            batch.append((rowid, blob))
+            if len(batch) >= 500:
+                self.db.executemany(
+                    "INSERT INTO chunks_vec(rowid, embedding) VALUES (?, ?)", batch
+                )
+                batch.clear()
+        if batch:
+            self.db.executemany(
+                "INSERT INTO chunks_vec(rowid, embedding) VALUES (?, ?)", batch
+            )
+        self.db.commit()
+        print(f"[knowledge] Built vec index: {dims}d")
 
     def _file_hash(self, path: Path) -> str:
         """计算文件内容的 SHA256 哈希"""

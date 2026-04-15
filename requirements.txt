@@ -15,7 +15,8 @@ httpx>=0.25.0          # HTTP 客户端
 questionary>=2.0.0     # 交互式命令行选择
 
 # 知识库/RAG
-numpy>=1.24.0          # 向量计算（余弦相似度）
+sqlite-vec>=0.1.3      # SQLite 向量搜索扩展
+numpy>=1.24.0          # 向量计算
 
 # 市场数据
 yfinance>=0.2.36       # 实时股票数据（美股/港股/A股）
