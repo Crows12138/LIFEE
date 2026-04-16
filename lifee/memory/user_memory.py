@@ -221,7 +221,7 @@ class UserMemory:
                 conversation_parts.append(f"User: {msg.content}")
             else:
                 name = msg.name or "AI"
-                conversation_parts.append(f"{name}: {msg.content[:100]}")
+                conversation_parts.append(f"{name}: {msg.content}")
 
         conversation = "\n".join(conversation_parts)
 

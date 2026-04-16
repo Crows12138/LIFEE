@@ -154,6 +154,106 @@
     `;
   };
 
+  const DEFAULT_USER_TEMPLATE = `# USER.md - About You
+
+## Facts
+*Stable info: age, job, city, family, education*
+
+## Events
+*Current or recent: job change, decisions, recent experiences*
+
+## Insights
+*Self-realizations: "I realized I'm afraid of failure"*
+
+## Preferences
+*Communication style, response depth, topics to avoid*
+
+## Advice
+*Advice given by personas that you accepted or rejected*
+
+---
+*This file records information you share in conversations, helping personas understand you better.*
+`;
+
+  const ProfileModal = ({ isOpen, onClose, user }) => {
+    const [content, setContent] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState('');
+    const [editing, setEditing] = useState(false);
+
+    useEffect(() => {
+      let mounted = true;
+      const load = async () => {
+        if (!isOpen || !user) return;
+        setStatus('');
+        setEditing(false);
+        const { data } = await supabaseClient.from('profiles').select('user_memory').eq('id', user.id).maybeSingle();
+        if (!mounted) return;
+        setContent(data?.user_memory || DEFAULT_USER_TEMPLATE);
+      };
+      load();
+      return () => { mounted = false; };
+    }, [isOpen, user?.id]);
+
+    if (!isOpen) return null;
+
+    const saveMemory = async () => {
+      if (!user) return;
+      setLoading(true);
+      setStatus('');
+      try {
+        const { error } = await supabaseClient
+          .from('profiles')
+          .upsert({ id: user.id, user_memory: content }, { onConflict: 'id' });
+        if (error) throw error;
+        setStatus('Saved');
+        setEditing(false);
+      } catch (e) {
+        setStatus(e?.message || 'Save failed');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const resetMemory = async () => {
+      if (!confirm('Reset your profile to default? This cannot be undone.')) return;
+      setContent(DEFAULT_USER_TEMPLATE);
+      setEditing(true);
+    };
+
+    return html`
+      <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" onClick=${onClose}></div>
+        <div className="relative w-full max-w-2xl bg-white rounded-[36px] shadow-2xl border border-[#F0EDEA] p-8 md:p-10 animate-in" style=${{ maxHeight: '85vh', display: 'flex', flexDirection: 'column' }}>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-serif italic text-[#1A1A1A]">My profile</h2>
+            <button onClick=${onClose} className="text-xs font-bold uppercase tracking-widest opacity-40 hover:opacity-100">
+              <${Icon} name="X" size=${14} />
+            </button>
+          </div>
+          <div className="text-xs opacity-50 mb-4 leading-relaxed">
+            This is what personas know about you. It updates automatically after conversations, or you can edit it manually.
+          </div>
+          <textarea
+            className="flex-1 min-h-[300px] w-full p-5 bg-[#FDFBF7] rounded-3xl border border-[#F0EDEA] text-xs md:text-sm leading-relaxed focus-blue-brand no-scrollbar font-mono"
+            value=${content}
+            onChange=${(e) => { setContent(e.target.value); setEditing(true); }}
+            placeholder="Your profile will appear here after your first conversation..."
+          />
+          <div className="flex flex-col md:flex-row gap-3 mt-4">
+            <button onClick=${saveMemory} disabled=${loading || !editing} className="flex-1 py-4 bg-blue-brand text-white rounded-full font-bold uppercase text-xs tracking-[0.2em] shadow-xl disabled:opacity-40">
+              ${loading ? 'Saving...' : 'Save'}
+            </button>
+            <button onClick=${resetMemory} disabled=${loading} className="py-4 px-6 bg-white border border-[#E8E6E0] rounded-full font-bold uppercase text-xs tracking-[0.2em] hover:shadow-md disabled:opacity-40">
+              Reset
+            </button>
+          </div>
+          ${status ? html`<div className="text-xs text-blue-brand mt-2">${status}</div>` : null}
+        </div>
+      </div>
+    `;
+  };
+
   const ShareChatModal = ({ isOpen, onClose, shareText }) => {
     const [status, setStatus] = useState('');
     if (!isOpen) return null;
@@ -226,6 +326,7 @@
   }) => {
     const [accountOpen, setAccountOpen] = useState(false);
     const [shareOpen, setShareOpen] = useState(false);
+    const [profileOpen, setProfileOpen] = useState(false);
 
     return html`
       <div className="p-6 md:p-12 max-w-[1100px] mx-auto animate-in space-y-10">
@@ -246,6 +347,17 @@
               <div className="text-xs font-black uppercase tracking-[0.2em] opacity-60">Manage account</div>
             </div>
             <div className="text-sm italic opacity-60 leading-relaxed">Update your display name, reset your password, and sign out.</div>
+            <div className="mt-5 text-[10px] font-black uppercase tracking-widest opacity-30 group-hover:text-blue-brand transition-colors">Open →</div>
+          </button>
+
+          <button onClick=${() => setProfileOpen(true)} disabled=${!user} className="group text-left bg-white p-7 rounded-[36px] border border-[#F0EDEA] shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 rounded-2xl bg-[#FDFBF7] border border-[#F0EDEA] flex items-center justify-center text-blue-brand group-hover:bg-blue-brand/10 transition-colors">
+                <${Icon} name="BookUser" size=${18} />
+              </div>
+              <div className="text-xs font-black uppercase tracking-[0.2em] opacity-60">My profile</div>
+            </div>
+            <div className="text-sm italic opacity-60 leading-relaxed">View and edit what personas know about you. Updates automatically after conversations.</div>
             <div className="mt-5 text-[10px] font-black uppercase tracking-widest opacity-30 group-hover:text-blue-brand transition-colors">Open →</div>
           </button>
 
@@ -284,6 +396,11 @@
           </div>
         </div>
 
+        <${ProfileModal}
+          isOpen=${profileOpen}
+          onClose=${() => setProfileOpen(false)}
+          user=${user}
+        />
         <${AccountModal}
           isOpen=${accountOpen}
           onClose=${() => setAccountOpen(false)}

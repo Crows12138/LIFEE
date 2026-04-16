@@ -709,7 +709,7 @@ async def summarize_debate(req: SummarizeRequest):
             continue
         if pid not in by_persona:
             by_persona[pid] = []
-        text = m.get("text", "")[:1000]
+        text = m.get("text", "")
         by_persona[pid].append(text)
 
     if not by_persona:
@@ -746,6 +746,87 @@ Reply in JSON format: {{"persona_id": "1-2 sentence summary", ...}}"""
         import traceback
         traceback.print_exc()
         return {"summaries": {}, "error": str(e)}
+
+
+# ---- User Memory API ----
+
+class ExtractMemoryRequest(BaseModel):
+    sessionId: str = ""
+    userId: str = ""
+    currentMemory: str = ""
+
+
+@app.post("/extract-memory")
+async def extract_memory(req: ExtractMemoryRequest):
+    """从对话中自动提取用户信息，更新 user_memory"""
+    if not req.userId:
+        return {"updated": False, "error": "Not logged in"}
+
+    # 加载对话消息
+    msgs = []
+    if req.sessionId and _SUPABASE_URL:
+        try:
+            import httpx
+            async with httpx.AsyncClient() as c:
+                r = await c.get(
+                    f"{_SUPABASE_URL}/rest/v1/chat_messages?session_id=eq.{req.sessionId}&select=role,content,persona_id&order=seq.asc",
+                    headers=_SB_HEADERS,
+                )
+                msgs = r.json() or []
+        except Exception:
+            pass
+
+    if not msgs:
+        return {"updated": False}
+
+    # 构建对话文本（用户消息完整，AI 消息截断）
+    conversation_parts = []
+    for m in msgs:
+        if m["role"] == "user":
+            conversation_parts.append(f"User: {m['content']}")
+        else:
+            name = m.get("persona_id") or "AI"
+            conversation_parts.append(f"{name}: {m['content']}")
+    conversation = "\n".join(conversation_parts)
+
+    current_content = req.currentMemory or ""
+
+    from lifee.memory.user_memory import EXTRACT_PROMPT
+    prompt = EXTRACT_PROMPT.format(
+        current_content=current_content,
+        conversation=conversation,
+    )
+
+    try:
+        provider = _get_provider()
+        from lifee.providers.base import Message, MessageRole
+        response = await provider.chat(
+            messages=[Message(role=MessageRole.USER, content=prompt)],
+            max_tokens=1000,
+            temperature=0.2,
+        )
+        updated = response.content.strip()
+        if not updated or updated == current_content.strip():
+            return {"updated": False}
+
+        # 写回 Supabase profiles
+        if _SUPABASE_URL:
+            try:
+                import httpx
+                async with httpx.AsyncClient() as c:
+                    await c.patch(
+                        f"{_SUPABASE_URL}/rest/v1/profiles?id=eq.{req.userId}",
+                        headers=_SB_HEADERS,
+                        json={"user_memory": updated},
+                    )
+            except Exception:
+                pass
+
+        return {"updated": True, "memory": updated}
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return {"updated": False, "error": str(e)}
 
 
 # ---- Decision API ----
@@ -870,7 +951,23 @@ async def _handle_decision(req: DecisionRequest, request: Request):
                 except Exception as e:
                     print(f"[session] Failed to restore history: {e}")
 
-            moderator = Moderator(all_participants, session, enable_moderator_check=req.moderator, language=req.language)
+            # 加载用户档案（user_memory）
+            user_memory_context = ""
+            if req.userId and _SUPABASE_URL:
+                try:
+                    import httpx
+                    async with httpx.AsyncClient() as _c:
+                        _r = await _c.get(
+                            f"{_SUPABASE_URL}/rest/v1/profiles?id=eq.{req.userId}&select=user_memory",
+                            headers=_SB_HEADERS,
+                        )
+                        rows = _r.json() or []
+                        if rows and rows[0].get("user_memory"):
+                            user_memory_context = rows[0]["user_memory"]
+                except Exception:
+                    pass
+
+            moderator = Moderator(all_participants, session, user_memory_context=user_memory_context, enable_moderator_check=req.moderator, language=req.language)
             sid = sid or str(uuid4())
             _sessions[sid] = (session, moderator, participants, now)
             # 存档：创建 chat_session（用 Supabase user ID，不是 credits uid）

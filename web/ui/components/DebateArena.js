@@ -50,6 +50,31 @@ const DebateArena = ({
     const summaryAtCountRef = useRef(0); // 上次 summary 时的消息数
     const [language, setLanguage] = useState(() => localStorage.getItem('lifee_lang') || '');
 
+    // Refs for unmount extract-memory
+    const sessionIdRef = useRef(sessionId);
+    const historyRef = useRef(history);
+    const mountUserMsgCountRef = useRef(initialMessages.filter(m => m.personaId === 'user').length);
+    useEffect(() => { sessionIdRef.current = sessionId; }, [sessionId]);
+    useEffect(() => { historyRef.current = history; }, [history]);
+
+    // 离开对话页面时自动提取用户档案（仅当用户发了至少 2 条新消息时）
+    useEffect(() => {
+        return () => {
+            const sid = sessionIdRef.current;
+            const userMsgCount = historyRef.current.filter(m => m.personaId === 'user').length;
+            if (!user?.id || !sid || userMsgCount - mountUserMsgCountRef.current < 2) return;
+            supabaseClient.from('profiles').select('user_memory').eq('id', user.id).maybeSingle()
+                .then(({ data }) => {
+                    window.fetch('/extract-memory', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        credentials: 'include',
+                        body: JSON.stringify({ sessionId: sid, userId: user.id, currentMemory: data?.user_memory || '' }),
+                    }).catch(() => {});
+                }).catch(() => {});
+        };
+    }, [user?.id]);
+
     // Canvas state
     const [canvasScale, setCanvasScale] = useState(0.82);
     const [canvasPan, setCanvasPan] = useState({ x: 0, y: 0 });
