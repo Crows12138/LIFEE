@@ -240,14 +240,21 @@ const DebateArena = ({
         try {
             const situation = (context.situation || "").trim();
 
+            // 语言检测：有就用缓存，没有就检测并存起来
+            let lang = language;
+            if (!lang) {
+                lang = detectLang(cleanInput || situation || (history.findLast(m => m.personaId === 'user')?.text) || '');
+                setLanguage(lang);
+                localStorage.setItem('lifee_lang', lang);
+            }
+
             const payload = {
                 situation: situation || (history.length > 0 ? "" : "Start the internal debate."),
-                userInput: cleanInput,
                 userInput: cleanInput,
                 personas: debatePersonas.map(p => ({ id: p.id, name: p.name })),
                 sessionId: sessionId,
                 userId: user?.id || "",
-                language: language || detectLang(cleanInput || situation || (history.findLast(m => m.personaId === 'user')?.text) || ''),
+                language: lang,
                 moderator: followUpMode,
                 webSearch: webSearchMode,
                 maxSpeakers: maxSpeakers
