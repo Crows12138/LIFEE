@@ -147,6 +147,11 @@ class LLMProvider(ABC):
     """LLM 提供商抽象基类"""
 
     @property
+    def context_window(self) -> int:
+        """上下文窗口大小（token 数），子类可覆盖"""
+        return 128_000
+
+    @property
     @abstractmethod
     def name(self) -> str:
         """提供商名称"""

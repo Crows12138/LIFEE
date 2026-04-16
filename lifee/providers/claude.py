@@ -83,6 +83,10 @@ class ClaudeProvider(LLMProvider):
         return "claude"
 
     @property
+    def context_window(self) -> int:
+        return 200_000
+
+    @property
     def model(self) -> str:
         return self._model
 

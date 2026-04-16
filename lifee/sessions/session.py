@@ -9,8 +9,7 @@ from lifee.providers.base import LLMProvider, MediaItem, Message, MessageRole
 
 
 # ---- Compact 配置 ----
-# DeepSeek 128K context，留 20K 给 system prompt + output
-COMPACT_THRESHOLD = 100_000  # 估算 token 超过此值时触发 compact
+COMPACT_RATIO = 0.70         # context window 的 70% 作为 compact 阈值
 COMPACT_KEEP_RECENT = 6      # 保留最近 N 条消息原文
 
 COMPACT_PROMPT = """You are summarizing a multi-character discussion to save context space.
@@ -108,10 +107,11 @@ class Session:
             是否执行了 compact
         """
         tokens = self.estimate_tokens()
-        if tokens < COMPACT_THRESHOLD:
+        threshold = int(provider.context_window * COMPACT_RATIO)
+        if tokens < threshold:
             return False
 
-        print(f"[compact] Token count {tokens:,} exceeds {COMPACT_THRESHOLD:,}, compacting...")
+        print(f"[compact] Token count {tokens:,} exceeds {threshold:,} ({provider.name} {provider.context_window:,} × {COMPACT_RATIO}), compacting...")
         return await self.compact(provider)
 
     async def compact(self, provider: LLMProvider) -> bool:

@@ -41,6 +41,10 @@ class GeminiProvider(LLMProvider):
         return "gemini"
 
     @property
+    def context_window(self) -> int:
+        return 1_000_000
+
+    @property
     def model(self) -> str:
         return self._model_name
 
