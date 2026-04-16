@@ -822,6 +822,24 @@ async def extract_memory(req: ExtractMemoryRequest):
             except Exception:
                 pass
 
+        # 更新 session 的提取计数
+        if req.sessionId and _SUPABASE_URL:
+            try:
+                # 统计用户消息数
+                async with httpx.AsyncClient() as c:
+                    r = await c.get(
+                        f"{_SUPABASE_URL}/rest/v1/chat_messages?session_id=eq.{req.sessionId}&role=eq.user&select=seq",
+                        headers=_SB_HEADERS,
+                    )
+                    user_msg_count = len(r.json() or [])
+                    await c.patch(
+                        f"{_SUPABASE_URL}/rest/v1/chat_sessions?id=eq.{req.sessionId}",
+                        headers=_SB_HEADERS,
+                        json={"last_extract_msg_count": user_msg_count},
+                    )
+            except Exception:
+                pass
+
         return {"updated": True, "memory": updated}
     except Exception as e:
         import traceback

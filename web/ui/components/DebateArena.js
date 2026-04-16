@@ -50,30 +50,38 @@ const DebateArena = ({
     const summaryAtCountRef = useRef(0); // 上次 summary 时的消息数
     const [language, setLanguage] = useState(() => localStorage.getItem('lifee_lang') || '');
 
-    // Refs for unmount extract-memory
+    // 用户档案自动提取
     const sessionIdRef = useRef(sessionId);
     const historyRef = useRef(history);
-    const mountUserMsgCountRef = useRef(initialMessages.filter(m => m.personaId === 'user').length);
+    const lastExtractAtRef = useRef(initialMessages.filter(m => m.personaId === 'user').length);
     useEffect(() => { sessionIdRef.current = sessionId; }, [sessionId]);
     useEffect(() => { historyRef.current = history; }, [history]);
 
-    // 离开对话页面时自动提取用户档案（仅当用户发了至少 2 条新消息时）
+    // 从 Supabase 加载上次提取时的用户消息数
     useEffect(() => {
-        return () => {
-            const sid = sessionIdRef.current;
-            const userMsgCount = historyRef.current.filter(m => m.personaId === 'user').length;
-            if (!user?.id || !sid || userMsgCount - mountUserMsgCountRef.current < 2) return;
-            supabaseClient.from('profiles').select('user_memory').eq('id', user.id).maybeSingle()
-                .then(({ data }) => {
-                    window.fetch('/extract-memory', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        credentials: 'include',
-                        body: JSON.stringify({ sessionId: sid, userId: user.id, currentMemory: data?.user_memory || '' }),
-                    }).catch(() => {});
+        if (!parentSessionId || !user?.id) return;
+        supabaseClient.from('chat_sessions').select('last_extract_msg_count').eq('id', parentSessionId).maybeSingle()
+            .then(({ data }) => {
+                if (data?.last_extract_msg_count > 0) lastExtractAtRef.current = data.last_extract_msg_count;
+            }).catch(() => {});
+    }, [parentSessionId, user?.id]);
+
+    const fireExtractMemory = (sid, msgs) => {
+        if (!user?.id || !sid) return;
+        const userMsgCount = (msgs || historyRef.current).filter(m => m.personaId === 'user').length;
+        if (userMsgCount - lastExtractAtRef.current < 2) return;
+        lastExtractAtRef.current = userMsgCount;
+        supabaseClient.from('profiles').select('user_memory').eq('id', user.id).maybeSingle()
+            .then(({ data }) => {
+                window.fetch('/extract-memory', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify({ sessionId: sid, userId: user.id, currentMemory: data?.user_memory || '' }),
                 }).catch(() => {});
-        };
-    }, [user?.id]);
+            }).catch(() => {});
+    };
+
 
     // Canvas state
     const [canvasScale, setCanvasScale] = useState(0.82);
@@ -311,6 +319,12 @@ const DebateArena = ({
             setOptions([]);
         } finally {
             setIsDebating(false);
+            // 每 5 条用户消息自动提取档案（fire-and-forget）
+            const latestHistory = historyRef.current;
+            const userCount = latestHistory.filter(m => m.personaId === 'user').length;
+            if (userCount > 0 && userCount % 5 === 0 && userCount > lastExtractAtRef.current) {
+                fireExtractMemory(sessionIdRef.current, latestHistory);
+            }
         }
     };
 
