@@ -241,7 +241,8 @@ const DebateArena = ({
             const situation = (context.situation || "").trim();
 
             const payload = {
-                situation: situation || "Start the internal debate.",
+                situation: situation || (history.length > 0 ? "" : "Start the internal debate."),
+                userInput: cleanInput,
                 userInput: cleanInput,
                 personas: debatePersonas.map(p => ({ id: p.id, name: p.name })),
                 sessionId: sessionId,
