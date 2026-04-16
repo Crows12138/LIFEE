@@ -66,11 +66,15 @@ const DebateArena = ({
             }).catch(() => {});
     }, [parentSessionId, user?.id]);
 
+    const [extractStatus, setExtractStatus] = useState(''); // '' | 'extracting' | 'done'
+    const extractTimerRef = useRef(null);
+
     const fireExtractMemory = (sid, msgs) => {
         if (!user?.id || !sid) return;
         const userMsgCount = (msgs || historyRef.current).filter(m => m.personaId === 'user').length;
         if (userMsgCount - lastExtractAtRef.current < 2) return;
         lastExtractAtRef.current = userMsgCount;
+        setExtractStatus('extracting');
         supabaseClient.from('profiles').select('user_memory').eq('id', user.id).maybeSingle()
             .then(({ data }) => {
                 window.fetch('/extract-memory', {
@@ -78,8 +82,14 @@ const DebateArena = ({
                     headers: { 'Content-Type': 'application/json' },
                     credentials: 'include',
                     body: JSON.stringify({ sessionId: sid, userId: user.id, currentMemory: data?.user_memory || '' }),
-                }).catch(() => {});
-            }).catch(() => {});
+                }).then(r => r.json()).then(res => {
+                    setExtractStatus(res?.updated ? 'done' : '');
+                    if (res?.updated) {
+                        clearTimeout(extractTimerRef.current);
+                        extractTimerRef.current = setTimeout(() => setExtractStatus(''), 3000);
+                    }
+                }).catch(() => setExtractStatus(''));
+            }).catch(() => setExtractStatus(''));
     };
 
 
@@ -816,6 +826,14 @@ const DebateArena = ({
                                     />
                                     {inputValue.length > 400 && <div className="absolute bottom-1 right-5 text-[10px] text-neutral-300">{inputValue.length}/1000</div>}
                                 </div>
+                                {extractStatus && (
+                                    <div className="flex items-center gap-1.5 px-2 py-1 text-[10px] opacity-50" style={{ transition: 'opacity 0.3s' }}>
+                                        <span className={extractStatus === 'extracting' ? 'animate-spin' : ''} style={{ display: 'inline-flex' }}>
+                                            <Icon name={extractStatus === 'done' ? 'Check' : 'BookUser'} size={12} />
+                                        </span>
+                                        {extractStatus === 'extracting' ? 'Updating profile...' : 'Profile updated'}
+                                    </div>
+                                )}
                             </div>
                             {hasTarotMaster && (
                                 <div className="md:hidden flex justify-center">
