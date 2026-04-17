@@ -49,6 +49,7 @@ node_modules/
 # Claude Code
 CLAUDE.md
 .serena/
+.claude/settings.local.json
 
 # OS
 .DS_Store
