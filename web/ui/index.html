@@ -759,7 +759,12 @@
                                             <button
                                                 key={opt}
                                                 type="button"
-                                                onClick={() => setContext(prev => ({ ...prev, landingPeriods: isSel ? (prev.landingPeriods || []).filter(x => x !== opt) : [...(prev.landingPeriods || []), opt] }))}
+                                                onClick={() => setContext(prev => {
+                                                    const periods = isSel ? (prev.landingPeriods || []).filter(x => x !== opt) : [...(prev.landingPeriods || []), opt];
+                                                    const situationBase = (prev.situation || '').replace(new RegExp('(^|\\n)Context: [^\\n]*', 'g'), '').trimEnd();
+                                                    const situationContext = periods.length > 0 ? `${situationBase ? situationBase + '\n' : ''}Context: ${periods.join(', ')}` : situationBase;
+                                                    return { ...prev, landingPeriods: periods, situation: situationContext };
+                                                })}
                                                 className={`landing-opt ${isSel ? 'selected' : ''}`}
                                             >
                                                 {opt.toUpperCase()}

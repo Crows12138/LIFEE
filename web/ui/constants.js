@@ -22,6 +22,7 @@ var PRESET_PERIODS = [
 
 var LANDING_CATEGORIES = {
     scenario: [
+        "My first job",
         "First time studying abroad",
         "First year after graduation",
         "Career transition",
