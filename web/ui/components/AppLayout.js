@@ -1,6 +1,8 @@
 ﻿const { useState, useEffect, useRef } = React;
 const { Icon } = window;
 
+const COMING_SOON_MSG = 'New feature coming soon';
+
 const AppLayout = ({ children, activeView, setView, user, isAdmin, onOpenAdmin, onLogin, onSignOut, onNewChat, savedSessions = [], setSavedSessions, setSessionMessages, setSessionId, setSelectedIds, personas = [] }) => {
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -122,7 +124,14 @@ const AppLayout = ({ children, activeView, setView, user, isAdmin, onOpenAdmin, 
                         {labToolItems.map(item => (
                             <button
                                 key={item.id}
-                                onClick={() => { setView(item.view); setIsMobileMenuOpen(false); }}
+                                onClick={() => {
+                                    if (item.view === 'life-simulator' || item.view === 'decision-lab') {
+                                        alert(COMING_SOON_MSG);
+                                        return;
+                                    }
+                                    setView(item.view);
+                                    setIsMobileMenuOpen(false);
+                                }}
                                 className={`w-full text-left rounded-xl transition-all flex items-center ${isCollapsed ? 'md:p-3 md:justify-center' : 'px-4 py-3 text-xs font-bold'} ${activeView === item.view ? 'bg-blue-brand/10 text-blue-brand shadow-sm' : 'hover:bg-white/60 opacity-60'}`}
                             >
                                 <Icon name={item.icon} size={isCollapsed ? 18 : 16} className={activeView === item.view ? "text-blue-brand" : (isCollapsed ? "opacity-60" : "mr-2 opacity-60")} />

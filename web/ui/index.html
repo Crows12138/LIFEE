@@ -29,6 +29,7 @@
     <script type="text/babel" src="./components/AppLayout.js"></script>
     <script type="text/babel" src="./components/tools.js"></script>
     <script type="text/babel" src="./components/DebateArena.js"></script>
+    <script type="text/babel" src="./components/JobOfferModal.js"></script>
 
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
@@ -42,6 +43,7 @@
         const { AppLayout } = window;
         const { TAROT_DECK, LifeSimulator, AITarot, TarotReadingModal, DecisionLab, PersonaBuilder } = window;
         const { DebateArena, CommunityView } = window;
+        const { JobOfferModal } = window;
 
         function App() {
             const [view, setView] = useState('home');
@@ -61,6 +63,7 @@
             const [sessionId, setSessionId] = useState(null);
             const [sessionMessages, setSessionMessages] = useState([]);
             const [savedSessions, setSavedSessions] = useState([]);
+            const [jobOfferModalOpen, setJobOfferModalOpen] = useState(false);
 
             // 拉取后端会话列表
             useEffect(() => {
@@ -674,7 +677,7 @@
                                         </div>
                                     );
                                 })}
-                                <div onClick={() => setView('builder')} className="relative p-6 bg-white/30 backdrop-blur-sm rounded-[40px] border-2 border-dashed border-blue-brand/30 cursor-pointer transition-all hover:bg-white hover:border-blue-brand flex flex-col items-center justify-center gap-4 aspect-[3/4] min-h-[300px] text-center group"><div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-blue-brand group-hover:scale-110 transition-transform"><Icon name="Plus" size={24} /></div><p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] opacity-40 group-hover:opacity-80 transition-opacity">Create Voice</p></div>
+                                <div onClick={() => alert('New feature coming soon')} className="relative p-6 bg-white/30 backdrop-blur-sm rounded-[40px] border-2 border-dashed border-blue-brand/30 cursor-pointer transition-all hover:bg-white hover:border-blue-brand flex flex-col items-center justify-center gap-4 aspect-[3/4] min-h-[300px] text-center group"><div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-blue-brand group-hover:scale-110 transition-transform"><Icon name="Plus" size={24} /></div><p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] opacity-40 group-hover:opacity-80 transition-opacity">Create Voice</p></div>
                             </div>
                             {selectedIds.length >= 2 && <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 animate-in w-[90%] md:w-auto text-center"><button onClick={() => setView('debate')} className="px-12 md:px-16 py-5 md:py-6 bg-[#1A1A1A] text-white rounded-full font-black text-[10px] md:text-xs tracking-[0.3em] md:tracking-[0.4em] shadow-2xl hover:scale-105 transition-all uppercase">Commence Dialogue</button></div>}
                         </div>
@@ -700,6 +703,7 @@
                         <header className="mb-2 md:mb-4 text-center space-y-3"><h1 className="text-6xl md:text-8xl font-black tracking-tighter text-blue-brand uppercase italic leading-none">LIFEE</h1><p className="italic text-[8px] md:text-[10px] text-[#C1C1C1] uppercase tracking-[0.4em] md:tracking-[0.6em] font-black font-sans">YOUR LIFE & FRIEND COACH</p></header>
                         {(() => {
                             const suggestedQuestions = [
+                                "I'm not sure which job offer to choose",
                                 "I have so many hobbies, but why do I still feel empty inside?",
                                 "How should young adults navigate the confusing years of their twenties?",
                                 "When chasing a crush, is it better to confess directly or take it slow?",
@@ -714,7 +718,13 @@
                                                 key={index}
                                                 type="button"
                                                 className="question-capsule"
-                                                onClick={() => setContext({...context, situation: question})}
+                                                onClick={() => {
+                                                    if (question === "I'm not sure which job offer to choose") {
+                                                        setJobOfferModalOpen(true);
+                                                    } else {
+                                                        setContext({...context, situation: question});
+                                                    }
+                                                }}
                                             >
                                                 {question}
                                             </button>
@@ -801,6 +811,7 @@
                         )}
                     </AppLayout>
                     <AuthModal isOpen={authOpen || (!user && !isGuest)} onClose={() => setAuthOpen(false)} onAuthed={(u) => { setUser(u); setIsGuest(false); }} onGuest={() => { setIsGuest(true); setAuthOpen(false); }} />
+                    <JobOfferModal isOpen={jobOfferModalOpen} onClose={() => setJobOfferModalOpen(false)} onConfirm={(text) => setContext({...context, situation: text})} />
                     {isAdmin && (
                         <AdminPanel
                             isOpen={adminOpen}
