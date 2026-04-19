@@ -885,21 +885,60 @@
                 });
             }, [personas.length]);
 
-            // Domain carousel
+            // Domain carousel — per-domain section height (1 row vs 2 rows)
             const activeDomains = DOMAIN_ORDER.filter(d => grouped[d].length > 0);
-            const SECTION_H = 200;  // each section px
+            const CARDS_PER_ROW = 3;
+            const HEADER_H = 70;   // domain header row + gap + buffer
+            const ROW_H = 120;     // one row of persona cards + buffer
+            const sectionHFor = (n) => HEADER_H + Math.min(2, Math.ceil(n / CARDS_PER_ROW)) * ROW_H;
+            const sectionHeights = activeDomains.map(d => sectionHFor(grouped[d].length));
+
             const carouselRef = useRef(null);
-            const scrollLockRef = useRef(false);  // true during programmatic scroll
+            const sectionRefs = useRef([]);
+            const scrollLockRef = useRef(false);
             const [activeDomainIdx, setActiveDomainIdx] = useState(0);
+            const currentSectionH = sectionHeights[activeDomainIdx] ?? 300;
+
+            // Read actual offsetTop of each section (avoids rounding drift from computed heights)
+            const getOffsets = () => sectionRefs.current.map(el => el?.offsetTop ?? 0);
+            const idxAtScroll = (top) => {
+                const offs = getOffsets();
+                let best = 0, bestDist = Infinity;
+                for (let i = 0; i < offs.length; i++) {
+                    const dist = Math.abs(top - offs[i]);
+                    if (dist < bestDist) { bestDist = dist; best = i; }
+                }
+                return best;
+            };
+
+            // Manual RAF-based scroll (guaranteed duration + easing to match CSS height transition)
+            const SCROLL_DURATION = 300;
+            const easeOut = (t) => 1 - Math.pow(1 - t, 3);  // cubic ease-out, matches Tailwind ease-out
+            const scrollAnimRef = useRef(null);
+            const animateScrollTo = (top) => {
+                const el = carouselRef.current;
+                if (!el) return;
+                if (scrollAnimRef.current != null) cancelAnimationFrame(scrollAnimRef.current);
+                const startTop = el.scrollTop;
+                const startTime = performance.now();
+                const step = (now) => {
+                    const t = Math.min(1, (now - startTime) / SCROLL_DURATION);
+                    el.scrollTop = startTop + (top - startTop) * easeOut(t);
+                    if (t < 1) scrollAnimRef.current = requestAnimationFrame(step);
+                    else scrollAnimRef.current = null;
+                };
+                scrollAnimRef.current = requestAnimationFrame(step);
+            };
 
             const goToDomain = (idx) => {
                 const el = carouselRef.current;
                 if (!el) return;
                 const clamped = Math.max(0, Math.min(activeDomains.length - 1, idx));
+                const target = sectionRefs.current[clamped]?.offsetTop ?? 0;
                 scrollLockRef.current = true;
-                el.scrollTo({ top: clamped * SECTION_H, behavior: 'smooth' });
-                setActiveDomainIdx(clamped);
-                setTimeout(() => { scrollLockRef.current = false; }, 500);
+                setActiveDomainIdx(clamped);  // triggers height transition
+                animateScrollTo(target);       // synchronized RAF scroll
+                setTimeout(() => { scrollLockRef.current = false; }, SCROLL_DURATION + 50);
             };
 
             useEffect(() => {
@@ -907,24 +946,23 @@
                 if (!el) return;
                 let wheelLock = false;
                 const wheelHandler = (e) => {
-                    // Horizontal intent (trackpad 2-finger swipe or Shift+Wheel) → let the
-                    // inner persona row scroll natively, don't hijack for domain switch.
                     if (e.shiftKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
                     e.preventDefault();
                     if (wheelLock) return;
                     const dir = e.deltaY > 0 ? 1 : -1;
-                    const currentIdx = Math.round(el.scrollTop / SECTION_H);
+                    const currentIdx = idxAtScroll(el.scrollTop);
                     const nextIdx = Math.max(0, Math.min(activeDomains.length - 1, currentIdx + dir));
                     if (nextIdx === currentIdx) return;
                     wheelLock = true;
                     scrollLockRef.current = true;
-                    el.scrollTo({ top: nextIdx * SECTION_H, behavior: 'smooth' });
                     setActiveDomainIdx(nextIdx);
-                    setTimeout(() => { wheelLock = false; scrollLockRef.current = false; }, 500);
+                    const nextTop = sectionRefs.current[nextIdx]?.offsetTop ?? 0;
+                    animateScrollTo(nextTop);
+                    setTimeout(() => { wheelLock = false; scrollLockRef.current = false; }, SCROLL_DURATION + 50);
                 };
                 const scrollHandler = () => {
-                    if (scrollLockRef.current) return;  // ignore during programmatic scroll
-                    const idx = Math.round(el.scrollTop / SECTION_H);
+                    if (scrollLockRef.current) return;
+                    const idx = idxAtScroll(el.scrollTop);
                     setActiveDomainIdx(prev => prev === idx ? prev : idx);
                 };
                 el.addEventListener('wheel', wheelHandler, { passive: false });
@@ -941,11 +979,12 @@
                 let vRaf = null;
                 const cancelVMomentum = () => { if (vRaf != null) { cancelAnimationFrame(vRaf); vRaf = null; } };
                 const snapToNearest = () => {
-                    const idx = Math.max(0, Math.min(activeDomains.length - 1, Math.round(el.scrollTop / SECTION_H)));
+                    const idx = idxAtScroll(el.scrollTop);
                     scrollLockRef.current = true;
-                    el.scrollTo({ top: idx * SECTION_H, behavior: 'smooth' });
                     setActiveDomainIdx(idx);
-                    setTimeout(() => { scrollLockRef.current = false; }, 500);
+                    const target = sectionRefs.current[idx]?.offsetTop ?? 0;
+                    animateScrollTo(target);
+                    setTimeout(() => { scrollLockRef.current = false; }, SCROLL_DURATION + 50);
                 };
                 const runVMomentum = () => {
                     const friction = 0.92;
@@ -1218,12 +1257,19 @@
                             <p class="text-[10px] text-on-surface-variant/40">${personas.length} voices</p>
                         </div>
 
-                        <!-- Vertical carousel (peek removed; bottom tabs provide navigation) -->
-                        <div ref=${carouselRef} class="relative h-[200px] overflow-y-auto no-scrollbar" style=${{ scrollbarWidth: 'none' }}>
+                        <!-- Vertical carousel (one domain at a time, dynamic height: 1 or 2 rows)
+                             Height transition delayed by half the scroll duration so the row
+                             reveal happens AFTER we've arrived at the new domain's top. -->
+                        <div ref=${carouselRef} class="relative overflow-y-auto no-scrollbar transition-[height] duration-300 delay-150 ease-out"
+                             style=${{ scrollbarWidth: 'none', height: currentSectionH + 'px' }}>
                             ${activeDomains.map((domain, dIdx, arr) => {
                                 const items = grouped[domain];
+                                const h = sectionHeights[dIdx];
                                 return html`
-                                    <div key=${domain} class="h-[200px] flex flex-col gap-5 pt-2">
+                                    <div key=${domain}
+                                         ref=${(node) => { sectionRefs.current[dIdx] = node; }}
+                                         class="flex flex-col gap-5 pt-2 overflow-hidden"
+                                         style=${{ height: h + 'px' }}>
                                         <!-- Domain header -->
                                         <div class="flex items-baseline justify-between">
                                             <div class="flex items-baseline gap-4">
@@ -1237,40 +1283,35 @@
                                             </div>
                                         </div>
 
-                                        <!-- Horizontal scroll of personas for this domain -->
-                                        <div class="relative flex-1 min-h-0">
-                                            <div data-h-row class="h-full overflow-x-auto no-scrollbar snap-x pb-2" style=${{ scrollbarWidth: 'none' }}>
-                                                <div class="inline-flex flex-nowrap items-start gap-8">
-                                                    ${items.map(p => {
-                                                        const isSel = selectedIds.includes(p.id);
-                                                        const isPreview = previewId === p.id;
-                                                        return html`
-                                                            <div
-                                                                key=${p.id}
-                                                                onClick=${() => {
-                                                                    if (previewId === p.id) toggleSelect(p.id);
-                                                                    else setPreviewId(p.id);
-                                                                }}
-                                                                class=${`group shrink-0 snap-start cursor-pointer w-72 py-4 border-t transition-colors
-                                                                    ${isSel ? 'border-primary/40' : isPreview ? 'border-primary/30' : 'border-on-surface/10 hover:border-on-surface/30'}`}
-                                                            >
-                                                                <div class="flex items-start gap-3">
-                                                                    <span class=${`text-xl mt-0.5 transition-opacity ${isSel || isPreview ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'}`}>${p.avatar || '☁️'}</span>
-                                                                    <div class="flex-1 min-w-0">
-                                                                        <div class="flex items-center justify-between gap-2">
-                                                                            <p class=${`font-headline text-sm font-bold leading-tight transition-colors ${isSel ? 'text-primary' : isPreview ? 'text-on-surface' : 'text-on-surface/90 group-hover:text-on-surface'}`}>${p.name}</p>
-                                                                            ${isSel ? html`<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>` : null}
-                                                                        </div>
-                                                                        <p class="text-[10px] text-on-surface-variant/50 uppercase tracking-widest mt-1">${p.role}</p>
-                                                                        <p class="text-[11px] text-on-surface-variant/40 italic mt-2 leading-relaxed line-clamp-2">"${p.worldview}"</p>
-                                                                    </div>
+                                        <!-- Persona row(s) — fixed-width cards, wrap to up to 2 rows -->
+                                        <div class="flex-1 min-h-0 flex flex-wrap content-start gap-x-8 gap-y-4">
+                                            ${items.map(p => {
+                                                const isSel = selectedIds.includes(p.id);
+                                                const isPreview = previewId === p.id;
+                                                return html`
+                                                    <div
+                                                        key=${p.id}
+                                                        onClick=${() => {
+                                                            if (previewId === p.id) toggleSelect(p.id);
+                                                            else setPreviewId(p.id);
+                                                        }}
+                                                        class=${`group cursor-pointer w-72 py-4 border-t transition-colors
+                                                            ${isSel ? 'border-primary/40' : isPreview ? 'border-primary/30' : 'border-on-surface/10 hover:border-on-surface/30'}`}
+                                                    >
+                                                        <div class="flex items-start gap-3">
+                                                            <span class=${`text-xl mt-0.5 transition-opacity ${isSel || isPreview ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'}`}>${p.avatar || '☁️'}</span>
+                                                            <div class="flex-1 min-w-0">
+                                                                <div class="flex items-center justify-between gap-2">
+                                                                    <p class=${`font-headline text-sm font-bold leading-tight transition-colors ${isSel ? 'text-primary' : isPreview ? 'text-on-surface' : 'text-on-surface/90 group-hover:text-on-surface'}`}>${p.name}</p>
+                                                                    ${isSel ? html`<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>` : null}
                                                                 </div>
+                                                                <p class="text-[10px] text-on-surface-variant/50 uppercase tracking-widest mt-1">${p.role}</p>
+                                                                <p class="text-[11px] text-on-surface-variant/40 italic mt-2 leading-relaxed line-clamp-2">"${p.worldview}"</p>
                                                             </div>
-                                                        `;
-                                                    })}
-                                                </div>
-                                            </div>
-                                            <div class="pointer-events-none absolute top-0 right-0 w-12 h-full bg-gradient-to-l from-surface to-transparent"></div>
+                                                        </div>
+                                                    </div>
+                                                `;
+                                            })}
                                         </div>
                                     </div>
                                 `;
