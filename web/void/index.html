@@ -907,6 +907,9 @@
                 if (!el) return;
                 let wheelLock = false;
                 const wheelHandler = (e) => {
+                    // Horizontal intent (trackpad 2-finger swipe or Shift+Wheel) → let the
+                    // inner persona row scroll natively, don't hijack for domain switch.
+                    if (e.shiftKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
                     e.preventDefault();
                     if (wheelLock) return;
                     const dir = e.deltaY > 0 ? 1 : -1;
@@ -926,9 +929,180 @@
                 };
                 el.addEventListener('wheel', wheelHandler, { passive: false });
                 el.addEventListener('scroll', scrollHandler);
+
+                // Vertical mouse drag on carousel → switch domain
+                let vDrag = false;
+                let vStartY = 0;
+                let vStartTop = 0;
+                let vLastY = 0;
+                let vLastT = 0;
+                let vVel = 0;
+                let vMoved = 0;
+                let vRaf = null;
+                const cancelVMomentum = () => { if (vRaf != null) { cancelAnimationFrame(vRaf); vRaf = null; } };
+                const snapToNearest = () => {
+                    const idx = Math.max(0, Math.min(activeDomains.length - 1, Math.round(el.scrollTop / SECTION_H)));
+                    scrollLockRef.current = true;
+                    el.scrollTo({ top: idx * SECTION_H, behavior: 'smooth' });
+                    setActiveDomainIdx(idx);
+                    setTimeout(() => { scrollLockRef.current = false; }, 500);
+                };
+                const runVMomentum = () => {
+                    const friction = 0.92;
+                    const tick = () => {
+                        if (Math.abs(vVel) < 0.03) { vRaf = null; snapToNearest(); return; }
+                        el.scrollTop -= vVel * 16;
+                        vVel *= friction;
+                        vRaf = requestAnimationFrame(tick);
+                    };
+                    vRaf = requestAnimationFrame(tick);
+                };
+                const vOnDown = (e) => {
+                    if (e.button !== 0) return;
+                    cancelVMomentum();
+                    vDrag = true;
+                    vMoved = 0;
+                    vStartY = e.clientY;
+                    vLastY = e.clientY;
+                    vLastT = performance.now();
+                    vVel = 0;
+                    vStartTop = el.scrollTop;
+                };
+                const vOnMove = (e) => {
+                    if (!vDrag) return;
+                    const dy = e.clientY - vStartY;
+                    vMoved = Math.max(vMoved, Math.abs(dy));
+                    el.scrollTop = vStartTop - dy;
+                    const now = performance.now();
+                    const dt = now - vLastT;
+                    if (dt > 0) vVel = vVel * 0.6 + ((e.clientY - vLastY) / dt) * 0.4;
+                    vLastY = e.clientY;
+                    vLastT = now;
+                };
+                const vOnUp = () => {
+                    if (!vDrag) return;
+                    vDrag = false;
+                    if (performance.now() - vLastT > 80) vVel = 0;
+                    if (Math.abs(vVel) > 0.15) runVMomentum();
+                    else snapToNearest();
+                };
+                el.addEventListener('mousedown', vOnDown);
+                window.addEventListener('mousemove', vOnMove);
+                window.addEventListener('mouseup', vOnUp);
+
+                // Mouse drag-to-scroll with momentum (feels like mobile swipe)
+                const rows = el.querySelectorAll('[data-h-row]');
+                const cleanups = [];
+                rows.forEach(row => {
+                    let dragging = false;
+                    let startX = 0;
+                    let startY = 0;
+                    let startScroll = 0;
+                    let moved = 0;
+                    let lastX = 0;
+                    let lastTime = 0;
+                    let velocity = 0;   // px per ms (positive = pointer moving right)
+                    let rafId = null;
+
+                    const cancelMomentum = () => {
+                        if (rafId != null) { cancelAnimationFrame(rafId); rafId = null; }
+                    };
+                    const restoreSnap = () => { row.style.scrollSnapType = ''; };
+                    const runMomentum = (done) => {
+                        const friction = 0.94;          // per 16ms frame
+                        const minV = 0.02;              // px/ms stop threshold
+                        const tick = () => {
+                            if (Math.abs(velocity) < minV) {
+                                rafId = null;
+                                if (done) done();
+                                return;
+                            }
+                            row.scrollLeft -= velocity * 16;
+                            velocity *= friction;
+                            rafId = requestAnimationFrame(tick);
+                        };
+                        rafId = requestAnimationFrame(tick);
+                    };
+
+                    const onDown = (e) => {
+                        if (e.button !== 0) return;
+                        cancelMomentum();
+                        // Disable scroll-snap during interaction so every scrollLeft
+                        // delta renders freely. Restored after momentum completes.
+                        row.style.scrollSnapType = 'none';
+                        dragging = true;
+                        moved = 0;
+                        startX = e.clientX;
+                        startY = e.clientY;
+                        lastX = e.clientX;
+                        lastTime = performance.now();
+                        velocity = 0;
+                        startScroll = row.scrollLeft;
+                        row.style.cursor = 'grabbing';
+                        row.style.userSelect = 'none';
+                    };
+                    const onMove = (e) => {
+                        if (!dragging) return;
+                        const dx = e.clientX - startX;
+                        const dy = e.clientY - startY;
+                        moved = Math.max(moved, Math.hypot(dx, dy));
+                        row.scrollLeft = startScroll - dx;
+                        // Smooth velocity sample (EMA)
+                        const now = performance.now();
+                        const dt = now - lastTime;
+                        if (dt > 0) {
+                            const instantV = (e.clientX - lastX) / dt;
+                            velocity = velocity * 0.6 + instantV * 0.4;
+                        }
+                        lastX = e.clientX;
+                        lastTime = now;
+                    };
+                    const onUp = () => {
+                        if (!dragging) return;
+                        dragging = false;
+                        row.style.cursor = '';
+                        row.style.userSelect = '';
+                        // Decay velocity if last sample was stale (finger paused before release)
+                        if (performance.now() - lastTime > 80) velocity = 0;
+                        if (Math.abs(velocity) > 0.1) {
+                            runMomentum(restoreSnap);
+                        } else {
+                            restoreSnap();
+                        }
+                    };
+                    // Suppress click after drag so cards don't get selected
+                    const onClickCapture = (e) => {
+                        if (moved > 5) {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            moved = 0;
+                        }
+                    };
+                    row.style.cursor = 'grab';
+                    row.addEventListener('mousedown', onDown);
+                    window.addEventListener('mousemove', onMove);
+                    window.addEventListener('mouseup', onUp);
+                    row.addEventListener('click', onClickCapture, true);
+                    cleanups.push(() => {
+                        cancelMomentum();
+                        row.removeEventListener('mousedown', onDown);
+                        window.removeEventListener('mousemove', onMove);
+                        window.removeEventListener('mouseup', onUp);
+                        row.removeEventListener('click', onClickCapture, true);
+                        row.style.cursor = '';
+                        row.style.userSelect = '';
+                        row.style.scrollSnapType = '';
+                    });
+                });
+
                 return () => {
                     el.removeEventListener('wheel', wheelHandler);
                     el.removeEventListener('scroll', scrollHandler);
+                    el.removeEventListener('mousedown', vOnDown);
+                    window.removeEventListener('mousemove', vOnMove);
+                    window.removeEventListener('mouseup', vOnUp);
+                    cancelVMomentum();
+                    cleanups.forEach(fn => fn());
                 };
             }, [personas.length]);
 
@@ -1067,7 +1241,7 @@
 
                                         <!-- Horizontal scroll of personas for this domain -->
                                         <div class="relative flex-1 min-h-0">
-                                            <div class="h-full overflow-x-auto no-scrollbar snap-x pb-2" style=${{ scrollbarWidth: 'none' }}>
+                                            <div data-h-row class="h-full overflow-x-auto no-scrollbar snap-x pb-2" style=${{ scrollbarWidth: 'none' }}>
                                                 <div class="inline-flex flex-nowrap items-start gap-8">
                                                     ${items.map(p => {
                                                         const isSel = selectedIds.includes(p.id);
