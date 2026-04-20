@@ -94,6 +94,14 @@
     <!-- Lucide icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Pretext: measure text layout without DOM reflow, used to split bubble text into
+         per-visual-line spans so the warm-shine band aligns with the cursor's actual line. -->
+    <script type="module">
+        import * as Pretext from 'https://esm.sh/@chenglou/pretext';
+        window.Pretext = Pretext;
+        window.dispatchEvent(new Event('pretext-ready'));
+    </script>
+
     <!-- Turnstile CAPTCHA -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 
@@ -657,7 +665,38 @@
             const displayName = user?.user_metadata?.name || user?.email?.split('@')[0] || (isGuest ? 'Guest' : 'User');
             const userInitial = (displayName || 'U')[0].toUpperCase();
             const userEmail = user?.email || (isGuest ? 'guest@lifee.app' : 'user@example.com');
-            const userCredits = '—';
+            const [userCredits, setUserCredits] = useState(
+                typeof window.__lifeeBalance === 'number' ? window.__lifeeBalance : '—'
+            );
+
+            // Fetch credits when the account changes, and listen for in-app balance updates
+            // (ChatArena dispatches 'lifee:balance' after each SSE/error response).
+            useEffect(() => {
+                if (!user && !isGuest) {
+                    setUserCredits('—');
+                    return;
+                }
+                let cancelled = false;
+                (async () => {
+                    try {
+                        const res = await fetch('/credits', { credentials: 'include' });
+                        if (!res.ok) return;
+                        const data = await res.json();
+                        if (!cancelled && typeof data?.balance === 'number') {
+                            setUserCredits(data.balance);
+                            window.__lifeeBalance = data.balance;
+                        }
+                    } catch (_) {}
+                })();
+                const onBalance = (e) => {
+                    if (typeof e?.detail === 'number') setUserCredits(e.detail);
+                };
+                window.addEventListener('lifee:balance', onBalance);
+                return () => {
+                    cancelled = true;
+                    window.removeEventListener('lifee:balance', onBalance);
+                };
+            }, [user?.id, isGuest]);
 
             // Collapsed rail (Claude-style): icons only — structure mirrors expanded sidebar so
             // every icon stays on the same horizontal line as its expanded counterpart

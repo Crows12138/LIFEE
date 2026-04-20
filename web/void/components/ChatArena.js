@@ -1,6 +1,64 @@
 (() => {
-    const { useState, useEffect, useRef, useMemo } = React;
+    const { useState, useEffect, useLayoutEffect, useRef, useMemo } = React;
     const html = htm.bind(React.createElement);
+
+    // ── ShinyLines: split text into per-visual-line spans using Pretext (loaded via ES
+    // module in index.html and exposed on window.Pretext). Each line renders as its own
+    // <span> so the warm-shine hover band aligns with the line the cursor is actually on. —
+    const PRETEXT_FONT = '14px "Manrope", sans-serif';
+    const PRETEXT_LINE_HEIGHT = 22; // text-sm × leading-relaxed ≈ 14 × 1.625 ≈ 22
+
+    const ShinyLines = ({ text }) => {
+        const ref = useRef(null);
+        const [lines, setLines] = useState(null);
+
+        useLayoutEffect(() => {
+            const node = ref.current;
+            if (!node) return;
+            let cancelled = false;
+
+            const layout = () => {
+                if (cancelled) return;
+                const P = window.Pretext;
+                if (!P || !P.prepareWithSegments) return false;
+                const width = node.getBoundingClientRect().width;
+                if (!width || width < 10) return false;
+                try {
+                    const prepared = P.prepareWithSegments(text, PRETEXT_FONT, { whiteSpace: 'pre-wrap' });
+                    const out = P.layoutWithLines(prepared, width, PRETEXT_LINE_HEIGHT);
+                    setLines((out.lines || []).map(l => l.text));
+                    return true;
+                } catch (e) {
+                    console.warn('[ShinyLines] layout failed', e);
+                    return false;
+                }
+            };
+
+            const run = () => {
+                if (!layout()) {
+                    // Pretext not ready yet — retry once the module finishes loading
+                    const onReady = () => { window.removeEventListener('pretext-ready', onReady); layout(); };
+                    window.addEventListener('pretext-ready', onReady);
+                }
+            };
+            run();
+
+            const obs = new ResizeObserver(() => layout());
+            obs.observe(node);
+            return () => { cancelled = true; obs.disconnect(); };
+        }, [text]);
+
+        return html`
+            <div ref=${ref} class="w-full">
+                ${lines === null
+                    ? html`<span class="whitespace-pre-wrap break-words">${text}</span>`
+                    : lines.flatMap((line, i) => i === 0
+                        ? [html`<span key=${'s' + i}>${line}</span>`]
+                        : [html`<br key=${'br' + i} />`, html`<span key=${'s' + i}>${line}</span>`])
+                }
+            </div>
+        `;
+    };
 
     // ── Persona accent color palette ──────────────────────────────────────────
     // Warm, distinctive colors — amber, terracotta, sage, dusty rose, warm blue, bronze, olive, mauve
@@ -404,11 +462,15 @@
                     if (window.__lifeeNeedsPayment) {
                         window.__lifeeNeedsPayment = false;
                         setCredits(window.__lifeeBalance || 0);
+                        window.dispatchEvent(new CustomEvent('lifee:balance', { detail: window.__lifeeBalance || 0 }));
                         setShowPaywall(true);
                         return;
                     }
                     if (isActive() && window.__lifeeSessionId) setSessionId(window.__lifeeSessionId);
-                    if (typeof window.__lifeeBalance === 'number') setCredits(window.__lifeeBalance);
+                    if (typeof window.__lifeeBalance === 'number') {
+                        setCredits(window.__lifeeBalance);
+                        window.dispatchEvent(new CustomEvent('lifee:balance', { detail: window.__lifeeBalance }));
+                    }
                 } catch (streamErr) {
                     console.warn('[ChatArena] stream failed', streamErr);
                     // If the backend already accepted this request and assigned a sessionId,
@@ -550,8 +612,8 @@
                         <!-- Bubble -->
                         <div class="space-y-1.5 items-end flex flex-col">
                             <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/60 mr-1">You</p>
-                            <div class="bg-surface-container/80 backdrop-blur-md px-5 py-4 rounded-xl rounded-tr-sm text-on-surface shadow-sm leading-relaxed border-r-2 border-on-surface-variant/20 text-sm whitespace-pre-wrap break-words">
-                                ${m.text}
+                            <div class="bg-surface-container/80 backdrop-blur-md px-5 py-4 rounded-xl rounded-tr-sm text-on-surface shadow-sm leading-relaxed border-r-2 border-on-surface-variant/20 text-sm">
+                                <${ShinyLines} text=${m.text || ''} />
                             </div>
                             <div class="flex gap-3 px-1 flex-row-reverse">
                                 <button
@@ -593,8 +655,8 @@
                         <p class=${'text-[10px] font-bold uppercase tracking-widest ml-1 ' + color.text}>
                             ${persona.name}
                         </p>
-                        <div class=${'bg-surface-container/80 backdrop-blur-md px-5 py-4 rounded-tl-none rounded-tr-xl rounded-br-xl rounded-bl-[2.5rem] text-on-surface shadow-sm leading-relaxed border-l-2 text-sm whitespace-pre-wrap break-words ' + color.border}>
-                            ${m.text}
+                        <div class=${'bg-surface-container/80 backdrop-blur-md px-5 py-4 rounded-tl-none rounded-tr-xl rounded-br-xl rounded-bl-[2.5rem] text-on-surface shadow-sm leading-relaxed border-l-2 text-sm ' + color.border}>
+                            <${ShinyLines} text=${m.text || ''} />
                         </div>
                         <div class="flex gap-3 px-1">
                             <button
